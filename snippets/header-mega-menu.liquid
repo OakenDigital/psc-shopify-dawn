@@ -30,43 +30,96 @@
                 class="mega-menu__content color-{{ section.settings.menu_color_scheme }} gradient motion-reduce global-settings-popup"
                 tabindex="-1"
               >
-                <ul
-                  class="mega-menu__list page-width{% if link.levels == 1 %} mega-menu__list--condensed{% endif %}"
-                  role="list"
-                >
-                  {%- for childlink in link.links -%}
-                    <li>
-                      <a
-                        id="HeaderMenu-{{ link.handle }}-{{ childlink.handle }}"
-                        href="{{ childlink.url }}"
-                        class="mega-menu__link mega-menu__link--level-2 link{% if childlink.current %} mega-menu__link--active{% endif %}"
-                        {% if childlink.current %}
-                          aria-current="page"
-                        {% endif %}
-                      >
-                        {{ childlink.title | escape }}
-                      </a>
-                      {%- if childlink.links != blank -%}
-                        <ul class="list-unstyled" role="list">
-                          {%- for grandchildlink in childlink.links -%}
-                            <li>
-                              <a
-                                id="HeaderMenu-{{ link.handle }}-{{ childlink.handle }}-{{ grandchildlink.handle }}"
-                                href="{{ grandchildlink.url }}"
-                                class="mega-menu__link link{% if grandchildlink.current %} mega-menu__link--active{% endif %}"
-                                {% if grandchildlink.current %}
-                                  aria-current="page"
-                                {% endif %}
-                              >
-                                {{ grandchildlink.title | escape }}
-                              </a>
-                            </li>
-                          {%- endfor -%}
-                        </ul>
-                      {%- endif -%}
-                    </li>
-                  {%- endfor -%}
-                </ul>
+                <div class="mega-menu__wrapper page-width">
+                  <div class="mega-menu__navigation">
+                    <ul
+                      class="mega-menu__list{% if link.levels == 1 %} mega-menu__list--condensed{% endif %}"
+                      role="list"
+                    >
+                      {%- for childlink in link.links -%}
+                        <li>
+                          <a
+                            id="HeaderMenu-{{ link.handle }}-{{ childlink.handle }}"
+                            href="{{ childlink.url }}"
+                            class="mega-menu__link mega-menu__link--level-2 link{% if childlink.current %} mega-menu__link--active{% endif %}"
+                            {% if childlink.current %}
+                              aria-current="page"
+                            {% endif %}
+                          >
+                            {{ childlink.title | escape }}
+                            {{- 'icon-caret.svg' | inline_asset_content -}}
+                          </a>
+                          {%- if childlink.links != blank -%}
+                            <ul class="list-unstyled" role="list">
+                              {%- for grandchildlink in childlink.links -%}
+                                <li>
+                                  <a
+                                    id="HeaderMenu-{{ link.handle }}-{{ childlink.handle }}-{{ grandchildlink.handle }}"
+                                    href="{{ grandchildlink.url }}"
+                                    class="mega-menu__link link{% if grandchildlink.current %} mega-menu__link--active{% endif %}"
+                                    {% if grandchildlink.current %}
+                                      aria-current="page"
+                                    {% endif %}
+                                  >
+                                    {{ grandchildlink.title | escape }}
+                                  </a>
+                                </li>
+                              {%- endfor -%}
+                            </ul>
+                          {%- endif -%}
+                        </li>
+                      {%- endfor -%}
+                    </ul>
+                  </div>
+
+                  {%- comment -%} Featured Content Area {%- endcomment -%}
+                  <div class="mega-menu__featured">
+                    {%- if link.object.metafields.custom.featured_content != blank -%}
+                      {%- assign featured_blocks = link.object.metafields.custom.featured_content -%}
+                      {{ featured_blocks }}
+                    {%- else -%}
+                      {%- comment -%} Default featured content when no metafield is set {%- endcomment -%}
+                      <div class="mega-menu__featured-item mega-menu__featured-item--large">
+                        <div class="mega-menu__featured-content">
+                          <button class="mega-menu__play-button" aria-label="Play video">
+                            <svg
+                              width="48"
+                              height="48"
+                              viewBox="0 0 48 48"
+                              fill="none"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <circle cx="24" cy="24" r="24" fill="white"/>
+                              <path d="M18 34V14L34 24L18 34Z" fill="black"/>
+                            </svg>
+                          </button>
+                          <div class="mega-menu__featured-text">
+                            <h3>Steering Re-Engineered</h3>
+                            <p>Watch the new video series with our tech team</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="mega-menu__featured-grid">
+                        <div class="mega-menu__featured-item">
+                          <div class="mega-menu__featured-content">
+                            <div class="mega-menu__featured-text">
+                              <h3>Steering Re-Engineered</h3>
+                              <p>Watch the new video series with our tech team</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="mega-menu__featured-item">
+                          <div class="mega-menu__featured-content">
+                            <div class="mega-menu__featured-text">
+                              <h3>Steering Re-Engineered</h3>
+                              <p>Watch the new video series with our tech team</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    {%- endif -%}
+                  </div>
+                </div>
               </div>
             </details>
           </header-menu>
