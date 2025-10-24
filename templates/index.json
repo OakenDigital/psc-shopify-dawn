@@ -81,7 +81,7 @@
         "featured_collection_ECxncQ": {
           "type": "featured_collection",
           "settings": {
-            "collection": "universal-custom-builds"
+            "collection": "buggy-custom-builds"
           }
         }
       },
