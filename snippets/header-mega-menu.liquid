@@ -74,11 +74,125 @@
 
                   {%- comment -%} Featured Content Area {%- endcomment -%}
                   <div class="mega-menu__featured">
-                    {%- if link.object.metafields.custom.featured_content != blank -%}
-                      {%- assign featured_blocks = link.object.metafields.custom.featured_content -%}
-                      {{ featured_blocks }}
+                    {%- assign has_featured_content = false -%}
+                    
+                    {%- comment -%} Check if we have any blocks for this menu item {%- endcomment -%}
+                    {%- for block in section.blocks -%}
+                      {%- if block.type == 'mega_menu_featured' and block.settings.menu_item == link.handle -%}
+                        {%- assign has_featured_content = true -%}
+                        {%- break -%}
+                      {%- endif -%}
+                    {%- endfor -%}
+                    
+                    {%- if has_featured_content -%}
+                      {%- comment -%} Render large blocks first {%- endcomment -%}
+                      {%- for block in section.blocks -%}
+                        {%- if block.type == 'mega_menu_featured' and block.settings.menu_item == link.handle and block.settings.size == 'large' -%}
+                          {%- if block.settings.image != blank -%}
+                            <div class="mega-menu__featured-item mega-menu__featured-item--large" {{ block.shopify_attributes }}>
+                              {%- if block.settings.link != blank -%}
+                                <a href="{{ block.settings.link }}" class="mega-menu__featured-link">
+                              {%- endif -%}
+                              <img
+                                src="{{ block.settings.image | image_url: width: 1200 }}"
+                                alt="{{ block.settings.image.alt | escape }}"
+                                loading="lazy"
+                                width="1200"
+                                height="600"
+                              >
+                              <div class="mega-menu__featured-content">
+                                {%- if block.settings.show_video_button -%}
+                                  <button class="mega-menu__play-button" aria-label="Play video">
+                                    <svg
+                                      width="48"
+                                      height="48"
+                                      viewBox="0 0 48 48"
+                                      fill="none"
+                                      xmlns="http://www.w3.org/2000/svg"
+                                    >
+                                      <circle cx="24" cy="24" r="24" fill="white"/>
+                                      <path d="M18 34V14L34 24L18 34Z" fill="black"/>
+                                    </svg>
+                                  </button>
+                                {%- endif -%}
+                                <div class="mega-menu__featured-text">
+                                  {%- if block.settings.heading != blank -%}
+                                    <h3>{{ block.settings.heading }}</h3>
+                                  {%- endif -%}
+                                  {%- if block.settings.subheading != blank -%}
+                                    <p>{{ block.settings.subheading }}</p>
+                                  {%- endif -%}
+                                </div>
+                              </div>
+                              {%- if block.settings.link != blank -%}
+                                </a>
+                              {%- endif -%}
+                            </div>
+                          {%- endif -%}
+                        {%- endif -%}
+                      {%- endfor -%}
+                      
+                      {%- comment -%} Check if we have small blocks {%- endcomment -%}
+                      {%- assign has_small_blocks = false -%}
+                      {%- for block in section.blocks -%}
+                        {%- if block.type == 'mega_menu_featured' and block.settings.menu_item == link.handle and block.settings.size == 'small' -%}
+                          {%- assign has_small_blocks = true -%}
+                          {%- break -%}
+                        {%- endif -%}
+                      {%- endfor -%}
+                      
+                      {%- comment -%} Render small blocks in grid {%- endcomment -%}
+                      {%- if has_small_blocks -%}
+                        <div class="mega-menu__featured-grid">
+                          {%- for block in section.blocks -%}
+                            {%- if block.type == 'mega_menu_featured' and block.settings.menu_item == link.handle and block.settings.size == 'small' -%}
+                              {%- if block.settings.image != blank -%}
+                                <div class="mega-menu__featured-item" {{ block.shopify_attributes }}>
+                                  {%- if block.settings.link != blank -%}
+                                    <a href="{{ block.settings.link }}" class="mega-menu__featured-link">
+                                  {%- endif -%}
+                                  <img
+                                    src="{{ block.settings.image | image_url: width: 600 }}"
+                                    alt="{{ block.settings.image.alt | escape }}"
+                                    loading="lazy"
+                                    width="600"
+                                    height="400"
+                                  >
+                                  <div class="mega-menu__featured-content">
+                                    {%- if block.settings.show_video_button -%}
+                                      <button class="mega-menu__play-button" aria-label="Play video">
+                                        <svg
+                                          width="48"
+                                          height="48"
+                                          viewBox="0 0 48 48"
+                                          fill="none"
+                                          xmlns="http://www.w3.org/2000/svg"
+                                        >
+                                          <circle cx="24" cy="24" r="24" fill="white"/>
+                                          <path d="M18 34V14L34 24L18 34Z" fill="black"/>
+                                        </svg>
+                                      </button>
+                                    {%- endif -%}
+                                    <div class="mega-menu__featured-text">
+                                      {%- if block.settings.heading != blank -%}
+                                        <h3>{{ block.settings.heading }}</h3>
+                                      {%- endif -%}
+                                      {%- if block.settings.subheading != blank -%}
+                                        <p>{{ block.settings.subheading }}</p>
+                                      {%- endif -%}
+                                    </div>
+                                  </div>
+                                  {%- if block.settings.link != blank -%}
+                                    </a>
+                                  {%- endif -%}
+                                </div>
+                              {%- endif -%}
+                            {%- endif -%}
+                          {%- endfor -%}
+                        </div>
+                      {%- endif -%}
                     {%- else -%}
-                      {%- comment -%} Default featured content when no metafield is set {%- endcomment -%}
+                      {%- comment -%} Default featured content when no blocks are set {%- endcomment -%}
                       <div class="mega-menu__featured-item mega-menu__featured-item--large">
                         <div class="mega-menu__featured-content">
                           <button class="mega-menu__play-button" aria-label="Play video">

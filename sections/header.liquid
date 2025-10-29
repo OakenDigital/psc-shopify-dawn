@@ -652,6 +652,62 @@
   "blocks": [
     {
       "type": "@app"
+    },
+    {
+      "type": "mega_menu_featured",
+      "name": "Mega Menu Featured",
+      "settings": [
+        {
+          "type": "text",
+          "id": "menu_item",
+          "label": "Menu Item Handle",
+          "info": "Enter the menu item handle (e.g., 'shop-by-vehicle') to attach this content to that menu item"
+        },
+        {
+          "type": "select",
+          "id": "size",
+          "label": "Size",
+          "options": [
+            {
+              "value": "large",
+              "label": "Large (Full Width)"
+            },
+            {
+              "value": "small",
+              "label": "Small (Half Width)"
+            }
+          ],
+          "default": "large"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "url",
+          "id": "link",
+          "label": "Link"
+        },
+        {
+          "type": "checkbox",
+          "id": "show_video_button",
+          "label": "Show Video Play Button",
+          "default": false
+        },
+        {
+          "type": "text",
+          "id": "heading",
+          "label": "Heading",
+          "default": "Featured Content"
+        },
+        {
+          "type": "text",
+          "id": "subheading",
+          "label": "Subheading",
+          "default": "Description text"
+        }
+      ]
     }
   ]
 }
