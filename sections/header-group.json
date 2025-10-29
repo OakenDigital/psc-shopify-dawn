@@ -61,11 +61,24 @@
             "heading": "Steering Re-Engineered",
             "subheading": "Watch the new video series with our tech team"
           }
+        },
+        "mega_menu_featured_8a93nD": {
+          "type": "mega_menu_featured",
+          "settings": {
+            "menu_item": "",
+            "size": "small",
+            "image": "shopify://shop_images/e2f5382fc01b76ef84cf54539f60751af049c5da.jpg",
+            "link": "",
+            "show_video_button": false,
+            "heading": "Steering Re-Engineered",
+            "subheading": "Watch the new video series with our tech team"
+          }
         }
       },
       "block_order": [
         "mega_menu_featured_wUzLfD",
-        "mega_menu_featured_kF997U"
+        "mega_menu_featured_kF997U",
+        "mega_menu_featured_8a93nD"
       ],
       "settings": {
         "logo_position": "middle-left",
