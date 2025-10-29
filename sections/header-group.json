@@ -65,7 +65,7 @@
         "mega_menu_featured_8a93nD": {
           "type": "mega_menu_featured",
           "settings": {
-            "menu_item": "",
+            "menu_item": "shop-by-vehicle",
             "size": "small",
             "image": "shopify://shop_images/e2f5382fc01b76ef84cf54539f60751af049c5da.jpg",
             "link": "",
