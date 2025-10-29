@@ -37,6 +37,23 @@
     },
     "header": {
       "type": "header",
+      "blocks": {
+        "mega_menu_featured_wUzLfD": {
+          "type": "mega_menu_featured",
+          "settings": {
+            "menu_item": "shop-by-vehicle",
+            "size": "large",
+            "image": "shopify://shop_images/32586dc8e49a45dfacdf9f041a6ebdf7bb8c8e5d.jpg",
+            "link": "",
+            "show_video_button": false,
+            "heading": "Steering Re-Engineered",
+            "subheading": "Watch the new video series with our tech team"
+          }
+        }
+      },
+      "block_order": [
+        "mega_menu_featured_wUzLfD"
+      ],
       "settings": {
         "logo_position": "middle-left",
         "mobile_logo_position": "left",
