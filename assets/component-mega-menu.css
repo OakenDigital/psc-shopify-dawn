@@ -104,7 +104,7 @@
 }
 
 .mega-menu__featured-item--large {
-  height: 280px;
+  height: 400px;
   background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), 
               url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800"><rect fill="%23e8d5c4" width="1200" height="800"/></svg>');
   background-size: cover;
@@ -136,7 +136,7 @@
 }
 
 .mega-menu__featured-grid .mega-menu__featured-item {
-  height: 180px;
+  height: 250px;
   background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
               url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400"><rect fill="%2366b366" width="600" height="400"/></svg>');
   background-size: cover;
