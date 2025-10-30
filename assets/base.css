@@ -2818,8 +2818,8 @@ details[open] > .header__submenu {
 
 details[open] > .header__menu-item {
   text-decoration: none;
-  background-color: rgba(var(--color-foreground), 0.85);
-  color: rgb(var(--color-background));
+  background-color: rgba(var(--color-background), 1);
+  color: rgb(var(--color-foreground));
 }
 
 details[open]:hover > .header__menu-item {
