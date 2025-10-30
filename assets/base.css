@@ -2824,7 +2824,7 @@ details[open] > .header__menu-item {
 
 details[open]:hover > .header__menu-item {
   text-decoration: none;
-  background-color: rgba(var(--color-foreground), 0.9);
+  background-color: rgba(var(--color-background), 0.9);
 }
 
 details[open] > .header__menu-item .icon-caret {
