@@ -47,7 +47,7 @@
 
 /* Left navigation area */
 .mega-menu__navigation {
-  background-color: rgba(var(--color-foreground), 0.08);
+  /* background-color: rgba(var(--color-foreground), 0.08); */
   padding: 0;
 }
 
