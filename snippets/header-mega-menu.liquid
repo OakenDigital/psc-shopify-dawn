@@ -6,7 +6,7 @@
 {% endcomment %}
 
 <nav class="header__inline-menu">
-  <ul class="list-menu list-menu--inline" role="list">
+  <ul class="list-menu list-menu--inline color-{{ section.settings.menu_dropdown_color_scheme }}" role="list">
     {%- for link in section.settings.menu.links -%}
       <li>
         {%- if link.links != blank -%}
@@ -75,7 +75,7 @@
                   {%- comment -%} Featured Content Area {%- endcomment -%}
                   <div class="mega-menu__featured">
                     {%- assign has_featured_content = false -%}
-                    
+
                     {%- comment -%} Check if we have any blocks for this menu item {%- endcomment -%}
                     {%- for block in section.blocks -%}
                       {%- if block.type == 'mega_menu_featured' and block.settings.menu_item == link.handle -%}
@@ -83,13 +83,19 @@
                         {%- break -%}
                       {%- endif -%}
                     {%- endfor -%}
-                    
+
                     {%- if has_featured_content -%}
                       {%- comment -%} Render large blocks first {%- endcomment -%}
                       {%- for block in section.blocks -%}
-                        {%- if block.type == 'mega_menu_featured' and block.settings.menu_item == link.handle and block.settings.size == 'large' -%}
+                        {%- if block.type == 'mega_menu_featured'
+                          and block.settings.menu_item == link.handle
+                          and block.settings.size == 'large'
+                        -%}
                           {%- if block.settings.image != blank -%}
-                            <div class="mega-menu__featured-item mega-menu__featured-item--large" {{ block.shopify_attributes }}>
+                            <div
+                              class="mega-menu__featured-item mega-menu__featured-item--large"
+                              {{ block.shopify_attributes }}
+                            >
                               {%- if block.settings.link != blank -%}
                                 <a href="{{ block.settings.link }}" class="mega-menu__featured-link">
                               {%- endif -%}
@@ -131,21 +137,27 @@
                           {%- endif -%}
                         {%- endif -%}
                       {%- endfor -%}
-                      
+
                       {%- comment -%} Check if we have small blocks {%- endcomment -%}
                       {%- assign has_small_blocks = false -%}
                       {%- for block in section.blocks -%}
-                        {%- if block.type == 'mega_menu_featured' and block.settings.menu_item == link.handle and block.settings.size == 'small' -%}
+                        {%- if block.type == 'mega_menu_featured'
+                          and block.settings.menu_item == link.handle
+                          and block.settings.size == 'small'
+                        -%}
                           {%- assign has_small_blocks = true -%}
                           {%- break -%}
                         {%- endif -%}
                       {%- endfor -%}
-                      
+
                       {%- comment -%} Render small blocks in grid {%- endcomment -%}
                       {%- if has_small_blocks -%}
                         <div class="mega-menu__featured-grid">
                           {%- for block in section.blocks -%}
-                            {%- if block.type == 'mega_menu_featured' and block.settings.menu_item == link.handle and block.settings.size == 'small' -%}
+                            {%- if block.type == 'mega_menu_featured'
+                              and block.settings.menu_item == link.handle
+                              and block.settings.size == 'small'
+                            -%}
                               {%- if block.settings.image != blank -%}
                                 <div class="mega-menu__featured-item" {{ block.shopify_attributes }}>
                                   {%- if block.settings.link != blank -%}
