@@ -41,6 +41,7 @@
   grid-template-columns: 300px 1fr;
   gap: 0;
   min-height: 400px;
+  padding: 0 1.5rem;
 }
 
 /* Left navigation area */
