@@ -76,7 +76,6 @@
         },
         "mega_menu_featured_EnRHD8": {
           "type": "mega_menu_featured",
-          "disabled": true,
           "settings": {
             "menu_item": "shop-by-vehicle",
             "size": "small",
