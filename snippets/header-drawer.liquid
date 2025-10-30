@@ -116,6 +116,67 @@
                               </li>
                             {%- endfor -%}
                           </ul>
+
+                          {%- comment -%} Featured Content for Mobile Drawer {%- endcomment -%}
+                          {%- assign has_featured_content = false -%}
+                          {%- for block in section.blocks -%}
+                            {%- if block.type == 'mega_menu_featured' and block.settings.menu_item == link.handle -%}
+                              {%- assign has_featured_content = true -%}
+                              {%- break -%}
+                            {%- endif -%}
+                          {%- endfor -%}
+
+                          {%- if has_featured_content -%}
+                            <div class="menu-drawer__featured">
+                              {%- for block in section.blocks -%}
+                                {%- if block.type == 'mega_menu_featured'
+                                  and block.settings.menu_item == link.handle
+                                -%}
+                                  {%- if block.settings.image != blank -%}
+                                    <div class="menu-drawer__featured-item" {{ block.shopify_attributes }}>
+                                      {%- if block.settings.link != blank -%}
+                                        <a href="{{ block.settings.link }}" class="menu-drawer__featured-link">
+                                      {%- endif -%}
+                                      <img
+                                        src="{{ block.settings.image | image_url: width: 600 }}"
+                                        alt="{{ block.settings.image.alt | escape }}"
+                                        loading="lazy"
+                                        width="600"
+                                        height="400"
+                                      >
+                                      <div class="menu-drawer__featured-content">
+                                        {%- if block.settings.show_video_button -%}
+                                          <button class="menu-drawer__play-button" aria-label="Play video">
+                                            <svg
+                                              width="32"
+                                              height="32"
+                                              viewBox="0 0 48 48"
+                                              fill="none"
+                                              xmlns="http://www.w3.org/2000/svg"
+                                            >
+                                              <circle cx="24" cy="24" r="24" fill="white"/>
+                                              <path d="M18 34V14L34 24L18 34Z" fill="black"/>
+                                            </svg>
+                                          </button>
+                                        {%- endif -%}
+                                        <div class="menu-drawer__featured-text">
+                                          {%- if block.settings.heading != blank -%}
+                                            <h3>{{ block.settings.heading }}</h3>
+                                          {%- endif -%}
+                                          {%- if block.settings.subheading != blank -%}
+                                            <p>{{ block.settings.subheading }}</p>
+                                          {%- endif -%}
+                                        </div>
+                                      </div>
+                                      {%- if block.settings.link != blank -%}
+                                        </a>
+                                      {%- endif -%}
+                                    </div>
+                                  {%- endif -%}
+                                {%- endif -%}
+                              {%- endfor -%}
+                            </div>
+                          {%- endif -%}
                         </div>
                       </div>
                     </details>

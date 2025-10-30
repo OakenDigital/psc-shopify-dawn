@@ -6,7 +6,7 @@
 {% endcomment %}
 
 <nav class="header__inline-menu">
-  <ul class="list-menu list-menu--inline" role="list">
+  <ul class="list-menu list-menu--inline color-{{ section.settings.menu_dropdown_color_scheme }}" role="list">
     {%- for link in section.settings.menu.links -%}
       <li>
         {%- if link.links != blank -%}
@@ -38,47 +38,209 @@
                     >
                       {%- for childlink in link.links -%}
                         <li>
-                          <a
-                            id="HeaderMenu-{{ link.handle }}-{{ childlink.handle }}"
-                            href="{{ childlink.url }}"
-                            class="mega-menu__link mega-menu__link--level-2 link{% if childlink.current %} mega-menu__link--active{% endif %}"
-                            {% if childlink.current %}
-                              aria-current="page"
-                            {% endif %}
-                          >
-                            {{ childlink.title | escape }}
-                            {{- 'icon-caret.svg' | inline_asset_content -}}
-                          </a>
                           {%- if childlink.links != blank -%}
-                            <ul class="list-unstyled" role="list">
-                              {%- for grandchildlink in childlink.links -%}
-                                <li>
-                                  <a
-                                    id="HeaderMenu-{{ link.handle }}-{{ childlink.handle }}-{{ grandchildlink.handle }}"
-                                    href="{{ grandchildlink.url }}"
-                                    class="mega-menu__link link{% if grandchildlink.current %} mega-menu__link--active{% endif %}"
-                                    {% if grandchildlink.current %}
-                                      aria-current="page"
-                                    {% endif %}
-                                  >
-                                    {{ grandchildlink.title | escape }}
-                                  </a>
-                                </li>
-                              {%- endfor -%}
-                            </ul>
+                            <a
+                              id="HeaderMenu-{{ link.handle }}-{{ childlink.handle }}"
+                              href="{{ childlink.url }}"
+                              class="mega-menu__link mega-menu__link--level-2 link{% if childlink.current %} mega-menu__link--active{% endif %} mega-menu__link--expandable"
+                              data-submenu-id="submenu-{{ link.handle }}-{{ childlink.handle }}"
+                              {% if childlink.current %}
+                                aria-current="page"
+                              {% endif %}
+                            >
+                              {{ childlink.title | escape }}
+                              {{- 'icon-caret.svg' | inline_asset_content -}}
+                            </a>
+                          {%- else -%}
+                            <a
+                              id="HeaderMenu-{{ link.handle }}-{{ childlink.handle }}"
+                              href="{{ childlink.url }}"
+                              class="mega-menu__link mega-menu__link--level-2 link{% if childlink.current %} mega-menu__link--active{% endif %}"
+                              {% if childlink.current %}
+                                aria-current="page"
+                              {% endif %}
+                            >
+                              {{ childlink.title | escape }}
+                              {{- 'icon-caret.svg' | inline_asset_content -}}
+                            </a>
                           {%- endif -%}
                         </li>
                       {%- endfor -%}
                     </ul>
                   </div>
 
-                  {%- comment -%} Featured Content Area {%- endcomment -%}
-                  <div class="mega-menu__featured">
-                    {%- if link.object.metafields.custom.featured_content != blank -%}
-                      {%- assign featured_blocks = link.object.metafields.custom.featured_content -%}
-                      {{ featured_blocks }}
+                  {%- comment -%} Right panel content area {%- endcomment -%}
+                  <div class="mega-menu__content-area">
+                    {%- comment -%} Third level submenus {%- endcomment -%}
+                    {%- for childlink in link.links -%}
+                      {%- if childlink.links != blank -%}
+                        <div 
+                          id="submenu-{{ link.handle }}-{{ childlink.handle }}"
+                          class="mega-menu__submenu-panel"
+                          style="display: none;"
+                        >
+                          <h2 class="mega-menu__submenu-title">Shop All {{ childlink.title }}</h2>
+                          <ul class="mega-menu__submenu-list" role="list">
+                            {%- for grandchildlink in childlink.links -%}
+                              <li class="mega-menu__submenu-item">
+                                <a
+                                  href="{{ grandchildlink.url }}"
+                                  class="mega-menu__submenu-link{% if grandchildlink.current %} mega-menu__link--active{% endif %}"
+                                  {% if grandchildlink.current %}
+                                    aria-current="page"
+                                  {% endif %}
+                                >
+                                  {%- if grandchildlink.object.featured_image -%}
+                                    <img 
+                                      src="{{ grandchildlink.object.featured_image | image_url: width: 80 }}" 
+                                      alt="{{ grandchildlink.object.featured_image.alt | escape }}"
+                                      width="80"
+                                      height="80"
+                                      loading="lazy"
+                                    >
+                                  {%- endif -%}
+                                  <span>{{ grandchildlink.title | escape }}</span>
+                                </a>
+                              </li>
+                            {%- endfor -%}
+                          </ul>
+                        </div>
+                      {%- endif -%}
+                    {%- endfor -%}
+
+                    {%- comment -%} Featured Content Area {%- endcomment -%}
+                    <div class="mega-menu__featured" id="featured-{{ link.handle }}">
+                    {%- assign has_featured_content = false -%}
+
+                    {%- comment -%} Check if we have any blocks for this menu item {%- endcomment -%}
+                    {%- for block in section.blocks -%}
+                      {%- if block.type == 'mega_menu_featured' and block.settings.menu_item == link.handle -%}
+                        {%- assign has_featured_content = true -%}
+                        {%- break -%}
+                      {%- endif -%}
+                    {%- endfor -%}
+
+                    {%- if has_featured_content -%}
+                      {%- comment -%} Render large blocks first {%- endcomment -%}
+                      {%- for block in section.blocks -%}
+                        {%- if block.type == 'mega_menu_featured'
+                          and block.settings.menu_item == link.handle
+                          and block.settings.size == 'large'
+                        -%}
+                          {%- if block.settings.image != blank -%}
+                            <div
+                              class="mega-menu__featured-item mega-menu__featured-item--large"
+                              {{ block.shopify_attributes }}
+                            >
+                              {%- if block.settings.link != blank -%}
+                                <a href="{{ block.settings.link }}" class="mega-menu__featured-link">
+                              {%- endif -%}
+                              <img
+                                src="{{ block.settings.image | image_url: width: 1200 }}"
+                                alt="{{ block.settings.image.alt | escape }}"
+                                loading="lazy"
+                                width="1200"
+                                height="600"
+                              >
+                              <div class="mega-menu__featured-content">
+                                {%- if block.settings.show_video_button -%}
+                                  <button class="mega-menu__play-button" aria-label="Play video">
+                                    <svg
+                                      width="48"
+                                      height="48"
+                                      viewBox="0 0 48 48"
+                                      fill="none"
+                                      xmlns="http://www.w3.org/2000/svg"
+                                    >
+                                      <circle cx="24" cy="24" r="24" fill="white"/>
+                                      <path d="M18 34V14L34 24L18 34Z" fill="black"/>
+                                    </svg>
+                                  </button>
+                                {%- endif -%}
+                                <div class="mega-menu__featured-text">
+                                  {%- if block.settings.heading != blank -%}
+                                    <h3>{{ block.settings.heading }}</h3>
+                                  {%- endif -%}
+                                  {%- if block.settings.subheading != blank -%}
+                                    <p>{{ block.settings.subheading }}</p>
+                                  {%- endif -%}
+                                </div>
+                              </div>
+                              {%- if block.settings.link != blank -%}
+                                </a>
+                              {%- endif -%}
+                            </div>
+                          {%- endif -%}
+                        {%- endif -%}
+                      {%- endfor -%}
+
+                      {%- comment -%} Check if we have small blocks {%- endcomment -%}
+                      {%- assign has_small_blocks = false -%}
+                      {%- for block in section.blocks -%}
+                        {%- if block.type == 'mega_menu_featured'
+                          and block.settings.menu_item == link.handle
+                          and block.settings.size == 'small'
+                        -%}
+                          {%- assign has_small_blocks = true -%}
+                          {%- break -%}
+                        {%- endif -%}
+                      {%- endfor -%}
+
+                      {%- comment -%} Render small blocks in grid {%- endcomment -%}
+                      {%- if has_small_blocks -%}
+                        <div class="mega-menu__featured-grid">
+                          {%- for block in section.blocks -%}
+                            {%- if block.type == 'mega_menu_featured'
+                              and block.settings.menu_item == link.handle
+                              and block.settings.size == 'small'
+                            -%}
+                              {%- if block.settings.image != blank -%}
+                                <div class="mega-menu__featured-item" {{ block.shopify_attributes }}>
+                                  {%- if block.settings.link != blank -%}
+                                    <a href="{{ block.settings.link }}" class="mega-menu__featured-link">
+                                  {%- endif -%}
+                                  <img
+                                    src="{{ block.settings.image | image_url: width: 600 }}"
+                                    alt="{{ block.settings.image.alt | escape }}"
+                                    loading="lazy"
+                                    width="600"
+                                    height="400"
+                                  >
+                                  <div class="mega-menu__featured-content">
+                                    {%- if block.settings.show_video_button -%}
+                                      <button class="mega-menu__play-button" aria-label="Play video">
+                                        <svg
+                                          width="48"
+                                          height="48"
+                                          viewBox="0 0 48 48"
+                                          fill="none"
+                                          xmlns="http://www.w3.org/2000/svg"
+                                        >
+                                          <circle cx="24" cy="24" r="24" fill="white"/>
+                                          <path d="M18 34V14L34 24L18 34Z" fill="black"/>
+                                        </svg>
+                                      </button>
+                                    {%- endif -%}
+                                    <div class="mega-menu__featured-text">
+                                      {%- if block.settings.heading != blank -%}
+                                        <h3>{{ block.settings.heading }}</h3>
+                                      {%- endif -%}
+                                      {%- if block.settings.subheading != blank -%}
+                                        <p>{{ block.settings.subheading }}</p>
+                                      {%- endif -%}
+                                    </div>
+                                  </div>
+                                  {%- if block.settings.link != blank -%}
+                                    </a>
+                                  {%- endif -%}
+                                </div>
+                              {%- endif -%}
+                            {%- endif -%}
+                          {%- endfor -%}
+                        </div>
+                      {%- endif -%}
                     {%- else -%}
-                      {%- comment -%} Default featured content when no metafield is set {%- endcomment -%}
+                      {%- comment -%} Default featured content when no blocks are set {%- endcomment -%}
                       <div class="mega-menu__featured-item mega-menu__featured-item--large">
                         <div class="mega-menu__featured-content">
                           <button class="mega-menu__play-button" aria-label="Play video">
@@ -118,6 +280,7 @@
                         </div>
                       </div>
                     {%- endif -%}
+                  </div>
                   </div>
                 </div>
               </div>
