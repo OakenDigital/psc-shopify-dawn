@@ -32,7 +32,3 @@
 .list-menu--inline {
   flex-wrap: nowrap;
 }
-
-.list-menu.list-menu--inline {
-  background-color: transparent;
-}
