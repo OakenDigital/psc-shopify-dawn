@@ -6,9 +6,9 @@
 {% endcomment %}
 
 <nav class="header__inline-menu">
-  <ul class="list-menu list-menu--inline" role="list">
+  <ul class="list-menu list-menu--inline color-{{ section.settings.menu_dropdown_color_scheme }}" role="list">
     {%- for link in section.settings.menu.links -%}
-      <li class="color-{{ section.settings.menu_dropdown_color_scheme }}">
+      <li>
         {%- if link.links != blank -%}
           <header-menu>
             <details id="Details-HeaderMenu-{{ forloop.index }}" class="mega-menu">
