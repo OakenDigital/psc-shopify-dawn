@@ -98,6 +98,11 @@ details[open].menu-opening > .menu-drawer__submenu {
   margin-bottom: 0.2rem;
 }
 
+.menu-drawer__menu > li {
+  border-bottom: 1px solid rgba(var(--color-foreground), 0.08);
+}
+
+
 .menu-drawer__menu-item {
   padding: 1.1rem 3rem;
   text-decoration: none;
