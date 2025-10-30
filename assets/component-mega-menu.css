@@ -51,6 +51,17 @@
   padding: 0;
 }
 
+/* Right content area */
+.mega-menu__content-area {
+  position: relative;
+  padding: 2rem;
+}
+
+.mega-menu__link--selected {
+  background-color: rgba(var(--color-foreground), 0.1) !important;
+  font-weight: 600;
+}
+
 .mega-menu__list {
   display: flex;
   flex-direction: column;
@@ -201,9 +212,65 @@
   color: rgba(255, 255, 255, 0.9);
 }
 
-/* Hide nested lists in this layout */
+/* Third level nested lists */
 .mega-menu__navigation .list-unstyled {
   display: none;
+}
+
+/* Submenu panel in right content area */
+.mega-menu__submenu-panel {
+  padding: 0;
+}
+
+.mega-menu__submenu-title {
+  font-size: 2.4rem;
+  font-weight: 600;
+  margin: 0 0 2rem 0;
+  padding-bottom: 1.5rem;
+  border-bottom: 2px solid rgba(var(--color-foreground), 0.1);
+  text-decoration: underline;
+  text-underline-offset: 0.5rem;
+  text-decoration-thickness: 2px;
+}
+
+.mega-menu__submenu-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 2rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.mega-menu__submenu-item {
+  list-style: none;
+}
+
+.mega-menu__submenu-link {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  text-decoration: none;
+  color: rgb(var(--color-foreground));
+  padding: 0.5rem;
+  border-radius: 4px;
+  transition: background-color var(--duration-short) ease;
+}
+
+.mega-menu__submenu-link:hover {
+  background-color: rgba(var(--color-foreground), 0.04);
+}
+
+.mega-menu__submenu-link img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.mega-menu__submenu-link span {
+  font-size: 1.6rem;
+  font-weight: 400;
 }
 
 .header--top-center .mega-menu__list {

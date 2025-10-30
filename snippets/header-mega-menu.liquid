@@ -38,42 +38,78 @@
                     >
                       {%- for childlink in link.links -%}
                         <li>
-                          <a
-                            id="HeaderMenu-{{ link.handle }}-{{ childlink.handle }}"
-                            href="{{ childlink.url }}"
-                            class="mega-menu__link mega-menu__link--level-2 link{% if childlink.current %} mega-menu__link--active{% endif %}"
-                            {% if childlink.current %}
-                              aria-current="page"
-                            {% endif %}
-                          >
-                            {{ childlink.title | escape }}
-                            {{- 'icon-caret.svg' | inline_asset_content -}}
-                          </a>
                           {%- if childlink.links != blank -%}
-                            <ul class="list-unstyled" role="list">
-                              {%- for grandchildlink in childlink.links -%}
-                                <li>
-                                  <a
-                                    id="HeaderMenu-{{ link.handle }}-{{ childlink.handle }}-{{ grandchildlink.handle }}"
-                                    href="{{ grandchildlink.url }}"
-                                    class="mega-menu__link link{% if grandchildlink.current %} mega-menu__link--active{% endif %}"
-                                    {% if grandchildlink.current %}
-                                      aria-current="page"
-                                    {% endif %}
-                                  >
-                                    {{ grandchildlink.title | escape }}
-                                  </a>
-                                </li>
-                              {%- endfor -%}
-                            </ul>
+                            <a
+                              id="HeaderMenu-{{ link.handle }}-{{ childlink.handle }}"
+                              href="{{ childlink.url }}"
+                              class="mega-menu__link mega-menu__link--level-2 link{% if childlink.current %} mega-menu__link--active{% endif %} mega-menu__link--expandable"
+                              data-submenu-id="submenu-{{ link.handle }}-{{ childlink.handle }}"
+                              {% if childlink.current %}
+                                aria-current="page"
+                              {% endif %}
+                            >
+                              {{ childlink.title | escape }}
+                              {{- 'icon-caret.svg' | inline_asset_content -}}
+                            </a>
+                          {%- else -%}
+                            <a
+                              id="HeaderMenu-{{ link.handle }}-{{ childlink.handle }}"
+                              href="{{ childlink.url }}"
+                              class="mega-menu__link mega-menu__link--level-2 link{% if childlink.current %} mega-menu__link--active{% endif %}"
+                              {% if childlink.current %}
+                                aria-current="page"
+                              {% endif %}
+                            >
+                              {{ childlink.title | escape }}
+                              {{- 'icon-caret.svg' | inline_asset_content -}}
+                            </a>
                           {%- endif -%}
                         </li>
                       {%- endfor -%}
                     </ul>
                   </div>
 
-                  {%- comment -%} Featured Content Area {%- endcomment -%}
-                  <div class="mega-menu__featured">
+                  {%- comment -%} Right panel content area {%- endcomment -%}
+                  <div class="mega-menu__content-area">
+                    {%- comment -%} Third level submenus {%- endcomment -%}
+                    {%- for childlink in link.links -%}
+                      {%- if childlink.links != blank -%}
+                        <div 
+                          id="submenu-{{ link.handle }}-{{ childlink.handle }}"
+                          class="mega-menu__submenu-panel"
+                          style="display: none;"
+                        >
+                          <h2 class="mega-menu__submenu-title">Shop All {{ childlink.title }}</h2>
+                          <ul class="mega-menu__submenu-list" role="list">
+                            {%- for grandchildlink in childlink.links -%}
+                              <li class="mega-menu__submenu-item">
+                                <a
+                                  href="{{ grandchildlink.url }}"
+                                  class="mega-menu__submenu-link{% if grandchildlink.current %} mega-menu__link--active{% endif %}"
+                                  {% if grandchildlink.current %}
+                                    aria-current="page"
+                                  {% endif %}
+                                >
+                                  {%- if grandchildlink.object.featured_image -%}
+                                    <img 
+                                      src="{{ grandchildlink.object.featured_image | image_url: width: 80 }}" 
+                                      alt="{{ grandchildlink.object.featured_image.alt | escape }}"
+                                      width="80"
+                                      height="80"
+                                      loading="lazy"
+                                    >
+                                  {%- endif -%}
+                                  <span>{{ grandchildlink.title | escape }}</span>
+                                </a>
+                              </li>
+                            {%- endfor -%}
+                          </ul>
+                        </div>
+                      {%- endif -%}
+                    {%- endfor -%}
+
+                    {%- comment -%} Featured Content Area {%- endcomment -%}
+                    <div class="mega-menu__featured" id="featured-{{ link.handle }}">
                     {%- assign has_featured_content = false -%}
 
                     {%- comment -%} Check if we have any blocks for this menu item {%- endcomment -%}
@@ -244,6 +280,7 @@
                         </div>
                       </div>
                     {%- endif -%}
+                  </div>
                   </div>
                 </div>
               </div>
