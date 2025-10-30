@@ -15,7 +15,7 @@
   right: 0;
   top: 70%;
   z-index: 2;
-  transition: all var(--duration-short) ease;
+  transition: left var(--duration-short) ease;
 }
 
 .shopify-section-header-sticky .mega-menu__content {
@@ -243,5 +243,6 @@
 @media screen and (max-width: 1600px) {
   .mega-menu__content {
     left: 160px;
+    transition: left var(--duration-short) ease;
   }
 }
