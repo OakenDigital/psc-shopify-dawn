@@ -288,16 +288,12 @@ details[open].menu-opening > .menu-drawer__submenu {
 }
 
 .menu-drawer__play-button {
-  position: absolute;
-  top: 1rem;
-  left: 1rem;
   background: none;
   border: none;
   cursor: pointer;
   padding: 0;
   width: 32px;
   height: 32px;
-  z-index: 1;
 }
 
 .menu-drawer__featured-text h3 {
