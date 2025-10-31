@@ -15,14 +15,14 @@
         "heading": {
           "type": "heading",
           "settings": {
-            "heading": "Steering Re-Engineered",
-            "heading_size": "h0"
+            "heading": "Built for the wildest rides",
+            "heading_size": "hxl"
           }
         },
         "text_yYmNEW": {
           "type": "text",
           "settings": {
-            "text": "Whether you’re crawling rocks or cruising home, you need steering that works every time. That’s what we build.",
+            "text": "From rocky climbs to smooth daily drives, you need steering that’s dependable and tough.",
             "text_style": "body"
           }
         },
