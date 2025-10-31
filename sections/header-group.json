@@ -73,15 +73,27 @@
             "heading": "Steering Re-Engineered",
             "subheading": "Watch the new video series with our tech team"
           }
+        },
+        "submenu_featured_QY3e6D": {
+          "type": "submenu_featured",
+          "settings": {
+            "parent_menu_item": "shop-by-vehicle",
+            "submenu_item": "Testing the Title",
+            "image": "shopify://shop_images/4be647e7d807fc3ad4f92b55ef35fcd99368d689.jpg",
+            "link": "",
+            "heading": "Featured Content",
+            "subheading": "Description text"
+          }
         }
       },
       "block_order": [
         "mega_menu_featured_wUzLfD",
         "mega_menu_featured_kF997U",
-        "mega_menu_featured_8a93nD"
+        "mega_menu_featured_8a93nD",
+        "submenu_featured_QY3e6D"
       ],
       "custom_css": [
-        ".list-menu{background-color: transparent;}"
+        ".list-menu {background-color: transparent;}"
       ],
       "settings": {
         "logo_position": "middle-left",
