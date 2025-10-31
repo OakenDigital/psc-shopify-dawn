@@ -220,6 +220,14 @@
 /* Submenu panel in right content area */
 .mega-menu__submenu-panel {
   padding: 0;
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  gap: 3rem;
+}
+
+.mega-menu__submenu-main {
+  display: flex;
+  flex-direction: column;
 }
 
 .mega-menu__submenu-title {
@@ -234,9 +242,9 @@
 }
 
 .mega-menu__submenu-list {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  gap: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
   list-style: none;
   padding: 0;
   margin: 0;
@@ -244,16 +252,16 @@
 
 .mega-menu__submenu-item {
   list-style: none;
+  border-bottom: 1px solid rgba(var(--color-foreground), 0.08);
 }
 
 .mega-menu__submenu-link {
   display: flex;
   align-items: center;
-  gap: 1rem;
+  gap: 1.5rem;
   text-decoration: none;
   color: rgb(var(--color-foreground));
-  padding: 0.5rem;
-  border-radius: 4px;
+  padding: 1.2rem 1rem;
   transition: background-color var(--duration-short) ease;
 }
 
@@ -262,8 +270,8 @@
 }
 
 .mega-menu__submenu-link img {
-  width: 80px;
-  height: 80px;
+  width: 60px;
+  height: 60px;
   object-fit: contain;
   flex-shrink: 0;
 }
@@ -271,6 +279,50 @@
 .mega-menu__submenu-link span {
   font-size: 1.6rem;
   font-weight: 400;
+}
+
+/* Submenu featured content sidebar */
+.mega-menu__submenu-featured {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.mega-menu__submenu-featured-item {
+  position: relative;
+  height: 200px;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.mega-menu__submenu-featured-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.mega-menu__submenu-featured-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 1.5rem;
+  color: white;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+}
+
+.mega-menu__submenu-featured-text h3 {
+  font-size: 1.6rem;
+  font-weight: 600;
+  margin: 0 0 0.3rem 0;
+  color: white;
+}
+
+.mega-menu__submenu-featured-text p {
+  font-size: 1.3rem;
+  margin: 0;
+  color: rgba(255, 255, 255, 0.9);
 }
 
 .header--top-center .mega-menu__list {
