@@ -33,7 +33,7 @@
             "button_link_1": "shopify://collections/all",
             "button_style_secondary_1": false,
             "button_label_2": "Shop New Products",
-            "button_link_2": "",
+            "button_link_2": "shopify://collections/new-arrivals",
             "button_style_secondary_2": false
           }
         }
