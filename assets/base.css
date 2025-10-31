@@ -29,6 +29,7 @@
 :root {
   --font-body-family: 'Gotham', sans-serif;
   --font-heading-family: 'Gotham', sans-serif;
+  --font-heading-weight: bold;
   --alpha-button-background: 1;
   --alpha-button-border: 1;
   --alpha-link: 0.85;
