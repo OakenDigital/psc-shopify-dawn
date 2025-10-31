@@ -15,25 +15,25 @@
         "heading": {
           "type": "heading",
           "settings": {
-            "heading": "Built for the wildest rides",
+            "heading": "Steering Re-Engineered",
             "heading_size": "h0"
           }
         },
         "text_yYmNEW": {
           "type": "text",
           "settings": {
-            "text": "From rocky climbs to smooth daily drives, you need steering that's dependable and tough",
+            "text": "Whether you’re crawling rocks or cruising home, you need steering that works every time. That’s what we build.",
             "text_style": "body"
           }
         },
         "button": {
           "type": "buttons",
           "settings": {
-            "button_label_1": "Shop Steering Systems",
+            "button_label_1": "Shop all",
             "button_link_1": "shopify://collections/all",
-            "button_style_secondary_1": false,
-            "button_label_2": "Shop New Products",
-            "button_link_2": "shopify://collections/new-arrivals",
+            "button_style_secondary_1": true,
+            "button_label_2": "",
+            "button_link_2": "",
             "button_style_secondary_2": false
           }
         }
@@ -44,14 +44,14 @@
         "button"
       ],
       "settings": {
-        "image_2": "shopify://shop_images/main-home-background-jeep.jpg",
-        "image_overlay_opacity": 0,
-        "image_height": "large",
+        "image": "shopify://shop_images/IMG_1382_web_resized.jpg",
+        "image_overlay_opacity": 30,
+        "image_height": "medium",
         "image_behavior": "none",
         "desktop_content_position": "bottom-right",
         "desktop_content_alignment": "center",
-        "show_text_box": true,
-        "color_scheme": "scheme-2a3099ff-9a3c-4a9e-8233-7c59b10461d1",
+        "show_text_box": false,
+        "color_scheme": "scheme-3",
         "stack_images_on_mobile": true,
         "mobile_content_alignment": "center",
         "show_text_below": false

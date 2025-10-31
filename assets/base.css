@@ -1,4 +1,34 @@
+@font-face {
+    font-family: 'Gotham';
+    src: local('Gotham Light'), local('Gotham-Light'),
+        url('https://cdn.shopify.com/s/files/1/0642/9743/5241/files/Gotham-Light.woff2?v=1761933122') format('woff2');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Gotham';
+    src: local('Gotham'), local('Gotham-Regular'),
+        url('https://cdn.shopify.com/s/files/1/0642/9743/5241/files/Gotham-Medium.woff2?v=1761933122') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Gotham';
+    src: local('Gotham Bold'), local('Gotham-Bold'),
+        url('https://cdn.shopify.com/s/files/1/0642/9743/5241/files/Gotham-Bold.woff2?v=1761933122') format('woff2');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+
 :root {
+  --font-body-family: 'Gotham', sans-serif;
+  --font-heading-family: 'Gotham', sans-serif;
   --alpha-button-background: 1;
   --alpha-button-border: 1;
   --alpha-link: 0.85;
