@@ -448,12 +448,10 @@
   margin-top: 1rem;
 }
 
-@media screen and (min-width: 750px) {
-  .banner__buttons {
-    display: flex;
-    gap: 1rem;
-    word-break: break-word;
-  }
+.banner__buttons {
+  display: flex;
+  gap: 1rem;
+  word-break: break-word;
 }
 
 @media screen and (max-width: 749px) {
