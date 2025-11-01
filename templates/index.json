@@ -96,7 +96,7 @@
         "title": "Shop by Vehicle",
         "heading_size": "h1",
         "image_ratio": "square",
-        "columns_desktop": 2,
+        "columns_desktop": 4,
         "color_scheme": "scheme-1",
         "show_view_all": false,
         "columns_mobile": "2",
@@ -138,18 +138,19 @@
       ],
       "name": "t:sections.image-with-text.presets.name",
       "settings": {
+        "image": "shopify://shop_images/e2f5382fc01b76ef84cf54539f60751af049c5dd.jpg",
         "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "image_first",
         "image_behavior": "none",
         "content_layout": "no-overlap",
-        "desktop_content_position": "top",
+        "desktop_content_position": "middle",
         "desktop_content_alignment": "left",
         "mobile_content_alignment": "left",
-        "section_color_scheme": "",
-        "color_scheme": "",
-        "padding_top": 36,
-        "padding_bottom": 36
+        "section_color_scheme": "scheme-1",
+        "color_scheme": "scheme-2a3099ff-9a3c-4a9e-8233-7c59b10461d1",
+        "padding_top": 0,
+        "padding_bottom": 0
       }
     },
     "featured_collection": {
