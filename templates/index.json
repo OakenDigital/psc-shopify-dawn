@@ -97,7 +97,7 @@
       "name": "t:sections.collection-list.presets.name",
       "settings": {
         "eyebrow_text": "Collections",
-        "eyebrow_color": "#dc2626",
+        "eyebrow_color": "#d6001c",
         "title": "Shop by Vehicle",
         "heading_size": "h1",
         "image_ratio": "square",
