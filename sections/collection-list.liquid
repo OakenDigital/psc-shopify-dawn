@@ -48,6 +48,12 @@
           {{ section.settings.title }}
         </h2>
 
+        {%- if section.settings.description != blank -%}
+          <div class="collection-list-description rte{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
+            {{ section.settings.description }}
+          </div>
+        {%- endif -%}
+
         {%- if section.settings.show_view_all and show_mobile_slider -%}
           <a
             href="{{ routes.collections_url }}"
@@ -174,6 +180,12 @@
       "id": "title",
       "default": "t:sections.collection-list.settings.title.default",
       "label": "t:sections.collection-list.settings.title.label"
+    },
+    {
+      "type": "richtext",
+      "id": "description",
+      "label": "Description",
+      "default": "<p>Explore our curated collections of top-quality steering systems and components, designed for peak performance and durability.</p>"
     },
     {
       "type": "select",
