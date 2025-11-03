@@ -96,7 +96,10 @@
       ],
       "name": "t:sections.collection-list.presets.name",
       "settings": {
+        "eyebrow_text": "Collections",
+        "eyebrow_color": "#d6001c",
         "title": "Shop by Vehicle",
+        "description": "<p>Explore our curated collections of top-quality steering systems and components, designed for peak performance and durability.</p>",
         "heading_size": "h1",
         "image_ratio": "square",
         "columns_desktop": 4,
