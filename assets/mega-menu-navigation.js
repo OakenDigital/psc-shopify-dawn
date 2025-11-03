@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
       // Show the selected submenu
       if (submenuPanel) {
-        submenuPanel.style.display = 'block';
+        submenuPanel.style.display = 'grid';
       }
     });
   });

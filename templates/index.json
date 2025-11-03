@@ -15,26 +15,29 @@
         "heading": {
           "type": "heading",
           "settings": {
-            "heading": "Steering Re-Engineered",
-            "heading_size": "h0"
+            "heading": "Built for the wildest rides",
+            "heading_size": "hxl"
           }
         },
         "text_yYmNEW": {
           "type": "text",
           "settings": {
-            "text": "Whether you’re crawling rocks or cruising home, you need steering that works every time. That’s what we build.",
+            "text": "From rocky climbs to smooth daily drives, you need steering that’s dependable and tough.",
             "text_style": "body"
           }
         },
         "button": {
           "type": "buttons",
           "settings": {
-            "button_label_1": "Shop all",
+            "button_layout": "inline",
+            "button_label_1": "Shop Steering Systems",
             "button_link_1": "shopify://collections/all",
-            "button_style_secondary_1": true,
-            "button_label_2": "",
-            "button_link_2": "",
-            "button_style_secondary_2": false
+            "button_style_secondary_1": false,
+            "button_color_scheme_1": "scheme-3e379a2a-46a4-4c6f-826a-ba5df32a53b6",
+            "button_label_2": "Shop New Products",
+            "button_link_2": "shopify://collections/new-arrivals",
+            "button_style_secondary_2": false,
+            "button_color_scheme_2": "scheme-f95fc31b-0c1b-4da3-82af-ed2967ed4967"
           }
         }
       },
@@ -44,14 +47,14 @@
         "button"
       ],
       "settings": {
-        "image": "shopify://shop_images/IMG_1382_web_resized.jpg",
-        "image_overlay_opacity": 30,
-        "image_height": "medium",
+        "image_2": "shopify://shop_images/main-home-background-jeep.jpg",
+        "image_overlay_opacity": 0,
+        "image_height": "large",
         "image_behavior": "none",
         "desktop_content_position": "bottom-right",
         "desktop_content_alignment": "center",
-        "show_text_box": false,
-        "color_scheme": "scheme-3",
+        "show_text_box": true,
+        "color_scheme": "scheme-2a3099ff-9a3c-4a9e-8233-7c59b10461d1",
         "stack_images_on_mobile": true,
         "mobile_content_alignment": "center",
         "show_text_below": false
@@ -97,9 +100,9 @@
         "heading_size": "h1",
         "image_ratio": "square",
         "columns_desktop": 4,
-        "color_scheme": "",
+        "color_scheme": "scheme-1",
         "show_view_all": false,
-        "columns_mobile": "1",
+        "columns_mobile": "2",
         "swipe_on_mobile": false,
         "padding_top": 36,
         "padding_bottom": 36
@@ -138,18 +141,19 @@
       ],
       "name": "t:sections.image-with-text.presets.name",
       "settings": {
+        "image": "shopify://shop_images/e2f5382fc01b76ef84cf54539f60751af049c5dd.jpg",
         "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "image_first",
         "image_behavior": "none",
         "content_layout": "no-overlap",
-        "desktop_content_position": "top",
+        "desktop_content_position": "middle",
         "desktop_content_alignment": "left",
         "mobile_content_alignment": "left",
-        "section_color_scheme": "",
-        "color_scheme": "",
-        "padding_top": 36,
-        "padding_bottom": 36
+        "section_color_scheme": "scheme-1",
+        "color_scheme": "scheme-2a3099ff-9a3c-4a9e-8233-7c59b10461d1",
+        "padding_top": 0,
+        "padding_bottom": 0
       }
     },
     "featured_collection": {
