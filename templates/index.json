@@ -197,12 +197,47 @@
         "padding_top": 44,
         "padding_bottom": 60
       }
+    },
+    "newsletter_agMNU6": {
+      "type": "newsletter",
+      "blocks": {
+        "heading_diFPEG": {
+          "type": "heading",
+          "settings": {
+            "heading": "Subscribe to our emails",
+            "heading_size": "h1"
+          }
+        },
+        "paragraph_9Vzcj6": {
+          "type": "paragraph",
+          "settings": {
+            "text": "<p>We're all about making your life easier (and your steering better). Tell us what you want to hear about, how often, and how you want it delivered.</p><p>No spam, no nonsense—just the good stuff.<br/><br/></p>"
+          }
+        },
+        "email_form_kxH86x": {
+          "type": "email_form",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "heading_diFPEG",
+        "paragraph_9Vzcj6",
+        "email_form_kxH86x"
+      ],
+      "name": "t:sections.newsletter.presets.name",
+      "settings": {
+        "color_scheme": "scheme-3",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
     }
   },
   "order": [
     "image_banner",
     "collection_list_JAWHMJ",
     "image_with_text_rFXzLq",
-    "featured_collection"
+    "featured_collection",
+    "newsletter_agMNU6"
   ]
 }
