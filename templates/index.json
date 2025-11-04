@@ -96,7 +96,10 @@
       ],
       "name": "t:sections.collection-list.presets.name",
       "settings": {
+        "eyebrow_text": "Collections",
+        "eyebrow_color": "#d6001c",
         "title": "Shop by Vehicle",
+        "description": "<p>Explore our curated collections of top-quality steering systems and components, designed for peak performance and durability.</p>",
         "heading_size": "h1",
         "image_ratio": "square",
         "columns_desktop": 4,
@@ -111,6 +114,13 @@
     "image_with_text_rFXzLq": {
       "type": "image-with-text",
       "blocks": {
+        "tagline_grRfqn": {
+          "type": "tagline",
+          "settings": {
+            "tagline": "ADD A TAGLINE",
+            "tagline_color": "#ffffff"
+          }
+        },
         "heading_L3f4Vz": {
           "type": "heading",
           "settings": {
@@ -128,13 +138,15 @@
         "button_zkFPPw": {
           "type": "button",
           "settings": {
-            "button_label": "Button label",
-            "button_link": "",
-            "button_style_secondary": false
+            "button_label": "View More",
+            "button_link": "shopify://collections",
+            "button_style_secondary": false,
+            "button_color_scheme": "scheme-f95fc31b-0c1b-4da3-82af-ed2967ed4967"
           }
         }
       },
       "block_order": [
+        "tagline_grRfqn",
         "heading_L3f4Vz",
         "text_XGV8jB",
         "button_zkFPPw"
@@ -159,29 +171,31 @@
     "featured_collection": {
       "type": "featured-collection",
       "settings": {
-        "collection": "new-arrivals",
-        "products_to_show": 8,
+        "collection": "jeep",
+        "products_to_show": 10,
+        "eyebrow_text": "Products",
+        "eyebrow_color": "#dc2626",
         "title": "Featured products",
-        "heading_size": "h2",
-        "description": "",
+        "heading_size": "h1",
+        "description": "<p>Explore our curated collections of top-quality steering systems and components, designed for peak performance and durability.<br/><br/></p>",
         "show_description": false,
         "description_style": "body",
-        "columns_desktop": 4,
+        "columns_desktop": 6,
         "enable_desktop_slider": true,
         "full_width": false,
         "show_view_all": true,
         "view_all_style": "solid",
         "color_scheme": "scheme-1",
-        "image_ratio": "square",
+        "image_ratio": "adapt",
         "image_shape": "default",
-        "show_secondary_image": true,
-        "show_vendor": false,
-        "show_rating": true,
+        "show_secondary_image": false,
+        "show_vendor": true,
+        "show_rating": false,
         "quick_add": "none",
         "columns_mobile": "2",
         "swipe_on_mobile": false,
         "padding_top": 44,
-        "padding_bottom": 36
+        "padding_bottom": 60
       }
     }
   },

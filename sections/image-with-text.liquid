@@ -66,6 +66,14 @@
           >
             {%- for block in section.blocks -%}
               {% case block.type %}
+                {%- when 'tagline' -%}
+                  <p
+                    class="image-with-text__text image-with-text__text--caption caption-with-letter-spacing caption-with-letter-spacing--medium"
+                    style="{% if block.settings.tagline_color != blank %}color: {{ block.settings.tagline_color }};{% endif %}"
+                    {{ block.shopify_attributes }}
+                  >
+                    {{ block.settings.tagline | escape }}
+                  </p>
                 {%- when 'heading' -%}
                   <h2
                     class="image-with-text__heading inline-richtext {{ block.settings.heading_size }}"
@@ -86,13 +94,20 @@
                   </div>
                 {%- when 'button' -%}
                   {%- if block.settings.button_label != blank -%}
+                    {%- liquid
+                      if block.settings.button_color_scheme != blank
+                        assign button_color_scheme = block.settings.button_color_scheme
+                      else
+                        assign button_color_scheme = 'accent-1'
+                      endif
+                    -%}
                     <a
                       {% if block.settings.button_link == blank %}
                         role="link" aria-disabled="true"
                       {% else %}
                         href="{{ block.settings.button_link }}"
                       {% endif %}
-                      class="button{% if block.settings.button_style_secondary %} button--secondary{% else %} button--primary{% endif %}"
+                      class="button{% if block.settings.button_style_secondary %} button--secondary{% else %} button--primary{% endif %} color-{{ button_color_scheme }}"
                       {{ block.shopify_attributes }}
                     >
                       {{ block.settings.button_label | escape }}
@@ -203,7 +218,7 @@
     {
       "type": "header",
       "content": "t:sections.image-with-text.settings.header.content"
-    }, 
+    },
     {
       "type": "select",
       "id": "content_layout",
@@ -219,7 +234,7 @@
       ],
       "default": "no-overlap",
       "label": "t:sections.image-with-text.settings.content_layout.label"
-    },       
+    },
     {
       "type": "select",
       "id": "desktop_content_position",
@@ -283,7 +298,7 @@
     {
       "type": "header",
       "content": "t:sections.image-with-text.settings.header_colors.content"
-    },        
+    },
     {
       "type": "color_scheme",
       "id": "section_color_scheme",
@@ -322,6 +337,24 @@
     }
   ],
   "blocks": [
+    {
+      "type": "tagline",
+      "name": "Tagline",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "text",
+          "id": "tagline",
+          "default": "ADD A TAGLINE",
+          "label": "Tagline"
+        },
+        {
+          "type": "color",
+          "id": "tagline_color",
+          "label": "Tagline color"
+        }
+      ]
+    },
     {
       "type": "heading",
       "name": "t:sections.image-with-text.blocks.heading.name",
@@ -463,6 +496,12 @@
           "id": "button_style_secondary",
           "default": false,
           "label": "t:sections.image-with-text.blocks.button.settings.outline_button.label"
+        },
+        {
+          "type": "color_scheme",
+          "id": "button_color_scheme",
+          "label": "Button color scheme",
+          "default": "accent-1"
         }
       ]
     }
@@ -471,6 +510,9 @@
     {
       "name": "t:sections.image-with-text.presets.name",
       "blocks": [
+        {
+          "type": "tagline"
+        },
         {
           "type": "heading"
         },

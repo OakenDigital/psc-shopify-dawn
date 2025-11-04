@@ -14,6 +14,12 @@
       padding-bottom: {{ section.settings.padding_bottom }}px;
     }
   }
+
+  {%- if section.settings.eyebrow_text != blank and section.settings.eyebrow_color != blank -%}
+    .collection-list-eyebrow-{{ section.id }} {
+      color: {{ section.settings.eyebrow_color }};
+    }
+  {%- endif -%}
 {%- endstyle -%}
 
 {%- liquid
@@ -28,12 +34,23 @@
   <div class="collection-list-wrapper page-width isolate{% if show_mobile_slider %} page-width-desktop{% endif %}{% if section.settings.title == blank %} no-heading{% endif %}{% if section.settings.show_view_all == false or section.blocks.size > collections.size %} no-mobile-link{% endif %} section-{{ section.id }}-padding">
     {%- unless section.settings.title == blank -%}
       <div class="title-wrapper-with-link{% if show_mobile_slider %} title-wrapper--self-padded-tablet-down{% else %} title-wrapper--self-padded-mobile{% endif %} title-wrapper--no-top-margin">
+        {%- if section.settings.eyebrow_text != blank -%}
+          <p class="collection-list-eyebrow collection-list-eyebrow-{{ section.id }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
+            {{ section.settings.eyebrow_text }}
+          </p>
+        {%- endif -%}
         <h2
           id="SectionHeading-{{ section.id }}"
           class="collection-list-title inline-richtext {{ section.settings.heading_size }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
         >
           {{ section.settings.title }}
         </h2>
+
+        {%- if section.settings.description != blank -%}
+          <div class="collection-list-description rte{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
+            {{ section.settings.description }}
+          </div>
+        {%- endif -%}
 
         {%- if section.settings.show_view_all and show_mobile_slider -%}
           <a
@@ -144,10 +161,29 @@
   },
   "settings": [
     {
+      "type": "text",
+      "id": "eyebrow_text",
+      "label": "Eyebrow text",
+      "default": "COLLECTIONS",
+      "info": "Small text above the main heading"
+    },
+    {
+      "type": "color",
+      "id": "eyebrow_color",
+      "label": "Eyebrow text color",
+      "default": "#dc2626"
+    },
+    {
       "type": "inline_richtext",
       "id": "title",
       "default": "t:sections.collection-list.settings.title.default",
       "label": "t:sections.collection-list.settings.title.label"
+    },
+    {
+      "type": "richtext",
+      "id": "description",
+      "label": "Description",
+      "default": "<p>Explore our curated collections of top-quality steering systems and components, designed for peak performance and durability.</p>"
     },
     {
       "type": "select",
@@ -180,7 +216,7 @@
     {
       "type": "header",
       "content": "t:sections.collection-list.settings.header_layout.content"
-    },    
+    },
     {
       "type": "select",
       "id": "image_ratio",
@@ -222,7 +258,7 @@
       "id": "show_view_all",
       "default": false,
       "label": "t:sections.collection-list.settings.show_view_all.label",
-      "info": "t:sections.collection-list.settings.show_view_all.info"   
+      "info": "t:sections.collection-list.settings.show_view_all.info"
     },
     {
       "type": "header",
