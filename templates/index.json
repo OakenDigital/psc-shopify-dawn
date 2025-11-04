@@ -140,7 +140,8 @@
           "settings": {
             "button_label": "View More",
             "button_link": "shopify://collections",
-            "button_style_secondary": false
+            "button_style_secondary": false,
+            "button_color_scheme": "scheme-f95fc31b-0c1b-4da3-82af-ed2967ed4967"
           }
         }
       },
