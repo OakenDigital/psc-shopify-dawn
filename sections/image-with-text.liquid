@@ -66,6 +66,14 @@
           >
             {%- for block in section.blocks -%}
               {% case block.type %}
+                {%- when 'tagline' -%}
+                  <p
+                    class="image-with-text__text image-with-text__text--caption caption-with-letter-spacing caption-with-letter-spacing--medium"
+                    style="{% if block.settings.tagline_color != blank %}color: {{ block.settings.tagline_color }};{% endif %}"
+                    {{ block.shopify_attributes }}
+                  >
+                    {{ block.settings.tagline | escape }}
+                  </p>
                 {%- when 'heading' -%}
                   <h2
                     class="image-with-text__heading inline-richtext {{ block.settings.heading_size }}"
@@ -326,6 +334,24 @@
   ],
   "blocks": [
     {
+      "type": "tagline",
+      "name": "Tagline",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "text",
+          "id": "tagline",
+          "default": "ADD A TAGLINE",
+          "label": "Tagline"
+        },
+        {
+          "type": "color",
+          "id": "tagline_color",
+          "label": "Tagline color"
+        }
+      ]
+    },
+    {
       "type": "heading",
       "name": "t:sections.image-with-text.blocks.heading.name",
       "limit": 1,
@@ -486,6 +512,9 @@
     {
       "name": "t:sections.image-with-text.presets.name",
       "blocks": [
+        {
+          "type": "tagline"
+        },
         {
           "type": "heading"
         },
