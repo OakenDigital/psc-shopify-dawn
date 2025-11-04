@@ -94,16 +94,20 @@
                   </div>
                 {%- when 'button' -%}
                   {%- if block.settings.button_label != blank -%}
+                    {%- liquid
+                      if block.settings.button_color_scheme != blank
+                        assign button_color_scheme = block.settings.button_color_scheme
+                      else
+                        assign button_color_scheme = 'accent-1'
+                      endif
+                    -%}
                     <a
                       {% if block.settings.button_link == blank %}
                         role="link" aria-disabled="true"
                       {% else %}
                         href="{{ block.settings.button_link }}"
                       {% endif %}
-                      class="button{% if block.settings.button_style_secondary %} button--secondary{% else %} button--primary{% endif %}"
-                      {% if block.settings.button_color != blank or block.settings.button_text_color != blank %}
-                        style="{% if block.settings.button_color != blank %}background-color: {{ block.settings.button_color }}; border-color: {{ block.settings.button_color }};{% endif %}{% if block.settings.button_text_color != blank %} color: {{ block.settings.button_text_color }};{% endif %}"
-                      {% endif %}
+                      class="button{% if block.settings.button_style_secondary %} button--secondary{% else %} button--primary{% endif %} color-{{ button_color_scheme }}"
                       {{ block.shopify_attributes }}
                     >
                       {{ block.settings.button_label | escape }}
@@ -494,16 +498,10 @@
           "label": "t:sections.image-with-text.blocks.button.settings.outline_button.label"
         },
         {
-          "type": "color",
-          "id": "button_color",
-          "label": "Button color",
-          "default": "#000000"
-        },
-        {
-          "type": "color",
-          "id": "button_text_color",
-          "label": "Button text color",
-          "default": "#FFFFFF"
+          "type": "color_scheme",
+          "id": "button_color_scheme",
+          "label": "Button color scheme",
+          "default": "accent-1"
         }
       ]
     }
