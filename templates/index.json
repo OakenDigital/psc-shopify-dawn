@@ -114,6 +114,13 @@
     "image_with_text_rFXzLq": {
       "type": "image-with-text",
       "blocks": {
+        "tagline_grRfqn": {
+          "type": "tagline",
+          "settings": {
+            "tagline": "ADD A TAGLINE",
+            "tagline_color": "#ffffff"
+          }
+        },
         "heading_L3f4Vz": {
           "type": "heading",
           "settings": {
@@ -140,6 +147,7 @@
         }
       },
       "block_order": [
+        "tagline_grRfqn",
         "heading_L3f4Vz",
         "text_XGV8jB",
         "button_zkFPPw"
