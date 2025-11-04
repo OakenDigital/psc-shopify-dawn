@@ -173,6 +173,8 @@
       "settings": {
         "collection": "new-arrivals",
         "products_to_show": 8,
+        "eyebrow_text": "Products",
+        "eyebrow_color": "#dc2626",
         "title": "Featured products",
         "heading_size": "h2",
         "description": "",
