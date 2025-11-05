@@ -16,7 +16,7 @@
           "type": "shopify://apps/partfinder-year-make-model/blocks/vehicle_search_bar/2892d2e7-0551-451a-8d78-8a0f565a5174",
           "settings": {
             "gv-enable-submodel": false,
-            "gv-disable-full-width-class": true,
+            "gv-disable-full-width-class": false,
             "gv-disable-styles": false,
             "gv-search-bar": "#e1e3e4",
             "gv-search-color": "#ff0000",
@@ -25,7 +25,7 @@
             "gv-clear-text-color": "#ffffff",
             "gv-search-label": "Search",
             "gv-clear-label": "Clear",
-            "gv-show-title-label": false,
+            "gv-show-title-label": true,
             "gv-title-label": "SELECT YOUR VEHICLE",
             "gv-title-bg": "#000000",
             "gv-title-text": "#ffffff",
@@ -44,7 +44,7 @@
         "partfinder_year_make_model_vehicle_search_bar_XCfCzB"
       ],
       "settings": {
-        "include_margins": true
+        "include_margins": false
       }
     },
     "main": {
