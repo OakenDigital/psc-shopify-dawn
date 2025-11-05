@@ -71,6 +71,12 @@
           "type": "price",
           "settings": {}
         },
+        "d1d543c2-4806-4f6d-b2f0-0548504760c6": {
+          "type": "shopify://apps/yotpo-product-reviews/blocks/star-rating/eb7dfd7d-db44-4334-bc49-c893b51b36cf",
+          "settings": {
+            "product": "{{product}}"
+          }
+        },
         "variant_picker": {
           "type": "variant_picker",
           "settings": {
@@ -97,12 +103,6 @@
           "type": "share",
           "settings": {
             "share_label": "Share"
-          }
-        },
-        "d1d543c2-4806-4f6d-b2f0-0548504760c6": {
-          "type": "shopify://apps/yotpo-product-reviews/blocks/star-rating/eb7dfd7d-db44-4334-bc49-c893b51b36cf",
-          "settings": {
-            "product": "{{product}}"
           }
         }
       },
@@ -209,7 +209,7 @@
         "layout": "none",
         "container_color_scheme": "",
         "color_scheme": "",
-        "open_first_collapsible_row": false,
+        "open_first_collapsible_row": true,
         "image_ratio": "adapt",
         "desktop_layout": "image_second",
         "padding_top": 36,
@@ -250,47 +250,11 @@
       "settings": {
         "include_margins": true
       }
-    },
-    "8a242fa28e57fa3290ee": {
-      "type": "apps",
-      "blocks": {
-        "0347a989-134a-44f5-b056-22d29a1c0a50": {
-          "type": "shopify://apps/yotpo-product-reviews/blocks/reviews/eb7dfd7d-db44-4334-bc49-c893b51b36cf",
-          "settings": {
-            "product": "{{product}}"
-          }
-        }
-      },
-      "block_order": [
-        "0347a989-134a-44f5-b056-22d29a1c0a50"
-      ],
-      "settings": {
-        "include_margins": true
-      }
-    },
-    "6bef020bd6953dda07c2": {
-      "type": "apps",
-      "blocks": {
-        "f628b9bd-942e-4140-96f9-1c51c5c2d6ef": {
-          "type": "shopify://apps/yotpo-product-reviews/blocks/reviews/eb7dfd7d-db44-4334-bc49-c893b51b36cf",
-          "settings": {
-            "product": "{{product}}"
-          }
-        }
-      },
-      "block_order": [
-        "f628b9bd-942e-4140-96f9-1c51c5c2d6ef"
-      ],
-      "settings": {
-        "include_margins": true
-      }
     }
   },
   "order": [
     "1762357149ec0dedd5",
     "main",
-    "6bef020bd6953dda07c2",
-    "8a242fa28e57fa3290ee",
     "collapsible_content_fgDLQP",
     "related-products",
     "176235741763515547"
