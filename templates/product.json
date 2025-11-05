@@ -267,11 +267,29 @@
       "settings": {
         "include_margins": true
       }
+    },
+    "6bef020bd6953dda07c2": {
+      "type": "apps",
+      "blocks": {
+        "f628b9bd-942e-4140-96f9-1c51c5c2d6ef": {
+          "type": "shopify://apps/yotpo-product-reviews/blocks/reviews/eb7dfd7d-db44-4334-bc49-c893b51b36cf",
+          "settings": {
+            "product": "{{product}}"
+          }
+        }
+      },
+      "block_order": [
+        "f628b9bd-942e-4140-96f9-1c51c5c2d6ef"
+      ],
+      "settings": {
+        "include_margins": true
+      }
     }
   },
   "order": [
     "1762357149ec0dedd5",
     "main",
+    "6bef020bd6953dda07c2",
     "8a242fa28e57fa3290ee",
     "collapsible_content_fgDLQP",
     "related-products",
