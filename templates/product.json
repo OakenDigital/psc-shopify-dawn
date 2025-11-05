@@ -9,6 +9,44 @@
  */
 {
   "sections": {
+    "1762357149ec0dedd5": {
+      "type": "apps",
+      "blocks": {
+        "partfinder_year_make_model_vehicle_search_bar_XCfCzB": {
+          "type": "shopify://apps/partfinder-year-make-model/blocks/vehicle_search_bar/2892d2e7-0551-451a-8d78-8a0f565a5174",
+          "settings": {
+            "gv-enable-submodel": false,
+            "gv-disable-full-width-class": true,
+            "gv-disable-styles": false,
+            "gv-search-bar": "#e1e3e4",
+            "gv-search-color": "#ff0000",
+            "gv-search-text-color": "#ffffff",
+            "gv-clear-color": "#000000",
+            "gv-clear-text-color": "#ffffff",
+            "gv-search-label": "Search",
+            "gv-clear-label": "Clear",
+            "gv-show-title-label": false,
+            "gv-title-label": "SELECT YOUR VEHICLE",
+            "gv-title-bg": "#000000",
+            "gv-title-text": "#ffffff",
+            "gv-show-toggle-button": false,
+            "gv-toggle-button-label": "FIND YOUR VEHICLE",
+            "gv-toggle-button-bg": "#000000",
+            "gv-toggle-button-text": "#ffffff",
+            "gv-margin-top": 0,
+            "gv-margin-bottom": 0,
+            "gv-margin-left": 0,
+            "gv-margin-right": 0
+          }
+        }
+      },
+      "block_order": [
+        "partfinder_year_make_model_vehicle_search_bar_XCfCzB"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    },
     "main": {
       "type": "main-product",
       "blocks": {
@@ -22,6 +60,12 @@
         "title": {
           "type": "title",
           "settings": {}
+        },
+        "yotpo_product_reviews_star_rating_fJzwXp": {
+          "type": "shopify://apps/yotpo-product-reviews/blocks/star-rating/eb7dfd7d-db44-4334-bc49-c893b51b36cf",
+          "settings": {
+            "product": "{{product}}"
+          }
         },
         "price": {
           "type": "price",
@@ -59,6 +103,7 @@
       "block_order": [
         "vendor",
         "title",
+        "yotpo_product_reviews_star_rating_fJzwXp",
         "price",
         "variant_picker",
         "quantity_selector",
@@ -182,18 +227,18 @@
         "padding_bottom": 28
       }
     },
-    "1762357149ec0dedd5": {
+    "176235741763515547": {
       "type": "apps",
       "blocks": {
-        "yotpo_product_reviews_reviews_en4jrr": {
+        "yotpo_product_reviews_reviews_7indRK": {
           "type": "shopify://apps/yotpo-product-reviews/blocks/reviews/eb7dfd7d-db44-4334-bc49-c893b51b36cf",
           "settings": {
-            "product": "{{ product }}"
+            "product": "{{product}}"
           }
         }
       },
       "block_order": [
-        "yotpo_product_reviews_reviews_en4jrr"
+        "yotpo_product_reviews_reviews_7indRK"
       ],
       "settings": {
         "include_margins": true
@@ -201,9 +246,10 @@
     }
   },
   "order": [
+    "1762357149ec0dedd5",
     "main",
     "collapsible_content_fgDLQP",
     "related-products",
-    "1762357149ec0dedd5"
+    "176235741763515547"
   ]
 }
