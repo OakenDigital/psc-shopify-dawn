@@ -346,7 +346,7 @@
 }
 
 .banner__box {
-  padding: 4rem 1.5rem;
+  padding: 4rem 5.5rem;
   position: relative;
   height: fit-content;
   align-items: center;
@@ -452,6 +452,12 @@
   display: flex;
   gap: 1rem;
   word-break: break-word;
+}
+
+@media screen and (max-width: 680px) {
+  .banner__buttons {
+    flex-direction: column;
+  }
 }
 
 .banner__buttons--stacked {
