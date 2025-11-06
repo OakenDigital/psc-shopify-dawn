@@ -6,17 +6,17 @@
     display: flex;
   }
 
-   @media screen and (min-width: 750px) {
+   @media screen and (max-width: 750px) {
     .breadcrumbs__list {
       font-size: 1.2rem;
     }
    }
 
   .breadcrumbs__item {
-    whitespace: nowrap;
+    white-space: nowrap;
   }
 
-  .breadcrumbs__item::last-of-type {
+  .breadcrumbs__item:last-of-type {
     overflow: hidden;
     text-overflow: ellipsis;
   }
