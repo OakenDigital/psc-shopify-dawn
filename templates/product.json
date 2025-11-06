@@ -162,7 +162,7 @@
           "settings": {
             "heading": "Why you’ll love it",
             "icon": "none",
-            "row_content": "{{ block.settings.page.content }}",
+            "row_content": "{{ product.metafields.custom.why_you_ll_love_it | metafield_tag }}",
             "page": ""
           }
         },
@@ -171,7 +171,7 @@
           "settings": {
             "heading": "Heads‑up for installers",
             "icon": "none",
-            "row_content": "",
+            "row_content": "{{ product.metafields.custom.heads_up_for_installers | metafield_tag }}",
             "page": ""
           }
         },
@@ -180,7 +180,7 @@
           "settings": {
             "heading": "Ideal for",
             "icon": "none",
-            "row_content": "",
+            "row_content": "{{ product.metafields.custom.ideal_for | metafield_tag }}",
             "page": ""
           }
         },
@@ -189,7 +189,7 @@
           "settings": {
             "heading": "Fitment",
             "icon": "none",
-            "row_content": "",
+            "row_content": "{{ product.metafields.custom.fitment_pdp | metafield_tag }}",
             "page": ""
           }
         },
@@ -198,7 +198,7 @@
           "settings": {
             "heading": "Use it with",
             "icon": "none",
-            "row_content": "",
+            "row_content": "{{ product.metafields.custom.use_it_with | metafield_tag }}",
             "page": ""
           }
         },
@@ -207,7 +207,7 @@
           "settings": {
             "heading": "What’s included",
             "icon": "none",
-            "row_content": "",
+            "row_content": "{{ product.metafields.custom.what_s_included | metafield_tag }}",
             "page": ""
           }
         }
