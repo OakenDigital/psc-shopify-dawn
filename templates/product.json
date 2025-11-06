@@ -9,6 +9,20 @@
  */
 {
   "sections": {
+    "breadcrumbs_EzUGCk": {
+      "type": "breadcrumbs",
+      "name": "Breadcrumbs",
+      "settings": {
+        "home_text": "Shop",
+        "background_color": "#f8f8f8",
+        "link_color": "#000000",
+        "link_hover_color": "#333333",
+        "current_page_color": "#767676",
+        "arrow_color": "#000000",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
     "1762357149ec0dedd5": {
       "type": "apps",
       "blocks": {
@@ -259,6 +273,7 @@
     }
   },
   "order": [
+    "breadcrumbs_EzUGCk",
     "1762357149ec0dedd5",
     "main",
     "collapsible_content_fgDLQP",
