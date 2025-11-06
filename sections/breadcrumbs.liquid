@@ -1,4 +1,36 @@
 {%- style -%}
+  .breadcrumbs {
+    padding: 2rem;
+  }
+
+  .breadcrumbs__list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+
+  .breadcrumbs__item:not(:last-child):after {
+    content: '>';
+    margin: 0 .75rem;
+    vertical-align: middle;
+  }
+
+  .breadcrumbs__link {
+    text-decoration: underline;
+  }
+
+  .breadcrumbs__link[aria-current="page"] {
+    color: inherit;
+    font-weight: normal;
+    text-decoration: none;
+  }
+
+  .breadcrumbs__link[aria-current="page"]:hover,
+  .breadcrumbs__link[aria-current="page"]:focus {
+    text-decoration: underline;
+  }
+
   .breadcrumbs-section-{{ section.id }} {
     background-color: {{ section.settings.background_color }};
     padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
