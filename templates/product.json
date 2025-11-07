@@ -43,7 +43,7 @@
             "gv-title-label": "SELECT YOUR VEHICLE",
             "gv-title-bg": "#000000",
             "gv-title-text": "#ffffff",
-            "gv-show-toggle-button": false,
+            "gv-show-toggle-button": true,
             "gv-toggle-button-label": "SELECT YOUR VEHICLE",
             "gv-toggle-button-bg": "#000000",
             "gv-toggle-button-text": "#ffffff",
