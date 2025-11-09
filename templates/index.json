@@ -15,14 +15,14 @@
         "heading": {
           "type": "heading",
           "settings": {
-            "heading": "Built for the wildest rides",
+            "heading": "Ready for the rough stuff",
             "heading_size": "hxl"
           }
         },
         "text_yYmNEW": {
           "type": "text",
           "settings": {
-            "text": "From rocky climbs to smooth daily drives, you need steering that’s dependable and tough.",
+            "text": "From rocky climbs to daily drives, your steering has to be tough and dependable.",
             "text_style": "body"
           }
         },
@@ -99,7 +99,7 @@
         "eyebrow_text": "Collections",
         "eyebrow_color": "#d6001c",
         "title": "Shop by Vehicle",
-        "description": "<p>Explore our curated collections of top-quality steering systems and components, designed for peak performance and durability.</p>",
+        "description": "<p>Check out our lineup of steering systems and components built tough for real-world performance. Every part’s engineered for durability and tested to keep you turning strong.</p>",
         "heading_size": "h1",
         "image_ratio": "square",
         "columns_desktop": 4,
@@ -173,11 +173,11 @@
       "settings": {
         "collection": "jeep",
         "products_to_show": 10,
-        "eyebrow_text": "Products",
+        "eyebrow_text": "Steering Upgrades",
         "eyebrow_color": "#dc2626",
-        "title": "Featured products",
+        "title": "Top Steering Solutions",
         "heading_size": "h1",
-        "description": "<p>Explore our curated collections of top-quality steering systems and components, designed for peak performance and durability.<br/><br/></p>",
+        "description": "<p>Shop steering parts that work as hard as your rig—built for strength, tested for the long haul.<br/></p>",
         "show_description": false,
         "description_style": "body",
         "columns_desktop": 6,

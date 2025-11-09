@@ -50,6 +50,16 @@
             "subheading": "Precision-designed Jeep steering systems for enhanced durability, maneuverability and off-road performance."
           }
         },
+        "submenu_featured_nNNWen": {
+          "type": "submenu_featured",
+          "settings": {
+            "parent_menu_item": "",
+            "submenu_item": "",
+            "link": "",
+            "heading": "Featured Content",
+            "subheading": "Description text"
+          }
+        },
         "mega_menu_featured_kF997U": {
           "type": "mega_menu_featured",
           "settings": {
@@ -59,7 +69,7 @@
             "link": "shopify://collections/ford",
             "show_video_button": false,
             "heading": "Fords",
-            "subheading": "Precision-built Ford steering kits for improved strength, control and off-road capability."
+            "subheading": "Ford steering upgrades that hold up—on the road or in the rocks."
           }
         },
         "mega_menu_featured_8a93nD": {
@@ -71,7 +81,7 @@
             "link": "https://www.youtube.com/watch?v=8a-3D5IH_as",
             "show_video_button": false,
             "heading": "Steering Re-Engineered",
-            "subheading": "Steering installs made easy!"
+            "subheading": "Steering installs done right."
           }
         },
         "submenu_featured_qVXLmV": {
@@ -88,6 +98,7 @@
       },
       "block_order": [
         "mega_menu_featured_wUzLfD",
+        "submenu_featured_nNNWen",
         "mega_menu_featured_kF997U",
         "mega_menu_featured_8a93nD",
         "submenu_featured_qVXLmV"
