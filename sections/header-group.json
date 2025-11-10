@@ -50,6 +50,18 @@
             "subheading": "Built tough for Jeeps that see real trails and real miles."
           }
         },
+        "mega_menu_featured_p7VGf4": {
+          "type": "mega_menu_featured",
+          "settings": {
+            "menu_item": "shop-by-product",
+            "size": "large",
+            "image": "shopify://shop_images/32586dc8e49a45dfacdf9f041a6ebdf7bb8c8e5d.jpg",
+            "link": "shopify://collections/jeep",
+            "show_video_button": false,
+            "heading": "Jeep Steering Kits",
+            "subheading": "Built tough for Jeeps that see real trails and real miles."
+          }
+        },
         "submenu_featured_nNNWen": {
           "type": "submenu_featured",
           "settings": {
@@ -98,6 +110,7 @@
       },
       "block_order": [
         "mega_menu_featured_wUzLfD",
+        "mega_menu_featured_p7VGf4",
         "submenu_featured_nNNWen",
         "mega_menu_featured_kF997U",
         "mega_menu_featured_8a93nD",
