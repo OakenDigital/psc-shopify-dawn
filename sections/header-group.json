@@ -52,6 +52,7 @@
         },
         "mega_menu_featured_p7VGf4": {
           "type": "mega_menu_featured",
+          "name": "Mega Menu Featured - Shop by Product",
           "settings": {
             "menu_item": "shop-by-product",
             "size": "large",
