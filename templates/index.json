@@ -117,21 +117,21 @@
         "tagline_grRfqn": {
           "type": "tagline",
           "settings": {
-            "tagline": "ADD A TAGLINE",
+            "tagline": "Big Bore XD®",
             "tagline_color": "#ffffff"
           }
         },
         "heading_L3f4Vz": {
           "type": "heading",
           "settings": {
-            "heading": "Image with text",
+            "heading": "Heavy Duty Steering",
             "heading_size": "h1"
           }
         },
         "text_XGV8jB": {
           "type": "text",
           "settings": {
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "text": "<p>The Big Bore XD® Steering Gear delivers increased steering strength, improved control and reduced effort when running larger tires or heavier setups.</p>",
             "text_style": "body"
           }
         },
@@ -139,7 +139,7 @@
           "type": "button",
           "settings": {
             "button_label": "View More",
-            "button_link": "shopify://collections",
+            "button_link": "shopify://collections/big-bore-xd-gearbox-kits",
             "button_style_secondary": false,
             "button_color_scheme": "scheme-f95fc31b-0c1b-4da3-82af-ed2967ed4967"
           }
