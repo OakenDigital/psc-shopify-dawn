@@ -93,7 +93,7 @@
                                       aria-current="page"
                                     {% endif %}
                                   >
-                                    {%- if grandchildlink.object.featured_image -%}
+                                    {%- if show_collection_images and grandchildlink.object.featured_image -%}
                                       <img
                                         src="{{ grandchildlink.object.featured_image | image_url: width: 120 }}"
                                         alt="{{ grandchildlink.object.featured_image.alt | escape }}"
