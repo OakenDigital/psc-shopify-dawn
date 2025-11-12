@@ -169,6 +169,7 @@
         },
         "collapsible_row_bHQJKc": {
           "type": "collapsible_row",
+          "disabled": true,
           "settings": {
             "heading": "Description",
             "row_content": "{{ product.description }}",
