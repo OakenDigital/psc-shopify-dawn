@@ -262,7 +262,7 @@
     "conditional_content_ajjAYb": {
       "type": "conditional-content",
       "custom_css": [
-        ".section-template--17665205895273__conditional_content_ajjAYb-padding p {font-size: 1.4rem;}"
+        "p {font-size: 1.4rem;}"
       ],
       "name": "Conditional Content",
       "settings": {
