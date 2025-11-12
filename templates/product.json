@@ -251,6 +251,13 @@
             "file_link_text": "Download File"
           }
         },
+        "section_heading_pYFkHR": {
+          "type": "section_heading",
+          "settings": {
+            "title": "Support",
+            "custom_icon": "shopify://shop_images/wrenches.svg"
+          }
+        },
         "collapsible_row_BMzAj6": {
           "type": "collapsible_row",
           "settings": {
@@ -273,6 +280,7 @@
         "collapsible_row_99X6Dp",
         "collapsible_row_3PTdh8",
         "collapsible_row_dWpThT",
+        "section_heading_pYFkHR",
         "collapsible_row_BMzAj6"
       ],
       "name": "t:sections.collapsible_content.presets.name",
