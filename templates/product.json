@@ -236,6 +236,14 @@
             "title": "Support",
             "custom_icon": "shopify://shop_images/wrenches.svg"
           }
+        },
+        "collapsible_row_EBgXBG": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Installation Guide",
+            "row_content": "",
+            "page": ""
+          }
         }
       },
       "block_order": [
@@ -248,7 +256,8 @@
         "collapsible_row_99X6Dp",
         "collapsible_row_3PTdh8",
         "collapsible_row_dWpThT",
-        "section_heading_LPaXD9"
+        "section_heading_LPaXD9",
+        "collapsible_row_EBgXBG"
       ],
       "name": "t:sections.collapsible_content.presets.name",
       "settings": {
