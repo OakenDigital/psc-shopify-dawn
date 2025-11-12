@@ -229,6 +229,13 @@
             "row_content": "{{ product.metafields.custom.what_s_included | metafield_tag }}",
             "page": ""
           }
+        },
+        "section_heading_LPaXD9": {
+          "type": "section_heading",
+          "settings": {
+            "title": "Support",
+            "custom_icon": "shopify://shop_images/wrenches.svg"
+          }
         }
       },
       "block_order": [
@@ -240,7 +247,8 @@
         "collapsible_row_NNdPwE",
         "collapsible_row_99X6Dp",
         "collapsible_row_3PTdh8",
-        "collapsible_row_dWpThT"
+        "collapsible_row_dWpThT",
+        "section_heading_LPaXD9"
       ],
       "name": "t:sections.collapsible_content.presets.name",
       "settings": {
