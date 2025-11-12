@@ -10,6 +10,28 @@
       padding-bottom: {{ section.settings.padding_bottom }}px;
     }
   }
+
+  .conditional-content__heading-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .conditional-content__icon {
+    flex-shrink: 0;
+  }
+
+  .conditional-content__icon img {
+    display: block;
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+  }
+
+  .conditional-content__heading {
+    margin: 0;
+  }
 {%- endstyle -%}
 
 {%- liquid
@@ -26,9 +48,22 @@
     <div class="page-width{% if section.settings.full_width %} page-width--full-width{% endif %}">
       <div class="conditional-content-wrapper">
         {%- if section.settings.heading != blank -%}
-          <h2 class="conditional-content__heading {{ section.settings.heading_size }}">
-            {{ section.settings.heading }}
-          </h2>
+          <div class="conditional-content__heading-wrapper">
+            {%- if section.settings.custom_icon != blank -%}
+              <div class="conditional-content__icon">
+                <img
+                  src="{{ section.settings.custom_icon | image_url: width: 100 }}"
+                  alt="{{ section.settings.heading | escape }}"
+                  width="50"
+                  height="50"
+                  loading="lazy"
+                >
+              </div>
+            {%- endif -%}
+            <h2 class="conditional-content__heading {{ section.settings.heading_size }}">
+              {{ section.settings.heading }}
+            </h2>
+          </div>
         {%- endif -%}
 
         {%- if section.settings.content != blank -%}
@@ -74,23 +109,37 @@
       "default": "Additional Information"
     },
     {
+      "type": "image_picker",
+      "id": "custom_icon",
+      "label": "Custom Icon",
+      "info": "Upload a custom icon image for this section heading"
+    },
+    {
       "type": "select",
       "id": "heading_size",
       "options": [
         {
-          "value": "h2",
+          "value": "h4",
+          "label": "Extra Small"
+        },
+        {
+          "value": "h3",
           "label": "Small"
         },
         {
-          "value": "h1",
+          "value": "h2",
           "label": "Medium"
         },
         {
-          "value": "h0",
+          "value": "h1",
           "label": "Large"
+        },
+        {
+          "value": "h0",
+          "label": "Extra Large"
         }
       ],
-      "default": "h1",
+      "default": "h3",
       "label": "Heading size"
     },
     {
