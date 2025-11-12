@@ -270,8 +270,8 @@
         "content": "<p>This product can expose you to chemicals including lead and di(2-ethylhexyl)phthalate, which are known to the State of California to cause cancer, birth defects or other reproductive harm.</p><p><br/>For more information, go to www.P65Warnings.ca.gov<br/><br/></p>",
         "full_width": true,
         "color_scheme": "",
-        "padding_top": 0,
-        "padding_bottom": 0
+        "padding_top": 16,
+        "padding_bottom": 32
       }
     },
     "related-products": {
