@@ -7,7 +7,7 @@
 	let _affirm_country;
 	let _region_public_key;
 
-	let parsedRegionPublicKeys = JSON.parse('undefined');
+	let parsedRegionPublicKeys = JSON.parse('{"US":"OQFLHULFDGIU9ZJJ","CA":null}');
 
 	if (_shopify_country === 'US') {
 		_affirm_country = 'USA';
