@@ -226,7 +226,7 @@
         "layout": "none",
         "container_color_scheme": "",
         "color_scheme": "",
-        "open_first_collapsible_row": false,
+        "open_first_collapsible_row": true,
         "full_width_content": true,
         "image_ratio": "adapt",
         "desktop_layout": "image_second",
