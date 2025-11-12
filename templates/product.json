@@ -293,6 +293,21 @@
       "settings": {
         "include_margins": true
       }
+    },
+    "conditional_content_ajjAYb": {
+      "type": "conditional-content",
+      "name": "Conditional Content",
+      "settings": {
+        "metafield_namespace": "custom",
+        "metafield_key": "",
+        "heading": "Additional Information",
+        "heading_size": "h1",
+        "content": "",
+        "full_width": false,
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
@@ -300,6 +315,7 @@
     "1762357149ec0dedd5",
     "main",
     "collapsible_content_fgDLQP",
+    "conditional_content_ajjAYb",
     "related-products",
     "176235741763515547"
   ]
