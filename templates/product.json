@@ -160,6 +160,29 @@
     "collapsible_content_fgDLQP": {
       "type": "collapsible-content",
       "blocks": {
+        "section_heading_YaCKnL": {
+          "type": "section_heading",
+          "settings": {
+            "title": "About",
+            "custom_icon": "shopify://shop_images/about_icon_32717b99-8adb-4379-8889-65b373a0cc07.svg"
+          }
+        },
+        "collapsible_row_bHQJKc": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Description",
+            "row_content": "{{ product.description }}",
+            "page": ""
+          }
+        },
+        "collapsible_row_PbgMUq": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Why you’ll love it",
+            "row_content": "{{ product.metafields.custom.why_you_ll_love_it | metafield_tag }}",
+            "page": ""
+          }
+        },
         "section_heading_wEkmih": {
           "type": "section_heading",
           "settings": {
@@ -172,14 +195,6 @@
           "settings": {
             "heading": "Heads‑up for installers",
             "row_content": "{{ product.metafields.custom.heads_up_for_installers | metafield_tag }}",
-            "page": ""
-          }
-        },
-        "collapsible_row_PbgMUq": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "Why you’ll love it",
-            "row_content": "{{ product.metafields.custom.why_you_ll_love_it | metafield_tag }}",
             "page": ""
           }
         },
@@ -217,9 +232,11 @@
         }
       },
       "block_order": [
+        "section_heading_YaCKnL",
+        "collapsible_row_bHQJKc",
+        "collapsible_row_PbgMUq",
         "section_heading_wEkmih",
         "collapsible_row_gQerXy",
-        "collapsible_row_PbgMUq",
         "collapsible_row_NNdPwE",
         "collapsible_row_99X6Dp",
         "collapsible_row_3PTdh8",
@@ -234,7 +251,7 @@
         "layout": "none",
         "container_color_scheme": "",
         "color_scheme": "",
-        "open_first_collapsible_row": false,
+        "open_first_collapsible_row": true,
         "full_width_content": true,
         "image_ratio": "adapt",
         "desktop_layout": "image_second",
