@@ -160,6 +160,13 @@
     "collapsible_content_fgDLQP": {
       "type": "collapsible-content",
       "blocks": {
+        "section_heading_wEkmih": {
+          "type": "section_heading",
+          "settings": {
+            "title": "Tech Info",
+            "custom_icon": "shopify://shop_images/wrenches.svg"
+          }
+        },
         "collapsible_row_gQerXy": {
           "type": "collapsible_row",
           "settings": {
@@ -210,6 +217,7 @@
         }
       },
       "block_order": [
+        "section_heading_wEkmih",
         "collapsible_row_gQerXy",
         "collapsible_row_PbgMUq",
         "collapsible_row_NNdPwE",
