@@ -271,7 +271,7 @@
         "heading": "California Prop 65 Warning",
         "custom_icon": "shopify://shop_images/warning-icon.svg",
         "heading_size": "h4",
-        "content": "<p>This product can expose you to chemicals including lead and di(2-ethylhexyl)phthalate, which are known to the State of California to cause cancer, birth defects or other reproductive harm.</p><p><br/>For more information, go to www.P65Warnings.ca.gov<br/><br/></p>",
+        "content": "<p>This product can expose you to chemicals including lead and di(2-ethylhexyl)phthalate, which are known to the State of California to cause cancer, birth defects or other reproductive harm.</p><p>For more information, go to www.P65Warnings.ca.gov<br/><br/></p>",
         "full_width": true,
         "color_scheme": "",
         "padding_top": 0,
