@@ -259,6 +259,21 @@
         "padding_bottom": 36
       }
     },
+    "conditional_content_ajjAYb": {
+      "type": "conditional-content",
+      "name": "Conditional Content",
+      "settings": {
+        "metafield_namespace": "custom",
+        "metafield_key": "prop_65",
+        "heading": "California Prop 65 Warning",
+        "heading_size": "h2",
+        "content": "<p>This product can expose you to chemicals including lead and di(2-ethylhexyl)phthalate, which are known to the State of California to cause cancer, birth defects or other reproductive harm.<br/>For more information, go to www.P65Warnings.ca.gov<br/><br/></p>",
+        "full_width": true,
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
     "related-products": {
       "type": "related-products",
       "settings": {
@@ -292,21 +307,6 @@
       ],
       "settings": {
         "include_margins": true
-      }
-    },
-    "conditional_content_ajjAYb": {
-      "type": "conditional-content",
-      "name": "Conditional Content",
-      "settings": {
-        "metafield_namespace": "custom",
-        "metafield_key": "",
-        "heading": "Additional Information",
-        "heading_size": "h1",
-        "content": "",
-        "full_width": false,
-        "color_scheme": "",
-        "padding_top": 36,
-        "padding_bottom": 36
       }
     }
   },
