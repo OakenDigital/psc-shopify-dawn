@@ -160,19 +160,19 @@
     "collapsible_content_fgDLQP": {
       "type": "collapsible-content",
       "blocks": {
-        "collapsible_row_PbgMUq": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "Why you’ll love it",
-            "row_content": "{{ product.metafields.custom.why_you_ll_love_it | metafield_tag }}",
-            "page": ""
-          }
-        },
         "collapsible_row_gQerXy": {
           "type": "collapsible_row",
           "settings": {
             "heading": "Heads‑up for installers",
             "row_content": "{{ product.metafields.custom.heads_up_for_installers | metafield_tag }}",
+            "page": ""
+          }
+        },
+        "collapsible_row_PbgMUq": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Why you’ll love it",
+            "row_content": "{{ product.metafields.custom.why_you_ll_love_it | metafield_tag }}",
             "page": ""
           }
         },
@@ -210,8 +210,8 @@
         }
       },
       "block_order": [
-        "collapsible_row_PbgMUq",
         "collapsible_row_gQerXy",
+        "collapsible_row_PbgMUq",
         "collapsible_row_NNdPwE",
         "collapsible_row_99X6Dp",
         "collapsible_row_3PTdh8",
@@ -226,7 +226,7 @@
         "layout": "none",
         "container_color_scheme": "",
         "color_scheme": "",
-        "open_first_collapsible_row": true,
+        "open_first_collapsible_row": false,
         "full_width_content": true,
         "image_ratio": "adapt",
         "desktop_layout": "image_second",
