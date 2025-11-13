@@ -9,6 +9,31 @@
  */
 {
   "sections": {
+    "jeep_hero": {
+      "type": "jeep-collection-hero",
+      "settings": {
+        "eyebrow": "JEEP GLADIATOR JT",
+        "heading": "Steering Re-Engineered for the Jeep Gladiator JT",
+        "description": "PSC steering systems give you the control, power, and confidence to tackle anything from daily drives to rock-strewn trails. Every kit is engineered, trail-tested, and tuned by people who live this stuff.",
+        "button_primary_label": "Shop Cylinder Assist™ Kits",
+        "button_primary_link": "",
+        "button_secondary_label": "Shop Adventure Kits",
+        "button_secondary_link": "",
+        "compare_link_label": "Compare all systems",
+        "compare_link_url": "",
+        "background_color": "#ffffff",
+        "eyebrow_color": "#d32f2f",
+        "title_color": "#000000",
+        "text_color": "#000000",
+        "button_primary_bg": "#000000",
+        "button_primary_text": "#ffffff",
+        "button_secondary_bg": "#d4a574",
+        "button_secondary_text": "#000000",
+        "link_color": "#000000",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
     "banner": {
       "type": "main-collection-banner",
       "settings": {
@@ -53,6 +78,7 @@
     }
   },
   "order": [
+    "jeep_hero",
     "breadcrumbs_Njfh8P",
     "banner",
     "product-grid"

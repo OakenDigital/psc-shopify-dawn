@@ -1,0 +1,418 @@
+{{ 'section-image-banner.css' | asset_url | stylesheet_tag }}
+
+{%- style -%}
+  .jeep-hero-{{ section.id }} {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .jeep-hero-{{ section.id }} {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+
+  .jeep-collection-hero {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0;
+    align-items: center;
+    background-color: {{ section.settings.background_color }};
+    min-height: 500px;
+  }
+
+  @media screen and (min-width: 990px) {
+    .jeep-collection-hero {
+      grid-template-columns: 1fr 1fr;
+      min-height: 600px;
+    }
+  }
+
+  .jeep-collection-hero__content {
+    padding: 4rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  @media screen and (min-width: 990px) {
+    .jeep-collection-hero__content {
+      padding: 6rem 4rem 6rem 6rem;
+      margin: 0;
+      margin-left: auto;
+      padding-right: 4rem;
+    }
+  }
+
+  .jeep-collection-hero__eyebrow {
+    font-size: 0.875rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: {{ section.settings.eyebrow_color }};
+    margin: 0 0 1rem 0;
+  }
+
+  .jeep-collection-hero__title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    line-height: 1.1;
+    color: {{ section.settings.title_color }};
+    margin: 0 0 1.5rem 0;
+  }
+
+  @media screen and (min-width: 750px) {
+    .jeep-collection-hero__title {
+      font-size: 3.5rem;
+    }
+  }
+
+  .jeep-collection-hero__description {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: {{ section.settings.text_color }};
+    margin: 0 0 2rem 0;
+  }
+
+  .jeep-collection-hero__buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .jeep-collection-hero__button {
+    display: inline-block;
+    padding: 1rem 2rem;
+    font-size: 0.9375rem;
+    font-weight: 600;
+    text-decoration: none;
+    text-align: center;
+    border-radius: 0;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+    cursor: pointer;
+    border: 2px solid transparent;
+  }
+
+  .jeep-collection-hero__button--primary {
+    background-color: {{ section.settings.button_primary_bg }};
+    color: {{ section.settings.button_primary_text }};
+  }
+
+  .jeep-collection-hero__button--primary:hover {
+    background-color: {{ section.settings.button_primary_bg | color_darken: 10 }};
+  }
+
+  .jeep-collection-hero__button--secondary {
+    background-color: {{ section.settings.button_secondary_bg }};
+    color: {{ section.settings.button_secondary_text }};
+  }
+
+  .jeep-collection-hero__button--secondary:hover {
+    background-color: {{ section.settings.button_secondary_bg | color_darken: 10 }};
+  }
+
+  .jeep-collection-hero__image-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    min-height: 400px;
+    overflow: hidden;
+  }
+
+  @media screen and (min-width: 990px) {
+    .jeep-collection-hero__image-wrapper {
+      min-height: 600px;
+    }
+  }
+
+  .jeep-collection-hero__image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .jeep-collection-hero__compare-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.9375rem;
+    font-weight: 600;
+    color: {{ section.settings.link_color }};
+    text-decoration: none;
+    margin-top: 1rem;
+    transition: gap 0.2s ease;
+  }
+
+  .jeep-collection-hero__compare-link:hover {
+    gap: 0.75rem;
+  }
+
+  .jeep-collection-hero__compare-link svg {
+    width: 16px;
+    height: 16px;
+  }
+{%- endstyle -%}
+
+<div class="jeep-hero-{{ section.id }} color-{{ section.settings.color_scheme }}">
+  <div class="jeep-collection-hero">
+    <div class="jeep-collection-hero__content">
+      {%- if section.settings.eyebrow != blank -%}
+        <p class="jeep-collection-hero__eyebrow">
+          {{ section.settings.eyebrow }}
+        </p>
+      {%- endif -%}
+
+      {%- if section.settings.heading != blank -%}
+        <h1 class="jeep-collection-hero__title">
+          {{ section.settings.heading }}
+        </h1>
+      {%- endif -%}
+
+      {%- if section.settings.description != blank -%}
+        <div class="jeep-collection-hero__description">
+          {{ section.settings.description }}
+        </div>
+      {%- endif -%}
+
+      <div class="jeep-collection-hero__buttons">
+        {%- if section.settings.button_primary_label != blank -%}
+          <a
+            href="{{ section.settings.button_primary_link }}"
+            class="jeep-collection-hero__button jeep-collection-hero__button--primary"
+          >
+            {{ section.settings.button_primary_label }}
+          </a>
+        {%- endif -%}
+
+        {%- if section.settings.button_secondary_label != blank -%}
+          <a
+            href="{{ section.settings.button_secondary_link }}"
+            class="jeep-collection-hero__button jeep-collection-hero__button--secondary"
+          >
+            {{ section.settings.button_secondary_label }}
+          </a>
+        {%- endif -%}
+      </div>
+
+      {%- if section.settings.compare_link_label != blank -%}
+        <a
+          href="{{ section.settings.compare_link_url }}"
+          class="jeep-collection-hero__compare-link"
+        >
+          {{ section.settings.compare_link_label }}
+          <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M5.5 3L10.5 8L5.5 13" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </a>
+      {%- endif -%}
+    </div>
+
+    <div class="jeep-collection-hero__image-wrapper">
+      {%- if section.settings.image != blank -%}
+        {%- assign image_height = section.settings.image.width | divided_by: section.settings.image.aspect_ratio -%}
+        {{
+          section.settings.image
+          | image_url: width: 1500
+          | image_tag:
+            loading: 'eager',
+            width: section.settings.image.width,
+            height: image_height,
+            class: 'jeep-collection-hero__image',
+            sizes: '(min-width: 990px) 50vw, 100vw',
+            widths: '375, 550, 750, 1100, 1500, 1780, 2000, 3000'
+        }}
+      {%- else -%}
+        {{ 'hero-apparel-1' | placeholder_svg_tag: 'jeep-collection-hero__image' }}
+      {%- endif -%}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Jeep Collection Hero",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Content"
+    },
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "Eyebrow Text",
+      "default": "JEEP GLADIATOR JT"
+    },
+    {
+      "type": "textarea",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Steering Re-Engineered for the Jeep Gladiator JT"
+    },
+    {
+      "type": "textarea",
+      "id": "description",
+      "label": "Description",
+      "default": "PSC steering systems give you the control, power, and confidence to tackle anything from daily drives to rock-strewn trails. Every kit is engineered, trail-tested, and tuned by people who live this stuff."
+    },
+    {
+      "type": "header",
+      "content": "Primary Button"
+    },
+    {
+      "type": "text",
+      "id": "button_primary_label",
+      "label": "Primary Button Label",
+      "default": "Shop Cylinder Assist™ Kits"
+    },
+    {
+      "type": "url",
+      "id": "button_primary_link",
+      "label": "Primary Button Link"
+    },
+    {
+      "type": "header",
+      "content": "Secondary Button"
+    },
+    {
+      "type": "text",
+      "id": "button_secondary_label",
+      "label": "Secondary Button Label",
+      "default": "Shop Adventure Kits"
+    },
+    {
+      "type": "url",
+      "id": "button_secondary_link",
+      "label": "Secondary Button Link"
+    },
+    {
+      "type": "header",
+      "content": "Compare Link"
+    },
+    {
+      "type": "text",
+      "id": "compare_link_label",
+      "label": "Compare Link Label",
+      "default": "Compare all systems"
+    },
+    {
+      "type": "url",
+      "id": "compare_link_url",
+      "label": "Compare Link URL"
+    },
+    {
+      "type": "header",
+      "content": "Hero Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Hero Image",
+      "info": "Recommended: 1500x1000px or larger"
+    },
+    {
+      "type": "header",
+      "content": "Colors"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Color Scheme",
+      "default": "scheme-1"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background Color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "eyebrow_color",
+      "label": "Eyebrow Color",
+      "default": "#d32f2f"
+    },
+    {
+      "type": "color",
+      "id": "title_color",
+      "label": "Title Color",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Description Color",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "button_primary_bg",
+      "label": "Primary Button Background",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "button_primary_text",
+      "label": "Primary Button Text",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "button_secondary_bg",
+      "label": "Secondary Button Background",
+      "default": "#d4a574"
+    },
+    {
+      "type": "color",
+      "id": "button_secondary_text",
+      "label": "Secondary Button Text",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "link_color",
+      "label": "Compare Link Color",
+      "default": "#000000"
+    },
+    {
+      "type": "header",
+      "content": "Spacing"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Top Padding",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Bottom Padding",
+      "default": 0
+    }
+  ],
+  "presets": [
+    {
+      "name": "Jeep Collection Hero"
+    }
+  ]
+}
+{% endschema %}
