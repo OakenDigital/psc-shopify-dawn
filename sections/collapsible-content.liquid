@@ -76,52 +76,21 @@
                 {%- if section_open -%}
                   </div>
                 {%- endif -%}
-
-                {%- comment -%} Check if there are any visible rows after this heading {%- endcomment -%}
-                {%- assign has_visible_rows = false -%}
-                {%- assign current_index = forloop.index -%}
-                {%- for check_block in section.blocks -%}
-                  {%- if forloop.index > current_index -%}
-                    {%- if check_block.type == 'section_heading' -%}
-                      {%- break -%}
-                    {%- elsif check_block.type == 'collapsible_row' -%}
-                      {%- assign check_has_content = false -%}
-                      {%- if check_block.settings.row_content != blank or check_block.settings.page.content != blank -%}
-                        {%- assign check_has_content = true -%}
-                      {%- endif -%}
-                      {%- if check_block.settings.metafield_namespace != blank
-                        and check_block.settings.metafield_key != blank
-                      -%}
-                        {%- assign check_metafield = product.metafields[check_block.settings.metafield_namespace][check_block.settings.metafield_key] -%}
-                        {%- if check_metafield != blank -%}
-                          {%- assign check_has_content = true -%}
-                        {%- endif -%}
-                      {%- endif -%}
-                      {%- if check_has_content -%}
-                        {%- assign has_visible_rows = true -%}
-                        {%- break -%}
-                      {%- endif -%}
+                <div class="collapsible-section-group" {{ block.shopify_attributes }}>
+                  <h3 class="collapsible-section-group__title h4">
+                    {%- if block.settings.custom_icon != blank -%}
+                      <img
+                        src="{{ block.settings.custom_icon | image_url: width: 48 }}"
+                        alt="{{ block.settings.title }}"
+                        width="24"
+                        height="24"
+                        loading="lazy"
+                        class="collapsible-section-group__icon"
+                      >
                     {%- endif -%}
-                  {%- endif -%}
-                {%- endfor -%}
-
-                {%- if has_visible_rows -%}
-                  <div class="collapsible-section-group" {{ block.shopify_attributes }}>
-                    <h3 class="collapsible-section-group__title h4">
-                      {%- if block.settings.custom_icon != blank -%}
-                        <img
-                          src="{{ block.settings.custom_icon | image_url: width: 48 }}"
-                          alt="{{ block.settings.title }}"
-                          width="24"
-                          height="24"
-                          loading="lazy"
-                          class="collapsible-section-group__icon"
-                        >
-                      {%- endif -%}
-                      {{ block.settings.title }}
-                    </h3>
-                    {%- assign section_open = true -%}
-                {%- endif -%}
+                    {{ block.settings.title }}
+                  </h3>
+                  {%- assign section_open = true -%}
               {%- elsif block.type == 'collapsible_row' -%}
                 {%- render 'collapsible-row-item', block: block, section: section -%}
               {%- endif -%}
