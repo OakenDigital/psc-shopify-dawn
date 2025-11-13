@@ -63,16 +63,6 @@
             "subheading": "Built tough for Jeeps that see real trails and real miles."
           }
         },
-        "submenu_featured_nNNWen": {
-          "type": "submenu_featured",
-          "settings": {
-            "parent_menu_item": "",
-            "submenu_item": "",
-            "link": "",
-            "heading": "Featured Content",
-            "subheading": "Description text"
-          }
-        },
         "mega_menu_featured_kF997U": {
           "type": "mega_menu_featured",
           "settings": {
@@ -112,7 +102,6 @@
       "block_order": [
         "mega_menu_featured_wUzLfD",
         "mega_menu_featured_HqnKjD",
-        "submenu_featured_nNNWen",
         "mega_menu_featured_kF997U",
         "mega_menu_featured_8a93nD",
         "submenu_featured_qVXLmV"
@@ -125,6 +114,7 @@
         "mobile_logo_position": "left",
         "menu": "main-menu-1",
         "menu_type_desktop": "mega",
+        "show_collection_images": true,
         "sticky_header_type": "reduce-logo-size",
         "show_line_separator": true,
         "color_scheme": "scheme-3",
