@@ -170,14 +170,14 @@
       "block_order": [
         "text_QMB8qg"
       ],
-      "name": "t:sections.rich-text.presets.name",
+      "name": "Part Number",
       "settings": {
         "desktop_content_position": "left",
         "content_alignment": "left",
         "color_scheme": "",
         "full_width": true,
-        "padding_top": 0,
-        "padding_bottom": 0
+        "padding_top": 12,
+        "padding_bottom": 24
       }
     },
     "collapsible_content_fgDLQP": {
