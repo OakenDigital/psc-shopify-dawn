@@ -109,7 +109,7 @@
         "description": "<p>Check out our lineup of steering systems and components built tough for real-world performance. Every part’s engineered for durability and tested to keep you turning strong.</p>",
         "heading_size": "h1",
         "image_ratio": "square",
-        "columns_desktop": 5,
+        "columns_desktop": 4,
         "color_scheme": "scheme-1",
         "show_view_all": false,
         "columns_mobile": "2",
