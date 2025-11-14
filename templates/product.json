@@ -162,7 +162,7 @@
       "name": "Conditional Content",
       "settings": {
         "metafield_namespace": "custom",
-        "metafield_key": "{{ product.metafields.custom.part_number.value }}",
+        "metafield_key": "part_number",
         "heading": "",
         "heading_size": "h3",
         "content": "<p>{{ product.metafields.custom.part_number.value }}</p>",
