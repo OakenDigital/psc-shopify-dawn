@@ -153,7 +153,7 @@
       ],
       "name": "t:sections.image-with-text.presets.name",
       "settings": {
-        "image": "shopify://shop_images/e2f5382fc01b76ef84cf54539f60751af049c5dd.jpg",
+        "image": "shopify://shop_images/jeep-collection-hero.jpg",
         "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "image_first",
