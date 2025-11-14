@@ -81,6 +81,12 @@
             "collection": "ram"
           }
         },
+        "featured_collection_GEVHTk": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "chevrolet-gmc"
+          }
+        },
         "featured_collection_RarMKW": {
           "type": "featured_collection",
           "settings": {
@@ -92,6 +98,7 @@
         "featured_collection_PCa3h7",
         "featured_collection_pLLkLh",
         "featured_collection_ECxncQ",
+        "featured_collection_GEVHTk",
         "featured_collection_RarMKW"
       ],
       "name": "t:sections.collection-list.presets.name",
