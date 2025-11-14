@@ -119,6 +119,10 @@
                 id="StandardCardNoMediaLink-{{ section_id }}-{{ card_product.id }}"
                 class="full-unstyled-link"
                 aria-labelledby="StandardCardNoMediaLink-{{ section_id }}-{{ card_product.id }} NoMediaStandardBadge-{{ section_id }}-{{ card_product.id }}"
+                {% if collection %}
+                  data-collection-handle="{{ collection.handle }}"
+                {% endif %}
+                onclick="if(this.dataset.collectionHandle) sessionStorage.setItem('lastCollectionHandle', this.dataset.collectionHandle);"
               >
                 {{ card_product.title | escape }}
               </a>
@@ -156,6 +160,10 @@
               id="CardLink-{{ section_id }}-{{ card_product.id }}"
               class="full-unstyled-link"
               aria-labelledby="CardLink-{{ section_id }}-{{ card_product.id }} Badge-{{ section_id }}-{{ card_product.id }}"
+              {% if collection %}
+                data-collection-handle="{{ collection.handle }}"
+              {% endif %}
+              onclick="if(this.dataset.collectionHandle) sessionStorage.setItem('lastCollectionHandle', this.dataset.collectionHandle);"
             >
               {{ card_product.title | escape }}
             </a>

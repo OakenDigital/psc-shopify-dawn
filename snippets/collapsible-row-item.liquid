@@ -1,0 +1,64 @@
+{%- liquid
+  assign has_content = false
+  assign metafield_content = blank
+
+  if block.settings.row_content != blank or block.settings.page.content != blank
+    assign has_content = true
+  endif
+
+  if block.settings.metafield_namespace != blank and block.settings.metafield_key != blank
+    assign metafield_content = product.metafields[block.settings.metafield_namespace][block.settings.metafield_key]
+    if metafield_content != blank
+      assign has_content = true
+    endif
+  endif
+-%}
+
+{%- if has_content -%}
+  <div
+    class="accordion{% if section.settings.layout == 'row' %} content-container color-{{ section.settings.container_color_scheme }} gradient{% endif %}"
+    {{ block.shopify_attributes }}
+  >
+    <details
+      id="Details-{{ block.id }}-{{ section.id }}"
+    >
+      <summary id="Summary-{{ block.id }}-{{ section.id }}">
+        <h3 class="accordion__title inline-richtext h4">
+          {{ block.settings.heading | default: block.settings.page.title | escape }}
+        </h3>
+        {{- 'icon-caret.svg' | inline_asset_content -}}
+      </summary>
+      <div
+        class="accordion__content rte"
+        id="CollapsibleAccordion-{{ block.id }}-{{ section.id }}"
+        role="region"
+        aria-labelledby="Summary-{{ block.id }}-{{ section.id }}"
+      >
+        {{ block.settings.row_content }}
+        {{ block.settings.page.content }}
+
+        {%- if metafield_content != blank -%}
+          {%- if metafield_content.type == 'file_reference' -%}
+            <p>
+              <a href="{{ metafield_content.value }}" target="_blank" class="button">
+                {{ block.settings.file_link_text | default: 'Download File' }}
+              </a>
+            </p>
+          {%- elsif metafield_content.type == 'list.file_reference' -%}
+            <ul class="metafield-file-list">
+              {%- for file in metafield_content.value -%}
+                <li>
+                  <a href="{{ file }}" target="_blank">
+                    {{ file.alt | default: 'Download File' }}
+                  </a>
+                </li>
+              {%- endfor -%}
+            </ul>
+          {%- else -%}
+            {{ metafield_content }}
+          {%- endif -%}
+        {%- endif -%}
+      </div>
+    </details>
+  </div>
+{%- endif -%}

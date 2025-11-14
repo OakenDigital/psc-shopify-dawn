@@ -11,6 +11,40 @@
   "name": "t:sections.footer.name",
   "type": "footer",
   "sections": {
+    "newsletter_zxmw89": {
+      "type": "newsletter",
+      "blocks": {
+        "heading_RH4VcK": {
+          "type": "heading",
+          "settings": {
+            "heading": "Subscribe to our emails",
+            "heading_size": "h1"
+          }
+        },
+        "paragraph_Kg4VDT": {
+          "type": "paragraph",
+          "settings": {
+            "text": "<p>We’re all about making your life easier (and your steering better). Tell us what you want to hear about, how often, and how you want it delivered.<br/><br/>No spam, no nonsense—just the good stuff.<br/></p>"
+          }
+        },
+        "email_form_RNhXgQ": {
+          "type": "email_form",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "heading_RH4VcK",
+        "paragraph_Kg4VDT",
+        "email_form_RNhXgQ"
+      ],
+      "name": "t:sections.newsletter.presets.name",
+      "settings": {
+        "color_scheme": "scheme-3",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
     "footer": {
       "type": "footer",
       "blocks": {
@@ -53,7 +87,7 @@
         "color_scheme": "scheme-3",
         "newsletter_enable": false,
         "newsletter_heading": "Get the Good Stuff First - Get updates straight from the shop.",
-        "enable_follow_on_shop": true,
+        "enable_follow_on_shop": false,
         "show_social": true,
         "enable_country_selector": false,
         "enable_language_selector": true,
@@ -66,6 +100,7 @@
     }
   },
   "order": [
+    "newsletter_zxmw89",
     "footer"
   ]
 }

@@ -186,7 +186,7 @@
         if section.settings.menu_type_desktop == 'dropdown'
           render 'header-dropdown-menu'
         elsif section.settings.menu_type_desktop != 'drawer'
-          render 'header-mega-menu'
+          render 'header-mega-menu', show_collection_images: section.settings.show_collection_images
         endif
       endif
     %}
@@ -538,6 +538,12 @@
       ],
       "default": "dropdown",
       "label": "t:sections.header.settings.menu_type_desktop.label"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_collection_images",
+      "default": true,
+      "label": "Show collection images in mega menu"
     },
     {
       "type": "select",

@@ -93,7 +93,7 @@
                                       aria-current="page"
                                     {% endif %}
                                   >
-                                    {%- if grandchildlink.object.featured_image -%}
+                                    {%- if show_collection_images and grandchildlink.object.featured_image -%}
                                       <img
                                         src="{{ grandchildlink.object.featured_image | image_url: width: 120 }}"
                                         alt="{{ grandchildlink.object.featured_image.alt | escape }}"
@@ -283,46 +283,6 @@
                             {%- endfor -%}
                           </div>
                         {%- endif -%}
-                      {%- else -%}
-                        {%- comment -%} Default featured content when no blocks are set {%- endcomment -%}
-                        <div class="mega-menu__featured-item mega-menu__featured-item--large">
-                          <div class="mega-menu__featured-content">
-                            <button class="mega-menu__play-button" aria-label="Play video">
-                              <svg
-                                width="48"
-                                height="48"
-                                viewBox="0 0 48 48"
-                                fill="none"
-                                xmlns="http://www.w3.org/2000/svg"
-                              >
-                                <circle cx="24" cy="24" r="24" fill="white"/>
-                                <path d="M18 34V14L34 24L18 34Z" fill="black"/>
-                              </svg>
-                            </button>
-                            <div class="mega-menu__featured-text">
-                              <h3>Steering Re-Engineered</h3>
-                              <p>Watch the new video series with our tech team</p>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="mega-menu__featured-grid">
-                          <div class="mega-menu__featured-item">
-                            <div class="mega-menu__featured-content">
-                              <div class="mega-menu__featured-text">
-                                <h3>Steering Re-Engineered</h3>
-                                <p>Watch the new video series with our tech team</p>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="mega-menu__featured-item">
-                            <div class="mega-menu__featured-content">
-                              <div class="mega-menu__featured-text">
-                                <h3>Steering Re-Engineered</h3>
-                                <p>Watch the new video series with our tech team</p>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
                       {%- endif -%}
                     </div>
                   </div>
