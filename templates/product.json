@@ -157,19 +157,27 @@
         "padding_bottom": 12
       }
     },
-    "conditional_content_JM8wky": {
-      "type": "conditional-content",
-      "name": "Conditional Content",
+    "rich_text_6EfPxh": {
+      "type": "rich-text",
+      "blocks": {
+        "text_QMB8qg": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>Part Number: </strong>{{ product.metafields.custom.part_number.value }}</p>"
+          }
+        }
+      },
+      "block_order": [
+        "text_QMB8qg"
+      ],
+      "name": "t:sections.rich-text.presets.name",
       "settings": {
-        "metafield_namespace": "custom",
-        "metafield_key": "part_number",
-        "heading": "",
-        "heading_size": "h3",
-        "content": "<p>{{ product.metafields.custom.part_number.value }}</p>",
-        "full_width": false,
+        "desktop_content_position": "left",
+        "content_alignment": "left",
         "color_scheme": "",
-        "padding_top": 36,
-        "padding_bottom": 36
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
       }
     },
     "collapsible_content_fgDLQP": {
@@ -374,7 +382,7 @@
     "breadcrumbs_EzUGCk",
     "1762357149ec0dedd5",
     "main",
-    "conditional_content_JM8wky",
+    "rich_text_6EfPxh",
     "collapsible_content_fgDLQP",
     "conditional_content_ajjAYb",
     "related-products",
