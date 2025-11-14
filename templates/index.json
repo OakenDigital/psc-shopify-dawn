@@ -22,8 +22,8 @@
         "text_yYmNEW": {
           "type": "text",
           "settings": {
-            "text": "From rocky climbs to daily drives, your steering has to be tough and            dependable.",
-            "text_style": "body"
+            "text": "From rocky climbs to daily drives, your steering has to be tough and dependable.",
+            "text_style": "subtitle"
           }
         },
         "button": {
