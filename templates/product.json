@@ -157,6 +157,21 @@
         "padding_bottom": 12
       }
     },
+    "conditional_content_JM8wky": {
+      "type": "conditional-content",
+      "name": "Conditional Content",
+      "settings": {
+        "metafield_namespace": "custom",
+        "metafield_key": "{{ product.metafields.custom.part_number.value }}",
+        "heading": "",
+        "heading_size": "h3",
+        "content": "<p>{{ product.metafields.custom.part_number.value }}</p>",
+        "full_width": false,
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "collapsible_content_fgDLQP": {
       "type": "collapsible-content",
       "blocks": {
@@ -359,6 +374,7 @@
     "breadcrumbs_EzUGCk",
     "1762357149ec0dedd5",
     "main",
+    "conditional_content_JM8wky",
     "collapsible_content_fgDLQP",
     "conditional_content_ajjAYb",
     "related-products",
