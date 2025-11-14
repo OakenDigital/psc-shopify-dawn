@@ -16,13 +16,13 @@
           "type": "heading",
           "settings": {
             "heading": "Ready for the rough stuff",
-            "heading_size": "hxl"
+            "heading_size": "h1"
           }
         },
         "text_yYmNEW": {
           "type": "text",
           "settings": {
-            "text": "From rocky climbs to daily drives, your steering has to be tough and dependable.",
+            "text": "From rocky climbs to daily drives, your steering has to be tough and            dependable.",
             "text_style": "body"
           }
         },
