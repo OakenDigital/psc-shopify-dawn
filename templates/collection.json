@@ -48,7 +48,7 @@
             "gv-toggle-button-bg": "#000000",
             "gv-toggle-button-text": "#ffffff",
             "gv-margin-top": 0,
-            "gv-margin-bottom": 0,
+            "gv-margin-bottom": 30,
             "gv-margin-left": 0,
             "gv-margin-right": 0
           }
