@@ -1,6 +1,314 @@
+{% doc %}
+  @prompt
+    Create a variant SKU display block that shows the selected product variant's SKU number and updates in real-time when customers change variant selections. Must include JavaScript event listeners that detect variant changes from variant picker interactions and immediately update the displayed SKU value. Show "SKU:" label followed by the SKU number. If no SKU exists for a variant, hide the display or show a placeholder. Style with clear typography matching product details.
+{% enddoc %}
+{% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
+
+{% style %}
+  .ai-variant-sku-{{ ai_gen_id }} {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: {{ block.settings.spacing_top }}px 0 {{ block.settings.spacing_bottom }}px;
+    font-size: {{ block.settings.font_size }}px;
+    color: {{ block.settings.text_color }};
+    font-weight: {{ block.settings.font_weight }};
+  }
+
+  .ai-variant-sku-{{ ai_gen_id }}.ai-variant-sku--hidden-{{ ai_gen_id }} {
+    display: none;
+  }
+
+  .ai-variant-sku__label-{{ ai_gen_id }} {
+    color: {{ block.settings.label_color }};
+    font-weight: {{ block.settings.label_font_weight }};
+  }
+
+  .ai-variant-sku__value-{{ ai_gen_id }} {
+    font-family: {{ block.settings.sku_font_family }};
+  }
+
+  .ai-variant-sku__placeholder-{{ ai_gen_id }} {
+    color: {{ block.settings.placeholder_color }};
+    font-style: italic;
+  }
+{% endstyle %}
+
+<variant-sku-display-{{ ai_gen_id }}
+  class="ai-variant-sku-{{ ai_gen_id }} {% unless product.selected_or_first_available_variant.sku %}ai-variant-sku--hidden-{{ ai_gen_id }}{% endunless %}"
+  data-product-id="{{ product.id }}"
+  {{ block.shopify_attributes }}
+>
+  <span class="ai-variant-sku__label-{{ ai_gen_id }}">{{ block.settings.label_text }}</span>
+  <span class="ai-variant-sku__value-{{ ai_gen_id }}" data-sku-value>
+    {% if product.selected_or_first_available_variant.sku %}
+      {{ product.selected_or_first_available_variant.sku }}
+    {% else %}
+      <span class="ai-variant-sku__placeholder-{{ ai_gen_id }}">{{ block.settings.placeholder_text }}</span>
+    {% endif %}
+  </span>
+</variant-sku-display-{{ ai_gen_id }}>
+
+<script>
+  (function() {
+    class VariantSkuDisplay{{ ai_gen_id }} extends HTMLElement {
+      constructor() {
+        super();
+        this.productId = this.dataset.productId;
+        this.skuValueElement = this.querySelector('[data-sku-value]');
+        this.hideWhenEmpty = {{ block.settings.hide_when_empty | json }};
+        this.placeholderText = {{ block.settings.placeholder_text | json }};
+      }
+
+      connectedCallback() {
+        this.setupEventListeners();
+      }
+
+      setupEventListeners() {
+        document.addEventListener('variant:change', this.handleVariantChange.bind(this));
+        
+        const variantSelects = document.querySelectorAll('variant-selects, variant-radios');
+        variantSelects.forEach(selector => {
+          const selectElements = selector.querySelectorAll('select, input[type="radio"]');
+          selectElements.forEach(element => {
+            element.addEventListener('change', () => {
+              setTimeout(() => {
+                this.updateFromUrl();
+              }, 50);
+            });
+          });
+        });
+
+        const urlObserver = new MutationObserver(() => {
+          this.updateFromUrl();
+        });
+        
+        urlObserver.observe(document.querySelector('body'), {
+          childList: true,
+          subtree: true
+        });
+      }
+
+      handleVariantChange(event) {
+        if (event.detail && event.detail.variant) {
+          this.updateSku(event.detail.variant.sku);
+        }
+      }
+
+      updateFromUrl() {
+        const urlParams = new URLSearchParams(window.location.search);
+        const variantId = urlParams.get('variant');
+        
+        if (variantId) {
+          fetch(`${window.location.pathname}?variant=${variantId}&section_id=${this.closest('.shopify-section').dataset.sectionId || ''}`)
+            .then(response => response.text())
+            .then(text => {
+              const html = new DOMParser().parseFromString(text, 'text/html');
+              const variantData = html.querySelector('script[type="application/json"][data-variant-json]');
+              
+              if (variantData) {
+                const variant = JSON.parse(variantData.textContent);
+                this.updateSku(variant.sku);
+              } else {
+                const variantScript = html.querySelector('script[type="application/json"]');
+                if (variantScript) {
+                  try {
+                    const data = JSON.parse(variantScript.textContent);
+                    if (data.sku !== undefined) {
+                      this.updateSku(data.sku);
+                    }
+                  } catch (e) {
+                    console.error('Error parsing variant data:', e);
+                  }
+                }
+              }
+            })
+            .catch(error => {
+              console.error('Error fetching variant data:', error);
+            });
+        }
+      }
+
+      updateSku(sku) {
+        if (sku) {
+          this.skuValueElement.innerHTML = sku;
+          if (this.hideWhenEmpty) {
+            this.classList.remove('ai-variant-sku--hidden-{{ ai_gen_id }}');
+          }
+        } else {
+          if (this.hideWhenEmpty) {
+            this.classList.add('ai-variant-sku--hidden-{{ ai_gen_id }}');
+          } else {
+            this.skuValueElement.innerHTML = `<span class="ai-variant-sku__placeholder-{{ ai_gen_id }}">${this.placeholderText}</span>`;
+          }
+        }
+      }
+    }
+
+    customElements.define('variant-sku-display-{{ ai_gen_id }}', VariantSkuDisplay{{ ai_gen_id }});
+  })();
+</script>
+
 {% schema %}
- {
-   "name": "AI_Block",
-   "tag": "shopify-ai-generated-block"
- }
+{
+  "name": "Variant SKU display",
+  "tag": null,
+  "settings": [
+    {
+      "type": "header",
+      "content": "Content"
+    },
+    {
+      "type": "text",
+      "id": "label_text",
+      "label": "Label text",
+      "default": "SKU:"
+    },
+    {
+      "type": "text",
+      "id": "placeholder_text",
+      "label": "Placeholder text",
+      "default": "N/A"
+    },
+    {
+      "type": "checkbox",
+      "id": "hide_when_empty",
+      "label": "Hide when no SKU",
+      "default": true
+    },
+    {
+      "type": "header",
+      "content": "Style"
+    },
+    {
+      "type": "range",
+      "id": "font_size",
+      "min": 10,
+      "max": 24,
+      "step": 1,
+      "unit": "px",
+      "label": "Font size",
+      "default": 14
+    },
+    {
+      "type": "select",
+      "id": "font_weight",
+      "label": "Font weight",
+      "options": [
+        {
+          "value": "400",
+          "label": "Normal"
+        },
+        {
+          "value": "500",
+          "label": "Medium"
+        },
+        {
+          "value": "600",
+          "label": "Semi-bold"
+        },
+        {
+          "value": "700",
+          "label": "Bold"
+        }
+      ],
+      "default": "400"
+    },
+    {
+      "type": "select",
+      "id": "sku_font_family",
+      "label": "SKU font family",
+      "options": [
+        {
+          "value": "inherit",
+          "label": "Inherit"
+        },
+        {
+          "value": "monospace",
+          "label": "Monospace"
+        },
+        {
+          "value": "sans-serif",
+          "label": "Sans-serif"
+        }
+      ],
+      "default": "monospace"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text color",
+      "default": "#121212"
+    },
+    {
+      "type": "header",
+      "content": "Label style"
+    },
+    {
+      "type": "select",
+      "id": "label_font_weight",
+      "label": "Label font weight",
+      "options": [
+        {
+          "value": "400",
+          "label": "Normal"
+        },
+        {
+          "value": "500",
+          "label": "Medium"
+        },
+        {
+          "value": "600",
+          "label": "Semi-bold"
+        },
+        {
+          "value": "700",
+          "label": "Bold"
+        }
+      ],
+      "default": "600"
+    },
+    {
+      "type": "color",
+      "id": "label_color",
+      "label": "Label color",
+      "default": "#121212"
+    },
+    {
+      "type": "color",
+      "id": "placeholder_color",
+      "label": "Placeholder color",
+      "default": "#999999"
+    },
+    {
+      "type": "header",
+      "content": "Spacing"
+    },
+    {
+      "type": "range",
+      "id": "spacing_top",
+      "min": 0,
+      "max": 40,
+      "step": 4,
+      "unit": "px",
+      "label": "Top spacing",
+      "default": 8
+    },
+    {
+      "type": "range",
+      "id": "spacing_bottom",
+      "min": 0,
+      "max": 40,
+      "step": 4,
+      "unit": "px",
+      "label": "Bottom spacing",
+      "default": 8
+    }
+  ],
+  "presets": [
+    {
+      "name": "Variant SKU display"
+    }
+  ]
+}
 {% endschema %}
