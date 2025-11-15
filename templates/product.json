@@ -175,6 +175,20 @@
       "type": "_blocks",
       "settings": {}
     },
+    "1763244160f6d49b88": {
+      "type": "_blocks",
+      "settings": {}
+    },
+    "custom_liquid_7Pmedm": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<div class=\"product-sku-display\">\n  <p><strong>Part Number:</strong> <span class=\"variant-sku\">{{ product.selected_or_first_available_variant.sku }}</span></p>\n</div>\n\n<script>\n(function() {\n  // Listen for variant change events\n  document.addEventListener('variant:change', function(event) {\n    if (event.detail && event.detail.variant && event.detail.variant.sku) {\n      document.querySelector('.variant-sku').textContent = event.detail.variant.sku;\n    }\n  });\n\n  // Fallback: Listen for URL changes (some themes use this)\n  if (window.VariantHelper) {\n    window.VariantHelper.on('variant:change', function(variant) {\n      if (variant && variant.sku) {\n        document.querySelector('.variant-sku').textContent = variant.sku;\n      }\n    });\n  }\n\n  // Additional fallback: Monitor form changes\n  const form = document.querySelector('form[action*=\"/cart/add\"]');\n  if (form) {\n    form.addEventListener('change', function() {\n      const selectedVariantId = form.querySelector('[name=\"id\"]')?.value;\n      if (selectedVariantId) {\n        const variants = {{ product.variants | json }};\n        const variant = variants.find(v => v.id == selectedVariantId);\n        if (variant && variant.sku) {\n          document.querySelector('.variant-sku').textContent = variant.sku;\n        }\n      }\n    });\n  }\n})();\n</script>",
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
     "rich_text_6EfPxh": {
       "type": "rich-text",
       "blocks": {
@@ -395,33 +409,6 @@
       "settings": {
         "include_margins": true
       }
-    },
-    "1763244160f6d49b88": {
-      "type": "_blocks",
-      "blocks": {
-        "ai_gen_block_659dc78_3m7FQi": {
-          "type": "ai_gen_block_659dc78",
-          "settings": {
-            "label_text": "SKU:",
-            "placeholder_text": "N/A",
-            "hide_when_empty": true,
-            "font_size": 14,
-            "font_weight": "400",
-            "sku_font_family": "monospace",
-            "text_color": "#121212",
-            "label_font_weight": "600",
-            "label_color": "#121212",
-            "placeholder_color": "#999999",
-            "spacing_top": 8,
-            "spacing_bottom": 8
-          },
-          "blocks": {}
-        }
-      },
-      "block_order": [
-        "ai_gen_block_659dc78_3m7FQi"
-      ],
-      "settings": {}
     }
   },
   "order": [
@@ -430,6 +417,7 @@
     "main",
     "176324386610e88a6c",
     "1763244160f6d49b88",
+    "custom_liquid_7Pmedm",
     "rich_text_6EfPxh",
     "collapsible_content_fgDLQP",
     "conditional_content_ajjAYb",
