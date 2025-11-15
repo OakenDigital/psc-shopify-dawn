@@ -103,7 +103,7 @@
       ],
       "name": "t:sections.collection-list.presets.name",
       "settings": {
-        "eyebrow_text": "Collections",
+        "eyebrow_text": "",
         "eyebrow_color": "#d6001c",
         "title": "Shop by Vehicle",
         "description": "<p>Check out our lineup of steering systems and components built tough for real-world performance. Every part’s engineered for durability and tested to keep you turning strong.</p>",
