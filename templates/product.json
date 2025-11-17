@@ -327,6 +327,17 @@
             "metafield_key": "install_instructions",
             "file_link_text": ""
           }
+        },
+        "collapsible_row_4AWmwz": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "OEM Cross Reference",
+            "row_content": "",
+            "page": "",
+            "metafield_namespace": "custom",
+            "metafield_key": "oem_cross_reference",
+            "file_link_text": ""
+          }
         }
       },
       "block_order": [
@@ -340,7 +351,8 @@
         "collapsible_row_3PTdh8",
         "collapsible_row_dWpThT",
         "section_heading_pYFkHR",
-        "collapsible_row_BMzAj6"
+        "collapsible_row_BMzAj6",
+        "collapsible_row_4AWmwz"
       ],
       "name": "t:sections.collapsible_content.presets.name",
       "settings": {
