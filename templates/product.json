@@ -222,8 +222,7 @@
         "section_heading_YaCKnL": {
           "type": "section_heading",
           "settings": {
-            "title": "About",
-            "custom_icon": "shopify://shop_images/about_icon_32717b99-8adb-4379-8889-65b373a0cc07.svg"
+            "title": "About"
           }
         },
         "collapsible_row_bHQJKc": {
@@ -328,17 +327,6 @@
             "metafield_key": "install_instructions",
             "file_link_text": ""
           }
-        },
-        "collapsible_row_qdDAVV": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "OEM Cross Reference",
-            "row_content": "",
-            "page": "",
-            "metafield_namespace": "custom",
-            "metafield_key": "oem_cross_reference",
-            "file_link_text": ""
-          }
         }
       },
       "block_order": [
@@ -352,8 +340,7 @@
         "collapsible_row_3PTdh8",
         "collapsible_row_dWpThT",
         "section_heading_pYFkHR",
-        "collapsible_row_BMzAj6",
-        "collapsible_row_qdDAVV"
+        "collapsible_row_BMzAj6"
       ],
       "name": "t:sections.collapsible_content.presets.name",
       "settings": {
@@ -384,7 +371,7 @@
         "heading": "California Prop 65 Warning",
         "custom_icon": "shopify://shop_images/warning-icon.svg",
         "heading_size": "h4",
-        "content": "<p>This product can expose you to chemicals including lead and di(2-ethylhexyl)phthalate, which are known to the State of California to cause cancer, birth defects or other reproductive harm.</p><p>For more information, go to www.P65Warnings.ca.gov<br/><br/></p>",
+        "content": "<p>This product can expose you to chemicals including lead and di(2-ethylhexyl)phthalate, which are known to the State of California to cause cancer, birth defects or other reproductive harm.</p><p>For more information, go to www.P65Warnings.ca.gov<br/></p>",
         "full_width": true,
         "color_scheme": "",
         "padding_top": 0,
@@ -425,6 +412,59 @@
       "settings": {
         "include_margins": true
       }
+    },
+    "rich_text_HirJWd": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_dyzcMK": {
+          "type": "heading",
+          "settings": {
+            "heading": "Talk about your brand",
+            "heading_size": "h1"
+          }
+        },
+        "text_cxyyKB": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.</p>"
+          }
+        },
+        "button_WryqtJ": {
+          "type": "button",
+          "settings": {
+            "button_label": "Button label",
+            "button_link": "",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_dyzcMK",
+        "text_cxyyKB",
+        "button_WryqtJ"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "custom_liquid_GxRRYF": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "{{\nproduct.metafields.custom.oem_cross_reference | metafield_tag}}",
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
     }
   },
   "order": [
@@ -438,6 +478,8 @@
     "collapsible_content_fgDLQP",
     "conditional_content_ajjAYb",
     "related-products",
-    "176235741763515547"
+    "176235741763515547",
+    "rich_text_HirJWd",
+    "custom_liquid_GxRRYF"
   ]
 }
