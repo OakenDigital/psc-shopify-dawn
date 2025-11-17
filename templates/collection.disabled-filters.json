@@ -1,0 +1,99 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "breadcrumbs_Njfh8P": {
+      "type": "breadcrumbs",
+      "name": "Breadcrumbs",
+      "settings": {
+        "home_text": "Shop",
+        "background_color": "#f8f8f8",
+        "link_color": "#517187",
+        "link_hover_color": "#333333",
+        "current_page_color": "#121212",
+        "arrow_color": "#121212",
+        "padding_top": 20,
+        "padding_bottom": 20
+      }
+    },
+    "176324314697478a9d": {
+      "type": "apps",
+      "blocks": {
+        "partfinder_year_make_model_vehicle_search_bar_NnWmyK": {
+          "type": "shopify://apps/partfinder-year-make-model/blocks/vehicle_search_bar/2892d2e7-0551-451a-8d78-8a0f565a5174",
+          "settings": {
+            "gv-enable-submodel": false,
+            "gv-disable-full-width-class": false,
+            "gv-disable-styles": false,
+            "gv-search-bar": "#97aab7",
+            "gv-search-color": "#4a5c68",
+            "gv-search-text-color": "#ffffff",
+            "gv-clear-color": "rgba(0,0,0,0)",
+            "gv-clear-text-color": "#121212",
+            "gv-search-label": "Search",
+            "gv-clear-label": "Clear",
+            "gv-show-title-label": true,
+            "gv-title-label": "SELECT YOUR VEHICLE",
+            "gv-title-bg": "#000000",
+            "gv-title-text": "#ffffff",
+            "gv-show-toggle-button": true,
+            "gv-toggle-button-label": "FIND YOUR VEHICLE",
+            "gv-toggle-button-bg": "#000000",
+            "gv-toggle-button-text": "#ffffff",
+            "gv-margin-top": 0,
+            "gv-margin-bottom": 30,
+            "gv-margin-left": 0,
+            "gv-margin-right": 0
+          }
+        }
+      },
+      "block_order": [
+        "partfinder_year_make_model_vehicle_search_bar_NnWmyK"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    },
+    "banner": {
+      "type": "main-collection-banner",
+      "settings": {
+        "show_collection_description": true,
+        "show_collection_image": false,
+        "color_scheme": "scheme-1"
+      }
+    },
+    "product-grid": {
+      "type": "main-collection-product-grid",
+      "settings": {
+        "products_per_page": 16,
+        "columns_desktop": 4,
+        "columns_mobile": "1",
+        "color_scheme": "scheme-1",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": true,
+        "quick_add": "standard",
+        "enable_filtering": true,
+        "filter_type": "vertical",
+        "enable_sorting": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "breadcrumbs_Njfh8P",
+    "176324314697478a9d",
+    "banner",
+    "product-grid"
+  ]
+}
