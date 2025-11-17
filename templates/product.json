@@ -332,7 +332,7 @@
           "type": "collapsible_row",
           "settings": {
             "heading": "OEM Cross Reference",
-            "row_content": "",
+            "row_content": "<p>{{ product.metafields.custom.oem_cross_reference | metafield_tag }}</p>",
             "page": "",
             "metafield_namespace": "",
             "metafield_key": "",
