@@ -334,8 +334,8 @@
             "heading": "OEM Cross Reference",
             "row_content": "",
             "page": "",
-            "metafield_namespace": "custom",
-            "metafield_key": "oem_cross_reference",
+            "metafield_namespace": "",
+            "metafield_key": "",
             "file_link_text": "Download File"
           }
         }
