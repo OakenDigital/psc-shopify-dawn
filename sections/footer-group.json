@@ -69,6 +69,21 @@
             "menu": "account-orders"
           }
         },
+        "contact_info_e7wKPX": {
+          "type": "contact_info",
+          "settings": {
+            "logo": "shopify://shop_images/PSC_border_blk-red_72420268-ff78-4971-a374-274b88f876d4.png",
+            "logo_width": 310,
+            "contact_item_1_icon": "shopify://shop_images/map-icon.svg",
+            "contact_item_1_text": "400 Church Rd | Azle, TX 76020",
+            "contact_item_1_link": "",
+            "contact_item_2_icon": "shopify://shop_images/phone-icon.svg",
+            "contact_item_2_text": "(817) 270-0102",
+            "contact_item_2_link": "",
+            "contact_item_3_text": "",
+            "contact_item_3_link": ""
+          }
+        },
         "link_list_CNVNjL": {
           "type": "link_list",
           "settings": {
@@ -81,6 +96,7 @@
         "link_list_NzQHpy",
         "link_list_At7RYN",
         "link_list_6nVQxP",
+        "contact_info_e7wKPX",
         "link_list_CNVNjL"
       ],
       "settings": {
