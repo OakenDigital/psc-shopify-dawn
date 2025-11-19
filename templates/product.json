@@ -67,13 +67,6 @@
     "main": {
       "type": "main-product",
       "blocks": {
-        "vendor": {
-          "type": "text",
-          "settings": {
-            "text": "",
-            "text_style": "uppercase"
-          }
-        },
         "yotpo_product_reviews_star_rating_fJzwXp": {
           "type": "shopify://apps/yotpo-product-reviews/blocks/star-rating/eb7dfd7d-db44-4334-bc49-c893b51b36cf",
           "settings": {
@@ -149,7 +142,6 @@
         }
       },
       "block_order": [
-        "vendor",
         "yotpo_product_reviews_star_rating_fJzwXp",
         "title",
         "price",
@@ -163,7 +155,8 @@
         "complementary_98k8aW"
       ],
       "custom_css": [
-        "shopify-payment-terms {display: none;}"
+        "shopify-payment-terms {display: none;}",
+        ".product__tax.caption.rte {display: none;}"
       ],
       "settings": {
         "enable_sticky_info": true,
