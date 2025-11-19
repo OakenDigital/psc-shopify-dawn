@@ -482,6 +482,8 @@
     }
   },
   "platform_customizations": {
-    "custom_css": []
+    "custom_css": [
+      ".product__tax.caption {display: none !important;}"
+    ]
   }
 }
