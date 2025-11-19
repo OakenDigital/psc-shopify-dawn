@@ -156,7 +156,7 @@
       ],
       "custom_css": [
         "shopify-payment-terms {display: none;}",
-        ".product__tax {display: none !important;}"
+        ".product__tax.caption {display: none !important;}"
       ],
       "settings": {
         "enable_sticky_info": true,
