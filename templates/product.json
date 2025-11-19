@@ -155,8 +155,7 @@
         "complementary_98k8aW"
       ],
       "custom_css": [
-        "shopify-payment-terms {display: none;}",
-        ".product__tax.caption {display: none !important;}"
+        "shopify-payment-terms {display: none;}"
       ],
       "settings": {
         "enable_sticky_info": true,
