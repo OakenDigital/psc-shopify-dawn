@@ -483,7 +483,7 @@
   },
   "platform_customizations": {
     "custom_css": [
-      ".product__tax.caption {display: none !important;}"
+      ".product__tax.caption.rte {display: none !important;}"
     ]
   }
 }
