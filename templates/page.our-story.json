@@ -9,6 +9,10 @@
  */
 {
   "sections": {
+    "1763780391a9c442de": {
+      "type": "_blocks",
+      "settings": {}
+    },
     "image_banner_x74eVF": {
       "type": "image-banner",
       "blocks": {
@@ -178,6 +182,7 @@
     },
     "main": {
       "type": "main-page",
+      "disabled": true,
       "settings": {
         "padding_top": 28,
         "padding_bottom": 28
@@ -192,14 +197,39 @@
         "padding_top": 40,
         "padding_bottom": 52
       }
+    },
+    "rich_text_fGj7UB": {
+      "type": "rich-text",
+      "blocks": {
+        "text_kD7pcx": {
+          "type": "text",
+          "settings": {
+            "text": "<h1>Our Commitment: Quality Over Everything.</h1><p>We don’t build bargain-bin parts. We build steering that holds up — through hard miles, tough terrain, and real-world abuse. Whether you’re rock crawling, towing heavy, or chasing podiums, every PSC product is tested on real rigs, by people who know what works and what doesn’t.</p><p>We’ve come a long way since the garage days, but we still do things the same way: build it right, stand behind it, and treat customers the way we’d want to be treated.</p><p>We’re proud of what we’ve built. We’re proud of our team. And we’re proud that when someone chooses PSC, they know they’re getting steering they can count on — not just today, but for the long haul.</p><p>Because PSC isn’t just about parts. It’s about solving problems, backing up what we build, and making sure you’ve got steering that works — every time.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "text_kD7pcx"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
     }
   },
   "order": [
+    "1763780391a9c442de",
     "image_banner_x74eVF",
     "multirow_gP6qVb",
     "video_NTBb7n",
     "multirow_YNBrm6",
     "main",
-    "custom_liquid_NRMrhk"
+    "custom_liquid_NRMrhk",
+    "rich_text_fGj7UB"
   ]
 }
