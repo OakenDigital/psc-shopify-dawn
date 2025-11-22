@@ -150,7 +150,7 @@
         "row_CwbyAn": {
           "type": "row",
           "settings": {
-            "caption": "Tony, Charlie, Kelly",
+            "caption": "Tony, Dave, Charlie, Kelly",
             "heading": "The Makers Behind Every PSC Part",
             "text": "<p><strong>Tony</strong> runs manufacturing and has been part of the story since the early days. If it’s going out the door, Tony’s made sure it’s built right — whether it’s a race-week rush job or a new product hitting the shelves.</p><p><strong>Dave</strong> need copy here for Dave............</p><p><strong>Charlie</strong> runs hands-on R&D, making sure every new idea works in real life, not just on paper. He’s the guy who stays late, tests hard, and makes sure every part we ship can be duplicated with precision.</p><p><strong>Kelly</strong>’s our go-to machinist — a walking, talking problem solver who’s been cranking handles for over 20 years. If PSC needs a part that doesn’t exist yet, Kelly figures out how to make it.</p>",
             "button_label": "",
@@ -286,10 +286,29 @@
             "border_radius": 0
           },
           "blocks": {}
+        },
+        "ai_gen_block_25ef8da_rnmGYw": {
+          "type": "ai_gen_block_25ef8da",
+          "settings": {
+            "image_1": "shopify://shop_images/julio.jpg",
+            "image_2": "shopify://shop_images/christian.jpg",
+            "image_3": "shopify://shop_images/johnny.jpg",
+            "image_4": "shopify://shop_images/chad.jpg",
+            "image_5": "shopify://shop_images/a_guy.jpg",
+            "max_width": 1600,
+            "spacing": 8,
+            "spacing_mobile": 8,
+            "padding_vertical": 0,
+            "padding_horizontal": 0,
+            "aspect_ratio": 100,
+            "border_radius": 0
+          },
+          "blocks": {}
         }
       },
       "block_order": [
-        "ai_gen_block_25ef8da_7TUJz7"
+        "ai_gen_block_25ef8da_7TUJz7",
+        "ai_gen_block_25ef8da_rnmGYw"
       ],
       "settings": {}
     }
