@@ -9,7 +9,7 @@
  */
 {
   "sections": {
-    "1763780391a9c442de": {
+    "1763781941e2b4017d": {
       "type": "_blocks",
       "settings": {}
     },
@@ -221,42 +221,81 @@
         "padding_bottom": 52
       }
     },
-    "collage_RN36n9": {
-      "type": "collage",
+    "rich_text_cKEnjF": {
+      "type": "rich-text",
       "blocks": {
-        "image_FUWPna": {
-          "type": "image",
-          "settings": {}
+        "heading_QLCcW9": {
+          "type": "heading",
+          "settings": {
+            "heading": "Our Team. Our Strength.",
+            "heading_size": "h1"
+          }
         },
-        "image_Hckhmw": {
-          "type": "image",
-          "settings": {}
+        "text_yLAYPG": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.</p>"
+          }
         },
-        "image_qrBByp": {
-          "type": "image",
-          "settings": {}
+        "button_xCQBen": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "button_label": "Button label",
+            "button_link": "",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
         }
       },
       "block_order": [
-        "image_FUWPna",
-        "image_Hckhmw",
-        "image_qrBByp"
+        "heading_QLCcW9",
+        "text_yLAYPG",
+        "button_xCQBen"
       ],
-      "name": "t:sections.collage.presets.name",
+      "name": "t:sections.rich-text.presets.name",
       "settings": {
-        "heading": "Our Team. Our Strength.",
-        "heading_size": "h1",
-        "desktop_layout": "left",
-        "mobile_layout": "column",
-        "card_styles": "product-card-wrapper",
+        "desktop_content_position": "center",
+        "content_alignment": "center",
         "color_scheme": "",
-        "padding_top": 36,
-        "padding_bottom": 36
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
       }
+    },
+    "1763780391a9c442de": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_25ef8da_7TUJz7": {
+          "type": "ai_gen_block_25ef8da",
+          "settings": {
+            "image_1": "shopify://shop_images/julio.jpg",
+            "image_2": "shopify://shop_images/christian.jpg",
+            "image_3": "shopify://shop_images/johnny.jpg",
+            "image_4": "shopify://shop_images/chad.jpg",
+            "image_5": "shopify://shop_images/a_guy.jpg",
+            "max_width": 1600,
+            "spacing": 8,
+            "spacing_mobile": 8,
+            "padding_vertical": 0,
+            "padding_horizontal": 0,
+            "aspect_ratio": 100,
+            "border_radius": 0
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_25ef8da_7TUJz7"
+      ],
+      "settings": {}
     }
   },
   "order": [
-    "1763780391a9c442de",
+    "1763781941e2b4017d",
     "image_banner_x74eVF",
     "multirow_gP6qVb",
     "video_NTBb7n",
@@ -264,6 +303,7 @@
     "main",
     "custom_liquid_NRMrhk",
     "rich_text_fGj7UB",
-    "collage_RN36n9"
+    "rich_text_cKEnjF",
+    "1763780391a9c442de"
   ]
 }
