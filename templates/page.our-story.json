@@ -33,13 +33,14 @@
       ],
       "name": "t:sections.image-banner.presets.name",
       "settings": {
+        "image": "shopify://shop_images/Designer_12.png",
         "image_overlay_opacity": 0,
-        "image_height": "adapt",
+        "image_height": "small",
         "image_behavior": "none",
         "desktop_content_position": "middle-center",
         "desktop_content_alignment": "center",
         "show_text_box": false,
-        "color_scheme": "",
+        "color_scheme": "scheme-a03118e4-1d97-43bc-bd4f-655039a52abb",
         "stack_images_on_mobile": true,
         "mobile_content_alignment": "center",
         "show_text_below": true
@@ -51,6 +52,7 @@
         "row_gUUjXD": {
           "type": "row",
           "settings": {
+            "image": "shopify://shop_images/f47db69c5a32907e654e2df53384ad8dl-m1709849370rd-w1280_h960.webp",
             "caption": "The Beginning",
             "heading": "The Garage",
             "text": "<p>PSC didn’t start in some fancy office. It started in <strong>Tom and Kim Allen’s </strong>garage — a couple Jeeps, some club races, and a whole lot of figuring things out the hard way.</p>",
@@ -61,6 +63,7 @@
         "row_qkFUUF": {
           "type": "row",
           "settings": {
+            "image": "shopify://shop_images/511266892_10229980876608243_789718470345390605_n.jpg",
             "caption": "Tom Allen",
             "heading": "Tom's Drive",
             "text": "<p><strong>Tom</strong>’s been building steering for over 40 years. After a near-fatal motorcycle wreck, he decided if he was still here, he was going to make it count. He taught himself how to build rack-and-pinion systems, started rebuilding parts in a corner of a warehouse, and eventually took over the entire warehouse — supplying steering for Trans-Am race teams, off-road rigs, and even military vehicles.</p>",
