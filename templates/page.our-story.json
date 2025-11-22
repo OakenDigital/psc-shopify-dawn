@@ -109,6 +109,7 @@
         "heading_size": "h2",
         "enable_video_looping": false,
         "video_url": "https://vimeo.com/1128655498/9f1126574b?share=copy&fl=sv&fe=ci",
+        "cover_image": "shopify://shop_images/tomandkimcoverphoto1.jpg",
         "description": "The Story of PSC Motorsports",
         "full_width": false,
         "color_scheme": "",
