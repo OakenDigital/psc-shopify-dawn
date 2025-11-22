@@ -9,6 +9,113 @@
  */
 {
   "sections": {
+    "image_banner_x74eVF": {
+      "type": "image-banner",
+      "blocks": {
+        "heading_8BjkQx": {
+          "type": "heading",
+          "settings": {
+            "heading": "Our Story",
+            "heading_size": "hxxl"
+          }
+        },
+        "text_KRmax6": {
+          "type": "text",
+          "settings": {
+            "text": "<em>From a couple Jeeps and a dream to the leader in performance steering.</em>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "heading_8BjkQx",
+        "text_KRmax6"
+      ],
+      "name": "t:sections.image-banner.presets.name",
+      "settings": {
+        "image_overlay_opacity": 0,
+        "image_height": "adapt",
+        "image_behavior": "none",
+        "desktop_content_position": "middle-center",
+        "desktop_content_alignment": "center",
+        "show_text_box": false,
+        "color_scheme": "",
+        "stack_images_on_mobile": true,
+        "mobile_content_alignment": "center",
+        "show_text_below": true
+      }
+    },
+    "multirow_gP6qVb": {
+      "type": "multirow",
+      "blocks": {
+        "row_gUUjXD": {
+          "type": "row",
+          "settings": {
+            "caption": "The Beginning",
+            "heading": "The Garage",
+            "text": "<p>PSC didn’t start in some fancy office. It started in <strong>Tom and Kim Allen’s </strong>garage — a couple Jeeps, some club races, and a whole lot of figuring things out the hard way.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "row_qkFUUF": {
+          "type": "row",
+          "settings": {
+            "caption": "Tom Allen",
+            "heading": "Tom's Drive",
+            "text": "<p><strong>Tom</strong>’s been building steering for over 40 years. After a near-fatal motorcycle wreck, he decided if he was still here, he was going to make it count. He taught himself how to build rack-and-pinion systems, started rebuilding parts in a corner of a warehouse, and eventually took over the entire warehouse — supplying steering for Trans-Am race teams, off-road rigs, and even military vehicles.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "row_pCMYJJ": {
+          "type": "row",
+          "settings": {
+            "caption": "Kim Allen",
+            "heading": "Built on Integrity,  Led with Experience",
+            "text": "<p><strong>Kim </strong>helped turn that hustle into a real business. She runs PSC today with a focus on doing things right — not fast, not cheap, just right. She’s raced, she’s led, and she’s built a team where everyone knows they’re part of something that matters.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "row_gUUjXD",
+        "row_qkFUUF",
+        "row_pCMYJJ"
+      ],
+      "name": "t:sections.multirow.presets.name",
+      "settings": {
+        "image_height": "medium",
+        "desktop_image_width": "medium",
+        "image_layout": "alternate-left",
+        "heading_size": "h1",
+        "text_style": "body",
+        "button_style": "secondary",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "",
+        "row_color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "video_NTBb7n": {
+      "type": "video",
+      "name": "t:sections.video.presets.name",
+      "settings": {
+        "heading": "Inside PSC: A Story of Innovation and Integrity",
+        "heading_size": "h2",
+        "enable_video_looping": false,
+        "video_url": "https://vimeo.com/1128655498/9f1126574b?share=copy&fl=sv&fe=ci",
+        "description": "The Story of PSC Motorsports",
+        "full_width": false,
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "main": {
       "type": "main-page",
       "settings": {
@@ -28,6 +135,9 @@
     }
   },
   "order": [
+    "image_banner_x74eVF",
+    "multirow_gP6qVb",
+    "video_NTBb7n",
     "main",
     "custom_liquid_NRMrhk"
   ]
