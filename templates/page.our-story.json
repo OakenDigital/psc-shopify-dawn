@@ -143,7 +143,7 @@
         "row_CwbyAn": {
           "type": "row",
           "settings": {
-            "caption": "Caption",
+            "caption": "Tony, Charlie, Kelly",
             "heading": "The Makers Behind Every PSC Part",
             "text": "<p><strong>Tony</strong> runs manufacturing and has been part of the story since the early days. If it’s going out the door, Tony’s made sure it’s built right — whether it’s a race-week rush job or a new product hitting the shelves.</p><p><strong>Charlie</strong> runs hands-on R&D, making sure every new idea works in real life, not just on paper. He’s the guy who stays late, tests hard, and makes sure every part we ship can be duplicated with precision.</p><p><strong>Kelly</strong>’s our go-to machinist — a walking, talking problem solver who’s been cranking handles for over 20 years. If PSC needs a part that doesn’t exist yet, Kelly figures out how to make it.</p>",
             "button_label": "",
