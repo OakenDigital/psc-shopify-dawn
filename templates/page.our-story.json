@@ -112,7 +112,63 @@
         "cover_image": "shopify://shop_images/tomandkimcoverphoto1.jpg",
         "description": "The Story of PSC Motorsports",
         "full_width": false,
-        "color_scheme": "",
+        "color_scheme": "scheme-f95fc31b-0c1b-4da3-82af-ed2967ed4967",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "multirow_YNBrm6": {
+      "type": "multirow",
+      "blocks": {
+        "row_WKLzt8": {
+          "type": "row",
+          "settings": {
+            "caption": "Jeff & Josh Allen",
+            "heading": "The Next Generation Driving PSC Forward",
+            "text": "<p><strong>Jeff</strong>, their oldest son, grew up in the business and now runs the front end. He’s the one making sure ideas turn into real parts, keeping things moving, and staying true to the family’s values.</p><p><strong>Josh</strong>, the youngest, heads up R&D and flat metal. He tests new ideas on his own vehicles and pushes PSC parts to the limit. If he trusts them with his life, you can too.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "row_rtq8Ui": {
+          "type": "row",
+          "settings": {
+            "caption": "Karl & Kelvin",
+            "heading": "Decades of Dedication, One Mission",
+            "text": "<p><strong>Karl</strong> was part of PSC in the early 2000s, took a long break, and came back in 2023 as Chief Operating Officer. He’s the one making sure the team’s got what it needs to stay focused and keep things rolling. He’s seen PSC grow from a handful of people packing boxes to a full-scale operation — and he’ll tell you the heart of it hasn’t changed: take care of customers, build parts that work, and don’t cut corners.</p><p><strong>Kelvin</strong>’s been here since the beginning — back when there were just a few gearboxes and some chickens wandering through the shop. He’s the guy customers call when they need answers, and he’s helped thousands of drivers get the right parts and get back on the trail.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "row_CwbyAn": {
+          "type": "row",
+          "settings": {
+            "caption": "Caption",
+            "heading": "Row",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "button_label": "Button label",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "row_WKLzt8",
+        "row_rtq8Ui",
+        "row_CwbyAn"
+      ],
+      "name": "t:sections.multirow.presets.name",
+      "settings": {
+        "image_height": "medium",
+        "desktop_image_width": "medium",
+        "image_layout": "alternate-left",
+        "heading_size": "h1",
+        "text_style": "body",
+        "button_style": "secondary",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "",
+        "row_color_scheme": "",
         "padding_top": 36,
         "padding_bottom": 36
       }
@@ -139,6 +195,7 @@
     "image_banner_x74eVF",
     "multirow_gP6qVb",
     "video_NTBb7n",
+    "multirow_YNBrm6",
     "main",
     "custom_liquid_NRMrhk"
   ]
