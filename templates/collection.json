@@ -23,10 +23,10 @@
         "padding_bottom": 20
       }
     },
-    "176324314697478a9d": {
+    "apps_CATkbB": {
       "type": "apps",
       "blocks": {
-        "partfinder_year_make_model_vehicle_search_bar_NnWmyK": {
+        "partfinder_year_make_model_vehicle_search_bar_QcgNNg": {
           "type": "shopify://apps/partfinder-year-make-model/blocks/vehicle_search_bar/2892d2e7-0551-451a-8d78-8a0f565a5174",
           "settings": {
             "gv-enable-submodel": false,
@@ -44,7 +44,7 @@
             "gv-title-bg": "#000000",
             "gv-title-text": "#ffffff",
             "gv-show-toggle-button": true,
-            "gv-toggle-button-label": "FIND YOUR VEHICLE",
+            "gv-toggle-button-label": "SELECT YOUR VEHICLE",
             "gv-toggle-button-bg": "#000000",
             "gv-toggle-button-text": "#ffffff",
             "gv-margin-top": 0,
@@ -55,10 +55,10 @@
         }
       },
       "block_order": [
-        "partfinder_year_make_model_vehicle_search_bar_NnWmyK"
+        "partfinder_year_make_model_vehicle_search_bar_QcgNNg"
       ],
       "settings": {
-        "include_margins": true
+        "include_margins": false
       }
     },
     "banner": {
@@ -92,7 +92,7 @@
   },
   "order": [
     "breadcrumbs_Njfh8P",
-    "176324314697478a9d",
+    "apps_CATkbB",
     "banner",
     "product-grid"
   ]
