@@ -402,8 +402,8 @@
         "yotpo_product_reviews_vugc_media_gallery_QKAifb": {
           "type": "shopify://apps/yotpo-product-reviews/blocks/vugc_media_gallery/eb7dfd7d-db44-4334-bc49-c893b51b36cf",
           "settings": {
-            "product": "{{product}}",
-            "widget_instance_id": ""
+            "product": "{{ product }}",
+            "widget_instance_id": "1249840"
           }
         }
       },
