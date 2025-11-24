@@ -222,7 +222,8 @@
         "section_heading_YaCKnL": {
           "type": "section_heading",
           "settings": {
-            "title": "About"
+            "title": "About",
+            "custom_icon": "shopify://shop_images/About_Icon_Information.svg"
           }
         },
         "collapsible_row_bHQJKc": {
