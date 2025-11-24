@@ -57,6 +57,9 @@
       "block_order": [
         "partfinder_year_make_model_vehicle_search_bar_QcgNNg"
       ],
+      "custom_css": [
+        ".auto-part-search-bar .gv-mmy-bar {padding: 2rem 1rem;}"
+      ],
       "settings": {
         "include_margins": false
       }
