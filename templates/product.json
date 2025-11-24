@@ -398,10 +398,18 @@
           "settings": {
             "product": "{{product}}"
           }
+        },
+        "yotpo_product_reviews_vugc_media_gallery_QKAifb": {
+          "type": "shopify://apps/yotpo-product-reviews/blocks/vugc_media_gallery/eb7dfd7d-db44-4334-bc49-c893b51b36cf",
+          "settings": {
+            "product": "{{product}}",
+            "widget_instance_id": ""
+          }
         }
       },
       "block_order": [
-        "yotpo_product_reviews_reviews_7indRK"
+        "yotpo_product_reviews_reviews_7indRK",
+        "yotpo_product_reviews_vugc_media_gallery_QKAifb"
       ],
       "settings": {
         "include_margins": true
