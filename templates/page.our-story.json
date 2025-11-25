@@ -273,9 +273,9 @@
           "type": "ai_gen_block_25ef8da",
           "settings": {
             "image_1": "shopify://shop_images/julio.jpg",
-            "image_2": "shopify://shop_images/christian.jpg",
+            "image_2": "shopify://shop_images/John_D_Photo_1.jpg",
             "image_3": "shopify://shop_images/johnny.jpg",
-            "image_4": "shopify://shop_images/chad.jpg",
+            "image_4": "shopify://shop_images/Tony_Photo_1.jpg",
             "image_5": "shopify://shop_images/a_guy.jpg",
             "max_width": 1600,
             "spacing": 8,
@@ -290,11 +290,11 @@
         "ai_gen_block_25ef8da_rnmGYw": {
           "type": "ai_gen_block_25ef8da",
           "settings": {
-            "image_1": "shopify://shop_images/julio.jpg",
+            "image_1": "shopify://shop_images/Felix_Photo_1.jpg",
             "image_2": "shopify://shop_images/christian.jpg",
             "image_3": "shopify://shop_images/johnny.jpg",
-            "image_4": "shopify://shop_images/chad.jpg",
-            "image_5": "shopify://shop_images/a_guy.jpg",
+            "image_4": "shopify://shop_images/Chad_S_Photo_1.jpg",
+            "image_5": "shopify://shop_images/ELi_Photo_1.jpg",
             "max_width": 1600,
             "spacing": 8,
             "spacing_mobile": 8,
