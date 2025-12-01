@@ -78,6 +78,7 @@
         "row_pCMYJJ": {
           "type": "row",
           "settings": {
+            "image": "shopify://shop_images/kim_about_us_page.png",
             "caption": "Kim Allen",
             "heading": "Built on Integrity,  Led with Experience",
             "text": "<p><strong>Kim </strong>helped turn that hustle into a real business. She runs PSC today with a focus on doing things right — not fast, not cheap, just right. She’s raced, she’s led, and she’s built a team where everyone knows they’re part of something that matters.</p>",
