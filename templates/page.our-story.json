@@ -38,7 +38,7 @@
       "name": "t:sections.image-banner.presets.name",
       "settings": {
         "image": "shopify://shop_images/thanksgiving_post_2.png",
-        "image_overlay_opacity": 0,
+        "image_overlay_opacity": 50,
         "image_height": "small",
         "image_behavior": "none",
         "desktop_content_position": "middle-center",
@@ -142,6 +142,7 @@
         "row_rtq8Ui": {
           "type": "row",
           "settings": {
+            "image": "shopify://shop_images/karl_and_kelvin.png",
             "caption": "Karl & Kelvin",
             "heading": "Decades of Dedication, One Mission",
             "text": "<p><strong>Karl</strong> was part of PSC in the early 2000s, took a long break, and came back in 2023 as Chief Operating Officer. He’s the one making sure the team’s got what it needs to stay focused and keep things rolling. He’s seen PSC grow from a handful of people packing boxes to a full-scale operation — and he’ll tell you the heart of it hasn’t changed: take care of customers, build parts that work, and don’t cut corners.</p><p><strong>Kelvin</strong>’s been here since the beginning — back when there were just a few gearboxes and some chickens wandering through the shop. He’s the guy customers call when they need answers, and he’s helped thousands of drivers get the right parts and get back on the trail.</p>",
