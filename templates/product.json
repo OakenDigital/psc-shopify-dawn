@@ -155,7 +155,8 @@
         "complementary_98k8aW"
       ],
       "custom_css": [
-        "shopify-payment-terms {display: none;}"
+        "shopify-payment-terms {display: none;}",
+        ".product__title h1 {font-size: calc(var(--font-heading-scale) * 3rem);}"
       ],
       "settings": {
         "enable_sticky_info": true,
