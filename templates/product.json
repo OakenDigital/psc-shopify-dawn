@@ -230,10 +230,8 @@
       "blocks": {
         "section_heading_YaCKnL": {
           "type": "section_heading",
-          "disabled": true,
           "settings": {
-            "title": "About",
-            "custom_icon": "shopify://shop_images/About_Icon_Information.svg"
+            "title": "About:"
           }
         },
         "collapsible_row_bHQJKc": {
