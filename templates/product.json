@@ -207,8 +207,8 @@
         "max_width": 600,
         "border_radius": 8,
         "color_scheme": "",
-        "padding_top": 24,
-        "padding_bottom": 24
+        "padding_top": 40,
+        "padding_bottom": 40
       }
     },
     "collapsible_content_fgDLQP": {
