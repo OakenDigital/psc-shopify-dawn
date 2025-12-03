@@ -17,7 +17,6 @@
     border-radius: {{ section.settings.border_radius }}px;
     overflow: hidden;
     max-width: {{ section.settings.max_width }}px;
-    margin: 0 auto;
   }
 
   @media screen and (min-width: 750px) {
@@ -29,9 +28,9 @@
   .psc-trail-score-card__left {
     background-color: {{ section.settings.left_background }};
     color: {{ section.settings.left_text_color }};
-    padding: 2rem 1.5rem;
+    padding: 2rem 1rem;
     display: flex;
-    flex-direction: column;
+    flex-direction: row-reverse;
     align-items: center;
     justify-content: center;
     gap: 1rem;
@@ -40,7 +39,7 @@
 
   @media screen and (min-width: 750px) {
     .psc-trail-score-card__left {
-      padding: 2.5rem 2rem;
+      padding: 2rem 1rem;
     }
   }
 
@@ -64,7 +63,7 @@
   }
 
   .psc-trail-score-card__icon {
-    width: 60px;
+    width: 130px;
     height: 60px;
   }
 
@@ -79,14 +78,15 @@
     color: {{ section.settings.right_text_color }};
     padding: 2rem 1.5rem;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
     gap: 0.75rem;
+    align-items: center;
   }
 
   @media screen and (min-width: 750px) {
     .psc-trail-score-card__right {
-      padding: 2.5rem 2rem;
+      padding: 0rem 2rem;
     }
   }
 
