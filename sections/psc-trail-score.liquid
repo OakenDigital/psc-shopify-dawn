@@ -171,18 +171,6 @@
     <div class="page-width">
       <div class="psc-trail-score-card">
         <div class="psc-trail-score-card__left">
-          {%- if section.settings.logo_image != blank -%}
-            <div class="psc-trail-score-card__logo">
-              <img
-                src="{{ section.settings.logo_image | image_url: width: 360 }}"
-                alt="{{ section.settings.logo_alt | default: 'PSC' }}"
-                width="180"
-                height="auto"
-                loading="lazy"
-              >
-            </div>
-          {%- endif -%}
-
           {%- if section.settings.label_text != blank -%}
             <p class="psc-trail-score-card__label">{{ section.settings.label_text }}</p>
           {%- endif -%}
@@ -249,12 +237,6 @@
     {
       "type": "header",
       "content": "Left Side - Logo & Icon"
-    },
-    {
-      "type": "image_picker",
-      "id": "logo_image",
-      "label": "Logo Image",
-      "info": "Upload your PSC logo"
     },
     {
       "type": "text",
