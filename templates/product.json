@@ -230,6 +230,7 @@
       "blocks": {
         "section_heading_YaCKnL": {
           "type": "section_heading",
+          "disabled": true,
           "settings": {
             "title": "About",
             "custom_icon": "shopify://shop_images/About_Icon_Information.svg"
@@ -260,6 +261,7 @@
         },
         "section_heading_wEkmih": {
           "type": "section_heading",
+          "disabled": true,
           "settings": {
             "title": "Tech Info",
             "custom_icon": "shopify://shop_images/wrenches.svg"
