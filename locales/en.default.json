@@ -540,14 +540,8 @@
     "collections": {
       "sorting": {
         "best_selling": "Best Sellers",
-        "price_ascending": "Price, Low to High",
-        "price_descending": "Price, High to Low"
-      }
-    },
-    "search": {
-      "sorting": {
-        "price_ascending": "Price, Low to High",
-        "price_descending": "Price, High to Low"
+        "price_ascending": "Price – Low to High ",
+        "price_descending": "Price – High to Low "
       }
     }
   }
