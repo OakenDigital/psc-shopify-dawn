@@ -15,12 +15,12 @@
     display: grid;
     grid-template-columns: 1fr;
     border-radius: {{ section.settings.border_radius }}px;
+    grid-template-columns: {{ section.settings.left_width }}% {{ 100 | minus: section.settings.left_width }}%;
     overflow: hidden;
   }
 
   @media screen and (min-width: 750px) {
     .psc-trail-score-card {
-      grid-template-columns: {{ section.settings.left_width }}% {{ 100 | minus: section.settings.left_width }}%;
       max-width: {{ section.settings.max_width }}px;
     }
   }
