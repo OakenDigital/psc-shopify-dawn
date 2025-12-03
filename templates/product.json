@@ -174,6 +174,21 @@
         "padding_bottom": 12
       }
     },
+    "conditional_content_4Vny8m": {
+      "type": "conditional-content",
+      "name": "Conditional Content",
+      "settings": {
+        "metafield_namespace": "custom",
+        "metafield_key": "this_item_may_take_up_to_3_business_days_to_ship",
+        "heading": "This item may take up to 3 business days to ship.",
+        "heading_size": "h3",
+        "content": "<p>This item may take up to 3 business days to ship.</p>",
+        "full_width": false,
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "176324386610e88a6c": {
       "type": "_blocks",
       "settings": {}
@@ -427,34 +442,19 @@
         "padding_top": 60,
         "padding_bottom": 60
       }
-    },
-    "conditional_content_4Vny8m": {
-      "type": "conditional-content",
-      "name": "Conditional Content",
-      "settings": {
-        "metafield_namespace": "custom",
-        "metafield_key": "this_item_may_take_up_to_3_business_days_to_ship",
-        "heading": "This item may take up to 3 business days to ship.",
-        "heading_size": "h3",
-        "content": "",
-        "full_width": false,
-        "color_scheme": "",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
     }
   },
   "order": [
     "breadcrumbs_EzUGCk",
     "1762357149ec0dedd5",
     "main",
+    "conditional_content_4Vny8m",
     "176324386610e88a6c",
     "1763244160f6d49b88",
     "psc_trail_score_RMztJE",
     "collapsible_content_fgDLQP",
     "related-products",
     "176235741763515547",
-    "conditional_content_ajjAYb",
-    "conditional_content_4Vny8m"
+    "conditional_content_ajjAYb"
   ]
 }
