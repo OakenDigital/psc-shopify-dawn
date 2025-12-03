@@ -188,9 +188,8 @@
       "settings": {
         "metafield_namespace": "custom",
         "metafield_key": "trail_score",
-        "logo_image": "shopify://shop_images/psc-trail-icon.svg",
         "logo_alt": "PSC",
-        "label_text": "TRAIL SCORE",
+        "label_text": "PSC TRAIL SCORE",
         "icon_image": "shopify://shop_images/psc-trail-icon.svg",
         "score_1_data": "Trail Beginner|Perfect for smooth roads and light gravel paths.",
         "score_2_data": "Easy Rider|Handles paved roads and occasional dirt trails with ease.",
@@ -204,12 +203,12 @@
         "score_color": "#2b2b2b",
         "title_color": "#2b2b2b",
         "description_color": "#2b2b2b",
-        "left_width": 35,
-        "max_width": 1000,
+        "left_width": 25,
+        "max_width": 600,
         "border_radius": 8,
         "color_scheme": "",
-        "padding_top": 36,
-        "padding_bottom": 36
+        "padding_top": 24,
+        "padding_bottom": 24
       }
     },
     "collapsible_content_fgDLQP": {
