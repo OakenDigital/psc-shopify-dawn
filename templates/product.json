@@ -182,39 +182,34 @@
       "type": "_blocks",
       "settings": {}
     },
-    "custom_liquid_7Pmedm": {
-      "type": "custom-liquid",
-      "disabled": true,
-      "name": "t:sections.custom-liquid.presets.name",
+    "psc_trail_score_RMztJE": {
+      "type": "psc-trail-score",
+      "name": "PSC Trail Score",
       "settings": {
-        "custom_liquid": "<div class=\"page-width\"><div class=\"product-sku-display\">\n  <p><strong>Part Number:</strong> <span class=\"variant-sku\">{{ product.selected_or_first_available_variant.sku }}</span></p>\n</div></div>\n\n<script>\n(function() {\n  // Listen for variant change events\n  document.addEventListener('variant:change', function(event) {\n    if (event.detail && event.detail.variant && event.detail.variant.sku) {\n      document.querySelector('.variant-sku').textContent = event.detail.variant.sku;\n    }\n  });\n\n  // Fallback: Listen for URL changes (some themes use this)\n  if (window.VariantHelper) {\n    window.VariantHelper.on('variant:change', function(variant) {\n      if (variant && variant.sku) {\n        document.querySelector('.variant-sku').textContent = variant.sku;\n      }\n    });\n  }\n\n  // Additional fallback: Monitor form changes\n  const form = document.querySelector('form[action*=\"/cart/add\"]');\n  if (form) {\n    form.addEventListener('change', function() {\n      const selectedVariantId = form.querySelector('[name=\"id\"]')?.value;\n      if (selectedVariantId) {\n        const variants = {{ product.variants | json }};\n        const variant = variants.find(v => v.id == selectedVariantId);\n        if (variant && variant.sku) {\n          document.querySelector('.variant-sku').textContent = variant.sku;\n        }\n      }\n    });\n  }\n})();\n</script>",
+        "metafield_namespace": "custom",
+        "metafield_key": "trail_score",
+        "logo_image": "shopify://shop_images/psc-trail-icon.svg",
+        "logo_alt": "PSC",
+        "label_text": "TRAIL SCORE",
+        "icon_image": "shopify://shop_images/psc-trail-icon.svg",
+        "score_1_data": "Trail Beginner|Perfect for smooth roads and light gravel paths.",
+        "score_2_data": "Easy Rider|Handles paved roads and occasional dirt trails with ease.",
+        "score_3_data": "Weekend Warrior|Balanced for street and moderate trails—think mild rock and mud.",
+        "score_4_data": "Trail Crusher|Built for challenging terrain with rocks, ruts, and steep inclines.",
+        "score_5_data": "Extreme Off-Road|Engineered for the toughest trails and extreme rock crawling.",
+        "left_background": "#2b2b2b",
+        "left_text_color": "#ffffff",
+        "right_background": "#c9a86a",
+        "right_text_color": "#000000",
+        "score_color": "#2b2b2b",
+        "title_color": "#2b2b2b",
+        "description_color": "#2b2b2b",
+        "left_width": 35,
+        "max_width": 1000,
+        "border_radius": 8,
         "color_scheme": "",
-        "padding_top": 0,
-        "padding_bottom": 0
-      }
-    },
-    "rich_text_6EfPxh": {
-      "type": "rich-text",
-      "blocks": {
-        "text_QMB8qg": {
-          "type": "text",
-          "settings": {
-            "text": "<p><strong>Part Number: </strong>{{ product.metafields.custom.part_number.value }}</p>"
-          }
-        }
-      },
-      "block_order": [
-        "text_QMB8qg"
-      ],
-      "disabled": true,
-      "name": "Part Number",
-      "settings": {
-        "desktop_content_position": "left",
-        "content_alignment": "left",
-        "color_scheme": "",
-        "full_width": true,
-        "padding_top": 12,
-        "padding_bottom": 24
+        "padding_top": 36,
+        "padding_bottom": 36
       }
     },
     "collapsible_content_fgDLQP": {
@@ -442,8 +437,7 @@
     "main",
     "176324386610e88a6c",
     "1763244160f6d49b88",
-    "custom_liquid_7Pmedm",
-    "rich_text_6EfPxh",
+    "psc_trail_score_RMztJE",
     "collapsible_content_fgDLQP",
     "related-products",
     "176235741763515547",
