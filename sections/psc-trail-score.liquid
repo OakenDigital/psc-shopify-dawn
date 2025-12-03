@@ -1,0 +1,453 @@
+{%- style -%}
+  .trail-score-{{ section.id }} {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .trail-score-{{ section.id }} {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+
+  .psc-trail-score-card {
+    display: grid;
+    grid-template-columns: 1fr;
+    border-radius: {{ section.settings.border_radius }}px;
+    overflow: hidden;
+    max-width: {{ section.settings.max_width }}px;
+    margin: 0 auto;
+  }
+
+  @media screen and (min-width: 750px) {
+    .psc-trail-score-card {
+      grid-template-columns: {{ section.settings.left_width }}% {{ 100 | minus: section.settings.left_width }}%;
+    }
+  }
+
+  .psc-trail-score-card__left {
+    background-color: {{ section.settings.left_background }};
+    color: {{ section.settings.left_text_color }};
+    padding: 2rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    text-align: center;
+  }
+
+  @media screen and (min-width: 750px) {
+    .psc-trail-score-card__left {
+      padding: 2.5rem 2rem;
+    }
+  }
+
+  .psc-trail-score-card__logo {
+    width: 100%;
+    max-width: 180px;
+  }
+
+  .psc-trail-score-card__logo img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .psc-trail-score-card__label {
+    font-size: 1.125rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin: 0;
+  }
+
+  .psc-trail-score-card__icon {
+    width: 60px;
+    height: 60px;
+  }
+
+  .psc-trail-score-card__icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  .psc-trail-score-card__right {
+    background-color: {{ section.settings.right_background }};
+    color: {{ section.settings.right_text_color }};
+    padding: 2rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.75rem;
+  }
+
+  @media screen and (min-width: 750px) {
+    .psc-trail-score-card__right {
+      padding: 2.5rem 2rem;
+    }
+  }
+
+  .psc-trail-score-card__score {
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 1;
+    margin: 0;
+    color: {{ section.settings.score_color }};
+  }
+
+  @media screen and (min-width: 750px) {
+    .psc-trail-score-card__score {
+      font-size: 3.5rem;
+    }
+  }
+
+  .psc-trail-score-card__title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin: 0;
+    color: {{ section.settings.title_color }};
+  }
+
+  @media screen and (min-width: 750px) {
+    .psc-trail-score-card__title {
+      font-size: 1.75rem;
+    }
+  }
+
+  .psc-trail-score-card__description {
+    font-size: 0.9375rem;
+    line-height: 1.5;
+    margin: 0;
+    color: {{ section.settings.description_color }};
+  }
+
+  @media screen and (min-width: 750px) {
+    .psc-trail-score-card__description {
+      font-size: 1rem;
+    }
+  }
+{%- endstyle -%}
+
+{%- liquid
+  assign trail_score_value = product.metafields[section.settings.metafield_namespace][section.settings.metafield_key]
+  assign show_trail_score = false
+  assign score_data = null
+
+  if trail_score_value != blank
+    assign score_num = trail_score_value | times: 1
+    if score_num >= 1 and score_num <= 5
+      assign show_trail_score = true
+
+      case score_num
+        when 1
+          assign score_data = section.settings.score_1_data
+        when 2
+          assign score_data = section.settings.score_2_data
+        when 3
+          assign score_data = section.settings.score_3_data
+        when 4
+          assign score_data = section.settings.score_4_data
+        when 5
+          assign score_data = section.settings.score_5_data
+      endcase
+    endif
+  endif
+-%}
+
+{%- if show_trail_score and score_data != blank -%}
+  {%- assign score_parts = score_data | split: '|' -%}
+  {%- assign score_title = score_parts[0] | default: '' -%}
+  {%- assign score_description = score_parts[1] | default: '' -%}
+
+  <div class="trail-score-{{ section.id }} color-{{ section.settings.color_scheme }}">
+    <div class="page-width">
+      <div class="psc-trail-score-card">
+        <div class="psc-trail-score-card__left">
+          {%- if section.settings.logo_image != blank -%}
+            <div class="psc-trail-score-card__logo">
+              <img
+                src="{{ section.settings.logo_image | image_url: width: 360 }}"
+                alt="{{ section.settings.logo_alt | default: 'PSC' }}"
+                width="180"
+                height="auto"
+                loading="lazy"
+              >
+            </div>
+          {%- endif -%}
+
+          {%- if section.settings.label_text != blank -%}
+            <p class="psc-trail-score-card__label">{{ section.settings.label_text }}</p>
+          {%- endif -%}
+
+          {%- if section.settings.icon_image != blank -%}
+            <div class="psc-trail-score-card__icon">
+              <img
+                src="{{ section.settings.icon_image | image_url: width: 120 }}"
+                alt=""
+                width="60"
+                height="60"
+                loading="lazy"
+              >
+            </div>
+          {%- endif -%}
+        </div>
+
+        <div class="psc-trail-score-card__right">
+          <p class="psc-trail-score-card__score">{{ trail_score_value }}/5</p>
+
+          {%- if score_title != blank -%}
+            <h3 class="psc-trail-score-card__title">{{ score_title }}</h3>
+          {%- endif -%}
+
+          {%- if score_description != blank -%}
+            <p class="psc-trail-score-card__description">{{ score_description }}</p>
+          {%- endif -%}
+        </div>
+      </div>
+    </div>
+  </div>
+{%- endif -%}
+
+{% schema %}
+{
+  "name": "PSC Trail Score",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "paragraph",
+      "content": "Displays a trail score card based on product metafield value (1-5). Card only appears if metafield has a valid score."
+    },
+    {
+      "type": "header",
+      "content": "Metafield Settings"
+    },
+    {
+      "type": "text",
+      "id": "metafield_namespace",
+      "label": "Metafield Namespace",
+      "default": "custom",
+      "info": "The namespace of your trail score metafield"
+    },
+    {
+      "type": "text",
+      "id": "metafield_key",
+      "label": "Metafield Key",
+      "default": "trail_score",
+      "info": "The key of your trail score metafield (should contain value 1-5)"
+    },
+    {
+      "type": "header",
+      "content": "Left Side - Logo & Icon"
+    },
+    {
+      "type": "image_picker",
+      "id": "logo_image",
+      "label": "Logo Image",
+      "info": "Upload your PSC logo"
+    },
+    {
+      "type": "text",
+      "id": "logo_alt",
+      "label": "Logo Alt Text",
+      "default": "PSC"
+    },
+    {
+      "type": "text",
+      "id": "label_text",
+      "label": "Label Text",
+      "default": "TRAIL SCORE"
+    },
+    {
+      "type": "image_picker",
+      "id": "icon_image",
+      "label": "Icon Image",
+      "info": "Upload vehicle/trail icon (60x60px recommended)"
+    },
+    {
+      "type": "header",
+      "content": "Score 1 Settings"
+    },
+    {
+      "type": "textarea",
+      "id": "score_1_data",
+      "label": "Score 1 Content",
+      "placeholder": "Title|Description",
+      "default": "Trail Beginner|Perfect for smooth roads and light gravel paths.",
+      "info": "Format: Title|Description (separate with | character)"
+    },
+    {
+      "type": "header",
+      "content": "Score 2 Settings"
+    },
+    {
+      "type": "textarea",
+      "id": "score_2_data",
+      "label": "Score 2 Content",
+      "placeholder": "Title|Description",
+      "default": "Easy Rider|Handles paved roads and occasional dirt trails with ease.",
+      "info": "Format: Title|Description (separate with | character)"
+    },
+    {
+      "type": "header",
+      "content": "Score 3 Settings"
+    },
+    {
+      "type": "textarea",
+      "id": "score_3_data",
+      "label": "Score 3 Content",
+      "placeholder": "Title|Description",
+      "default": "Weekend Warrior|Balanced for street and moderate trails—think mild rock and mud.",
+      "info": "Format: Title|Description (separate with | character)"
+    },
+    {
+      "type": "header",
+      "content": "Score 4 Settings"
+    },
+    {
+      "type": "textarea",
+      "id": "score_4_data",
+      "label": "Score 4 Content",
+      "placeholder": "Title|Description",
+      "default": "Trail Crusher|Built for challenging terrain with rocks, ruts, and steep inclines.",
+      "info": "Format: Title|Description (separate with | character)"
+    },
+    {
+      "type": "header",
+      "content": "Score 5 Settings"
+    },
+    {
+      "type": "textarea",
+      "id": "score_5_data",
+      "label": "Score 5 Content",
+      "placeholder": "Title|Description",
+      "default": "Extreme Off-Road|Engineered for the toughest trails and extreme rock crawling.",
+      "info": "Format: Title|Description (separate with | character)"
+    },
+    {
+      "type": "header",
+      "content": "Design - Left Side"
+    },
+    {
+      "type": "color",
+      "id": "left_background",
+      "label": "Background Color",
+      "default": "#2b2b2b"
+    },
+    {
+      "type": "color",
+      "id": "left_text_color",
+      "label": "Text Color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "header",
+      "content": "Design - Right Side"
+    },
+    {
+      "type": "color",
+      "id": "right_background",
+      "label": "Background Color",
+      "default": "#c9a86a"
+    },
+    {
+      "type": "color",
+      "id": "right_text_color",
+      "label": "Text Color",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "score_color",
+      "label": "Score Number Color",
+      "default": "#2b2b2b"
+    },
+    {
+      "type": "color",
+      "id": "title_color",
+      "label": "Title Color",
+      "default": "#2b2b2b"
+    },
+    {
+      "type": "color",
+      "id": "description_color",
+      "label": "Description Color",
+      "default": "#2b2b2b"
+    },
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "range",
+      "id": "left_width",
+      "min": 25,
+      "max": 50,
+      "step": 5,
+      "unit": "%",
+      "label": "Left Side Width",
+      "default": 35,
+      "info": "Desktop only - mobile stacks vertically"
+    },
+    {
+      "type": "range",
+      "id": "max_width",
+      "min": 600,
+      "max": 1200,
+      "step": 50,
+      "unit": "px",
+      "label": "Card Max Width",
+      "default": 1000
+    },
+    {
+      "type": "range",
+      "id": "border_radius",
+      "min": 0,
+      "max": 30,
+      "step": 2,
+      "unit": "px",
+      "label": "Border Radius",
+      "default": 8
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Section Color Scheme",
+      "default": "scheme-1"
+    },
+    {
+      "type": "header",
+      "content": "Spacing"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Top Padding",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Bottom Padding",
+      "default": 36
+    }
+  ],
+  "presets": [
+    {
+      "name": "PSC Trail Score"
+    }
+  ]
+}
+{% endschema %}
