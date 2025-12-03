@@ -227,7 +227,7 @@
   },
   "templates": {
     "search": {
-      "no_results": "No results found for “{{ terms }}”. Check the spelling or use a different word or phrase.",
+      "no_results": "Didn’t find a match for “{{ terms }}”. Check the spelling, try a different term or check out what’s in stock — we’ve got plenty of solid gear ready to ship.",
       "page": "Page",
       "products": "Products",
       "results_pages_with_count": {
