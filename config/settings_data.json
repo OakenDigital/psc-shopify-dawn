@@ -483,7 +483,8 @@
   },
   "platform_customizations": {
     "custom_css": [
-      ".product__tax.caption.rte {display: none !important;}"
+      ".product__tax.caption.rte {display: none !important;}",
+      ".product__title a.product__title h2 {font-size: calc(var(--font-heading-scale) * 3rem);}"
     ]
   }
 }
