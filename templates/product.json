@@ -67,6 +67,12 @@
     "main": {
       "type": "main-product",
       "blocks": {
+        "custom_liquid_7p3eAr": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "{% if product.metafields.custom.this_item_may_take_up_to_3_business_days_to_ship == true %}\n  <p>This part typically ships within 3 business days.</p>\n{% endif %}"
+          }
+        },
         "yotpo_product_reviews_star_rating_fJzwXp": {
           "type": "shopify://apps/yotpo-product-reviews/blocks/star-rating/eb7dfd7d-db44-4334-bc49-c893b51b36cf",
           "settings": {
@@ -142,6 +148,7 @@
         }
       },
       "block_order": [
+        "custom_liquid_7p3eAr",
         "yotpo_product_reviews_star_rating_fJzwXp",
         "title",
         "price",
