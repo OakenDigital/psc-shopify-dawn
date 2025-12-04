@@ -180,9 +180,9 @@
       "settings": {
         "metafield_namespace": "custom",
         "metafield_key": "this_item_may_take_up_to_3_business_days_to_ship",
-        "heading": "This item may take up to 3 business days to ship.",
+        "heading": "This part typically ships within 3 business days.",
         "heading_size": "h3",
-        "content": "<p>This item may take up to 3 business days to ship.</p>",
+        "content": "<p>This part typically ships within 3 business days.</p>",
         "full_width": false,
         "color_scheme": "",
         "padding_top": 36,
