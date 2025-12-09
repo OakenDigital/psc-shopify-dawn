@@ -282,7 +282,7 @@ if (!customElements.get('product-registration-form')) {
         }
 
         // Submit to Forms app API
-        const response = await fetch('https://forms.shopifyapps.com/api/form-submissions', {
+        const response = await fetch('https://forms.shopifyapps.com/', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
