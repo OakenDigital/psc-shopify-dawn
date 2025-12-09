@@ -16,6 +16,7 @@
         "heading": "Register Your Product",
         "heading_size": "h1",
         "description": "<p>Register your product to activate warranty coverage and receive important product updates.</p>",
+        "webhook_url": "https://script.google.com/macros/s/AKfycbz-yFp3mfJ5vrYRBnzEWki1QzdaodBe352KUwOInOKYrGZP8ByCCQFmr_B3OwPvWj6n/exec?gid=0",
         "show_order_number": true,
         "order_number_label": "Order Number",
         "order_number_placeholder": "Enter your order number",
