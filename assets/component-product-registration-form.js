@@ -185,6 +185,9 @@ if (!customElements.get('product-registration-form')) {
       }
 
       async submitToWebhook(webhookUrl) {
+        // Check if this is a Google Apps Script URL
+        const isGoogleAppsScript = webhookUrl.includes('script.google.com');
+
         // Collect all form data
         const formData = new FormData(this.form);
         const submissionData = {};
@@ -222,14 +225,72 @@ if (!customElements.get('product-registration-form')) {
         submissionData.form_type = 'product_registration';
         submissionData.page_url = window.location.href;
 
-        // Submit to webhook
-        const response = await fetch(webhookUrl, {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify(submissionData),
-        });
+        let response;
+
+        if (isGoogleAppsScript) {
+          // Google Apps Script works better with URL-encoded form data
+          // Use URLSearchParams to create form-encoded data
+          const params = new URLSearchParams();
+          for (const [key, value] of Object.entries(submissionData)) {
+            if (value !== null && value !== undefined && value !== '') {
+              params.append(key, value);
+            }
+          }
+
+          // Submit as form data (no CORS preflight for simple form submissions)
+          response = await fetch(webhookUrl, {
+            method: 'POST',
+            mode: 'no-cors', // Google Apps Script handles CORS, but no-cors prevents reading response
+            headers: {
+              'Content-Type': 'application/x-www-form-urlencoded',
+            },
+            body: params.toString(),
+          });
+
+          // With no-cors mode, we can't read the response, so assume success
+          // Redirect to success page
+          const successUrl = new URL(window.location.href);
+          successUrl.searchParams.set('form_status', 'success');
+          window.location.href = successUrl.toString();
+          return;
+        } else {
+          // For other webhooks, try JSON first, then fallback to form data
+          try {
+            response = await fetch(webhookUrl, {
+              method: 'POST',
+              headers: {
+                'Content-Type': 'application/json',
+              },
+              body: JSON.stringify(submissionData),
+            });
+
+            if (response.ok || response.status === 200 || response.status === 201) {
+              // Redirect to success page
+              const successUrl = new URL(window.location.href);
+              successUrl.searchParams.set('form_status', 'success');
+              window.location.href = successUrl.toString();
+              return;
+            }
+          } catch (jsonError) {
+            console.warn('JSON submission failed, trying form data:', jsonError);
+          }
+
+          // Fallback to form data for other webhooks
+          const params = new URLSearchParams();
+          for (const [key, value] of Object.entries(submissionData)) {
+            if (value !== null && value !== undefined && value !== '') {
+              params.append(key, value);
+            }
+          }
+
+          response = await fetch(webhookUrl, {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/x-www-form-urlencoded',
+            },
+            body: params.toString(),
+          });
+        }
 
         if (response.ok || response.status === 200 || response.status === 201) {
           // Redirect to success page
