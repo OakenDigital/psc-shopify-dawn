@@ -49,16 +49,22 @@
       data-validate-order="{{ section.settings.validate_order_number }}"
       data-validate-serial="{{ section.settings.validate_serial_number }}"
       data-serial-pattern="{{ section.settings.serial_number_pattern }}"
+      data-use-forms-app="{{ section.settings.use_forms_app }}"
+      data-forms-app-form-id="{{ section.settings.forms_app_form_id }}"
+      data-shop-domain="{{ shop.permanent_domain }}"
     >
       {%- form 'contact', id: 'ProductRegistrationForm', class: registration_form_class -%}
         <input type="hidden" name="contact[tags]" value="product_registration">
-        {%- if section.settings.use_forms_app and section.settings.forms_app_form_id != blank -%}
-          {%- comment -%} Shopify Forms app integration {%- endcomment -%}
-          <input type="hidden" name="form_type" value="contact">
-          <input type="hidden" name="form_id" value="{{ section.settings.forms_app_form_id }}">
-        {%- endif -%}
+        {%- comment -%}
+          IMPORTANT: Shopify Forms app doesn't support custom form submissions.
+          To store submissions, set up a webhook:
+          1. Go to Settings > Notifications > Webhooks
+          2. Create webhook for "Contact form submission"
+          3. Point to Zapier, Make.com, Google Sheets, or your server
+          See FORMS_APP_TROUBLESHOOTING.md for detailed instructions.
+        {%- endcomment -%}
 
-        {%- if form.posted_successfully? -%}
+        {%- if form.posted_successfully? or request.get.parameter.form_status == 'success' -%}
           <div class="form-status form-status-list form__message" tabindex="-1" autofocus>
             <span class="svg-wrapper">
               {{- 'icon-success.svg' | inline_asset_content -}}

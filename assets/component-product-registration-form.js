@@ -167,28 +167,167 @@ if (!customElements.get('product-registration-form')) {
         // Show loading state
         this.setLoadingState(true);
 
-        // Submit form
-        try {
-          const formData = new FormData(this.form);
-          const response = await fetch(this.form.action, {
-            method: 'POST',
-            body: formData,
-            headers: {
-              'X-Requested-With': 'XMLHttpRequest',
-            },
-          });
+        // Check if Forms app is enabled
+        const useFormsApp = this.dataset.useFormsApp === 'true';
+        const formsAppFormId = this.dataset.formsAppFormId;
 
-          if (response.ok) {
-            // Form will reload with success message from Shopify
-            // No need to handle here as Shopify handles it
+        try {
+          if (useFormsApp && formsAppFormId) {
+            // Submit to Forms app API
+            await this.submitToFormsApp(formsAppFormId);
           } else {
-            throw new Error('Form submission failed');
+            // Submit via standard contact form
+            await this.submitToContactForm();
           }
         } catch (error) {
           console.error('Error submitting form:', error);
           this.setLoadingState(false);
-          // Shopify will show error message on page reload
+          alert('There was an error submitting your registration. Please try again or contact support.');
         }
+      }
+
+      async submitToContactForm() {
+        const formData = new FormData(this.form);
+        const response = await fetch(this.form.action, {
+          method: 'POST',
+          body: formData,
+          headers: {
+            'X-Requested-With': 'XMLHttpRequest',
+          },
+        });
+
+        if (response.ok) {
+          window.location.reload();
+        } else {
+          throw new Error('Form submission failed');
+        }
+      }
+
+      async submitToFormsApp(formInstanceId) {
+        // Get shop domain from data attribute or fallback methods
+        const shopDomain = this.dataset.shopDomain || window.Shopify?.shop || this.getShopDomainFromUrl();
+
+        // Collect form data and map to Forms app format
+        const formData = new FormData(this.form);
+        const submissionData = {
+          shopify_domain: shopDomain,
+          form_instance_id: parseInt(formInstanceId),
+          customer_consented_to_email_marketing: false,
+          customer_consented_to_sms_marketing: false,
+        };
+
+        // Map form fields to Forms app format
+        for (const [key, value] of formData.entries()) {
+          if (key === 'contact[email]') {
+            submissionData.email = value;
+          } else if (key === 'contact[First Name]') {
+            submissionData.first_name = value;
+          } else if (key === 'contact[Last Name]') {
+            submissionData.last_name = value;
+          } else if (key === 'contact[Phone]') {
+            submissionData.phone_number = value;
+          } else if (key === 'contact[Order Number]') {
+            submissionData['custom#order_number'] = value;
+          } else if (key === 'contact[Product]' || key === 'contact[Product Other]') {
+            submissionData['custom#product'] = value;
+          } else if (key === 'contact[Serial Number]') {
+            submissionData['custom#serial_number'] = value;
+          } else if (key === 'contact[Purchase Date]') {
+            submissionData['custom#purchase_date'] = value;
+          } else if (key === 'contact[Address Line 1]') {
+            submissionData['custom#address_line_1'] = value;
+          } else if (key === 'contact[Address Line 2]') {
+            submissionData['custom#address_line_2'] = value;
+          } else if (key === 'contact[City]') {
+            submissionData['custom#city'] = value;
+          } else if (key === 'contact[State/Province]') {
+            submissionData['custom#state'] = value;
+          } else if (key === 'contact[ZIP/Postal Code]') {
+            submissionData['custom#zippostal_code'] = value;
+          } else if (key === 'contact[Country]') {
+            submissionData['custom#country'] = value;
+          } else if (key === 'contact[Additional Notes]') {
+            submissionData['custom#additional_notes'] = value;
+          }
+        }
+
+        // Handle product selection (custom dropdown vs text input)
+        const productSelectInput = this.querySelector('[data-product-select]');
+        if (productSelectInput) {
+          // Check if it's the hidden input (custom dropdown) or regular input
+          if (productSelectInput.type === 'hidden') {
+            // Custom dropdown - get value from hidden input
+            if (productSelectInput.value && productSelectInput.value !== 'other' && productSelectInput.value !== '') {
+              submissionData['custom#product'] = productSelectInput.value;
+            } else if (productSelectInput.value === 'other') {
+              const productOther = this.querySelector('[data-product-other-input]');
+              if (productOther && productOther.value) {
+                submissionData['custom#product'] = productOther.value;
+              }
+            }
+          } else {
+            // Regular text input
+            if (productSelectInput.value) {
+              submissionData['custom#product'] = productSelectInput.value;
+            }
+          }
+        }
+
+        // Also check for product in formData (fallback)
+        if (!submissionData['custom#product']) {
+          const productFromForm = formData.get('contact[Product]') || formData.get('contact[Product Other]');
+          if (productFromForm) {
+            submissionData['custom#product'] = productFromForm;
+          }
+        }
+
+        // Submit to Forms app API
+        const response = await fetch('https://forms.shopifyapps.com/api/form-submissions', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            Accept: 'application/json',
+          },
+          body: JSON.stringify(submissionData),
+        });
+
+        if (response.ok) {
+          const result = await response.json().catch(() => ({}));
+          // Redirect to success page or show success message
+          const successUrl = new URL(window.location.href);
+          successUrl.searchParams.set('form_status', 'success');
+          if (result.id) {
+            successUrl.searchParams.set('submission_id', result.id);
+          }
+          window.location.href = successUrl.toString();
+        } else {
+          const errorData = await response.json().catch(() => ({}));
+          console.error('Forms app submission error:', errorData);
+          console.error('Response status:', response.status, response.statusText);
+
+          // Fallback to contact form if Forms app fails
+          console.warn('Forms app submission failed, falling back to contact form');
+          await this.submitToContactForm();
+        }
+      }
+
+      getShopDomainFromUrl() {
+        // Extract shop domain from current URL
+        const hostname = window.location.hostname;
+        if (hostname.includes('.myshopify.com')) {
+          return hostname;
+        }
+        // Try to get from Shopify global object
+        if (window.Shopify?.shop) {
+          return window.Shopify.shop + '.myshopify.com';
+        }
+        // Fallback: try to extract from meta tags or other sources
+        const shopMeta = document.querySelector('meta[name="shopify-checkout-api-token"]');
+        if (shopMeta) {
+          // Extract shop from various sources
+          return hostname; // Best guess
+        }
+        return hostname;
       }
 
       setLoadingState(loading) {
