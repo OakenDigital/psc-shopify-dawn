@@ -154,7 +154,7 @@
                   data-select-button
                 >
                   <span class="product-registration__select-text" data-select-text>
-                    {{ section.settings.product_placeholder | default: 'Select a product' }}
+                    {{ section.settings.product_placeholder | default: '' }}
                   </span>
                   <span class="product-registration__select-arrow">
                     <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -172,10 +172,10 @@
                     class="product-registration__select-option"
                     role="option"
                     data-option-value=""
-                    data-option-text="{{ section.settings.product_placeholder | default: 'Select a product' }}"
+                    data-option-text="{{ section.settings.product_placeholder | default: '' }}"
                   >
                     <span class="product-registration__option-text">
-                      {{ section.settings.product_placeholder | default: 'Select a product' }}
+                      {{ section.settings.product_placeholder | default: '' }}
                     </span>
                   </li>
                   {%- if selected_collection.products.size > 0 -%}
