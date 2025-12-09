@@ -62,7 +62,8 @@
           See PRODUCT_REGISTRATION_SETUP.md for detailed webhook instructions.
         {%- endcomment -%}
 
-        {%- if form.posted_successfully? or request.get.parameter.form_status == 'success' -%}
+        {%- assign form_status = request.get.parameter.form_status -%}
+        {%- if form.posted_successfully? or form_status == 'success' -%}
           <div class="form-status form-status-list form__message" tabindex="-1" autofocus>
             <span class="svg-wrapper">
               {{- 'icon-success.svg' | inline_asset_content -}}

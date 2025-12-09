@@ -16,6 +16,9 @@ if (!customElements.get('product-registration-form')) {
       }
 
       init() {
+        // Check for success parameter in URL and show success message
+        this.checkForSuccessMessage();
+
         // Custom product dropdown handler
         this.initCustomProductSelect();
 
@@ -251,7 +254,7 @@ if (!customElements.get('product-registration-form')) {
             // If we get here without error, assume success
             const successUrl = new URL(window.location.href);
             successUrl.searchParams.set('form_status', 'success');
-            window.location.href = successUrl.toString();
+            window.location.replace(successUrl.toString());
             return;
           } else {
             // For other webhooks, try to read response
@@ -259,7 +262,7 @@ if (!customElements.get('product-registration-form')) {
             if (response.ok || response.status === 200 || response.status === 201) {
               const successUrl = new URL(window.location.href);
               successUrl.searchParams.set('form_status', 'success');
-              window.location.href = successUrl.toString();
+              window.location.replace(successUrl.toString());
               return;
             } else {
               throw new Error(`Webhook submission failed: ${response.status} ${response.statusText}`);
@@ -272,7 +275,7 @@ if (!customElements.get('product-registration-form')) {
             // Assume success for Google Apps Script (data likely sent)
             const successUrl = new URL(window.location.href);
             successUrl.searchParams.set('form_status', 'success');
-            window.location.href = successUrl.toString();
+            window.location.replace(successUrl.toString());
             return;
           }
           throw error;
@@ -293,7 +296,7 @@ if (!customElements.get('product-registration-form')) {
           // Redirect to success page
           const successUrl = new URL(window.location.href);
           successUrl.searchParams.set('form_status', 'success');
-          window.location.href = successUrl.toString();
+          window.location.replace(successUrl.toString());
         } else {
           throw new Error('Form submission failed');
         }
@@ -418,6 +421,25 @@ if (!customElements.get('product-registration-form')) {
           if (productOtherInput) {
             productOtherInput.required = false;
             productOtherInput.value = '';
+          }
+        }
+      }
+
+      checkForSuccessMessage() {
+        // Check URL for success parameter
+        const urlParams = new URLSearchParams(window.location.search);
+        const formStatus = urlParams.get('form_status');
+
+        if (formStatus === 'success') {
+          // Scroll to top to show success message
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+
+          // Focus on success message if it exists
+          const successMessage = this.querySelector('.form-status.form__message');
+          if (successMessage) {
+            setTimeout(() => {
+              successMessage.focus();
+            }, 100);
           }
         }
       }
