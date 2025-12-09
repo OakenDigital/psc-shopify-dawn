@@ -55,14 +55,6 @@
     >
       {%- form 'contact', id: 'ProductRegistrationForm', class: registration_form_class -%}
         <input type="hidden" name="contact[tags]" value="product_registration">
-        {%- comment -%}
-          Form submissions are handled via Shopify's contact form.
-          To store submissions, set up a webhook:
-          1. Go to Settings > Notifications > Webhooks
-          2. Create webhook for "Contact form submission"
-          3. Point to Zapier, Make.com, Google Sheets, or your server
-          See PRODUCT_REGISTRATION_SETUP.md for detailed webhook instructions.
-        {%- endcomment -%}
 
         {%- assign form_status = request.get.parameter.form_status -%}
         {%- if form.posted_successfully? or form_status == 'success' -%}
