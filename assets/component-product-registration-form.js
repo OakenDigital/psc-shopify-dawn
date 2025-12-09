@@ -431,17 +431,73 @@ if (!customElements.get('product-registration-form')) {
         const formStatus = urlParams.get('form_status');
 
         if (formStatus === 'success') {
+          // Check if success message already exists (from Liquid)
+          let successMessage = this.querySelector('.form-status.form__message');
+
+          // If it doesn't exist, create it dynamically
+          if (!successMessage) {
+            successMessage = this.createSuccessMessage();
+            // Insert it before the form fields
+            const formFields = this.querySelector('.product-registration__fields');
+            if (formFields) {
+              formFields.insertAdjacentElement('beforebegin', successMessage);
+            } else {
+              // If no form fields, insert at the beginning of the form
+              this.form.insertBefore(successMessage, this.form.firstChild);
+            }
+          }
+
+          // Make sure it's visible
+          successMessage.style.display = 'block';
+
           // Scroll to top to show success message
           window.scrollTo({ top: 0, behavior: 'smooth' });
 
-          // Focus on success message if it exists
-          const successMessage = this.querySelector('.form-status.form__message');
-          if (successMessage) {
-            setTimeout(() => {
-              successMessage.focus();
-            }, 100);
-          }
+          // Focus on success message
+          setTimeout(() => {
+            successMessage.focus();
+          }, 100);
         }
+      }
+
+      createSuccessMessage() {
+        // Get success message text from section settings or use default
+        const successMessageText =
+          this.dataset.successMessage || 'Thank you! Your product has been registered successfully.';
+        const successDetailsText = this.dataset.successDetails || '';
+
+        const messageDiv = document.createElement('div');
+        messageDiv.className = 'form-status form-status-list form__message';
+        messageDiv.setAttribute('tabindex', '-1');
+        messageDiv.setAttribute('autofocus', '');
+        messageDiv.setAttribute('role', 'status');
+
+        // Try to get the success icon from the page (if it exists from Liquid)
+        let iconSvg = '';
+        const existingIcon = document.querySelector('.svg-wrapper svg');
+        if (existingIcon) {
+          iconSvg = existingIcon.outerHTML;
+        } else {
+          // Fallback: create a simple success checkmark icon
+          iconSvg =
+            '<svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-success" viewBox="0 0 13 13"><path d="M6.5 12.35C9.73087 12.35 12.35 9.73086 12.35 6.5C12.35 3.26913 9.73087 0.65 6.5 0.65C3.26913 0.65 0.65 3.26913 0.65 6.5C0.65 9.73086 3.26913 12.35 6.5 12.35Z" fill="#428445" stroke="white" stroke-width="0.7"/><path d="M5.53229 8.66357L9.25213 4.94373L10.3134 6.00507L5.53229 10.7862L2.95621 8.21012L4.01755 7.14878L5.53229 8.66357Z" fill="white"/></svg>';
+        }
+
+        messageDiv.innerHTML = `
+          <span class="svg-wrapper">
+            ${iconSvg}
+          </span>
+          <h2>${this.escapeHtml(successMessageText)}</h2>
+          ${successDetailsText ? `<p>${this.escapeHtml(successDetailsText)}</p>` : ''}
+        `;
+
+        return messageDiv;
+      }
+
+      escapeHtml(text) {
+        const div = document.createElement('div');
+        div.textContent = text;
+        return div.innerHTML;
       }
     }
   );

@@ -50,6 +50,8 @@
       data-validate-serial="{{ section.settings.validate_serial_number }}"
       data-serial-pattern="{{ section.settings.serial_number_pattern }}"
       data-webhook-url="{{ section.settings.webhook_url }}"
+      data-success-message="{{ section.settings.success_message | default: 'Thank you! Your product has been registered successfully.' | escape }}"
+      data-success-details="{{ section.settings.success_details | escape }}"
     >
       {%- form 'contact', id: 'ProductRegistrationForm', class: registration_form_class -%}
         <input type="hidden" name="contact[tags]" value="product_registration">
