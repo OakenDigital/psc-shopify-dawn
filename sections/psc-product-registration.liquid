@@ -52,6 +52,11 @@
     >
       {%- form 'contact', id: 'ProductRegistrationForm', class: registration_form_class -%}
         <input type="hidden" name="contact[tags]" value="product_registration">
+        {%- if section.settings.use_forms_app and section.settings.forms_app_form_id != blank -%}
+          {%- comment -%} Shopify Forms app integration {%- endcomment -%}
+          <input type="hidden" name="form_type" value="contact">
+          <input type="hidden" name="form_id" value="{{ section.settings.forms_app_form_id }}">
+        {%- endif -%}
 
         {%- if form.posted_successfully? -%}
           <div class="form-status form-status-list form__message" tabindex="-1" autofocus>
@@ -697,6 +702,27 @@
       "id": "description",
       "label": "Description",
       "default": "<p>Register your product to activate warranty coverage and receive important product updates.</p>"
+    },
+    {
+      "type": "header",
+      "content": "Forms App Integration"
+    },
+    {
+      "type": "paragraph",
+      "content": "To store submissions in Shopify admin, install the Shopify Forms app and create a form. Then enter the form ID below. See SHOPIFY_FORMS_APP_SETUP.md for detailed instructions."
+    },
+    {
+      "type": "checkbox",
+      "id": "use_forms_app",
+      "label": "Use Shopify Forms App",
+      "default": false,
+      "info": "Enable to store submissions in Apps > Forms. Requires Shopify Forms app to be installed."
+    },
+    {
+      "type": "text",
+      "id": "forms_app_form_id",
+      "label": "Forms App Form ID",
+      "info": "Enter the form ID from your Shopify Forms app. Find it in Apps > Forms > [Your Form] > Settings"
     },
     {
       "type": "header",
