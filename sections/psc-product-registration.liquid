@@ -1,0 +1,1064 @@
+{{ 'section-product-registration.css' | asset_url | stylesheet_tag }}
+<script src="{{ 'component-product-registration-form.js' | asset_url }}" defer="defer"></script>
+
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+
+  .product-registration-{{ section.id }} .product-registration__heading {
+    color: {{ section.settings.heading_color }};
+  }
+
+  .product-registration-{{ section.id }} .product-registration__description {
+    color: {{ section.settings.description_color }};
+  }
+{%- endstyle -%}
+
+<div class="color-{{ section.settings.color_scheme }} gradient">
+  <div class="product-registration product-registration-{{ section.id }} page-width page-width--narrow section-{{ section.id }}-padding">
+    {%- if section.settings.heading != blank -%}
+      <h2 class="product-registration__heading title title-wrapper--no-top-margin inline-richtext {{ section.settings.heading_size }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
+        {{ section.settings.heading }}
+      </h2>
+    {%- endif -%}
+
+    {%- if section.settings.description != blank -%}
+      <div class="product-registration__description rte{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
+        {{ section.settings.description }}
+      </div>
+    {%- endif -%}
+
+    {%- liquid
+      assign registration_form_class = 'isolate'
+      if settings.animations_reveal_on_scroll
+        assign registration_form_class = 'isolate scroll-trigger animate--slide-in'
+      endif
+    -%}
+
+    <product-registration-form
+      data-section-id="{{ section.id }}"
+      data-validate-order="{{ section.settings.validate_order_number }}"
+      data-validate-serial="{{ section.settings.validate_serial_number }}"
+      data-serial-pattern="{{ section.settings.serial_number_pattern }}"
+    >
+      {%- form 'contact', id: 'ProductRegistrationForm', class: registration_form_class -%}
+        <input type="hidden" name="contact[tags]" value="product_registration">
+
+        {%- if form.posted_successfully? -%}
+          <div class="form-status form-status-list form__message" tabindex="-1" autofocus>
+            <span class="svg-wrapper">
+              {{- 'icon-success.svg' | inline_asset_content -}}
+            </span>
+            <h2>
+              {{
+                section.settings.success_message
+                | default: 'Thank you! Your product has been registered successfully.'
+              }}
+            </h2>
+            {%- if section.settings.show_success_details -%}
+              <p>{{ section.settings.success_details | default: 'We will send you a confirmation email shortly.' }}</p>
+            {%- endif -%}
+          </div>
+        {%- elsif form.errors -%}
+          <div class="form__message">
+            <h2 class="form-status caption-large text-body" role="alert" tabindex="-1" autofocus>
+              <span class="svg-wrapper">
+                {{- 'icon-error.svg' | inline_asset_content -}}
+              </span>
+              {{ 'templates.contact.form.error_heading' | t }}
+            </h2>
+          </div>
+          <ul class="form-status-list caption-large" role="list">
+            {%- for field in form.errors -%}
+              <li>
+                <a href="#ProductRegistrationForm-{{ field }}" class="link">
+                  {{ form.errors.translated_fields[field] | capitalize }}
+                  {{ form.errors.messages[field] }}
+                </a>
+              </li>
+            {%- endfor -%}
+          </ul>
+        {%- endif -%}
+
+        <div class="product-registration__fields">
+          {%- if section.settings.show_order_number -%}
+            <div class="field field--with-error">
+              <input
+                type="text"
+                id="ProductRegistrationForm-order"
+                class="field__input"
+                name="contact[Order Number]"
+                {% if section.settings.order_number_required %}
+                  required
+                {% endif %}
+                placeholder="{{ section.settings.order_number_placeholder | default: 'Order Number' }}"
+                autocomplete="off"
+                data-order-input
+              >
+              <label class="field__label" for="ProductRegistrationForm-order">
+                {{ section.settings.order_number_label | default: 'Order Number' }}
+                {%- if section.settings.order_number_required -%}
+                  <span aria-hidden="true">*</span>
+                {%- endif -%}
+              </label>
+              <small
+                class="product-registration__field-error"
+                id="ProductRegistrationForm-order-error"
+                style="display: none;"
+              >
+                <span class="visually-hidden">{{ 'accessibility.error' | t }}</span>
+                <span class="form__message">
+                  <span class="svg-wrapper">
+                    {{- 'icon-error.svg' | inline_asset_content -}}
+                  </span>
+                  <span data-order-error-text></span>
+                </span>
+              </small>
+            </div>
+          {%- endif -%}
+
+          {%- if section.settings.show_product_selection -%}
+            <div class="field">
+              <select
+                id="ProductRegistrationForm-product"
+                class="field__input"
+                name="contact[Product]"
+                {% if section.settings.product_required %}
+                  required
+                {% endif %}
+                data-product-select
+              >
+                <option value="">{{ section.settings.product_placeholder | default: 'Select a product' }}</option>
+                {%- if section.settings.product_list != blank -%}
+                  {%- assign products = section.settings.product_list | split: ',' -%}
+                  {%- for product_name in products -%}
+                    <option value="{{ product_name | strip }}">{{ product_name | strip }}</option>
+                  {%- endfor -%}
+                {%- endif -%}
+                <option value="other">
+                  {{ section.settings.other_product_label | default: 'Other (specify below)' }}
+                </option>
+              </select>
+              <label class="field__label" for="ProductRegistrationForm-product">
+                {{ section.settings.product_label | default: 'Product' }}
+                {%- if section.settings.product_required -%}
+                  <span aria-hidden="true">*</span>
+                {%- endif -%}
+              </label>
+            </div>
+
+            <div class="field" id="ProductRegistrationForm-product-other" style="display: none;">
+              <input
+                type="text"
+                id="ProductRegistrationForm-product-other-input"
+                class="field__input"
+                name="contact[Product Other]"
+                placeholder="{{ section.settings.other_product_placeholder | default: 'Please specify product name' }}"
+                data-product-other-input
+              >
+              <label class="field__label" for="ProductRegistrationForm-product-other-input">
+                {{ section.settings.other_product_label | default: 'Product Name' }}
+              </label>
+            </div>
+          {%- else -%}
+            <div class="field">
+              <input
+                type="text"
+                id="ProductRegistrationForm-product"
+                class="field__input"
+                name="contact[Product]"
+                {% if section.settings.product_required %}
+                  required
+                {% endif %}
+                placeholder="{{ section.settings.product_placeholder | default: 'Product Name' }}"
+                autocomplete="off"
+              >
+              <label class="field__label" for="ProductRegistrationForm-product">
+                {{ section.settings.product_label | default: 'Product Name' }}
+                {%- if section.settings.product_required -%}
+                  <span aria-hidden="true">*</span>
+                {%- endif -%}
+              </label>
+            </div>
+          {%- endif -%}
+
+          {%- if section.settings.show_serial_number -%}
+            <div class="field field--with-error">
+              <input
+                type="text"
+                id="ProductRegistrationForm-serial"
+                class="field__input"
+                name="contact[Serial Number]"
+                {% if section.settings.serial_number_required %}
+                  required
+                {% endif %}
+                placeholder="{{ section.settings.serial_number_placeholder | default: 'Serial Number' }}"
+                autocomplete="off"
+                data-serial-input
+              >
+              <label class="field__label" for="ProductRegistrationForm-serial">
+                {{ section.settings.serial_number_label | default: 'Serial Number' }}
+                {%- if section.settings.serial_number_required -%}
+                  <span aria-hidden="true">*</span>
+                {%- endif -%}
+              </label>
+              <small
+                class="product-registration__field-error"
+                id="ProductRegistrationForm-serial-error"
+                style="display: none;"
+              >
+                <span class="visually-hidden">{{ 'accessibility.error' | t }}</span>
+                <span class="form__message">
+                  <span class="svg-wrapper">
+                    {{- 'icon-error.svg' | inline_asset_content -}}
+                  </span>
+                  <span data-serial-error-text></span>
+                </span>
+              </small>
+            </div>
+          {%- endif -%}
+
+          {%- if section.settings.show_purchase_date -%}
+            <div class="field">
+              <input
+                type="date"
+                id="ProductRegistrationForm-date"
+                class="field__input"
+                name="contact[Purchase Date]"
+                {% if section.settings.purchase_date_required %}
+                  required
+                {% endif %}
+                max="{{ 'now' | date: '%Y-%m-%d' }}"
+                value="{% if form.date %}{{ form.date }}{% endif %}"
+              >
+              <label class="field__label" for="ProductRegistrationForm-date">
+                {{ section.settings.purchase_date_label | default: 'Purchase Date' }}
+                {%- if section.settings.purchase_date_required -%}
+                  <span aria-hidden="true">*</span>
+                {%- endif -%}
+              </label>
+            </div>
+          {%- endif -%}
+
+          <div class="product-registration__customer-info">
+            <h3 class="product-registration__section-title">
+              {{ section.settings.customer_info_title | default: 'Your Information' }}
+            </h3>
+
+            <div class="product-registration__fields-row">
+              <div class="field">
+                <input
+                  class="field__input"
+                  autocomplete="given-name"
+                  type="text"
+                  id="ProductRegistrationForm-first-name"
+                  name="contact[First Name]"
+                  value="{% if form.first_name %}{{ form.first_name }}{% elsif customer %}{{ customer.first_name }}{% endif %}"
+                  placeholder="{{ section.settings.first_name_placeholder | default: 'First Name' }}"
+                  {% if section.settings.first_name_required %}
+                    required
+                  {% endif %}
+                >
+                <label class="field__label" for="ProductRegistrationForm-first-name">
+                  {{ section.settings.first_name_label | default: 'First Name' }}
+                  {%- if section.settings.first_name_required -%}
+                    <span aria-hidden="true">*</span>
+                  {%- endif -%}
+                </label>
+              </div>
+
+              <div class="field">
+                <input
+                  class="field__input"
+                  autocomplete="family-name"
+                  type="text"
+                  id="ProductRegistrationForm-last-name"
+                  name="contact[Last Name]"
+                  value="{% if form.last_name %}{{ form.last_name }}{% elsif customer %}{{ customer.last_name }}{% endif %}"
+                  placeholder="{{ section.settings.last_name_placeholder | default: 'Last Name' }}"
+                  {% if section.settings.last_name_required %}
+                    required
+                  {% endif %}
+                >
+                <label class="field__label" for="ProductRegistrationForm-last-name">
+                  {{ section.settings.last_name_label | default: 'Last Name' }}
+                  {%- if section.settings.last_name_required -%}
+                    <span aria-hidden="true">*</span>
+                  {%- endif -%}
+                </label>
+              </div>
+            </div>
+
+            <div class="field field--with-error">
+              <input
+                autocomplete="email"
+                type="email"
+                id="ProductRegistrationForm-email"
+                class="field__input"
+                name="contact[email]"
+                spellcheck="false"
+                autocapitalize="off"
+                value="{% if form.email %}{{ form.email }}{% elsif customer %}{{ customer.email }}{% endif %}"
+                aria-required="true"
+                {% if form.errors contains 'email' %}
+                  aria-invalid="true"
+                  aria-describedby="ProductRegistrationForm-email-error"
+                {% endif %}
+                placeholder="{{ section.settings.email_placeholder | default: 'Email' }}"
+                required
+              >
+              <label class="field__label" for="ProductRegistrationForm-email">
+                {{ section.settings.email_label | default: 'Email' }}
+                <span aria-hidden="true">*</span>
+              </label>
+              {%- if form.errors contains 'email' -%}
+                <small class="product-registration__field-error" id="ProductRegistrationForm-email-error">
+                  <span class="visually-hidden">{{ 'accessibility.error' | t }}</span>
+                  <span class="form__message">
+                    <span class="svg-wrapper">
+                      {{- 'icon-error.svg' | inline_asset_content -}}
+                    </span>
+                    {{- form.errors.translated_fields.email | capitalize }}
+                    {{ form.errors.messages.email -}}
+                  </span>
+                </small>
+              {%- endif -%}
+            </div>
+
+            {%- if section.settings.show_phone -%}
+              <div class="field">
+                <input
+                  type="tel"
+                  id="ProductRegistrationForm-phone"
+                  class="field__input"
+                  autocomplete="tel"
+                  name="contact[Phone]"
+                  pattern="[0-9\-]*"
+                  value="{% if form.phone %}{{ form.phone }}{% elsif customer %}{{ customer.phone }}{% endif %}"
+                  placeholder="{{ section.settings.phone_placeholder | default: 'Phone Number' }}"
+                  {% if section.settings.phone_required %}
+                    required
+                  {% endif %}
+                >
+                <label class="field__label" for="ProductRegistrationForm-phone">
+                  {{ section.settings.phone_label | default: 'Phone Number' }}
+                  {%- if section.settings.phone_required -%}
+                    <span aria-hidden="true">*</span>
+                  {%- endif -%}
+                </label>
+              </div>
+            {%- endif -%}
+          </div>
+
+          {%- if section.settings.show_address -%}
+            <div class="product-registration__address-info">
+              <h3 class="product-registration__section-title">
+                {{ section.settings.address_title | default: 'Address (Optional)' }}
+              </h3>
+
+              <div class="field">
+                <input
+                  type="text"
+                  id="ProductRegistrationForm-address1"
+                  class="field__input"
+                  autocomplete="street-address"
+                  name="contact[Address Line 1]"
+                  placeholder="{{ section.settings.address1_placeholder | default: 'Address Line 1' }}"
+                >
+                <label class="field__label" for="ProductRegistrationForm-address1">
+                  {{ section.settings.address1_label | default: 'Address Line 1' }}
+                </label>
+              </div>
+
+              <div class="field">
+                <input
+                  type="text"
+                  id="ProductRegistrationForm-address2"
+                  class="field__input"
+                  autocomplete="address-line2"
+                  name="contact[Address Line 2]"
+                  placeholder="{{ section.settings.address2_placeholder | default: 'Address Line 2' }}"
+                >
+                <label class="field__label" for="ProductRegistrationForm-address2">
+                  {{ section.settings.address2_label | default: 'Address Line 2' }}
+                </label>
+              </div>
+
+              <div class="product-registration__fields-row">
+                <div class="field">
+                  <input
+                    type="text"
+                    id="ProductRegistrationForm-city"
+                    class="field__input"
+                    autocomplete="address-level2"
+                    name="contact[City]"
+                    placeholder="{{ section.settings.city_placeholder | default: 'City' }}"
+                  >
+                  <label class="field__label" for="ProductRegistrationForm-city">
+                    {{ section.settings.city_label | default: 'City' }}
+                  </label>
+                </div>
+
+                <div class="field">
+                  <input
+                    type="text"
+                    id="ProductRegistrationForm-province"
+                    class="field__input"
+                    autocomplete="address-level1"
+                    name="contact[State/Province]"
+                    placeholder="{{ section.settings.province_placeholder | default: 'State/Province' }}"
+                  >
+                  <label class="field__label" for="ProductRegistrationForm-province">
+                    {{ section.settings.province_label | default: 'State/Province' }}
+                  </label>
+                </div>
+              </div>
+
+              <div class="product-registration__fields-row">
+                <div class="field">
+                  <input
+                    type="text"
+                    id="ProductRegistrationForm-zip"
+                    class="field__input"
+                    autocomplete="postal-code"
+                    name="contact[ZIP/Postal Code]"
+                    placeholder="{{ section.settings.zip_placeholder | default: 'ZIP/Postal Code' }}"
+                  >
+                  <label class="field__label" for="ProductRegistrationForm-zip">
+                    {{ section.settings.zip_label | default: 'ZIP/Postal Code' }}
+                  </label>
+                </div>
+
+                <div class="field">
+                  <select
+                    id="ProductRegistrationForm-country"
+                    class="field__input"
+                    name="contact[Country]"
+                    autocomplete="country"
+                  >
+                    <option value="">{{ section.settings.country_placeholder | default: 'Select Country' }}</option>
+                    <option value="US">United States</option>
+                    <option value="CA">Canada</option>
+                    <option value="GB">United Kingdom</option>
+                    <option value="AU">Australia</option>
+                    <option value="DE">Germany</option>
+                    <option value="FR">France</option>
+                    <option value="IT">Italy</option>
+                    <option value="ES">Spain</option>
+                    <option value="NL">Netherlands</option>
+                    <option value="BE">Belgium</option>
+                    <option value="CH">Switzerland</option>
+                    <option value="AT">Austria</option>
+                    <option value="SE">Sweden</option>
+                    <option value="NO">Norway</option>
+                    <option value="DK">Denmark</option>
+                    <option value="FI">Finland</option>
+                    <option value="PL">Poland</option>
+                    <option value="IE">Ireland</option>
+                    <option value="PT">Portugal</option>
+                    <option value="GR">Greece</option>
+                    <option value="CZ">Czech Republic</option>
+                    <option value="HU">Hungary</option>
+                    <option value="RO">Romania</option>
+                    <option value="BG">Bulgaria</option>
+                    <option value="HR">Croatia</option>
+                    <option value="SK">Slovakia</option>
+                    <option value="SI">Slovenia</option>
+                    <option value="EE">Estonia</option>
+                    <option value="LV">Latvia</option>
+                    <option value="LT">Lithuania</option>
+                    <option value="LU">Luxembourg</option>
+                    <option value="MT">Malta</option>
+                    <option value="CY">Cyprus</option>
+                    <option value="IS">Iceland</option>
+                    <option value="LI">Liechtenstein</option>
+                    <option value="MC">Monaco</option>
+                    <option value="SM">San Marino</option>
+                    <option value="VA">Vatican City</option>
+                    <option value="AD">Andorra</option>
+                    <option value="MX">Mexico</option>
+                    <option value="BR">Brazil</option>
+                    <option value="AR">Argentina</option>
+                    <option value="CL">Chile</option>
+                    <option value="CO">Colombia</option>
+                    <option value="PE">Peru</option>
+                    <option value="VE">Venezuela</option>
+                    <option value="EC">Ecuador</option>
+                    <option value="BO">Bolivia</option>
+                    <option value="PY">Paraguay</option>
+                    <option value="UY">Uruguay</option>
+                    <option value="GY">Guyana</option>
+                    <option value="SR">Suriname</option>
+                    <option value="GF">French Guiana</option>
+                    <option value="FK">Falkland Islands</option>
+                    <option value="JP">Japan</option>
+                    <option value="CN">China</option>
+                    <option value="IN">India</option>
+                    <option value="KR">South Korea</option>
+                    <option value="SG">Singapore</option>
+                    <option value="MY">Malaysia</option>
+                    <option value="TH">Thailand</option>
+                    <option value="ID">Indonesia</option>
+                    <option value="PH">Philippines</option>
+                    <option value="VN">Vietnam</option>
+                    <option value="TW">Taiwan</option>
+                    <option value="HK">Hong Kong</option>
+                    <option value="MO">Macau</option>
+                    <option value="NZ">New Zealand</option>
+                    <option value="ZA">South Africa</option>
+                    <option value="EG">Egypt</option>
+                    <option value="AE">United Arab Emirates</option>
+                    <option value="SA">Saudi Arabia</option>
+                    <option value="IL">Israel</option>
+                    <option value="TR">Turkey</option>
+                    <option value="RU">Russia</option>
+                    <option value="UA">Ukraine</option>
+                    <option value="BY">Belarus</option>
+                    <option value="KZ">Kazakhstan</option>
+                    <option value="UZ">Uzbekistan</option>
+                    <option value="Other">Other</option>
+                  </select>
+                  <label class="field__label" for="ProductRegistrationForm-country">
+                    {{ section.settings.country_label | default: 'Country' }}
+                  </label>
+                </div>
+              </div>
+            </div>
+          {%- endif -%}
+
+          {%- if section.settings.show_notes -%}
+            <div class="field">
+              <textarea
+                rows="5"
+                id="ProductRegistrationForm-notes"
+                class="text-area field__input"
+                name="contact[Additional Notes]"
+                placeholder="{{ section.settings.notes_placeholder | default: 'Additional notes or comments (optional)' }}"
+              >{{- form.notes -}}</textarea>
+              <label class="form__label field__label" for="ProductRegistrationForm-notes">
+                {{ section.settings.notes_label | default: 'Additional Notes' }}
+              </label>
+            </div>
+          {%- endif -%}
+
+          {%- if section.settings.show_warranty_info -%}
+            <div class="product-registration__warranty-info">
+              <p class="product-registration__warranty-text">
+                {{
+                  section.settings.warranty_text
+                  | default: 'By registering your product, you may be eligible for warranty coverage. Please review our warranty terms for more information.'
+                }}
+              </p>
+            </div>
+          {%- endif -%}
+
+          <div class="product-registration__button">
+            <button type="submit" class="button" data-submit-button>
+              <span data-button-text>{{ section.settings.button_text | default: 'Register Product' }}</span>
+              <span data-button-loading style="display: none;">
+                {{- section.settings.button_loading_text | default: 'Registering...' -}}
+              </span>
+            </button>
+          </div>
+        </div>
+      {%- endform -%}
+    </product-registration-form>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "PSC Product Registration",
+  "tag": "section",
+  "class": "section",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "header",
+      "content": "Content"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "heading",
+      "default": "Register Your Product",
+      "label": "Heading"
+    },
+    {
+      "type": "select",
+      "id": "heading_size",
+      "options": [
+        {
+          "value": "h2",
+          "label": "Small"
+        },
+        {
+          "value": "h1",
+          "label": "Medium"
+        },
+        {
+          "value": "h0",
+          "label": "Large"
+        }
+      ],
+      "default": "h1",
+      "label": "Heading Size"
+    },
+    {
+      "type": "richtext",
+      "id": "description",
+      "label": "Description",
+      "default": "<p>Register your product to activate warranty coverage and receive important product updates.</p>"
+    },
+    {
+      "type": "header",
+      "content": "Order Information"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_order_number",
+      "label": "Show Order Number Field",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "order_number_label",
+      "label": "Order Number Label",
+      "default": "Order Number"
+    },
+    {
+      "type": "text",
+      "id": "order_number_placeholder",
+      "label": "Order Number Placeholder",
+      "default": "Enter your order number"
+    },
+    {
+      "type": "checkbox",
+      "id": "order_number_required",
+      "label": "Order Number Required",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "validate_order_number",
+      "label": "Validate Order Number Format",
+      "default": false,
+      "info": "Validates order number format (alphanumeric, 6-20 characters)"
+    },
+    {
+      "type": "header",
+      "content": "Product Information"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_product_selection",
+      "label": "Use Product Dropdown",
+      "default": true,
+      "info": "If enabled, shows dropdown. If disabled, shows text input."
+    },
+    {
+      "type": "text",
+      "id": "product_label",
+      "label": "Product Label",
+      "default": "Product"
+    },
+    {
+      "type": "text",
+      "id": "product_placeholder",
+      "label": "Product Placeholder",
+      "default": "Select a product"
+    },
+    {
+      "type": "textarea",
+      "id": "product_list",
+      "label": "Product List",
+      "info": "Enter products separated by commas (e.g., Product A, Product B, Product C)"
+    },
+    {
+      "type": "text",
+      "id": "other_product_label",
+      "label": "Other Product Option Label",
+      "default": "Other (specify below)"
+    },
+    {
+      "type": "text",
+      "id": "other_product_placeholder",
+      "label": "Other Product Placeholder",
+      "default": "Please specify product name"
+    },
+    {
+      "type": "checkbox",
+      "id": "product_required",
+      "label": "Product Required",
+      "default": true
+    },
+    {
+      "type": "header",
+      "content": "Serial Number"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_serial_number",
+      "label": "Show Serial Number Field",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "serial_number_label",
+      "label": "Serial Number Label",
+      "default": "Serial Number"
+    },
+    {
+      "type": "text",
+      "id": "serial_number_placeholder",
+      "label": "Serial Number Placeholder",
+      "default": "Enter serial number"
+    },
+    {
+      "type": "checkbox",
+      "id": "serial_number_required",
+      "label": "Serial Number Required",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "validate_serial_number",
+      "label": "Validate Serial Number Format",
+      "default": false,
+      "info": "Validates serial number format"
+    },
+    {
+      "type": "text",
+      "id": "serial_number_pattern",
+      "label": "Serial Number Pattern (Regex)",
+      "default": "^[A-Z0-9]{6,20}$",
+      "info": "Regex pattern for serial number validation (e.g., ^[A-Z0-9]{6,20}$)"
+    },
+    {
+      "type": "header",
+      "content": "Purchase Date"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_purchase_date",
+      "label": "Show Purchase Date Field",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "purchase_date_label",
+      "label": "Purchase Date Label",
+      "default": "Purchase Date"
+    },
+    {
+      "type": "checkbox",
+      "id": "purchase_date_required",
+      "label": "Purchase Date Required",
+      "default": false
+    },
+    {
+      "type": "header",
+      "content": "Customer Information"
+    },
+    {
+      "type": "text",
+      "id": "customer_info_title",
+      "label": "Customer Info Section Title",
+      "default": "Your Information"
+    },
+    {
+      "type": "text",
+      "id": "first_name_label",
+      "label": "First Name Label",
+      "default": "First Name"
+    },
+    {
+      "type": "text",
+      "id": "first_name_placeholder",
+      "label": "First Name Placeholder",
+      "default": "First Name"
+    },
+    {
+      "type": "checkbox",
+      "id": "first_name_required",
+      "label": "First Name Required",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "last_name_label",
+      "label": "Last Name Label",
+      "default": "Last Name"
+    },
+    {
+      "type": "text",
+      "id": "last_name_placeholder",
+      "label": "Last Name Placeholder",
+      "default": "Last Name"
+    },
+    {
+      "type": "checkbox",
+      "id": "last_name_required",
+      "label": "Last Name Required",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "email_label",
+      "label": "Email Label",
+      "default": "Email"
+    },
+    {
+      "type": "text",
+      "id": "email_placeholder",
+      "label": "Email Placeholder",
+      "default": "Email"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_phone",
+      "label": "Show Phone Field",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "phone_label",
+      "label": "Phone Label",
+      "default": "Phone Number"
+    },
+    {
+      "type": "text",
+      "id": "phone_placeholder",
+      "label": "Phone Placeholder",
+      "default": "Phone Number"
+    },
+    {
+      "type": "checkbox",
+      "id": "phone_required",
+      "label": "Phone Required",
+      "default": false
+    },
+    {
+      "type": "header",
+      "content": "Address Information"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_address",
+      "label": "Show Address Fields",
+      "default": false
+    },
+    {
+      "type": "text",
+      "id": "address_title",
+      "label": "Address Section Title",
+      "default": "Address (Optional)"
+    },
+    {
+      "type": "text",
+      "id": "address1_label",
+      "label": "Address Line 1 Label",
+      "default": "Address Line 1"
+    },
+    {
+      "type": "text",
+      "id": "address1_placeholder",
+      "label": "Address Line 1 Placeholder",
+      "default": "Address Line 1"
+    },
+    {
+      "type": "text",
+      "id": "address2_label",
+      "label": "Address Line 2 Label",
+      "default": "Address Line 2"
+    },
+    {
+      "type": "text",
+      "id": "address2_placeholder",
+      "label": "Address Line 2 Placeholder",
+      "default": "Address Line 2"
+    },
+    {
+      "type": "text",
+      "id": "city_label",
+      "label": "City Label",
+      "default": "City"
+    },
+    {
+      "type": "text",
+      "id": "city_placeholder",
+      "label": "City Placeholder",
+      "default": "City"
+    },
+    {
+      "type": "text",
+      "id": "province_label",
+      "label": "State/Province Label",
+      "default": "State/Province"
+    },
+    {
+      "type": "text",
+      "id": "province_placeholder",
+      "label": "State/Province Placeholder",
+      "default": "State/Province"
+    },
+    {
+      "type": "text",
+      "id": "zip_label",
+      "label": "ZIP/Postal Code Label",
+      "default": "ZIP/Postal Code"
+    },
+    {
+      "type": "text",
+      "id": "zip_placeholder",
+      "label": "ZIP/Postal Code Placeholder",
+      "default": "ZIP/Postal Code"
+    },
+    {
+      "type": "text",
+      "id": "country_label",
+      "label": "Country Label",
+      "default": "Country"
+    },
+    {
+      "type": "text",
+      "id": "country_placeholder",
+      "label": "Country Placeholder",
+      "default": "Select Country"
+    },
+    {
+      "type": "header",
+      "content": "Additional Options"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_notes",
+      "label": "Show Notes Field",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "notes_label",
+      "label": "Notes Label",
+      "default": "Additional Notes"
+    },
+    {
+      "type": "text",
+      "id": "notes_placeholder",
+      "label": "Notes Placeholder",
+      "default": "Additional notes or comments (optional)"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_warranty_info",
+      "label": "Show Warranty Information",
+      "default": true
+    },
+    {
+      "type": "richtext",
+      "id": "warranty_text",
+      "label": "Warranty Text",
+      "default": "<p>By registering your product, you may be eligible for warranty coverage. Please review our warranty terms for more information.</p>"
+    },
+    {
+      "type": "header",
+      "content": "Success Message"
+    },
+    {
+      "type": "text",
+      "id": "success_message",
+      "label": "Success Message",
+      "default": "Thank you! Your product has been registered successfully."
+    },
+    {
+      "type": "checkbox",
+      "id": "show_success_details",
+      "label": "Show Success Details",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "success_details",
+      "label": "Success Details",
+      "default": "We will send you a confirmation email shortly."
+    },
+    {
+      "type": "header",
+      "content": "Button"
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Button Text",
+      "default": "Register Product"
+    },
+    {
+      "type": "text",
+      "id": "button_loading_text",
+      "label": "Button Loading Text",
+      "default": "Registering..."
+    },
+    {
+      "type": "header",
+      "content": "Design"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Color Scheme",
+      "default": "scheme-1"
+    },
+    {
+      "type": "color",
+      "id": "heading_color",
+      "label": "Heading Color",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "description_color",
+      "label": "Description Color",
+      "default": "#666666"
+    },
+    {
+      "type": "header",
+      "content": "Spacing"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Top Padding",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Bottom Padding",
+      "default": 36
+    }
+  ],
+  "presets": [
+    {
+      "name": "PSC Product Registration"
+    }
+  ]
+}
+{% endschema %}
