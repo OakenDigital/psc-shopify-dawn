@@ -16,6 +16,8 @@
         "heading": "Register Your Product",
         "heading_size": "h1",
         "description": "<p>Register your product to activate warranty coverage and receive important product updates.</p>",
+        "use_forms_app": true,
+        "forms_app_form_id": "782919",
         "show_order_number": true,
         "order_number_label": "Order Number",
         "order_number_placeholder": "Enter your order number",
