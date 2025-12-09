@@ -472,21 +472,7 @@ if (!customElements.get('product-registration-form')) {
         messageDiv.setAttribute('autofocus', '');
         messageDiv.setAttribute('role', 'status');
 
-        // Try to get the success icon from the page (if it exists from Liquid)
-        let iconSvg = '';
-        const existingIcon = document.querySelector('.svg-wrapper svg');
-        if (existingIcon) {
-          iconSvg = existingIcon.outerHTML;
-        } else {
-          // Fallback: create a simple success checkmark icon
-          iconSvg =
-            '<svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-success" viewBox="0 0 13 13"><path d="M6.5 12.35C9.73087 12.35 12.35 9.73086 12.35 6.5C12.35 3.26913 9.73087 0.65 6.5 0.65C3.26913 0.65 0.65 3.26913 0.65 6.5C0.65 9.73086 3.26913 12.35 6.5 12.35Z" fill="#428445" stroke="white" stroke-width="0.7"/><path d="M5.53229 8.66357L9.25213 4.94373L10.3134 6.00507L5.53229 10.7862L2.95621 8.21012L4.01755 7.14878L5.53229 8.66357Z" fill="white"/></svg>';
-        }
-
         messageDiv.innerHTML = `
-          <span class="svg-wrapper">
-            ${iconSvg}
-          </span>
           <h2>${this.escapeHtml(successMessageText)}</h2>
           ${successDetailsText ? `<p>${this.escapeHtml(successDetailsText)}</p>` : ''}
         `;
