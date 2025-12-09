@@ -138,10 +138,16 @@
                 data-product-select
               >
                 <option value="">{{ section.settings.product_placeholder | default: 'Select a product' }}</option>
-                {%- if section.settings.product_list != blank -%}
-                  {%- assign products = section.settings.product_list | split: ',' -%}
-                  {%- for product_name in products -%}
-                    <option value="{{ product_name | strip }}">{{ product_name | strip }}</option>
+                {%- liquid
+                  if section.settings.product_collection != blank
+                    assign selected_collection = section.settings.product_collection
+                  else
+                    assign selected_collection = collections.all
+                  endif
+                -%}
+                {%- if selected_collection.products.size > 0 -%}
+                  {%- for product in selected_collection.products -%}
+                    <option value="{{ product.title | escape }}">{{ product.title | escape }}</option>
                   {%- endfor -%}
                 {%- endif -%}
                 <option value="other">
@@ -679,10 +685,10 @@
       "default": "Select a product"
     },
     {
-      "type": "textarea",
-      "id": "product_list",
-      "label": "Product List",
-      "info": "Enter products separated by commas (e.g., Product A, Product B, Product C)"
+      "type": "collection",
+      "id": "product_collection",
+      "label": "Product Collection",
+      "info": "Select a collection to show its products. Leave empty to show all products from your store."
     },
     {
       "type": "text",
