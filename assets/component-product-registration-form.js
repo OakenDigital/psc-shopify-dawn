@@ -247,6 +247,16 @@ if (!customElements.get('product-registration-form')) {
               }
             }
 
+            // Update button state for label positioning
+            const selectWrapper = selectButton.closest('[data-product-select-wrapper]');
+            if (value && value !== '') {
+              selectButton.setAttribute('data-has-value', 'true');
+              if (selectWrapper) selectWrapper.setAttribute('data-has-selection', 'true');
+            } else {
+              selectButton.removeAttribute('data-has-value');
+              if (selectWrapper) selectWrapper.removeAttribute('data-has-selection');
+            }
+
             // Update aria-selected
             options.forEach((opt) => opt.setAttribute('aria-selected', 'false'));
             option.setAttribute('aria-selected', 'true');
