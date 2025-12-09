@@ -207,6 +207,30 @@ if (!customElements.get('product-registration-form')) {
         // Get shop domain from data attribute or fallback methods
         const shopDomain = this.dataset.shopDomain || window.Shopify?.shop || this.getShopDomainFromUrl();
 
+        // Get hCaptcha token if available
+        let hCaptchaToken = null;
+        try {
+          // Check for hCaptcha response in hidden input (set by callback)
+          const hcaptchaInput = document.querySelector('#h-captcha-response-input');
+          if (hcaptchaInput && hcaptchaInput.value) {
+            hCaptchaToken = hcaptchaInput.value;
+          }
+          // Also try to get from hCaptcha widget directly
+          if (!hCaptchaToken && window.hcaptcha) {
+            const hcaptchaWidget = document.querySelector('.h-captcha[data-sitekey]');
+            if (hcaptchaWidget) {
+              const widgetId =
+                hcaptchaWidget.getAttribute('data-hcaptcha-widget-id') ||
+                hcaptchaWidget.querySelector('[id^="hcaptcha"]')?.id?.replace('hcaptcha-', '');
+              if (widgetId) {
+                hCaptchaToken = window.hcaptcha.getResponse(widgetId);
+              }
+            }
+          }
+        } catch (e) {
+          console.warn('Could not get hCaptcha token:', e);
+        }
+
         // Collect form data and map to Forms app format
         const formData = new FormData(this.form);
         const submissionData = {
@@ -215,6 +239,11 @@ if (!customElements.get('product-registration-form')) {
           customer_consented_to_email_marketing: false,
           customer_consented_to_sms_marketing: false,
         };
+
+        // Add hCaptcha token if available
+        if (hCaptchaToken) {
+          submissionData.h_captcha_response = hCaptchaToken;
+        }
 
         // Map form fields to Forms app format
         for (const [key, value] of formData.entries()) {
@@ -282,12 +311,17 @@ if (!customElements.get('product-registration-form')) {
         }
 
         // Submit to Forms app API
-        const response = await fetch('https://forms.shopifyapps.com//api/v2/form_submission', {
+        // Include credentials (cookies) which may be required for authentication
+        const response = await fetch('https://forms.shopifyapps.com/api/v2/form_submission', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
             Accept: 'application/json',
+            Origin: window.location.origin,
+            Referer: window.location.href,
           },
+          credentials: 'include', // Include cookies for authentication
+          mode: 'cors',
           body: JSON.stringify(submissionData),
         });
 
@@ -301,12 +335,32 @@ if (!customElements.get('product-registration-form')) {
           }
           window.location.href = successUrl.toString();
         } else {
-          const errorData = await response.json().catch(() => ({}));
+          const errorText = await response.text().catch(() => '');
+          let errorData;
+          try {
+            errorData = JSON.parse(errorText);
+          } catch (e) {
+            errorData = { message: errorText || 'Authentication Failed' };
+          }
+
           console.error('Forms app submission error:', errorData);
           console.error('Response status:', response.status, response.statusText);
+          console.error('Submission data sent:', submissionData);
 
-          // Fallback to contact form if Forms app fails
-          console.warn('Forms app submission failed, falling back to contact form');
+          // If authentication failed, the Forms app API might require hCaptcha token
+          if (response.status === 401 || response.status === 403 || errorText.includes('Authentication')) {
+            if (!hCaptchaToken) {
+              console.warn('Forms app authentication failed - hCaptcha token may be required.');
+              console.warn('The Forms app API might need hCaptcha integration. Consider:');
+              console.warn('1. Adding hCaptcha widget to the form');
+              console.warn('2. Using webhooks instead (Settings > Notifications > Webhooks)');
+              console.warn('3. Submitting via contact form (fallback enabled)');
+            } else {
+              console.warn('Forms app authentication failed even with hCaptcha token.');
+              console.warn('The API might require server-side submission or different authentication.');
+            }
+          }
+
           await this.submitToContactForm();
         }
       }

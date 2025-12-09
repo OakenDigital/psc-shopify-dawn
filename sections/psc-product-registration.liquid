@@ -1,5 +1,20 @@
 {{ 'section-product-registration.css' | asset_url | stylesheet_tag }}
 <script src="{{ 'component-product-registration-form.js' | asset_url }}" defer="defer"></script>
+{%- if section.settings.use_forms_app
+  and section.settings.enable_hcaptcha
+  and section.settings.hcaptcha_site_key != blank
+-%}
+  <script src="https://js.hcaptcha.com/1/api.js" async defer></script>
+  <script>
+    // hCaptcha callback function - stores token in hidden input
+    function onHCaptchaSuccess(token) {
+      const input = document.getElementById('h-captcha-response-input');
+      if (input) {
+        input.value = token;
+      }
+    }
+  </script>
+{%- endif -%}
 
 {%- style -%}
   .section-{{ section.id }}-padding {
@@ -728,7 +743,20 @@
       "type": "text",
       "id": "forms_app_form_id",
       "label": "Forms App Form ID",
-      "info": "Enter the form ID from your Shopify Forms app. Find it in Apps > Forms > [Your Form] > Settings"
+      "info": "Enter the form instance ID (number) from your Shopify Forms app. Find it in the URL when viewing your form."
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_hcaptcha",
+      "label": "Enable hCaptcha (Required for Forms App)",
+      "default": false,
+      "info": "Enable hCaptcha to generate authentication token for Forms app API. Get your site key from hcaptcha.com"
+    },
+    {
+      "type": "text",
+      "id": "hcaptcha_site_key",
+      "label": "hCaptcha Site Key",
+      "info": "Enter your hCaptcha site key from hcaptcha.com. Required if Forms app is enabled."
     },
     {
       "type": "header",
