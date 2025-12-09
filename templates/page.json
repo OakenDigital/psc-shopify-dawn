@@ -18,6 +18,8 @@
         "description": "<p>Register your product to activate warranty coverage and receive important product updates.</p>",
         "use_forms_app": true,
         "forms_app_form_id": "782919",
+        "enable_hcaptcha": false,
+        "hcaptcha_site_key": "",
         "show_order_number": true,
         "order_number_label": "Order Number",
         "order_number_placeholder": "Enter your order number",
@@ -90,10 +92,39 @@
         "padding_top": 48,
         "padding_bottom": 28
       }
+    },
+    "1765262665a107d953": {
+      "type": "apps",
+      "blocks": {
+        "forms_inline_z4EmJ8": {
+          "type": "shopify://apps/forms/blocks/inline/8744a304-fcb1-4347-b211-bb6b4759a76a",
+          "settings": {
+            "form_id": "782919",
+            "text_color": "#202020",
+            "button_background_color": "#202020",
+            "button_label_color": "#FFFFFF",
+            "links_color": "#1878B9",
+            "errors_color": "#E02229",
+            "text_alignment": "center",
+            "form_alignment": "center",
+            "padding_top": 0,
+            "padding_bottom": 24,
+            "padding_right": 0,
+            "padding_left": 0
+          }
+        }
+      },
+      "block_order": [
+        "forms_inline_z4EmJ8"
+      ],
+      "settings": {
+        "include_margins": true
+      }
     }
   },
   "order": [
     "psc_product_registration_h44CB3",
-    "main"
+    "main",
+    "1765262665a107d953"
   ]
 }
