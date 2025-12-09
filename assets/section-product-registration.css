@@ -1,0 +1,288 @@
+.product-registration {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.product-registration img {
+  max-width: 100%;
+}
+
+.product-registration .form__message {
+  align-items: flex-start;
+}
+
+.product-registration .icon-success {
+  margin-top: 0.2rem;
+}
+
+.product-registration .field {
+  margin-bottom: 1.5rem;
+}
+
+@media screen and (min-width: 750px) {
+  .product-registration .field {
+    margin-bottom: 2rem;
+  }
+}
+
+.product-registration__heading {
+  margin-bottom: 1rem;
+}
+
+.product-registration__description {
+  margin-bottom: 2rem;
+}
+
+.product-registration__fields {
+  margin-top: 2rem;
+}
+
+.product-registration__fields-row {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+@media screen and (min-width: 750px) {
+  .product-registration__fields-row {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.product-registration__section-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 2.5rem 0 1.5rem;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(var(--color-foreground), 0.1);
+}
+
+.product-registration__section-title:first-of-type {
+  margin-top: 0;
+  padding-top: 0;
+  border-top: none;
+}
+
+.product-registration__customer-info,
+.product-registration__address-info {
+  margin-top: 2rem;
+}
+
+.product-registration__warranty-info {
+  margin: 2rem 0;
+  padding: 1.5rem;
+  background-color: rgba(var(--color-foreground), 0.03);
+  border-radius: 4px;
+}
+
+.product-registration__warranty-text {
+  margin: 0;
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.product-registration__button {
+  margin-top: 3rem;
+}
+
+@media screen and (min-width: 750px) {
+  .product-registration__button {
+    margin-top: 4rem;
+  }
+}
+
+.product-registration__field-error {
+  display: block;
+  margin-top: 0.5rem;
+  font-size: 0.875rem;
+}
+
+.product-registration__field-error .form__message {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: rgb(var(--color-error));
+}
+
+.product-registration__field-error .svg-wrapper {
+  width: 1.2rem;
+  height: 1.2rem;
+  flex-shrink: 0;
+}
+
+.product-registration select.field__input {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23333' d='M6 9L1 4h10z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  background-size: 12px;
+  padding-right: 3rem;
+}
+
+/* Custom Product Select Dropdown with Images */
+.product-registration__custom-select {
+  position: relative;
+  width: 100%;
+}
+
+.product-registration__select-button {
+  width: 100%;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  position: relative;
+  padding-right: 3rem;
+}
+
+.product-registration__select-button[aria-expanded="true"] {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.product-registration__select-text {
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.product-registration__select-text::before {
+  content: '';
+  display: none;
+  width: 40px;
+  height: 40px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 4px;
+  flex-shrink: 0;
+}
+
+.product-registration__select-text[style*="--selected-image"]::before {
+  display: inline-block;
+  background-image: var(--selected-image);
+}
+
+.product-registration__select-arrow {
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: transform 0.2s ease;
+  pointer-events: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.product-registration__select-button[aria-expanded="true"] .product-registration__select-arrow {
+  transform: translateY(-50%) rotate(180deg);
+}
+
+.product-registration__select-dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: rgb(var(--color-background));
+  border: 1px solid rgba(var(--color-foreground), 0.2);
+  border-top: none;
+  border-radius: 0 0 4px 4px;
+  max-height: 300px;
+  overflow-y: auto;
+  z-index: 1000;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.product-registration__select-option {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  border-bottom: 1px solid rgba(var(--color-foreground), 0.05);
+}
+
+.product-registration__select-option:last-child {
+  border-bottom: none;
+}
+
+.product-registration__select-option:hover,
+.product-registration__select-option[aria-selected="true"] {
+  background-color: rgba(var(--color-foreground), 0.05);
+}
+
+.product-registration__option-image {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  border-radius: 4px;
+  flex-shrink: 0;
+  background-color: rgba(var(--color-foreground), 0.05);
+}
+
+.product-registration__option-image--placeholder {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(var(--color-foreground), 0.05);
+  border-radius: 4px;
+  color: rgba(var(--color-foreground), 0.4);
+  flex-shrink: 0;
+}
+
+.product-registration__option-image--placeholder svg {
+  width: 20px;
+  height: 20px;
+}
+
+.product-registration__option-text {
+  flex: 1;
+  font-size: 0.9375rem;
+  line-height: 1.5;
+  color: rgb(var(--color-foreground));
+}
+
+.field--with-error input:invalid,
+.field--with-error input[aria-invalid="true"] {
+  border-color: rgb(var(--color-error));
+}
+
+.field--with-error input:invalid:focus,
+.field--with-error input[aria-invalid="true"]:focus {
+  border-color: rgb(var(--color-error));
+  box-shadow: 0 0 0 0.2rem rgba(var(--color-error), 0.2);
+}
+
+/* Loading state */
+.product-registration__button button[disabled] {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Product other input animation */
+#ProductRegistrationForm-product-other {
+  animation: slideDown 0.3s ease-out;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+

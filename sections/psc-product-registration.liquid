@@ -128,32 +128,104 @@
 
           {%- if section.settings.show_product_selection -%}
             <div class="field">
-              <select
-                id="ProductRegistrationForm-product"
-                class="field__input"
-                name="contact[Product]"
-                {% if section.settings.product_required %}
-                  required
-                {% endif %}
-                data-product-select
-              >
-                <option value="">{{ section.settings.product_placeholder | default: 'Select a product' }}</option>
-                {%- liquid
-                  if section.settings.product_collection != blank
-                    assign selected_collection = section.settings.product_collection
-                  else
-                    assign selected_collection = collections.all
-                  endif
-                -%}
-                {%- if selected_collection.products.size > 0 -%}
-                  {%- for product in selected_collection.products -%}
-                    <option value="{{ product.title | escape }}">{{ product.title | escape }}</option>
-                  {%- endfor -%}
-                {%- endif -%}
-                <option value="other">
-                  {{ section.settings.other_product_label | default: 'Other (specify below)' }}
-                </option>
-              </select>
+              {%- liquid
+                if section.settings.product_collection != blank
+                  assign selected_collection = section.settings.product_collection
+                else
+                  assign selected_collection = collections.all
+                endif
+              -%}
+
+              <div class="product-registration__custom-select" data-product-select-wrapper>
+                <input
+                  type="hidden"
+                  id="ProductRegistrationForm-product"
+                  name="contact[Product]"
+                  {% if section.settings.product_required %}
+                    required
+                  {% endif %}
+                  data-product-select
+                >
+                <button
+                  type="button"
+                  class="product-registration__select-button field__input"
+                  aria-haspopup="listbox"
+                  aria-expanded="false"
+                  data-select-button
+                >
+                  <span class="product-registration__select-text" data-select-text>
+                    {{ section.settings.product_placeholder | default: 'Select a product' }}
+                  </span>
+                  <span class="product-registration__select-arrow">
+                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M6 9L1 4H11L6 9Z" fill="currentColor"/>
+                    </svg>
+                  </span>
+                </button>
+                <ul
+                  class="product-registration__select-dropdown"
+                  role="listbox"
+                  data-select-dropdown
+                  style="display: none;"
+                >
+                  <li
+                    class="product-registration__select-option"
+                    role="option"
+                    data-option-value=""
+                    data-option-text="{{ section.settings.product_placeholder | default: 'Select a product' }}"
+                  >
+                    <span class="product-registration__option-text">
+                      {{ section.settings.product_placeholder | default: 'Select a product' }}
+                    </span>
+                  </li>
+                  {%- if selected_collection.products.size > 0 -%}
+                    {%- for product in selected_collection.products -%}
+                      <li
+                        class="product-registration__select-option"
+                        role="option"
+                        data-option-value="{{ product.title | escape }}"
+                        data-option-text="{{ product.title | escape }}"
+                        data-option-image="{{ product.featured_image | image_url: width: 60 }}"
+                      >
+                        {%- if product.featured_image -%}
+                          <img
+                            src="{{ product.featured_image | image_url: width: 60 }}"
+                            alt="{{ product.title | escape }}"
+                            class="product-registration__option-image"
+                            width="60"
+                            height="60"
+                            loading="lazy"
+                          >
+                        {%- else -%}
+                          <div class="product-registration__option-image product-registration__option-image--placeholder">
+                            <svg
+                              width="24"
+                              height="24"
+                              viewBox="0 0 24 24"
+                              fill="none"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <rect x="3" y="3" width="18" height="18" rx="2" stroke="currentColor" stroke-width="2" fill="none"/>
+                              <path d="M9 9L12 6L15 9L21 3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                          </div>
+                        {%- endif -%}
+                        <span class="product-registration__option-text">{{ product.title | escape }}</span>
+                      </li>
+                    {%- endfor -%}
+                  {%- endif -%}
+                  <li
+                    class="product-registration__select-option"
+                    role="option"
+                    data-option-value="other"
+                    data-option-text="{{ section.settings.other_product_label | default: 'Other (specify below)' }}"
+                  >
+                    <span class="product-registration__option-text">
+                      {{ section.settings.other_product_label | default: 'Other (specify below)' }}
+                    </span>
+                  </li>
+                </ul>
+              </div>
               <label class="field__label" for="ProductRegistrationForm-product">
                 {{ section.settings.product_label | default: 'Product' }}
                 {%- if section.settings.product_required -%}
