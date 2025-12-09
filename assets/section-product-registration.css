@@ -268,7 +268,7 @@
 
 .product-registration__option-text {
   flex: 1;
-  font-size: 0.9375rem;
+  font-size: 1.1rem;
   line-height: 1.5;
   color: rgb(var(--color-foreground));
 }
