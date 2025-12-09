@@ -343,17 +343,6 @@
   animation: slideDown 0.3s ease-out;
 }
 
-/* hCaptcha styling */
-.product-registration__hcaptcha {
-  margin: 2rem 0;
-  display: flex;
-  justify-content: flex-start;
-}
-
-.product-registration__hcaptcha .h-captcha {
-  margin: 0;
-}
-
 @keyframes slideDown {
   from {
     opacity: 0;

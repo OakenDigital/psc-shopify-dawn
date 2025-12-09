@@ -167,22 +167,77 @@ if (!customElements.get('product-registration-form')) {
         // Show loading state
         this.setLoadingState(true);
 
-        // Check if Forms app is enabled
-        const useFormsApp = this.dataset.useFormsApp === 'true';
-        const formsAppFormId = this.dataset.formsAppFormId;
-
         try {
-          if (useFormsApp && formsAppFormId) {
-            // Submit to Forms app API
-            await this.submitToFormsApp(formsAppFormId);
+          // Check if webhook URL is configured
+          const webhookUrl = this.dataset.webhookUrl;
+          if (webhookUrl && webhookUrl.trim() !== '') {
+            // Submit to webhook URL
+            await this.submitToWebhook(webhookUrl);
           } else {
-            // Submit via standard contact form
+            // Submit via Shopify contact form (email only)
             await this.submitToContactForm();
           }
         } catch (error) {
           console.error('Error submitting form:', error);
           this.setLoadingState(false);
           alert('There was an error submitting your registration. Please try again or contact support.');
+        }
+      }
+
+      async submitToWebhook(webhookUrl) {
+        // Collect all form data
+        const formData = new FormData(this.form);
+        const submissionData = {};
+
+        // Convert FormData to object
+        for (const [key, value] of formData.entries()) {
+          // Remove 'contact[' and ']' from keys
+          const cleanKey = key.replace('contact[', '').replace(']', '');
+          submissionData[cleanKey] = value;
+        }
+
+        // Handle product selection (custom dropdown vs text input)
+        const productSelectInput = this.querySelector('[data-product-select]');
+        if (productSelectInput) {
+          if (productSelectInput.type === 'hidden') {
+            // Custom dropdown - get value from hidden input
+            if (productSelectInput.value && productSelectInput.value !== 'other' && productSelectInput.value !== '') {
+              submissionData['Product'] = productSelectInput.value;
+            } else if (productSelectInput.value === 'other') {
+              const productOther = this.querySelector('[data-product-other-input]');
+              if (productOther && productOther.value) {
+                submissionData['Product'] = productOther.value;
+              }
+            }
+          } else {
+            // Regular text input
+            if (productSelectInput.value) {
+              submissionData['Product'] = productSelectInput.value;
+            }
+          }
+        }
+
+        // Add metadata
+        submissionData.timestamp = new Date().toISOString();
+        submissionData.form_type = 'product_registration';
+        submissionData.page_url = window.location.href;
+
+        // Submit to webhook
+        const response = await fetch(webhookUrl, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(submissionData),
+        });
+
+        if (response.ok || response.status === 200 || response.status === 201) {
+          // Redirect to success page
+          const successUrl = new URL(window.location.href);
+          successUrl.searchParams.set('form_status', 'success');
+          window.location.href = successUrl.toString();
+        } else {
+          throw new Error(`Webhook submission failed: ${response.status} ${response.statusText}`);
         }
       }
 
@@ -197,188 +252,13 @@ if (!customElements.get('product-registration-form')) {
         });
 
         if (response.ok) {
-          window.location.reload();
+          // Redirect to success page
+          const successUrl = new URL(window.location.href);
+          successUrl.searchParams.set('form_status', 'success');
+          window.location.href = successUrl.toString();
         } else {
           throw new Error('Form submission failed');
         }
-      }
-
-      async submitToFormsApp(formInstanceId) {
-        // Get shop domain from data attribute or fallback methods
-        const shopDomain = this.dataset.shopDomain || window.Shopify?.shop || this.getShopDomainFromUrl();
-
-        // Get hCaptcha token if available
-        let hCaptchaToken = null;
-        try {
-          // Check for hCaptcha response in hidden input (set by callback)
-          const hcaptchaInput = document.querySelector('#h-captcha-response-input');
-          if (hcaptchaInput && hcaptchaInput.value) {
-            hCaptchaToken = hcaptchaInput.value;
-          }
-          // Also try to get from hCaptcha widget directly
-          if (!hCaptchaToken && window.hcaptcha) {
-            const hcaptchaWidget = document.querySelector('.h-captcha[data-sitekey]');
-            if (hcaptchaWidget) {
-              const widgetId =
-                hcaptchaWidget.getAttribute('data-hcaptcha-widget-id') ||
-                hcaptchaWidget.querySelector('[id^="hcaptcha"]')?.id?.replace('hcaptcha-', '');
-              if (widgetId) {
-                hCaptchaToken = window.hcaptcha.getResponse(widgetId);
-              }
-            }
-          }
-        } catch (e) {
-          console.warn('Could not get hCaptcha token:', e);
-        }
-
-        // Collect form data and map to Forms app format
-        const formData = new FormData(this.form);
-        const submissionData = {
-          shopify_domain: shopDomain,
-          form_instance_id: parseInt(formInstanceId),
-          customer_consented_to_email_marketing: false,
-          customer_consented_to_sms_marketing: false,
-        };
-
-        // Add hCaptcha token if available
-        if (hCaptchaToken) {
-          submissionData.h_captcha_response = hCaptchaToken;
-        }
-
-        // Map form fields to Forms app format
-        for (const [key, value] of formData.entries()) {
-          if (key === 'contact[email]') {
-            submissionData.email = value;
-          } else if (key === 'contact[First Name]') {
-            submissionData.first_name = value;
-          } else if (key === 'contact[Last Name]') {
-            submissionData.last_name = value;
-          } else if (key === 'contact[Phone]') {
-            submissionData.phone_number = value;
-          } else if (key === 'contact[Order Number]') {
-            submissionData['custom#order_number'] = value;
-          } else if (key === 'contact[Product]' || key === 'contact[Product Other]') {
-            submissionData['custom#product'] = value;
-          } else if (key === 'contact[Serial Number]') {
-            submissionData['custom#serial_number'] = value;
-          } else if (key === 'contact[Purchase Date]') {
-            submissionData['custom#purchase_date'] = value;
-          } else if (key === 'contact[Address Line 1]') {
-            submissionData['custom#address_line_1'] = value;
-          } else if (key === 'contact[Address Line 2]') {
-            submissionData['custom#address_line_2'] = value;
-          } else if (key === 'contact[City]') {
-            submissionData['custom#city'] = value;
-          } else if (key === 'contact[State/Province]') {
-            submissionData['custom#state'] = value;
-          } else if (key === 'contact[ZIP/Postal Code]') {
-            submissionData['custom#zippostal_code'] = value;
-          } else if (key === 'contact[Country]') {
-            submissionData['custom#country'] = value;
-          } else if (key === 'contact[Additional Notes]') {
-            submissionData['custom#additional_notes'] = value;
-          }
-        }
-
-        // Handle product selection (custom dropdown vs text input)
-        const productSelectInput = this.querySelector('[data-product-select]');
-        if (productSelectInput) {
-          // Check if it's the hidden input (custom dropdown) or regular input
-          if (productSelectInput.type === 'hidden') {
-            // Custom dropdown - get value from hidden input
-            if (productSelectInput.value && productSelectInput.value !== 'other' && productSelectInput.value !== '') {
-              submissionData['custom#product'] = productSelectInput.value;
-            } else if (productSelectInput.value === 'other') {
-              const productOther = this.querySelector('[data-product-other-input]');
-              if (productOther && productOther.value) {
-                submissionData['custom#product'] = productOther.value;
-              }
-            }
-          } else {
-            // Regular text input
-            if (productSelectInput.value) {
-              submissionData['custom#product'] = productSelectInput.value;
-            }
-          }
-        }
-
-        // Also check for product in formData (fallback)
-        if (!submissionData['custom#product']) {
-          const productFromForm = formData.get('contact[Product]') || formData.get('contact[Product Other]');
-          if (productFromForm) {
-            submissionData['custom#product'] = productFromForm;
-          }
-        }
-
-        // Submit to Forms app API
-        // Note: Cannot use credentials with CORS wildcard origin
-        const response = await fetch('https://forms.shopifyapps.com/api/v2/form_submission', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-            Accept: 'application/json',
-          },
-          mode: 'cors',
-          body: JSON.stringify(submissionData),
-        });
-
-        if (response.ok) {
-          const result = await response.json().catch(() => ({}));
-          // Redirect to success page or show success message
-          const successUrl = new URL(window.location.href);
-          successUrl.searchParams.set('form_status', 'success');
-          if (result.id) {
-            successUrl.searchParams.set('submission_id', result.id);
-          }
-          window.location.href = successUrl.toString();
-        } else {
-          const errorText = await response.text().catch(() => '');
-          let errorData;
-          try {
-            errorData = JSON.parse(errorText);
-          } catch (e) {
-            errorData = { message: errorText || 'Authentication Failed' };
-          }
-
-          console.error('Forms app submission error:', errorData);
-          console.error('Response status:', response.status, response.statusText);
-          console.error('Submission data sent:', submissionData);
-
-          // If authentication failed, the Forms app API might require hCaptcha token
-          if (response.status === 401 || response.status === 403 || errorText.includes('Authentication')) {
-            if (!hCaptchaToken) {
-              console.warn('Forms app authentication failed - hCaptcha token may be required.');
-              console.warn('The Forms app API might need hCaptcha integration. Consider:');
-              console.warn('1. Adding hCaptcha widget to the form');
-              console.warn('2. Using webhooks instead (Settings > Notifications > Webhooks)');
-              console.warn('3. Submitting via contact form (fallback enabled)');
-            } else {
-              console.warn('Forms app authentication failed even with hCaptcha token.');
-              console.warn('The API might require server-side submission or different authentication.');
-            }
-          }
-
-          await this.submitToContactForm();
-        }
-      }
-
-      getShopDomainFromUrl() {
-        // Extract shop domain from current URL
-        const hostname = window.location.hostname;
-        if (hostname.includes('.myshopify.com')) {
-          return hostname;
-        }
-        // Try to get from Shopify global object
-        if (window.Shopify?.shop) {
-          return window.Shopify.shop + '.myshopify.com';
-        }
-        // Fallback: try to extract from meta tags or other sources
-        const shopMeta = document.querySelector('meta[name="shopify-checkout-api-token"]');
-        if (shopMeta) {
-          // Extract shop from various sources
-          return hostname; // Best guess
-        }
-        return hostname;
       }
 
       setLoadingState(loading) {
