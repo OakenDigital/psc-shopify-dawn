@@ -311,16 +311,13 @@ if (!customElements.get('product-registration-form')) {
         }
 
         // Submit to Forms app API
-        // Include credentials (cookies) which may be required for authentication
+        // Note: Cannot use credentials with CORS wildcard origin
         const response = await fetch('https://forms.shopifyapps.com/api/v2/form_submission', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
             Accept: 'application/json',
-            Origin: window.location.origin,
-            Referer: window.location.href,
           },
-          credentials: 'include', // Include cookies for authentication
           mode: 'cors',
           body: JSON.stringify(submissionData),
         });
