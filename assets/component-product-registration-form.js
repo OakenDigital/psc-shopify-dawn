@@ -214,6 +214,12 @@ if (!customElements.get('product-registration-form')) {
 
         if (!selectButton || !selectDropdown || !selectInput) return;
 
+        // Initialize button state - if input already has a value (e.g., from form reload)
+        if (selectInput.value && selectInput.value !== '') {
+          selectButton.setAttribute('data-has-value', 'true');
+          selectWrapper.setAttribute('data-has-selection', 'true');
+        }
+
         // Toggle dropdown
         selectButton.addEventListener('click', (e) => {
           e.preventDefault();

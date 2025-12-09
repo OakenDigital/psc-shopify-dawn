@@ -139,9 +139,10 @@
   min-height: 4.5rem;
 }
 
-/* When product is selected, add padding-top to move text down */
+/* When product is selected, add padding-top to move text down (matching Dawn theme input behavior) */
 .product-registration__select-button[data-has-value="true"] {
   padding: 2.2rem 1.5rem 0.8rem 2rem;
+  padding-right: 3rem;
 }
 
 .product-registration__select-button[aria-expanded="true"] {
@@ -158,6 +159,12 @@
   align-items: center;
   gap: 0.75rem;
   min-height: 1.5rem;
+  padding-top: 0.5rem;
+}
+
+/* When product is selected, remove extra padding */
+.product-registration__select-button[data-has-value="true"] .product-registration__select-text {
+  padding-top: 0;
 }
 
 .product-registration__select-text::before {
@@ -262,7 +269,7 @@
   color: rgb(var(--color-foreground));
 }
 
-/* Label positioning for custom select */
+/* Label positioning for custom select - use adjacent sibling selector since label comes after wrapper */
 .product-registration__custom-select + .field__label {
   font-size: 1.6rem;
   left: calc(var(--inputs-border-width) + 2rem);
@@ -274,17 +281,10 @@
   color: rgba(var(--color-foreground), 0.75);
   letter-spacing: 0.1rem;
   line-height: 1.5;
+  z-index: 1;
 }
 
-.product-registration__custom-select:has([data-has-value="true"]) + .field__label,
-.product-registration__select-button:focus ~ .field__label {
-  font-size: 1rem;
-  top: calc(var(--inputs-border-width) + 0.5rem);
-  left: calc(var(--inputs-border-width) + 2rem);
-  letter-spacing: 0.04rem;
-}
-
-/* Fallback for browsers that don't support :has() */
+/* Move label up when product is selected */
 .product-registration__custom-select[data-has-selection="true"] + .field__label {
   font-size: 1rem;
   top: calc(var(--inputs-border-width) + 0.5rem);
