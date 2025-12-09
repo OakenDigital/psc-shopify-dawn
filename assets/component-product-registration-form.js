@@ -227,6 +227,13 @@ if (!customElements.get('product-registration-form')) {
           const isExpanded = selectButton.getAttribute('aria-expanded') === 'true';
           selectButton.setAttribute('aria-expanded', !isExpanded);
           selectDropdown.style.display = isExpanded ? 'none' : 'block';
+
+          // Temporarily move label up when dropdown opens (even if empty)
+          if (!isExpanded && !selectButton.hasAttribute('data-has-value')) {
+            selectWrapper.setAttribute('data-dropdown-open', 'true');
+          } else {
+            selectWrapper.removeAttribute('data-dropdown-open');
+          }
         });
 
         // Handle option selection
@@ -270,6 +277,7 @@ if (!customElements.get('product-registration-form')) {
             // Close dropdown
             selectButton.setAttribute('aria-expanded', 'false');
             selectDropdown.style.display = 'none';
+            selectWrapper.removeAttribute('data-dropdown-open');
           });
         });
 
@@ -278,6 +286,7 @@ if (!customElements.get('product-registration-form')) {
           if (!selectWrapper.contains(e.target)) {
             selectButton.setAttribute('aria-expanded', 'false');
             selectDropdown.style.display = 'none';
+            selectWrapper.removeAttribute('data-dropdown-open');
           }
         });
 
@@ -286,6 +295,7 @@ if (!customElements.get('product-registration-form')) {
           if (e.key === 'Escape' && selectButton.getAttribute('aria-expanded') === 'true') {
             selectButton.setAttribute('aria-expanded', 'false');
             selectDropdown.style.display = 'none';
+            selectWrapper.removeAttribute('data-dropdown-open');
             selectButton.focus();
           }
         });

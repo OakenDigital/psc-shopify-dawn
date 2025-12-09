@@ -145,6 +145,16 @@
   padding-right: 3rem;
 }
 
+/* Make placeholder text very subtle when no value is selected to avoid competing with label */
+.product-registration__select-button:not([data-has-value="true"]) .product-registration__select-text {
+  color: rgba(var(--color-foreground), 0.3);
+}
+
+/* Show text normally when product is selected */
+.product-registration__select-button[data-has-value="true"] .product-registration__select-text {
+  color: rgb(var(--color-foreground));
+}
+
 .product-registration__select-button[aria-expanded="true"] {
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
@@ -159,12 +169,6 @@
   align-items: center;
   gap: 0.75rem;
   min-height: 1.5rem;
-  padding-top: 0.5rem;
-}
-
-/* When product is selected, remove extra padding */
-.product-registration__select-button[data-has-value="true"] .product-registration__select-text {
-  padding-top: 0;
 }
 
 .product-registration__select-text::before {
@@ -269,7 +273,32 @@
   color: rgb(var(--color-foreground));
 }
 
-/* Label positioning for custom select - use adjacent sibling selector since label comes after wrapper */
+/* Label positioning for custom select - must work exactly like Dawn theme inputs */
+.field:has(.product-registration__custom-select) .field__label {
+  font-size: 1.6rem;
+  left: calc(var(--inputs-border-width) + 2rem);
+  top: calc(1rem + var(--inputs-border-width));
+  margin-bottom: 0;
+  pointer-events: none;
+  position: absolute;
+  transition: top var(--duration-short) ease, font-size var(--duration-short) ease;
+  color: rgba(var(--color-foreground), 0.75);
+  letter-spacing: 0.1rem;
+  line-height: 1.5;
+  z-index: 1;
+}
+
+/* Move label up when product is selected or dropdown is open - match Dawn's :not(:placeholder-shown) behavior */
+.field:has(.product-registration__custom-select[data-has-selection="true"]) .field__label,
+.field:has(.product-registration__custom-select[data-dropdown-open="true"]) .field__label,
+.field:has(.product-registration__select-button[data-has-value="true"]) .field__label {
+  font-size: 1rem;
+  top: calc(var(--inputs-border-width) + 0.5rem);
+  left: calc(var(--inputs-border-width) + 2rem);
+  letter-spacing: 0.04rem;
+}
+
+/* Fallback for browsers without :has() - use adjacent sibling selector */
 .product-registration__custom-select + .field__label {
   font-size: 1.6rem;
   left: calc(var(--inputs-border-width) + 2rem);
@@ -284,8 +313,8 @@
   z-index: 1;
 }
 
-/* Move label up when product is selected */
-.product-registration__custom-select[data-has-selection="true"] + .field__label {
+.product-registration__custom-select[data-has-selection="true"] + .field__label,
+.product-registration__custom-select[data-dropdown-open="true"] + .field__label {
   font-size: 1rem;
   top: calc(var(--inputs-border-width) + 0.5rem);
   left: calc(var(--inputs-border-width) + 2rem);
