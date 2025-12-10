@@ -234,17 +234,17 @@ if (!customElements.get('product-registration-form')) {
           if (productSelectInput.type === 'hidden') {
             // Custom dropdown - get value from hidden input
             if (productSelectInput.value && productSelectInput.value !== 'other' && productSelectInput.value !== '') {
-              submissionData['Product'] = productSelectInput.value;
+              submissionData['Product'] = productSelectInput.value.trim();
             } else if (productSelectInput.value === 'other') {
               const productOther = this.querySelector('[data-product-other-input]');
-              if (productOther && productOther.value) {
-                submissionData['Product'] = productOther.value;
+              if (productOther && productOther.value && productOther.value.trim() !== '') {
+                submissionData['Product'] = productOther.value.trim();
               }
             }
           } else {
-            // Regular text input
-            if (productSelectInput.value) {
-              submissionData['Product'] = productSelectInput.value;
+            // Regular text input - read directly from the input field
+            if (productSelectInput.value && productSelectInput.value.trim() !== '') {
+              submissionData['Product'] = productSelectInput.value.trim();
             }
           }
         }

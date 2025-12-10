@@ -130,7 +130,7 @@
             </div>
           {%- endif -%}
 
-          {%- if section.settings.show_product_selection -%}
+          {%- if section.settings.product_selection_type == 'dropdown' -%}
             <div class="field">
               {%- liquid
                 if section.settings.product_collection != blank
@@ -261,11 +261,12 @@
                 {% if section.settings.product_required %}
                   required
                 {% endif %}
-                placeholder="{{ section.settings.product_placeholder | default: 'Product Name' }}"
+                placeholder="{{ section.settings.product_placeholder | default: 'Enter part number' }}"
                 autocomplete="off"
+                data-product-select
               >
               <label class="field__label" for="ProductRegistrationForm-product">
-                {{ section.settings.product_label | default: 'Product Name' }}
+                {{ section.settings.product_label | default: 'Part Number' }}
                 {%- if section.settings.product_required -%}
                   <span aria-hidden="true">*</span>
                 {%- endif -%}
@@ -795,11 +796,21 @@
       "content": "Product Information"
     },
     {
-      "type": "checkbox",
-      "id": "show_product_selection",
-      "label": "Use Product Dropdown",
-      "default": true,
-      "info": "If enabled, shows dropdown. If disabled, shows text input."
+      "type": "select",
+      "id": "product_selection_type",
+      "label": "Product Selection Type",
+      "options": [
+        {
+          "value": "dropdown",
+          "label": "Dropdown from Product List"
+        },
+        {
+          "value": "text_input",
+          "label": "Text Input (User enters part number)"
+        }
+      ],
+      "default": "dropdown",
+      "info": "Choose whether to show a dropdown of products or allow users to enter their own part number."
     },
     {
       "type": "text",
@@ -811,13 +822,14 @@
       "type": "text",
       "id": "product_placeholder",
       "label": "Product Placeholder",
-      "default": "Select a product"
+      "default": "Select a product",
+      "info": "For dropdown: placeholder text. For text input: placeholder for part number field."
     },
     {
       "type": "collection",
       "id": "product_collection",
       "label": "Product Collection",
-      "info": "Select a collection to show its products. Leave empty to show all products from your store."
+      "info": "Select a collection to show its products in the dropdown. Leave empty to show all products from your store. Only used when 'Product Selection Type' is set to 'Dropdown from Product List'."
     },
     {
       "type": "text",
