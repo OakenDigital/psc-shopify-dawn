@@ -249,18 +249,29 @@ if (!customElements.get('product-registration-form')) {
           }
         }
 
-        // Handle Purchased From selection
+        // Handle Purchased From selection - always read directly from the select element
         const purchasedFromSelect = this.querySelector('[data-purchased-from-select]');
         if (purchasedFromSelect) {
-          if (purchasedFromSelect.value === 'other') {
-            const purchasedFromOtherInput = this.querySelector('[data-purchased-from-other-input]');
-            if (purchasedFromOtherInput && purchasedFromOtherInput.value) {
-              submissionData['Purchased From'] = purchasedFromOtherInput.value;
+          const selectedValue = purchasedFromSelect.value;
+          if (selectedValue && selectedValue !== '') {
+            if (selectedValue === 'other') {
+              const purchasedFromOtherInput = this.querySelector('[data-purchased-from-other-input]');
+              if (
+                purchasedFromOtherInput &&
+                purchasedFromOtherInput.value &&
+                purchasedFromOtherInput.value.trim() !== ''
+              ) {
+                submissionData['Purchased From'] = purchasedFromOtherInput.value.trim();
+              } else {
+                // If "Other" is selected but no value entered, use "Other" as fallback
+                submissionData['Purchased From'] = 'Other';
+              }
+            } else {
+              // Use the selected option value
+              submissionData['Purchased From'] = selectedValue.trim();
             }
-          } else if (purchasedFromSelect.value) {
-            submissionData['Purchased From'] = purchasedFromSelect.value;
           }
-          // Remove the "Purchased From Other" field from submission if it exists
+          // Always remove the "Purchased From Other" field from submission (we merge it into "Purchased From")
           delete submissionData['Purchased From Other'];
         }
 
@@ -268,6 +279,9 @@ if (!customElements.get('product-registration-form')) {
         submissionData.timestamp = new Date().toISOString();
         submissionData.form_type = 'product_registration';
         submissionData.page_url = window.location.href;
+
+        // Debug: Log submission data to console
+        console.log('Webhook submission data:', submissionData);
 
         // Build URL-encoded form data
         const params = new URLSearchParams();
