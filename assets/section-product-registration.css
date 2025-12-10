@@ -117,6 +117,7 @@
   background-position: right 1rem center;
   background-size: 12px;
   padding-right: 3rem;
+  padding-bottom: 0;
 }
 
 /* Custom Product Select Dropdown with Images */
