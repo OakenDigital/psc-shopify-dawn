@@ -16,7 +16,7 @@
         "heading": "Lock In Your Warranty Today",
         "heading_size": "h1",
         "description": "<p>Protect your steering investment and make sure you’re covered.<br/></p><p>Registering your PSC product activates your warranty and keeps you in the loop on important updates, tech tips, and product news. It only takes a minute, and it’s the best way to make sure your steering system gets the support it deserves.</p>",
-        "webhook_url": "https://script.google.com/macros/s/AKfycbz-yFp3mfJ5vrYRBnzEWki1QzdaodBe352KUwOInOKYrGZP8ByCCQFmr_B3OwPvWj6n/exec?gid=0",
+        "webhook_url": "https://script.google.com/macros/s/AKfycbxmgZEtgaETWh_7ScyseGFQy4ecOaLfa-bpysXJSLnZUQ7zjoeUG0nQLAI_4mN3fSCO/exec?gid=0",
         "show_order_number": true,
         "order_number_label": "Order Number",
         "order_number_placeholder": "Enter your order number",
