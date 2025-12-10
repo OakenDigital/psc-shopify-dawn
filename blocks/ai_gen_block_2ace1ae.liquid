@@ -1,0 +1,221 @@
+{% doc %}
+  @prompt
+    Create a dynamic variant SKU display block that shows the currently selected product variant's SKU number. The SKU should update automatically when the customer selects different product options. Include a label "SKU:" followed by the SKU number. Style it to match typical product information displays with clear, readable text.
+{% enddoc %}
+{% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
+
+{% style %}
+  .ai-variant-sku-{{ ai_gen_id }} {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: {{ block.settings.padding }}px 0;
+    font-size: {{ block.settings.font_size }}px;
+    color: {{ block.settings.text_color }};
+    line-height: 1.5;
+  }
+
+  .ai-variant-sku-label-{{ ai_gen_id }} {
+    font-weight: {{ block.settings.label_weight }};
+    color: {{ block.settings.label_color }};
+  }
+
+  .ai-variant-sku-value-{{ ai_gen_id }} {
+    font-weight: {{ block.settings.value_weight }};
+  }
+
+  .ai-variant-sku-empty-{{ ai_gen_id }} {
+    font-style: italic;
+    opacity: 0.6;
+  }
+
+  @media screen and (max-width: 749px) {
+    .ai-variant-sku-{{ ai_gen_id }} {
+      font-size: {{ block.settings.font_size | times: 0.9 }}px;
+    }
+  }
+{% endstyle %}
+
+<variant-sku-{{ ai_gen_id }}
+  class="ai-variant-sku-{{ ai_gen_id }}"
+  {{ block.shopify_attributes }}
+>
+  {% if block.settings.show_label %}
+    <span class="ai-variant-sku-label-{{ ai_gen_id }}">{{ block.settings.label_text }}</span>
+  {% endif %}
+  <span class="ai-variant-sku-value-{{ ai_gen_id }}" data-sku-value>
+    {% if product.selected_or_first_available_variant.sku != blank %}
+      {{ product.selected_or_first_available_variant.sku }}
+    {% else %}
+      <span class="ai-variant-sku-empty-{{ ai_gen_id }}">{{ block.settings.empty_text }}</span>
+    {% endif %}
+  </span>
+</variant-sku-{{ ai_gen_id }}>
+
+<script>
+  (function() {
+    class VariantSku{{ ai_gen_id }} extends HTMLElement {
+      constructor() {
+        super();
+        this.skuValue = this.querySelector('[data-sku-value]');
+        this.emptyText = '{{ block.settings.empty_text }}';
+      }
+
+      connectedCallback() {
+        this.setupVariantListener();
+      }
+
+      setupVariantListener() {
+        const productForm = document.querySelector('product-form');
+        
+        if (productForm) {
+          productForm.addEventListener('variant-change', (event) => {
+            this.updateSku(event.detail.variant);
+          });
+        }
+
+        document.addEventListener('variant:change', (event) => {
+          if (event.detail && event.detail.variant) {
+            this.updateSku(event.detail.variant);
+          }
+        });
+      }
+
+      updateSku(variant) {
+        if (!this.skuValue) return;
+
+        if (variant && variant.sku) {
+          this.skuValue.innerHTML = variant.sku;
+        } else {
+          this.skuValue.innerHTML = '<span class="ai-variant-sku-empty-{{ ai_gen_id }}">' + this.emptyText + '</span>';
+        }
+      }
+    }
+
+    customElements.define('variant-sku-{{ ai_gen_id }}', VariantSku{{ ai_gen_id }});
+  })();
+</script>
+
+{% schema %}
+{
+  "name": "Variant SKU display",
+  "tag": null,
+  "settings": [
+    {
+      "type": "header",
+      "content": "Label"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_label",
+      "label": "Show label",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "label_text",
+      "label": "Label text",
+      "default": "SKU:"
+    },
+    {
+      "type": "color",
+      "id": "label_color",
+      "label": "Label color",
+      "default": "#121212"
+    },
+    {
+      "type": "select",
+      "id": "label_weight",
+      "label": "Label weight",
+      "options": [
+        {
+          "value": "400",
+          "label": "Normal"
+        },
+        {
+          "value": "500",
+          "label": "Medium"
+        },
+        {
+          "value": "600",
+          "label": "Semi-bold"
+        },
+        {
+          "value": "700",
+          "label": "Bold"
+        }
+      ],
+      "default": "600"
+    },
+    {
+      "type": "header",
+      "content": "SKU value"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text color",
+      "default": "#121212"
+    },
+    {
+      "type": "select",
+      "id": "value_weight",
+      "label": "Value weight",
+      "options": [
+        {
+          "value": "400",
+          "label": "Normal"
+        },
+        {
+          "value": "500",
+          "label": "Medium"
+        },
+        {
+          "value": "600",
+          "label": "Semi-bold"
+        },
+        {
+          "value": "700",
+          "label": "Bold"
+        }
+      ],
+      "default": "400"
+    },
+    {
+      "type": "text",
+      "id": "empty_text",
+      "label": "Empty state text",
+      "default": "N/A"
+    },
+    {
+      "type": "header",
+      "content": "Style"
+    },
+    {
+      "type": "range",
+      "id": "font_size",
+      "min": 12,
+      "max": 24,
+      "step": 1,
+      "unit": "px",
+      "label": "Font size",
+      "default": 14
+    },
+    {
+      "type": "range",
+      "id": "padding",
+      "min": 0,
+      "max": 40,
+      "step": 4,
+      "unit": "px",
+      "label": "Vertical padding",
+      "default": 8
+    }
+  ],
+  "presets": [
+    {
+      "name": "Variant SKU display"
+    }
+  ]
+}
+{% endschema %}

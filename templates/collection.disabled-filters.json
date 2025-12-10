@@ -9,33 +9,6 @@
  */
 {
   "sections": {
-    "jeep_hero": {
-      "type": "jeep-collection-hero",
-      "settings": {
-        "eyebrow": "JEEP",
-        "heading": "Steering Re-Engineered for the Jeep Gladiator JT",
-        "description": "PSC steering systems give you the control, power, and confidence to tackle anything from daily drives to rock-strewn trails. Every kit is engineered, trail-tested, and tuned by people who live this stuff.",
-        "button_primary_label": "Shop Cylinder Assist® Kits",
-        "button_primary_link": "",
-        "button_secondary_label": "Shop Adventure Kits",
-        "button_secondary_link": "",
-        "compare_link_label": "",
-        "compare_link_url": "",
-        "image": "shopify://shop_images/Squared_PSC_Rubicon-_EJS_2025_2.png",
-        "color_scheme": "",
-        "background_color": "#ffffff",
-        "eyebrow_color": "#d32f2f",
-        "title_color": "#000000",
-        "text_color": "#000000",
-        "button_primary_bg": "#000000",
-        "button_primary_text": "#ffffff",
-        "button_secondary_bg": "#d4a857",
-        "button_secondary_text": "#000000",
-        "link_color": "#000000",
-        "padding_top": 0,
-        "padding_bottom": 0
-      }
-    },
     "breadcrumbs_Njfh8P": {
       "type": "breadcrumbs",
       "name": "Breadcrumbs",
@@ -48,6 +21,44 @@
         "arrow_color": "#121212",
         "padding_top": 20,
         "padding_bottom": 20
+      }
+    },
+    "176324314697478a9d": {
+      "type": "apps",
+      "blocks": {
+        "partfinder_year_make_model_vehicle_search_bar_NnWmyK": {
+          "type": "shopify://apps/partfinder-year-make-model/blocks/vehicle_search_bar/2892d2e7-0551-451a-8d78-8a0f565a5174",
+          "settings": {
+            "gv-enable-submodel": false,
+            "gv-disable-full-width-class": false,
+            "gv-disable-styles": false,
+            "gv-search-bar": "#97aab7",
+            "gv-search-color": "#4a5c68",
+            "gv-search-text-color": "#ffffff",
+            "gv-clear-color": "rgba(0,0,0,0)",
+            "gv-clear-text-color": "#121212",
+            "gv-search-label": "Search",
+            "gv-clear-label": "Clear",
+            "gv-show-title-label": true,
+            "gv-title-label": "SELECT YOUR VEHICLE",
+            "gv-title-bg": "#000000",
+            "gv-title-text": "#ffffff",
+            "gv-show-toggle-button": true,
+            "gv-toggle-button-label": "FIND YOUR VEHICLE",
+            "gv-toggle-button-bg": "#000000",
+            "gv-toggle-button-text": "#ffffff",
+            "gv-margin-top": 0,
+            "gv-margin-bottom": 30,
+            "gv-margin-left": 0,
+            "gv-margin-right": 0
+          }
+        }
+      },
+      "block_order": [
+        "partfinder_year_make_model_vehicle_search_bar_NnWmyK"
+      ],
+      "settings": {
+        "include_margins": true
       }
     },
     "banner": {
@@ -71,7 +82,7 @@
         "show_vendor": false,
         "show_rating": true,
         "quick_add": "standard",
-        "enable_filtering": true,
+        "enable_filtering": false,
         "filter_type": "vertical",
         "enable_sorting": true,
         "padding_top": 36,
@@ -80,8 +91,8 @@
     }
   },
   "order": [
-    "jeep_hero",
     "breadcrumbs_Njfh8P",
+    "176324314697478a9d",
     "banner",
     "product-grid"
   ]

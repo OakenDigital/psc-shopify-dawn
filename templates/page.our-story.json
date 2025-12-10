@@ -1,0 +1,332 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "1763781941e2b4017d": {
+      "type": "_blocks",
+      "settings": {}
+    },
+    "image_banner_x74eVF": {
+      "type": "image-banner",
+      "blocks": {
+        "heading_8BjkQx": {
+          "type": "heading",
+          "settings": {
+            "heading": "Our Story",
+            "heading_size": "hxxl"
+          }
+        },
+        "text_KRmax6": {
+          "type": "text",
+          "settings": {
+            "text": "<em>From a couple Jeeps and a dream to the leader in performance steering.</em>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "heading_8BjkQx",
+        "text_KRmax6"
+      ],
+      "name": "t:sections.image-banner.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/Screenshot_2025-11-21_102834.png",
+        "image_overlay_opacity": 50,
+        "image_height": "small",
+        "image_behavior": "none",
+        "desktop_content_position": "middle-center",
+        "desktop_content_alignment": "center",
+        "show_text_box": false,
+        "color_scheme": "scheme-a03118e4-1d97-43bc-bd4f-655039a52abb",
+        "stack_images_on_mobile": true,
+        "mobile_content_alignment": "center",
+        "show_text_below": true
+      }
+    },
+    "multirow_gP6qVb": {
+      "type": "multirow",
+      "blocks": {
+        "row_gUUjXD": {
+          "type": "row",
+          "settings": {
+            "image": "shopify://shop_images/f47db69c5a32907e654e2df53384ad8dl-m1709849370rd-w1280_h960.webp",
+            "caption": "The Beginning",
+            "heading": "The Garage",
+            "text": "<p>PSC didn’t start in some fancy office. It started in <strong>Tom and Kim Allen’s </strong>garage — a couple Jeeps, some club races, and a whole lot of figuring things out the hard way.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "row_qkFUUF": {
+          "type": "row",
+          "settings": {
+            "image": "shopify://shop_images/511266892_10229980876608243_789718470345390605_n.jpg",
+            "caption": "Tom Allen",
+            "heading": "Tom's Drive",
+            "text": "<p><strong>Tom</strong>’s been building steering for over 40 years. After a near-fatal motorcycle wreck, he decided if he was still here, he was going to make it count. He taught himself how to build rack-and-pinion systems, started rebuilding parts in a corner of a warehouse, and eventually took over the entire warehouse — supplying steering for Trans-Am race teams, off-road rigs, and even military vehicles.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "row_pCMYJJ": {
+          "type": "row",
+          "settings": {
+            "image": "shopify://shop_images/kim_about_us_page.png",
+            "caption": "Kim Allen",
+            "heading": "Built on Integrity,  Led with Experience",
+            "text": "<p><strong>Kim </strong>helped turn that hustle into a real business. She runs PSC today with a focus on doing things right — not fast, not cheap, just right. She’s raced, she’s led, and she’s built a team where everyone knows they’re part of something that matters.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "row_gUUjXD",
+        "row_qkFUUF",
+        "row_pCMYJJ"
+      ],
+      "name": "t:sections.multirow.presets.name",
+      "settings": {
+        "image_height": "medium",
+        "desktop_image_width": "medium",
+        "image_layout": "alternate-left",
+        "heading_size": "h1",
+        "text_style": "body",
+        "button_style": "secondary",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "",
+        "row_color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "video_NTBb7n": {
+      "type": "video",
+      "name": "t:sections.video.presets.name",
+      "settings": {
+        "heading": "Inside PSC: A Story of Innovation and Integrity",
+        "heading_size": "h2",
+        "enable_video_looping": false,
+        "video_url": "https://vimeo.com/1128655498/9f1126574b?share=copy&fl=sv&fe=ci",
+        "cover_image": "shopify://shop_images/tomandkimcoverphoto1.jpg",
+        "description": "The Story of PSC Motorsports",
+        "full_width": false,
+        "color_scheme": "scheme-f95fc31b-0c1b-4da3-82af-ed2967ed4967",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "multirow_YNBrm6": {
+      "type": "multirow",
+      "blocks": {
+        "row_WKLzt8": {
+          "type": "row",
+          "settings": {
+            "image": "shopify://shop_images/Image_9_890e6fb7-0a15-48bc-a363-7130cf435835.jpg",
+            "caption": "Jeff & Josh Allen",
+            "heading": "The Next Generation Driving PSC Forward",
+            "text": "<p><strong>Jeff</strong>, their oldest son, grew up in the business and now runs the front end. He’s the one making sure ideas turn into real parts, keeping things moving, and staying true to the family’s values.</p><p><strong>Josh</strong>, the youngest, heads up R&D and flat metal. He tests new ideas on his own vehicles and pushes PSC parts to the limit. If he trusts them with his life, you can too.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "row_rtq8Ui": {
+          "type": "row",
+          "settings": {
+            "image": "shopify://shop_images/karl_and_kelvin.png",
+            "caption": "Karl & Kelvin",
+            "heading": "Decades of Dedication, One Mission",
+            "text": "<p><strong>Karl</strong> was part of PSC in the early 2000s, took a long break, and came back in 2023 as Chief Operating Officer. He’s the one making sure the team’s got what it needs to stay focused and keep things rolling. He’s seen PSC grow from a handful of people packing boxes to a full-scale operation — and he’ll tell you the heart of it hasn’t changed: take care of customers, build parts that work, and don’t cut corners.</p><p><strong>Kelvin</strong>’s been here since the beginning — back when there were just a few gearboxes and some chickens wandering through the shop. He’s the guy customers call when they need answers, and he’s helped thousands of drivers get the right parts and get back on the trail.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "row_CwbyAn": {
+          "type": "row",
+          "disabled": true,
+          "settings": {
+            "caption": "Tony, Charlie, Kelly",
+            "heading": "The Makers Behind Every PSC Part",
+            "text": "<p><strong>Tony</strong> runs manufacturing and has been part of the story since the early days. If it’s going out the door, Tony’s made sure it’s built right — whether it’s a race-week rush job or a new product hitting the shelves.</p><p><strong>Charlie</strong> runs hands-on R&D, making sure every new idea works in real life, not just on paper. He’s the guy who stays late, tests hard, and makes sure every part we ship can be duplicated with precision.</p><p><strong>Kelly</strong>’s our go-to machinist — a walking, talking problem solver who’s been cranking handles for over 20 years. If PSC needs a part that doesn’t exist yet, Kelly figures out how to make it.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "row_WKLzt8",
+        "row_rtq8Ui",
+        "row_CwbyAn"
+      ],
+      "name": "t:sections.multirow.presets.name",
+      "settings": {
+        "image_height": "medium",
+        "desktop_image_width": "medium",
+        "image_layout": "alternate-left",
+        "heading_size": "h1",
+        "text_style": "body",
+        "button_style": "secondary",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "",
+        "row_color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "custom_liquid_NRMrhk": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "",
+        "color_scheme": "scheme-1",
+        "padding_top": 40,
+        "padding_bottom": 0
+      }
+    },
+    "rich_text_fGj7UB": {
+      "type": "rich-text",
+      "blocks": {
+        "text_kD7pcx": {
+          "type": "text",
+          "settings": {
+            "text": "<h1>Our Commitment: Quality Over Everything.</h1><p>We don’t build bargain-bin parts. We build steering that holds up — through hard miles, tough terrain, and real-world abuse. Whether you’re rock crawling, towing heavy, or chasing podiums, every PSC product is tested on real rigs, by people who know what works and what doesn’t.</p><p>We’ve come a long way since the garage days, but we still do things the same way: build it right, stand behind it, and treat customers the way we’d want to be treated.</p><p>We’re proud of what we’ve built. We’re proud of our team. And we’re proud that when someone chooses PSC, they know they’re getting steering they can count on — not just today, but for the long haul.</p><p>Because PSC isn’t just about parts. It’s about solving problems, backing up what we build, and making sure you’ve got steering that works — every time.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "text_kD7pcx"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "left",
+        "color_scheme": "scheme-1",
+        "full_width": true,
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "rich_text_cKEnjF": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_QLCcW9": {
+          "type": "heading",
+          "settings": {
+            "heading": "Our Team. Our Strength.",
+            "heading_size": "h1"
+          }
+        },
+        "text_yLAYPG": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.</p>"
+          }
+        },
+        "button_xCQBen": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "button_label": "Button label",
+            "button_link": "",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_QLCcW9",
+        "text_yLAYPG",
+        "button_xCQBen"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "1763780391a9c442de": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_25ef8da_7TUJz7": {
+          "type": "ai_gen_block_25ef8da",
+          "settings": {
+            "image_1": "shopify://shop_images/julio.jpg",
+            "image_2": "shopify://shop_images/John_D_Photo_1.jpg",
+            "image_3": "shopify://shop_images/johnny.jpg",
+            "image_4": "shopify://shop_images/Tony_Photo_1.jpg",
+            "image_5": "shopify://shop_images/a_guy.jpg",
+            "max_width": 1600,
+            "spacing": 8,
+            "spacing_mobile": 8,
+            "padding_vertical": 0,
+            "padding_horizontal": 0,
+            "aspect_ratio": 100,
+            "border_radius": 0
+          },
+          "blocks": {}
+        },
+        "ai_gen_block_25ef8da_rnmGYw": {
+          "type": "ai_gen_block_25ef8da",
+          "settings": {
+            "image_1": "shopify://shop_images/Felix_Photo_1.jpg",
+            "image_2": "shopify://shop_images/christian.jpg",
+            "image_3": "shopify://shop_images/Tim_S_Photo_2.jpg",
+            "image_4": "shopify://shop_images/Chad_S_Photo_1.jpg",
+            "image_5": "shopify://shop_images/ELi_Photo_1.jpg",
+            "max_width": 1600,
+            "spacing": 8,
+            "spacing_mobile": 8,
+            "padding_vertical": 0,
+            "padding_horizontal": 0,
+            "aspect_ratio": 100,
+            "border_radius": 0
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_25ef8da_7TUJz7",
+        "ai_gen_block_25ef8da_rnmGYw"
+      ],
+      "settings": {}
+    }
+  },
+  "order": [
+    "1763781941e2b4017d",
+    "image_banner_x74eVF",
+    "multirow_gP6qVb",
+    "video_NTBb7n",
+    "multirow_YNBrm6",
+    "main",
+    "custom_liquid_NRMrhk",
+    "rich_text_fGj7UB",
+    "rich_text_cKEnjF",
+    "1763780391a9c442de"
+  ]
+}

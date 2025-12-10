@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin language editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "general": {
     "password_page": {
@@ -59,7 +68,7 @@
   },
   "newsletter": {
     "label": "Email",
-    "success": "Thanks for subscribing",
+    "success": "Thanks for subscribing!",
     "button_label": "Subscribe"
   },
   "accessibility": {
@@ -167,7 +176,7 @@
         "unit_price": "Unit price"
       },
       "share": "Share this product",
-      "sold_out": "Sold out",
+      "sold_out": "Out of Stock",
       "unavailable": "Unavailable",
       "vendor": "Vendor",
       "value_unavailable": "{{ option_value }} - Unavailable",
@@ -218,7 +227,7 @@
   },
   "templates": {
     "search": {
-      "no_results": "No results found for “{{ terms }}”. Check the spelling or use a different word or phrase.",
+      "no_results": "Didn’t find a match for “{{ terms }}”. Check the spelling, try a different term or check out what’s in stock — we’ve got plenty of solid gear ready to ship.",
       "page": "Page",
       "products": "Products",
       "results_pages_with_count": {
@@ -257,7 +266,7 @@
         "phone": "Phone number",
         "comment": "Comment",
         "send": "Send",
-        "post_success": "Thanks for contacting us. We'll get back to you as soon as possible.",
+        "post_success": "Message sent! Our team’s on it. We’ll follow up soon to make sure you get the answers you need.",
         "error_heading": "Please adjust the following:"
       }
     },
@@ -274,7 +283,6 @@
       "announcement": "Announcement",
       "announcement_bar": "Announcement bar"
     },
-
     "header": {
       "announcement": "Announcement",
       "menu": "Menu",
@@ -526,6 +534,15 @@
       "max_characters": "{{ max_chars }} characters max",
       "send_on": "YYYY-MM-DD",
       "send_on_label": "Send on (optional)"
+    }
+  },
+  "shopify": {
+    "collections": {
+      "sorting": {
+        "best_selling": "Best Sellers",
+        "price_ascending": "Price – Low to High ",
+        "price_descending": "Price – High to Low "
+      }
     }
   }
 }

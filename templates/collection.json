@@ -9,14 +9,6 @@
  */
 {
   "sections": {
-    "banner": {
-      "type": "main-collection-banner",
-      "settings": {
-        "show_collection_description": true,
-        "show_collection_image": false,
-        "color_scheme": "scheme-1"
-      }
-    },
     "breadcrumbs_Njfh8P": {
       "type": "breadcrumbs",
       "name": "Breadcrumbs",
@@ -31,8 +23,58 @@
         "padding_bottom": 20
       }
     },
+    "apps_CATkbB": {
+      "type": "apps",
+      "blocks": {
+        "partfinder_year_make_model_vehicle_search_bar_QcgNNg": {
+          "type": "shopify://apps/partfinder-year-make-model/blocks/vehicle_search_bar/2892d2e7-0551-451a-8d78-8a0f565a5174",
+          "settings": {
+            "gv-enable-submodel": false,
+            "gv-disable-full-width-class": false,
+            "gv-disable-styles": false,
+            "gv-search-bar": "#97aab7",
+            "gv-search-color": "#4a5c68",
+            "gv-search-text-color": "#ffffff",
+            "gv-clear-color": "rgba(0,0,0,0)",
+            "gv-clear-text-color": "#121212",
+            "gv-search-label": "Search",
+            "gv-clear-label": "Clear",
+            "gv-show-title-label": true,
+            "gv-title-label": "SELECT YOUR VEHICLE",
+            "gv-title-bg": "#000000",
+            "gv-title-text": "#ffffff",
+            "gv-show-toggle-button": true,
+            "gv-toggle-button-label": "SELECT YOUR VEHICLE",
+            "gv-toggle-button-bg": "#000000",
+            "gv-toggle-button-text": "#ffffff",
+            "gv-margin-top": 0,
+            "gv-margin-bottom": 30,
+            "gv-margin-left": 0,
+            "gv-margin-right": 0
+          }
+        }
+      },
+      "block_order": [
+        "partfinder_year_make_model_vehicle_search_bar_QcgNNg"
+      ],
+      "custom_css": [
+        ".auto-part-search-bar .gv-mmy-bar {padding: 2rem 1rem;}"
+      ],
+      "settings": {
+        "include_margins": false
+      }
+    },
+    "banner": {
+      "type": "main-collection-banner",
+      "settings": {
+        "show_collection_description": true,
+        "show_collection_image": false,
+        "color_scheme": "scheme-1"
+      }
+    },
     "product-grid": {
       "type": "main-collection-product-grid",
+      "custom_css": [],
       "settings": {
         "products_per_page": 16,
         "columns_desktop": 4,
@@ -54,6 +96,7 @@
   },
   "order": [
     "breadcrumbs_Njfh8P",
+    "apps_CATkbB",
     "banner",
     "product-grid"
   ]

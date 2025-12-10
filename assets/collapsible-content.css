@@ -109,6 +109,39 @@
   text-underline-offset: 0.3rem;
 }
 
+.collapsible-section-group {
+  margin-bottom: 3rem;
+}
+
+.collapsible-section-group:last-child {
+  margin-bottom: 0;
+}
+
+.collapsible-section-group__title {
+  margin: 0 0 1.5rem 0;
+  text-align: left;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.collapsible-section-group__icon {
+  display: inline-block;
+  flex-shrink: 0;
+}
+
+.accordion__title {
+  text-align: left;
+}
+
+.accordion__custom-icon {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 1rem;
+  flex-shrink: 0;
+}
+
 /* check for flexbox gap in older Safari versions */
 @supports not (inset: 10px) {
   @media screen and (min-width: 750px) {

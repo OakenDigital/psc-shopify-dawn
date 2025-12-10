@@ -49,7 +49,7 @@
       "settings": {
         "image": "shopify://shop_images/Home_Hero_-_Norra_1000_2025_2_with_gradient.png",
         "image_overlay_opacity": 0,
-        "image_height": "medium",
+        "image_height": "adapt",
         "image_behavior": "none",
         "desktop_content_position": "bottom-right",
         "desktop_content_alignment": "center",
@@ -90,7 +90,7 @@
         "featured_collection_RarMKW": {
           "type": "featured_collection",
           "settings": {
-            "collection": "street-muscle-performance-car"
+            "collection": "street-muscle-performance-car-trucks"
           }
         }
       },
@@ -103,17 +103,17 @@
       ],
       "name": "t:sections.collection-list.presets.name",
       "settings": {
-        "eyebrow_text": "Collections",
+        "eyebrow_text": "",
         "eyebrow_color": "#d6001c",
         "title": "Shop by Vehicle",
         "description": "<p>Check out our lineup of steering systems and components built tough for real-world performance. Every part’s engineered for durability and tested to keep you turning strong.</p>",
         "heading_size": "h1",
         "image_ratio": "square",
-        "columns_desktop": 4,
+        "columns_desktop": 5,
         "color_scheme": "scheme-1",
         "show_view_all": false,
         "columns_mobile": "2",
-        "swipe_on_mobile": false,
+        "swipe_on_mobile": true,
         "padding_top": 36,
         "padding_bottom": 36
       }
@@ -138,7 +138,7 @@
         "text_XGV8jB": {
           "type": "text",
           "settings": {
-            "text": "<p>The Big Bore XD® Steering Gear gives you more muscle, better control and less effort—perfect for rigs running big tires or heavy setups.</p>",
+            "text": "<p>The Big Bore XD® Steering Gear gives you more muscle, better control and less effort—perfect for vehicles running big tires or heavy setups.</p>",
             "text_style": "body"
           }
         },
@@ -146,7 +146,7 @@
           "type": "button",
           "settings": {
             "button_label": "View More",
-            "button_link": "shopify://collections/big-bore-xd-gearbox-kits",
+            "button_link": "shopify://collections/big-bore-xd-steering-gear-kits",
             "button_style_secondary": false,
             "button_color_scheme": "scheme-f95fc31b-0c1b-4da3-82af-ed2967ed4967"
           }
@@ -160,8 +160,8 @@
       ],
       "name": "t:sections.image-with-text.presets.name",
       "settings": {
-        "image": "shopify://shop_images/jeep-collection-hero.jpg",
-        "height": "adapt",
+        "image": "shopify://shop_images/PSC_King_of_the_Hammers_2017.png",
+        "height": "medium",
         "desktop_image_width": "medium",
         "layout": "image_first",
         "image_behavior": "none",
@@ -184,7 +184,7 @@
         "eyebrow_color": "#dc2626",
         "title": "Top Steering Solutions",
         "heading_size": "h1",
-        "description": "<p>Shop steering parts that work as hard as your rig—built for strength, tested for the long haul.<br/></p>",
+        "description": "<p>Shop steering parts that work as hard as your vehicle—built for strength, tested for the long haul.<br/></p>",
         "show_description": false,
         "description_style": "body",
         "columns_desktop": 6,
