@@ -309,6 +309,44 @@
             </div>
           {%- endif -%}
 
+          {%- if section.settings.show_purchased_from -%}
+            <div class="field">
+              <select
+                id="ProductRegistrationForm-purchased-from"
+                class="field__input"
+                name="contact[Purchased From]"
+                required
+                data-purchased-from-select
+              >
+                <option value="" disabled selected>Select where you purchased</option>
+                <option value="Direct from PSC Online or by phone">Direct from PSC - Online or by phone</option>
+                <option value="Summit Racing">Summit Racing</option>
+                <option value="Northridge4x4">Northridge4x4</option>
+                <option value="Meyer Distributing">Meyer Distributing</option>
+                <option value="other">Other</option>
+              </select>
+              <label class="field__label" for="ProductRegistrationForm-purchased-from">
+                {{ section.settings.purchased_from_label | default: 'Purchased From?' }}
+                <span aria-hidden="true">*</span>
+              </label>
+            </div>
+
+            <div class="field" id="ProductRegistrationForm-purchased-from-other" style="display: none;">
+              <input
+                type="text"
+                id="ProductRegistrationForm-purchased-from-other-input"
+                class="field__input"
+                name="contact[Purchased From Other]"
+                placeholder="{{ section.settings.purchased_from_other_placeholder | default: 'Please specify where you purchased' }}"
+                data-purchased-from-other-input
+              >
+              <label class="field__label" for="ProductRegistrationForm-purchased-from-other-input">
+                {{ section.settings.purchased_from_other_label | default: 'Where did you purchase?' }}
+                <span aria-hidden="true">*</span>
+              </label>
+            </div>
+          {%- endif -%}
+
           {%- if section.settings.show_purchase_date -%}
             <div class="field">
               <input
@@ -840,6 +878,34 @@
       "label": "Serial Number Pattern (Regex)",
       "default": "^[A-Z0-9]{6,20}$",
       "info": "Regex pattern for serial number validation (e.g., ^[A-Z0-9]{6,20}$)"
+    },
+    {
+      "type": "header",
+      "content": "Purchased From"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_purchased_from",
+      "label": "Show Purchased From Field",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "purchased_from_label",
+      "label": "Purchased From Label",
+      "default": "Purchased From?"
+    },
+    {
+      "type": "text",
+      "id": "purchased_from_other_label",
+      "label": "Purchased From Other Label",
+      "default": "Where did you purchase?"
+    },
+    {
+      "type": "text",
+      "id": "purchased_from_other_placeholder",
+      "label": "Purchased From Other Placeholder",
+      "default": "Please specify where you purchased"
     },
     {
       "type": "header",

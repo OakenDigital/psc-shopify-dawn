@@ -63,6 +63,32 @@ if (!customElements.get('product-registration-form')) {
           });
         }
 
+        // Purchased From dropdown handler
+        const purchasedFromSelect = this.querySelector('[data-purchased-from-select]');
+        const purchasedFromOther = this.querySelector('#ProductRegistrationForm-purchased-from-other');
+        const purchasedFromOtherInput = this.querySelector('[data-purchased-from-other-input]');
+
+        if (purchasedFromSelect) {
+          // Handle initial state
+          if (purchasedFromSelect.value) {
+            purchasedFromSelect.classList.add('field__input--has-value');
+          }
+
+          purchasedFromSelect.addEventListener('change', () => {
+            // Update label positioning
+            if (purchasedFromSelect.value) {
+              purchasedFromSelect.classList.add('field__input--has-value');
+            } else {
+              purchasedFromSelect.classList.remove('field__input--has-value');
+            }
+
+            // Handle "Other" option
+            if (purchasedFromOther) {
+              this.handlePurchasedFromChange(purchasedFromSelect, purchasedFromOther, purchasedFromOtherInput);
+            }
+          });
+        }
+
         // Form submission
         if (this.form) {
           this.form.addEventListener('submit', this.onSubmitHandler.bind(this));
@@ -221,6 +247,21 @@ if (!customElements.get('product-registration-form')) {
               submissionData['Product'] = productSelectInput.value;
             }
           }
+        }
+
+        // Handle Purchased From selection
+        const purchasedFromSelect = this.querySelector('[data-purchased-from-select]');
+        if (purchasedFromSelect) {
+          if (purchasedFromSelect.value === 'other') {
+            const purchasedFromOtherInput = this.querySelector('[data-purchased-from-other-input]');
+            if (purchasedFromOtherInput && purchasedFromOtherInput.value) {
+              submissionData['Purchased From'] = purchasedFromOtherInput.value;
+            }
+          } else if (purchasedFromSelect.value) {
+            submissionData['Purchased From'] = purchasedFromSelect.value;
+          }
+          // Remove the "Purchased From Other" field from submission if it exists
+          delete submissionData['Purchased From Other'];
         }
 
         // Add metadata
@@ -421,6 +462,19 @@ if (!customElements.get('product-registration-form')) {
           if (productOtherInput) {
             productOtherInput.required = false;
             productOtherInput.value = '';
+          }
+        }
+      }
+
+      handlePurchasedFromChange(purchasedFromSelect, purchasedFromOther, purchasedFromOtherInput) {
+        if (purchasedFromSelect.value === 'other') {
+          if (purchasedFromOther) purchasedFromOther.style.display = 'block';
+          if (purchasedFromOtherInput) purchasedFromOtherInput.required = true;
+        } else {
+          if (purchasedFromOther) purchasedFromOther.style.display = 'none';
+          if (purchasedFromOtherInput) {
+            purchasedFromOtherInput.required = false;
+            purchasedFromOtherInput.value = '';
           }
         }
       }
