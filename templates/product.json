@@ -331,6 +331,17 @@
             "file_link_text": ""
           }
         },
+        "collapsible_row_j6UEfF": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Tech Videos",
+            "row_content": "",
+            "page": "",
+            "metafield_namespace": "custom",
+            "metafield_key": "tech_videos_how_to",
+            "file_link_text": ""
+          }
+        },
         "collapsible_row_4AWmwz": {
           "type": "collapsible_row",
           "settings": {
@@ -355,6 +366,7 @@
         "collapsible_row_dWpThT",
         "section_heading_pYFkHR",
         "collapsible_row_BMzAj6",
+        "collapsible_row_j6UEfF",
         "collapsible_row_4AWmwz"
       ],
       "name": "t:sections.collapsible_content.presets.name",
