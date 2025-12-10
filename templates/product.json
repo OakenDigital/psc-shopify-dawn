@@ -331,17 +331,6 @@
             "file_link_text": ""
           }
         },
-        "collapsible_row_j6UEfF": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "Tech Videos",
-            "row_content": "",
-            "page": "",
-            "metafield_namespace": "custom",
-            "metafield_key": "tech_videos_how_to",
-            "file_link_text": ""
-          }
-        },
         "collapsible_row_4AWmwz": {
           "type": "collapsible_row",
           "settings": {
@@ -366,7 +355,6 @@
         "collapsible_row_dWpThT",
         "section_heading_pYFkHR",
         "collapsible_row_BMzAj6",
-        "collapsible_row_j6UEfF",
         "collapsible_row_4AWmwz"
       ],
       "name": "t:sections.collapsible_content.presets.name",
@@ -447,6 +435,16 @@
         "padding_top": 60,
         "padding_bottom": 60
       }
+    },
+    "custom_liquid_BfyXX9": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "{% if product.metafields.custom.tech_videos_how_to != blank %}\n<iframe width=\"560\" height=\"315\" src=\"{{product.metafields.custom.embed_youtube_video}}\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>\n{% endif %}",
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
     }
   },
   "order": [
@@ -459,6 +457,7 @@
     "collapsible_content_fgDLQP",
     "related-products",
     "176235741763515547",
-    "conditional_content_ajjAYb"
+    "conditional_content_ajjAYb",
+    "custom_liquid_BfyXX9"
   ]
 }
