@@ -11,6 +11,7 @@
   "sections": {
     "psc_product_registration_h44CB3": {
       "type": "psc-product-registration",
+      "disabled": true,
       "name": "PSC Product Registration",
       "settings": {
         "heading": "Lock In Your Warranty Today",
@@ -88,7 +89,6 @@
     },
     "main": {
       "type": "main-page",
-      "disabled": true,
       "settings": {
         "padding_top": 48,
         "padding_bottom": 28
