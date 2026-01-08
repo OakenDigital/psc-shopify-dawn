@@ -6,6 +6,10 @@
     assign has_content = true
   endif
 
+  if block.settings.custom_liquid != blank
+    assign has_content = true
+  endif
+
   if block.settings.metafield_namespace != blank and block.settings.metafield_key != blank
     assign metafield_content = product.metafields[block.settings.metafield_namespace][block.settings.metafield_key]
     if metafield_content != blank
@@ -36,6 +40,10 @@
       >
         {{ block.settings.row_content }}
         {{ block.settings.page.content }}
+
+        {%- if block.settings.custom_liquid != blank -%}
+          {{ block.settings.custom_liquid }}
+        {%- endif -%}
 
         {%- if metafield_content != blank -%}
           {%- if metafield_content.type == 'file_reference' -%}

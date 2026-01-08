@@ -89,6 +89,9 @@
                       {%- if check_block.settings.row_content != blank or check_block.settings.page.content != blank -%}
                         {%- assign check_has_content = true -%}
                       {%- endif -%}
+                      {%- if check_block.settings.custom_liquid != blank -%}
+                        {%- assign check_has_content = true -%}
+                      {%- endif -%}
                       {%- if check_block.settings.metafield_namespace != blank
                         and check_block.settings.metafield_key != blank
                       -%}
@@ -360,6 +363,20 @@
           "type": "page",
           "id": "page",
           "label": "t:sections.collapsible_content.blocks.collapsible_row.settings.page.label"
+        },
+        {
+          "type": "header",
+          "content": "Custom Liquid (Optional)"
+        },
+        {
+          "type": "paragraph",
+          "content": "Add custom Liquid code for advanced use cases like looping through file lists."
+        },
+        {
+          "type": "liquid",
+          "id": "custom_liquid",
+          "label": "Custom Liquid Code",
+          "info": "Example: Cusom Liquid Snippets"
         },
         {
           "type": "header",
