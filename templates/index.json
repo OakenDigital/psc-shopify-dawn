@@ -31,7 +31,7 @@
           "settings": {
             "button_layout": "inline",
             "button_label_1": "Shop Steering Systems",
-            "button_link_1": "shopify://collections/all",
+            "button_link_1": "shopify://collections/steering-systems",
             "button_style_secondary_1": false,
             "button_color_scheme_1": "scheme-3e379a2a-46a4-4c6f-826a-ba5df32a53b6",
             "button_label_2": "Shop New Products",
