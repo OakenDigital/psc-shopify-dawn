@@ -56,8 +56,8 @@
             <ul class="metafield-file-list">
               {%- for file in metafield_content.value -%}
                 <li>
-                  <a href="{{ file }}" target="_blank">
-                    {{ file.alt | default: 'Download File' }}
+                  <a href="{{ file.url }}" target="_blank">
+                    {{ file.alt | default: file.filename | default: 'Download File' }}
                   </a>
                 </li>
               {%- endfor -%}
