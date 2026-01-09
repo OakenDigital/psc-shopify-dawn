@@ -226,6 +226,7 @@
             "heading": "Description",
             "row_content": "{{ product.description }}",
             "page": "",
+            "custom_liquid": "",
             "metafield_namespace": "",
             "metafield_key": "",
             "file_link_text": "Download File"
@@ -237,6 +238,7 @@
             "heading": "Why you’ll love it",
             "row_content": "{{ product.metafields.custom.why_you_ll_love_it | metafield_tag }}",
             "page": "",
+            "custom_liquid": "",
             "metafield_namespace": "",
             "metafield_key": "",
             "file_link_text": "Download File"
@@ -244,7 +246,6 @@
         },
         "section_heading_wEkmih": {
           "type": "section_heading",
-          "disabled": true,
           "settings": {
             "title": "Tech Info",
             "custom_icon": "shopify://shop_images/wrenches.svg"
@@ -256,6 +257,7 @@
             "heading": "Heads‑up for installers",
             "row_content": "<p>{{ product.metafields.custom.heads_up_for_installers | metafield_tag }}</p>",
             "page": "",
+            "custom_liquid": "",
             "metafield_namespace": "",
             "metafield_key": "",
             "file_link_text": "Download File"
@@ -267,6 +269,7 @@
             "heading": "Ideal for",
             "row_content": "{{ product.metafields.custom.ideal_for | metafield_tag }}",
             "page": "",
+            "custom_liquid": "",
             "metafield_namespace": "",
             "metafield_key": "",
             "file_link_text": "Download File"
@@ -278,6 +281,7 @@
             "heading": "Fitment",
             "row_content": "{{ product.metafields.custom.fitment_pdp | metafield_tag }}",
             "page": "",
+            "custom_liquid": "",
             "metafield_namespace": "",
             "metafield_key": "",
             "file_link_text": "Download File"
@@ -289,6 +293,7 @@
             "heading": "Use it with",
             "row_content": "{{ product.metafields.custom.use_it_with | metafield_tag }}",
             "page": "",
+            "custom_liquid": "",
             "metafield_namespace": "",
             "metafield_key": "",
             "file_link_text": "Download File"
@@ -300,6 +305,7 @@
             "heading": "What’s included",
             "row_content": "{{ product.metafields.custom.what_s_included | metafield_tag }}",
             "page": "",
+            "custom_liquid": "",
             "metafield_namespace": "",
             "metafield_key": "",
             "file_link_text": "Download File"
@@ -318,6 +324,7 @@
             "heading": "Install Instructions",
             "row_content": "",
             "page": "",
+            "custom_liquid": "",
             "metafield_namespace": "custom",
             "metafield_key": "install_instructions",
             "file_link_text": ""
@@ -329,6 +336,7 @@
             "heading": "OEM Cross Reference",
             "row_content": "<p>{{ product.metafields.custom.oem_cross_reference | metafield_tag }}</p>",
             "page": "",
+            "custom_liquid": "",
             "metafield_namespace": "",
             "metafield_key": "",
             "file_link_text": "Download File"
