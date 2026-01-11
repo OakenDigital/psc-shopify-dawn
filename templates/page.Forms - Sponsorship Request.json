@@ -26,12 +26,6 @@
             "heading_size": "h1"
           }
         },
-        "text_amK8Lx": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Got an event or project you’d like PSC to be part of? We’re all ears—but here’s how it works:<br/><br/>Fill out the form below to send us the details.<br/>We need your request at least 60 days before you need the contribution—that gives us time to review and plan.<br/>Anything marked with an asterisk (*) is required.<br/>If your request gets the green light, we’ll reach out by phone or email within 30 days.<br/><br/>Just a heads-up: We get a lot of requests every year, and while we’d love to help everyone, that’s not always possible. We’ll do our best to support the ones that fit PSC and our community.</p>"
-          }
-        },
         "button_QJxdCV": {
           "type": "button",
           "settings": {
@@ -46,7 +40,6 @@
       },
       "block_order": [
         "heading_eqkhBp",
-        "text_amK8Lx",
         "button_QJxdCV"
       ],
       "name": "t:sections.rich-text.presets.name",
@@ -86,11 +79,40 @@
       "settings": {
         "include_margins": true
       }
+    },
+    "17681686994eae9bed": {
+      "type": "apps",
+      "blocks": {
+        "forms_inline_adQnxF": {
+          "type": "shopify://apps/forms/blocks/inline/8744a304-fcb1-4347-b211-bb6b4759a76a",
+          "settings": {
+            "form_id": "822196",
+            "text_color": "#202020",
+            "button_background_color": "#202020",
+            "button_label_color": "#FFFFFF",
+            "links_color": "#1878B9",
+            "errors_color": "#E02229",
+            "text_alignment": "center",
+            "form_alignment": "center",
+            "padding_top": 0,
+            "padding_bottom": 24,
+            "padding_right": 0,
+            "padding_left": 0
+          }
+        }
+      },
+      "block_order": [
+        "forms_inline_adQnxF"
+      ],
+      "settings": {
+        "include_margins": true
+      }
     }
   },
   "order": [
     "cd0a8e3a-cfbd-42e7-88bb-b206f7176d40",
     "rich_text_F44yVz",
-    "forms"
+    "forms",
+    "17681686994eae9bed"
   ]
 }
