@@ -251,18 +251,6 @@
             "custom_icon": "shopify://shop_images/wrenches.svg"
           }
         },
-        "collapsible_row_99X6Dp": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "Fitment",
-            "row_content": "{{ product.metafields.custom.fitment_pdp | metafield_tag }}",
-            "page": "",
-            "custom_liquid": "",
-            "metafield_namespace": "",
-            "metafield_key": "",
-            "file_link_text": "Download File"
-          }
-        },
         "collapsible_row_gQerXy": {
           "type": "collapsible_row",
           "settings": {
@@ -275,23 +263,11 @@
             "file_link_text": "Download File"
           }
         },
-        "collapsible_row_Tqi8k6": {
+        "collapsible_row_99X6Dp": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "Specs",
-            "row_content": "{{ product.metafields.custom.specs | metafield_tag }}",
-            "page": "",
-            "custom_liquid": "",
-            "metafield_namespace": "",
-            "metafield_key": "",
-            "file_link_text": "Download File"
-          }
-        },
-        "collapsible_row_dWpThT": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "What’s included",
-            "row_content": "{{ product.metafields.custom.what_s_included | metafield_tag }}",
+            "heading": "Fitment",
+            "row_content": "{{ product.metafields.custom.fitment_pdp | metafield_tag }}",
             "page": "",
             "custom_liquid": "",
             "metafield_namespace": "",
@@ -316,6 +292,30 @@
           "settings": {
             "heading": "Ideal for",
             "row_content": "{{ product.metafields.custom.ideal_for | metafield_tag }}",
+            "page": "",
+            "custom_liquid": "",
+            "metafield_namespace": "",
+            "metafield_key": "",
+            "file_link_text": "Download File"
+          }
+        },
+        "collapsible_row_Tqi8k6": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Specs",
+            "row_content": "{{ product.metafields.custom.specs | metafield_tag }}",
+            "page": "",
+            "custom_liquid": "",
+            "metafield_namespace": "",
+            "metafield_key": "",
+            "file_link_text": "Download File"
+          }
+        },
+        "collapsible_row_dWpThT": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "What’s included",
+            "row_content": "{{ product.metafields.custom.what_s_included | metafield_tag }}",
             "page": "",
             "custom_liquid": "",
             "metafield_namespace": "",
@@ -372,12 +372,12 @@
         "collapsible_row_bHQJKc",
         "collapsible_row_PbgMUq",
         "section_heading_wEkmih",
-        "collapsible_row_99X6Dp",
         "collapsible_row_gQerXy",
-        "collapsible_row_Tqi8k6",
-        "collapsible_row_dWpThT",
+        "collapsible_row_99X6Dp",
         "collapsible_row_3PTdh8",
         "collapsible_row_NNdPwE",
+        "collapsible_row_Tqi8k6",
+        "collapsible_row_dWpThT",
         "section_heading_pYFkHR",
         "collapsible_row_BMzAj6",
         "collapsible_row_jJHE8V",
