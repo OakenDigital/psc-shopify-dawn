@@ -83,6 +83,7 @@
         },
         "affirm_pay_over_time_messaging_product_block_mJM8Ae": {
           "type": "shopify://apps/affirm-pay-over-time-messaging/blocks/product-block/6dce54be-130d-4d13-9636-1e8f611b3071",
+          "disabled": true,
           "settings": {
             "logo_align": "left",
             "font_size": 14,
@@ -183,6 +184,7 @@
     },
     "psc_trail_score_RMztJE": {
       "type": "psc-trail-score",
+      "disabled": true,
       "name": "PSC Trail Score",
       "settings": {
         "metafield_namespace": "custom",
@@ -383,6 +385,7 @@
         "collapsible_row_jJHE8V",
         "collapsible_row_4AWmwz"
       ],
+      "disabled": true,
       "name": "t:sections.collapsible_content.presets.name",
       "settings": {
         "caption": "",
@@ -434,12 +437,14 @@
       "blocks": {
         "yotpo_product_reviews_reviews_7indRK": {
           "type": "shopify://apps/yotpo-product-reviews/blocks/reviews/eb7dfd7d-db44-4334-bc49-c893b51b36cf",
+          "disabled": true,
           "settings": {
             "product": "{{product}}"
           }
         },
         "yotpo_product_reviews_vugc_media_gallery_QKAifb": {
           "type": "shopify://apps/yotpo-product-reviews/blocks/vugc_media_gallery/eb7dfd7d-db44-4334-bc49-c893b51b36cf",
+          "disabled": true,
           "settings": {
             "product": "{{ product }}",
             "widget_instance_id": "1249840"
