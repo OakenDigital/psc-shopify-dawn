@@ -60,7 +60,7 @@
         "370c0b32-e6f3-4f5b-99d3-f4ea2a980299": {
           "type": "shopify://apps/forms/blocks/inline/8744a304-fcb1-4347-b211-bb6b4759a76a",
           "settings": {
-            "form_id": "822196",
+            "form_id": "828663",
             "text_color": "#202020",
             "button_background_color": "#202020",
             "button_label_color": "#ffffff",
@@ -87,12 +87,45 @@
       "settings": {
         "include_margins": true
       }
+    },
+    "rich_text_fkmDta": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_9wtK9V": {
+          "type": "heading",
+          "disabled": true,
+          "settings": {
+            "heading": "Talk about your brand",
+            "heading_size": "h1"
+          }
+        },
+        "text_JGz3Y6": {
+          "type": "text",
+          "settings": {
+            "text": "<p>For Warranty Service, please attach/enclose a proof of purchase from an Authorized PSC Motorsports Dealer, this completed Service Request Form, and write an issued RGA/RMA number on the outside of the return package in a conspicuous place. </p><p>PSC Motorsports recommends shipping via UPS, FedEx pr DHL and insuring the package for replacement value. All other carriers are shopped at your own Risk. PSC Motorsports is not responsible for any items(s) damaged during shipping. Sender must file a claim with the carrier of choice. </p><p>Before shipping your item(s) please take note of the following:</p><ul><li>Please throughly drain item(s) of fluid and, if available, use port plugs. </li><li>Use a plastic wrap/bag to keep your package from leaking. UPS.FedEx/DHL will declare a package as HazMat if the packaging is soiled by fluid leaks, which could delay or terminate the shipment. </li></ul><p>Turnaround time is generally 3-5 business days.</p><p>PSC Motorsports will repair, replace or credit any defective product within thirty (30) days after receipt. </p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_9wtK9V",
+        "text_JGz3Y6"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
     }
   },
   "order": [
     "cd0a8e3a-cfbd-42e7-88bb-b206f7176d40",
     "rich_text_F44yVz",
     "forms",
-    "17681686994eae9bed"
+    "17681686994eae9bed",
+    "rich_text_fkmDta"
   ]
 }
