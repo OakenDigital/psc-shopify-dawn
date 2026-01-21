@@ -24,13 +24,13 @@
           "type": "heading",
           "settings": {
             "heading": "PSC Service Department",
-            "heading_size": "hxl"
+            "heading_size": "h0"
           }
         },
         "text": {
           "type": "text",
           "settings": {
-            "text": "PSC has a full team of expert technicians available to service and maintain your PSC products. We're committed to helping our customers get the most from their investment in the world's best performance power steering products.",
+            "text": "PSC has a dedicated service team that works on our steering products every day. If it’s PSC‑built, you’re sending it back to the same people who know it inside and out.",
             "text_style": "body"
           }
         }
@@ -41,11 +41,13 @@
       ],
       "settings": {
         "image_overlay_opacity": 30,
-        "image_height": "medium",
+        "image_height": "small",
+        "image_behavior": "none",
         "desktop_content_position": "middle-center",
         "desktop_content_alignment": "center",
         "show_text_box": false,
         "color_scheme": "scheme-1",
+        "stack_images_on_mobile": true,
         "mobile_content_alignment": "center",
         "show_text_below": true
       }
@@ -113,8 +115,8 @@
         "pricing_4"
       ],
       "settings": {
-        "title": "PSC Service Department",
-        "subtitle": "PSC has a full team of expert technicians available to service and maintain your PSC products.",
+        "title": "Service Options",
+        "subtitle": "Select the service that fits what you’re sending in. Pricing and what’s included are outlined below.",
         "heading_size": "h1",
         "color_scheme": "scheme-1",
         "padding_top": 52,
@@ -127,14 +129,14 @@
         "heading": {
           "type": "heading",
           "settings": {
-            "heading": "Available Services",
+            "heading": "How PSC Works",
             "heading_size": "h1"
           }
         },
         "text": {
           "type": "text",
           "settings": {
-            "text": "<p>PSC Service technicians are trained and experienced to maximize comfort and handling performance. Modern vehicles have complex integration of electronic components which when properly diagnosed, optimized, and reset offer vastly improved steering response. We also conduct full teardowns, rebuilds, and part inspection; exceptional service from knowledgeable technicians at competitive prices. Expertise unmatched and resulting in a more polished finish.</p><ul><li>All require parts: The super depiction vel gravida performance porta. Suspendisse porta diam non mollis non maxilla risus. Non sapien dapibus eros hendrerit non.</li><li>All standard work: No risk gravida performance. Exceptional service from knowledgeable technicians at competitive prices.</li><li>All rebuild work: Excellent dapibus non maxilla risus porta diam mollis non excepteur anim dolor dolor lorem</li><li>All service: Work with gravida performance porta sagittis in adipiscing. Porta lorem dapibus non excepteur anim dolor lorem tellus suspendisse porta diam non mollis.</li></ul>"
+            "text": "<p>Once your part arrives, it’s inspected, torn down if needed, and checked against PSC specs. We’ll let you know what we find and what it’ll take to fix it before any work starts.<br/><br/>We service PSC‑built steering components only. That keeps turnaround times reasonable and ensures every repair is done with the right parts and clear expectations.</p><ul><li>PSC‑built parts only — no third‑party components</li><li>Inspection and teardown as required</li><li>Repairs done using PSC parts and procedures</li><li>We contact you with findings before moving forward</li><li>Final testing before return shipment<br/><br/></li></ul>"
           }
         }
       },
@@ -192,11 +194,11 @@
         "heading_size": "h1",
         "image_width": "full",
         "image_ratio": "adapt",
+        "button_label": "",
+        "button_link": "",
         "columns_desktop": 3,
         "column_alignment": "left",
         "background_style": "none",
-        "button_label": "",
-        "button_link": "",
         "color_scheme": "scheme-1",
         "columns_mobile": "1",
         "swipe_on_mobile": false,
@@ -234,7 +236,11 @@
           "settings": {
             "heading": "1) Complete a SERVICE REQUEST FORM",
             "row_content": "<p>Complete a <a href=\"#\" title=\"Service Request Form\">SERVICE REQUEST FORM</a> and place it in a plastic baggie to prevent oil leak, and include it in the package with the component.</p>",
-            "page": ""
+            "page": "",
+            "custom_liquid": "",
+            "metafield_namespace": "",
+            "metafield_key": "",
+            "file_link_text": "Download File"
           }
         },
         "step_2": {
@@ -242,7 +248,11 @@
           "settings": {
             "heading": "2) Pack the component well",
             "row_content": "<p>Thoroughly wrap your component in bubble wrap, and, if available, use puff bags.</p>",
-            "page": ""
+            "page": "",
+            "custom_liquid": "",
+            "metafield_namespace": "",
+            "metafield_key": "",
+            "file_link_text": "Download File"
           }
         },
         "step_3": {
@@ -250,7 +260,11 @@
           "settings": {
             "heading": "3) Use a plastic airbag",
             "row_content": "<p>Use a plastic airbag to keep your package from leaking. UPS/FedEx/USPS will discard a package if harmful if the package is leaking. Also, always label which carrier you are using.</p>",
-            "page": ""
+            "page": "",
+            "custom_liquid": "",
+            "metafield_namespace": "",
+            "metafield_key": "",
+            "file_link_text": "Download File"
           }
         },
         "step_4": {
@@ -258,7 +272,11 @@
           "settings": {
             "heading": "4) Pack with the carrier of your choice",
             "row_content": "<p>Pack with the carrier of your choice. PSC recommends shipping your package for replacement value. All other carriers are insured at the package's actual value and not replacement value, covering any loss(es) caused during shipping. Sample return fee is a claim with the carrier of choice.</p>",
-            "page": ""
+            "page": "",
+            "custom_liquid": "",
+            "metafield_namespace": "",
+            "metafield_key": "",
+            "file_link_text": "Download File"
           }
         },
         "step_5": {
@@ -266,7 +284,11 @@
           "settings": {
             "heading": "5) Ship before PSC's cutoff",
             "row_content": "<p>Anyone of your own risk. PSC MakeMyTrip is not responsible for any item(s) damaged during shipping. Should your file a claim with the carrier of choice.</p>",
-            "page": ""
+            "page": "",
+            "custom_liquid": "",
+            "metafield_namespace": "",
+            "metafield_key": "",
+            "file_link_text": "Download File"
           }
         },
         "step_6": {
@@ -274,7 +296,11 @@
           "settings": {
             "heading": "6) Inspect at your own risk",
             "row_content": "<p>Inspect at your own risk. PSC MakeMyTrip is not responsible for any item(s) damaged during shipping. Should more file a claim with the carrier of choice.</p>",
-            "page": ""
+            "page": "",
+            "custom_liquid": "",
+            "metafield_namespace": "",
+            "metafield_key": "",
+            "file_link_text": "Download File"
           }
         }
       },
@@ -292,9 +318,10 @@
         "heading_size": "h1",
         "heading_alignment": "center",
         "layout": "none",
-        "color_scheme": "scheme-1",
         "container_color_scheme": "scheme-2",
+        "color_scheme": "scheme-1",
         "open_first_collapsible_row": false,
+        "full_width_content": false,
         "image_ratio": "adapt",
         "desktop_layout": "image_second",
         "padding_top": 36,
@@ -309,7 +336,11 @@
           "settings": {
             "heading": "How do I bleed my power steering system?",
             "row_content": "<p>Review our bleeding instructions here: <a href=\"#\" title=\"PSC Power Steering Bleeding Instructions\">PSC Power Steering Bleeding Instructions</a></p>",
-            "page": ""
+            "page": "",
+            "custom_liquid": "",
+            "metafield_namespace": "",
+            "metafield_key": "",
+            "file_link_text": "Download File"
           }
         },
         "faq_2": {
@@ -317,7 +348,11 @@
           "settings": {
             "heading": "What is the fix level on a PSC Remote Fluid Reservoir?",
             "row_content": "<p>Add your content here...</p>",
-            "page": ""
+            "page": "",
+            "custom_liquid": "",
+            "metafield_namespace": "",
+            "metafield_key": "",
+            "file_link_text": "Download File"
           }
         },
         "faq_3": {
@@ -325,7 +360,11 @@
           "settings": {
             "heading": "Where does this rubber hose on the top of my Remote Fluid Reservoir connect?",
             "row_content": "<p>Add your content here...</p>",
-            "page": ""
+            "page": "",
+            "custom_liquid": "",
+            "metafield_namespace": "",
+            "metafield_key": "",
+            "file_link_text": "Download File"
           }
         },
         "faq_4": {
@@ -333,7 +372,11 @@
           "settings": {
             "heading": "What does JIC mean? What is the difference between JIC and AN?",
             "row_content": "<p>Add your content here...</p>",
-            "page": ""
+            "page": "",
+            "custom_liquid": "",
+            "metafield_namespace": "",
+            "metafield_key": "",
+            "file_link_text": "Download File"
           }
         }
       },
@@ -349,9 +392,10 @@
         "heading_size": "h1",
         "heading_alignment": "center",
         "layout": "none",
-        "color_scheme": "scheme-1",
         "container_color_scheme": "scheme-2",
+        "color_scheme": "scheme-1",
         "open_first_collapsible_row": false,
+        "full_width_content": false,
         "image_ratio": "adapt",
         "desktop_layout": "image_second",
         "padding_top": 36,
@@ -364,7 +408,6 @@
         "content_1": {
           "type": "column",
           "settings": {
-            "image": "",
             "title": "Video Title",
             "text": "<p>Explore the 392 HEMI Steering Kit. Built for reliability and performance, this kit enhances steering for a variety of vehicles. Check availability and read customer reviews.</p>",
             "link_label": "Button →",
@@ -374,7 +417,6 @@
         "content_2": {
           "type": "column",
           "settings": {
-            "image": "",
             "title": "Video Title",
             "text": "<p>Explore the 392 HEMI Steering Kit. Built for reliability and performance, this kit enhances steering for a variety of vehicles. Check availability and read customer reviews.</p>",
             "link_label": "Button →",
@@ -384,7 +426,6 @@
         "content_3": {
           "type": "column",
           "settings": {
-            "image": "",
             "title": "Resource Title",
             "text": "<p>PSC has a full team of expert technicians available to service and maintain your PSC products. We're committed to helping our customers get the most from their investment in the world's best performance power steering products.</p>",
             "link_label": "Button →",
@@ -402,11 +443,11 @@
         "heading_size": "h1",
         "image_width": "full",
         "image_ratio": "adapt",
+        "button_label": "View All",
+        "button_link": "",
         "columns_desktop": 3,
         "column_alignment": "left",
         "background_style": "primary",
-        "button_label": "View All",
-        "button_link": "",
         "color_scheme": "scheme-3",
         "columns_mobile": "1",
         "swipe_on_mobile": false,
@@ -432,8 +473,7 @@
         },
         "email_form": {
           "type": "email_form",
-          "settings": {
-          }
+          "settings": {}
         }
       },
       "block_order": [
