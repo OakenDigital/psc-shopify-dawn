@@ -1,0 +1,294 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "image_banner": {
+      "type": "image-banner",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "Steering Re-Engineered Starts Here",
+            "heading_size": "hxl"
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "Whether you're wrenching in the garage or running a shop, we've got the know-how to keep you turning strong. Browse install guides, watch our tech videos, or ask the guys who build it every day.",
+            "text_style": "body"
+          }
+        },
+        "button": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "View all Install Guides",
+            "button_link_1": "",
+            "button_style_secondary_1": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading",
+        "text",
+        "button"
+      ],
+      "settings": {
+        "image_overlay_opacity": 40,
+        "image_height": "medium",
+        "desktop_content_position": "middle-center",
+        "desktop_content_alignment": "center",
+        "show_text_box": false,
+        "color_scheme": "scheme-1",
+        "mobile_content_alignment": "center",
+        "show_text_below": true
+      }
+    },
+    "tech_resource_cards": {
+      "type": "tech-resource-cards",
+      "blocks": {
+        "card_1": {
+          "type": "card",
+          "settings": {
+            "card_title": "PSC Power Steering Guides",
+            "description": "",
+            "list_items": "Power Steering Basics Re-Imagined|PSC Cylinder Install",
+            "button_label": "View all →",
+            "button_link": ""
+          }
+        },
+        "card_2": {
+          "type": "card",
+          "settings": {
+            "card_title": "All PDF Install Guides",
+            "description": "",
+            "list_items": "Jeep JL Off-Road Kits|Installation|Bleeding Kits",
+            "button_label": "View all →",
+            "button_link": ""
+          }
+        },
+        "card_3": {
+          "type": "card",
+          "settings": {
+            "card_title": "Troubleshooting Basics",
+            "description": "",
+            "list_items": "Check the Support Links|Find a Steering Guide",
+            "button_label": "View all →",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "card_1",
+        "card_2",
+        "card_3"
+      ],
+      "settings": {
+        "title": "Step-By-Step Help, Without the Guesswork",
+        "subtitle": "Every PSC kit is designed to bolt on and go—but a little guidance never hurts. Download PDF install guides, follow along with our video tutorials, and get it done right the first time.",
+        "heading_size": "h1",
+        "color_scheme": "scheme-1",
+        "padding_top": 52,
+        "padding_bottom": 52
+      }
+    },
+    "video_library": {
+      "type": "video-library",
+      "blocks": {
+        "video_1": {
+          "type": "video",
+          "settings": {
+            "title": "Video Title",
+            "description": "Explore the 392 HEMI Steering Kit. Built for reliability and performance, this kit enhances steering for a variety of vehicles. Check availability and read customer reviews.",
+            "video_url": "",
+            "thumbnail": ""
+          }
+        },
+        "video_2": {
+          "type": "video",
+          "settings": {
+            "title": "Video Title",
+            "description": "Explore the 392 HEMI Steering Kit. Built for reliability and performance, this kit enhances steering for a variety of vehicles. Check availability and read customer reviews.",
+            "video_url": "",
+            "thumbnail": ""
+          }
+        },
+        "video_3": {
+          "type": "video",
+          "settings": {
+            "title": "Video Title",
+            "description": "Explore the 392 HEMI Steering Kit. Built for reliability and performance, this kit enhances steering for a variety of vehicles. Check availability and read customer reviews.",
+            "video_url": "",
+            "thumbnail": ""
+          }
+        }
+      },
+      "block_order": [
+        "video_1",
+        "video_2",
+        "video_3"
+      ],
+      "settings": {
+        "title": "From the Shop Floor to Your Screen",
+        "subtitle": "Our crew doesn't hide behind marketing—these are the folks who build kits and drive the gear themselves. Watch 'em tackle real steering issues, explain system upgrades, and show you what a few laughs along the way.",
+        "button_label": "Browse Tech Videos",
+        "button_link": "",
+        "button_position": "bottom",
+        "color_scheme": "scheme-1",
+        "padding_top": 52,
+        "padding_bottom": 52
+      }
+    },
+    "troubleshooting": {
+      "type": "collapsible-content",
+      "blocks": {
+        "faq_1": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "How do I bleed my power steering system?",
+            "row_content": "<p>Review our bleeding instructions here: <a href=\"#\" title=\"PSC Power Steering Bleeding Instructions\">PSC Power Steering Bleeding Instructions</a></p>",
+            "page": ""
+          }
+        },
+        "faq_2": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "What is the fix level on a PSC Remote Fluid Reservoir?",
+            "row_content": "<p>Add your content here...</p>",
+            "page": ""
+          }
+        },
+        "faq_3": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Where does this rubber hose on the top of my Remote Fluid Reservoir connect?",
+            "row_content": "<p>Add your content here...</p>",
+            "page": ""
+          }
+        },
+        "faq_4": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "What does JIC mean? What is the difference between JIC and AN?",
+            "row_content": "<p>Add your content here...</p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "faq_1",
+        "faq_2",
+        "faq_3",
+        "faq_4"
+      ],
+      "settings": {
+        "caption": "",
+        "heading": "Got Steering Problems? Start Here.",
+        "heading_size": "h1",
+        "heading_alignment": "center",
+        "layout": "none",
+        "color_scheme": "scheme-1",
+        "container_color_scheme": "scheme-2",
+        "open_first_collapsible_row": false,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "service_info": {
+      "type": "rich-text",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "Service Department",
+            "heading_size": "h1"
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "<p>PSC has a full team of expert technicians available to service and maintain your PSC products. We're committed to helping our customers get the most from their investment in the world's best performance power steering products.</p>"
+          }
+        },
+        "button": {
+          "type": "button",
+          "settings": {
+            "button_label": "Learn More and Submit Service Request →",
+            "button_link": "",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading",
+        "text",
+        "button"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-2",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "newsletter": {
+      "type": "newsletter",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "Subscribe to our emails",
+            "heading_size": "h1"
+          }
+        },
+        "paragraph": {
+          "type": "paragraph",
+          "settings": {
+            "text": "<p>We're all about making your life easier (and your steering better). Tell us what you want to hear about, from offers, tech tips, and how you want it delivered. No spam. No nonsense—just the good stuff.</p>"
+          }
+        },
+        "email_form": {
+          "type": "email_form",
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "heading",
+        "paragraph",
+        "email_form"
+      ],
+      "settings": {
+        "color_scheme": "scheme-1",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    }
+  },
+  "order": [
+    "image_banner",
+    "tech_resource_cards",
+    "video_library",
+    "troubleshooting",
+    "service_info",
+    "newsletter"
+  ]
+}

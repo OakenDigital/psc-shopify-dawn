@@ -1,0 +1,387 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "image_banner": {
+      "type": "image-banner",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "PSC for Business: Built For the Pros Who Keep Rigs Rolling",
+            "heading_size": "hxl"
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "This is your central hub for PSC Dealer Support—where our builders get the tools, tech, and updates they need to keep shop running strong and the wheels turning. Whether you're a parts retailer or a fully-stocked shop with service bays, the Power of PSC keeps your business moving along.",
+            "text_style": "body"
+          }
+        },
+        "buttons": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "Become",
+            "button_link_1": "#dealer-application-form",
+            "button_style_secondary_1": false,
+            "button_label_2": "Button",
+            "button_link_2": "",
+            "button_style_secondary_2": true
+          }
+        }
+      },
+      "block_order": [
+        "heading",
+        "text",
+        "buttons"
+      ],
+      "settings": {
+        "image_overlay_opacity": 40,
+        "image_height": "medium",
+        "desktop_content_position": "middle-center",
+        "desktop_content_alignment": "center",
+        "show_text_box": false,
+        "color_scheme": "scheme-1",
+        "mobile_content_alignment": "center",
+        "show_text_below": true
+      }
+    },
+    "dealer_info": {
+      "type": "dealer-information",
+      "blocks": {
+        "content_1": {
+          "type": "content",
+          "settings": {
+            "heading": "Why Join the PSC Dealer Network?",
+            "content": "<p><strong>Real Support from Real People</strong><br>When you call, we answer. When you need help, we're on it. Real work with account reps who've turned wrenches and know what you're dealing with.</p><p><strong>Built-in Marketing Tools</strong><br>Get access to dealer-co-op marketing: social media content, banners, gear sheets, and install videos.</p><p><strong>Technical Confidence</strong><br>Whether you're building a rig daily, live dyno, or web-ready, you'll have access to firewall logs, install tricks, and dealer-only tech tips.</p><p><strong>No-Nonsense Perks</strong><br>Approved dealers are eligible for promotional opportunities, event collaboration, and tiered pricing—no hoops, no nonsense required.</p>"
+          }
+        },
+        "list_1": {
+          "type": "list",
+          "settings": {
+            "heading": "Not Yet a PSC Dealer?",
+            "description": "New to the PSC Fam? Sweet. Here's what you need to know before you get started:",
+            "list_items": "Expect great quality and product documentation|Exclusive free-to-dealer live tech when added|Dealer-only pricing subject to application approval|Early looks at new products and promotions"
+          }
+        },
+        "tier_1": {
+          "type": "dealer_tier",
+          "settings": {
+            "tier_name": "Dealer Access",
+            "description": "All new dealer starter accounts based on your business type and purchasing volume:",
+            "features": "Requires initial quote, product lines, and marketing|PSC branded products|Order discounts available|Technical assistance"
+          }
+        },
+        "tier_2": {
+          "type": "dealer_tier",
+          "settings": {
+            "tier_name": "Master Dealer",
+            "description": "Higher status dealer for more established shop or high eligibility for distributors and bulk sales.",
+            "features": "A 6-60k tier is $10,000 - $30,000 Annual Group Buys|Order multiple discounts|Technical assistance|Dealer network confidentiality"
+          }
+        },
+        "tier_3": {
+          "type": "dealer_tier",
+          "settings": {
+            "tier_name": "Distributor",
+            "description": "All out direct-to-sell network shops that qualify for distributors and bulk sales.",
+            "features": "Order multiple products|High volume dealer accounts|Technical assistance|Dealer network confidentiality"
+          }
+        },
+        "tier_4": {
+          "type": "dealer_tier",
+          "settings": {
+            "tier_name": "Master Distributor",
+            "description": "Highest tier-all network shops available for selling via shops that qualify for largest tier distributors.",
+            "features": "Order multiple products|High volume dealer accounts|Technical assistance|Dealer network confidentiality"
+          }
+        }
+      },
+      "block_order": [
+        "content_1",
+        "list_1",
+        "tier_1",
+        "tier_2",
+        "tier_3",
+        "tier_4"
+      ],
+      "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "show_login_box": true,
+        "color_scheme": "scheme-2",
+        "padding_top": 52,
+        "padding_bottom": 36
+      }
+    },
+    "dealer_tiers_explained": {
+      "type": "rich-text",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "How Dealer Accounts Work",
+            "heading_size": "h1"
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "<p>PSC uses Shopify B2B tools to manage dealer accounts. Here's what that means for you:</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading",
+        "text"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-1",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 20
+      }
+    },
+    "how_it_works": {
+      "type": "multicolumn",
+      "blocks": {
+        "step_1": {
+          "type": "column",
+          "settings": {
+            "title": "Create an Account",
+            "text": "<p>You submit your application and business info.</p>",
+            "link_label": "Create Account →",
+            "link": ""
+          }
+        },
+        "step_2": {
+          "type": "column",
+          "settings": {
+            "title": "Apply to Become a Dealer",
+            "text": "<p>Start by submitting the dealer application below. You can't see net pricing, submit inventory, or place orders until accepted.</p>",
+            "link_label": "Start Dealer Application →",
+            "link": ""
+          }
+        },
+        "step_3": {
+          "type": "column",
+          "settings": {
+            "title": "Complete Dealer Onboarding Portal",
+            "text": "<p>Review resources (compliance) from network pricing documentation. You can submit dealer leads (quote builds) in the application.</p>",
+            "link_label": "View To Dashboard →",
+            "link": ""
+          }
+        },
+        "step_4": {
+          "type": "column",
+          "settings": {
+            "title": "You're In!",
+            "text": "<p>Your work assigned and all updated automatically on your PSC Dealer Dashboard. Start placing orders and enjoying discount pricing.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "step_1",
+        "step_2",
+        "step_3",
+        "step_4"
+      ],
+      "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 4,
+        "column_alignment": "center",
+        "background_style": "primary",
+        "button_label": "View All Network",
+        "button_link": "",
+        "color_scheme": "scheme-1",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 20,
+        "padding_bottom": 36
+      }
+    },
+    "faqs": {
+      "type": "collapsible-content",
+      "blocks": {
+        "faq_1": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "How do I bleed my power steering system?",
+            "row_content": "<p>Review our bleeding instructions here: <a href=\"#\" title=\"PSC Power Steering Bleeding Instructions\">PSC Power Steering Bleeding Instructions</a></p>",
+            "page": ""
+          }
+        },
+        "faq_2": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "What is the fix level on a PSC Remote Fluid Reservoir?",
+            "row_content": "<p>Add your content here...</p>",
+            "page": ""
+          }
+        },
+        "faq_3": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Where does this rubber hose on the top of my Remote Fluid Reservoir connect?",
+            "row_content": "<p>Add your content here...</p>",
+            "page": ""
+          }
+        },
+        "faq_4": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "What does JIC mean? What is the difference between JIC and AN?",
+            "row_content": "<p>Add your content here...</p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "faq_1",
+        "faq_2",
+        "faq_3",
+        "faq_4"
+      ],
+      "settings": {
+        "caption": "",
+        "heading": "Frequently Asked Questions",
+        "heading_size": "h1",
+        "heading_alignment": "center",
+        "layout": "none",
+        "color_scheme": "scheme-1",
+        "container_color_scheme": "scheme-2",
+        "open_first_collapsible_row": false,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "related_content": {
+      "type": "multicolumn",
+      "blocks": {
+        "content_1": {
+          "type": "column",
+          "settings": {
+            "image": "",
+            "title": "Video Title",
+            "text": "<p>Explore the 392 HEMI Steering Kit. Built for reliability and performance, this kit enhances steering for a variety of vehicles. Check availability and read customer reviews.</p>",
+            "link_label": "Button →",
+            "link": ""
+          }
+        },
+        "content_2": {
+          "type": "column",
+          "settings": {
+            "image": "",
+            "title": "Video Title",
+            "text": "<p>Explore the 392 HEMI Steering Kit. Built for reliability and performance, this kit enhances steering for a variety of vehicles. Check availability and read customer reviews.</p>",
+            "link_label": "Button →",
+            "link": ""
+          }
+        },
+        "content_3": {
+          "type": "column",
+          "settings": {
+            "image": "",
+            "title": "Resource Title",
+            "text": "<p>PSC has a full team of expert technicians available to service and maintain your PSC products. We're committed to helping our customers get the most from their investment in the world's best performance power steering products.</p>",
+            "link_label": "Button →",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "content_1",
+        "content_2",
+        "content_3"
+      ],
+      "settings": {
+        "title": "More From Our Tech Blog",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 3,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "button_label": "View All",
+        "button_link": "",
+        "color_scheme": "scheme-3",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "dealer_application": {
+      "type": "dealer-application-form",
+      "settings": {
+        "title": "PSC Dealer Application",
+        "subtitle": "Welcome to the PSC Dealer Portal. This is your one-stop-shop for product lines, install guides, repair instructions, exclusive updates straight from the shop floor.",
+        "email": "support@pscmotorsports.com",
+        "color_scheme": "scheme-1",
+        "padding_top": 52,
+        "padding_bottom": 52
+      }
+    },
+    "newsletter": {
+      "type": "newsletter",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "Subscribe to our emails",
+            "heading_size": "h1"
+          }
+        },
+        "paragraph": {
+          "type": "paragraph",
+          "settings": {
+            "text": "<p>We're all about making your life easier (and your steering better). Tell us what you want to hear about, from offers, tech tips, and how you want it delivered. No spam. No nonsense—just the good stuff.</p>"
+          }
+        },
+        "email_form": {
+          "type": "email_form",
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "heading",
+        "paragraph",
+        "email_form"
+      ],
+      "settings": {
+        "color_scheme": "scheme-1",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    }
+  },
+  "order": [
+    "image_banner",
+    "dealer_info",
+    "dealer_tiers_explained",
+    "how_it_works",
+    "faqs",
+    "related_content",
+    "dealer_application",
+    "newsletter"
+  ]
+}
