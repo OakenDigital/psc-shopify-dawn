@@ -334,8 +334,8 @@
         "faq_1": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "How do I bleed my power steering system?",
-            "row_content": "<p>Review our bleeding instructions here: <a href=\"#\" title=\"PSC Power Steering Bleeding Instructions\">PSC Power Steering Bleeding Instructions</a></p>",
+            "heading": "Fluid spilling out of the reservoir?",
+            "row_content": "<ul><li>Usually overfill. Sometimes aeration at high RPM. Set the level correctly and re‑bleed.</li><li>Can also happen when there is air in the steering system</li></ul>",
             "page": "",
             "custom_liquid": "",
             "metafield_namespace": "",
