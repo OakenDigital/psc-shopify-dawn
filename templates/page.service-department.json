@@ -236,7 +236,7 @@
           "type": "collapsible_row",
           "settings": {
             "heading": "1) Fill out a Service Request Form",
-            "row_content": "<p>Complete a <a href=\"#\" title=\"Service Request Form\">SERVICE REQUEST FORM</a> and place it in a plastic baggie to prevent oil leak, and include it in the package with the component.</p>",
+            "row_content": "<p>Complete a <a href=\"/pages/service-request-form\" title=\"Service Request Form\">SERVICE REQUEST FORM</a> and place it in a plastic baggie to prevent oil leak, and include it in the package with the component.</p>",
             "page": "",
             "custom_liquid": "",
             "metafield_namespace": "",
