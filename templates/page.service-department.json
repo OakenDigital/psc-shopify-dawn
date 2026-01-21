@@ -159,8 +159,8 @@
         "benefit_1": {
           "type": "column",
           "settings": {
-            "title": "OEM Parts for PSC Branded Products",
-            "text": "<p>OEM Parts for PSC Branded Steering Gears, Pumps, Cylinder Assist™ and Full Hydraulic Steering Cylinders, and Rack and Pinions</p>",
+            "title": "Built With PSC Parts",
+            "text": "<p>Repairs are done using PSC parts on PSC‑built steering components — gears, pumps, Cylinder Assist®, and full hydraulic cylinders.</p>",
             "link_label": "",
             "link": ""
           }
@@ -169,7 +169,7 @@
           "type": "column",
           "settings": {
             "title": "6 Month Limited Warranty",
-            "text": "<p>6 Month Limited Warranty</p>",
+            "text": "<p>Service repairs come with a 6‑month limited warranty, so you know where you stand once it’s back on the vehicle.</p>",
             "link_label": "",
             "link": ""
           }
@@ -177,8 +177,8 @@
         "benefit_3": {
           "type": "column",
           "settings": {
-            "title": "30 years of Experience",
-            "text": "<p>30 years of Friendly and Expert Knowledge</p>",
+            "title": "Decades of Steering Experience",
+            "text": "<p>We’ve been building and servicing steering systems for decades. That experience shows up in the details — what to fix, what to leave alone, and what makes the most sense long‑term.</p>",
             "link_label": "",
             "link": ""
           }
@@ -212,7 +212,7 @@
         "text": {
           "type": "text",
           "settings": {
-            "text": "<p><strong>Please note, the cost to you is $120.00 breakdown fee for opening and inspecting any gearbox.</strong> This fee will be applied to your final invoice if repairs are approved.</p>"
+            "text": "<p><strong>Heads‑up:</strong> There’s a $120 teardown fee for opening and inspecting any gearbox. If you move forward with the repair, that fee is credited toward your final invoice.</p>"
           }
         }
       },
@@ -234,7 +234,7 @@
         "step_1": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "1) Complete a SERVICE REQUEST FORM",
+            "heading": "1) Fill out a Service Request Form",
             "row_content": "<p>Complete a <a href=\"#\" title=\"Service Request Form\">SERVICE REQUEST FORM</a> and place it in a plastic baggie to prevent oil leak, and include it in the package with the component.</p>",
             "page": "",
             "custom_liquid": "",
@@ -246,8 +246,8 @@
         "step_2": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "2) Pack the component well",
-            "row_content": "<p>Thoroughly wrap your component in bubble wrap, and, if available, use puff bags.</p>",
+            "heading": "2) Pack the part securely",
+            "row_content": "<p>Use a sturdy box and padding to keep it from shifting during shipping.</p>",
             "page": "",
             "custom_liquid": "",
             "metafield_namespace": "",
@@ -258,8 +258,8 @@
         "step_3": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "3) Use a plastic airbag",
-            "row_content": "<p>Use a plastic airbag to keep your package from leaking. UPS/FedEx/USPS will discard a package if harmful if the package is leaking. Also, always label which carrier you are using.</p>",
+            "heading": "3) Bag it to prevent leaks",
+            "row_content": "<p>Wrap the part in plastic or seal it in a heavy bag — leaking packages can get flagged as HazMat.</p>",
             "page": "",
             "custom_liquid": "",
             "metafield_namespace": "",
@@ -270,8 +270,8 @@
         "step_4": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "4) Pack with the carrier of your choice",
-            "row_content": "<p>Pack with the carrier of your choice. PSC recommends shipping your package for replacement value. All other carriers are insured at the package's actual value and not replacement value, covering any loss(es) caused during shipping. Sample return fee is a claim with the carrier of choice.</p>",
+            "heading": "4) Ship it insured",
+            "row_content": "<p>We recommend UPS or FedEx Ground and insuring the package for its replacement value.</p>",
             "page": "",
             "custom_liquid": "",
             "metafield_namespace": "",
@@ -282,8 +282,8 @@
         "step_5": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "5) Ship before PSC's cutoff",
-            "row_content": "<p>Anyone of your own risk. PSC MakeMyTrip is not responsible for any item(s) damaged during shipping. Should your file a claim with the carrier of choice.</p>",
+            "heading": "5) Get it out on time",
+            "row_content": "<p>Ship your part before PSC’s daily cutoff so it moves through the system quickly.</p>",
             "page": "",
             "custom_liquid": "",
             "metafield_namespace": "",
@@ -294,8 +294,8 @@
         "step_6": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "6) Inspect at your own risk",
-            "row_content": "<p>Inspect at your own risk. PSC MakeMyTrip is not responsible for any item(s) damaged during shipping. Should more file a claim with the carrier of choice.</p>",
+            "heading": "6) Pack at your own risk",
+            "row_content": "<p>We’re not responsible for shipping damage, so take the time to pack it right.</p>",
             "page": "",
             "custom_liquid": "",
             "metafield_namespace": "",
@@ -314,8 +314,8 @@
       ],
       "settings": {
         "caption": "",
-        "heading": "How Do I Send My Component To PSC For Service:",
-        "heading_size": "h1",
+        "heading": "How to Send Your Part In for Service",
+        "heading_size": "h0",
         "heading_alignment": "center",
         "layout": "none",
         "container_color_scheme": "scheme-2",
