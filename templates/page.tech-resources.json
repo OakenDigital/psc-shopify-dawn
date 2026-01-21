@@ -31,7 +31,7 @@
           "settings": {
             "button_layout": "inline",
             "button_label_1": "View all Install Guides",
-            "button_link_1": "",
+            "button_link_1": "shopify://pages/install-guides",
             "button_style_secondary_1": false,
             "button_color_scheme_1": "scheme-f95fc31b-0c1b-4da3-82af-ed2967ed4967",
             "button_label_2": "",
