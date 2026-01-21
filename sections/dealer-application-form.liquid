@@ -1,0 +1,509 @@
+{{ 'customer.css' | asset_url | stylesheet_tag }}
+
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+
+  .dealer-application {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .dealer-application__header {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+
+  .dealer-application__tabs {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    border-bottom: 2px solid #e5e5e5;
+  }
+
+  .dealer-application__tab {
+    padding: 1rem 2rem;
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #666;
+    border-bottom: 3px solid transparent;
+    margin-bottom: -2px;
+    transition: all 0.3s ease;
+  }
+
+  .dealer-application__tab--active {
+    color: var(--color-button);
+    border-bottom-color: var(--color-button);
+  }
+
+  .dealer-application__form-section {
+    display: none;
+  }
+
+  .dealer-application__form-section--active {
+    display: block;
+  }
+
+  .dealer-application__field-group {
+    margin-bottom: 2rem;
+  }
+
+  .dealer-application__field-group h3 {
+    font-size: 1.3rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #f0f0f0;
+  }
+
+  .dealer-application__field {
+    margin-bottom: 1.5rem;
+  }
+
+  .dealer-application__field label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    font-size: 0.95rem;
+  }
+
+  .dealer-application__field label .required {
+    color: #dc2626;
+    margin-left: 0.25rem;
+  }
+
+  .dealer-application__field input[type="text"],
+  .dealer-application__field input[type="email"],
+  .dealer-application__field input[type="tel"],
+  .dealer-application__field input[type="url"],
+  .dealer-application__field input[type="number"],
+  .dealer-application__field select,
+  .dealer-application__field textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #d1d5db;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-family: inherit;
+  }
+
+  .dealer-application__field textarea {
+    min-height: 100px;
+    resize: vertical;
+  }
+
+  .dealer-application__field-row {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  @media screen and (min-width: 750px) {
+    .dealer-application__field-row {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  .dealer-application__field-row--thirds {
+    grid-template-columns: 1fr;
+  }
+
+  @media screen and (min-width: 750px) {
+    .dealer-application__field-row--thirds {
+      grid-template-columns: 2fr 1fr 1fr;
+    }
+  }
+
+  .dealer-application__phone-input {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .dealer-application__country-code {
+    width: 80px;
+  }
+
+  .dealer-application__submit {
+    text-align: center;
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 2px solid #f0f0f0;
+  }
+
+  .dealer-application__submit button {
+    min-width: 200px;
+  }
+
+  .dealer-application__note {
+    background: #f9fafb;
+    padding: 1.5rem;
+    border-left: 4px solid var(--color-button);
+    margin: 2rem 0;
+    font-size: 0.95rem;
+  }
+{%- endstyle -%}
+
+<div class="color-{{ section.settings.color_scheme }} gradient">
+  <div class="page-width section-{{ section.id }}-padding">
+    <div class="dealer-application">
+      <div class="dealer-application__header">
+        <h1>{{ section.settings.title }}</h1>
+        {%- if section.settings.subtitle != blank -%}
+          <p style="margin-top: 1rem;">{{ section.settings.subtitle }}</p>
+        {%- endif -%}
+        {%- if section.settings.email != blank -%}
+          <p style="margin-top: 0.5rem;">
+            You can either submit the online form below, or download the PDF form and email it to
+            <a href="mailto:{{ section.settings.email }}">{{ section.settings.email }}</a>
+          </p>
+        {%- endif -%}
+      </div>
+
+      <div class="dealer-application__tabs">
+        <button class="dealer-application__tab dealer-application__tab--active" data-tab="new">New Application</button>
+        <button class="dealer-application__tab" data-tab="update">Update Existing Account</button>
+      </div>
+
+      <form
+        method="post"
+        action="/contact#dealer-application"
+        id="dealer-application-form"
+        accept-charset="UTF-8"
+        class="contact-form"
+      >
+        <input type="hidden" name="form_type" value="contact">
+        <input type="hidden" name="utf8" value="✓">
+        <input type="hidden" name="contact[subject]" value="Dealer Application">
+
+        <div
+          id="form-success-message"
+          class="form-status form-status-list form__message"
+          style="display: none;"
+          tabindex="-1"
+        >
+          <h2 class="form-status__title">✓ Thank you for your application!</h2>
+          <p>We'll review your information and get back to you, usually in 7-10 business days.</p>
+        </div>
+
+        <div class="dealer-application__form-section dealer-application__form-section--active" data-section="new">
+          <div class="dealer-application__field-group">
+            <h3>Business Information</h3>
+
+            <div class="dealer-application__field">
+              <label for="business-name">Business Name <span class="required">*</span></label>
+              <input type="text" id="business-name" name="contact[business_name]" required>
+            </div>
+
+            <div class="dealer-application__field">
+              <label for="business-address">Business Address <span class="required">*</span></label>
+              <input
+                type="text"
+                id="business-address"
+                name="contact[business_address]"
+                placeholder="Street Address"
+                required
+              >
+            </div>
+
+            <div class="dealer-application__field-row--thirds">
+              <div class="dealer-application__field">
+                <label for="city">City <span class="required">*</span></label>
+                <input type="text" id="city" name="contact[city]" required>
+              </div>
+              <div class="dealer-application__field">
+                <label for="state">State <span class="required">*</span></label>
+                <select id="state" name="contact[state]" required>
+                  <option value="">Select</option>
+                  <option value="AL">AL</option>
+                  <option value="AK">AK</option>
+                  <option value="AZ">AZ</option>
+                  <option value="AR">AR</option>
+                  <option value="CA">CA</option>
+                  <option value="CO">CO</option>
+                  <option value="CT">CT</option>
+                  <option value="DE">DE</option>
+                  <option value="FL">FL</option>
+                  <option value="GA">GA</option>
+                  <option value="HI">HI</option>
+                  <option value="ID">ID</option>
+                  <option value="IL">IL</option>
+                  <option value="IN">IN</option>
+                  <option value="IA">IA</option>
+                  <option value="KS">KS</option>
+                  <option value="KY">KY</option>
+                  <option value="LA">LA</option>
+                  <option value="ME">ME</option>
+                  <option value="MD">MD</option>
+                  <option value="MA">MA</option>
+                  <option value="MI">MI</option>
+                  <option value="MN">MN</option>
+                  <option value="MS">MS</option>
+                  <option value="MO">MO</option>
+                  <option value="MT">MT</option>
+                  <option value="NE">NE</option>
+                  <option value="NV">NV</option>
+                  <option value="NH">NH</option>
+                  <option value="NJ">NJ</option>
+                  <option value="NM">NM</option>
+                  <option value="NY">NY</option>
+                  <option value="NC">NC</option>
+                  <option value="ND">ND</option>
+                  <option value="OH">OH</option>
+                  <option value="OK">OK</option>
+                  <option value="OR">OR</option>
+                  <option value="PA">PA</option>
+                  <option value="RI">RI</option>
+                  <option value="SC">SC</option>
+                  <option value="SD">SD</option>
+                  <option value="TN">TN</option>
+                  <option value="TX">TX</option>
+                  <option value="UT">UT</option>
+                  <option value="VT">VT</option>
+                  <option value="VA">VA</option>
+                  <option value="WA">WA</option>
+                  <option value="WV">WV</option>
+                  <option value="WI">WI</option>
+                  <option value="WY">WY</option>
+                </select>
+              </div>
+              <div class="dealer-application__field">
+                <label for="zip">Zip Code <span class="required">*</span></label>
+                <input type="text" id="zip" name="contact[zip]" required>
+              </div>
+            </div>
+
+            <div class="dealer-application__field">
+              <label for="email">Email Address <span class="required">*</span></label>
+              <input type="email" id="email" name="contact[email]" required>
+            </div>
+
+            <div class="dealer-application__field">
+              <label for="phone">Phone <span class="required">*</span></label>
+              <div class="dealer-application__phone-input">
+                <select class="dealer-application__country-code" name="contact[country_code]">
+                  <option value="+1">🇺🇸 +1</option>
+                  <option value="+44">🇬🇧 +44</option>
+                  <option value="+61">🇦🇺 +61</option>
+                </select>
+                <input
+                  type="tel"
+                  id="phone"
+                  name="contact[phone]"
+                  placeholder="(123) 456-7890"
+                  required
+                  style="flex: 1;"
+                >
+              </div>
+            </div>
+          </div>
+
+          <div class="dealer-application__field-group">
+            <h3>About Your Business</h3>
+
+            <div class="dealer-application__field">
+              <label for="company-name">Company Name <span class="required">*</span></label>
+              <input type="text" id="company-name" name="contact[company_name]" required>
+            </div>
+
+            <div class="dealer-application__field-row">
+              <div class="dealer-application__field">
+                <label for="years-in-business">Years in Business <span class="required">*</span></label>
+                <input type="number" id="years-in-business" name="contact[years_in_business]" min="0" required>
+              </div>
+              <div class="dealer-application__field">
+                <label for="annual-sales">Estimated Annual Sales <span class="required">*</span></label>
+                <select id="annual-sales" name="contact[annual_sales]" required>
+                  <option value="">Select</option>
+                  <option value="under-100k">Under $100,000</option>
+                  <option value="100k-500k">$100,000 - $500,000</option>
+                  <option value="500k-1m">$500,000 - $1,000,000</option>
+                  <option value="1m-5m">$1,000,000 - $5,000,000</option>
+                  <option value="over-5m">Over $5,000,000</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="dealer-application__field-row">
+              <div class="dealer-application__field">
+                <label for="location">Where is your business located? <span class="required">*</span></label>
+                <input type="text" id="location" name="contact[location]" required>
+              </div>
+              <div class="dealer-application__field">
+                <label for="employees">Number of Employees <span class="required">*</span></label>
+                <input type="number" id="employees" name="contact[employees]" min="0" required>
+              </div>
+            </div>
+
+            <div class="dealer-application__field-row">
+              <div class="dealer-application__field">
+                <label for="installation-bays">Number of Installation Bays <span class="required">*</span></label>
+                <input type="number" id="installation-bays" name="contact[installation_bays]" min="0" required>
+              </div>
+              <div class="dealer-application__field">
+                <label for="purchase-locations">If yes, who do you purchase from?</label>
+                <input type="text" id="purchase-locations" name="contact[purchase_from]">
+              </div>
+            </div>
+
+            <div class="dealer-application__field">
+              <label for="main-source">What's your main source for parts? <span class="required">*</span></label>
+              <textarea id="main-source" name="contact[main_source]" required></textarea>
+            </div>
+          </div>
+
+          <div class="dealer-application__field-group">
+            <h3>Online Presence</h3>
+
+            <div class="dealer-application__field">
+              <label for="website">Website URL</label>
+              <input type="url" id="website" name="contact[website]" placeholder="https://">
+            </div>
+
+            <div class="dealer-application__field">
+              <label for="facebook">Facebook Page URL</label>
+              <input type="url" id="facebook" name="contact[facebook]" placeholder="https://facebook.com/">
+            </div>
+
+            <div class="dealer-application__field">
+              <label for="instagram">Instagram Profile URL</label>
+              <input type="url" id="instagram" name="contact[instagram]" placeholder="https://instagram.com/">
+            </div>
+
+            <div class="dealer-application__field">
+              <label for="youtube">YouTube Channel URL</label>
+              <input type="url" id="youtube" name="contact[youtube]" placeholder="https://youtube.com/">
+            </div>
+
+            <div class="dealer-application__field">
+              <label for="twitter">Twitter / X Profile URL</label>
+              <input type="url" id="twitter" name="contact[twitter]" placeholder="https://twitter.com/">
+            </div>
+
+            <div class="dealer-application__field">
+              <label for="other-platforms">Other platforms or online marketing channels</label>
+              <textarea id="other-platforms" name="contact[other_platforms]"></textarea>
+            </div>
+          </div>
+
+          <div class="dealer-application__note">
+            <p>
+              <strong>Note:</strong> We'll review your information and get back to you, usually in 7-10 business days.
+              This application is not an indication of made Credit or an open account—we perform due diligence via
+              credit check.
+            </p>
+          </div>
+
+          <div class="dealer-application__submit">
+            <button type="submit" class="button button--primary">Submit</button>
+          </div>
+        </div>
+
+        <div class="dealer-application__form-section" data-section="update">
+          <p style="text-align: center; padding: 2rem;">
+            Already have a dealer account?
+            <a href="{{ routes.account_login_url }}" class="button" style="margin-top: 1rem; display: inline-block;"
+              >Login to My Dashboard →</a
+            >
+          </p>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const tabs = document.querySelectorAll('.dealer-application__tab');
+    const sections = document.querySelectorAll('.dealer-application__form-section');
+
+    tabs.forEach((tab) => {
+      tab.addEventListener('click', function () {
+        const targetTab = this.getAttribute('data-tab');
+
+        tabs.forEach((t) => t.classList.remove('dealer-application__tab--active'));
+        this.classList.add('dealer-application__tab--active');
+
+        sections.forEach((section) => {
+          section.classList.remove('dealer-application__form-section--active');
+          if (section.getAttribute('data-section') === targetTab) {
+            section.classList.add('dealer-application__form-section--active');
+          }
+        });
+      });
+    });
+  });
+</script>
+
+{% schema %}
+{
+  "name": "Dealer Application Form",
+  "class": "section",
+  "tag": "section",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "default": "PSC Dealer Application",
+      "label": "Form Title"
+    },
+    {
+      "type": "textarea",
+      "id": "subtitle",
+      "label": "Subtitle",
+      "default": "Welcome to the PSC Dealer Portal. This is your one-stop-shop for product lines, install guides, repair instructions, exclusive updates straight from the shop floor."
+    },
+    {
+      "type": "text",
+      "id": "email",
+      "label": "Contact Email",
+      "default": "support@pscmotorsports.com"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Color scheme",
+      "default": "scheme-1"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding top",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding bottom",
+      "default": 36
+    }
+  ],
+  "presets": [
+    {
+      "name": "Dealer Application Form"
+    }
+  ]
+}
+{% endschema %}

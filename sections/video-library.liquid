@@ -1,0 +1,314 @@
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+
+  .video-library {
+    text-align: center;
+  }
+
+  .video-library__header {
+    margin-bottom: 3rem;
+  }
+
+  .video-library__subtitle {
+    font-size: 1.2rem;
+    margin-top: 1rem;
+    color: #666;
+  }
+
+  .video-library__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    margin-top: 3rem;
+  }
+
+  @media screen and (min-width: 750px) {
+    .video-library__grid {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2.5rem;
+    }
+  }
+
+  .video-library__item {
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    background: #f5f5f5;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .video-library__item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+  }
+
+  .video-library__thumbnail {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+  }
+
+  .video-library__thumbnail img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .video-library__play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 70px;
+    height: 70px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease;
+  }
+
+  .video-library__item:hover .video-library__play-button {
+    transform: translate(-50%, -50%) scale(1.1);
+  }
+
+  .video-library__play-button svg {
+    width: 30px;
+    height: 30px;
+    fill: #000;
+    margin-left: 5px;
+  }
+
+  .video-library__content {
+    padding: 1.5rem;
+    text-align: left;
+  }
+
+  .video-library__title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    color: #000;
+  }
+
+  .video-library__description {
+    font-size: 0.95rem;
+    color: #666;
+    line-height: 1.5;
+  }
+
+  .video-library__button {
+    margin-top: 3rem;
+  }
+{%- endstyle -%}
+
+<div class="color-{{ section.settings.color_scheme }} gradient">
+  <div class="page-width section-{{ section.id }}-padding">
+    <div class="video-library">
+      <div class="video-library__header">
+        {%- unless section.settings.title == blank -%}
+          <h2 class="title inline-richtext {{ section.settings.heading_size }}">
+            {{ section.settings.title }}
+          </h2>
+        {%- endunless -%}
+        {%- if section.settings.subtitle != blank -%}
+          <div class="video-library__subtitle">{{ section.settings.subtitle }}</div>
+        {%- endif -%}
+      </div>
+
+      {%- if section.settings.button_label != blank and section.settings.button_position == 'top' -%}
+        <div class="video-library__button">
+          <a href="{{ section.settings.button_link }}" class="button button--primary">
+            {{ section.settings.button_label }}
+          </a>
+        </div>
+      {%- endif -%}
+
+      <div class="video-library__grid">
+        {%- for block in section.blocks -%}
+          <div class="video-library__item" {{ block.shopify_attributes }}>
+            <a href="{{ block.settings.video_url }}" target="_blank" rel="noopener noreferrer">
+              <div
+                class="video-library__thumbnail"
+                style="background-image: url('{{ block.settings.thumbnail | image_url: width: 800 }}');"
+              >
+                {%- if block.settings.thumbnail != blank -%}
+                  {{
+                    block.settings.thumbnail
+                    | image_url: width: 800
+                    | image_tag: loading: 'lazy', alt: block.settings.title, width: 800, height: 450
+                  }}
+                {%- endif -%}
+                <div class="video-library__play-button">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <path d="M8 5v14l11-7z"/>
+                  </svg>
+                </div>
+              </div>
+            </a>
+            <div class="video-library__content">
+              <h3 class="video-library__title">{{ block.settings.title }}</h3>
+              {%- if block.settings.description != blank -%}
+                <p class="video-library__description">{{ block.settings.description }}</p>
+              {%- endif -%}
+            </div>
+          </div>
+        {%- endfor -%}
+      </div>
+
+      {%- if section.settings.button_label != blank and section.settings.button_position == 'bottom' -%}
+        <div class="video-library__button">
+          <a href="{{ section.settings.button_link }}" class="button button--primary">
+            {{ section.settings.button_label }}
+          </a>
+        </div>
+      {%- endif -%}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Video Library",
+  "class": "section",
+  "tag": "section",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "inline_richtext",
+      "id": "title",
+      "default": "Video Library",
+      "label": "Heading"
+    },
+    {
+      "type": "text",
+      "id": "subtitle",
+      "label": "Subtitle",
+      "default": "From the Shop Floor to Your Screen"
+    },
+    {
+      "type": "select",
+      "id": "heading_size",
+      "options": [
+        { "value": "h2", "label": "Small" },
+        { "value": "h1", "label": "Medium" },
+        { "value": "h0", "label": "Large" },
+        { "value": "hxl", "label": "Extra Large" }
+      ],
+      "default": "h1",
+      "label": "Heading size"
+    },
+    {
+      "type": "text",
+      "id": "button_label",
+      "label": "Button Label",
+      "default": "Browse Tech Videos"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button Link"
+    },
+    {
+      "type": "select",
+      "id": "button_position",
+      "options": [
+        { "value": "top", "label": "Top" },
+        { "value": "bottom", "label": "Bottom" }
+      ],
+      "default": "bottom",
+      "label": "Button Position"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Color scheme",
+      "default": "scheme-1"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding top",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding bottom",
+      "default": 36
+    }
+  ],
+  "blocks": [
+    {
+      "type": "video",
+      "name": "Video",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Video Title",
+          "default": "Video Title"
+        },
+        {
+          "type": "textarea",
+          "id": "description",
+          "label": "Video Description"
+        },
+        {
+          "type": "url",
+          "id": "video_url",
+          "label": "Video URL (YouTube, etc.)"
+        },
+        {
+          "type": "image_picker",
+          "id": "thumbnail",
+          "label": "Thumbnail Image"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Video Library",
+      "blocks": [
+        {
+          "type": "video"
+        },
+        {
+          "type": "video"
+        },
+        {
+          "type": "video"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

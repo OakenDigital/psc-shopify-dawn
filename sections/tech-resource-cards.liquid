@@ -1,0 +1,264 @@
+{{ 'component-card.css' | asset_url | stylesheet_tag }}
+
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+
+  .tech-resource-cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  @media screen and (min-width: 750px) {
+    .tech-resource-cards {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 3rem;
+    }
+  }
+
+  .tech-resource-card {
+    background: #fff;
+    border: 1px solid #e5e5e5;
+    border-radius: 8px;
+    padding: 2rem;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .tech-resource-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  }
+
+  .tech-resource-card__icon {
+    width: 60px;
+    height: 60px;
+    margin: 0 auto 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--gradient-base-background-1);
+    border-radius: 50%;
+  }
+
+  .tech-resource-card__icon svg {
+    width: 30px;
+    height: 30px;
+  }
+
+  .tech-resource-card__title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    color: #000;
+  }
+
+  .tech-resource-card__list {
+    list-style: none;
+    padding: 0;
+    margin: 1.5rem 0;
+    text-align: left;
+  }
+
+  .tech-resource-card__list li {
+    padding: 0.5rem 0;
+    position: relative;
+    padding-left: 1.5rem;
+  }
+
+  .tech-resource-card__list li:before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: var(--color-button);
+  }
+
+  .tech-resource-card__button {
+    display: inline-block;
+    margin-top: 1rem;
+  }
+{%- endstyle -%}
+
+<div class="color-{{ section.settings.color_scheme }} gradient">
+  <div class="page-width section-{{ section.id }}-padding">
+    {%- unless section.settings.title == blank -%}
+      <div class="title-wrapper center">
+        <h2 class="title inline-richtext {{ section.settings.heading_size }}">
+          {{ section.settings.title }}
+        </h2>
+        {%- if section.settings.subtitle != blank -%}
+          <div class="subtitle">{{ section.settings.subtitle }}</div>
+        {%- endif -%}
+      </div>
+    {%- endunless -%}
+
+    <div class="tech-resource-cards">
+      {%- for block in section.blocks -%}
+        <div class="tech-resource-card" {{ block.shopify_attributes }}>
+          {%- if block.settings.icon != blank -%}
+            <div class="tech-resource-card__icon">
+              {{ block.settings.icon }}
+            </div>
+          {%- endif -%}
+
+          <h3 class="tech-resource-card__title">{{ block.settings.card_title }}</h3>
+
+          {%- if block.settings.description != blank -%}
+            <div class="tech-resource-card__description">
+              {{ block.settings.description }}
+            </div>
+          {%- endif -%}
+
+          {%- if block.settings.list_items != blank -%}
+            <ul class="tech-resource-card__list">
+              {%- assign items = block.settings.list_items | split: '|' -%}
+              {%- for item in items -%}
+                <li>{{ item }}</li>
+              {%- endfor -%}
+            </ul>
+          {%- endif -%}
+
+          {%- if block.settings.button_label != blank -%}
+            <div class="tech-resource-card__button">
+              <a href="{{ block.settings.button_link }}" class="button">
+                {{ block.settings.button_label }}
+              </a>
+            </div>
+          {%- endif -%}
+        </div>
+      {%- endfor -%}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Tech Resource Cards",
+  "class": "section",
+  "tag": "section",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "inline_richtext",
+      "id": "title",
+      "default": "Install & Service Guides",
+      "label": "Heading"
+    },
+    {
+      "type": "text",
+      "id": "subtitle",
+      "label": "Subtitle"
+    },
+    {
+      "type": "select",
+      "id": "heading_size",
+      "options": [
+        { "value": "h2", "label": "Small" },
+        { "value": "h1", "label": "Medium" },
+        { "value": "h0", "label": "Large" },
+        { "value": "hxl", "label": "Extra Large" }
+      ],
+      "default": "h1",
+      "label": "Heading size"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Color scheme",
+      "default": "scheme-1"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding top",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding bottom",
+      "default": 36
+    }
+  ],
+  "blocks": [
+    {
+      "type": "card",
+      "name": "Resource Card",
+      "settings": [
+        {
+          "type": "text",
+          "id": "card_title",
+          "label": "Card Title",
+          "default": "Resource Title"
+        },
+        {
+          "type": "textarea",
+          "id": "description",
+          "label": "Description"
+        },
+        {
+          "type": "html",
+          "id": "icon",
+          "label": "Icon SVG",
+          "info": "Paste SVG code for the icon"
+        },
+        {
+          "type": "textarea",
+          "id": "list_items",
+          "label": "List Items",
+          "info": "Separate items with | character (e.g., Item 1|Item 2|Item 3)"
+        },
+        {
+          "type": "text",
+          "id": "button_label",
+          "label": "Button Label",
+          "default": "View all"
+        },
+        {
+          "type": "url",
+          "id": "button_link",
+          "label": "Button Link"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Tech Resource Cards",
+      "blocks": [
+        {
+          "type": "card"
+        },
+        {
+          "type": "card"
+        },
+        {
+          "type": "card"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

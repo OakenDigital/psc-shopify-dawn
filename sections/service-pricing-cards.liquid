@@ -1,0 +1,330 @@
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+
+  .service-pricing {
+    text-align: center;
+  }
+
+  .service-pricing__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    margin-top: 3rem;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @media screen and (min-width: 750px) {
+    .service-pricing__grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media screen and (min-width: 990px) {
+    .service-pricing__grid {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+
+  .service-pricing__card {
+    background: #fff;
+    border: 2px solid #e5e5e5;
+    border-radius: 8px;
+    padding: 2rem 1.5rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    position: relative;
+  }
+
+  .service-pricing__card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    border-color: var(--color-button);
+  }
+
+  .service-pricing__card--featured {
+    border-color: var(--color-button);
+    border-width: 3px;
+  }
+
+  .service-pricing__badge {
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--color-button);
+    color: #fff;
+    padding: 0.25rem 1rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: bold;
+  }
+
+  .service-pricing__title {
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    color: #000;
+  }
+
+  .service-pricing__price {
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--color-button);
+    margin-bottom: 0.5rem;
+  }
+
+  .service-pricing__price-note {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 1.5rem;
+  }
+
+  .service-pricing__features {
+    list-style: none;
+    padding: 0;
+    margin: 1.5rem 0;
+    text-align: left;
+  }
+
+  .service-pricing__features li {
+    padding: 0.75rem 0;
+    border-bottom: 1px solid #f0f0f0;
+    display: flex;
+    align-items: flex-start;
+  }
+
+  .service-pricing__features li:last-child {
+    border-bottom: none;
+  }
+
+  .service-pricing__check {
+    color: #22c55e;
+    margin-right: 0.75rem;
+    font-weight: bold;
+    flex-shrink: 0;
+  }
+
+  .service-pricing__cross {
+    color: #999;
+    margin-right: 0.75rem;
+    flex-shrink: 0;
+  }
+
+  .service-pricing__button {
+    margin-top: 1.5rem;
+  }
+{%- endstyle -%}
+
+<div class="color-{{ section.settings.color_scheme }} gradient">
+  <div class="page-width section-{{ section.id }}-padding">
+    <div class="service-pricing">
+      {%- unless section.settings.title == blank -%}
+        <h2 class="title inline-richtext {{ section.settings.heading_size }}">
+          {{ section.settings.title }}
+        </h2>
+      {%- endunless -%}
+
+      {%- if section.settings.subtitle != blank -%}
+        <div class="subtitle" style="margin-top: 1rem;">{{ section.settings.subtitle }}</div>
+      {%- endif -%}
+
+      <div class="service-pricing__grid">
+        {%- for block in section.blocks -%}
+          <div
+            class="service-pricing__card{% if block.settings.featured %} service-pricing__card--featured{% endif %}"
+            {{ block.shopify_attributes }}
+          >
+            {%- if block.settings.badge != blank -%}
+              <div class="service-pricing__badge">{{ block.settings.badge }}</div>
+            {%- endif -%}
+
+            <h3 class="service-pricing__title">{{ block.settings.title }}</h3>
+
+            <div class="service-pricing__price">{{ block.settings.price }}</div>
+
+            {%- if block.settings.price_note != blank -%}
+              <div class="service-pricing__price-note">{{ block.settings.price_note }}</div>
+            {%- endif -%}
+
+            {%- if block.settings.features != blank -%}
+              <ul class="service-pricing__features">
+                {%- assign features = block.settings.features | split: '|' -%}
+                {%- for feature in features -%}
+                  <li>
+                    {%- if feature contains '[x]' -%}
+                      <span class="service-pricing__cross">✕</span>
+                      {{ feature | remove: '[x]' | strip }}
+                    {%- else -%}
+                      <span class="service-pricing__check">✓</span>
+                      {{ feature | strip }}
+                    {%- endif -%}
+                  </li>
+                {%- endfor -%}
+              </ul>
+            {%- endif -%}
+
+            {%- if block.settings.button_label != blank -%}
+              <div class="service-pricing__button">
+                <a
+                  href="{{ block.settings.button_link }}"
+                  class="button{% if block.settings.featured %} button--primary{% endif %}"
+                >
+                  {{ block.settings.button_label }}
+                </a>
+              </div>
+            {%- endif -%}
+          </div>
+        {%- endfor -%}
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Service Pricing Cards",
+  "class": "section",
+  "tag": "section",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "inline_richtext",
+      "id": "title",
+      "default": "PSC Service Department",
+      "label": "Heading"
+    },
+    {
+      "type": "textarea",
+      "id": "subtitle",
+      "label": "Subtitle"
+    },
+    {
+      "type": "select",
+      "id": "heading_size",
+      "options": [
+        { "value": "h2", "label": "Small" },
+        { "value": "h1", "label": "Medium" },
+        { "value": "h0", "label": "Large" },
+        { "value": "hxl", "label": "Extra Large" }
+      ],
+      "default": "h1",
+      "label": "Heading size"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Color scheme",
+      "default": "scheme-1"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding top",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding bottom",
+      "default": 36
+    }
+  ],
+  "blocks": [
+    {
+      "type": "pricing_card",
+      "name": "Pricing Card",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Card Title",
+          "default": "Cylinder Assist Modification"
+        },
+        {
+          "type": "text",
+          "id": "badge",
+          "label": "Badge Text (optional)",
+          "info": "Displays above the card title"
+        },
+        {
+          "type": "checkbox",
+          "id": "featured",
+          "label": "Featured Card",
+          "default": false,
+          "info": "Highlights this card with a border"
+        },
+        {
+          "type": "text",
+          "id": "price",
+          "label": "Price",
+          "default": "$450"
+        },
+        {
+          "type": "text",
+          "id": "price_note",
+          "label": "Price Note",
+          "default": "labor + parts",
+          "info": "Small text below the price"
+        },
+        {
+          "type": "textarea",
+          "id": "features",
+          "label": "Features List",
+          "info": "Separate features with | character. Add [x] before feature text to show as unavailable (e.g., Feature 1|Feature 2|[x]Feature 3)"
+        },
+        {
+          "type": "text",
+          "id": "button_label",
+          "label": "Button Label",
+          "default": "WHAT'S INCLUDED"
+        },
+        {
+          "type": "url",
+          "id": "button_link",
+          "label": "Button Link"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Service Pricing Cards",
+      "blocks": [
+        {
+          "type": "pricing_card"
+        },
+        {
+          "type": "pricing_card"
+        },
+        {
+          "type": "pricing_card"
+        },
+        {
+          "type": "pricing_card"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
