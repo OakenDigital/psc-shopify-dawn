@@ -64,7 +64,7 @@
             "price": "$450",
             "price_note": "labor + parts",
             "features": "Turn direction|Installation|Customization|Pump selection",
-            "button_label": "WHAT'S INCLUDED",
+            "button_label": "",
             "button_link": ""
           }
         },
@@ -77,7 +77,7 @@
             "price": "$65",
             "price_note": "labor + parts",
             "features": "Stroke limitation|Installation|Customization|Pump selection",
-            "button_label": "WHAT'S INCLUDED",
+            "button_label": "",
             "button_link": ""
           }
         },
@@ -90,7 +90,7 @@
             "price": "$90",
             "price_note": "labor + parts",
             "features": "Pump Rebuilds|Hose Assembly|[x]Customization|Custom limitations",
-            "button_label": "WHAT'S INCLUDED",
+            "button_label": "",
             "button_link": ""
           }
         },
@@ -103,7 +103,7 @@
             "price": "$125+",
             "price_note": "per hour",
             "features": "Custom fabrication|Installation|Pump selection|Hose limitations",
-            "button_label": "WHAT'S INCLUDED",
+            "button_label": "",
             "button_link": ""
           }
         }
