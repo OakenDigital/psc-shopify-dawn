@@ -72,8 +72,8 @@
           "type": "pricing_card",
           "settings": {
             "title": "Cylinder Stroke Limiting",
-            "badge": "MOST POPULAR",
-            "featured": true,
+            "badge": "",
+            "featured": false,
             "price": "$65",
             "price_note": "labor + parts",
             "features": "Stroke limitation|Installation|Customization|Pump selection",
