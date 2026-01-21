@@ -439,6 +439,7 @@
         "content_2",
         "content_3"
       ],
+      "disabled": true,
       "settings": {
         "title": "More From Our Tech Center",
         "heading_size": "h1",
