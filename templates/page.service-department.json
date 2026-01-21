@@ -173,8 +173,30 @@
         "subtitle": "Every service is different. Some work is flat‑rate, others depend on condition and wear. Here’s what you can expect:",
         "heading_size": "h1",
         "color_scheme": "scheme-1",
-        "padding_top": 52,
+        "padding_top": 12,
         "padding_bottom": 36
+      }
+    },
+    "service_note": {
+      "type": "rich-text",
+      "blocks": {
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>Heads‑up:</strong> There’s a $120 teardown fee for opening and inspecting any gearbox. If you move forward with the repair, that fee is credited toward your final invoice.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "text"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-2",
+        "full_width": true,
+        "padding_top": 20,
+        "padding_bottom": 20
       }
     },
     "available_services": {
@@ -205,28 +227,6 @@
         "full_width": true,
         "padding_top": 40,
         "padding_bottom": 40
-      }
-    },
-    "service_note": {
-      "type": "rich-text",
-      "blocks": {
-        "text": {
-          "type": "text",
-          "settings": {
-            "text": "<p><strong>Heads‑up:</strong> There’s a $120 teardown fee for opening and inspecting any gearbox. If you move forward with the repair, that fee is credited toward your final invoice.</p>"
-          }
-        }
-      },
-      "block_order": [
-        "text"
-      ],
-      "settings": {
-        "desktop_content_position": "center",
-        "content_alignment": "center",
-        "color_scheme": "scheme-2",
-        "full_width": true,
-        "padding_top": 20,
-        "padding_bottom": 20
       }
     },
     "how_to_send": {
@@ -496,8 +496,8 @@
     "image_banner",
     "benefits",
     "service_pricing",
-    "available_services",
     "service_note",
+    "available_services",
     "how_to_send",
     "faqs",
     "related_content",
