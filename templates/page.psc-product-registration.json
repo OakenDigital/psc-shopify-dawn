@@ -23,13 +23,13 @@
           "type": "heading",
           "settings": {
             "heading": "Lock In Your Warranty Today",
-            "heading_size": "h1"
+            "heading_size": "h2"
           }
         },
         "text_b6P3Gz": {
           "type": "text",
           "settings": {
-            "text": "<p>Protect your steering investment and make sure you’re<br/>covered.</p><p>Registering your PSC product activates your warranty and<br/>keeps you in the loop on important updates, tech tips, and product news. It<br/>only takes a minute, and it’s the best way to make sure your steering system<br/>gets the support it deserves.</p>"
+            "text": "<p>Protect your steering investment and make sure you’re<br/>covered.</p><p>Registering your PSC product activates your warranty and keeps you in the loop on important updates, tech tips, and product news. It only takes a minute, and it’s the best way to make sure your steering system gets the support it deserves.</p>"
           }
         },
         "button_rPpXcb": {
@@ -53,7 +53,7 @@
       "name": "t:sections.rich-text.presets.name",
       "settings": {
         "desktop_content_position": "center",
-        "content_alignment": "center",
+        "content_alignment": "left",
         "color_scheme": "",
         "full_width": true,
         "padding_top": 40,
