@@ -54,6 +54,49 @@
         "padding_bottom": 52
       }
     },
+    "rich_text_hxAiDD": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_FCGn66": {
+          "type": "heading",
+          "settings": {
+            "heading": "Work with People Who Love What They Do",
+            "heading_size": "h2"
+          }
+        },
+        "text_QMfKWq": {
+          "type": "text",
+          "settings": {
+            "text": "<p>At PSC Motorsports, we build steering systems that make trucks, Jeeps, and off-road rigs handle like they should. We’ve been doing it for decades, and we’re proud of the reputation we’ve earned. If you like solving problems, working with your hands, and being part of a team that cares about doing things right, you’ll fit in here.</p><h2>What We Do</h2><p>We design and build steering components that hold up to real-world abuse—whether that’s towing heavy, crawling rocks, or running wide-open in the desert. Every part that leaves our shop is something we’d trust on our own rigs.</p><h2>Why Work Here</h2><ul><li><strong>Steady Work, Solid Team</strong> – We’re not a giant corporation. You’ll know the people you work with, and they’ll know you.</li><li><strong>Hands-On Every Day</strong> – If you like working with tools and solving problems, you’ll never be bored.</li><li><strong>Pride in the Product</strong> – When you see a PSC sticker on a rig, you know it’s built right. You’ll be part of that.</li></ul><h2>Who We’re Looking For</h2><p>People who:</p><ul><li>Show up on time and do what they say they’ll do.</li><li>Take pride in their work.</li><li>Want to learn and get better every day.</li></ul><p>Experience in steering or hydraulics is great, but if you’ve got mechanical skills and the right attitude, we’ll teach you the rest.</p><h2>Open Positions</h2><p>No current positions available at this time.</p>"
+          }
+        },
+        "button_tiN79B": {
+          "type": "button",
+          "settings": {
+            "button_label": "Button label",
+            "button_link": "",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_FCGn66",
+        "text_QMfKWq",
+        "button_tiN79B"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
     "forms": {
       "type": "apps",
       "blocks": {
@@ -63,9 +106,9 @@
             "form_id": "843673",
             "text_color": "#202020",
             "button_background_color": "#202020",
-            "button_label_color": "#FFFFFF",
-            "links_color": "#1878B9",
-            "errors_color": "#E02229",
+            "button_label_color": "#ffffff",
+            "links_color": "#1878b9",
+            "errors_color": "#e02229",
             "text_alignment": "center",
             "form_alignment": "center",
             "padding_top": 0,
@@ -92,6 +135,7 @@
   "order": [
     "cd0a8e3a-cfbd-42e7-88bb-b206f7176d40",
     "rich_text_F44yVz",
+    "rich_text_hxAiDD",
     "forms",
     "17681686994eae9bed"
   ]
