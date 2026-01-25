@@ -57,7 +57,7 @@
         "color_scheme": "",
         "full_width": true,
         "padding_top": 40,
-        "padding_bottom": 52
+        "padding_bottom": 40
       }
     },
     "1769354431812ebd0c": {
@@ -74,7 +74,7 @@
             "errors_color": "#E02229",
             "text_alignment": "center",
             "form_alignment": "center",
-            "padding_top": 0,
+            "padding_top": 10,
             "padding_bottom": 24,
             "padding_right": 0,
             "padding_left": 0
