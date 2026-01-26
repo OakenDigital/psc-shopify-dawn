@@ -47,9 +47,9 @@
         "button"
       ],
       "settings": {
-        "image": "shopify://shop_images/Home_Hero_-_Norra_1000_2025_2_with_gradient.png",
+        "image": "shopify://shop_images/Home_Hero_-_Red_PSC_Jeep_EJS_2025_with_gradient.png",
         "image_overlay_opacity": 0,
-        "image_height": "adapt",
+        "image_height": "medium",
         "image_behavior": "none",
         "desktop_content_position": "bottom-right",
         "desktop_content_alignment": "center",
