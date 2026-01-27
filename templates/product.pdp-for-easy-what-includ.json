@@ -1,0 +1,488 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "breadcrumbs_EzUGCk": {
+      "type": "breadcrumbs",
+      "name": "Breadcrumbs",
+      "settings": {
+        "home_text": "Shop",
+        "background_color": "#f8f8f8",
+        "link_color": "#517187",
+        "link_hover_color": "#333333",
+        "current_page_color": "#121212",
+        "arrow_color": "#121212",
+        "padding_top": 20,
+        "padding_bottom": 20
+      }
+    },
+    "1762357149ec0dedd5": {
+      "type": "apps",
+      "blocks": {
+        "partfinder_year_make_model_vehicle_search_bar_XCfCzB": {
+          "type": "shopify://apps/partfinder-year-make-model/blocks/vehicle_search_bar/2892d2e7-0551-451a-8d78-8a0f565a5174",
+          "settings": {
+            "gv-enable-submodel": false,
+            "gv-disable-full-width-class": false,
+            "gv-disable-styles": false,
+            "gv-search-bar": "#97aab7",
+            "gv-search-color": "#4a5c68",
+            "gv-search-text-color": "#ffffff",
+            "gv-clear-color": "rgba(0,0,0,0)",
+            "gv-clear-text-color": "#121212",
+            "gv-search-label": "Search",
+            "gv-clear-label": "Clear",
+            "gv-show-title-label": true,
+            "gv-title-label": "SELECT YOUR VEHICLE",
+            "gv-title-bg": "#000000",
+            "gv-title-text": "#ffffff",
+            "gv-show-toggle-button": true,
+            "gv-toggle-button-label": "SELECT YOUR VEHICLE",
+            "gv-toggle-button-bg": "#000000",
+            "gv-toggle-button-text": "#ffffff",
+            "gv-margin-top": 0,
+            "gv-margin-bottom": 30,
+            "gv-margin-left": 0,
+            "gv-margin-right": 0
+          }
+        }
+      },
+      "block_order": [
+        "partfinder_year_make_model_vehicle_search_bar_XCfCzB"
+      ],
+      "custom_css": [
+        ".auto-part-search-bar .gv-mmy-bar {padding: 2rem 1rem;}"
+      ],
+      "settings": {
+        "include_margins": false
+      }
+    },
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "yotpo_product_reviews_star_rating_fJzwXp": {
+          "type": "shopify://apps/yotpo-product-reviews/blocks/star-rating/eb7dfd7d-db44-4334-bc49-c893b51b36cf",
+          "settings": {
+            "product": "{{product}}"
+          }
+        },
+        "title": {
+          "type": "title",
+          "settings": {}
+        },
+        "price": {
+          "type": "price",
+          "settings": {}
+        },
+        "affirm_pay_over_time_messaging_product_block_mJM8Ae": {
+          "type": "shopify://apps/affirm-pay-over-time-messaging/blocks/product-block/6dce54be-130d-4d13-9636-1e8f611b3071",
+          "settings": {
+            "logo_align": "left",
+            "font_size": 14,
+            "logo_color": "blue",
+            "logo_type": "logo",
+            "public_api_key": "",
+            "price_selector": ""
+          }
+        },
+        "custom_liquid_mdwrBa": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "<div class=\"product-sku-display\" style=\"text-align: left; margin: 0 0 1rem 0;\">\n  <p style=\"margin: 0;\"><strong>Part Number:</strong> <span class=\"variant-sku\">{{ product.selected_or_first_available_variant.sku }}</span></p>\n</div>\n\n<script>\n(function() {\n  document.addEventListener('variant:change', function(event) {\n    if (event.detail?.variant?.sku) {\n      document.querySelector('.variant-sku').textContent = event.detail.variant.sku;\n    }\n  });\n\n  if (window.VariantHelper) {\n    window.VariantHelper.on('variant:change', function(variant) {\n      if (variant?.sku) {\n        document.querySelector('.variant-sku').textContent = variant.sku;\n      }\n    });\n  }\n\n  const form = document.querySelector('form[action*=\"/cart/add\"]');\n  if (form) {\n    form.addEventListener('change', function() {\n      const selectedVariantId = form.querySelector('[name=\"id\"]')?.value;\n      if (selectedVariantId) {\n        const variants = {{ product.variants | json }};\n        const variant = variants.find(v => v.id == selectedVariantId);\n        if (variant?.sku) {\n          document.querySelector('.variant-sku').textContent = variant.sku;\n        }\n      }\n    });\n  }\n})();\n</script>"
+          }
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button",
+            "swatch_shape": "circle"
+          }
+        },
+        "quantity_selector": {
+          "type": "quantity_selector",
+          "settings": {}
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": false,
+            "show_gift_card_recipient": true
+          }
+        },
+        "custom_liquid_7p3eAr": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "{% if product.metafields.custom.this_item_may_take_up_to_3_business_days_to_ship == true %}\n  <h4 style=\"color: #000000; margin: 1rem 0;\">This product typically ships within 3 business days.</h4>\n{% endif %}"
+          }
+        },
+        "description": {
+          "type": "description",
+          "settings": {}
+        },
+        "share": {
+          "type": "share",
+          "disabled": true,
+          "settings": {
+            "share_label": "Share"
+          }
+        },
+        "complementary_98k8aW": {
+          "type": "complementary",
+          "settings": {
+            "block_heading": "Recommended Add‑Ons",
+            "make_collapsible_row": false,
+            "icon": "price_tag",
+            "product_list_limit": 10,
+            "products_per_page": 3,
+            "pagination_style": "counter",
+            "image_ratio": "square",
+            "enable_quick_add": false
+          }
+        }
+      },
+      "block_order": [
+        "yotpo_product_reviews_star_rating_fJzwXp",
+        "title",
+        "price",
+        "affirm_pay_over_time_messaging_product_block_mJM8Ae",
+        "custom_liquid_mdwrBa",
+        "variant_picker",
+        "quantity_selector",
+        "buy_buttons",
+        "custom_liquid_7p3eAr",
+        "description",
+        "share",
+        "complementary_98k8aW"
+      ],
+      "custom_css": [
+        "shopify-payment-terms {display: none;}",
+        ".product__title h1 {font-size: calc(var(--font-heading-scale) * 3rem);}"
+      ],
+      "settings": {
+        "enable_sticky_info": true,
+        "color_scheme": "scheme-1",
+        "media_size": "small",
+        "constrain_to_viewport": true,
+        "media_fit": "contain",
+        "gallery_layout": "stacked",
+        "mobile_thumbnails": "hide",
+        "media_position": "left",
+        "image_zoom": "lightbox",
+        "hide_variants": true,
+        "enable_video_looping": false,
+        "padding_top": 36,
+        "padding_bottom": 12
+      }
+    },
+    "psc_trail_score_RMztJE": {
+      "type": "psc-trail-score",
+      "name": "PSC Trail Score",
+      "settings": {
+        "metafield_namespace": "custom",
+        "metafield_key": "trail_score",
+        "label_text": "PSC TRAIL SCORE",
+        "icon_image": "shopify://shop_images/psc-trail-icon.svg",
+        "score_1_data": "Trail Beginner|Perfect for smooth roads and light gravel paths.",
+        "score_2_data": "Easy Rider|Handles paved roads and occasional dirt trails with ease.",
+        "score_3_data": "Weekend Warrior|Balanced for street and moderate trails—think mild rock and mud.",
+        "score_4_data": "Trail Crusher|Built for challenging terrain with rocks, ruts, and steep inclines.",
+        "score_5_data": "Extreme Off-Road|Engineered for the toughest trails and extreme rock crawling.",
+        "left_background": "#2b2b2b",
+        "left_text_color": "#ffffff",
+        "right_background": "#c9a86a",
+        "right_text_color": "#121212",
+        "score_color": "#121212",
+        "title_color": "#121212",
+        "description_color": "#121212",
+        "left_width": 25,
+        "max_width": 600,
+        "border_radius": 8,
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 40
+      }
+    },
+    "collapsible_content_fgDLQP": {
+      "type": "collapsible-content",
+      "blocks": {
+        "section_heading_YaCKnL": {
+          "type": "section_heading",
+          "settings": {
+            "title": "About:",
+            "custom_icon": "shopify://shop_images/About_Icon_Information.svg"
+          }
+        },
+        "collapsible_row_bHQJKc": {
+          "type": "collapsible_row",
+          "disabled": true,
+          "settings": {
+            "heading": "Description",
+            "row_content": "{{ product.description }}",
+            "page": "",
+            "custom_liquid": "",
+            "metafield_namespace": "",
+            "metafield_key": "",
+            "file_link_text": "Download File"
+          }
+        },
+        "collapsible_row_PbgMUq": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Why you’ll love it",
+            "row_content": "{{ product.metafields.custom.why_you_ll_love_it | metafield_tag }}",
+            "page": "",
+            "custom_liquid": "",
+            "metafield_namespace": "",
+            "metafield_key": "",
+            "file_link_text": "Download File"
+          }
+        },
+        "section_heading_wEkmih": {
+          "type": "section_heading",
+          "settings": {
+            "title": "Tech Info",
+            "custom_icon": "shopify://shop_images/wrenches.svg"
+          }
+        },
+        "collapsible_row_gQerXy": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Heads‑up for installers",
+            "row_content": "<p>{{ product.metafields.custom.heads_up_for_installers | metafield_tag }}</p>",
+            "page": "",
+            "custom_liquid": "",
+            "metafield_namespace": "",
+            "metafield_key": "",
+            "file_link_text": "Download File"
+          }
+        },
+        "collapsible_row_99X6Dp": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Fitment",
+            "row_content": "{{ product.metafields.custom.fitment_pdp | metafield_tag }}",
+            "page": "",
+            "custom_liquid": "",
+            "metafield_namespace": "",
+            "metafield_key": "",
+            "file_link_text": "Download File"
+          }
+        },
+        "collapsible_row_3PTdh8": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Use it with",
+            "row_content": "{{ product.metafields.custom.use_it_with | metafield_tag }}",
+            "page": "",
+            "custom_liquid": "",
+            "metafield_namespace": "",
+            "metafield_key": "",
+            "file_link_text": "Download File"
+          }
+        },
+        "collapsible_row_NNdPwE": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Ideal for",
+            "row_content": "{{ product.metafields.custom.ideal_for | metafield_tag }}",
+            "page": "",
+            "custom_liquid": "",
+            "metafield_namespace": "",
+            "metafield_key": "",
+            "file_link_text": "Download File"
+          }
+        },
+        "collapsible_row_Tqi8k6": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Specs",
+            "row_content": "{{ product.metafields.custom.specs | metafield_tag }}",
+            "page": "",
+            "custom_liquid": "",
+            "metafield_namespace": "",
+            "metafield_key": "",
+            "file_link_text": "Download File"
+          }
+        },
+        "collapsible_row_dWpThT": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "What’s included",
+            "row_content": "{{ product.metafields.custom.what_s_included | metafield_tag }}",
+            "page": "",
+            "custom_liquid": "",
+            "metafield_namespace": "",
+            "metafield_key": "",
+            "file_link_text": "Download File"
+          }
+        },
+        "section_heading_pYFkHR": {
+          "type": "section_heading",
+          "settings": {
+            "title": "Support",
+            "custom_icon": "shopify://shop_images/wrenches.svg"
+          }
+        },
+        "collapsible_row_BMzAj6": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Install Instructions",
+            "row_content": "",
+            "page": "",
+            "custom_liquid": "",
+            "metafield_namespace": "custom",
+            "metafield_key": "install_instructions",
+            "file_link_text": ""
+          }
+        },
+        "collapsible_row_jJHE8V": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Installation Video",
+            "row_content": "",
+            "page": "",
+            "custom_liquid": "{%- liquid\n          assign video_metafields = ''\n          if product.metafields.custom.embed_youtube_video != blank\n            assign video_metafields = video_metafields | append: product.metafields.custom.embed_youtube_video | append: '||'\n          endif\n          if product.metafields.custom.embed_youtube_video2 != blank\n            assign video_metafields = video_metafields | append: product.metafields.custom.embed_youtube_video2 | append: '||'\n          endif\n        -%}\n\n        {%- if video_metafields != blank -%}\n          {%- assign video_urls = video_metafields | split: '||' -%}\n          {%- for video_url in video_urls -%}\n            {%- if video_url != blank -%}\n              <div class=\"install-video-section\" style=\"margin: 30px 0;\">\n                {%- assign video_url_clean = video_url | strip -%}\n                {%- assign video_id = '' -%}\n                \n                {%- comment -%} Extract YouTube video ID from various URL formats {%- endcomment -%}\n                {%- if video_url_clean contains 'youtube.com/watch?v=' -%}\n                  {%- assign video_id = video_url_clean | split: 'watch?v=' | last | split: '&' | first -%}\n                {%- elsif video_url_clean contains 'youtu.be/' -%}\n                  {%- assign video_id = video_url_clean | split: 'youtu.be/' | last | split: '?' | first -%}\n                {%- elsif video_url_clean contains 'youtube.com/embed/' -%}\n                  {%- assign video_id = video_url_clean | split: 'embed/' | last | split: '?' | first -%}\n                {%- endif -%}\n                \n                {%- if video_id != blank and video_id != '' -%}\n                  <a href=\"https://www.youtube.com/watch?v={{ video_id }}\" target=\"_blank\" rel=\"noopener\" style=\"display: block; position: relative; max-width: 400px; width: 100%;\">\n                    <div style=\"position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; background: #000;\">\n                      <img \n                        src=\"https://img.youtube.com/vi/{{ video_id }}/maxresdefault.jpg\" \n                        alt=\"Installation Video Thumbnail\"\n                        style=\"position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;\"\n                        loading=\"lazy\"\n                      />\n                      <div style=\"position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 68px; height: 48px; background: rgba(255, 0, 0, 0.9); border-radius: 12px; transition: background 0.3s;\">\n                        <svg height=\"100%\" version=\"1.1\" viewBox=\"0 0 68 48\" width=\"100%\">\n                          <path d=\"M66.52,7.74c-0.78-2.93-2.49-5.41-5.42-6.19C55.79,.13,34,0,34,0S12.21,.13,6.9,1.55 C3.97,2.33,2.27,4.81,1.48,7.74C0.06,13.05,0,24,0,24s0.06,10.95,1.48,16.26c0.78,2.93,2.49,5.41,5.42,6.19 C12.21,47.87,34,48,34,48s21.79-0.13,27.1-1.55c2.93-0.78,4.64-3.26,5.42-6.19C67.94,34.95,68,24,68,24S67.94,13.05,66.52,7.74z\" fill=\"#f00\"></path>\n                          <path d=\"M 45,24 27,14 27,34\" fill=\"#fff\"></path>\n                        </svg>\n                      </div>\n                    </div>\n                  </a>\n                {%- else -%}\n                  <p style=\"color: #999; font-style: italic;\">Video URL format not recognized. Please use a standard YouTube URL.</p>\n                {%- endif -%}\n              </div>\n            {%- endif -%}\n          {%- endfor -%}\n        {%- endif -%}",
+            "metafield_namespace": "custom",
+            "metafield_key": "",
+            "file_link_text": ""
+          }
+        },
+        "collapsible_row_4AWmwz": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "OEM Cross Reference",
+            "row_content": "{{ product.metafields.custom.oem_cross_reference | metafield_tag }}",
+            "page": "",
+            "custom_liquid": "",
+            "metafield_namespace": "",
+            "metafield_key": "",
+            "file_link_text": "Download File"
+          }
+        }
+      },
+      "block_order": [
+        "section_heading_YaCKnL",
+        "collapsible_row_bHQJKc",
+        "collapsible_row_PbgMUq",
+        "section_heading_wEkmih",
+        "collapsible_row_gQerXy",
+        "collapsible_row_99X6Dp",
+        "collapsible_row_3PTdh8",
+        "collapsible_row_NNdPwE",
+        "collapsible_row_Tqi8k6",
+        "collapsible_row_dWpThT",
+        "section_heading_pYFkHR",
+        "collapsible_row_BMzAj6",
+        "collapsible_row_jJHE8V",
+        "collapsible_row_4AWmwz"
+      ],
+      "name": "t:sections.collapsible_content.presets.name",
+      "settings": {
+        "caption": "",
+        "heading": "",
+        "heading_size": "h1",
+        "heading_alignment": "center",
+        "layout": "none",
+        "container_color_scheme": "",
+        "color_scheme": "",
+        "open_first_collapsible_row": false,
+        "full_width_content": true,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "padding_top": 16,
+        "padding_bottom": 32
+      }
+    },
+    "custom_liquid_RqPcq4": {
+      "type": "custom-liquid",
+      "disabled": true,
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "{% if product.metafields.custom.embed_youtube_video != blank %}\n  <div style=\"padding-left: 70px;\">\n    <div class=\"install-video-section\" style=\"margin: 30px 0;\">\n      <h4 style=\"margin-bottom: 15px;\">Installation Video</h4>\n      \n      {% assign video_url = product.metafields.custom.embed_youtube_video | strip %}\n      {% assign video_id = '' %}\n      \n      {%- comment -%} Extract YouTube video ID from various URL formats {%- endcomment -%}\n      {%- if video_url contains 'youtube.com/watch?v=' -%}\n        {% assign video_id = video_url | split: 'watch?v=' | last | split: '&' | first %}\n      {%- elsif video_url contains 'youtu.be/' -%}\n        {% assign video_id = video_url | split: 'youtu.be/' | last | split: '?' | first %}\n      {%- elsif video_url contains 'youtube.com/embed/' -%}\n        {% assign video_id = video_url | split: 'embed/' | last | split: '?' | first %}\n      {%- endif -%}\n      \n      {%- if video_id != blank and video_id != '' -%}\n        <a href=\"https://www.youtube.com/watch?v={{ video_id }}\" target=\"_blank\" rel=\"noopener\" style=\"display: block; position: relative; max-width: 400px; width: 100%;\">\n          <div style=\"position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; background: #000;\">\n            <img \n              src=\"https://img.youtube.com/vi/{{ video_id }}/maxresdefault.jpg\" \n              alt=\"Installation Video Thumbnail\"\n              style=\"position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;\"\n              loading=\"lazy\"\n            />\n            <div style=\"position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 68px; height: 48px; background: rgba(255, 0, 0, 0.9); border-radius: 12px; transition: background 0.3s;\">\n              <svg height=\"100%\" version=\"1.1\" viewBox=\"0 0 68 48\" width=\"100%\">\n                <path d=\"M66.52,7.74c-0.78-2.93-2.49-5.41-5.42-6.19C55.79,.13,34,0,34,0S12.21,.13,6.9,1.55 C3.97,2.33,2.27,4.81,1.48,7.74C0.06,13.05,0,24,0,24s0.06,10.95,1.48,16.26c0.78,2.93,2.49,5.41,5.42,6.19 C12.21,47.87,34,48,34,48s21.79-0.13,27.1-1.55c2.93-0.78,4.64-3.26,5.42-6.19C67.94,34.95,68,24,68,24S67.94,13.05,66.52,7.74z\" fill=\"#f00\"></path>\n                <path d=\"M 45,24 27,14 27,34\" fill=\"#fff\"></path>\n              </svg>\n            </div>\n          </div>\n        </a>\n      {%- else -%}\n        <p style=\"color: #999; font-style: italic;\">Video URL format not recognized. Please use a standard YouTube URL.</p>\n      {%- endif -%}\n    </div>\n  </div>\n{% endif %}",
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "related-products": {
+      "type": "related-products",
+      "settings": {
+        "heading": "You May Also Like",
+        "heading_size": "h2",
+        "products_to_show": 4,
+        "columns_desktop": 4,
+        "columns_mobile": "2",
+        "color_scheme": "scheme-1",
+        "image_ratio": "square",
+        "image_shape": "default",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "padding_top": 36,
+        "padding_bottom": 28
+      }
+    },
+    "176235741763515547": {
+      "type": "apps",
+      "blocks": {
+        "yotpo_product_reviews_reviews_7indRK": {
+          "type": "shopify://apps/yotpo-product-reviews/blocks/reviews/eb7dfd7d-db44-4334-bc49-c893b51b36cf",
+          "settings": {
+            "product": "{{product}}"
+          }
+        },
+        "yotpo_product_reviews_vugc_media_gallery_QKAifb": {
+          "type": "shopify://apps/yotpo-product-reviews/blocks/vugc_media_gallery/eb7dfd7d-db44-4334-bc49-c893b51b36cf",
+          "settings": {
+            "product": "{{ product }}",
+            "widget_instance_id": "1249840"
+          }
+        }
+      },
+      "block_order": [
+        "yotpo_product_reviews_reviews_7indRK",
+        "yotpo_product_reviews_vugc_media_gallery_QKAifb"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    },
+    "conditional_content_ajjAYb": {
+      "type": "conditional-content",
+      "custom_css": [
+        "p {font-size: 1.2rem;}"
+      ],
+      "name": "Conditional Content",
+      "settings": {
+        "metafield_namespace": "custom",
+        "metafield_key": "prop_65",
+        "heading": "California Prop 65 Warning",
+        "custom_icon": "shopify://shop_images/warning-icon.svg",
+        "heading_size": "h4",
+        "content": "<p>This product can expose you to chemicals including lead and di (2-ethylhexyl) phthalate, which are known to the State of California to cause cancer, birth defects or other reproductive harm.</p><p>For more information, go to www.P65Warnings.ca.gov<br/></p>",
+        "full_width": true,
+        "color_scheme": "",
+        "padding_top": 60,
+        "padding_bottom": 60
+      }
+    }
+  },
+  "order": [
+    "breadcrumbs_EzUGCk",
+    "1762357149ec0dedd5",
+    "main",
+    "psc_trail_score_RMztJE",
+    "collapsible_content_fgDLQP",
+    "custom_liquid_RqPcq4",
+    "related-products",
+    "176235741763515547",
+    "conditional_content_ajjAYb"
+  ]
+}
