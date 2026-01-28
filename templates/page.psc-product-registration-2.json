@@ -78,7 +78,9 @@
       "block_order": [
         "forms_inline_VCNEFy"
       ],
-      "custom_css": [],
+      "custom_css": [
+        "._formContainer_1q1d2_30 {max-width: 100% !important;}"
+      ],
       "settings": {
         "include_margins": true,
         "full_width": false
