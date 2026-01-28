@@ -491,7 +491,7 @@
       ".product__tax.caption.rte {display: none !important;}",
       ".product__title a.product__title h2 {font-size: calc(var(--font-heading-scale) * 3rem);}",
       ".select option[value=\"created-ascending\"],.select option[value=\"created-descending\"],.select option[value=\"title-ascending\"],.select option[value=\"title-descending\"] {display: none;}",
-      "section._formContainer_1q1d2_30 {max-width: 100% !important;}"
+      "._formContainer_1q1d2_30 {max-width: 100% !important;}"
     ]
   }
 }
