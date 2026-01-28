@@ -491,7 +491,7 @@
       ".product__tax.caption.rte {display: none !important;}",
       ".product__title a.product__title h2 {font-size: calc(var(--font-heading-scale) * 3rem);}",
       ".select option[value=\"created-ascending\"],.select option[value=\"created-descending\"],.select option[value=\"title-ascending\"],.select option[value=\"title-descending\"] {display: none;}",
-      "shopify-forms-embed {--inline-container-max-width: 100% !important; --forms-body-font: \"Gotham\"; --form-field-border-radius: 0; --form-field-border-focused:0 0 0 2px rgba(var(--color-foreground));}"
+      "shopify-forms-embed {--inline-container-max-width: 100% !important; --forms-body-font: \"Gotham\"; --form-field-border-radius: 0; --form-field-border-focused: 0 0 0 2px rgba(var(--color-foreground)); --form-field-border: 0 0 0 1px rgba(var(--color-foreground), 0.3); --subdued-text-color: rgba(var(--color-foreground));}"
     ]
   }
 }
