@@ -80,13 +80,14 @@
       ],
       "settings": {
         "include_margins": true,
-        "full_width": false
+        "full_width": true
       }
     },
     "17681686994eae9bed": {
       "type": "apps",
       "settings": {
-        "include_margins": true
+        "include_margins": true,
+        "full_width": true
       }
     }
   },
