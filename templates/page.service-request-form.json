@@ -79,20 +79,14 @@
         "370c0b32-e6f3-4f5b-99d3-f4ea2a980299"
       ],
       "settings": {
-        "include_margins": true
-      }
-    },
-    "17681686994eae9bed": {
-      "type": "apps",
-      "settings": {
-        "include_margins": true
+        "include_margins": true,
+        "full_width": false
       }
     }
   },
   "order": [
     "cd0a8e3a-cfbd-42e7-88bb-b206f7176d40",
     "rich_text_F44yVz",
-    "forms",
-    "17681686994eae9bed"
+    "forms"
   ]
 }
