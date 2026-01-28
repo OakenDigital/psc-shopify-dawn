@@ -1,0 +1,507 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "image_banner": {
+      "type": "image-banner",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "PSC Service Department",
+            "heading_size": "h0"
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "PSC has a dedicated service team that works on our steering products every day. If it’s PSC‑built, you’re sending it back to the same people who know it inside and out.",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "heading",
+        "text"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/Designer_56.png",
+        "image_overlay_opacity": 30,
+        "image_height": "small",
+        "image_behavior": "none",
+        "desktop_content_position": "middle-center",
+        "desktop_content_alignment": "center",
+        "show_text_box": false,
+        "color_scheme": "scheme-1",
+        "stack_images_on_mobile": true,
+        "mobile_content_alignment": "center",
+        "show_text_below": true
+      }
+    },
+    "benefits": {
+      "type": "multicolumn",
+      "blocks": {
+        "benefit_1": {
+          "type": "column",
+          "settings": {
+            "title": "Built With PSC Parts",
+            "text": "<p>Repairs are done using PSC parts on PSC‑built steering components — gears, pumps, Cylinder Assist®, and full hydraulic cylinders.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "benefit_2": {
+          "type": "column",
+          "settings": {
+            "title": "6 Month Limited Warranty",
+            "text": "<p>Service repairs come with a 6‑month limited warranty, so you know where you stand once it’s back on the vehicle.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "benefit_3": {
+          "type": "column",
+          "settings": {
+            "title": "Decades of Steering Experience",
+            "text": "<p>We’ve been building and servicing steering systems for decades. That experience shows up in the details — what to fix, what to leave alone, and what makes the most sense long‑term.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "benefit_1",
+        "benefit_2",
+        "benefit_3"
+      ],
+      "settings": {
+        "title": "Why send it to us?",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "button_label": "",
+        "button_link": "",
+        "columns_desktop": 3,
+        "column_alignment": "left",
+        "background_style": "none",
+        "color_scheme": "scheme-1",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "service_pricing": {
+      "type": "service-pricing-cards",
+      "blocks": {
+        "pricing_1": {
+          "type": "pricing_card",
+          "settings": {
+            "title": "Cylinder Assist Modification",
+            "badge": "",
+            "featured": false,
+            "price": "Starting at $450",
+            "price_note": "labor + parts",
+            "features": "Turn direction|Installation|Customization|Pump selection",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "pricing_2": {
+          "type": "pricing_card",
+          "settings": {
+            "title": "Cylinder Stroke Limiting",
+            "badge": "",
+            "featured": false,
+            "price": "Starting at $80",
+            "price_note": "labor + parts",
+            "features": "Stroke limitation|Installation|Customization|Pump selection",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "pricing_3": {
+          "type": "pricing_card",
+          "settings": {
+            "title": "Other Rebuilds & Repairs",
+            "badge": "",
+            "featured": false,
+            "price": "$90/hr + parts",
+            "price_note": "labor + parts",
+            "features": "Pump Rebuilds|Hose Assembly|[x]Customization|Custom limitations",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "pricing_4": {
+          "type": "pricing_card",
+          "settings": {
+            "title": "Custom Machine Shop Services",
+            "badge": "",
+            "featured": false,
+            "price": "$125+",
+            "price_note": "per hour",
+            "features": "",
+            "button_label": "",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "pricing_1",
+        "pricing_2",
+        "pricing_3",
+        "pricing_4"
+      ],
+      "settings": {
+        "title": "Service Options",
+        "subtitle": "Every service is different. Some work is flat‑rate, others depend on condition and wear. Here’s what you can expect:",
+        "heading_size": "h1",
+        "color_scheme": "scheme-1",
+        "padding_top": 12,
+        "padding_bottom": 36
+      }
+    },
+    "service_note": {
+      "type": "rich-text",
+      "blocks": {
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>Heads‑up:</strong> There’s a $120 teardown fee for opening and inspecting any gearbox. If you move forward with the repair, that fee is credited toward your final invoice.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "text"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-2",
+        "full_width": true,
+        "padding_top": 20,
+        "padding_bottom": 20
+      }
+    },
+    "available_services": {
+      "type": "rich-text",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "How PSC Works",
+            "heading_size": "h1"
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Once your part arrives, it’s inspected, torn down if needed, and checked against PSC specs. We’ll let you know what we find and what it’ll take to fix it before any work starts.<br/><br/>We service PSC‑built steering components only. That keeps turnaround times reasonable and ensures every repair is done with the right parts and clear expectations.</p><ul><li>PSC‑built parts only — no third‑party components</li><li>Inspection and teardown as required</li><li>Repairs done using PSC parts and procedures</li><li>We contact you with findings before moving forward</li><li>Final testing before return shipment<br/><br/></li></ul>"
+          }
+        }
+      },
+      "block_order": [
+        "heading",
+        "text"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "left",
+        "color_scheme": "scheme-2",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 40
+      }
+    },
+    "how_to_send": {
+      "type": "collapsible-content",
+      "blocks": {
+        "step_1": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "1) Fill out a Service Request Form",
+            "row_content": "<p>Complete a <a href=\"/pages/service-request-form\" title=\"Service Request Form\">SERVICE REQUEST FORM </a>and place it in a plastic baggie to prevent oil leak, and include it in the package with the component.</p>",
+            "page": "",
+            "custom_liquid": "",
+            "metafield_namespace": "",
+            "metafield_key": "",
+            "file_link_text": "Download File"
+          }
+        },
+        "step_2": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "2) Pack the part securely",
+            "row_content": "<p>Use a sturdy box and padding to keep it from shifting during shipping.</p>",
+            "page": "",
+            "custom_liquid": "",
+            "metafield_namespace": "",
+            "metafield_key": "",
+            "file_link_text": "Download File"
+          }
+        },
+        "step_3": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "3) Bag it to prevent leaks",
+            "row_content": "<p>Wrap the part in plastic or seal it in a heavy bag — leaking packages can get flagged as HazMat.</p>",
+            "page": "",
+            "custom_liquid": "",
+            "metafield_namespace": "",
+            "metafield_key": "",
+            "file_link_text": "Download File"
+          }
+        },
+        "step_4": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "4) Ship it insured",
+            "row_content": "<p>We recommend UPS or FedEx Ground and insuring the package for its replacement value.</p>",
+            "page": "",
+            "custom_liquid": "",
+            "metafield_namespace": "",
+            "metafield_key": "",
+            "file_link_text": "Download File"
+          }
+        },
+        "step_5": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "5) Get it out on time",
+            "row_content": "<p>Ship your part before PSC’s daily cutoff so it moves through the system quickly.</p>",
+            "page": "",
+            "custom_liquid": "",
+            "metafield_namespace": "",
+            "metafield_key": "",
+            "file_link_text": "Download File"
+          }
+        },
+        "step_6": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "6) Pack at your own risk",
+            "row_content": "<p>We’re not responsible for shipping damage, so take the time to pack it right.</p>",
+            "page": "",
+            "custom_liquid": "",
+            "metafield_namespace": "",
+            "metafield_key": "",
+            "file_link_text": "Download File"
+          }
+        }
+      },
+      "block_order": [
+        "step_1",
+        "step_2",
+        "step_3",
+        "step_4",
+        "step_5",
+        "step_6"
+      ],
+      "settings": {
+        "caption": "",
+        "heading": "How to Send Your Part In for Service",
+        "heading_size": "h0",
+        "heading_alignment": "center",
+        "layout": "none",
+        "container_color_scheme": "scheme-2",
+        "color_scheme": "scheme-1",
+        "open_first_collapsible_row": false,
+        "full_width_content": false,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "faqs": {
+      "type": "collapsible-content",
+      "blocks": {
+        "faq_1": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Fluid spilling out of the reservoir?",
+            "row_content": "<ul><li>Usually overfill. Sometimes aeration at high RPM. Set the level correctly and re‑bleed.</li><li>Can also happen when there is air in the steering system</li></ul>",
+            "page": "",
+            "custom_liquid": "",
+            "metafield_namespace": "",
+            "metafield_key": "",
+            "file_link_text": "Download File"
+          }
+        },
+        "faq_2": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "What is the fix level on a PSC Remote Fluid Reservoir?",
+            "row_content": "<p>Add your content here...</p>",
+            "page": "",
+            "custom_liquid": "",
+            "metafield_namespace": "",
+            "metafield_key": "",
+            "file_link_text": "Download File"
+          }
+        },
+        "faq_3": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Where does this rubber hose on the top of my Remote Fluid Reservoir connect?",
+            "row_content": "<p>Add your content here...</p>",
+            "page": "",
+            "custom_liquid": "",
+            "metafield_namespace": "",
+            "metafield_key": "",
+            "file_link_text": "Download File"
+          }
+        },
+        "faq_4": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "What does JIC mean? What is the difference between JIC and AN?",
+            "row_content": "<p>Add your content here...</p>",
+            "page": "",
+            "custom_liquid": "",
+            "metafield_namespace": "",
+            "metafield_key": "",
+            "file_link_text": "Download File"
+          }
+        }
+      },
+      "block_order": [
+        "faq_1",
+        "faq_2",
+        "faq_3",
+        "faq_4"
+      ],
+      "settings": {
+        "caption": "",
+        "heading": "Frequently Asked Questions",
+        "heading_size": "h1",
+        "heading_alignment": "center",
+        "layout": "none",
+        "container_color_scheme": "scheme-2",
+        "color_scheme": "scheme-1",
+        "open_first_collapsible_row": false,
+        "full_width_content": false,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "related_content": {
+      "type": "multicolumn",
+      "blocks": {
+        "content_1": {
+          "type": "column",
+          "settings": {
+            "title": "Video Title",
+            "text": "<p>Explore the 392 HEMI Steering Kit. Built for reliability and performance, this kit enhances steering for a variety of vehicles. Check availability and read customer reviews.</p>",
+            "link_label": "Button →",
+            "link": ""
+          }
+        },
+        "content_2": {
+          "type": "column",
+          "settings": {
+            "title": "Video Title",
+            "text": "<p>Explore the 392 HEMI Steering Kit. Built for reliability and performance, this kit enhances steering for a variety of vehicles. Check availability and read customer reviews.</p>",
+            "link_label": "Button →",
+            "link": ""
+          }
+        },
+        "content_3": {
+          "type": "column",
+          "settings": {
+            "title": "Resource Title",
+            "text": "<p>PSC has a full team of expert technicians available to service and maintain your PSC products. We're committed to helping our customers get the most from their investment in the world's best performance power steering products.</p>",
+            "link_label": "Button →",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "content_1",
+        "content_2",
+        "content_3"
+      ],
+      "disabled": true,
+      "settings": {
+        "title": "More From Our Tech Center",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "button_label": "View All",
+        "button_link": "",
+        "columns_desktop": 3,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "color_scheme": "scheme-3",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "newsletter": {
+      "type": "newsletter",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "Subscribe to our emails",
+            "heading_size": "h1"
+          }
+        },
+        "paragraph": {
+          "type": "paragraph",
+          "settings": {
+            "text": "<p>We're all about making your life easier (and your steering better). Tell us what you want to hear about, from offers, tech tips, and how you want it delivered.</p>"
+          }
+        },
+        "email_form": {
+          "type": "email_form",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "heading",
+        "paragraph",
+        "email_form"
+      ],
+      "disabled": true,
+      "settings": {
+        "color_scheme": "scheme-1",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    }
+  },
+  "order": [
+    "main",
+    "image_banner",
+    "benefits",
+    "service_pricing",
+    "service_note",
+    "available_services",
+    "how_to_send",
+    "faqs",
+    "related_content",
+    "newsletter"
+  ]
+}
