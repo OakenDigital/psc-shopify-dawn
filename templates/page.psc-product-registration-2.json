@@ -79,7 +79,8 @@
         "forms_inline_VCNEFy"
       ],
       "settings": {
-        "include_margins": true
+        "include_margins": true,
+        "full_width": false
       }
     },
     "17681686994eae9bed": {
