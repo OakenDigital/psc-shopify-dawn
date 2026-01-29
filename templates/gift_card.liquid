@@ -134,8 +134,8 @@
           {{ settings.logo | image_url: width: 570 | image_tag: class: 'gift-card__image', alt: logo_alt }}
         {%- else %}
           <img
-            class="Gift_Card_1"
-            src="{{ 'gift-card/card.svg' | shopify_asset_url }}"
+            class="gift-card__image"
+            src="{{ 'Gift_Card_1.png' | shopify_asset_url }}"
             alt=""
             height="{{ 570 | divided_by: 1.5 }}"
             width="570"
