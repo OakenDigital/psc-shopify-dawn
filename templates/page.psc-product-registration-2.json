@@ -78,24 +78,15 @@
       "block_order": [
         "forms_inline_VCNEFy"
       ],
-      "custom_css": [],
       "settings": {
         "include_margins": true,
         "full_width": false
-      }
-    },
-    "17681686994eae9bed": {
-      "type": "apps",
-      "settings": {
-        "include_margins": true,
-        "full_width": true
       }
     }
   },
   "order": [
     "cd0a8e3a-cfbd-42e7-88bb-b206f7176d40",
     "rich_text_F44yVz",
-    "forms",
-    "17681686994eae9bed"
+    "forms"
   ]
 }
