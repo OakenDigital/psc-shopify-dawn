@@ -47,40 +47,6 @@
         "padding_bottom": 20
       }
     },
-    "already_dealer_section": {
-      "type": "rich-text",
-      "blocks": {
-        "dealer_text": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Already a Dealer?</p>"
-          }
-        },
-        "dealer_button": {
-          "type": "button",
-          "settings": {
-            "button_label": "Login to My Dashboard →",
-            "button_link": "",
-            "button_style_secondary": false,
-            "button_label_2": "",
-            "button_link_2": "",
-            "button_style_secondary_2": false
-          }
-        }
-      },
-      "block_order": [
-        "dealer_text",
-        "dealer_button"
-      ],
-      "settings": {
-        "desktop_content_position": "center",
-        "content_alignment": "center",
-        "color_scheme": "scheme-2",
-        "full_width": true,
-        "padding_top": 20,
-        "padding_bottom": 20
-      }
-    },
     "why_join_section": {
       "type": "multicolumn",
       "blocks": {
@@ -132,16 +98,50 @@
         "heading_size": "h2",
         "image_width": "full",
         "image_ratio": "adapt",
+        "button_label": "",
+        "button_link": "",
         "columns_desktop": 2,
         "column_alignment": "left",
         "background_style": "none",
-        "button_label": "",
-        "button_link": "",
         "color_scheme": "",
         "columns_mobile": "1",
         "swipe_on_mobile": false,
         "padding_top": 40,
         "padding_bottom": 40
+      }
+    },
+    "already_dealer_section": {
+      "type": "rich-text",
+      "blocks": {
+        "dealer_text": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Already a Dealer?</p>"
+          }
+        },
+        "dealer_button": {
+          "type": "button",
+          "settings": {
+            "button_label": "Login to My Dashboard →",
+            "button_link": "",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "dealer_text",
+        "dealer_button"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-2",
+        "full_width": true,
+        "padding_top": 20,
+        "padding_bottom": 20
       }
     },
     "dealer_application_heading": {
@@ -211,7 +211,11 @@
           "settings": {
             "heading": "How do I bleed my power steering system?",
             "row_content": "<p>Review our bleeding instructions here: <a href=\"#\" title=\"PSC Power Steering Bleeding Instructions\">PSC Power Steering Bleeding Instructions</a></p>",
-            "page": ""
+            "page": "",
+            "custom_liquid": "",
+            "metafield_namespace": "",
+            "metafield_key": "",
+            "file_link_text": "Download File"
           }
         },
         "faq_2": {
@@ -219,7 +223,11 @@
           "settings": {
             "heading": "What is the fix level on a PSC Remote Fluid Reservoir?",
             "row_content": "",
-            "page": ""
+            "page": "",
+            "custom_liquid": "",
+            "metafield_namespace": "",
+            "metafield_key": "",
+            "file_link_text": "Download File"
           }
         },
         "faq_3": {
@@ -227,7 +235,11 @@
           "settings": {
             "heading": "Where does this rubber hose on the top of my Remote Fluid Reservoir connect?",
             "row_content": "",
-            "page": ""
+            "page": "",
+            "custom_liquid": "",
+            "metafield_namespace": "",
+            "metafield_key": "",
+            "file_link_text": "Download File"
           }
         },
         "faq_4": {
@@ -235,7 +247,11 @@
           "settings": {
             "heading": "What does JIC mean? What is the difference between JIC and AN?",
             "row_content": "",
-            "page": ""
+            "page": "",
+            "custom_liquid": "",
+            "metafield_namespace": "",
+            "metafield_key": "",
+            "file_link_text": "Download File"
           }
         }
       },
@@ -251,9 +267,10 @@
         "heading_size": "h1",
         "heading_alignment": "center",
         "layout": "none",
-        "color_scheme": "scheme-1",
         "container_color_scheme": "scheme-2",
+        "color_scheme": "scheme-1",
         "open_first_collapsible_row": false,
+        "full_width_content": false,
         "image_ratio": "adapt",
         "desktop_layout": "image_second",
         "padding_top": 36,
@@ -264,8 +281,8 @@
   "order": [
     "83336178-0b1f-483f-b636-e7f5290aa000",
     "heading_section",
-    "already_dealer_section",
     "why_join_section",
+    "already_dealer_section",
     "dealer_application_heading",
     "forms",
     "faqs"
