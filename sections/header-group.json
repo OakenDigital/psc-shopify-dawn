@@ -17,7 +17,7 @@
         "announcement-bar-0": {
           "type": "announcement",
           "settings": {
-            "text": "Roads are still icy — some orders may ship a little slower. Thanks for your patience.",
+            "text": "Steering Re-Engineered — Built in Texas by people who know what works.",
             "link": ""
           }
         }
@@ -43,7 +43,6 @@
           "settings": {
             "menu_item": "shop-by-vehicle",
             "size": "large",
-            "image": "shopify://shop_images/32586dc8e49a45dfacdf9f041a6ebdf7bb8c8e5d.jpg",
             "link": "shopify://collections/jeep",
             "show_video_button": false,
             "heading": "Jeep Steering Kits",
@@ -56,7 +55,6 @@
           "settings": {
             "menu_item": "shop-by-product",
             "size": "large",
-            "image": "shopify://shop_images/32586dc8e49a45dfacdf9f041a6ebdf7bb8c8e5d.jpg",
             "link": "shopify://collections/jeep",
             "show_video_button": false,
             "heading": "Jeep Steering Kits",
@@ -80,7 +78,6 @@
           "settings": {
             "menu_item": "shop-by-vehicle",
             "size": "small",
-            "image": "shopify://shop_images/Jeep_JK_3.6L_Steering_Power-Up-_PSC_BIG_BORE_XD_Kit_Install_2012_2018.jpg",
             "link": "https://www.youtube.com/watch?v=8a-3D5IH_as",
             "show_video_button": false,
             "heading": "Steering Re-Engineered",
