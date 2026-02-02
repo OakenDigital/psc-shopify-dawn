@@ -16,7 +16,7 @@
           "type": "heading",
           "settings": {
             "heading": "PSC for Business: Built For the Pros Who Keep Rigs Rolling",
-            "heading_size": "hxl"
+            "heading_size": "h1"
           }
         },
         "text": {
@@ -29,12 +29,15 @@
         "buttons": {
           "type": "buttons",
           "settings": {
-            "button_label_1": "Become",
+            "button_layout": "inline",
+            "button_label_1": "Sign Up",
             "button_link_1": "#dealer-application-form",
             "button_style_secondary_1": false,
+            "button_color_scheme_1": "",
             "button_label_2": "Button",
             "button_link_2": "",
-            "button_style_secondary_2": true
+            "button_style_secondary_2": true,
+            "button_color_scheme_2": ""
           }
         }
       },
@@ -44,12 +47,15 @@
         "buttons"
       ],
       "settings": {
+        "image": "shopify://shop_images/Designer_56.png",
         "image_overlay_opacity": 40,
         "image_height": "medium",
+        "image_behavior": "none",
         "desktop_content_position": "middle-center",
         "desktop_content_alignment": "center",
         "show_text_box": false,
         "color_scheme": "scheme-1",
+        "stack_images_on_mobile": true,
         "mobile_content_alignment": "center",
         "show_text_below": true
       }
@@ -117,6 +123,7 @@
         "title": "",
         "heading_size": "h1",
         "show_login_box": true,
+        "login_link": "",
         "color_scheme": "scheme-2",
         "padding_top": 52,
         "padding_bottom": 36
@@ -203,11 +210,11 @@
         "heading_size": "h1",
         "image_width": "full",
         "image_ratio": "adapt",
+        "button_label": "View All Network",
+        "button_link": "",
         "columns_desktop": 4,
         "column_alignment": "center",
         "background_style": "primary",
-        "button_label": "View All Network",
-        "button_link": "",
         "color_scheme": "scheme-1",
         "columns_mobile": "1",
         "swipe_on_mobile": false,
@@ -223,7 +230,11 @@
           "settings": {
             "heading": "How do I bleed my power steering system?",
             "row_content": "<p>Review our bleeding instructions here: <a href=\"#\" title=\"PSC Power Steering Bleeding Instructions\">PSC Power Steering Bleeding Instructions</a></p>",
-            "page": ""
+            "page": "",
+            "custom_liquid": "",
+            "metafield_namespace": "",
+            "metafield_key": "",
+            "file_link_text": "Download File"
           }
         },
         "faq_2": {
@@ -231,7 +242,11 @@
           "settings": {
             "heading": "What is the fix level on a PSC Remote Fluid Reservoir?",
             "row_content": "<p>Add your content here...</p>",
-            "page": ""
+            "page": "",
+            "custom_liquid": "",
+            "metafield_namespace": "",
+            "metafield_key": "",
+            "file_link_text": "Download File"
           }
         },
         "faq_3": {
@@ -239,7 +254,11 @@
           "settings": {
             "heading": "Where does this rubber hose on the top of my Remote Fluid Reservoir connect?",
             "row_content": "<p>Add your content here...</p>",
-            "page": ""
+            "page": "",
+            "custom_liquid": "",
+            "metafield_namespace": "",
+            "metafield_key": "",
+            "file_link_text": "Download File"
           }
         },
         "faq_4": {
@@ -247,7 +266,11 @@
           "settings": {
             "heading": "What does JIC mean? What is the difference between JIC and AN?",
             "row_content": "<p>Add your content here...</p>",
-            "page": ""
+            "page": "",
+            "custom_liquid": "",
+            "metafield_namespace": "",
+            "metafield_key": "",
+            "file_link_text": "Download File"
           }
         }
       },
@@ -263,9 +286,10 @@
         "heading_size": "h1",
         "heading_alignment": "center",
         "layout": "none",
-        "color_scheme": "scheme-1",
         "container_color_scheme": "scheme-2",
+        "color_scheme": "scheme-1",
         "open_first_collapsible_row": false,
+        "full_width_content": false,
         "image_ratio": "adapt",
         "desktop_layout": "image_second",
         "padding_top": 36,
@@ -278,7 +302,6 @@
         "content_1": {
           "type": "column",
           "settings": {
-            "image": "",
             "title": "Video Title",
             "text": "<p>Explore the 392 HEMI Steering Kit. Built for reliability and performance, this kit enhances steering for a variety of vehicles. Check availability and read customer reviews.</p>",
             "link_label": "Button →",
@@ -288,7 +311,6 @@
         "content_2": {
           "type": "column",
           "settings": {
-            "image": "",
             "title": "Video Title",
             "text": "<p>Explore the 392 HEMI Steering Kit. Built for reliability and performance, this kit enhances steering for a variety of vehicles. Check availability and read customer reviews.</p>",
             "link_label": "Button →",
@@ -298,7 +320,6 @@
         "content_3": {
           "type": "column",
           "settings": {
-            "image": "",
             "title": "Resource Title",
             "text": "<p>PSC has a full team of expert technicians available to service and maintain your PSC products. We're committed to helping our customers get the most from their investment in the world's best performance power steering products.</p>",
             "link_label": "Button →",
@@ -316,11 +337,11 @@
         "heading_size": "h1",
         "image_width": "full",
         "image_ratio": "adapt",
+        "button_label": "View All",
+        "button_link": "",
         "columns_desktop": 3,
         "column_alignment": "left",
         "background_style": "primary",
-        "button_label": "View All",
-        "button_link": "",
         "color_scheme": "scheme-3",
         "columns_mobile": "1",
         "swipe_on_mobile": false,
@@ -357,8 +378,7 @@
         },
         "email_form": {
           "type": "email_form",
-          "settings": {
-          }
+          "settings": {}
         }
       },
       "block_order": [
