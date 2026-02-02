@@ -15,14 +15,14 @@
         "heading": {
           "type": "heading",
           "settings": {
-            "heading": "PSC for Business: Built For the Pros Who Keep Rigs Rolling",
+            "heading": "PSC for Business: Support Built for Shops That Get the Work Done",
             "heading_size": "h1"
           }
         },
         "text": {
           "type": "text",
           "settings": {
-            "text": "This is your central hub for PSC Dealer Support—where our builders get the tools, tech, and updates they need to keep shop running strong and the wheels turning. Whether you're a parts retailer or a fully-stocked shop with service bays, the Power of PSC keeps your business moving along.",
+            "text": "PSC for Business is where our dealers and shop partners get the support, tools, and info they need to keep jobs moving and customers happy. Whether you’re a parts counter, a full service shop, or somewhere in between, this is where we back you up.",
             "text_style": "body"
           }
         },
@@ -66,20 +66,21 @@
         "content_1": {
           "type": "content",
           "settings": {
-            "heading": "Why Join the PSC Dealer Network?",
-            "content": "<p><strong>Real Support from Real People</strong><br>When you call, we answer. When you need help, we're on it. Real work with account reps who've turned wrenches and know what you're dealing with.</p><p><strong>Built-in Marketing Tools</strong><br>Get access to dealer-co-op marketing: social media content, banners, gear sheets, and install videos.</p><p><strong>Technical Confidence</strong><br>Whether you're building a rig daily, live dyno, or web-ready, you'll have access to firewall logs, install tricks, and dealer-only tech tips.</p><p><strong>No-Nonsense Perks</strong><br>Approved dealers are eligible for promotional opportunities, event collaboration, and tiered pricing—no hoops, no nonsense required.</p>"
+            "heading": "Why Join the PSC Dealer Network",
+            "content": "<p><strong>Support That Scales With Your Business                                                        </strong>You already know what to expect from PSC when you call. As a dealer, you also get account‑level support and direct access to the right people, so questions get answered faster when you’re in the middle of a job or working a counter.</p><p><strong>Tools That Help You Sell</strong><br/>Approved dealers get access to co‑op marketing tools like social content, banners, sell sheets, and install videos. Use them as‑is or tweak them to fit how your shop actually operates.</p><p><strong>Dealer‑Level Tech Access</strong><br/>Beyond standard tech support, dealers have access to install notes, setup tips, and dealer‑only technical info that helps avoid mistakes and keeps installs moving.</p><p><strong>Straightforward Dealer Benefits</strong><br/>Depending on fit and volume, approved dealers may qualify for tiered pricing, promotional opportunities, and event support. It’s practical, and it’s based on the relationship — not jumping through hoops.</p>"
           }
         },
         "list_1": {
           "type": "list",
           "settings": {
-            "heading": "Not Yet a PSC Dealer?",
-            "description": "New to the PSC Fam? Sweet. Here's what you need to know before you get started:",
-            "list_items": "Expect great quality and product documentation|Exclusive free-to-dealer live tech when added|Dealer-only pricing subject to application approval|Early looks at new products and promotions"
+            "heading": "Not a PSC Dealer Yet? Here’s What to Expect",
+            "description": "When you work with PSC, here’s what comes standard:",
+            "list_items": "Products that are built right and clearly documented|Access to live technical support from people who know the parts|Dealer pricing available with application approval|Support that’s consistent whether you’re building one vehicle or supporting customers all day"
           }
         },
         "tier_1": {
           "type": "dealer_tier",
+          "disabled": true,
           "settings": {
             "tier_name": "Dealer Access",
             "description": "All new dealer starter accounts based on your business type and purchasing volume:",
@@ -88,6 +89,7 @@
         },
         "tier_2": {
           "type": "dealer_tier",
+          "disabled": true,
           "settings": {
             "tier_name": "Master Dealer",
             "description": "Higher status dealer for more established shop or high eligibility for distributors and bulk sales.",
@@ -96,6 +98,7 @@
         },
         "tier_3": {
           "type": "dealer_tier",
+          "disabled": true,
           "settings": {
             "tier_name": "Distributor",
             "description": "All out direct-to-sell network shops that qualify for distributors and bulk sales.",
@@ -104,6 +107,7 @@
         },
         "tier_4": {
           "type": "dealer_tier",
+          "disabled": true,
           "settings": {
             "tier_name": "Master Distributor",
             "description": "Highest tier-all network shops available for selling via shops that qualify for largest tier distributors.",
@@ -141,6 +145,7 @@
         },
         "text": {
           "type": "text",
+          "disabled": true,
           "settings": {
             "text": "<p>PSC uses Shopify B2B tools to manage dealer accounts. Here's what that means for you:</p>"
           }
@@ -166,8 +171,8 @@
           "type": "column",
           "settings": {
             "title": "Create an Account",
-            "text": "<p>You submit your application and business info.</p>",
-            "link_label": "Create Account →",
+            "text": "<p>Create your PSC account and submit your dealer application with your business info.</p>",
+            "link_label": "Create Account",
             "link": ""
           }
         },
@@ -175,17 +180,17 @@
           "type": "column",
           "settings": {
             "title": "Apply to Become a Dealer",
-            "text": "<p>Start by submitting the dealer application below. You can't see net pricing, submit inventory, or place orders until accepted.</p>",
-            "link_label": "Start Dealer Application →",
+            "text": "<p>Complete the dealer application.<br/>Dealer pricing, inventory tools, and ordering are available once approved.</p>",
+            "link_label": "Start Dealer Application",
             "link": ""
           }
         },
         "step_3": {
           "type": "column",
           "settings": {
-            "title": "Complete Dealer Onboarding Portal",
-            "text": "<p>Review resources (compliance) from network pricing documentation. You can submit dealer leads (quote builds) in the application.</p>",
-            "link_label": "View To Dashboard →",
+            "title": "Complete Dealer Setup",
+            "text": "<p>After applying, access the Dealer Portal to review pricing details and required info.<br/>You can also submit dealer leads or quote builds here.</p>",
+            "link_label": "View To Dashboard",
             "link": ""
           }
         },
@@ -193,7 +198,7 @@
           "type": "column",
           "settings": {
             "title": "You're In!",
-            "text": "<p>Your work assigned and all updated automatically on your PSC Dealer Dashboard. Start placing orders and enjoying discount pricing.</p>",
+            "text": "<p>Once approved, everything runs through your PSC Dealer Dashboard.<br/>Start placing orders, submitting quotes, and buying at dealer pricing.</p>",
             "link_label": "",
             "link": ""
           }
@@ -210,7 +215,7 @@
         "heading_size": "h1",
         "image_width": "full",
         "image_ratio": "adapt",
-        "button_label": "View All Network",
+        "button_label": "",
         "button_link": "",
         "columns_desktop": 4,
         "column_alignment": "center",
