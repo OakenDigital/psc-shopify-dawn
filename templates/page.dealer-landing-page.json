@@ -285,6 +285,7 @@
         "faq_3",
         "faq_4"
       ],
+      "disabled": true,
       "settings": {
         "caption": "",
         "heading": "Frequently Asked Questions",
@@ -337,6 +338,7 @@
         "content_2",
         "content_3"
       ],
+      "disabled": true,
       "settings": {
         "title": "More From Our Tech Blog",
         "heading_size": "h1",
