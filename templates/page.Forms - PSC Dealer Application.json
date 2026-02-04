@@ -261,6 +261,7 @@
         "faq_3",
         "faq_4"
       ],
+      "disabled": true,
       "settings": {
         "caption": "",
         "heading": "Frequently Asked Questions",

@@ -393,6 +393,7 @@
         "paragraph",
         "email_form"
       ],
+      "disabled": true,
       "settings": {
         "color_scheme": "scheme-1",
         "full_width": true,
