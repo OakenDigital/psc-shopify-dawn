@@ -30,7 +30,7 @@
         "text_intro": {
           "type": "text",
           "settings": {
-            "text": "<p>Welcome to the PSC Dealer Portal. This is your one-stop-shop for product info, install guides, repair resources, exclusive updates straight from the shop floor.</p>"
+            "text": "<p>Welcome to the PSC Dealer Portal. If you’re interested in becoming a PSC dealer, you’re in the right place. Apply here or log in to your account for product info, install and repair resources, and updates straight from our shop.</p>"
           }
         }
       },
