@@ -54,7 +54,7 @@
           "type": "column",
           "settings": {
             "title": "Real Support from Real People",
-            "text": "<p>When you call, we answer. When you need help, we're on it. Real t-shirts with account reps who've turned wrenches and can talk shop.</p>",
+            "text": "<p>When you call, we answer. When you need help, we’re on it. You’re talking to account reps who understand the parts and how they’re used.</p>",
             "link_label": "",
             "link": ""
           }
@@ -62,8 +62,8 @@
         "column_2": {
           "type": "column",
           "settings": {
-            "title": "Built-in Marketing Tools",
-            "text": "<p>Get access to our marketing: social media content, banners, spec sheets, and install videos.</p>",
+            "title": "Tools That Help You Sell",
+            "text": "<p>Approved dealers get access to co‑op marketing tools like social content, banners, sell sheets, and install videos. Use them as‑is or tweak them to fit how your shop actually operates.</p>",
             "link_label": "",
             "link": ""
           }
@@ -71,8 +71,8 @@
         "column_3": {
           "type": "column",
           "settings": {
-            "title": "Technical Confidence",
-            "text": "<p>Whether you're building a hot rod, race harnesses, or resto-mods, you'll have access to fitment tips, install tricks, and tech support.</p>",
+            "title": "Dealer‑Level Tech Access",
+            "text": "<p>Beyond standard tech support, dealers have access to install notes, setup tips, and dealer‑only technical info that helps avoid mistakes and keeps installs moving.</p>",
             "link_label": "",
             "link": ""
           }
@@ -80,8 +80,8 @@
         "column_4": {
           "type": "column",
           "settings": {
-            "title": "No-Nonsense Perks",
-            "text": "<p>Approved dealers are eligible for promotional opportunities, event collaboration, and tiered pricing on wholesale minimums required.</p>",
+            "title": "Straightforward Dealer Benefits",
+            "text": "<p>Depending on fit and volume, approved dealers may qualify for tiered pricing, promotional opportunities, and event support. It’s practical, and it’s based on the relationship — not jumping through hoops.</p>",
             "link_label": "",
             "link": ""
           }
@@ -122,7 +122,7 @@
         "dealer_button": {
           "type": "button",
           "settings": {
-            "button_label": "Login to My Dashboard →",
+            "button_label": "Log in to your account →",
             "button_link": "https://account.pscsteering.com/",
             "button_style_secondary": false,
             "button_label_2": "",
@@ -157,7 +157,7 @@
         "text": {
           "type": "text",
           "settings": {
-            "text": "<p>Thanks for your interest in becoming an authorized PSC dealer.</p><p>You can either submit the online form below, or download the PDF form and email it to <a href=\"mailto:support@pscmotorsports.com\" title=\"mailto:support@pscmotorsports.com\">support@pscmotorsports.com</a></p>"
+            "text": "<p>Thanks for your interest in becoming an authorized PSC dealer.<br/>You can complete the online application below, or download the PDF and email it to <a href=\"mailto:support@pscmotorsports.com\" title=\"mailto:support@pscmotorsports.com\">support@pscmotorsports.com</a></p>"
           }
         }
       },
