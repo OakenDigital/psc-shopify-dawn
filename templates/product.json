@@ -61,7 +61,8 @@
         ".auto-part-search-bar .gv-mmy-bar {padding: 2rem 1rem;}"
       ],
       "settings": {
-        "include_margins": false
+        "include_margins": false,
+        "full_width": true
       }
     },
     "main": {
@@ -95,7 +96,7 @@
         "custom_liquid_mdwrBa": {
           "type": "custom_liquid",
           "settings": {
-            "custom_liquid": "<div class=\"product-sku-display\" style=\"text-align: left; margin: 0 0 1rem 0;\">\n  <p style=\"margin: 0;\"><strong>Part Number:</strong> <span class=\"variant-sku\">{{ product.selected_or_first_available_variant.sku }}</span></p>\n</div>\n\n<script>\n(function() {\n  document.addEventListener('variant:change', function(event) {\n    if (event.detail?.variant?.sku) {\n      document.querySelector('.variant-sku').textContent = event.detail.variant.sku;\n    }\n  });\n\n  if (window.VariantHelper) {\n    window.VariantHelper.on('variant:change', function(variant) {\n      if (variant?.sku) {\n        document.querySelector('.variant-sku').textContent = variant.sku;\n      }\n    });\n  }\n\n  const form = document.querySelector('form[action*=\"/cart/add\"]');\n  if (form) {\n    form.addEventListener('change', function() {\n      const selectedVariantId = form.querySelector('[name=\"id\"]')?.value;\n      if (selectedVariantId) {\n        const variants = {{ product.variants | json }};\n        const variant = variants.find(v => v.id == selectedVariantId);\n        if (variant?.sku) {\n          document.querySelector('.variant-sku').textContent = variant.sku;\n        }\n      }\n    });\n  }\n})();\n</script>"
+            "custom_liquid": "<div class=\"product-sku-display\" style=\"text-align: left; margin: 0 0 1rem 0;\">\n  <p style=\"margin: 0;\"><strong>Part Number:</strong> <span class=\"variant-sku\">{{ product.selected_or_first_available_variant.sku | default: \"N/A\" }}</span></p>\n</div>\n\n<script>\n(function() {\n  const variants = {{ product.variants | json }};\n  const skuDisplay = document.querySelector('.variant-sku');\n\n  // Centralized function to update the SKU text\n  function updateSku(variantId) {\n    if (!variantId) return;\n    const variant = variants.find(v => v.id.toString() === variantId.toString());\n    \n    if (variant) {\n      // Update to the new SKU, or clear it out if the variant has no SKU\n      skuDisplay.textContent = variant.sku ? variant.sku : 'N/A';\n    }\n  }\n\n  // 1. Listen to standard theme custom events (if available)\n  document.addEventListener('variant:change', function(event) {\n    if (event.detail?.variant?.id) updateSku(event.detail.variant.id);\n  });\n\n  if (window.VariantHelper) {\n    window.VariantHelper.on('variant:change', function(variant) {\n      if (variant?.id) updateSku(variant.id);\n    });\n  }\n\n  // 2. Fallback: Listen to ANY change in the product form\n  const form = document.querySelector('form[action*=\"/cart/add\"]');\n  if (form) {\n    form.addEventListener('change', function() {\n      // Use a tiny delay to allow the theme's built-in scripts to update the URL/DOM first\n      setTimeout(function() {\n        // Method A: Try grabbing the ID from the URL (Most reliable for out-of-stock items)\n        const urlParams = new URLSearchParams(window.location.search);\n        let selectedVariantId = urlParams.get('variant');\n\n        // Method B: Fall back to the hidden ID input if it's not in the URL\n        if (!selectedVariantId) {\n          const idInput = form.querySelector('[name=\"id\"]');\n          if (idInput) selectedVariantId = idInput.value;\n        }\n\n        updateSku(selectedVariantId);\n      }, 50); \n    });\n  }\n})();\n</script>"
           }
         },
         "variant_picker": {
@@ -451,7 +452,8 @@
         "yotpo_product_reviews_vugc_media_gallery_QKAifb"
       ],
       "settings": {
-        "include_margins": true
+        "include_margins": true,
+        "full_width": true
       }
     },
     "conditional_content_ajjAYb": {
