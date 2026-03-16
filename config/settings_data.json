@@ -175,8 +175,8 @@
         "settings": {
           "advanced_settings": true,
           "product_locator": "",
-          "cart_locator": "",
-          "cart_drawer_locator": ""
+          "cart_locator": "(\"#main-cart-footer > div > div > div > div.js-contents > div.totals > p\")",
+          "cart_drawer_locator": "(\"#main-cart-footer > div > div > div > div.js-contents > div.totals > h2\")"
         }
       }
     },
