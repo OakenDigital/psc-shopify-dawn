@@ -81,12 +81,19 @@
             "button_link_2": "",
             "button_style_secondary_2": false
           }
+        },
+        "text_Yfdkzy": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.</p>"
+          }
         }
       },
       "block_order": [
         "heading_FCGn66",
         "text_QMfKWq",
-        "button_tiN79B"
+        "button_tiN79B",
+        "text_Yfdkzy"
       ],
       "name": "t:sections.rich-text.presets.name",
       "settings": {
@@ -133,6 +140,49 @@
         "include_margins": true,
         "full_width": true
       }
+    },
+    "rich_text_66ywkY": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_FbA3gy": {
+          "type": "heading",
+          "settings": {
+            "heading": "Customer Service Representative",
+            "heading_size": "h2"
+          }
+        },
+        "text_6rqWqN": {
+          "type": "text",
+          "settings": {
+            "text": "<p>View Job Description</p>"
+          }
+        },
+        "button_B4j7Fy": {
+          "type": "button",
+          "settings": {
+            "button_label": "Button label",
+            "button_link": "",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_FbA3gy",
+        "text_6rqWqN",
+        "button_B4j7Fy"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "left",
+        "content_alignment": "left",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
     }
   },
   "order": [
@@ -140,6 +190,7 @@
     "rich_text_F44yVz",
     "rich_text_hxAiDD",
     "forms",
-    "17681686994eae9bed"
+    "17681686994eae9bed",
+    "rich_text_66ywkY"
   ]
 }
