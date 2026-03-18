@@ -17,73 +17,6 @@
         "padding_bottom": 28
       }
     },
-    "rich_text_66ywkY": {
-      "type": "rich-text",
-      "blocks": {
-        "heading_KVQr8f": {
-          "type": "heading",
-          "settings": {
-            "heading": "Open Positions",
-            "heading_size": "h1"
-          }
-        },
-        "heading_FbA3gy": {
-          "type": "heading",
-          "settings": {
-            "heading": "Customer Service Representative",
-            "heading_size": "h2"
-          }
-        },
-        "text_6rqWqN": {
-          "type": "text",
-          "settings": {
-            "text": "<p>View Job Description</p>"
-          }
-        },
-        "heading_43VqXj": {
-          "type": "heading",
-          "settings": {
-            "heading": "Sales Representative",
-            "heading_size": "h2"
-          }
-        },
-        "text_jG4jBe": {
-          "type": "text",
-          "settings": {
-            "text": "<p>View Job Description</p>"
-          }
-        },
-        "button_B4j7Fy": {
-          "type": "button",
-          "disabled": true,
-          "settings": {
-            "button_label": "Button label",
-            "button_link": "",
-            "button_style_secondary": false,
-            "button_label_2": "",
-            "button_link_2": "",
-            "button_style_secondary_2": false
-          }
-        }
-      },
-      "block_order": [
-        "heading_KVQr8f",
-        "heading_FbA3gy",
-        "text_6rqWqN",
-        "heading_43VqXj",
-        "text_jG4jBe",
-        "button_B4j7Fy"
-      ],
-      "name": "t:sections.rich-text.presets.name",
-      "settings": {
-        "desktop_content_position": "left",
-        "content_alignment": "left",
-        "color_scheme": "",
-        "full_width": true,
-        "padding_top": 40,
-        "padding_bottom": 52
-      }
-    },
     "rich_text_F44yVz": {
       "type": "rich-text",
       "blocks": {
@@ -158,6 +91,73 @@
       "name": "t:sections.rich-text.presets.name",
       "settings": {
         "desktop_content_position": "center",
+        "content_alignment": "left",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "rich_text_66ywkY": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_KVQr8f": {
+          "type": "heading",
+          "settings": {
+            "heading": "Open Positions",
+            "heading_size": "h1"
+          }
+        },
+        "heading_FbA3gy": {
+          "type": "heading",
+          "settings": {
+            "heading": "Customer Service Representative",
+            "heading_size": "h2"
+          }
+        },
+        "text_6rqWqN": {
+          "type": "text",
+          "settings": {
+            "text": "<p><a href=\"https://cdn.shopify.com/s/files/1/0642/9743/5241/files/Job_Description_Customer_Service.pdf?v=1773845500\" target=\"_blank\" title=\"https://cdn.shopify.com/s/files/1/0642/9743/5241/files/Job_Description_Customer_Service.pdf?v=1773845500\">View Job Description</a></p>"
+          }
+        },
+        "heading_43VqXj": {
+          "type": "heading",
+          "settings": {
+            "heading": "Sales Representative",
+            "heading_size": "h2"
+          }
+        },
+        "text_jG4jBe": {
+          "type": "text",
+          "settings": {
+            "text": "<p>View Job Description</p>"
+          }
+        },
+        "button_B4j7Fy": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "button_label": "Button label",
+            "button_link": "",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_KVQr8f",
+        "heading_FbA3gy",
+        "text_6rqWqN",
+        "heading_43VqXj",
+        "text_jG4jBe",
+        "button_B4j7Fy"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "left",
         "content_alignment": "left",
         "color_scheme": "",
         "full_width": true,
