@@ -157,8 +157,22 @@
             "text": "<p>View Job Description</p>"
           }
         },
+        "heading_43VqXj": {
+          "type": "heading",
+          "settings": {
+            "heading": "Sales Representative",
+            "heading_size": "h2"
+          }
+        },
+        "text_jG4jBe": {
+          "type": "text",
+          "settings": {
+            "text": "<p>View Job Description</p>"
+          }
+        },
         "button_B4j7Fy": {
           "type": "button",
+          "disabled": true,
           "settings": {
             "button_label": "Button label",
             "button_link": "",
@@ -172,6 +186,8 @@
       "block_order": [
         "heading_FbA3gy",
         "text_6rqWqN",
+        "heading_43VqXj",
+        "text_jG4jBe",
         "button_B4j7Fy"
       ],
       "name": "t:sections.rich-text.presets.name",
