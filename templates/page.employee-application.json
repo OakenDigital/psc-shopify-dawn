@@ -144,6 +144,13 @@
     "rich_text_66ywkY": {
       "type": "rich-text",
       "blocks": {
+        "heading_KVQr8f": {
+          "type": "heading",
+          "settings": {
+            "heading": "Open Positions",
+            "heading_size": "h1"
+          }
+        },
         "heading_FbA3gy": {
           "type": "heading",
           "settings": {
@@ -184,6 +191,7 @@
         }
       },
       "block_order": [
+        "heading_KVQr8f",
         "heading_FbA3gy",
         "text_6rqWqN",
         "heading_43VqXj",
