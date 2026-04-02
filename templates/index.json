@@ -15,14 +15,14 @@
         "heading": {
           "type": "heading",
           "settings": {
-            "heading": "Ready for the Rough Stuff",
-            "heading_size": "h1"
+            "heading": "DDS® Dynamic Damping         Stabilizer System",
+            "heading_size": "h2"
           }
         },
         "text_yYmNEW": {
           "type": "text",
           "settings": {
-            "text": "From rocky climbs to daily drives, your steering has to be tough and dependable.",
+            "text": "Off-Road & On-Road Dominance",
             "text_style": "subtitle"
           }
         },
@@ -30,8 +30,8 @@
           "type": "buttons",
           "settings": {
             "button_layout": "inline",
-            "button_label_1": "Shop Steering Systems",
-            "button_link_1": "shopify://collections/steering-systems",
+            "button_label_1": "Shop the New DDS®",
+            "button_link_1": "shopify://collections/dds®-dynamic-damping-stabilizer-system-jeep-wrangler-jl-jt",
             "button_style_secondary_1": false,
             "button_color_scheme_1": "scheme-3e379a2a-46a4-4c6f-826a-ba5df32a53b6",
             "button_label_2": "Shop New Products",
@@ -47,8 +47,8 @@
         "button"
       ],
       "settings": {
-        "image": "shopify://shop_images/Home_Hero_Red_PSC_Jeep_EJS_2025.png",
-        "image_overlay_opacity": 0,
+        "image": "shopify://shop_images/banner_for_homepage.png",
+        "image_overlay_opacity": 10,
         "image_height": "medium",
         "image_behavior": "none",
         "desktop_content_position": "bottom-right",
