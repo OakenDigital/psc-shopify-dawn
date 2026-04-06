@@ -140,6 +140,7 @@
       "blocks": {
         "heading_FbA3gy": {
           "type": "heading",
+          "disabled": true,
           "settings": {
             "heading": "Customer Service Representative",
             "heading_size": "h2"
@@ -147,6 +148,7 @@
         },
         "text_6rqWqN": {
           "type": "text",
+          "disabled": true,
           "settings": {
             "text": "<p><a href=\"https://cdn.shopify.com/s/files/1/0642/9743/5241/files/Job_Description_Customer_Service.pdf?v=1773845500\" target=\"_blank\" title=\"https://cdn.shopify.com/s/files/1/0642/9743/5241/files/Job_Description_Customer_Service.pdf?v=1773845500\">View Job Description</a></p>"
           }
