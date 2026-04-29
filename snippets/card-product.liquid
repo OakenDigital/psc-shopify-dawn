@@ -296,6 +296,25 @@
             {%- endif -%}
           </div>
         </div>
+
+        {%- if card_product.has_only_default_variant == false -%}
+          {%- for option in card_product.options_with_values -%}
+            {%- assign option_name_downcase = option.name | downcase -%}
+            {%- if option_name_downcase == 'color' or option_name_downcase == 'colour' -%}
+              
+              <div class="card-product__swatches" style="display: flex; gap: 6px; margin-bottom: 1rem; justify-content: flex-start;">
+                {%- for value in option.values -%}
+                  
+                  <div class="card-swatch-wrapper" title="{{ value.name | escape }}">
+                    {% render 'swatch', swatch: value.swatch, shape: 'circle' %}
+                  </div>
+
+                {%- endfor -%}
+              </div>
+
+            {%- endif -%}
+          {%- endfor -%}
+        {%- endif -%}
         {% assign product_form_id = 'quick-add-' | append: section_id | append: card_product.id %}
         {% if quick_add == 'standard' %}
           <div class="quick-add no-js-hidden">
