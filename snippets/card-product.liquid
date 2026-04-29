@@ -297,6 +297,14 @@
           </div>
         </div>
 
+        <style>
+          .card-product__swatches .swatch {
+            width: 20px !important;
+            height: 20px !important;
+            min-width: 20px !important;
+            min-height: 20px !important;
+          }
+        </style>
         {%- if card_product.has_only_default_variant == false -%}
           {%- for option in card_product.options_with_values -%}
             {%- assign option_name_downcase = option.name | downcase -%}
