@@ -37,6 +37,10 @@
             "gv-search-text-color": "#ffffff",
             "gv-clear-color": "rgba(0,0,0,0)",
             "gv-clear-text-color": "#121212",
+            "gv-enable-custom-font-settings": false,
+            "gv-font-family": "sans_serif_n4",
+            "gv-font-size": 15,
+            "gv-font-weight": "400",
             "gv-search-label": "Search",
             "gv-clear-label": "Clear",
             "gv-show-title-label": true,
@@ -103,7 +107,7 @@
           "type": "variant_picker",
           "settings": {
             "picker_type": "button",
-            "swatch_shape": "circle"
+            "swatch_shape": "none"
           }
         },
         "quantity_selector": {
