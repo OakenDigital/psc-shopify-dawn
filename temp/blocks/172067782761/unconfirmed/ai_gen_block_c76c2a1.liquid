@@ -1,6 +1,548 @@
+{% doc %}
+  @prompt
+    In the product grid on the collection page, when a customer hovers or clicks a color swatch, the product card's main image should dynamically swap to show the product image associated with that color variant. The image should update in real-time without a page reload. When no swatch is selected or hovered, the default product image should display. This should work for all product cards in the grid.
+{% enddoc %}
+{% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
+
+{% style %}
+  .ai-swatch-image-swap-{{ ai_gen_id }} {
+    display: block;
+    width: 100%;
+  }
+
+  .ai-swatch-image-swap__card-{{ ai_gen_id }} {
+    position: relative;
+    width: 100%;
+  }
+
+  .ai-swatch-image-swap__image-container-{{ ai_gen_id }} {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    background-color: {{ block.settings.image_background_color }};
+    border-radius: {{ block.settings.image_border_radius }}px;
+  }
+
+  .ai-swatch-image-swap__image-{{ ai_gen_id }} {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: opacity {{ block.settings.transition_speed }}ms ease-in-out;
+  }
+
+  .ai-swatch-image-swap__image-{{ ai_gen_id }}.ai-swatch-image-swap__image--hidden-{{ ai_gen_id }} {
+    opacity: 0;
+  }
+
+  .ai-swatch-image-swap__swatches-{{ ai_gen_id }} {
+    display: flex;
+    flex-wrap: wrap;
+    gap: {{ block.settings.swatch_spacing }}px;
+    margin-top: {{ block.settings.swatches_margin_top }}px;
+    justify-content: {{ block.settings.swatch_alignment }};
+  }
+
+  .ai-swatch-image-swap__swatch-{{ ai_gen_id }} {
+    width: {{ block.settings.swatch_size }}px;
+    height: {{ block.settings.swatch_size }}px;
+    border-radius: {{ block.settings.swatch_border_radius }}px;
+    border: {{ block.settings.swatch_border_width }}px solid {{ block.settings.swatch_border_color }};
+    cursor: pointer;
+    transition: all {{ block.settings.transition_speed }}ms ease;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .ai-swatch-image-swap__swatch-{{ ai_gen_id }}:hover {
+    transform: scale({{ block.settings.swatch_hover_scale }});
+    border-color: {{ block.settings.swatch_hover_border_color }};
+  }
+
+  .ai-swatch-image-swap__swatch-{{ ai_gen_id }}.ai-swatch-image-swap__swatch--active-{{ ai_gen_id }} {
+    border-color: {{ block.settings.swatch_active_border_color }};
+    border-width: {{ block.settings.swatch_active_border_width }}px;
+  }
+
+  .ai-swatch-image-swap__swatch-color-{{ ai_gen_id }} {
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+
+  .ai-swatch-image-swap__product-info-{{ ai_gen_id }} {
+    margin-top: {{ block.settings.product_info_margin_top }}px;
+  }
+
+  .ai-swatch-image-swap__product-title-{{ ai_gen_id }} {
+    font-size: {{ block.settings.title_font_size }}px;
+    color: {{ block.settings.title_color }};
+    margin: 0 0 8px 0;
+    text-align: {{ block.settings.text_alignment }};
+  }
+
+  .ai-swatch-image-swap__product-price-{{ ai_gen_id }} {
+    font-size: {{ block.settings.price_font_size }}px;
+    color: {{ block.settings.price_color }};
+    margin: 0;
+    text-align: {{ block.settings.text_alignment }};
+  }
+
+  @media screen and (max-width: 749px) {
+    .ai-swatch-image-swap__swatches-{{ ai_gen_id }} {
+      gap: {{ block.settings.swatch_spacing | times: 0.8 }}px;
+    }
+
+    .ai-swatch-image-swap__swatch-{{ ai_gen_id }} {
+      width: {{ block.settings.swatch_size | times: 0.8 }}px;
+      height: {{ block.settings.swatch_size | times: 0.8 }}px;
+    }
+  }
+{% endstyle %}
+
+<product-swatch-image-swap-{{ ai_gen_id }}
+  class="ai-swatch-image-swap-{{ ai_gen_id }}"
+  data-hover-enabled="{{ block.settings.enable_hover }}"
+  {{ block.shopify_attributes }}
+>
+  {% if block.settings.product != blank %}
+    <div class="ai-swatch-image-swap__card-{{ ai_gen_id }}">
+      <div class="ai-swatch-image-swap__image-container-{{ ai_gen_id }}">
+        {% if block.settings.product.featured_image %}
+          <img
+            src="{{ block.settings.product.featured_image | image_url: width: 800 }}"
+            alt="{{ block.settings.product.featured_image.alt | escape }}"
+            width="800"
+            height="{{ 800 | divided_by: block.settings.product.featured_image.aspect_ratio | round }}"
+            loading="lazy"
+            class="ai-swatch-image-swap__image-{{ ai_gen_id }} ai-swatch-image-swap__default-image-{{ ai_gen_id }}"
+            data-default-image
+          >
+        {% else %}
+          <div class="ai-swatch-image-swap__placeholder-{{ ai_gen_id }}">
+            {{ 'product-1' | placeholder_svg_tag }}
+          </div>
+        {% endif %}
+      </div>
+
+      {% if block.settings.show_swatches %}
+        {% assign color_option_name = block.settings.color_option_name | downcase %}
+        {% assign color_option_index = nil %}
+
+        {% for option in block.settings.product.options_with_values %}
+          {% assign option_name_lower = option.name | downcase %}
+          {% if option_name_lower == color_option_name %}
+            {% assign color_option_index = forloop.index0 %}
+            {% break %}
+          {% endif %}
+        {% endfor %}
+
+        {% if color_option_index != nil %}
+          <div class="ai-swatch-image-swap__swatches-{{ ai_gen_id }}">
+            {% assign processed_colors = '' %}
+            {% for variant in block.settings.product.variants %}
+              {% assign color_value = variant.options[color_option_index] %}
+              {% unless processed_colors contains color_value %}
+                {% assign processed_colors = processed_colors | append: color_value | append: ',' %}
+                
+                {% assign swatch_color = color_value | downcase | replace: ' ', '-' %}
+                
+                <button
+                  type="button"
+                  class="ai-swatch-image-swap__swatch-{{ ai_gen_id }}"
+                  data-variant-id="{{ variant.id }}"
+                  data-color="{{ color_value | escape }}"
+                  data-image-url="{% if variant.featured_image %}{{ variant.featured_image | image_url: width: 800 }}{% endif %}"
+                  aria-label="{{ color_value }}"
+                  title="{{ color_value }}"
+                >
+                  {% if variant.featured_image %}
+                    <img
+                      src="{{ variant.featured_image | image_url: width: 100 }}"
+                      alt="{{ color_value | escape }}"
+                      class="ai-swatch-image-swap__swatch-color-{{ ai_gen_id }}"
+                      loading="lazy"
+                    >
+                  {% else %}
+                    <span
+                      class="ai-swatch-image-swap__swatch-color-{{ ai_gen_id }}"
+                      style="background-color: {{ swatch_color }};"
+                    ></span>
+                  {% endif %}
+                </button>
+              {% endunless %}
+            {% endfor %}
+          </div>
+        {% endif %}
+      {% endif %}
+
+      {% if block.settings.show_product_info %}
+        <div class="ai-swatch-image-swap__product-info-{{ ai_gen_id }}">
+          <h3 class="ai-swatch-image-swap__product-title-{{ ai_gen_id }}">
+            {{ block.settings.product.title }}
+          </h3>
+          <p class="ai-swatch-image-swap__product-price-{{ ai_gen_id }}">
+            {{ block.settings.product.price | money }}
+          </p>
+        </div>
+      {% endif %}
+    </div>
+  {% else %}
+    <div class="ai-swatch-image-swap__card-{{ ai_gen_id }}">
+      <div class="ai-swatch-image-swap__image-container-{{ ai_gen_id }}">
+        <div class="ai-swatch-image-swap__placeholder-{{ ai_gen_id }}">
+          {{ 'product-1' | placeholder_svg_tag }}
+        </div>
+      </div>
+      <div class="ai-swatch-image-swap__product-info-{{ ai_gen_id }}" style="text-align: center; padding: 20px; color: #999;">
+        Select a product to display
+      </div>
+    </div>
+  {% endif %}
+</product-swatch-image-swap-{{ ai_gen_id }}>
+
+<script>
+  (function() {
+    class ProductSwatchImageSwap{{ ai_gen_id }} extends HTMLElement {
+      constructor() {
+        super();
+        this.hoverEnabled = this.dataset.hoverEnabled === 'true';
+        this.currentImage = null;
+        this.defaultImage = null;
+        this.activeSwatchButton = null;
+      }
+
+      connectedCallback() {
+        this.imageContainer = this.querySelector('.ai-swatch-image-swap__image-container-{{ ai_gen_id }}');
+        this.defaultImage = this.querySelector('[data-default-image]');
+        this.swatches = this.querySelectorAll('.ai-swatch-image-swap__swatch-{{ ai_gen_id }}');
+        
+        if (!this.imageContainer || !this.defaultImage) return;
+
+        this.setupEventListeners();
+      }
+
+      setupEventListeners() {
+        this.swatches.forEach((swatch) => {
+          if (this.hoverEnabled) {
+            swatch.addEventListener('mouseenter', () => this.handleSwatchInteraction(swatch));
+            swatch.addEventListener('mouseleave', () => this.resetToDefault());
+          }
+          
+          swatch.addEventListener('click', () => this.handleSwatchClick(swatch));
+        });
+      }
+
+      handleSwatchInteraction(swatch) {
+        const imageUrl = swatch.dataset.imageUrl;
+        
+        if (!imageUrl) return;
+
+        if (this.activeSwatchButton) {
+          this.activeSwatchButton.classList.remove('ai-swatch-image-swap__swatch--active-{{ ai_gen_id }}');
+        }
+
+        swatch.classList.add('ai-swatch-image-swap__swatch--active-{{ ai_gen_id }}');
+        this.swapImage(imageUrl);
+      }
+
+      handleSwatchClick(swatch) {
+        const imageUrl = swatch.dataset.imageUrl;
+        
+        if (!imageUrl) return;
+
+        if (this.activeSwatchButton) {
+          this.activeSwatchButton.classList.remove('ai-swatch-image-swap__swatch--active-{{ ai_gen_id }}');
+        }
+
+        this.activeSwatchButton = swatch;
+        swatch.classList.add('ai-swatch-image-swap__swatch--active-{{ ai_gen_id }}');
+        this.swapImage(imageUrl);
+      }
+
+      swapImage(imageUrl) {
+        this.defaultImage.classList.add('ai-swatch-image-swap__image--hidden-{{ ai_gen_id }}');
+
+        setTimeout(() => {
+          this.defaultImage.src = imageUrl;
+          this.defaultImage.classList.remove('ai-swatch-image-swap__image--hidden-{{ ai_gen_id }}');
+        }, 150);
+      }
+
+      resetToDefault() {
+        if (this.hoverEnabled && !this.activeSwatchButton) {
+          this.swatches.forEach((swatch) => {
+            swatch.classList.remove('ai-swatch-image-swap__swatch--active-{{ ai_gen_id }}');
+          });
+
+          const originalSrc = this.defaultImage.dataset.originalSrc || this.defaultImage.src;
+          
+          this.defaultImage.classList.add('ai-swatch-image-swap__image--hidden-{{ ai_gen_id }}');
+          
+          setTimeout(() => {
+            this.defaultImage.src = originalSrc;
+            this.defaultImage.classList.remove('ai-swatch-image-swap__image--hidden-{{ ai_gen_id }}');
+          }, 150);
+        }
+      }
+    }
+
+    customElements.define('product-swatch-image-swap-{{ ai_gen_id }}', ProductSwatchImageSwap{{ ai_gen_id }});
+  })();
+</script>
+
 {% schema %}
- {
-   "name": "AI_Block",
-   "tag": "shopify-ai-generated-block"
- }
+{
+  "name": "Product swatch image swap",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Product"
+    },
+    {
+      "type": "product",
+      "id": "product",
+      "label": "Product"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_product_info",
+      "label": "Show product info",
+      "default": true
+    },
+    {
+      "type": "header",
+      "content": "Swatches"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_swatches",
+      "label": "Show color swatches",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "color_option_name",
+      "label": "Color option name",
+      "default": "Color"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_hover",
+      "label": "Enable hover to swap",
+      "default": true
+    },
+    {
+      "type": "range",
+      "id": "swatch_size",
+      "min": 20,
+      "max": 60,
+      "step": 2,
+      "unit": "px",
+      "label": "Swatch size",
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "swatch_spacing",
+      "min": 4,
+      "max": 20,
+      "step": 2,
+      "unit": "px",
+      "label": "Swatch spacing",
+      "default": 8
+    },
+    {
+      "type": "select",
+      "id": "swatch_alignment",
+      "label": "Swatch alignment",
+      "options": [
+        {
+          "value": "flex-start",
+          "label": "Left"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "flex-end",
+          "label": "Right"
+        }
+      ],
+      "default": "flex-start"
+    },
+    {
+      "type": "range",
+      "id": "swatch_border_radius",
+      "min": 0,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "label": "Swatch border radius",
+      "default": 4
+    },
+    {
+      "type": "range",
+      "id": "swatch_border_width",
+      "min": 0,
+      "max": 4,
+      "step": 1,
+      "unit": "px",
+      "label": "Swatch border width",
+      "default": 2
+    },
+    {
+      "type": "color",
+      "id": "swatch_border_color",
+      "label": "Swatch border color",
+      "default": "#e0e0e0"
+    },
+    {
+      "type": "color",
+      "id": "swatch_hover_border_color",
+      "label": "Hover border color",
+      "default": "#121212"
+    },
+    {
+      "type": "color",
+      "id": "swatch_active_border_color",
+      "label": "Active border color",
+      "default": "#121212"
+    },
+    {
+      "type": "range",
+      "id": "swatch_active_border_width",
+      "min": 1,
+      "max": 4,
+      "step": 1,
+      "unit": "px",
+      "label": "Active border width",
+      "default": 3
+    },
+    {
+      "type": "range",
+      "id": "swatch_hover_scale",
+      "min": 1,
+      "max": 1.5,
+      "step": 0.1,
+      "label": "Hover scale",
+      "default": 1.1
+    },
+    {
+      "type": "header",
+      "content": "Image"
+    },
+    {
+      "type": "range",
+      "id": "image_border_radius",
+      "min": 0,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "label": "Image border radius",
+      "default": 0
+    },
+    {
+      "type": "color",
+      "id": "image_background_color",
+      "label": "Image background",
+      "default": "#f4f4f4"
+    },
+    {
+      "type": "range",
+      "id": "transition_speed",
+      "min": 100,
+      "max": 500,
+      "step": 50,
+      "unit": "ms",
+      "label": "Transition speed",
+      "default": 300
+    },
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "range",
+      "id": "swatches_margin_top",
+      "min": 0,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "label": "Swatches top margin",
+      "default": 12
+    },
+    {
+      "type": "range",
+      "id": "product_info_margin_top",
+      "min": 0,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "label": "Product info top margin",
+      "default": 12
+    },
+    {
+      "type": "header",
+      "content": "Typography"
+    },
+    {
+      "type": "select",
+      "id": "text_alignment",
+      "label": "Text alignment",
+      "options": [
+        {
+          "value": "left",
+          "label": "Left"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "right",
+          "label": "Right"
+        }
+      ],
+      "default": "left"
+    },
+    {
+      "type": "range",
+      "id": "title_font_size",
+      "min": 12,
+      "max": 24,
+      "step": 1,
+      "unit": "px",
+      "label": "Title font size",
+      "default": 16
+    },
+    {
+      "type": "color",
+      "id": "title_color",
+      "label": "Title color",
+      "default": "#121212"
+    },
+    {
+      "type": "range",
+      "id": "price_font_size",
+      "min": 12,
+      "max": 24,
+      "step": 1,
+      "unit": "px",
+      "label": "Price font size",
+      "default": 14
+    },
+    {
+      "type": "color",
+      "id": "price_color",
+      "label": "Price color",
+      "default": "#121212"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Product swatch image swap"
+    }
+  ]
+}
 {% endschema %}
