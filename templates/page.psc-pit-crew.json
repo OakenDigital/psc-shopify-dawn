@@ -50,7 +50,7 @@
       "type": "custom-liquid",
       "name": "t:sections.custom-liquid.presets.name",
       "settings": {
-        "custom_liquid": "",
+        "custom_liquid": "<form method=\"post\" action=\"/contact\">\n  <input type=\"hidden\" name=\"form_type\" value=\"contact\">\n  <input type=\"hidden\" name=\"contact[tags]\" value=\"PSC Pit Crew\">\n\n  <div class=\"psc-form-grid\">\n    <div class=\"psc-form-row\">\n      <label class=\"psc-form-label\">First Name</label>\n      <input class=\"psc-form-input\" type=\"text\" name=\"contact[first_name]\" placeholder=\"Jason\" required>\n    </div>\n\n    <div class=\"psc-form-row\">\n      <label class=\"psc-form-label\">Last Name</label>\n      <input class=\"psc-form-input\" type=\"text\" name=\"contact[last_name]\" placeholder=\"Walker\" required>\n    </div>\n  </div>\n\n  <div class=\"psc-form-row\">\n    <label class=\"psc-form-label\">Email</label>\n    <input class=\"psc-form-input\" type=\"email\" name=\"contact[email]\" placeholder=\"jason@email.com\" required>\n  </div>\n\n  <div class=\"psc-form-grid\">\n    <div class=\"psc-form-row\">\n      <label class=\"psc-form-label\">Year</label>\n      <input class=\"psc-form-input\" type=\"text\" name=\"contact[vehicle_year]\" placeholder=\"2019\">\n    </div>\n\n    <div class=\"psc-form-row\">\n      <label class=\"psc-form-label\">Make & Model</label>\n      <input class=\"psc-form-input\" type=\"text\" name=\"contact[vehicle_model]\" placeholder=\"Ford F-150\">\n    </div>\n  </div>\n\n  <div class=\"psc-form-row\">",
         "color_scheme": "",
         "padding_top": 40,
         "padding_bottom": 52
