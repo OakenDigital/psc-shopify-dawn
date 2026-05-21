@@ -205,6 +205,36 @@
         "padding_bottom": 60
       }
     },
+    "featured_collection_i3dKzT": {
+      "type": "featured-collection",
+      "settings": {
+        "collection": "merch",
+        "products_to_show": 10,
+        "eyebrow_text": "Gear Up",
+        "eyebrow_color": "#dc2626",
+        "title": "PSC Merch",
+        "heading_size": "h1",
+        "description": "<p>Hats, tees, and gear that carry the PSC name—same mindset we bring to every part we build.<br/></p>",
+        "show_description": false,
+        "description_style": "body",
+        "columns_desktop": 6,
+        "enable_desktop_slider": true,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "color_scheme": "scheme-1",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "none",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 44,
+        "padding_bottom": 60
+      }
+    },
     "newsletter_agMNU6": {
       "type": "newsletter",
       "blocks": {
@@ -246,6 +276,7 @@
     "collection_list_JAWHMJ",
     "image_with_text_rFXzLq",
     "featured_collection",
+    "featured_collection_i3dKzT",
     "newsletter_agMNU6"
   ]
 }
