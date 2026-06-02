@@ -1330,3 +1330,49 @@ class CartPerformance {
     );
   }
 }
+
+
+document.addEventListener('DOMContentLoaded', () => {
+  const initSwatchHover = () => {
+    const swatches = document.querySelectorAll('.card-product .swatch-input input, .card-product .variant-picker input');
+    
+    swatches.forEach(swatch => {
+      swatch.addEventListener('mouseenter', function() {
+        // Find the product card parent container
+        const card = this.closest('.card-wrapper || .card');
+        if (!card) return;
+        
+        // Find the main image inside this specific card
+        const mainImage = card.querySelector('.media img');
+        if (!mainImage) return;
+
+        // Get the variant image URL attached to this option/swatch
+        // Note: Dawn stores variant data in a JSON script element inside the card
+        const variantId = this.value;
+        const productDataScript = card.querySelector('script[type="application/json"]');
+        
+        if (productDataScript) {
+          try {
+            const variants = JSON.parse(productDataScript.textContent);
+            const matchedVariant = variants.find(v => v.id == variantId || v.options.includes(variantId));
+            
+            if (matchedVariant && matchedVariant.featured_image) {
+              mainImage.src = matchedVariant.featured_image.src;
+              if (mainImage.srcset) {
+                mainImage.srcset = matchedVariant.featured_image.src;
+              }
+            }
+          } catch (e) {
+            console.error("Error parsing variant data for hover effect", e);
+          }
+        }
+      });
+    });
+  };
+
+  // Run on initial load
+  initSwatchHover();
+  
+  // Listen for filter/sort changes which re-render the grid
+  document.addEventListener('shopify:section:load', initSwatchHover);
+});
