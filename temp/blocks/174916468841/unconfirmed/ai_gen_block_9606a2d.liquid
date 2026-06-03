@@ -1,6 +1,490 @@
+{% doc %}
+  @prompt
+    create a responsive image grid that will display the images from my connected yotpo app
+{% enddoc %}
+{% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
+
+{% style %}
+  .ai-yotpo-grid-{{ ai_gen_id }} {
+    display: block;
+    width: {{ block.settings.desktop_width_percent }}%;
+    max-width: 100%;
+    padding: {{ block.settings.section_padding }}px 0;
+  }
+
+  .ai-yotpo-grid__header-{{ ai_gen_id }} {
+    text-align: {{ block.settings.text_alignment }};
+    margin-bottom: {{ block.settings.header_spacing }}px;
+  }
+
+  .ai-yotpo-grid__title-{{ ai_gen_id }} {
+    font-size: {{ block.settings.heading_size }}px;
+    color: {{ block.settings.heading_color }};
+    margin: 0 0 12px;
+    font-weight: 600;
+  }
+
+  .ai-yotpo-grid__subtitle-{{ ai_gen_id }} {
+    font-size: {{ block.settings.subheading_size }}px;
+    color: {{ block.settings.subheading_color }};
+    margin: 0;
+  }
+
+  .ai-yotpo-grid__container-{{ ai_gen_id }} {
+    display: grid;
+    grid-template-columns: repeat({{ block.settings.columns_desktop }}, 1fr);
+    gap: {{ block.settings.grid_gap }}px;
+    width: 100%;
+  }
+
+  .ai-yotpo-grid__item-{{ ai_gen_id }} {
+    position: relative;
+    overflow: hidden;
+    border-radius: {{ block.settings.image_border_radius }}px;
+    background-color: {{ block.settings.placeholder_bg_color }};
+    aspect-ratio: {{ block.settings.aspect_ratio }};
+  }
+
+  .ai-yotpo-grid__image-{{ ai_gen_id }} {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease;
+  }
+
+  {% if block.settings.enable_hover_zoom %}
+    .ai-yotpo-grid__item-{{ ai_gen_id }}:hover .ai-yotpo-grid__image-{{ ai_gen_id }} {
+      transform: scale(1.05);
+    }
+  {% endif %}
+
+  .ai-yotpo-grid__overlay-{{ ai_gen_id }} {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, {{ block.settings.overlay_opacity }}), transparent);
+    padding: 16px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  {% if block.settings.show_overlay %}
+    .ai-yotpo-grid__item-{{ ai_gen_id }}:hover .ai-yotpo-grid__overlay-{{ ai_gen_id }} {
+      opacity: 1;
+    }
+  {% endif %}
+
+  .ai-yotpo-grid__overlay-text-{{ ai_gen_id }} {
+    color: #ffffff;
+    font-size: 14px;
+    margin: 0;
+  }
+
+  .ai-yotpo-grid__placeholder-{{ ai_gen_id }} {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+
+  .ai-yotpo-grid__placeholder-{{ ai_gen_id }} svg {
+    width: 60%;
+    height: 60%;
+    opacity: 0.3;
+  }
+
+  .ai-yotpo-grid__empty-state-{{ ai_gen_id }} {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 12px 20px;
+    font-size: 14px;
+    color: #666;
+    text-align: center;
+    pointer-events: none;
+    max-width: 80%;
+  }
+
+  @media screen and (max-width: 989px) {
+    .ai-yotpo-grid__container-{{ ai_gen_id }} {
+      grid-template-columns: repeat({{ block.settings.columns_tablet }}, 1fr);
+    }
+
+    .ai-yotpo-grid__title-{{ ai_gen_id }} {
+      font-size: calc({{ block.settings.heading_size }}px * 0.85);
+    }
+
+    .ai-yotpo-grid__subtitle-{{ ai_gen_id }} {
+      font-size: calc({{ block.settings.subheading_size }}px * 0.9);
+    }
+  }
+
+  @media screen and (max-width: 749px) {
+    .ai-yotpo-grid__container-{{ ai_gen_id }} {
+      grid-template-columns: repeat({{ block.settings.columns_mobile }}, 1fr);
+    }
+
+    .ai-yotpo-grid-{{ ai_gen_id }} {
+      width: 100%;
+    }
+  }
+{% endstyle %}
+
+<yotpo-image-grid-{{ ai_gen_id }} class="ai-yotpo-grid-{{ ai_gen_id }}" {{ block.shopify_attributes }}>
+  {% if block.settings.heading != blank or block.settings.subheading != blank %}
+    <div class="ai-yotpo-grid__header-{{ ai_gen_id }}">
+      {% if block.settings.heading != blank %}
+        <h2 class="ai-yotpo-grid__title-{{ ai_gen_id }}">{{ block.settings.heading }}</h2>
+      {% endif %}
+      {% if block.settings.subheading != blank %}
+        <p class="ai-yotpo-grid__subtitle-{{ ai_gen_id }}">{{ block.settings.subheading }}</p>
+      {% endif %}
+    </div>
+  {% endif %}
+
+  <div class="ai-yotpo-grid__container-{{ ai_gen_id }}" data-yotpo-container>
+    {% for i in (1..12) %}
+      <div class="ai-yotpo-grid__item-{{ ai_gen_id }}">
+        <div class="ai-yotpo-grid__placeholder-{{ ai_gen_id }}">
+          {{ 'image' | placeholder_svg_tag }}
+          {% if forloop.first %}
+            <div class="ai-yotpo-grid__empty-state-{{ ai_gen_id }}">
+              Connect your Yotpo app to display UGC images
+            </div>
+          {% endif %}
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</yotpo-image-grid-{{ ai_gen_id }}>
+
+<script>
+  (function() {
+    class YotpoImageGrid{{ ai_gen_id }} extends HTMLElement {
+      constructor() {
+        super();
+        this.container = this.querySelector('[data-yotpo-container]');
+      }
+
+      connectedCallback() {
+        this.loadYotpoImages();
+        this.setupYotpoListener();
+      }
+
+      setupYotpoListener() {
+        if (window.yotpo && window.yotpo.initialized) {
+          this.loadYotpoImages();
+        } else {
+          document.addEventListener('yotpo:ready', () => {
+            this.loadYotpoImages();
+          });
+        }
+      }
+
+      loadYotpoImages() {
+        if (typeof window.yotpo === 'undefined' || !window.yotpo.widgets) {
+          console.warn('Yotpo is not loaded yet');
+          return;
+        }
+
+        const yotpoData = this.getYotpoData();
+        if (yotpoData && yotpoData.length > 0) {
+          this.renderImages(yotpoData);
+        }
+      }
+
+      getYotpoData() {
+        if (window.yotpoWidgetsData && window.yotpoWidgetsData.reviews) {
+          const reviews = window.yotpoWidgetsData.reviews;
+          return reviews
+            .filter(review => review.images && review.images.length > 0)
+            .flatMap(review => 
+              review.images.map(image => ({
+                url: image.original_url || image.thumb_url,
+                alt: review.title || 'Customer photo',
+                reviewer: review.user ? review.user.display_name : 'Customer',
+                rating: review.score
+              }))
+            )
+            .slice(0, {{ block.settings.max_images }});
+        }
+        return [];
+      }
+
+      renderImages(images) {
+        const items = this.container.querySelectorAll('.ai-yotpo-grid__item-{{ ai_gen_id }}');
+        
+        images.forEach((imageData, index) => {
+          if (index < items.length) {
+            const item = items[index];
+            item.innerHTML = `
+              <img 
+                src="${imageData.url}" 
+                alt="${imageData.alt}"
+                class="ai-yotpo-grid__image-{{ ai_gen_id }}"
+                loading="lazy"
+              >
+              {% if block.settings.show_overlay %}
+                <div class="ai-yotpo-grid__overlay-{{ ai_gen_id }}">
+                  <p class="ai-yotpo-grid__overlay-text-{{ ai_gen_id }}">
+                    ${imageData.reviewer}
+                    ${imageData.rating ? ' • ' + '★'.repeat(imageData.rating) : ''}
+                  </p>
+                </div>
+              {% endif %}
+            `;
+          }
+        });
+
+        for (let i = images.length; i < items.length; i++) {
+          items[i].style.display = 'none';
+        }
+      }
+    }
+
+    customElements.define('yotpo-image-grid-{{ ai_gen_id }}', YotpoImageGrid{{ ai_gen_id }});
+  })();
+</script>
+
 {% schema %}
- {
-   "name": "AI_Block",
-   "tag": "shopify-ai-generated-block"
- }
+{
+  "name": "Yotpo image grid",
+  "tag": null,
+  "settings": [
+    {
+      "type": "header",
+      "content": "Content"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Customer photos"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "subheading",
+      "label": "Subheading",
+      "default": "See how our customers use our products"
+    },
+    {
+      "type": "range",
+      "id": "max_images",
+      "label": "Maximum images",
+      "min": 4,
+      "max": 24,
+      "step": 2,
+      "default": 12
+    },
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "range",
+      "id": "columns_desktop",
+      "label": "Columns on desktop",
+      "min": 2,
+      "max": 6,
+      "step": 1,
+      "default": 4
+    },
+    {
+      "type": "range",
+      "id": "columns_tablet",
+      "label": "Columns on tablet",
+      "min": 2,
+      "max": 4,
+      "step": 1,
+      "default": 3
+    },
+    {
+      "type": "select",
+      "id": "columns_mobile",
+      "label": "Columns on mobile",
+      "options": [
+        {
+          "value": "1",
+          "label": "1"
+        },
+        {
+          "value": "2",
+          "label": "2"
+        }
+      ],
+      "default": "2"
+    },
+    {
+      "type": "select",
+      "id": "aspect_ratio",
+      "label": "Image aspect ratio",
+      "options": [
+        {
+          "value": "1 / 1",
+          "label": "Square (1:1)"
+        },
+        {
+          "value": "4 / 3",
+          "label": "Landscape (4:3)"
+        },
+        {
+          "value": "3 / 4",
+          "label": "Portrait (3:4)"
+        },
+        {
+          "value": "16 / 9",
+          "label": "Wide (16:9)"
+        }
+      ],
+      "default": "1 / 1"
+    },
+    {
+      "type": "range",
+      "id": "grid_gap",
+      "label": "Grid gap",
+      "min": 4,
+      "max": 40,
+      "step": 4,
+      "unit": "px",
+      "default": 8
+    },
+    {
+      "type": "range",
+      "id": "desktop_width_percent",
+      "label": "Desktop width",
+      "min": 50,
+      "max": 100,
+      "step": 5,
+      "unit": "%",
+      "default": 100
+    },
+    {
+      "type": "select",
+      "id": "text_alignment",
+      "label": "Text alignment",
+      "options": [
+        {
+          "value": "left",
+          "label": "Left"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "right",
+          "label": "Right"
+        }
+      ],
+      "default": "center"
+    },
+    {
+      "type": "header",
+      "content": "Style"
+    },
+    {
+      "type": "range",
+      "id": "section_padding",
+      "label": "Section padding",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "header_spacing",
+      "label": "Header spacing",
+      "min": 0,
+      "max": 60,
+      "step": 4,
+      "unit": "px",
+      "default": 32
+    },
+    {
+      "type": "range",
+      "id": "heading_size",
+      "label": "Heading size",
+      "min": 16,
+      "max": 60,
+      "step": 2,
+      "unit": "px",
+      "default": 32
+    },
+    {
+      "type": "range",
+      "id": "subheading_size",
+      "label": "Subheading size",
+      "min": 12,
+      "max": 24,
+      "step": 2,
+      "unit": "px",
+      "default": 16
+    },
+    {
+      "type": "color",
+      "id": "heading_color",
+      "label": "Heading color",
+      "default": "#121212"
+    },
+    {
+      "type": "color",
+      "id": "subheading_color",
+      "label": "Subheading color",
+      "default": "#666666"
+    },
+    {
+      "type": "range",
+      "id": "image_border_radius",
+      "label": "Image border radius",
+      "min": 0,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "color",
+      "id": "placeholder_bg_color",
+      "label": "Placeholder background",
+      "default": "#f4f4f4"
+    },
+    {
+      "type": "header",
+      "content": "Hover effects"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_hover_zoom",
+      "label": "Enable hover zoom",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "show_overlay",
+      "label": "Show overlay on hover",
+      "default": true
+    },
+    {
+      "type": "range",
+      "id": "overlay_opacity",
+      "label": "Overlay opacity",
+      "min": 0,
+      "max": 1,
+      "step": 0.1,
+      "default": 0.7
+    }
+  ],
+  "presets": [
+    {
+      "name": "Yotpo image grid"
+    }
+  ]
+}
 {% endschema %}
