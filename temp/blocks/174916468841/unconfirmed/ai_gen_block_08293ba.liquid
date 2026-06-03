@@ -1,6 +1,350 @@
+{% doc %}
+  @prompt
+    create a customizable, responsive image grid that will display the images from a dynamic source
+{% enddoc %}
+{% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
+
+{% style %}
+  .ai-image-grid-{{ ai_gen_id }} {
+    display: block;
+    width: {{ block.settings.desktop_width_percent }}%;
+    max-width: 100%;
+  }
+
+  .ai-image-grid__container-{{ ai_gen_id }} {
+    display: grid;
+    grid-template-columns: repeat({{ block.settings.columns_desktop }}, 1fr);
+    gap: {{ block.settings.gap }}px;
+    width: 100%;
+  }
+
+  .ai-image-grid__item-{{ ai_gen_id }} {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    border-radius: {{ block.settings.image_radius }}px;
+  }
+
+  .ai-image-grid__image-{{ ai_gen_id }} {
+    width: 100%;
+    height: 100%;
+    object-fit: {{ block.settings.image_fit }};
+    display: block;
+    aspect-ratio: {{ block.settings.aspect_ratio }};
+  }
+
+  .ai-image-grid__placeholder-{{ ai_gen_id }} {
+    width: 100%;
+    height: 100%;
+    background-color: #f4f4f4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    aspect-ratio: {{ block.settings.aspect_ratio }};
+    border-radius: {{ block.settings.image_radius }}px;
+  }
+
+  .ai-image-grid__placeholder-{{ ai_gen_id }} svg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .ai-image-grid__empty-state-{{ ai_gen_id }} {
+    text-align: center;
+    padding: 40px 20px;
+    color: #666;
+    font-size: 14px;
+  }
+
+  @media screen and (max-width: 749px) {
+    .ai-image-grid__container-{{ ai_gen_id }} {
+      grid-template-columns: repeat({{ block.settings.columns_mobile }}, 1fr);
+    }
+  }
+{% endstyle %}
+
+<image-grid-{{ ai_gen_id }} class="ai-image-grid-{{ ai_gen_id }}" {{ block.shopify_attributes }}>
+  {% liquid
+    assign source_type = block.settings.source_type
+    assign images_to_display = null
+    assign has_images = false
+
+    if source_type == 'product_list'
+      assign selected_products = block.settings.product_list
+      if selected_products.size > 0
+        assign has_images = true
+      endif
+    elsif source_type == 'collection'
+      assign selected_collection = block.settings.collection
+      if selected_collection and selected_collection.products.size > 0
+        assign has_images = true
+      endif
+    elsif source_type == 'blog'
+      assign selected_blog = block.settings.blog
+      if selected_blog and selected_blog.articles.size > 0
+        assign has_images = true
+      endif
+    endif
+  %}
+
+  {% if has_images %}
+    <div class="ai-image-grid__container-{{ ai_gen_id }}">
+      {% if source_type == 'product_list' %}
+        {% for product in selected_products limit: block.settings.max_images %}
+          <div class="ai-image-grid__item-{{ ai_gen_id }}">
+            {% if product.featured_image %}
+              <img
+                src="{{ product.featured_image | image_url: width: 800 }}"
+                alt="{{ product.featured_image.alt | escape }}"
+                loading="lazy"
+                width="{{ product.featured_image.width }}"
+                height="{{ product.featured_image.height }}"
+                class="ai-image-grid__image-{{ ai_gen_id }}"
+              >
+            {% else %}
+              <div class="ai-image-grid__placeholder-{{ ai_gen_id }}">
+                {{ 'product-1' | placeholder_svg_tag }}
+              </div>
+            {% endif %}
+          </div>
+        {% endfor %}
+      {% elsif source_type == 'collection' %}
+        {% for product in selected_collection.products limit: block.settings.max_images %}
+          <div class="ai-image-grid__item-{{ ai_gen_id }}">
+            {% if product.featured_image %}
+              <img
+                src="{{ product.featured_image | image_url: width: 800 }}"
+                alt="{{ product.featured_image.alt | escape }}"
+                loading="lazy"
+                width="{{ product.featured_image.width }}"
+                height="{{ product.featured_image.height }}"
+                class="ai-image-grid__image-{{ ai_gen_id }}"
+              >
+            {% else %}
+              <div class="ai-image-grid__placeholder-{{ ai_gen_id }}">
+                {{ 'product-1' | placeholder_svg_tag }}
+              </div>
+            {% endif %}
+          </div>
+        {% endfor %}
+      {% elsif source_type == 'blog' %}
+        {% for article in selected_blog.articles limit: block.settings.max_images %}
+          <div class="ai-image-grid__item-{{ ai_gen_id }}">
+            {% if article.image %}
+              <img
+                src="{{ article.image | image_url: width: 800 }}"
+                alt="{{ article.image.alt | escape }}"
+                loading="lazy"
+                width="{{ article.image.width }}"
+                height="{{ article.image.height }}"
+                class="ai-image-grid__image-{{ ai_gen_id }}"
+              >
+            {% else %}
+              <div class="ai-image-grid__placeholder-{{ ai_gen_id }}">
+                {{ 'image' | placeholder_svg_tag }}
+              </div>
+            {% endif %}
+          </div>
+        {% endfor %}
+      {% endif %}
+    </div>
+  {% else %}
+    <div class="ai-image-grid__empty-state-{{ ai_gen_id }}">
+      Next, select a source for your image grid
+    </div>
+  {% endif %}
+</image-grid-{{ ai_gen_id }}>
+
+<script>
+  (function() {
+    class ImageGrid{{ ai_gen_id }} extends HTMLElement {
+      constructor() {
+        super();
+      }
+
+      connectedCallback() {
+        this.setupGrid();
+      }
+
+      setupGrid() {
+        const items = this.querySelectorAll('.ai-image-grid__item-{{ ai_gen_id }}');
+        items.forEach((item, index) => {
+          item.style.animationDelay = `${index * 0.05}s`;
+        });
+      }
+    }
+
+    customElements.define('image-grid-{{ ai_gen_id }}', ImageGrid{{ ai_gen_id }});
+  })();
+</script>
+
 {% schema %}
- {
-   "name": "AI_Block",
-   "tag": "shopify-ai-generated-block"
- }
+{
+  "name": "Image grid",
+  "tag": null,
+  "settings": [
+    {
+      "type": "header",
+      "content": "Source"
+    },
+    {
+      "type": "select",
+      "id": "source_type",
+      "label": "Image source",
+      "options": [
+        {
+          "value": "product_list",
+          "label": "Product list"
+        },
+        {
+          "value": "collection",
+          "label": "Collection"
+        },
+        {
+          "value": "blog",
+          "label": "Blog"
+        }
+      ],
+      "default": "product_list"
+    },
+    {
+      "type": "product_list",
+      "id": "product_list",
+      "label": "Products",
+      "limit": 12
+    },
+    {
+      "type": "collection",
+      "id": "collection",
+      "label": "Collection"
+    },
+    {
+      "type": "blog",
+      "id": "blog",
+      "label": "Blog"
+    },
+    {
+      "type": "range",
+      "id": "max_images",
+      "label": "Maximum images",
+      "min": 1,
+      "max": 24,
+      "step": 1,
+      "default": 12
+    },
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "range",
+      "id": "columns_desktop",
+      "label": "Columns on desktop",
+      "min": 2,
+      "max": 6,
+      "step": 1,
+      "default": 4
+    },
+    {
+      "type": "select",
+      "id": "columns_mobile",
+      "label": "Columns on mobile",
+      "options": [
+        {
+          "value": "1",
+          "label": "1"
+        },
+        {
+          "value": "2",
+          "label": "2"
+        }
+      ],
+      "default": "2"
+    },
+    {
+      "type": "range",
+      "id": "gap",
+      "label": "Gap between images",
+      "min": 0,
+      "max": 40,
+      "step": 4,
+      "unit": "px",
+      "default": 8
+    },
+    {
+      "type": "range",
+      "id": "desktop_width_percent",
+      "label": "Desktop width",
+      "min": 50,
+      "max": 100,
+      "step": 5,
+      "unit": "%",
+      "default": 100
+    },
+    {
+      "type": "header",
+      "content": "Image style"
+    },
+    {
+      "type": "select",
+      "id": "aspect_ratio",
+      "label": "Aspect ratio",
+      "options": [
+        {
+          "value": "1 / 1",
+          "label": "Square (1:1)"
+        },
+        {
+          "value": "4 / 3",
+          "label": "Landscape (4:3)"
+        },
+        {
+          "value": "16 / 9",
+          "label": "Widescreen (16:9)"
+        },
+        {
+          "value": "3 / 4",
+          "label": "Portrait (3:4)"
+        },
+        {
+          "value": "auto",
+          "label": "Original"
+        }
+      ],
+      "default": "1 / 1"
+    },
+    {
+      "type": "select",
+      "id": "image_fit",
+      "label": "Image fit",
+      "options": [
+        {
+          "value": "cover",
+          "label": "Cover"
+        },
+        {
+          "value": "contain",
+          "label": "Contain"
+        }
+      ],
+      "default": "cover"
+    },
+    {
+      "type": "range",
+      "id": "image_radius",
+      "label": "Image corner radius",
+      "min": 0,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "default": 0
+    }
+  ],
+  "presets": [
+    {
+      "name": "Image grid"
+    }
+  ]
+}
 {% endschema %}
