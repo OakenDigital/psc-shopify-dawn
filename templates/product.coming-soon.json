@@ -116,6 +116,13 @@
           "disabled": true,
           "settings": {}
         },
+        "text_qRA34D": {
+          "type": "text",
+          "settings": {
+            "text": "<strong>Coming Soon - Stay Tuned!</strong>",
+            "text_style": "body"
+          }
+        },
         "buy_buttons": {
           "type": "buy_buttons",
           "disabled": true,
@@ -163,6 +170,7 @@
         "custom_liquid_mdwrBa",
         "variant_picker",
         "quantity_selector",
+        "text_qRA34D",
         "buy_buttons",
         "custom_liquid_7p3eAr",
         "description",
@@ -175,7 +183,7 @@
       ],
       "settings": {
         "enable_sticky_info": true,
-        "color_scheme": "scheme-1",
+        "color_scheme": "scheme-2",
         "media_size": "small",
         "constrain_to_viewport": true,
         "media_fit": "contain",
