@@ -153,6 +153,7 @@
         },
         "heading_43VqXj": {
           "type": "heading",
+          "disabled": true,
           "settings": {
             "heading": "Sales Representative",
             "heading_size": "h2"
@@ -160,6 +161,7 @@
         },
         "text_jG4jBe": {
           "type": "text",
+          "disabled": true,
           "settings": {
             "text": "<p><a href=\"https://cdn.shopify.com/s/files/1/0642/9743/5241/files/Job_Description_Sales_Rep.pdf?v=1773845493\" target=\"_blank\" title=\"https://cdn.shopify.com/s/files/1/0642/9743/5241/files/Job_Description_Sales_Rep.pdf?v=1773845493\">View Job Description</a></p>"
           }
