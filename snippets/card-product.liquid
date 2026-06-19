@@ -313,9 +313,9 @@
               <div class="card-product__swatches" style="display: flex; gap: 6px; margin-bottom: 1rem; justify-content: flex-start;">
                 {%- for value in option.values -%}
                   
-                  <div class="card-swatch-wrapper" title="{{ value.name | escape }}">
+                  {% comment %} <div class="card-swatch-wrapper" title="{{ value.name | escape }}">
                     {% render 'swatch', swatch: value.swatch, shape: 'circle' %}
-                  </div>
+                  </div> {% endcomment %}
 
                 {%- endfor -%}
               </div>
