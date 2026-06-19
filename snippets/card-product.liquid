@@ -313,7 +313,10 @@
               <div class="card-product__swatches" style="display: flex; gap: 6px; margin-bottom: 1rem; justify-content: flex-start;">
                 {%- for value in option.values -%}
                   
-                  {% comment %} <div class="card-swatch-wrapper" title="{{ value.name | escape }}">
+                  {% comment %}
+                   INLINE COLOR SWATCH - NON-CLICKABLE
+                  
+                  <div class="card-swatch-wrapper" title="{{ value.name | escape }}">
                     {% render 'swatch', swatch: value.swatch, shape: 'circle' %}
                   </div> {% endcomment %}
 
