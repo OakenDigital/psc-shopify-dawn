@@ -22,7 +22,7 @@
         "forms_inline_VgHhj7": {
           "type": "shopify://apps/forms/blocks/inline/8744a304-fcb1-4347-b211-bb6b4759a76a",
           "settings": {
-            "form_id": "859932",
+            "form_id": "1043986",
             "text_color": "#202020",
             "button_background_color": "#202020",
             "button_label_color": "#ffffff",
@@ -43,53 +43,6 @@
       "settings": {
         "include_margins": true,
         "full_width": true
-      }
-    },
-    "video_library_4Wp4EL": {
-      "type": "video-library",
-      "blocks": {
-        "video_bhEn9d": {
-          "type": "video",
-          "settings": {
-            "title": "Video Title",
-            "description": "",
-            "video_url": ""
-          }
-        },
-        "video_CwHBLy": {
-          "type": "video",
-          "settings": {
-            "title": "Video Title",
-            "description": "",
-            "video_url": ""
-          }
-        },
-        "video_zaitFP": {
-          "type": "video",
-          "settings": {
-            "title": "Video Title",
-            "description": "",
-            "video_url": ""
-          }
-        }
-      },
-      "block_order": [
-        "video_bhEn9d",
-        "video_CwHBLy",
-        "video_zaitFP"
-      ],
-      "disabled": true,
-      "name": "Video Library",
-      "settings": {
-        "title": "",
-        "subtitle": "",
-        "heading_size": "h2",
-        "button_label": "Show us your build",
-        "button_link": "",
-        "button_position": "bottom",
-        "color_scheme": "",
-        "padding_top": 36,
-        "padding_bottom": 36
       }
     },
     "blocks_tdaxhL": {
@@ -154,7 +107,6 @@
   "order": [
     "main",
     "1770307982fd3286c2",
-    "video_library_4Wp4EL",
     "blocks_tdaxhL",
     "psc_nation_upload_kwinxC"
   ]
