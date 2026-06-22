@@ -288,6 +288,37 @@
         "include_margins": true,
         "full_width": true
       }
+    },
+    "1782146385a493dd23": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_274256d_DBjPg8": {
+          "type": "ai_gen_block_274256d",
+          "settings": {
+            "badge_text": "PSC Certified Refurbished",
+            "product_tag": "certified-refurbished",
+            "show_icon": true,
+            "icon_style": "shield",
+            "icon_size": 20,
+            "badge_bg_color": "#2d2926",
+            "text_color": "#ffffff",
+            "icon_color": "#d4a857",
+            "border_color": "#d4a857",
+            "border_thickness": 2,
+            "border_radius": 4,
+            "desktop_width_percent": 100,
+            "badge_font": "system_ui_n7",
+            "font_size": 14,
+            "text_transform": "uppercase",
+            "text_weight": "700"
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_274256d_DBjPg8"
+      ],
+      "settings": {}
     }
   },
   "order": [
@@ -297,6 +328,7 @@
     "featured_collection",
     "featured_collection_i3dKzT",
     "newsletter_agMNU6",
-    "1779380124cb5a4913"
+    "1779380124cb5a4913",
+    "1782146385a493dd23"
   ]
 }
