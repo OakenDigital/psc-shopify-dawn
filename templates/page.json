@@ -44,10 +44,112 @@
         "include_margins": true,
         "full_width": true
       }
+    },
+    "video_library_4Wp4EL": {
+      "type": "video-library",
+      "blocks": {
+        "video_bhEn9d": {
+          "type": "video",
+          "settings": {
+            "title": "Video Title",
+            "description": "",
+            "video_url": ""
+          }
+        },
+        "video_CwHBLy": {
+          "type": "video",
+          "settings": {
+            "title": "Video Title",
+            "description": "",
+            "video_url": ""
+          }
+        },
+        "video_zaitFP": {
+          "type": "video",
+          "settings": {
+            "title": "Video Title",
+            "description": "",
+            "video_url": ""
+          }
+        }
+      },
+      "block_order": [
+        "video_bhEn9d",
+        "video_CwHBLy",
+        "video_zaitFP"
+      ],
+      "disabled": true,
+      "name": "Video Library",
+      "settings": {
+        "title": "",
+        "subtitle": "",
+        "heading_size": "h2",
+        "button_label": "Show us your build",
+        "button_link": "",
+        "button_position": "bottom",
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "blocks_tdaxhL": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_25ef8da_wLWtKV": {
+          "type": "ai_gen_block_25ef8da",
+          "name": "Image row",
+          "settings": {
+            "max_width": 1600,
+            "spacing": 8,
+            "spacing_mobile": 8,
+            "padding_vertical": 0,
+            "padding_horizontal": 0,
+            "aspect_ratio": 100,
+            "border_radius": 0
+          },
+          "blocks": {}
+        },
+        "ai_gen_block_25ef8da_JdYRiq": {
+          "type": "ai_gen_block_25ef8da",
+          "name": "Image row",
+          "settings": {
+            "max_width": 1600,
+            "spacing": 8,
+            "spacing_mobile": 8,
+            "padding_vertical": 0,
+            "padding_horizontal": 0,
+            "aspect_ratio": 100,
+            "border_radius": 0
+          },
+          "blocks": {}
+        },
+        "ai_gen_block_25ef8da_DcJtcG": {
+          "type": "ai_gen_block_25ef8da",
+          "settings": {
+            "max_width": 1600,
+            "spacing": 8,
+            "spacing_mobile": 8,
+            "padding_vertical": 0,
+            "padding_horizontal": 0,
+            "aspect_ratio": 100,
+            "border_radius": 0
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_25ef8da_wLWtKV",
+        "ai_gen_block_25ef8da_JdYRiq",
+        "ai_gen_block_25ef8da_DcJtcG"
+      ],
+      "name": "Image row",
+      "settings": {}
     }
   },
   "order": [
     "main",
-    "1770307982fd3286c2"
+    "1770307982fd3286c2",
+    "video_library_4Wp4EL",
+    "blocks_tdaxhL"
   ]
 }
