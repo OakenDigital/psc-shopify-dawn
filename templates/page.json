@@ -97,17 +97,11 @@
       ],
       "name": "Image row",
       "settings": {}
-    },
-    "psc_nation_upload_kwinxC": {
-      "type": "psc-nation-upload",
-      "name": "PSC Nation Upload",
-      "settings": {}
     }
   },
   "order": [
     "main",
     "1770307982fd3286c2",
-    "blocks_tdaxhL",
-    "psc_nation_upload_kwinxC"
+    "blocks_tdaxhL"
   ]
 }
