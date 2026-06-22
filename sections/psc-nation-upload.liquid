@@ -1,0 +1,96 @@
+{% comment %} PSC Nation - Show Us Your Build Block {% endcomment %}
+
+<div class="psc-nation-upload">
+  <div class="psc-nation-cta">
+    <button class="psc-upload-btn" id="pscShowBuildBtn">Show Us Your Build</button>
+  </div>
+
+  <div class="psc-modal-overlay" id="pscModal">
+    <div class="psc-modal">
+      <button class="psc-modal-close" id="pscModalClose">&times;</button>
+      <h2>Show Us Your Build</h2>
+      <form action="/contact#contact_form" method="post" enctype="multipart/form-data" accept-charset="UTF-8">
+        <input type="hidden" name="form_type" value="contact">
+        <input type="hidden" name="utf8" value="✓">
+
+        <div class="psc-form-row">
+          <div class="psc-form-group">
+            <label>First Name *</label>
+            <input type="text" name="contact[first_name]" required>
+          </div>
+          <div class="psc-form-group">
+            <label>Last Name *</label>
+            <input type="text" name="contact[last_name]" required>
+          </div>
+        </div>
+
+        <div class="psc-form-group">
+          <label>Email *</label>
+          <input type="email" name="contact[email]" required>
+        </div>
+
+        <div class="psc-form-group">
+          <label>Vehicle (Year / Make / Model)</label>
+          <input type="text" name="contact[vehicle]" placeholder="e.g. 2021 Ford Bronco">
+        </div>
+
+        <div class="psc-form-group">
+          <label>PSC Parts Used</label>
+          <textarea name="contact[psc_parts]" rows="3"></textarea>
+        </div>
+
+        <div class="psc-form-group">
+          <label>Build Description</label>
+          <textarea name="contact[description]" rows="3"></textarea>
+        </div>
+
+        <div class="psc-form-group">
+          <label>Upload Your Build Photo (JPG/PNG) *</label>
+          <input type="file" name="contact[photo]" accept=".jpg,.jpeg,.png" required>
+        </div>
+
+        <button type="submit" class="psc-submit-btn">Submit My Build</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+<style>
+.psc-nation-upload { background: #1a1a1a; padding: 40px 20px; text-align: center; }
+.psc-upload-btn { background: #cc0000; color: #fff; font-size: 1.2rem; font-weight: 700; padding: 18px 48px; border: none; cursor: pointer; text-transform: uppercase; letter-spacing: 2px; border-radius: 4px; transition: background 0.2s; }
+.psc-upload-btn:hover { background: #aa0000; }
+.psc-modal-overlay { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.85); z-index: 9999; overflow-y: auto; padding: 40px 20px; }
+.psc-modal-overlay.active { display: flex; align-items: flex-start; justify-content: center; }
+.psc-modal { background: #1a1a1a; border: 1px solid #cc0000; border-radius: 6px; padding: 40px; max-width: 600px; width: 100%; position: relative; color: #fff; }
+.psc-modal h2 { color: #cc0000; font-size: 1.6rem; font-weight: 700; text-transform: uppercase; margin-bottom: 24px; }
+.psc-modal-close { position: absolute; top: 16px; right: 20px; background: none; border: none; color: #fff; font-size: 2rem; cursor: pointer; line-height: 1; }
+.psc-form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.psc-form-group { margin-bottom: 16px; text-align: left; }
+.psc-form-group label { display: block; color: #ccc; font-size: 0.85rem; margin-bottom: 6px; text-transform: uppercase; letter-spacing: 1px; }
+.psc-form-group input, .psc-form-group textarea { width: 100%; background: #111; border: 1px solid #444; color: #fff; padding: 10px 14px; border-radius: 4px; font-size: 1rem; box-sizing: border-box; }
+.psc-form-group input:focus, .psc-form-group textarea:focus { border-color: #cc0000; outline: none; }
+.psc-form-group input[type="file"] { padding: 8px; }
+.psc-submit-btn { background: #cc0000; color: #fff; font-size: 1rem; font-weight: 700; padding: 14px 36px; border: none; cursor: pointer; text-transform: uppercase; letter-spacing: 1px; border-radius: 4px; width: 100%; margin-top: 8px; transition: background 0.2s; }
+.psc-submit-btn:hover { background: #aa0000; }
+@media (max-width: 600px) { .psc-form-row { grid-template-columns: 1fr; } .psc-modal { padding: 24px; } }
+</style>
+
+<script>
+document.getElementById('pscShowBuildBtn').addEventListener('click', function() {
+  document.getElementById('pscModal').classList.add('active');
+});
+document.getElementById('pscModalClose').addEventListener('click', function() {
+  document.getElementById('pscModal').classList.remove('active');
+});
+document.getElementById('pscModal').addEventListener('click', function(e) {
+  if (e.target === this) this.classList.remove('active');
+});
+</script>
+
+{% schema %}
+{
+  "name": "PSC Nation Upload",
+  "settings": [],
+  "presets": [{ "name": "PSC Nation Upload" }]
+}
+{% endschema %}
