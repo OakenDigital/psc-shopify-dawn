@@ -22,7 +22,7 @@
             "image_4": "shopify://shop_images/Red_Jeep_Climbing_in_Moab-pit-crew.png",
             "image_5": "shopify://shop_images/jeep_392_dds_closeup2.jpg",
             "max_width": 1600,
-            "spacing": 8,
+            "spacing": 16,
             "spacing_mobile": 8,
             "padding_vertical": 0,
             "padding_horizontal": 0,
