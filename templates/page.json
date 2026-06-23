@@ -104,7 +104,7 @@
           "type": "button",
           "settings": {
             "button_label": "Show us your build!",
-            "button_link": "/pages/contact-us",
+            "button_link": "/pages/contact",
             "button_style_secondary": false,
             "button_label_2": "",
             "button_link_2": "",
