@@ -9,6 +9,35 @@
  */
 {
   "sections": {
+    "blocks_txxUXx": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_25ef8da_WT8V7x": {
+          "type": "ai_gen_block_25ef8da",
+          "name": "Image row",
+          "settings": {
+            "image_1": "shopify://shop_images/PSC_Jeep_EJS_2025-pit-crew.png",
+            "image_2": "shopify://shop_images/dds-pit-crew.png",
+            "image_3": "shopify://shop_images/superduty-pit-crew.jpg",
+            "image_4": "shopify://shop_images/Red_Jeep_Climbing_in_Moab-pit-crew.png",
+            "image_5": "shopify://shop_images/jeep_392_dds_closeup2.jpg",
+            "max_width": 1600,
+            "spacing": 8,
+            "spacing_mobile": 8,
+            "padding_vertical": 0,
+            "padding_horizontal": 0,
+            "aspect_ratio": 100,
+            "border_radius": 0
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_25ef8da_WT8V7x"
+      ],
+      "name": "Image row",
+      "settings": {}
+    },
     "custom_liquid_kieFjb": {
       "type": "custom-liquid",
       "name": "t:sections.custom-liquid.presets.name",
@@ -21,6 +50,7 @@
     },
     "main": {
       "type": "main-page",
+      "disabled": true,
       "custom_css": [],
       "settings": {
         "padding_top": 0,
@@ -29,6 +59,7 @@
     }
   },
   "order": [
+    "blocks_txxUXx",
     "custom_liquid_kieFjb",
     "main"
   ]
