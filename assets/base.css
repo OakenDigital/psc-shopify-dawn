@@ -5,12 +5,38 @@
   pointer-events: none;
 }
 
-product-component,
-collection-component {
-  display: block;
+@font-face {
+    font-family: 'Gotham';
+    src: local('Gotham Light'), local('Gotham-Light'),
+        url('//cdn.shopify.com/s/files/1/0642/9743/5241/files/Gotham_Light.woff2?v=1763400951') format('woff2');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
 }
 
+@font-face {
+    font-family: 'Gotham';
+    src: local('Gotham'), local('Gotham-Regular'),
+        url('//cdn.shopify.com/s/files/1/0642/9743/5241/files/Gotham_Medium.woff2?v=1763400970') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Gotham';
+    src: local('Gotham Bold'), local('Gotham-Bold'),
+        url('//cdn.shopify.com/s/files/1/0642/9743/5241/files/Gotham_Bold.woff2?v=1763400959') format('woff2');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+
 :root {
+  --font-body-family: 'Gotham', sans-serif;
+  --font-heading-family: 'Gotham', sans-serif;
+  --font-heading-weight: bold;
   --alpha-button-background: 1;
   --alpha-button-border: 1;
   --alpha-link: 0.85;
@@ -156,16 +182,6 @@ body:has(.section-header .drawer-menu) .announcement-bar-section .page-width {
 .isolate {
   position: relative;
   z-index: 0;
-}
-
-.content-for-layout {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-}
-
-.content-for-layout > .shopify-section:last-child {
-  flex-grow: 1;
 }
 
 .section + .section {
@@ -2814,13 +2830,25 @@ details[open] > .header__submenu {
 }
 
 .header__menu-item {
-  padding: 1.2rem;
+  padding: 1.2rem 2rem !important;
   text-decoration: none;
   color: rgba(var(--color-foreground), 0.75);
+  position: relative;
+  margin: 0;
+  transition: background-color var(--duration-short) ease, color var(--duration-short) ease;
+  clip-path: polygon(1rem 0%, 100% 0%, calc(100% - 1rem) 100%, 0% 100%);
+  border-top-right-radius: 3px;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 17px;
+  line-height: 1.6;
 }
 
 .header__menu-item:hover {
-  color: rgb(var(--color-foreground));
+  color: rgb(18,18,18) !important;
+  /* border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 17px; */
+  background-color: rgba(206,206,206,1);
 }
 
 .header__menu-item span {
@@ -2833,26 +2861,41 @@ details[open] > .header__submenu {
 }
 
 details[open] > .header__menu-item {
-  text-decoration: underline;
+  text-decoration: none;
+  background-color: rgba(var(--color-background), 1);
+  color: rgb(var(--color-foreground));
 }
 
 details[open]:hover > .header__menu-item {
-  text-decoration-thickness: 0.2rem;
+  text-decoration: none;
+  background-color: rgba(var(--color-background), 0.9);
+  color: rgba(var(--color-foreground), 1) !important;
 }
 
 details[open] > .header__menu-item .icon-caret {
   transform: rotate(180deg);
+  fill: rgb(var(--color-background));
 }
 
 .header__active-menu-item {
-  transition: text-decoration-thickness var(--duration-short) ease;
   color: rgb(var(--color-foreground));
-  text-decoration: underline;
+  text-decoration: none;
   text-underline-offset: 0.3rem;
+  transition: text-decoration-thickness var(--duration-short) ease;
 }
 
 .header__menu-item:hover .header__active-menu-item {
-  text-decoration-thickness: 0.2rem;
+  color: rgb(18,18,18);
+  /* background-color: rgba(206,206,206,1); */
+}
+
+details[open] > .header__menu-item .header__active-menu-item {
+  color: rgb(var(--color-foreground));
+  text-decoration: none;
+}
+
+details[open] > .header__menu-item .header__active-menu-item:hover {
+  color: rgb(var(--color-foreground));
 }
 
 .header__submenu {
@@ -2895,12 +2938,15 @@ details[open] > .header__menu-item .icon-caret {
 
 .header__menu-item .icon-caret {
   right: 0.8rem;
+  fill: currentColor;
+  display: none;
 }
 
 .header__submenu .icon-caret {
   flex-shrink: 0;
   margin-left: 1rem;
   position: static;
+  fill: currentColor;
 }
 
 header-menu > details,
