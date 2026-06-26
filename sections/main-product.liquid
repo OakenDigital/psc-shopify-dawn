@@ -732,77 +732,12 @@
       endif
     -%}
 
-<script>
-  window.productVariants = {{ product.variants | json }};
-</script>
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-
-  const variants = window.productVariants;
-
-  function getSelectedOptions() {
-    const selected = [];
-    document.querySelectorAll('[name^="globo-option"]:checked').forEach(input => {
-      selected.push(input.value);
-    });
-    return selected;
-  }
-
-  function isValid(optionIndex, value, selectedOptions) {
-    return variants.some(variant => {
-
-      if (variant.options[optionIndex] !== value) return false;
-
-      for (let i = 0; i < selectedOptions.length; i++) {
-        if (i !== optionIndex && selectedOptions[i] && variant.options[i] !== selectedOptions[i]) {
-          return false;
-        }
-      }
-
-      return true;
-    });
-  }
-
-  function updateSwatches() {
-    const selectedOptions = getSelectedOptions();
-
-    document.querySelectorAll('.select-option').forEach(optionEl => {
-      const value = optionEl.dataset.value;
-
-      // Find which option group this belongs to
-      const wrapper = optionEl.closest('[data-option-position]');
-      if (!wrapper) return;
-
-      const optionIndex = parseInt(wrapper.dataset.optionPosition) - 1;
-
-      const valid = isValid(optionIndex, value, selectedOptions);
-
-      if (!valid) {
-        optionEl.classList.add('not-valid-combo');
-      } else {
-        optionEl.classList.remove('not-valid-combo');
-      }
-    });
-  }
-
-  // Run when options change
-  document.addEventListener('change', function (e) {
-    if (e.target.matches('[name^="globo-option"]')) {
-      setTimeout(updateSwatches, 50);
-    }
-  });
-
-  // Run on load
-  updateSwatches();
-});
-</script>
-``
     <script type="application/ld+json">
       {{ product | structured_data }}
     </script>
   </div>
 </product-info>
-``
+
 {% comment %} <div class="yotpo yotpo-main-widget"
 data-product-id="{{ product.id }}"
 data-name="{{ product.title | escape }}"
