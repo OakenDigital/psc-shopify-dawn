@@ -376,6 +376,9 @@
     {%- if settings.cart_type == 'drawer' -%}
       <script src="{{ 'cart-drawer.js' | asset_url }}" defer="defer"></script>
     {%- endif -%}
+  {% if template == 'page' %}
+  {{ 'faq-toggle.js' | asset_url | script_tag }}
+{% endif %}
   </body>
 </html>
 
