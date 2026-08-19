@@ -30,7 +30,7 @@
         "text_intro": {
           "type": "text",
           "settings": {
-            "text": "<p>Welcome to the PSC Dealer Portal. If you’re interested in becoming a PSC dealer, you’re in the right place. Apply here or log in to your account for product info, install and repair resources, and updates straight from our shop.</p>"
+            "text": "<p>Welcome to the PSC Dealer Portal. If you're interested in becoming a PSC dealer, you're in the right place. Apply here or log in to your account for product information, install and repair resources, and updates straight from our shop.</p>"
           }
         }
       },
@@ -54,25 +54,7 @@
           "type": "column",
           "settings": {
             "title": "Real Support from Real People",
-            "text": "<p>When you call, we answer. When you need help, we’re on it. You’re talking to account reps who understand the parts and how they’re used.</p>",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column_2": {
-          "type": "column",
-          "settings": {
-            "title": "Tools That Help You Sell",
-            "text": "<p>Approved dealers get access to co‑op marketing tools like social content, banners, sell sheets, and install videos. Use them as‑is or tweak them to fit how your shop actually operates.</p>",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column_3": {
-          "type": "column",
-          "settings": {
-            "title": "Dealer‑Level Tech Access",
-            "text": "<p>Beyond standard tech support, dealers have access to install notes, setup tips, and dealer‑only technical info that helps avoid mistakes and keeps installs moving.</p>",
+            "text": "<p>When you call, we answer. When you need help, we're here. You'll work with people who know the products and understand how they're used in the real world.</p>",
             "link_label": "",
             "link": ""
           }
@@ -89,8 +71,6 @@
       },
       "block_order": [
         "column_1",
-        "column_2",
-        "column_3",
         "column_4"
       ],
       "settings": {
@@ -157,7 +137,7 @@
         "text": {
           "type": "text",
           "settings": {
-            "text": "<p>We’d love to learn more about your business. Just fill out<br/>the dealer application below to get started — we’ll take a look and follow up<br/>with next steps. We typically review applications within 3–5 business days.<br/>Once we’ve had a chance to go through everything, we’ll reach out to let you<br/>know if you’re approved or if we need more info.</p>"
+            "text": "<p>We'd love to learn more about your business. Fill out the application below to get started.<br/><br/>Our team will review your application and reach out with the next steps. Most applications are reviewed within 3-5 business days.<br/><br/>If we have any questions, we'll be in touch.</p>"
           }
         }
       },
