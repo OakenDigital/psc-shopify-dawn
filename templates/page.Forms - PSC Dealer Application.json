@@ -139,11 +139,18 @@
           "settings": {
             "text": "<p>We'd love to learn more about your business. Fill out the application below to get started.<br/><br/>Our team will review your application and reach out with the next steps. Most applications are reviewed within 3-5 business days.<br/><br/>If we have any questions, we'll be in touch.</p>"
           }
+        },
+        "text_aP3ijq": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Prefer paper forms? Download the dealer application and email it to sales@pscsteering.com.</p>"
+          }
         }
       },
       "block_order": [
         "heading",
-        "text"
+        "text",
+        "text_aP3ijq"
       ],
       "settings": {
         "desktop_content_position": "center",
