@@ -302,6 +302,34 @@
       "type": "_blocks",
       "name": "Image row",
       "settings": {}
+    },
+    "blocks_68Uirc": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_25ef8da_pQFpth": {
+          "type": "ai_gen_block_25ef8da",
+          "settings": {
+            "image_1": "shopify://shop_images/Guy_working.png",
+            "image_2": "shopify://shop_images/johnny.jpg",
+            "image_3": "shopify://shop_images/Guy_Working_3.png",
+            "image_4": "shopify://shop_images/Guy_Working_4.png",
+            "image_5": "shopify://shop_images/Guy_Working_1.png",
+            "max_width": 1600,
+            "spacing": 8,
+            "spacing_mobile": 8,
+            "padding_vertical": 0,
+            "padding_horizontal": 0,
+            "aspect_ratio": 100,
+            "border_radius": 0
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_25ef8da_pQFpth"
+      ],
+      "name": "Image row",
+      "settings": {}
     }
   },
   "order": [
@@ -313,6 +341,7 @@
     "rich_text_66ywkY",
     "forms",
     "17681686994eae9bed",
-    "blocks_JAxrVw"
+    "blocks_JAxrVw",
+    "blocks_68Uirc"
   ]
 }
