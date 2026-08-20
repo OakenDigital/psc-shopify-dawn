@@ -146,7 +146,7 @@
       "name": "t:sections.rich-text.presets.name",
       "settings": {
         "desktop_content_position": "center",
-        "content_alignment": "left",
+        "content_alignment": "center",
         "color_scheme": "scheme-5",
         "full_width": true,
         "padding_top": 40,
