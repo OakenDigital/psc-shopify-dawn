@@ -17,6 +17,58 @@
         "padding_bottom": 28
       }
     },
+    "image_banner_tAVEGK": {
+      "type": "image-banner",
+      "blocks": {
+        "heading_RtPwMV": {
+          "type": "heading",
+          "settings": {
+            "heading": "Careers at PSC",
+            "heading_size": "h1"
+          }
+        },
+        "text_XYfxW4": {
+          "type": "text",
+          "settings": {
+            "text": "BUILD THE PRODUCTS BEHIND PSC STEERING",
+            "text_style": "caption-with-letter-spacing"
+          }
+        },
+        "buttons_QLJtiT": {
+          "type": "buttons",
+          "settings": {
+            "button_layout": "stacked",
+            "button_label_1": "",
+            "button_link_1": "",
+            "button_style_secondary_1": false,
+            "button_color_scheme_1": "",
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false,
+            "button_color_scheme_2": ""
+          }
+        }
+      },
+      "block_order": [
+        "heading_RtPwMV",
+        "text_XYfxW4",
+        "buttons_QLJtiT"
+      ],
+      "name": "t:sections.image-banner.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/Designer_36.png",
+        "image_overlay_opacity": 0,
+        "image_height": "medium",
+        "image_behavior": "none",
+        "desktop_content_position": "bottom-center",
+        "desktop_content_alignment": "center",
+        "show_text_box": true,
+        "color_scheme": "",
+        "stack_images_on_mobile": true,
+        "mobile_content_alignment": "center",
+        "show_text_below": true
+      }
+    },
     "rich_text_F44yVz": {
       "type": "rich-text",
       "blocks": {
@@ -44,6 +96,7 @@
         "heading_eqkhBp",
         "button_QJxdCV"
       ],
+      "disabled": true,
       "name": "t:sections.rich-text.presets.name",
       "settings": {
         "desktop_content_position": "center",
@@ -67,7 +120,7 @@
         "text_QMfKWq": {
           "type": "text",
           "settings": {
-            "text": "<p>At PSC Motorsports, we build steering systems that make trucks, Jeeps, and off-road vehicles handle like they should. We’ve been doing it for decades, and we’re proud of the reputation we’ve earned. If you like solving problems, working with your hands, and being part of a team that cares about doing things right, you’ll fit in here.</p><h2>What We Do</h2><p>We design and build steering components that hold up to real-world abuse—whether that’s towing heavy, crawling rocks, or running wide-open in the desert. Every part that leaves our shop is something we’d trust on our own rigs.</p><h2>Why Work Here</h2><ul><li><strong>Steady Work, Solid Team</strong> – We’re not a giant corporation. You’ll know the people you work with, and they’ll know you.</li><li><strong>Hands-On Every Day</strong> – If you like working with tools and solving problems, you’ll never be bored.</li><li><strong>Pride in the Product</strong> – When you see a PSC sticker on a vehicle, you know it’s built right. You’ll be part of that.</li></ul><h2>Who We’re Looking For</h2><p>People who:</p><ul><li>Show up on time and do what they say they’ll do.</li><li>Take pride in their work.</li><li>Want to learn and get better every day.</li></ul><p>Experience in steering or hydraulics is great, but if you’ve got mechanical skills and the right attitude, we’ll teach you the rest.</p>"
+            "text": "<p>At PSC, we've been designing and building steering systems for decades. From CNC machining and manufacturing to assembly and shipping, every person on the team plays a role in getting quality products out the door.<br/><br/>If you enjoy solving problems, working with your hands, and being part of a team that values doing things right, you'll feel right at home here.</p><h2>What We Do</h2><p>We design and build steering components for trucks, Jeeps, UTVs, race vehicles, and off-road builds. Every day, our team machines parts, assembles products, ships orders, and supports customers across the country.</p><h2>Why Work Here</h2><ul><li><strong>Steady Work, Solid Team</strong><br/>We're not a giant corporation. You'll work alongside people who know your name and appreciate the work you do.</li><li><strong>Hands-On Every Day</strong><br/>Whether you're machining parts, building products, or helping ship orders, you'll stay busy and see the results of your work.</li><li><strong>Build Something Real</strong><br/>The products leaving our facility are trusted by builders, racers, and off-road enthusiasts across the country. You'll be part of the team that makes it happen.</li></ul><h2>Who We’re Looking For</h2><p>People who:</p><ul><li>Show up on time and do what they say they'll do.</li><li>Pay attention to the details.</li><li>Enjoy learning new skills and solving problems.</li><li>Work well with others and aren't afraid to jump in where needed.</li></ul><p>Experience with steering systems or hydraulics is a plus, but mechanical aptitude, a strong work ethic, and a willingness to learn go a long way. We'll help you learn the rest.</p>"
           }
         },
         "button_tiN79B": {
@@ -244,15 +297,22 @@
         "include_margins": true,
         "full_width": true
       }
+    },
+    "blocks_JAxrVw": {
+      "type": "_blocks",
+      "name": "Image row",
+      "settings": {}
     }
   },
   "order": [
     "cd0a8e3a-cfbd-42e7-88bb-b206f7176d40",
+    "image_banner_tAVEGK",
     "rich_text_F44yVz",
     "rich_text_hxAiDD",
     "rich_text_BPAf6t",
     "rich_text_66ywkY",
     "forms",
-    "17681686994eae9bed"
+    "17681686994eae9bed",
+    "blocks_JAxrVw"
   ]
 }
