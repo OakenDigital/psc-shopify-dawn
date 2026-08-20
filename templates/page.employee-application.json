@@ -153,9 +153,8 @@
         },
         "heading_43VqXj": {
           "type": "heading",
-          "disabled": true,
           "settings": {
-            "heading": "Sales Representative",
+            "heading": "<strong>Distribution Specialist</strong>",
             "heading_size": "h2"
           }
         },
