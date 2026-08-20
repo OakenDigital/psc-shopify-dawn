@@ -101,11 +101,27 @@
     "rich_text_F44yVz": {
       "type": "rich-text",
       "blocks": {
-        "heading_eqkhBp": {
+        "heading_WV44eX": {
           "type": "heading",
           "settings": {
             "heading": "Careers at PSC",
-            "heading_size": "h0"
+            "heading_size": "h1"
+          }
+        },
+        "caption_j9xENn": {
+          "type": "caption",
+          "settings": {
+            "caption": "Build the Products Behind PSC Steering",
+            "text_style": "caption-with-letter-spacing",
+            "text_size": "medium"
+          }
+        },
+        "heading_eqkhBp": {
+          "type": "heading",
+          "disabled": true,
+          "settings": {
+            "heading": "Careers at PSC",
+            "heading_size": "h1"
           }
         },
         "button_QJxdCV": {
@@ -122,6 +138,8 @@
         }
       },
       "block_order": [
+        "heading_WV44eX",
+        "caption_j9xENn",
         "heading_eqkhBp",
         "button_QJxdCV"
       ],
