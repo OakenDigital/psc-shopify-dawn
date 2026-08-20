@@ -60,79 +60,6 @@
         "show_text_below": true
       }
     },
-    "dealer_info": {
-      "type": "dealer-information",
-      "blocks": {
-        "content_1": {
-          "type": "content",
-          "settings": {
-            "heading": "Why Join the PSC Dealer Network",
-            "content": "<p><strong>Support That Scales With Your Business                                                        </strong>You already know what to expect from PSC when you call. As a dealer, you also get account‑level support and direct access to the right people, so questions get answered faster when you’re in the middle of a job or working a counter.</p><p><strong>Tools That Help You Sell</strong><br/>Approved dealers get access to co‑op marketing tools like social content, banners, sell sheets, and install videos. Use them as‑is or tweak them to fit how your shop actually operates.</p><p><strong>Dealer‑Level Tech Access</strong><br/>Beyond standard tech support, dealers have access to install notes, setup tips, and dealer‑only technical info that helps avoid mistakes and keeps installs moving.</p><p><strong>Straightforward Dealer Benefits</strong><br/>Depending on fit and volume, approved dealers may qualify for tiered pricing, promotional opportunities, and event support. It’s practical, and it’s based on the relationship — not jumping through hoops.</p>"
-          }
-        },
-        "list_1": {
-          "type": "list",
-          "settings": {
-            "heading": "Not a PSC Dealer Yet? Here’s What to Expect",
-            "description": "When you work with PSC, here’s what comes standard:",
-            "list_items": "Products that are built right and clearly documented|Access to live technical support from people who know the parts|Dealer pricing available with application approval|Support that’s consistent whether you’re building one vehicle or supporting customers all day"
-          }
-        },
-        "tier_1": {
-          "type": "dealer_tier",
-          "disabled": true,
-          "settings": {
-            "tier_name": "Dealer Access",
-            "description": "All new dealer starter accounts based on your business type and purchasing volume:",
-            "features": "Requires initial quote, product lines, and marketing|PSC branded products|Order discounts available|Technical assistance"
-          }
-        },
-        "tier_2": {
-          "type": "dealer_tier",
-          "disabled": true,
-          "settings": {
-            "tier_name": "Master Dealer",
-            "description": "Higher status dealer for more established shop or high eligibility for distributors and bulk sales.",
-            "features": "A 6-60k tier is $10,000 - $30,000 Annual Group Buys|Order multiple discounts|Technical assistance|Dealer network confidentiality"
-          }
-        },
-        "tier_3": {
-          "type": "dealer_tier",
-          "disabled": true,
-          "settings": {
-            "tier_name": "Distributor",
-            "description": "All out direct-to-sell network shops that qualify for distributors and bulk sales.",
-            "features": "Order multiple products|High volume dealer accounts|Technical assistance|Dealer network confidentiality"
-          }
-        },
-        "tier_4": {
-          "type": "dealer_tier",
-          "disabled": true,
-          "settings": {
-            "tier_name": "Master Distributor",
-            "description": "Highest tier-all network shops available for selling via shops that qualify for largest tier distributors.",
-            "features": "Order multiple products|High volume dealer accounts|Technical assistance|Dealer network confidentiality"
-          }
-        }
-      },
-      "block_order": [
-        "content_1",
-        "list_1",
-        "tier_1",
-        "tier_2",
-        "tier_3",
-        "tier_4"
-      ],
-      "settings": {
-        "title": "",
-        "heading_size": "h1",
-        "show_login_box": true,
-        "login_link": "https://account.pscsteering.com/authentication/login?",
-        "color_scheme": "scheme-2",
-        "padding_top": 52,
-        "padding_bottom": 36
-      }
-    },
     "dealer_tiers_explained": {
       "type": "rich-text",
       "blocks": {
@@ -404,7 +331,6 @@
   },
   "order": [
     "image_banner",
-    "dealer_info",
     "dealer_tiers_explained",
     "how_it_works",
     "faqs",
