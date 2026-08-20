@@ -17,6 +17,34 @@
         "padding_bottom": 28
       }
     },
+    "blocks_68Uirc": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_25ef8da_pQFpth": {
+          "type": "ai_gen_block_25ef8da",
+          "settings": {
+            "image_1": "shopify://shop_images/Guy_working.png",
+            "image_2": "shopify://shop_images/johnny.jpg",
+            "image_3": "shopify://shop_images/Guy_Working_3.png",
+            "image_4": "shopify://shop_images/Guy_Working_4.png",
+            "image_5": "shopify://shop_images/Guy_Working_1.png",
+            "max_width": 1600,
+            "spacing": 8,
+            "spacing_mobile": 8,
+            "padding_vertical": 0,
+            "padding_horizontal": 0,
+            "aspect_ratio": 100,
+            "border_radius": 0
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_25ef8da_pQFpth"
+      ],
+      "name": "Image row",
+      "settings": {}
+    },
     "image_banner_tAVEGK": {
       "type": "image-banner",
       "blocks": {
@@ -54,6 +82,7 @@
         "text_XYfxW4",
         "buttons_QLJtiT"
       ],
+      "disabled": true,
       "name": "t:sections.image-banner.presets.name",
       "settings": {
         "image": "shopify://shop_images/Designer_36.png",
@@ -75,7 +104,7 @@
         "heading_eqkhBp": {
           "type": "heading",
           "settings": {
-            "heading": "Careers at PSC Motorsports",
+            "heading": "Careers at PSC",
             "heading_size": "h0"
           }
         },
@@ -96,7 +125,6 @@
         "heading_eqkhBp",
         "button_QJxdCV"
       ],
-      "disabled": true,
       "name": "t:sections.rich-text.presets.name",
       "settings": {
         "desktop_content_position": "center",
@@ -297,51 +325,17 @@
         "include_margins": true,
         "full_width": true
       }
-    },
-    "blocks_JAxrVw": {
-      "type": "_blocks",
-      "name": "Image row",
-      "settings": {}
-    },
-    "blocks_68Uirc": {
-      "type": "_blocks",
-      "blocks": {
-        "ai_gen_block_25ef8da_pQFpth": {
-          "type": "ai_gen_block_25ef8da",
-          "settings": {
-            "image_1": "shopify://shop_images/Guy_working.png",
-            "image_2": "shopify://shop_images/johnny.jpg",
-            "image_3": "shopify://shop_images/Guy_Working_3.png",
-            "image_4": "shopify://shop_images/Guy_Working_4.png",
-            "image_5": "shopify://shop_images/Guy_Working_1.png",
-            "max_width": 1600,
-            "spacing": 8,
-            "spacing_mobile": 8,
-            "padding_vertical": 0,
-            "padding_horizontal": 0,
-            "aspect_ratio": 100,
-            "border_radius": 0
-          },
-          "blocks": {}
-        }
-      },
-      "block_order": [
-        "ai_gen_block_25ef8da_pQFpth"
-      ],
-      "name": "Image row",
-      "settings": {}
     }
   },
   "order": [
     "cd0a8e3a-cfbd-42e7-88bb-b206f7176d40",
+    "blocks_68Uirc",
     "image_banner_tAVEGK",
     "rich_text_F44yVz",
     "rich_text_hxAiDD",
     "rich_text_BPAf6t",
     "rich_text_66ywkY",
     "forms",
-    "17681686994eae9bed",
-    "blocks_JAxrVw",
-    "blocks_68Uirc"
+    "17681686994eae9bed"
   ]
 }
