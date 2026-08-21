@@ -386,12 +386,24 @@
       document.querySelectorAll('shopify-forms-embed').forEach(function(embed) {
         var root = embed.shadowRoot;
         if (!root) return;
+
+        // Style dropdown text
         root.querySelectorAll('[class*="selectToggleText"]').forEach(function(el) {
           el.style.setProperty('color', '#999999', 'important');
         });
+
+        // Style phone prefix/dial code
         root.querySelectorAll('[class*="phoneInputPrefix"], [class*="phonePrefix"], [class*="dialCode"], [class*="countryCode"]').forEach(function(el) {
           el.style.setProperty('color', '#999999', 'important');
         });
+
+        // Inject placeholder styles into shadow root
+        if (!root.querySelector('style[data-custom]')) {
+          var style = document.createElement('style');
+          style.setAttribute('data-custom', 'true');
+          style.textContent = 'input::placeholder { color: #999999 !important; }';
+          root.appendChild(style);
+        }
       });
     }
 
@@ -406,6 +418,7 @@
     observer.observe(document.body, { childList: true, subtree: true });
   })();
 </script>
+
 
 
 
