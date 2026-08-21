@@ -379,6 +379,23 @@
   {% if template == 'page' %}
   {{ 'faq-toggle.js' | asset_url | script_tag }}
 {% endif %}
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    function styleFormDropdowns() {
+      document.querySelectorAll('[class*="selectToggleText"]').forEach(function(el) {
+        el.style.color = '#666666';
+      });
+    }
+    styleFormDropdowns();
+    // Re-run after any dynamic updates
+    var observer = new MutationObserver(styleFormDropdowns);
+    observer.observe(document.body, { childList: true, subtree: true });
+  });
+</script>
+
+
+
   </body>
 </html>
 
