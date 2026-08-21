@@ -516,7 +516,7 @@
   },
   "platform_customizations": {
     "custom_css": [
-      "#shipping_address_phone,input#shipping_address_phone,input[name=\"shipping_address_phone\"],input[data-testid=\"field-shipping_address_phone\"],._formPhoneInputField_piv1u_17 {color: #9ca3af !important; -webkit-text-fill-color: #9ca3af !important; opacity: 1 !important;}"
+      "div._formPhoneInputContainer_piv1u_6 input,div._formFieldContainer_1mxs1_5 input[type=\"tel\"],input._formPhoneInputField_piv1u_17 {color: #9ca3af !important; -webkit-text-fill-color: #9ca3af !important;}"
     ]
   }
 }
