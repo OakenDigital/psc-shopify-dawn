@@ -516,7 +516,7 @@
   },
   "platform_customizations": {
     "custom_css": [
-      "/* Make the phone number prefix (+1) match the other field text color */#shipping_address_phone,input[name=\"shipping_address_phone\"],input[data-testid=\"field-shipping_address_phone\"] {color: #9ca3af !important; /* ← change this to the exact gray used by City/State/ZIP */}"
+      "#shipping_address_phone,input#shipping_address_phone,input[name=\"shipping_address_phone\"],input[data-testid=\"field-shipping_address_phone\"],._formPhoneInputField_piv1u_17 {color: #9ca3af !important; -webkit-text-fill-color: #9ca3af !important; opacity: 1 !important;}"
     ]
   }
 }
