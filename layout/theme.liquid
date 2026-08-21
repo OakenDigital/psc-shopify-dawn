@@ -381,18 +381,27 @@
 {% endif %}
 
 <script>
-  document.addEventListener('DOMContentLoaded', function() {
+  (function() {
     function styleFormDropdowns() {
       document.querySelectorAll('[class*="selectToggleText"]').forEach(function(el) {
-        el.style.color = '#666666';
+        el.style.setProperty('color', '#666666', 'important');
       });
     }
-    styleFormDropdowns();
-    // Re-run after any dynamic updates
+
+    // Keep trying until elements appear
+    var attempts = 0;
+    var interval = setInterval(function() {
+      styleFormDropdowns();
+      attempts++;
+      if (attempts > 20) clearInterval(interval);
+    }, 500);
+
+    // Also watch for DOM changes
     var observer = new MutationObserver(styleFormDropdowns);
     observer.observe(document.body, { childList: true, subtree: true });
-  });
+  })();
 </script>
+
 
 
 
