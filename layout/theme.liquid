@@ -389,6 +389,9 @@
         root.querySelectorAll('[class*="selectToggleText"]').forEach(function(el) {
           el.style.setProperty('color', '#999999', 'important');
         });
+        root.querySelectorAll('[class*="phone-country-selector"] [class*="selectToggleText"], [class*="phoneCountryCode"], [class*="phonePrefix"]').forEach(function(el) {
+          el.style.setProperty('color', '#999999', 'important');
+        });
       });
     }
 
@@ -403,6 +406,7 @@
     observer.observe(document.body, { childList: true, subtree: true });
   })();
 </script>
+
 
 
 
