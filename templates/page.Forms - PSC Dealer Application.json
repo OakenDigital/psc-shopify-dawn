@@ -168,7 +168,7 @@
           "type": "shopify://apps/forms/blocks/inline/8744a304-fcb1-4347-b211-bb6b4759a76a",
           "settings": {
             "form_id": "849307",
-            "text_color": "#666666",
+            "text_color": "#999999",
             "button_background_color": "#202020",
             "button_label_color": "#ffffff",
             "links_color": "#1878b9",
