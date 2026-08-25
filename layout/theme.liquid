@@ -389,18 +389,19 @@
 
         // 1. Style dropdown text
         root.querySelectorAll('[class*="selectToggleText"]').forEach(function(el) {
-          el.style.setProperty('color', '#666666', 'important');
+          el.style.setProperty('color', '#555555
+            ', 'important');
         });
 
         // 2. Style phone prefix / dial code (if it exists as a separate element)
         root.querySelectorAll('[class*="phoneInputPrefix"], [class*="phonePrefix"], [class*="dialCode"], [class*="countryCode"]').forEach(function(el) {
-          el.style.setProperty('color', '#666666', 'important');
+          el.style.setProperty('color', '#555555', 'important');
         });
 
         // 3. Style the phone input itself (the +1)
         root.querySelectorAll('#shipping_address_phone, input[name="shipping_address_phone"], input[data-testid="field-shipping_address_phone"], [class*="formPhoneInputField"]').forEach(function(el) {
-          el.style.setProperty('color', '#666666', 'important');
-          el.style.setProperty('-webkit-text-fill-color', '#666666', 'important');
+          el.style.setProperty('color', '#555555', 'important');
+          el.style.setProperty('-webkit-text-fill-color', '#555555', 'important');
         });
 
         // 4. Inject placeholder styles (only once)
@@ -410,15 +411,15 @@
           style.textContent = `
             input::placeholder,
             textarea::placeholder {
-              color: #666666 !important;
+              color: #555555 !important;
               opacity: 1 !important;
             }
             #shipping_address_phone,
             input[name="shipping_address_phone"],
             input[data-testid="field-shipping_address_phone"],
             [class*="formPhoneInputField"] {
-              color: #666666 !important;
-              -webkit-text-fill-color: #666666 !important;
+              color: #555555 !important;
+              -webkit-text-fill-color: #555555 !important;
             }
           `;
           root.appendChild(style);
