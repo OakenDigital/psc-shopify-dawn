@@ -272,7 +272,7 @@
         "custom_liquid": "<p style=\"text-align:center; font-size:0.6em; color:#666666;\">\n  View our <a href=\"/policies/privacy-policy\">Privacy Policy</a> and <a href=\"/policies/terms-of-service\">Terms of Service</a>.\n</p>",
         "color_scheme": "",
         "padding_top": 0,
-        "padding_bottom": 0
+        "padding_bottom": 24
       }
     }
   },
