@@ -12,5 +12,56 @@
     "market": "b2b"
   },
   "parent": "page.dealer-application-succes.json",
-  "sections": {}
+  "sections": {
+    "dealer_application": {
+      "disabled": true,
+      "settings": {},
+      "blocks": {}
+    },
+    "faqs": {
+      "disabled": true,
+      "settings": {},
+      "blocks": {}
+    },
+    "newsletter": {
+      "disabled": true,
+      "settings": {},
+      "blocks": {}
+    },
+    "related_content": {
+      "disabled": true,
+      "settings": {},
+      "blocks": {}
+    },
+    "how_it_works": {
+      "disabled": true,
+      "settings": {},
+      "blocks": {}
+    },
+    "dealer_tiers_explained": {
+      "disabled": false,
+      "settings": {
+        "full_width": true
+      },
+      "blocks": {
+        "heading": {
+          "settings": {
+            "heading": "<strong>Thanks for applying to become a PSC dealer!</strong>",
+            "heading_size": "hxl"
+          }
+        },
+        "text": {
+          "disabled": false,
+          "settings": {
+            "text": "<p></p>{{ page.content }}"
+          }
+        }
+      }
+    },
+    "image_banner": {
+      "disabled": true,
+      "settings": {},
+      "blocks": {}
+    }
+  }
 }
