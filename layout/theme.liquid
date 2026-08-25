@@ -476,7 +476,7 @@
           [class*="dialCode"],
           [class*="countryCode"],
           [class*="PhoneInput"] {
-            color: #d81f1f !important;
+            color: #666666 !important;
           }
 
           /* 3. Actual typed text in phone field */
@@ -485,8 +485,8 @@
           input[data-testid*="phone"],
           [class*="formPhoneInputField"],
           input[type="tel"] {
-            color: #d81f1f !important;
-            -webkit-text-fill-color: #d81f1f !important;
+            color: #666666 !important;
+            -webkit-text-fill-color: #666666 !important;
           }
 
           /* 4. Classic placeholders (in case any fields still use them) */
@@ -496,7 +496,7 @@
           textarea::-webkit-input-placeholder,
           input::-moz-placeholder,
           textarea::-moz-placeholder {
-            color: #d81f1f !important;
+            color: #666666 !important;
             opacity: 1 !important;
           }
 
@@ -515,16 +515,16 @@
           [class*="FormLabel"],
           [class*="fieldLabel"],
           [class*="FieldLabel"] {
-            color: #d81f1f !important;
+            color: #666666 !important;
           }
 
           /* Extra safety – many Shopify Forms versions expose these CSS variables */
           :host,
           form,
           [class*="form"] {
-            --form-placeholder-color: #d81f1f !important;
-            --forms-placeholder-color: #d81f1f !important;
-            --placeholder-color: #d81f1f !important;
+            --form-placeholder-color: #666666 !important;
+            --forms-placeholder-color: #666666 !important;
+            --placeholder-color: #666666 !important;
           }
         `;
       });
