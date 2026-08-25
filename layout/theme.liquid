@@ -380,7 +380,7 @@
   {{ 'faq-toggle.js' | asset_url | script_tag }}
 {% endif %}
 
-<script>
+{% comment %} <script>
   (function() {
     function styleShopifyForms() {
       document.querySelectorAll('shopify-forms-embed').forEach(function(embed) {
@@ -440,9 +440,75 @@
     var observer = new MutationObserver(styleShopifyForms);
     observer.observe(document.body, { childList: true, subtree: true });
   })();
+</script> {% endcomment %}
+
+<script>
+  (function() {
+    function styleShopifyForms() {
+      document.querySelectorAll('shopify-forms-embed').forEach(function(embed) {
+        var root = embed.shadowRoot;
+        if (!root) return;
+
+        // Inject (or update) a single style block — cleaner than individual setProperty calls
+        var style = root.querySelector('style[data-custom-forms]');
+        if (!style) {
+          style = document.createElement('style');
+          style.setAttribute('data-custom-forms', 'true');
+          root.appendChild(style);
+        }
+
+        style.textContent = `
+          /* Dropdown / select toggle text */
+          [class*="selectToggleText"],
+          [class*="SelectToggle"],
+          [class*="select-toggle"] {
+            color: #d81f1f !important;
+          }
+
+          /* Phone country code / prefix / dial code */
+          [class*="phoneInputPrefix"],
+          [class*="phonePrefix"],
+          [class*="dialCode"],
+          [class*="countryCode"],
+          [class*="PhoneInput"],
+          [class*="phone-input"] {
+            color: #d81f1f !important;
+          }
+
+          /* Phone input field itself */
+          #shipping_address_phone,
+          input[name="shipping_address_phone"],
+          input[data-testid*="phone"],
+          [class*="formPhoneInputField"],
+          [class*="PhoneInputField"],
+          input[type="tel"] {
+            color: #d81f1f !important;
+            -webkit-text-fill-color: #d81f1f !important;
+          }
+
+          /* Placeholders */
+          input::placeholder,
+          textarea::placeholder {
+            color: #d81f1f !important;
+            opacity: 1 !important;
+          }
+        `;
+      });
+    }
+
+    // Run repeatedly while the form is loading
+    var attempts = 0;
+    var interval = setInterval(function() {
+      styleShopifyForms();
+      attempts++;
+      if (attempts > 30) clearInterval(interval);
+    }, 300);
+
+    // Keep watching for late-loaded embeds
+    var observer = new MutationObserver(styleShopifyForms);
+    observer.observe(document.body, { childList: true, subtree: true });
+  })();
 </script>
-
-
 
 
 
