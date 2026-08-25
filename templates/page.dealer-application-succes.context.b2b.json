@@ -22,15 +22,15 @@
         "title": "Collections",
         "description": "",
         "heading_size": "h1",
-        "header-a95b5696457a4b6ebeb9363d219a8ff0": null,
+        "header-f8c221231366629d9dd43fcb3e012d7b": null,
         "image_ratio": "square",
         "columns_desktop": 4,
         "color_scheme": "",
         "show_view_all": true,
-        "header-a0d3fcac29c37eb4f6ea1b7d52def5a8": null,
+        "header-4fe796e2f5142f76b751d88c89767c99": null,
         "columns_mobile": "1",
         "swipe_on_mobile": true,
-        "header-e3dc69002e91a4ac1166a325831928a0": null,
+        "header-b0a19321ec9afd29c3aa5d3954f9669c": null,
         "padding_top": 36,
         "padding_bottom": 36
       },
@@ -103,9 +103,44 @@
         "featured_collection_x3TL7"
       ],
       "name": "t:sections.collection-list.presets.name"
+    },
+    "rich_text_y8itqd": {
+      "type": "rich-text",
+      "disabled": false,
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-1",
+        "full_width": true,
+        "header-6caded1ce461831d75f86c9597dd3279": null,
+        "padding_top": 40,
+        "padding_bottom": 20
+      },
+      "blocks": {
+        "heading_9VL8r3": {
+          "type": "heading",
+          "disabled": false,
+          "settings": {
+            "heading": "{{ page.title }}",
+            "heading_size": "h0"
+          }
+        },
+        "text_DMfFJq": {
+          "type": "text",
+          "disabled": false,
+          "settings": {
+            "text": "<p></p>{{ page.content }}"
+          }
+        }
+      },
+      "block_order": [
+        "heading_9VL8r3",
+        "text_DMfFJq"
+      ]
     }
   },
   "order": [
+    "rich_text_y8itqd",
     "collection_list_BcPwR"
   ]
 }
