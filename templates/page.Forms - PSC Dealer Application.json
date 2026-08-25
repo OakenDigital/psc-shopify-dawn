@@ -264,6 +264,16 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "custom_liquid_HekJ9Q": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<p style=\"text-align:center; font-size:0.6em; color:#666666;\">\n  View our <a href=\"/policies/privacy-policy\">Privacy Policy</a> and <a href=\"/policies/terms-of-service\">Terms of Service</a>.\n</p>",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
     }
   },
   "order": [
@@ -273,6 +283,7 @@
     "already_dealer_section",
     "dealer_application_heading",
     "forms",
-    "faqs"
+    "faqs",
+    "custom_liquid_HekJ9Q"
   ]
 }
