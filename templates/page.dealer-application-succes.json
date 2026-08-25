@@ -9,78 +9,26 @@
  */
 {
   "sections": {
-    "image_banner": {
-      "type": "image-banner",
-      "blocks": {
-        "heading": {
-          "type": "heading",
-          "settings": {
-            "heading": "PSC for Business: Support Built for Shops That Get the Work Done",
-            "heading_size": "h1"
-          }
-        },
-        "text": {
-          "type": "text",
-          "settings": {
-            "text": "PSC for Business is where our dealers and shop partners get the support, tools, and info they need to keep jobs moving and customers happy. Whether you’re a parts counter, a full service shop, or somewhere in between, this is where we back you up.",
-            "text_style": "body"
-          }
-        },
-        "buttons": {
-          "type": "buttons",
-          "settings": {
-            "button_layout": "inline",
-            "button_label_1": "Sign Up",
-            "button_link_1": "#dealer-application-form",
-            "button_style_secondary_1": false,
-            "button_color_scheme_1": "",
-            "button_label_2": "Log In",
-            "button_link_2": "",
-            "button_style_secondary_2": true,
-            "button_color_scheme_2": ""
-          }
-        }
-      },
-      "block_order": [
-        "heading",
-        "text",
-        "buttons"
-      ],
-      "settings": {
-        "image": "shopify://shop_images/Designer_56.png",
-        "image_overlay_opacity": 40,
-        "image_height": "medium",
-        "image_behavior": "none",
-        "desktop_content_position": "middle-center",
-        "desktop_content_alignment": "center",
-        "show_text_box": false,
-        "color_scheme": "scheme-1",
-        "stack_images_on_mobile": true,
-        "mobile_content_alignment": "center",
-        "show_text_below": true
-      }
-    },
-    "dealer_tiers_explained": {
+    "rich_text_GJmjTT": {
       "type": "rich-text",
       "blocks": {
-        "heading": {
+        "heading_eEPkBN": {
           "type": "heading",
           "settings": {
-            "heading": "How Dealer Accounts Work",
-            "heading_size": "h1"
+            "heading": "{{ page.title }}",
+            "heading_size": "h0"
           }
         },
-        "text": {
+        "text_yPRnKb": {
           "type": "text",
-          "disabled": true,
           "settings": {
-            "text": "<p>PSC uses Shopify B2B tools to manage dealer accounts. Here's what that means for you:</p>"
+            "text": "<p></p>{{ page.content }}"
           }
         }
       },
       "block_order": [
-        "heading",
-        "text"
+        "heading_eEPkBN",
+        "text_yPRnKb"
       ],
       "settings": {
         "desktop_content_position": "center",
@@ -91,251 +39,88 @@
         "padding_bottom": 20
       }
     },
-    "how_it_works": {
-      "type": "multicolumn",
+    "collection_list_WD637": {
+      "type": "collection-list",
       "blocks": {
-        "step_1": {
-          "type": "column",
+        "featured_collection_7mq8Er": {
+          "type": "featured_collection",
           "settings": {
-            "title": "Create an Account",
-            "text": "<p>Create your PSC account and submit your dealer application with your business info.</p>",
-            "link_label": "Create Account",
-            "link": ""
+            "collection": "power-steering-pump-kits"
           }
         },
-        "step_2": {
-          "type": "column",
+        "featured_collection_WpawUd": {
+          "type": "featured_collection",
           "settings": {
-            "title": "Apply to Become a Dealer",
-            "text": "<p>Complete the dealer application.<br/>Dealer pricing, inventory tools, and ordering are available once approved.</p>",
-            "link_label": "Start Dealer Application",
-            "link": ""
+            "collection": "cylinder-assist-kits"
           }
         },
-        "step_3": {
-          "type": "column",
+        "featured_collection_gkicRJ": {
+          "type": "featured_collection",
           "settings": {
-            "title": "Complete Dealer Setup",
-            "text": "<p>After applying, access the Dealer Portal to review pricing details and required info.<br/>You can also submit dealer leads or quote builds here.</p>",
-            "link_label": "View To Dashboard",
-            "link": ""
+            "collection": "ehps-kits-electric-hydraulic-power-steering"
           }
         },
-        "step_4": {
-          "type": "column",
+        "featured_collection_Kw6wYR": {
+          "type": "featured_collection",
           "settings": {
-            "title": "You're In!",
-            "text": "<p>Once approved, everything runs through your PSC Dealer Dashboard.<br/>Start placing orders, submitting quotes, and buying at dealer pricing.</p>",
-            "link_label": "",
-            "link": ""
+            "collection": "axle-kits"
+          }
+        },
+        "featured_collection_tiCRqG": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "adventure-steering-kits"
+          }
+        },
+        "featured_collection_z47Ciw": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "big-bore-xd-steering-gear-kits"
+          }
+        },
+        "featured_collection_H6TBLD": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "dynamic-damping-stabilizer-dds"
+          }
+        },
+        "featured_collection_pfmUdC": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "hydraulic-components"
           }
         }
       },
       "block_order": [
-        "step_1",
-        "step_2",
-        "step_3",
-        "step_4"
+        "featured_collection_7mq8Er",
+        "featured_collection_WpawUd",
+        "featured_collection_gkicRJ",
+        "featured_collection_Kw6wYR",
+        "featured_collection_tiCRqG",
+        "featured_collection_z47Ciw",
+        "featured_collection_H6TBLD",
+        "featured_collection_pfmUdC"
       ],
+      "name": "t:sections.collection-list.presets.name",
       "settings": {
-        "title": "",
+        "eyebrow_text": "",
+        "eyebrow_color": "#dc2626",
+        "title": "Collections",
+        "description": "",
         "heading_size": "h1",
-        "image_width": "full",
-        "image_ratio": "adapt",
-        "button_label": "",
-        "button_link": "",
+        "image_ratio": "square",
         "columns_desktop": 4,
-        "column_alignment": "center",
-        "background_style": "primary",
-        "color_scheme": "scheme-1",
+        "color_scheme": "",
+        "show_view_all": true,
         "columns_mobile": "1",
-        "swipe_on_mobile": false,
-        "padding_top": 20,
-        "padding_bottom": 36
-      }
-    },
-    "faqs": {
-      "type": "collapsible-content",
-      "blocks": {
-        "faq_1": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "How do I bleed my power steering system?",
-            "row_content": "<p>Review our bleeding instructions here: <a href=\"#\" title=\"PSC Power Steering Bleeding Instructions\">PSC Power Steering Bleeding Instructions</a></p>",
-            "page": "",
-            "custom_liquid": "",
-            "metafield_namespace": "",
-            "metafield_key": "",
-            "file_link_text": "Download File"
-          }
-        },
-        "faq_2": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "What is the fix level on a PSC Remote Fluid Reservoir?",
-            "row_content": "<p>Add your content here...</p>",
-            "page": "",
-            "custom_liquid": "",
-            "metafield_namespace": "",
-            "metafield_key": "",
-            "file_link_text": "Download File"
-          }
-        },
-        "faq_3": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "Where does this rubber hose on the top of my Remote Fluid Reservoir connect?",
-            "row_content": "<p>Add your content here...</p>",
-            "page": "",
-            "custom_liquid": "",
-            "metafield_namespace": "",
-            "metafield_key": "",
-            "file_link_text": "Download File"
-          }
-        },
-        "faq_4": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "What does JIC mean? What is the difference between JIC and AN?",
-            "row_content": "<p>Add your content here...</p>",
-            "page": "",
-            "custom_liquid": "",
-            "metafield_namespace": "",
-            "metafield_key": "",
-            "file_link_text": "Download File"
-          }
-        }
-      },
-      "block_order": [
-        "faq_1",
-        "faq_2",
-        "faq_3",
-        "faq_4"
-      ],
-      "disabled": true,
-      "settings": {
-        "caption": "",
-        "heading": "Frequently Asked Questions",
-        "heading_size": "h1",
-        "heading_alignment": "center",
-        "layout": "none",
-        "container_color_scheme": "scheme-2",
-        "color_scheme": "scheme-1",
-        "open_first_collapsible_row": false,
-        "full_width_content": false,
-        "image_ratio": "adapt",
-        "desktop_layout": "image_second",
+        "swipe_on_mobile": true,
         "padding_top": 36,
         "padding_bottom": 36
-      }
-    },
-    "related_content": {
-      "type": "multicolumn",
-      "blocks": {
-        "content_1": {
-          "type": "column",
-          "settings": {
-            "title": "Video Title",
-            "text": "<p>Explore the 392 HEMI Steering Kit. Built for reliability and performance, this kit enhances steering for a variety of vehicles. Check availability and read customer reviews.</p>",
-            "link_label": "Button →",
-            "link": ""
-          }
-        },
-        "content_2": {
-          "type": "column",
-          "settings": {
-            "title": "Video Title",
-            "text": "<p>Explore the 392 HEMI Steering Kit. Built for reliability and performance, this kit enhances steering for a variety of vehicles. Check availability and read customer reviews.</p>",
-            "link_label": "Button →",
-            "link": ""
-          }
-        },
-        "content_3": {
-          "type": "column",
-          "settings": {
-            "title": "Resource Title",
-            "text": "<p>PSC has a full team of expert technicians available to service and maintain your PSC products. We're committed to helping our customers get the most from their investment in the world's best performance power steering products.</p>",
-            "link_label": "Button →",
-            "link": ""
-          }
-        }
-      },
-      "block_order": [
-        "content_1",
-        "content_2",
-        "content_3"
-      ],
-      "disabled": true,
-      "settings": {
-        "title": "More From Our Tech Blog",
-        "heading_size": "h1",
-        "image_width": "full",
-        "image_ratio": "adapt",
-        "button_label": "View All",
-        "button_link": "",
-        "columns_desktop": 3,
-        "column_alignment": "left",
-        "background_style": "primary",
-        "color_scheme": "scheme-3",
-        "columns_mobile": "1",
-        "swipe_on_mobile": false,
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
-    "dealer_application": {
-      "type": "dealer-application-form",
-      "settings": {
-        "title": "PSC Dealer Application",
-        "subtitle": "Welcome to the PSC Dealer Portal. This is your one-stop-shop for product lines, install guides, repair instructions, exclusive updates straight from the shop floor.",
-        "email": "support@pscmotorsports.com",
-        "color_scheme": "scheme-1",
-        "padding_top": 52,
-        "padding_bottom": 52
-      }
-    },
-    "newsletter": {
-      "type": "newsletter",
-      "blocks": {
-        "heading": {
-          "type": "heading",
-          "settings": {
-            "heading": "Subscribe to our emails",
-            "heading_size": "h1"
-          }
-        },
-        "paragraph": {
-          "type": "paragraph",
-          "settings": {
-            "text": "<p>We're all about making your life easier (and your steering better). Tell us what you want to hear about, from offers, tech tips, and how you want it delivered. No spam. No nonsense—just the good stuff.</p>"
-          }
-        },
-        "email_form": {
-          "type": "email_form",
-          "settings": {}
-        }
-      },
-      "block_order": [
-        "heading",
-        "paragraph",
-        "email_form"
-      ],
-      "disabled": true,
-      "settings": {
-        "color_scheme": "scheme-1",
-        "full_width": true,
-        "padding_top": 40,
-        "padding_bottom": 52
       }
     }
   },
   "order": [
-    "image_banner",
-    "dealer_tiers_explained",
-    "how_it_works",
-    "faqs",
-    "related_content",
-    "dealer_application",
-    "newsletter"
+    "rich_text_GJmjTT",
+    "collection_list_WD637"
   ]
 }
