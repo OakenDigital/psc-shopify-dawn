@@ -13,11 +13,6 @@
   },
   "parent": "page.dealer-application-succes.json",
   "sections": {
-    "image_banner": {
-      "disabled": true,
-      "settings": {},
-      "blocks": {}
-    },
     "dealer_tiers_explained": {
       "disabled": false,
       "settings": {
@@ -43,25 +38,101 @@
       "settings": {},
       "blocks": {}
     },
-    "faqs": {
-      "disabled": true,
-      "settings": {},
-      "blocks": {}
-    },
-    "related_content": {
-      "disabled": true,
-      "settings": {},
-      "blocks": {}
-    },
-    "dealer_application": {
-      "disabled": true,
-      "settings": {},
-      "blocks": {}
-    },
-    "newsletter": {
-      "disabled": true,
-      "settings": {},
-      "blocks": {}
+    "collection_list_BcPwR": {
+      "type": "collection-list",
+      "disabled": false,
+      "settings": {
+        "eyebrow_text": "",
+        "eyebrow_color": "#dc2626",
+        "title": "Collections",
+        "description": "",
+        "heading_size": "h1",
+        "header-d6320faae365ebe320af937535bad9c0": null,
+        "image_ratio": "square",
+        "columns_desktop": 4,
+        "color_scheme": "",
+        "show_view_all": true,
+        "header-d50618102611025a7bfc5463f8316dec": null,
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "header-34272c6bcfed2d48e3114cb1306a0f5a": null,
+        "padding_top": 36,
+        "padding_bottom": 36
+      },
+      "blocks": {
+        "featured_collection_tKVNM": {
+          "type": "featured_collection",
+          "disabled": false,
+          "settings": {
+            "collection": "power-steering-pump-kits"
+          }
+        },
+        "featured_collection_f998H": {
+          "type": "featured_collection",
+          "disabled": false,
+          "settings": {
+            "collection": "cylinder-assist-kits"
+          }
+        },
+        "featured_collection_eNnXm": {
+          "type": "featured_collection",
+          "disabled": false,
+          "settings": {
+            "collection": "ehps-kits-electric-hydraulic-power-steering"
+          }
+        },
+        "featured_collection_EDV8z": {
+          "type": "featured_collection",
+          "disabled": false,
+          "settings": {
+            "collection": "axle-kits"
+          }
+        },
+        "featured_collection_AR96t": {
+          "type": "featured_collection",
+          "disabled": false,
+          "settings": {
+            "collection": "adventure-steering-kits"
+          }
+        },
+        "featured_collection_ewXpT": {
+          "type": "featured_collection",
+          "disabled": false,
+          "settings": {
+            "collection": "big-bore-xd-steering-gear-kits"
+          }
+        },
+        "featured_collection_xqCMW": {
+          "type": "featured_collection",
+          "disabled": false,
+          "settings": {
+            "collection": "dynamic-damping-stabilizer-dds"
+          }
+        },
+        "featured_collection_x3TL7": {
+          "type": "featured_collection",
+          "disabled": false,
+          "settings": {
+            "collection": "hydraulic-components"
+          }
+        }
+      },
+      "block_order": [
+        "featured_collection_tKVNM",
+        "featured_collection_f998H",
+        "featured_collection_eNnXm",
+        "featured_collection_EDV8z",
+        "featured_collection_AR96t",
+        "featured_collection_ewXpT",
+        "featured_collection_xqCMW",
+        "featured_collection_x3TL7"
+      ],
+      "name": "t:sections.collection-list.presets.name"
     }
-  }
+  },
+  "order": [
+    "dealer_tiers_explained",
+    "how_it_works",
+    "collection_list_BcPwR"
+  ]
 }
