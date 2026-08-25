@@ -13,27 +13,7 @@
   },
   "parent": "page.dealer-application-succes.json",
   "sections": {
-    "dealer_application": {
-      "disabled": true,
-      "settings": {},
-      "blocks": {}
-    },
-    "faqs": {
-      "disabled": true,
-      "settings": {},
-      "blocks": {}
-    },
-    "newsletter": {
-      "disabled": true,
-      "settings": {},
-      "blocks": {}
-    },
-    "related_content": {
-      "disabled": true,
-      "settings": {},
-      "blocks": {}
-    },
-    "how_it_works": {
+    "image_banner": {
       "disabled": true,
       "settings": {},
       "blocks": {}
@@ -46,8 +26,8 @@
       "blocks": {
         "heading": {
           "settings": {
-            "heading": "<strong>Thanks for applying to become a PSC dealer!</strong>",
-            "heading_size": "hxl"
+            "heading": "{{ page.title }}",
+            "heading_size": "h0"
           }
         },
         "text": {
@@ -58,7 +38,27 @@
         }
       }
     },
-    "image_banner": {
+    "how_it_works": {
+      "disabled": true,
+      "settings": {},
+      "blocks": {}
+    },
+    "faqs": {
+      "disabled": true,
+      "settings": {},
+      "blocks": {}
+    },
+    "related_content": {
+      "disabled": true,
+      "settings": {},
+      "blocks": {}
+    },
+    "dealer_application": {
+      "disabled": true,
+      "settings": {},
+      "blocks": {}
+    },
+    "newsletter": {
       "disabled": true,
       "settings": {},
       "blocks": {}
