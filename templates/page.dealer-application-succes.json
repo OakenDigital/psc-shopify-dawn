@@ -42,6 +42,12 @@
     "collection_list_WD637": {
       "type": "collection-list",
       "blocks": {
+        "featured_collection_H6TBLD": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "dynamic-damping-stabilizer-dds"
+          }
+        },
         "featured_collection_7mq8Er": {
           "type": "featured_collection",
           "settings": {
@@ -78,12 +84,6 @@
             "collection": "big-bore-xd-steering-gear-kits"
           }
         },
-        "featured_collection_H6TBLD": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "dynamic-damping-stabilizer-dds"
-          }
-        },
         "featured_collection_pfmUdC": {
           "type": "featured_collection",
           "settings": {
@@ -92,13 +92,13 @@
         }
       },
       "block_order": [
+        "featured_collection_H6TBLD",
         "featured_collection_7mq8Er",
         "featured_collection_WpawUd",
         "featured_collection_gkicRJ",
         "featured_collection_Kw6wYR",
         "featured_collection_tiCRqG",
         "featured_collection_z47Ciw",
-        "featured_collection_H6TBLD",
         "featured_collection_pfmUdC"
       ],
       "name": "t:sections.collection-list.presets.name",
