@@ -13,6 +13,40 @@
   },
   "parent": "page.dealer-application-succes.json",
   "sections": {
+    "rich_text_y8itqd": {
+      "type": "rich-text",
+      "disabled": false,
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-1",
+        "full_width": true,
+        "header-15d8cea8e7b0746c351c968334ec392e": null,
+        "padding_top": 40,
+        "padding_bottom": 20
+      },
+      "blocks": {
+        "heading_9VL8r3": {
+          "type": "heading",
+          "disabled": false,
+          "settings": {
+            "heading": "{{ page.title }}",
+            "heading_size": "h0"
+          }
+        },
+        "text_DMfFJq": {
+          "type": "text",
+          "disabled": false,
+          "settings": {
+            "text": "<p></p>{{ page.content }}"
+          }
+        }
+      },
+      "block_order": [
+        "heading_9VL8r3",
+        "text_DMfFJq"
+      ]
+    },
     "collection_list_BcPwR": {
       "type": "collection-list",
       "disabled": false,
@@ -22,15 +56,15 @@
         "title": "Collections",
         "description": "",
         "heading_size": "h1",
-        "header-f8c221231366629d9dd43fcb3e012d7b": null,
+        "header-175aacb0308ff28151f9b03ee2cedec4": null,
         "image_ratio": "square",
         "columns_desktop": 4,
         "color_scheme": "",
         "show_view_all": true,
-        "header-4fe796e2f5142f76b751d88c89767c99": null,
+        "header-01f16a418ad5e9f2ed71dbcc8f7ee5a9": null,
         "columns_mobile": "1",
         "swipe_on_mobile": true,
-        "header-b0a19321ec9afd29c3aa5d3954f9669c": null,
+        "header-84f1d6cd5c34110d07e1b1387cdbb42d": null,
         "padding_top": 36,
         "padding_bottom": 36
       },
@@ -104,43 +138,48 @@
       ],
       "name": "t:sections.collection-list.presets.name"
     },
-    "rich_text_y8itqd": {
-      "type": "rich-text",
-      "disabled": false,
+    "featured_collection_A7HHWC": {
+      "type": "featured-collection",
+      "disabled": true,
       "settings": {
-        "desktop_content_position": "center",
-        "content_alignment": "center",
+        "collection": "jeep",
+        "products_to_show": 10,
+        "header-1ac751d4151c7be674172a42b68c9196": null,
+        "eyebrow_text": "Steering Upgrades",
+        "eyebrow_color": "#dc2626",
+        "title": "Top Steering Solutions",
+        "heading_size": "h1",
+        "description": "<p>Shop steering parts that work as hard as your vehicle—built for strength, tested for the long haul.<br/></p>",
+        "show_description": false,
+        "description_style": "body",
+        "header-22a5554abe2877db57dcba57e8eafe07": null,
+        "columns_desktop": 6,
+        "enable_desktop_slider": true,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "solid",
         "color_scheme": "scheme-1",
-        "full_width": true,
-        "header-6caded1ce461831d75f86c9597dd3279": null,
-        "padding_top": 40,
-        "padding_bottom": 20
+        "header-d24a6c05797f91bcffc85a7e4bd96c98": null,
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "none",
+        "header-9767864f11a64a839cab98fb4a13ec19": null,
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "header-e673cefd41952153922cb4a1eda118c8": null,
+        "padding_top": 44,
+        "padding_bottom": 60
       },
-      "blocks": {
-        "heading_9VL8r3": {
-          "type": "heading",
-          "disabled": false,
-          "settings": {
-            "heading": "{{ page.title }}",
-            "heading_size": "h0"
-          }
-        },
-        "text_DMfFJq": {
-          "type": "text",
-          "disabled": false,
-          "settings": {
-            "text": "<p></p>{{ page.content }}"
-          }
-        }
-      },
-      "block_order": [
-        "heading_9VL8r3",
-        "text_DMfFJq"
-      ]
+      "blocks": {},
+      "block_order": []
     }
   },
   "order": [
     "rich_text_y8itqd",
-    "collection_list_BcPwR"
+    "collection_list_BcPwR",
+    "featured_collection_A7HHWC"
   ]
 }
