@@ -13,31 +13,6 @@
   },
   "parent": "page.dealer-application-succes.json",
   "sections": {
-    "dealer_tiers_explained": {
-      "disabled": false,
-      "settings": {
-        "full_width": true
-      },
-      "blocks": {
-        "heading": {
-          "settings": {
-            "heading": "{{ page.title }}",
-            "heading_size": "h0"
-          }
-        },
-        "text": {
-          "disabled": false,
-          "settings": {
-            "text": "<p></p>{{ page.content }}"
-          }
-        }
-      }
-    },
-    "how_it_works": {
-      "disabled": true,
-      "settings": {},
-      "blocks": {}
-    },
     "collection_list_BcPwR": {
       "type": "collection-list",
       "disabled": false,
@@ -47,15 +22,15 @@
         "title": "Collections",
         "description": "",
         "heading_size": "h1",
-        "header-d6320faae365ebe320af937535bad9c0": null,
+        "header-a95b5696457a4b6ebeb9363d219a8ff0": null,
         "image_ratio": "square",
         "columns_desktop": 4,
         "color_scheme": "",
         "show_view_all": true,
-        "header-d50618102611025a7bfc5463f8316dec": null,
+        "header-a0d3fcac29c37eb4f6ea1b7d52def5a8": null,
         "columns_mobile": "1",
         "swipe_on_mobile": true,
-        "header-34272c6bcfed2d48e3114cb1306a0f5a": null,
+        "header-e3dc69002e91a4ac1166a325831928a0": null,
         "padding_top": 36,
         "padding_bottom": 36
       },
@@ -131,8 +106,6 @@
     }
   },
   "order": [
-    "dealer_tiers_explained",
-    "how_it_works",
     "collection_list_BcPwR"
   ]
 }
