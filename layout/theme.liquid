@@ -258,62 +258,101 @@
 
     {{ 'base.css' | asset_url | stylesheet_tag }}
 
-      <style>
-/* Force PartFinder inside Split parts hero to look like the mockup */
+    <style>
+/* ===== Strong override for PartFinder inside Split parts hero ===== */
+
+/* Kill all chrome / background from the app */
 .split-parts-hero-block .shopify-block,
+.split-parts-hero-block .shopify-app-block,
 .split-parts-hero-block .auto-part-search-bar,
 .split-parts-hero-block .gv-mmy-bar,
-.split-parts-hero-block .auto-part-search-wrapper-container {
+.split-parts-hero-block .auto-part-search-wrapper-container,
+.split-parts-hero-block [class*="mmy-"],
+.split-parts-hero-block [class*="auto-part"] {
   background: transparent !important;
   border: none !important;
   box-shadow: none !important;
   padding: 0 !important;
   margin: 0 !important;
   width: 100% !important;
+  max-width: 100% !important;
+  display: block !important;
 }
 
+/* Hide the blue outline / title that the app adds */
 .split-parts-hero-block .gv-mmy-title,
-.split-parts-hero-block #gv-mmy-mobile-toggle {
+.split-parts-hero-block #gv-mmy-mobile-toggle,
+.split-parts-hero-block .mmy-label[style*="display"],
+.split-parts-hero-block [class*="title"] {
   display: none !important;
 }
 
-.split-parts-hero-block select {
+/* Force every select to be full width + stacked */
+.split-parts-hero-block select,
+.split-parts-hero-block .gv-mmy-bar select,
+.split-parts-hero-block [class*="mmy"] select {
   display: block !important;
   width: 100% !important;
   min-height: 50px !important;
-  margin-bottom: 12px !important;
+  margin: 0 0 14px 0 !important;
   padding: 0 15px !important;
-  background: #fff !important;
+  background: #ffffff !important;
   color: #121212 !important;
-  border: 1px solid #777 !important;
+  border: 1px solid #777777 !important;
   border-radius: 0 !important;
   font-size: 15px !important;
+  box-sizing: border-box !important;
+  appearance: none !important;
+  -webkit-appearance: none !important;
 }
 
-.split-parts-hero-block label {
+/* Labels */
+.split-parts-hero-block label,
+.split-parts-hero-block .mmy-label,
+.split-parts-hero-block [class*="label"] {
   display: block !important;
-  margin-bottom: 6px !important;
-  color: #fff !important;
+  width: 100% !important;
+  margin: 0 0 6px 0 !important;
+  color: #ffffff !important;
   font-size: 12px !important;
   font-weight: 700 !important;
   letter-spacing: 0.06em !important;
   text-transform: uppercase !important;
 }
 
+/* The Search / Find Parts button */
 .split-parts-hero-block button,
-.split-parts-hero-block input[type="submit"] {
+.split-parts-hero-block input[type="submit"],
+.split-parts-hero-block .gv-mmy-bar button,
+.split-parts-hero-block [class*="search"] button,
+.split-parts-hero-block [class*="btn"] {
   display: block !important;
   width: 100% !important;
-  min-height: 50px !important;
-  margin-top: 6px !important;
+  min-height: 52px !important;
+  margin: 8px 0 0 0 !important;
+  padding: 0 15px !important;
   background: #D6001C !important;
-  color: #fff !important;
+  color: #ffffff !important;
   border: none !important;
+  border-radius: 0 !important;
+  font-size: 15px !important;
   font-weight: 800 !important;
+  letter-spacing: 0.04em !important;
   text-transform: uppercase !important;
   cursor: pointer !important;
 }
+
+/* Make sure the container that holds the three dropdowns is vertical */
+.split-parts-hero-block .gv-mmy-bar > div,
+.split-parts-hero-block .auto-part-search-wrapper-container > div {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 0 !important;
+  width: 100% !important;
+}
 </style>
+
+ 
 
     <link rel="stylesheet" href="{{ 'component-cart-items.css' | asset_url }}" media="print" onload="this.media='all'">
 
