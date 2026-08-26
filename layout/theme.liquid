@@ -259,57 +259,28 @@
     {{ 'base.css' | asset_url | stylesheet_tag }}
 
     <style>
-/* Hide the real PartFinder widget but keep it functional */
-.split-parts-hero-block .shopify-block.shopify-app-block,
-.split-parts-hero-block .auto-part-search-bar,
-.split-parts-hero-block .gv-mmy-bar {
-  position: absolute !important;
-  left: -9999px !important;
-  width: 1px !important;
-  height: 1px !important;
-  overflow: hidden !important;
-  opacity: 0 !important;
-  pointer-events: none !important;
-}
-
-/* Make sure the static form from Hero.liquid is visible and styled */
-.split-parts-hero-block .ai-split-parts-hero__fields {
-  display: grid !important;
-  gap: 12px !important;
-}
-
-.split-parts-hero-block .ai-split-parts-hero__field label {
+/* Force spacing on PartFinder dropdowns */
+.split-parts-hero__widget select,
+.split-parts-hero__widget .gv-mmy-bar select,
+.split-parts-hero__widget [class*="mmy"] select,
+.split-parts-hero__widget .auto-part-search-bar select {
+  margin-bottom: 16px !important;
+  min-height: 48px !important;
   display: block !important;
-  margin-bottom: 6px !important;
-  color: #ffffff !important;
-  font-size: 12px !important;
-  font-weight: 700 !important;
-  letter-spacing: 0.06em !important;
-  text-transform: uppercase !important;
 }
 
-.split-parts-hero-block .ai-split-parts-hero__field select {
-  width: 100% !important;
+.split-parts-hero__widget button,
+.split-parts-hero__widget .gv-mmy-bar button {
+  margin-top: 10px !important;
   min-height: 50px !important;
-  padding: 0 15px !important;
-  background: #ffffff !important;
-  color: #121212 !important;
-  border: 1px solid #777777 !important;
-  border-radius: 0 !important;
 }
 
-.split-parts-hero-block .ai-split-parts-hero__button {
-  width: 100% !important;
-  min-height: 50px !important;
-  margin-top: 6px !important;
-  background: #D6001C !important;
-  color: #ffffff !important;
-  border: none !important;
-  font-weight: 800 !important;
-  text-transform: uppercase !important;
-  cursor: pointer !important;
+/* Optional – hide Clear button */
+.split-parts-hero__widget button + button {
+  display: none !important;
 }
-</style>
+</style>  
+
  
 
     <link rel="stylesheet" href="{{ 'component-cart-items.css' | asset_url }}" media="print" onload="this.media='all'">
