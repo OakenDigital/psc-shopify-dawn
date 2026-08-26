@@ -60,6 +60,39 @@
         "show_text_below": false
       }
     },
+    "1787753804404c67d8": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_3d50ad0_yDVQmA": {
+          "type": "ai_gen_block_3d50ad0",
+          "disabled": true,
+          "settings": {
+            "mark": "PSC performance",
+            "heading": "FIND THE RIGHT PARTS",
+            "subheading": "Enter your vehicle info for the exact fit",
+            "button_label": "Find parts",
+            "widget_liquid": "",
+            "panel_background": "#101010",
+            "button_color": "#D6001C",
+            "button_text_color": "#FFFFFF",
+            "accent_color": "#D6001C",
+            "input_radius": 0,
+            "background_image": "shopify://shop_images/banner_for_homepage.png",
+            "image_heading": "",
+            "desktop_width_percent": 100,
+            "desktop_height": 700,
+            "mobile_image_height": 460,
+            "heading_size": 60
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_3d50ad0_yDVQmA"
+      ],
+      "name": "Hero",
+      "settings": {}
+    },
     "collection_list_JAWHMJ": {
       "type": "collection-list",
       "blocks": {
@@ -323,6 +356,7 @@
   },
   "order": [
     "image_banner",
+    "1787753804404c67d8",
     "collection_list_JAWHMJ",
     "image_with_text_rFXzLq",
     "featured_collection",
