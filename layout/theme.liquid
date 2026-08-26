@@ -259,60 +259,57 @@
     {{ 'base.css' | asset_url | stylesheet_tag }}
 
     <style>
-/* Final aggressive override for PartFinder in Split parts hero */
+/* Hide the real PartFinder widget but keep it functional */
 .split-parts-hero-block .shopify-block.shopify-app-block,
 .split-parts-hero-block .auto-part-search-bar,
-.split-parts-hero-block .gv-mmy-bar,
-.split-parts-hero-block [class*="auto-part"],
-.split-parts-hero-block [class*="mmy"] {
-  all: unset !important;
-  display: block !important;
-  width: 100% !important;
-  background: transparent !important;
-  border: none !important;
-  box-shadow: none !important;
-  padding: 0 !important;
-  margin: 0 !important;
+.split-parts-hero-block .gv-mmy-bar {
+  position: absolute !important;
+  left: -9999px !important;
+  width: 1px !important;
+  height: 1px !important;
+  overflow: hidden !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
 }
 
-.split-parts-hero-block .gv-mmy-title,
-.split-parts-hero-block #gv-mmy-mobile-toggle,
-.split-parts-hero-block .mmy-label {
-  display: none !important;
+/* Make sure the static form from Hero.liquid is visible and styled */
+.split-parts-hero-block .ai-split-parts-hero__fields {
+  display: grid !important;
+  gap: 12px !important;
 }
 
-.split-parts-hero-block select {
-  all: unset !important;
+.split-parts-hero-block .ai-split-parts-hero__field label {
   display: block !important;
+  margin-bottom: 6px !important;
+  color: #ffffff !important;
+  font-size: 12px !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.06em !important;
+  text-transform: uppercase !important;
+}
+
+.split-parts-hero-block .ai-split-parts-hero__field select {
   width: 100% !important;
   min-height: 50px !important;
-  margin: 0 0 14px 0 !important;
   padding: 0 15px !important;
   background: #ffffff !important;
   color: #121212 !important;
   border: 1px solid #777777 !important;
   border-radius: 0 !important;
-  font-size: 15px !important;
-  box-sizing: border-box !important;
 }
 
-.split-parts-hero-block button,
-.split-parts-hero-block input[type="submit"] {
-  all: unset !important;
-  display: block !important;
+.split-parts-hero-block .ai-split-parts-hero__button {
   width: 100% !important;
-  min-height: 52px !important;
-  margin-top: 8px !important;
+  min-height: 50px !important;
+  margin-top: 6px !important;
   background: #D6001C !important;
   color: #ffffff !important;
-  text-align: center !important;
+  border: none !important;
   font-weight: 800 !important;
   text-transform: uppercase !important;
   cursor: pointer !important;
-  line-height: 52px !important;
 }
 </style>
-
  
 
     <link rel="stylesheet" href="{{ 'component-cart-items.css' | asset_url }}" media="print" onload="this.media='all'">
