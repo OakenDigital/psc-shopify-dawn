@@ -1,5 +1,5 @@
 {% comment %}
-  Split Parts Hero – Real PartFinder version
+  Split Parts Hero – Real PartFinder version (Section)
 {% endcomment %}
 
 {% style %}
@@ -7,7 +7,7 @@
     display: grid;
     grid-template-columns: 40% 60%;
     width: 100%;
-    min-height: {{ block.settings.desktop_height }}px;
+    min-height: {{ section.settings.desktop_height }}px;
     background: #101010;
   }
 
@@ -16,13 +16,13 @@
     flex-direction: column;
     justify-content: center;
     padding: 64px clamp(24px, 5vw, 84px);
-    background: {{ block.settings.panel_background }};
+    background: {{ section.settings.panel_background }};
     color: #ffffff;
   }
 
   .split-parts-hero__mark {
     margin: 0 0 42px;
-    color: {{ block.settings.accent_color }};
+    color: {{ section.settings.accent_color }};
     font-size: 13px;
     font-weight: 800;
     letter-spacing: 0.18em;
@@ -32,7 +32,7 @@
   .split-parts-hero__heading {
     margin: 0;
     color: #ffffff;
-    font-size: clamp(38px, 4vw, {{ block.settings.heading_size }}px);
+    font-size: clamp(38px, 4vw, {{ section.settings.heading_size }}px);
     font-weight: 800;
     letter-spacing: -0.035em;
     line-height: 0.98;
@@ -87,7 +87,7 @@
     background: #ffffff !important;
     color: #121212 !important;
     border: 1px solid #777777 !important;
-    border-radius: {{ block.settings.input_radius }}px !important;
+    border-radius: {{ section.settings.input_radius }}px !important;
     font-size: 15px !important;
     box-sizing: border-box !important;
   }
@@ -108,10 +108,10 @@
     width: 100% !important;
     min-height: 52px !important;
     margin-top: 8px !important;
-    background: {{ block.settings.button_color }} !important;
-    color: {{ block.settings.button_text_color }} !important;
+    background: {{ section.settings.button_color }} !important;
+    color: {{ section.settings.button_text_color }} !important;
     border: none !important;
-    border-radius: {{ block.settings.input_radius }}px !important;
+    border-radius: {{ section.settings.input_radius }}px !important;
     font-size: 15px !important;
     font-weight: 800 !important;
     letter-spacing: 0.04em !important;
@@ -186,7 +186,7 @@
     }
 
     .split-parts-hero__right {
-      min-height: {{ block.settings.mobile_image_height }}px;
+      min-height: {{ section.settings.mobile_image_height }}px;
     }
 
     .split-parts-hero__image-text {
@@ -197,14 +197,14 @@
   }
 {% endstyle %}
 
-<div class="split-parts-hero" {{ block.shopify_attributes }}>
+<div class="split-parts-hero" {{ section.shopify_attributes }}>
   <div class="split-parts-hero__left">
-    {% if block.settings.mark != blank %}
-      <p class="split-parts-hero__mark">{{ block.settings.mark }}</p>
+    {% if section.settings.mark != blank %}
+      <p class="split-parts-hero__mark">{{ section.settings.mark }}</p>
     {% endif %}
 
-    <h1 class="split-parts-hero__heading">{{ block.settings.heading }}</h1>
-    <p class="split-parts-hero__subheading">{{ block.settings.subheading }}</p>
+    <h1 class="split-parts-hero__heading">{{ section.settings.heading }}</h1>
+    <p class="split-parts-hero__subheading">{{ section.settings.subheading }}</p>
 
     <div class="split-parts-hero__widget">
       {% content_for 'blocks' %}
@@ -212,13 +212,13 @@
   </div>
 
   <div class="split-parts-hero__right">
-    {% if block.settings.background_image %}
+    {% if section.settings.background_image %}
       <img
-        src="{{ block.settings.background_image | image_url: width: 2400 }}"
-        alt="{{ block.settings.background_image.alt | escape }}"
+        src="{{ section.settings.background_image | image_url: width: 2400 }}"
+        alt="{{ section.settings.background_image.alt | escape }}"
         loading="eager"
-        width="{{ block.settings.background_image.width }}"
-        height="{{ block.settings.background_image.height }}"
+        width="{{ section.settings.background_image.width }}"
+        height="{{ section.settings.background_image.height }}"
       >
     {% else %}
       <div class="split-parts-hero__placeholder">
@@ -227,7 +227,7 @@
     {% endif %}
 
     <div class="split-parts-hero__image-text">
-      <h2 class="split-parts-hero__image-heading">{{ block.settings.image_heading }}</h2>
+      <h2 class="split-parts-hero__image-heading">{{ section.settings.image_heading }}</h2>
     </div>
   </div>
 </div>
@@ -357,7 +357,7 @@
 }
 {% endschema %}
 
- <script>
+<script>
   (function() {
     function fixPartFinder() {
       const widget = document.querySelector('.split-parts-hero__widget');
@@ -367,37 +367,32 @@
       const clearBtn = widget.querySelector('.gv-btn-clear, input[value="Clear"]');
       if (clearBtn) {
         clearBtn.style.display = 'none';
-        clearBtn.remove(); // more aggressive – completely remove it
+        clearBtn.remove();
       }
 
-      // Force spacing on the selects
-      const selects = widget.querySelectorAll('select');
-      selects.forEach(function(select, index) {
-        select.style.marginBottom = '14px';
-        select.style.minHeight = '48px';
+      // Force spacing
+      widget.querySelectorAll('select').forEach(function(select) {
+        select.style.setProperty('margin-bottom', '14px', 'important');
+        select.style.setProperty('min-height', '48px', 'important');
       });
 
-      // Force spacing on the Search button
       const searchBtn = widget.querySelector('.gv-btn-search, input[value="Search"]');
       if (searchBtn) {
-        searchBtn.style.marginTop = '8px';
-        searchBtn.style.minHeight = '50px';
+        searchBtn.style.setProperty('margin-top', '8px', 'important');
+        searchBtn.style.setProperty('min-height', '50px', 'important');
       }
     }
 
-    // Run multiple times because the app loads / re-renders late
     fixPartFinder();
     setTimeout(fixPartFinder, 400);
     setTimeout(fixPartFinder, 1000);
     setTimeout(fixPartFinder, 2000);
     setTimeout(fixPartFinder, 4000);
 
-    // Also watch for changes (in case the app re-renders the buttons)
     const observer = new MutationObserver(fixPartFinder);
     const target = document.querySelector('.split-parts-hero__widget');
     if (target) {
       observer.observe(target, { childList: true, subtree: true });
     }
   })();
-</script> 
-
+</script>
