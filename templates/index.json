@@ -64,8 +64,7 @@
       "type": "_blocks",
       "blocks": {
         "ai_gen_block_3d50ad0_yDVQmA": {
-          "type": "Hero",
-          "disabled": true,
+          "type": "hero",
           "settings": {
             "mark": "PSC STEERING",
             "heading": "FIND THE RIGHT PARTS",
@@ -73,9 +72,9 @@
             "button_label": "Find parts",
             "widget_liquid": "",
             "panel_background": "#101010",
-            "button_color": "#D6001C",
-            "button_text_color": "#FFFFFF",
-            "accent_color": "#D6001C",
+            "button_color": "#d6001c",
+            "button_text_color": "#ffffff",
+            "accent_color": "#d6001c",
             "input_radius": 0,
             "background_image": "shopify://shop_images/banner_for_homepage.png",
             "image_heading": "",
@@ -84,12 +83,48 @@
             "mobile_image_height": 460,
             "heading_size": 60
           },
-          "blocks": {}
+          "blocks": {
+            "partfinder_year_make_model_vehicle_search_bar_mM7QJd": {
+              "type": "shopify://apps/partfinder-year-make-model/blocks/vehicle_search_bar/2892d2e7-0551-451a-8d78-8a0f565a5174",
+              "settings": {
+                "gv-enable-submodel": false,
+                "gv-disable-full-width-class": true,
+                "gv-disable-styles": true,
+                "gv-search-bar": "#e1e3e4",
+                "gv-search-color": "#ff0000",
+                "gv-search-text-color": "#ffffff",
+                "gv-clear-color": "#000000",
+                "gv-clear-text-color": "#ffffff",
+                "gv-enable-custom-font-settings": false,
+                "gv-font-family": "sans_serif_n4",
+                "gv-font-size": 15,
+                "gv-font-weight": "400",
+                "gv-search-label": "Search",
+                "gv-clear-label": "Clear",
+                "gv-show-title-label": false,
+                "gv-title-label": "SELECT YOUR VEHICLE",
+                "gv-title-bg": "#000000",
+                "gv-title-text": "#ffffff",
+                "gv-show-toggle-button": false,
+                "gv-toggle-button-label": "FIND YOUR VEHICLE",
+                "gv-toggle-button-bg": "#000000",
+                "gv-toggle-button-text": "#ffffff",
+                "gv-margin-top": 0,
+                "gv-margin-bottom": 0,
+                "gv-margin-left": 0,
+                "gv-margin-right": 0
+              }
+            }
+          },
+          "block_order": [
+            "partfinder_year_make_model_vehicle_search_bar_mM7QJd"
+          ]
         }
       },
       "block_order": [
         "ai_gen_block_3d50ad0_yDVQmA"
       ],
+      "disabled": true,
       "name": "Hero",
       "settings": {}
     },
