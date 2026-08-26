@@ -1,6 +1,273 @@
+{% doc %}
+  @prompt
+    Create a full-width homepage hero section for an automotive parts store. The section should have a full-width background image with a dark overlay, a bold headline like "Find the Right Parts" and a short subheadline, and a centered card/panel that embeds the PartFinder: Year Make Model app widget (using its app embed or liquid tag). The widget panel should have a clean white or dark background with Year, Make, and Model dropdowns and a prominent "Find Parts" button. The layout should be responsive and match the style of premium automotive aftermarket brands., Create a full-width homepage hero section that uses a true split layout (not a centered card).
+    
+    Left half (approximately 40% width on desktop): solid near-black background. Contains:
+    - Bold white uppercase headline “FIND THE RIGHT PARTS”
+    - Short white subheadline “Enter your vehicle info for the exact fit”
+    - Clean Year, Make, Model dropdowns stacked vertically
+    - A prominent solid button (use our brand red or orange) that says “Find Parts” or “Add Vehicle”
+    - Optional small logo or “PartPortal” style mark at the bottom of the left panel
+    
+    Right half (approximately 60% width): full-bleed background image of an off-road truck or Jeep in action (dust, desert, or trail). Dark gradient overlay from the left edge so the text remains readable. Large bold white text overlay on the image reading something like “YOUR ONE STOP SHOP” or “Engineered components for confident builds”.
+    
+    The entire section should be full-width, edge-to-edge, with no max-width container constraining it. On mobile the left dark panel should stack above the image. Match the premium, high-contrast automotive aftermarket style used by brands like Randy’s Worldwide. Make sure the PartFinder / Year-Make-Model widget can be embedded inside the left panel (use the app’s liquid tag or app-block placeholder).
+{% enddoc %}
+{% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
+
+{% style %}
+  .ai-split-parts-hero-{{ ai_gen_id }} {
+    display: grid;
+    grid-template-columns: 40% 60%;
+    width: 100%;
+    min-height: {{ block.settings.desktop_height }}px;
+    background: #101010;
+  }
+
+  .ai-split-parts-hero-{{ ai_gen_id }}__finder {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 64px clamp(24px, 5vw, 84px);
+    background: {{ block.settings.panel_background }};
+    color: #ffffff;
+  }
+
+  .ai-split-parts-hero-{{ ai_gen_id }}__mark {
+    margin: 0 0 42px;
+    color: {{ block.settings.accent_color }};
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: .18em;
+    text-transform: uppercase;
+  }
+
+  .ai-split-parts-hero-{{ ai_gen_id }}__heading,
+  .ai-split-parts-hero-{{ ai_gen_id }}__image-heading {
+    margin: 0;
+    color: #ffffff;
+    font-weight: 800;
+    letter-spacing: -.035em;
+    line-height: .98;
+    text-transform: uppercase;
+  }
+
+  .ai-split-parts-hero-{{ ai_gen_id }}__heading {
+    font-size: clamp(38px, 4vw, {{ block.settings.heading_size }}px);
+  }
+
+  .ai-split-parts-hero-{{ ai_gen_id }}__subheading {
+    max-width: 340px;
+    margin: 18px 0 30px;
+    color: #ffffff;
+    font-size: 17px;
+    line-height: 1.45;
+  }
+
+  .ai-split-parts-hero-{{ ai_gen_id }}__widget {
+    width: 100%;
+  }
+
+  .ai-split-parts-hero-{{ ai_gen_id }}__fields {
+    display: grid;
+    gap: 12px;
+  }
+
+  .ai-split-parts-hero-{{ ai_gen_id }}__field label {
+    display: block;
+    margin-bottom: 6px;
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: .06em;
+    text-transform: uppercase;
+  }
+
+  .ai-split-parts-hero-{{ ai_gen_id }}__field select,
+  .ai-split-parts-hero-{{ ai_gen_id }}__button {
+    width: 100%;
+    min-height: 50px;
+    box-sizing: border-box;
+    padding: 0 15px;
+    border-radius: {{ block.settings.input_radius }}px;
+    font: inherit;
+  }
+
+  .ai-split-parts-hero-{{ ai_gen_id }}__field select {
+    border: 1px solid #777777;
+    background: #ffffff;
+    color: #121212;
+  }
+
+  .ai-split-parts-hero-{{ ai_gen_id }}__button {
+    margin-top: 6px;
+    border: 0;
+    background: {{ block.settings.button_color }};
+    color: {{ block.settings.button_text_color }};
+    font-weight: 800;
+    letter-spacing: .04em;
+    text-transform: uppercase;
+    cursor: pointer;
+  }
+
+  .ai-split-parts-hero-{{ ai_gen_id }}__button:hover,
+  .ai-split-parts-hero-{{ ai_gen_id }}__button:focus-visible {
+    filter: brightness(.88);
+  }
+
+  .ai-split-parts-hero-{{ ai_gen_id }}__visual {
+    position: relative;
+    min-height: inherit;
+    overflow: hidden;
+    background: #303030;
+  }
+
+  .ai-split-parts-hero-{{ ai_gen_id }}__visual img,
+  .ai-split-parts-hero-{{ ai_gen_id }}__placeholder {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .ai-split-parts-hero-{{ ai_gen_id }}__visual img {
+    object-fit: cover;
+  }
+
+  .ai-split-parts-hero-{{ ai_gen_id }}__placeholder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #303030;
+  }
+
+  .ai-split-parts-hero-{{ ai_gen_id }}__placeholder svg {
+    width: 100%;
+    height: 100%;
+    opacity: .35;
+  }
+
+  .ai-split-parts-hero-{{ ai_gen_id }}__visual::after {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg, rgba(0,0,0,.78) 0%, rgba(0,0,0,.25) 42%, rgba(0,0,0,.08) 100%);
+    content: '';
+  }
+
+  .ai-split-parts-hero-{{ ai_gen_id }}__image-copy {
+    position: absolute;
+    z-index: 1;
+    right: 8%;
+    bottom: 11%;
+    max-width: 520px;
+  }
+
+  .ai-split-parts-hero-{{ ai_gen_id }}__image-heading {
+    font-size: clamp(34px, 5vw, 76px);
+  }
+
+  @media screen and (max-width: 749px) {
+    .ai-split-parts-hero-{{ ai_gen_id }} {
+      display: flex;
+      flex-direction: column;
+      min-height: 0;
+    }
+
+    .ai-split-parts-hero-{{ ai_gen_id }}__finder {
+      min-height: 610px;
+      padding: 46px 24px;
+    }
+
+    .ai-split-parts-hero-{{ ai_gen_id }}__visual {
+      min-height: {{ block.settings.mobile_image_height }}px;
+    }
+
+    .ai-split-parts-hero-{{ ai_gen_id }}__image-copy {
+      right: 24px;
+      bottom: 32px;
+      left: 24px;
+    }
+  }
+{% endstyle %}
+
+<parts-split-{{ ai_gen_id }} class="ai-split-parts-hero-{{ ai_gen_id }}" {{ block.shopify_attributes }}>
+  <div class="ai-split-parts-hero-{{ ai_gen_id }}__finder">
+    {% if block.settings.mark != blank %}
+      <p class="ai-split-parts-hero-{{ ai_gen_id }}__mark">{{ block.settings.mark }}</p>
+    {% endif %}
+
+    <h1 class="ai-split-parts-hero-{{ ai_gen_id }}__heading">{{ block.settings.heading }}</h1>
+    <p class="ai-split-parts-hero-{{ ai_gen_id }}__subheading">{{ block.settings.subheading }}</p>
+
+    <div class="ai-split-parts-hero-{{ ai_gen_id }}__widget">
+      {% if block.settings.widget_liquid != blank %}
+        {{ block.settings.widget_liquid }}
+      {% else %}
+        <div class="ai-split-parts-hero-{{ ai_gen_id }}__fields">
+          <div class="ai-split-parts-hero-{{ ai_gen_id }}__field">
+            <label for="ai-year-{{ ai_gen_id }}">Year</label>
+            <select id="ai-year-{{ ai_gen_id }}"><option>Select year</option></select>
+          </div>
+          <div class="ai-split-parts-hero-{{ ai_gen_id }}__field">
+            <label for="ai-make-{{ ai_gen_id }}">Make</label>
+            <select id="ai-make-{{ ai_gen_id }}"><option>Select make</option></select>
+          </div>
+          <div class="ai-split-parts-hero-{{ ai_gen_id }}__field">
+            <label for="ai-model-{{ ai_gen_id }}">Model</label>
+            <select id="ai-model-{{ ai_gen_id }}"><option>Select model</option></select>
+          </div>
+          <button class="ai-split-parts-hero-{{ ai_gen_id }}__button" type="button">{{ block.settings.button_label }}</button>
+        </div>
+      {% endif %}
+    </div>
+  </div>
+
+  <div class="ai-split-parts-hero-{{ ai_gen_id }}__visual">
+    {% if block.settings.background_image %}
+      <img src="{{ block.settings.background_image | image_url: width: 2400 }}" alt="{{ block.settings.background_image.alt | escape }}" loading="eager" width="{{ block.settings.background_image.width }}" height="{{ block.settings.background_image.height }}">
+    {% else %}
+      <div class="ai-split-parts-hero-{{ ai_gen_id }}__placeholder">{{ 'image' | placeholder_svg_tag }}</div>
+    {% endif %}
+    <div class="ai-split-parts-hero-{{ ai_gen_id }}__image-copy">
+      <h2 class="ai-split-parts-hero-{{ ai_gen_id }}__image-heading">{{ block.settings.image_heading }}</h2>
+    </div>
+  </div>
+</parts-split-{{ ai_gen_id }}>
+
+<script>
+  (function() {
+    if (!customElements.get('parts-split-{{ ai_gen_id }}')) {
+      customElements.define('parts-split-{{ ai_gen_id }}', class extends HTMLElement {});
+    }
+  })();
+</script>
+
 {% schema %}
- {
-   "name": "AI_Block",
-   "tag": "shopify-ai-generated-block"
- }
+{
+  "name": "Split parts hero",
+  "tag": null,
+  "class": "split-parts-hero-block",
+  "settings": [
+    { "type": "header", "content": "Left panel" },
+    { "type": "text", "id": "mark", "label": "Small mark", "default": "PSC performance" },
+    { "type": "text", "id": "heading", "label": "Headline", "default": "FIND THE RIGHT PARTS" },
+    { "type": "textarea", "id": "subheading", "label": "Subheadline", "default": "Enter your vehicle info for the exact fit" },
+    { "type": "text", "id": "button_label", "label": "Button label", "default": "Find parts" },
+    { "type": "liquid", "id": "widget_liquid", "label": "PartFinder widget Liquid" },
+    { "type": "color", "id": "panel_background", "label": "Panel background", "default": "#101010" },
+    { "type": "color", "id": "button_color", "label": "Button background", "default": "#D6001C" },
+    { "type": "color", "id": "button_text_color", "label": "Button text", "default": "#FFFFFF" },
+    { "type": "color", "id": "accent_color", "label": "Accent", "default": "#D6001C" },
+    { "type": "range", "id": "input_radius", "label": "Input radius", "min": 0, "max": 20, "step": 2, "unit": "px", "default": 0 },
+    { "type": "header", "content": "Right image" },
+    { "type": "image_picker", "id": "background_image", "label": "Background image" },
+    { "type": "text", "id": "image_heading", "label": "Image headline", "default": "YOUR ONE STOP SHOP" },
+    { "type": "header", "content": "Layout" },
+    { "type": "range", "id": "desktop_width_percent", "label": "Desktop width", "min": 50, "max": 100, "step": 5, "unit": "%", "default": 100 },
+    { "type": "range", "id": "desktop_height", "label": "Desktop height", "min": 480, "max": 900, "step": 20, "unit": "px", "default": 700 },
+    { "type": "range", "id": "mobile_image_height", "label": "Mobile image height", "min": 300, "max": 700, "step": 20, "unit": "px", "default": 460 },
+    { "type": "range", "id": "heading_size", "label": "Headline size", "min": 40, "max": 80, "step": 4, "unit": "px", "default": 60 }
+  ],
+  "presets": [{ "name": "Split parts hero" }]
+}
 {% endschema %}
