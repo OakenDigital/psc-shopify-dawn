@@ -64,7 +64,7 @@
       "type": "_blocks",
       "blocks": {
         "ai_gen_block_3d50ad0_yDVQmA": {
-          "type": "ai_gen_block_3d50ad0",
+          "type": "Hero",
           "disabled": true,
           "settings": {
             "mark": "PSC STEERING",
