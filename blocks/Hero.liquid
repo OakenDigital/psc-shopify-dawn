@@ -1,0 +1,403 @@
+{% comment %}
+  Split Parts Hero – Real PartFinder version
+{% endcomment %}
+
+{% style %}
+  .split-parts-hero {
+    display: grid;
+    grid-template-columns: 40% 60%;
+    width: 100%;
+    min-height: {{ block.settings.desktop_height }}px;
+    background: #101010;
+  }
+
+  .split-parts-hero__left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 64px clamp(24px, 5vw, 84px);
+    background: {{ block.settings.panel_background }};
+    color: #ffffff;
+  }
+
+  .split-parts-hero__mark {
+    margin: 0 0 42px;
+    color: {{ block.settings.accent_color }};
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+  }
+
+  .split-parts-hero__heading {
+    margin: 0;
+    color: #ffffff;
+    font-size: clamp(38px, 4vw, {{ block.settings.heading_size }}px);
+    font-weight: 800;
+    letter-spacing: -0.035em;
+    line-height: 0.98;
+    text-transform: uppercase;
+  }
+
+  .split-parts-hero__subheading {
+    max-width: 340px;
+    margin: 18px 0 30px;
+    color: #ffffff;
+    font-size: 17px;
+    line-height: 1.45;
+  }
+
+  .split-parts-hero__widget {
+    width: 100%;
+  }
+
+  /* Style the real PartFinder widget */
+  .split-parts-hero__widget .shopify-block,
+  .split-parts-hero__widget .auto-part-search-bar,
+  .split-parts-hero__widget .gv-mmy-bar,
+  .split-parts-hero__widget .auto-part-search-wrapper-container {
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    width: 100% !important;
+  }
+
+  .split-parts-hero__widget .gv-mmy-title,
+  .split-parts-hero__widget #gv-mmy-mobile-toggle,
+  .split-parts-hero__widget .mmy-label {
+    display: none !important;
+  }
+
+  .split-parts-hero__widget .gv-mmy-bar,
+  .split-parts-hero__widget [class*="mmy"] {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 12px !important;
+    width: 100% !important;
+  }
+
+  .split-parts-hero__widget select {
+    display: block !important;
+    width: 100% !important;
+    min-height: 50px !important;
+    margin: 0 !important;
+    padding: 0 15px !important;
+    background: #ffffff !important;
+    color: #121212 !important;
+    border: 1px solid #777777 !important;
+    border-radius: {{ block.settings.input_radius }}px !important;
+    font-size: 15px !important;
+    box-sizing: border-box !important;
+  }
+
+  .split-parts-hero__widget label {
+    display: block !important;
+    margin-bottom: 6px !important;
+    color: #ffffff !important;
+    font-size: 12px !important;
+    font-weight: 700 !important;
+    letter-spacing: 0.06em !important;
+    text-transform: uppercase !important;
+  }
+
+  .split-parts-hero__widget button,
+  .split-parts-hero__widget input[type="submit"] {
+    display: block !important;
+    width: 100% !important;
+    min-height: 52px !important;
+    margin-top: 8px !important;
+    background: {{ block.settings.button_color }} !important;
+    color: {{ block.settings.button_text_color }} !important;
+    border: none !important;
+    border-radius: {{ block.settings.input_radius }}px !important;
+    font-size: 15px !important;
+    font-weight: 800 !important;
+    letter-spacing: 0.04em !important;
+    text-transform: uppercase !important;
+    cursor: pointer !important;
+  }
+
+  .split-parts-hero__right {
+    position: relative;
+    min-height: inherit;
+    overflow: hidden;
+    background: #303030;
+  }
+
+  .split-parts-hero__right img,
+  .split-parts-hero__placeholder {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .split-parts-hero__placeholder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #303030;
+  }
+
+  .split-parts-hero__placeholder svg {
+    width: 100%;
+    height: 100%;
+    opacity: 0.35;
+  }
+
+  .split-parts-hero__right::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg, rgba(0,0,0,0.78) 0%, rgba(0,0,0,0.25) 42%, rgba(0,0,0,0.08) 100%);
+  }
+
+  .split-parts-hero__image-text {
+    position: absolute;
+    z-index: 1;
+    right: 8%;
+    bottom: 11%;
+    max-width: 520px;
+  }
+
+  .split-parts-hero__image-heading {
+    margin: 0;
+    color: #ffffff;
+    font-size: clamp(34px, 5vw, 76px);
+    font-weight: 800;
+    letter-spacing: -0.035em;
+    line-height: 0.98;
+    text-transform: uppercase;
+  }
+
+  @media screen and (max-width: 749px) {
+    .split-parts-hero {
+      display: flex;
+      flex-direction: column;
+      min-height: 0;
+    }
+
+    .split-parts-hero__left {
+      min-height: 610px;
+      padding: 46px 24px;
+    }
+
+    .split-parts-hero__right {
+      min-height: {{ block.settings.mobile_image_height }}px;
+    }
+
+    .split-parts-hero__image-text {
+      right: 24px;
+      bottom: 32px;
+      left: 24px;
+    }
+  }
+{% endstyle %}
+
+<div class="split-parts-hero" {{ block.shopify_attributes }}>
+  <div class="split-parts-hero__left">
+    {% if block.settings.mark != blank %}
+      <p class="split-parts-hero__mark">{{ block.settings.mark }}</p>
+    {% endif %}
+
+    <h1 class="split-parts-hero__heading">{{ block.settings.heading }}</h1>
+    <p class="split-parts-hero__subheading">{{ block.settings.subheading }}</p>
+
+    <div class="split-parts-hero__widget">
+      {% content_for 'blocks' %}
+    </div>
+  </div>
+
+  <div class="split-parts-hero__right">
+    {% if block.settings.background_image %}
+      <img
+        src="{{ block.settings.background_image | image_url: width: 2400 }}"
+        alt="{{ block.settings.background_image.alt | escape }}"
+        loading="eager"
+        width="{{ block.settings.background_image.width }}"
+        height="{{ block.settings.background_image.height }}"
+      >
+    {% else %}
+      <div class="split-parts-hero__placeholder">
+        {{ 'image' | placeholder_svg_tag }}
+      </div>
+    {% endif %}
+
+    <div class="split-parts-hero__image-text">
+      <h2 class="split-parts-hero__image-heading">{{ block.settings.image_heading }}</h2>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Split parts hero",
+  "tag": null,
+  "class": "split-parts-hero-block",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Left panel"
+    },
+    {
+      "type": "text",
+      "id": "mark",
+      "label": "Small mark",
+      "default": "PSC STEERING"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Headline",
+      "default": "FIND THE RIGHT PARTS"
+    },
+    {
+      "type": "textarea",
+      "id": "subheading",
+      "label": "Subheadline",
+      "default": "Enter your vehicle info for the exact fit"
+    },
+    {
+      "type": "color",
+      "id": "panel_background",
+      "label": "Panel background",
+      "default": "#101010"
+    },
+    {
+      "type": "color",
+      "id": "button_color",
+      "label": "Button background",
+      "default": "#D6001C"
+    },
+    {
+      "type": "color",
+      "id": "button_text_color",
+      "label": "Button text",
+      "default": "#FFFFFF"
+    },
+    {
+      "type": "color",
+      "id": "accent_color",
+      "label": "Accent",
+      "default": "#D6001C"
+    },
+    {
+      "type": "range",
+      "id": "input_radius",
+      "label": "Input radius",
+      "min": 0,
+      "max": 20,
+      "step": 2,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "header",
+      "content": "Right image"
+    },
+    {
+      "type": "image_picker",
+      "id": "background_image",
+      "label": "Background image"
+    },
+    {
+      "type": "text",
+      "id": "image_heading",
+      "label": "Image headline",
+      "default": "YOUR ONE STOP SHOP"
+    },
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "range",
+      "id": "desktop_height",
+      "label": "Desktop height",
+      "min": 480,
+      "max": 900,
+      "step": 20,
+      "unit": "px",
+      "default": 700
+    },
+    {
+      "type": "range",
+      "id": "mobile_image_height",
+      "label": "Mobile image height",
+      "min": 300,
+      "max": 700,
+      "step": 20,
+      "unit": "px",
+      "default": 460
+    },
+    {
+      "type": "range",
+      "id": "heading_size",
+      "label": "Headline size",
+      "min": 40,
+      "max": 80,
+      "step": 4,
+      "unit": "px",
+      "default": 60
+    }
+  ],
+  "blocks": [
+    {
+      "type": "@app"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Split parts hero"
+    }
+  ]
+}
+{% endschema %}
+
+ <script>
+  (function() {
+    function fixPartFinder() {
+      const widget = document.querySelector('.split-parts-hero__widget');
+      if (!widget) return;
+
+      // Hide Clear button
+      const clearBtn = widget.querySelector('.gv-btn-clear, input[value="Clear"]');
+      if (clearBtn) {
+        clearBtn.style.display = 'none';
+        clearBtn.remove(); // more aggressive – completely remove it
+      }
+
+      // Force spacing on the selects
+      const selects = widget.querySelectorAll('select');
+      selects.forEach(function(select, index) {
+        select.style.marginBottom = '14px';
+        select.style.minHeight = '48px';
+      });
+
+      // Force spacing on the Search button
+      const searchBtn = widget.querySelector('.gv-btn-search, input[value="Search"]');
+      if (searchBtn) {
+        searchBtn.style.marginTop = '8px';
+        searchBtn.style.minHeight = '50px';
+      }
+    }
+
+    // Run multiple times because the app loads / re-renders late
+    fixPartFinder();
+    setTimeout(fixPartFinder, 400);
+    setTimeout(fixPartFinder, 1000);
+    setTimeout(fixPartFinder, 2000);
+    setTimeout(fixPartFinder, 4000);
+
+    // Also watch for changes (in case the app re-renders the buttons)
+    const observer = new MutationObserver(fixPartFinder);
+    const target = document.querySelector('.split-parts-hero__widget');
+    if (target) {
+      observer.observe(target, { childList: true, subtree: true });
+    }
+  })();
+</script> 
+
