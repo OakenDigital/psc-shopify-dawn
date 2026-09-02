@@ -46,6 +46,7 @@
         "text_yYmNEW",
         "button"
       ],
+      "disabled": true,
       "settings": {
         "image": "shopify://shop_images/banner_for_homepage.png",
         "image_overlay_opacity": 20,
@@ -98,7 +99,6 @@
       "block_order": [
         "partfinder_year_make_model_vehicle_search_bar_K8P6hc"
       ],
-      "disabled": true,
       "name": "Parts finder hero",
       "settings": {
         "mark": "Built to Fit",
@@ -109,7 +109,7 @@
         "button_text_color": "#ffffff",
         "accent_color": "#d6001c",
         "input_radius": 0,
-        "background_image": "shopify://shop_images/Kelderman_Truck.jpg",
+        "background_image": "shopify://shop_images/kelderman_truck_f06d5758-78d6-4728-ac22-632f9a3cb318.png",
         "image_heading": "",
         "desktop_height": 700,
         "mobile_image_height": 460,
