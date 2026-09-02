@@ -24,6 +24,12 @@
 {%- endif -%}
 
 {%- style -%}
+  #Banner-{{ section.id }} {
+    margin-left: {{ section.settings.margin_horizontal }}px;
+    margin-right: {{ section.settings.margin_horizontal }}px;
+    width: calc(100% - {{ section.settings.margin_horizontal | times: 2 }}px);
+  }
+
   #Banner-{{ section.id }}::after {
     opacity: {{ section.settings.image_overlay_opacity | divided_by: 100.0 }};
   }
@@ -316,6 +322,16 @@
       "id": "show_text_box",
       "default": true,
       "label": "t:sections.image-banner.settings.show_text_box.label"
+    },
+    {
+      "type": "range",
+      "id": "margin_horizontal",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Side margins",
+      "default": 0
     },
     {
       "type": "color_scheme",
