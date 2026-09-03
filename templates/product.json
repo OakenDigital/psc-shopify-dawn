@@ -103,6 +103,12 @@
             "price_selector": ""
           }
         },
+        "custom_liquid_zrdfWE": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "<div class=\"product-sku-display\" style=\"text-align: left; margin: 0 0 1rem 0;\">\n  <p style=\"margin: 0;\"><strong>Part Number:</strong> <span class=\"variant-sku\">{{ product.selected_or_first_available_variant.sku }}</span></p>\n</div>\n\n<script>\n(function() {\n  document.addEventListener('variant:change', function(event) {\n    if (event.detail?.variant?.sku) {\n      document.querySelector('.variant-sku').textContent = event.detail.variant.sku;\n    }\n  });\n\n  if (window.VariantHelper) {\n    window.VariantHelper.on('variant:change', function(variant) {\n      if (variant?.sku) {\n        document.querySelector('.variant-sku').textContent = variant.sku;\n      }\n    });\n  }\n\n  const form = document.querySelector('form[action*=\"/cart/add\"]');\n  if (form) {\n    form.addEventListener('change', function() {\n      const selectedVariantId = form.querySelector('[name=\"id\"]')?.value;\n      if (selectedVariantId) {\n        const variants = {{ product.variants | json }};\n        const variant = variants.find(v => v.id == selectedVariantId);\n        if (variant?.sku) {\n          document.querySelector('.variant-sku').textContent = variant.sku;\n        }\n      }\n    });\n  }\n})();\n</script>"
+          }
+        },
         "variant_picker": {
           "type": "variant_picker",
           "settings": {
@@ -158,6 +164,7 @@
         "title",
         "price",
         "affirm_pay_over_time_messaging_product_block_mJM8Ae",
+        "custom_liquid_zrdfWE",
         "variant_picker",
         "quantity_selector",
         "buy_buttons",
