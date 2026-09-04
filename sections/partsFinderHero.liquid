@@ -357,8 +357,96 @@
 }
 {% endschema %}
 
+{% comment %} <script>
+  (function() {
+    function fixPartFinder() {
+      const widget = document.querySelector('.split-parts-hero__widget');
+      if (!widget) return;
+
+      // Hide Clear button
+      const clearBtn = widget.querySelector('.gv-btn-clear, input[value="Clear"]');
+      if (clearBtn) {
+        clearBtn.style.display = 'none';
+        clearBtn.remove();
+      }
+
+      // Force spacing
+      widget.querySelectorAll('select').forEach(function(select) {
+        select.style.setProperty('margin-bottom', '14px', 'important');
+        select.style.setProperty('min-height', '48px', 'important');
+      });
+
+      const searchBtn = widget.querySelector('.gv-btn-search, input[value="Search"]');
+      if (searchBtn) {
+        searchBtn.style.setProperty('margin-top', '8px', 'important');
+        searchBtn.style.setProperty('min-height', '50px', 'important');
+      }
+    }
+
+    fixPartFinder();
+    setTimeout(fixPartFinder, 400);
+    setTimeout(fixPartFinder, 1000);
+    setTimeout(fixPartFinder, 2000);
+    setTimeout(fixPartFinder, 4000);
+
+    const observer = new MutationObserver(fixPartFinder);
+    const target = document.querySelector('.split-parts-hero__widget');
+    if (target) {
+      observer.observe(target, { childList: true, subtree: true });
+    }
+  })();
+</script> {% endcomment %}
+
 <script>
   (function() {
+    // 1. Clear local & session storage where PartFinder stores vehicle state
+    function clearPartFinderStorage() {
+      try {
+        sessionStorage.clear();
+        Object.keys(localStorage).forEach(function(key) {
+          const k = key.toLowerCase();
+          if (k.includes('mmy') || k.includes('partfinder') || k.includes('vehicle') || k.includes('fitment')) {
+            localStorage.removeItem(key);
+          }
+        });
+      } catch (e) {
+        console.warn('Could not clear vehicle storage:', e);
+      }
+    }
+
+    // 2. Reset dropdowns back to default option
+    function resetDropdowns() {
+      const widget = document.querySelector('.split-parts-hero__widget');
+      if (!widget) return;
+
+      const selects = widget.querySelectorAll('select');
+      selects.forEach(function(select) {
+        if (select.selectedIndex !== 0) {
+          select.selectedIndex = 0;
+          select.dispatchEvent(new Event('change', { bubbles: true }));
+        }
+      });
+    }
+
+    // Run reset immediately on load
+    clearPartFinderStorage();
+
+    document.addEventListener('DOMContentLoaded', function() {
+      clearPartFinderStorage();
+      resetDropdowns();
+      setTimeout(resetDropdowns, 500);
+      setTimeout(resetDropdowns, 1500);
+    });
+
+    // Reset when navigating back via browser back button
+    window.addEventListener('pageshow', function(event) {
+      if (event.persisted) {
+        clearPartFinderStorage();
+        resetDropdowns();
+      }
+    });
+
+    // Layout fixes for PartFinder widget
     function fixPartFinder() {
       const widget = document.querySelector('.split-parts-hero__widget');
       if (!widget) return;
