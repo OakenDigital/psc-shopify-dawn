@@ -357,45 +357,6 @@
 }
 {% endschema %}
 
-{% comment %} <script>
-  (function() {
-    function fixPartFinder() {
-      const widget = document.querySelector('.split-parts-hero__widget');
-      if (!widget) return;
-
-      // Hide Clear button
-      const clearBtn = widget.querySelector('.gv-btn-clear, input[value="Clear"]');
-      if (clearBtn) {
-        clearBtn.style.display = 'none';
-        clearBtn.remove();
-      }
-
-      // Force spacing
-      widget.querySelectorAll('select').forEach(function(select) {
-        select.style.setProperty('margin-bottom', '14px', 'important');
-        select.style.setProperty('min-height', '48px', 'important');
-      });
-
-      const searchBtn = widget.querySelector('.gv-btn-search, input[value="Search"]');
-      if (searchBtn) {
-        searchBtn.style.setProperty('margin-top', '8px', 'important');
-        searchBtn.style.setProperty('min-height', '50px', 'important');
-      }
-    }
-
-    fixPartFinder();
-    setTimeout(fixPartFinder, 400);
-    setTimeout(fixPartFinder, 1000);
-    setTimeout(fixPartFinder, 2000);
-    setTimeout(fixPartFinder, 4000);
-
-    const observer = new MutationObserver(fixPartFinder);
-    const target = document.querySelector('.split-parts-hero__widget');
-    if (target) {
-      observer.observe(target, { childList: true, subtree: true });
-    }
-  })();
-</script> {% endcomment %}
 
 <script>
   (function() {
