@@ -9,59 +9,6 @@
  */
 {
   "sections": {
-    "image_banner": {
-      "type": "image-banner",
-      "blocks": {
-        "heading": {
-          "type": "heading",
-          "settings": {
-            "heading": "DDS® Dynamic Damping         Stabilizer System",
-            "heading_size": "h2"
-          }
-        },
-        "text_yYmNEW": {
-          "type": "text",
-          "settings": {
-            "text": "Off-Road & On-Road Dominance",
-            "text_style": "subtitle"
-          }
-        },
-        "button": {
-          "type": "buttons",
-          "settings": {
-            "button_layout": "inline",
-            "button_label_1": "Shop the New DDS®",
-            "button_link_1": "shopify://collections/dynamic-damping-stabilizer-dds",
-            "button_style_secondary_1": false,
-            "button_color_scheme_1": "scheme-3e379a2a-46a4-4c6f-826a-ba5df32a53b6",
-            "button_label_2": "Shop New Products",
-            "button_link_2": "shopify://collections/new-arrivals",
-            "button_style_secondary_2": false,
-            "button_color_scheme_2": "scheme-f95fc31b-0c1b-4da3-82af-ed2967ed4967"
-          }
-        }
-      },
-      "block_order": [
-        "heading",
-        "text_yYmNEW",
-        "button"
-      ],
-      "settings": {
-        "image": "shopify://shop_images/banner_for_homepage.png",
-        "image_overlay_opacity": 20,
-        "image_height": "medium",
-        "image_behavior": "none",
-        "desktop_content_position": "bottom-right",
-        "desktop_content_alignment": "center",
-        "show_text_box": true,
-        "margin_horizontal": 0,
-        "margin_horizontal_mobile": 0,
-        "color_scheme": "scheme-2a3099ff-9a3c-4a9e-8233-7c59b10461d1",
-        "stack_images_on_mobile": true,
-        "mobile_content_alignment": "center",
-        "show_text_below": false
-      }
-    },
     "parts_finder_hero_TXRbrh": {
       "type": "partsFinderHero",
       "blocks": {
@@ -100,7 +47,6 @@
       "block_order": [
         "partfinder_year_make_model_vehicle_search_bar_K8P6hc"
       ],
-      "disabled": true,
       "name": "Parts finder hero",
       "settings": {
         "mark": "Built to Fit",
@@ -216,6 +162,7 @@
         "text_XGV8jB",
         "button_zkFPPw"
       ],
+      "disabled": true,
       "name": "t:sections.image-with-text.presets.name",
       "settings": {
         "image": "shopify://shop_images/PSC_King_of_the_Hammers_2017.png",
@@ -231,6 +178,59 @@
         "color_scheme": "scheme-2a3099ff-9a3c-4a9e-8233-7c59b10461d1",
         "padding_top": 0,
         "padding_bottom": 0
+      }
+    },
+    "image_banner": {
+      "type": "image-banner",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "DDS® Dynamic Damping         Stabilizer System",
+            "heading_size": "h2"
+          }
+        },
+        "text_yYmNEW": {
+          "type": "text",
+          "settings": {
+            "text": "Off-Road & On-Road Dominance",
+            "text_style": "subtitle"
+          }
+        },
+        "button": {
+          "type": "buttons",
+          "settings": {
+            "button_layout": "inline",
+            "button_label_1": "Shop the New DDS®",
+            "button_link_1": "shopify://collections/dynamic-damping-stabilizer-dds",
+            "button_style_secondary_1": false,
+            "button_color_scheme_1": "scheme-3e379a2a-46a4-4c6f-826a-ba5df32a53b6",
+            "button_label_2": "Shop New Products",
+            "button_link_2": "shopify://collections/new-arrivals",
+            "button_style_secondary_2": false,
+            "button_color_scheme_2": "scheme-f95fc31b-0c1b-4da3-82af-ed2967ed4967"
+          }
+        }
+      },
+      "block_order": [
+        "heading",
+        "text_yYmNEW",
+        "button"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/banner_for_homepage.png",
+        "image_overlay_opacity": 20,
+        "image_height": "medium",
+        "image_behavior": "none",
+        "desktop_content_position": "bottom-right",
+        "desktop_content_alignment": "center",
+        "show_text_box": true,
+        "margin_horizontal": 48,
+        "margin_horizontal_mobile": 0,
+        "color_scheme": "scheme-2a3099ff-9a3c-4a9e-8233-7c59b10461d1",
+        "stack_images_on_mobile": true,
+        "mobile_content_alignment": "center",
+        "show_text_below": false
       }
     },
     "featured_collection": {
@@ -380,10 +380,10 @@
     }
   },
   "order": [
-    "image_banner",
     "parts_finder_hero_TXRbrh",
     "collection_list_JAWHMJ",
     "image_with_text_rFXzLq",
+    "image_banner",
     "featured_collection",
     "featured_collection_i3dKzT",
     "newsletter_agMNU6",
