@@ -11,6 +11,7 @@
   "sections": {
     "main": {
       "type": "main-page",
+      "disabled": true,
       "settings": {
         "padding_top": 48,
         "padding_bottom": 28
@@ -166,7 +167,7 @@
         "ai_gen_block_eef5293_Gr8NwF": {
           "type": "ai_gen_block_eef5293",
           "settings": {
-            "eyebrow": "PSC Motorsports installation guide",
+            "eyebrow": "PSC Steering installation guide",
             "title": "Install with confidence",
             "overview_heading": "Before you begin",
             "overview": "<p>Review the complete guide before beginning. Confirm the vehicle application, inspect all components, and follow the sequence below for a precise installation.</p>",
