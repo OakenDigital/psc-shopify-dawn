@@ -210,6 +210,16 @@
       ],
       "settings": {}
     },
+    "custom_liquid_PAq7Dy": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<div style=\"text-align:center; background:#ffffff; color:#121212; padding:48px 24px 56px; font-family:inherit;\">\n  <div style=\"margin:0 auto 28px;\">\n    {% if settings.logo != blank %}{{ settings.logo | image_url: width: 320 | image_tag: alt: 'PSC Steering', style: 'max-width:160px;height:auto;margin:0 auto;' }}{% endif %}\n  </div>\n  <h2 style=\"margin:0 0 18px; font-weight:700; letter-spacing:.08em;\">CONTACT US</h2>\n  <p style=\"margin:0 auto 24px; max-width:620px; color:#d6001c; font-style:italic; font-weight:600;\">Questions about an install or need help finding the right part?</p>\n  <div style=\"line-height:1.8; margin:0 auto 44px;\">\n    <div>Phone: (817) 270-0102</div>\n    <div>Mon-Fri | 9 AM–5 PM CT</div>\n    <div>Email: <a href=\"mailto:support@pscmotorsports.com\" style=\"color:#121212;\">support@pscmotorsports.com</a></div>\n  </div>\n  <div style=\"font-size:clamp(1.35rem,3vw,2.25rem); font-weight:700; letter-spacing:.06em;\">WWW.PSCSTEERING.COM</div>\n</div>",
+        "color_scheme": "scheme-1",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
     "17888104119cc4f605": {
       "type": "_blocks",
       "blocks": {
@@ -259,6 +269,7 @@
     "rich_text_R3kECz",
     "178215901468e81263",
     "17888100285ad9bd3d",
+    "custom_liquid_PAq7Dy",
     "17888104119cc4f605"
   ]
 }
