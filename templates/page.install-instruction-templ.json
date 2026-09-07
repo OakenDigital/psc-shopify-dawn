@@ -158,12 +158,52 @@
         "include_margins": true,
         "full_width": true
       }
+    },
+    "1788822649ed1ffd50": {
+      "type": "_blocks",
+      "settings": {}
+    },
+    "17888227976ee43a1c": {
+      "type": "_blocks",
+      "settings": {}
+    },
+    "1788822946178473d2": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_2da1629_W9MUk6": {
+          "type": "ai_gen_block_2da1629",
+          "settings": {
+            "guide_category": "Performance steering systems",
+            "product_title": "Installation guide",
+            "product_application": "Vehicle application",
+            "product_year": "Model year",
+            "part_numbers": "Enter part number",
+            "table_of_contents": "<p>Add the guide contents here.</p>",
+            "before_you_get_started": "<p>Add preparation and safety information here.</p>",
+            "whats_in_the_kit": "<p>List kit contents here.</p>",
+            "contact_subheading": "Need technical support?",
+            "contact_phone": "Phone: Add phone number",
+            "contact_hours": "Hours: Add support hours",
+            "contact_email": "Email: Add email address",
+            "contact_website": "Website: www.pscsteering.com",
+            "desktop_width_percent": 100
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_2da1629_W9MUk6"
+      ],
+      "settings": {}
     }
   },
   "order": [
     "main",
     "blocks_tdaxhL",
     "rich_text_R3kECz",
-    "178215901468e81263"
+    "178215901468e81263",
+    "1788822649ed1ffd50",
+    "17888227976ee43a1c",
+    "1788822946178473d2"
   ]
 }
