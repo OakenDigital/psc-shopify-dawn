@@ -82,6 +82,7 @@
         "ai_gen_block_25ef8da_eYyqpQ"
       ],
       "disabled": true,
+      "custom_css": [],
       "name": "Image row",
       "settings": {}
     },
@@ -158,12 +159,104 @@
         "include_margins": true,
         "full_width": true
       }
+    },
+    "17888100285ad9bd3d": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_eef5293_Gr8NwF": {
+          "type": "ai_gen_block_eef5293",
+          "settings": {
+            "eyebrow": "PSC Motorsports installation guide",
+            "title": "Install with confidence",
+            "overview_heading": "Before you begin",
+            "overview": "<p>Review the complete guide before beginning. Confirm the vehicle application, inspect all components, and follow the sequence below for a precise installation.</p>",
+            "tools_heading": "Required tools",
+            "tools_list": "<ul><li>Complete socket and wrench set</li><li>Calibrated torque wrench</li><li>Vehicle-approved lifting equipment</li></ul>",
+            "parts_heading": "Required parts",
+            "parts_list": "<ul><li>Installation hardware</li><li>Replacement seals and fittings</li><li>Approved fluid or lubricant</li></ul>",
+            "steps_heading": "Installation instructions",
+            "step_1_title": "Prepare the vehicle",
+            "step_1_description": "<p>Secure the vehicle on a level surface, disconnect power where required, and verify that the work area is clean and accessible.</p>",
+            "step_2_title": "Remove existing components",
+            "step_2_description": "<p>Remove the original components methodically. Retain hardware only when the service procedure specifies reuse.</p>",
+            "step_3_title": "Install the new assembly",
+            "step_3_description": "<p>Position the assembly, start all fasteners by hand, and tighten evenly to prevent misalignment or damage.</p>",
+            "step_4_title": "Verify and test",
+            "step_4_description": "<p>Confirm clearances, inspect connections, apply the specified torque, and perform a controlled functional test.</p>",
+            "notes_heading": "Important notes",
+            "notes": "<p><strong>Torque and safety:</strong> Always use the vehicle and component manufacturer specifications. Never substitute fasteners or operate the vehicle until all safety checks are complete.</p>",
+            "products_heading": "Related parts",
+            "product_1": "",
+            "product_2": "",
+            "product_3": "",
+            "desktop_width_percent": 100,
+            "heading_font": "system_ui_n4",
+            "body_font": "system_ui_n4",
+            "background_color": "#FFFFFF",
+            "hero_background": "#F3F3F3",
+            "heading_color": "#121212",
+            "text_color": "#121212",
+            "accent_color": "#D6001C",
+            "rule_color": "#D9D9D9",
+            "notes_background": "#F3F3F3",
+            "muted_color": "#555555"
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_eef5293_Gr8NwF"
+      ],
+      "settings": {}
+    },
+    "17888104119cc4f605": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_c1a1464_6xRmyL": {
+          "type": "ai_gen_block_c1a1464",
+          "settings": {
+            "desktop_width_percent": 100,
+            "heading_font": "system_ui_n4",
+            "body_font": "system_ui_n4",
+            "logo_width": 140,
+            "category_label": "Accessory Drive Conversion Kits",
+            "product_title": "PSC Motorsports Installation Guide",
+            "compatible_parts": "Part number 1\nPart number 2",
+            "installation_label": "Installation Guide",
+            "toc_heading": "Table of Contents",
+            "toc_titles": "Before You Get Started\nWhat's in the Kit\nInstallation",
+            "toc_pages": "2\n3\n4",
+            "toc_items": "Safety|Tools\nBrackets|Components|Pump\nPrep|Install|Checks",
+            "before_heading": "Before You Get Started",
+            "before_text": "<p>Read all instructions before beginning. Contact support for <a href=\"#\">part numbers</a>.</p>",
+            "kit_heading": "What's in the Kit",
+            "kit_categories": "Brackets\nComponents\nPower Steering Pump",
+            "kit_parts": "BRK-001 — Main bracket|BRK-002 — Support bracket\nCMP-001 — Hardware|CMP-002 — Hoses\nPMP-001 — Performance pump",
+            "steps_heading": "Step-by-Step Installation",
+            "step_1_title": "Prep the Engine",
+            "step_1_text": "<p><strong>Prepare safely.</strong></p><ul><li>Disconnect power.</li><li>Clean the mounting surface.</li></ul>",
+            "step_2_title": "Install the Brackets",
+            "step_2_text": "<p>Align and torque the brackets.</p>",
+            "step_3_title": "Install Components",
+            "step_3_text": "<p>Route hoses away from heat and moving parts.</p>",
+            "step_4_title": "Final Checks",
+            "step_4_text": "<p>Fill, bleed, and check for leaks.</p>"
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_c1a1464_6xRmyL"
+      ],
+      "settings": {}
     }
   },
   "order": [
     "main",
     "blocks_tdaxhL",
     "rich_text_R3kECz",
-    "178215901468e81263"
+    "178215901468e81263",
+    "17888100285ad9bd3d",
+    "17888104119cc4f605"
   ]
 }
