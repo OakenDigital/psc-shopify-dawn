@@ -1,6 +1,74 @@
-{% schema %}
- {
-   "name": "AI_Block",
-   "tag": "shopify-ai-generated-block"
- }
-{% endschema %}
+{% doc %}
+  @prompt
+    Create a complete PSC Motorsports Installation Guide page block for the Shopify theme editor. This is a single self-contained block that renders a full installation guide document on a Shopify page.
+    
+    COVER PAGE SECTION:
+    - PSC logo centered at top
+    - Small caps eyebrow label with decorative horizontal rules on each side — editable field labeled "Guide Part Name" (e.g. "Accessory Drive Conversion Kits")
+    - Large bold red main title — editable field labeled "Guide Title" (e.g. "GM Gen 5 LT Engine")
+    - Centered dark text below the title — editable field labeled "Year" (e.g. "2014+")
+    - Red square bullet list below Year — editable field labeled "Part Numbers" supporting multiple entries on separate lines (e.g. "Part #: ADK-LT100")
+    - Featured kit photo in a rounded-corner bordered box — editable image field labeled "Kit Image"
+    - Bold centered "INSTALLATION GUIDE" label at the bottom of the cover
+    
+    INTERIOR PAGE HEADER (used on all interior sections):
+    - Diagonal black-to-gray chevron/stripe band across the top
+    - PSC logo centered below the band
+    
+    TABLE OF CONTENTS SECTION:
+    - Bold centered "TABLE OF CONTENTS" heading
+    - Entries with gray pill/tab-style labels showing section name and page range
+    - Bulleted sub-items under each entry
+    - All content editable as rich text
+    
+    BEFORE YOU GET STARTED SECTION:
+    - Interior header with diagonal stripe band + PSC logo
+    - Bold centered section title
+    - Body text paragraphs with support for red-colored inline hyperlinks
+    - Editable as rich text
+    
+    WHAT'S IN THE KIT SECTION:
+    - Interior header
+    - Grouped parts list with gray banner-style category headers (e.g. "BRACKETS", "COMPONENTS", "POWER STEERING PUMP")
+    - Bulleted part entries showing part number — description
+    - Editable as rich text
+    
+    STEP-BY-STEP INSTALLATION SECTION:
+    - Interior header
+    - Bold centered "INSTALLATION" heading
+    - Repeatable steps, each with:
+      - Left column: gray pill-style numbered step header, bold sub-labels, bullet point instructions
+      - Right column: step photo with a circled step number overlaid in the top-left corner
+    - Editable as rich text + image fields
+    
+    CONTACT US SECTION (final page):
+    - Centered PSC logo
+    - Bold centered "CONTACT US" heading
+    - Red centered subheading: "Questions about an install or need help finding the right part?"
+    - Centered contact info: Phone field, Hours field, Email field
+    - Bold large centered website URL field
+    
+    DESIGN REQUIREMENTS:
+    - Primary red accent: #CC0000
+    - Gray pill/tab section headers throughout
+    - Bold condensed sans-serif typography (Barlow Condensed from Google Fonts)
+    - Clean white background
+    - All text fields and images must be individually editable in the Shopify theme editor settings panel
+    - Block should be self-contained and work on any Shopify page assigned to this template
+{% enddoc %}
+{% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
+{% style %}
+.psc-guide-{{ ai_gen_id }}{display:block;width:{{ block.settings.desktop_width_percent }}%;max-width:100%;margin:0 auto;color:#171717;background:#fff;font-family:Arial,sans-serif}.psc-guide-{{ ai_gen_id }} .psc-page{padding:clamp(28px,5vw,72px) clamp(20px,6vw,86px);min-height:640px;box-sizing:border-box}.psc-guide-{{ ai_gen_id }} .psc-cover{display:flex;flex-direction:column;align-items:center;text-align:center}.psc-guide-{{ ai_gen_id }} .psc-logo{width:{{ block.settings.logo_width }}px;max-width:70%;height:auto;object-fit:contain}.psc-guide-{{ ai_gen_id }} .psc-cover .psc-logo{margin-bottom:48px}.psc-guide-{{ ai_gen_id }} .psc-eyebrow{display:flex;align-items:center;gap:14px;width:100%;justify-content:center;font-size:12px;letter-spacing:.18em;font-weight:700;text-transform:uppercase}.psc-guide-{{ ai_gen_id }} .psc-eyebrow:before,.psc-guide-{{ ai_gen_id }} .psc-eyebrow:after{content:"";height:1px;background:#cc0000;flex:1}.psc-guide-{{ ai_gen_id }} h1,.psc-guide-{{ ai_gen_id }} h2{font-weight:800;text-transform:uppercase;letter-spacing:.02em;margin:18px 0}.psc-guide-{{ ai_gen_id }} h1{color:#cc0000;font-size:clamp(34px,6vw,68px);line-height:.95}.psc-guide-{{ ai_gen_id }} h2{text-align:center;font-size:clamp(24px,4vw,40px)}.psc-guide-{{ ai_gen_id }} .psc-year{font-size:24px;font-weight:700}.psc-guide-{{ ai_gen_id }} .psc-parts{text-align:left;margin:25px auto;padding-left:22px;max-width:420px}.psc-guide-{{ ai_gen_id }} .psc-parts li::marker{color:#cc0000;font-size:1.4em}.psc-guide-{{ ai_gen_id }} .psc-kit-image{width:100%;max-width:650px;margin:20px auto 35px;border:1px solid #c9c9c9;border-radius:14px;overflow:hidden}.psc-guide-{{ ai_gen_id }} img{display:block;max-width:100%;height:auto}.psc-guide-{{ ai_gen_id }} .psc-placeholder{background:#f1f1f1;min-height:220px;display:flex;align-items:center;justify-content:center;color:#666}.psc-guide-{{ ai_gen_id }} .psc-placeholder svg{width:100%;height:220px}.psc-guide-{{ ai_gen_id }} .psc-footer-label{margin-top:auto;font-weight:800;letter-spacing:.16em}.psc-guide-{{ ai_gen_id }} .psc-band{height:70px;margin:calc(clamp(28px,5vw,72px) - 28px) calc(clamp(20px,6vw,86px) * -1) 30px;background:linear-gradient(135deg,#111 0 52%,#444 52% 68%,#777 68%)}.psc-guide-{{ ai_gen_id }} .psc-interior-header{text-align:center}.psc-guide-{{ ai_gen_id }} .psc-interior-header .psc-logo{margin-bottom:12px}.psc-guide-{{ ai_gen_id }} .psc-richtext{line-height:1.65;font-size:16px}.psc-guide-{{ ai_gen_id }} .psc-richtext a{color:#cc0000;font-weight:700}.psc-guide-{{ ai_gen_id }} .psc-richtext h3{background:#e5e5e5;border-radius:5px;padding:9px 14px;font-size:17px;letter-spacing:.08em}.psc-guide-{{ ai_gen_id }} .psc-toc .psc-richtext p strong{display:inline-block;background:#e5e5e5;border-radius:18px;padding:7px 15px}.psc-guide-{{ ai_gen_id }} .psc-step{display:grid;grid-template-columns:1fr 1fr;gap:30px;align-items:start;margin:36px 0}.psc-guide-{{ ai_gen_id }} .psc-step-label{display:inline-block;background:#e5e5e5;border-radius:18px;padding:8px 18px;font-weight:800}.psc-guide-{{ ai_gen_id }} .psc-step-media{position:relative;border:1px solid #c9c9c9;border-radius:10px;overflow:hidden}.psc-guide-{{ ai_gen_id }} .psc-step-number{position:absolute;top:12px;left:12px;width:40px;height:40px;border-radius:50%;display:grid;place-items:center;background:#cc0000;color:#fff;font-weight:800;z-index:1}.psc-guide-{{ ai_gen_id }} .psc-contact{text-align:center}.psc-guide-{{ ai_gen_id }} .psc-contact .psc-logo{margin-bottom:36px}.psc-guide-{{ ai_gen_id }} .psc-contact h2{margin-bottom:12px}.psc-guide-{{ ai_gen_id }} .psc-contact-subtitle{color:#cc0000;font-weight:700;font-size:18px}.psc-guide-{{ ai_gen_id }} .psc-website{font-size:clamp(24px,5vw,44px);font-weight:800;margin-top:30px}@media(max-width:749px){.psc-guide-{{ ai_gen_id }} .psc-page{min-height:0}.psc-guide-{{ ai_gen_id }} .psc-step{grid-template-columns:1fr}.psc-guide-{{ ai_gen_id }} .psc-band{height:48px}}
+{% endstyle %}
+<div class="psc-guide-{{ ai_gen_id }}" {{ block.shopify_attributes }}>
+<section class="psc-page psc-cover">{% if block.settings.logo %}<img class="psc-logo" src="{{ block.settings.logo | image_url: width: 600 }}" alt="{{ block.settings.logo.alt | escape }}">{% else %}<div class="psc-placeholder">Add the PSC logo</div>{% endif %}<div class="psc-eyebrow">{{ block.settings.guide_part_name }}</div><h1>{{ block.settings.guide_title }}</h1><div class="psc-year">{{ block.settings.year }}</div><ul class="psc-parts">{% assign part_lines = block.settings.part_numbers | newline_to_br | split: '<br />' %}{% for line in part_lines %}{% if line != blank %}<li>{{ line }}</li>{% endif %}{% endfor %}</ul><div class="psc-kit-image">{% if block.settings.kit_image %}<img src="{{ block.settings.kit_image | image_url: width: 1400 }}" alt="{{ block.settings.kit_image.alt | escape }}">{% else %}<div class="psc-placeholder">Add the kit image</div>{% endif %}</div><div class="psc-footer-label">INSTALLATION GUIDE</div></section>
+<section class="psc-page psc-toc"><div class="psc-interior-header"><div class="psc-band"></div>{% if block.settings.logo %}<img class="psc-logo" src="{{ block.settings.logo | image_url: width: 600 }}" alt="">{% endif %}</div><h2>TABLE OF CONTENTS</h2><div class="psc-richtext">{{ block.settings.table_contents }}</div></section>
+<section class="psc-page"><div class="psc-interior-header"><div class="psc-band"></div>{% if block.settings.logo %}<img class="psc-logo" src="{{ block.settings.logo | image_url: width: 600 }}" alt="">{% endif %}</div><h2>BEFORE YOU GET STARTED</h2><div class="psc-richtext">{{ block.settings.before_started }}</div></section>
+<section class="psc-page"><div class="psc-interior-header"><div class="psc-band"></div>{% if block.settings.logo %}<img class="psc-logo" src="{{ block.settings.logo | image_url: width: 600 }}" alt="">{% endif %}</div><h2>WHAT'S IN THE KIT</h2><div class="psc-richtext">{{ block.settings.kit_contents }}</div></section>
+<section class="psc-page"><div class="psc-interior-header"><div class="psc-band"></div>{% if block.settings.logo %}<img class="psc-logo" src="{{ block.settings.logo | image_url: width: 600 }}" alt="">{% endif %}</div><h2>INSTALLATION</h2>{% for i in (1..3) %}{% liquid
+assign label_key = 'step_' | append: i | append: '_label'
+assign text_key = 'step_' | append: i | append: '_text'
+assign image_key = 'step_' | append: i | append: '_image'
+%}<div class="psc-step"><div><div class="psc-step-label">STEP {{ i }}{% if block.settings[label_key] != blank %} — {{ block.settings[label_key] }}{% endif %}</div><div class="psc-richtext">{{ block.settings[text_key] }}</div></div><div class="psc-step-media"><span class="psc-step-number">{{ i }}</span>{% if block.settings[image_key] %}<img src="{{ block.settings[image_key] | image_url: width: 1000 }}" alt="Step {{ i }}">{% else %}<div class="psc-placeholder">Add step photo</div>{% endif %}</div></div>{% endfor %}</section>
+<section class="psc-page psc-contact"><div class="psc-interior-header">{% if block.settings.logo %}<img class="psc-logo" src="{{ block.settings.logo | image_url: width: 600 }}" alt="">{% endif %}</div><h2>CONTACT US</h2><div class="psc-contact-subtitle">{{ block.settings.contact_subheading }}</div><div class="psc-richtext">{{ block.settings.contact_details }}</div><div class="psc-website">{{ block.settings.website }}</div></section></div>
+{% schema %}{"name":"PSC installation guide","settings":[{"type":"header","content":"Brand and cover"},{"type":"image_picker","id":"logo","label":"PSC logo"},{"type":"range","id":"logo_width","label":"Logo width","min":50,"max":300,"step":10,"unit":"px","default":140},{"type":"text","id":"guide_part_name","label":"Guide part name","default":"Accessory Drive Conversion Kits"},{"type":"text","id":"guide_title","label":"Guide title","default":"GM Gen 5 LT Engine"},{"type":"text","id":"year","label":"Year","default":"2014+"},{"type":"textarea","id":"part_numbers","label":"Part numbers","default":"Part #: ADK-LT100"},{"type":"image_picker","id":"kit_image","label":"Kit image"},{"type":"header","content":"Guide content"},{"type":"richtext","id":"table_contents","label":"Table of contents","default":"<p><strong>01 — BEFORE YOU GET STARTED</strong></p><ul><li>Important information</li></ul><p><strong>02 — WHAT'S IN THE KIT</strong></p><ul><li>Parts and components</li></ul><p><strong>03 — INSTALLATION</strong></p><ul><li>Step-by-step instructions</li></ul>"},{"type":"richtext","id":"before_started","label":"Before you get started","default":"<p>Read all instructions before beginning installation. Verify that all parts are present and consult a qualified technician if needed.</p>"},{"type":"richtext","id":"kit_contents","label":"What's in the kit","default":"<h3>BRACKETS</h3><ul><li>Part number — Description</li></ul><h3>COMPONENTS</h3><ul><li>Part number — Description</li></ul><h3>POWER STEERING PUMP</h3><ul><li>Part number — Description</li></ul>"},{"type":"header","content":"Installation steps"},{"type":"text","id":"step_1_label","label":"Step 1 label","default":"Prepare the vehicle"},{"type":"richtext","id":"step_1_text","label":"Step 1 instructions","default":"<ul><li>Disconnect the battery.</li><li>Confirm the work area is clean.</li></ul>"},{"type":"image_picker","id":"step_1_image","label":"Step 1 photo"},{"type":"text","id":"step_2_label","label":"Step 2 label","default":"Remove existing components"},{"type":"richtext","id":"step_2_text","label":"Step 2 instructions","default":"<ul><li>Remove the original components carefully.</li><li>Retain hardware for reference.</li></ul>"},{"type":"image_picker","id":"step_2_image","label":"Step 2 photo"},{"type":"text","id":"step_3_label","label":"Step 3 label","default":"Install the kit"},{"type":"richtext","id":"step_3_text","label":"Step 3 instructions","default":"<ul><li>Install the brackets and components.</li><li>Torque fasteners to the vehicle manufacturer's specification.</li></ul>"},{"type":"image_picker","id":"step_3_image","label":"Step 3 photo"},{"type":"header","content":"Contact"},{"type":"text","id":"contact_subheading","label":"Contact subheading","default":"Questions about an install or need help finding the right part?"},{"type":"richtext","id":"contact_details","label":"Contact details","default":"<p>Phone: (817) 572-6800<br>Hours: Monday–Friday, 8:00 AM–5:00 PM CT<br>Email: sales@pscsteering.com</p>"},{"type":"text","id":"website","label":"Website","default":"www.pscsteering.com"},{"type":"range","id":"desktop_width_percent","label":"Desktop width","min":50,"max":100,"step":5,"unit":"%","default":100}],"presets":[{"name":"PSC installation guide"}],"tag":null,"class":"psc-installation-guide"}{% endschema %}
