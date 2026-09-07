@@ -167,8 +167,9 @@
         "ai_gen_block_eef5293_Gr8NwF": {
           "type": "ai_gen_block_eef5293",
           "settings": {
-            "eyebrow": "Accessory Drive Conversion Kits",
-            "title": "GM Gen 5 LT Engine (2014+)",
+            "eyebrow": "BIG BORE XD® Cylinder Assist® Kit",
+            "title": "RAM 2500 / 3500 (2014–2024)",
+            "hero_image": "shopify://shop_images/SK858.png",
             "overview_heading": "Before you begin",
             "overview": "<p>Review the complete guide before beginning. Confirm the vehicle application, inspect all components, and follow the sequence below for a precise installation.</p>",
             "tools_heading": "Required tools",
@@ -221,8 +222,8 @@
             "body_font": "system_ui_n4",
             "logo": "shopify://shop_images/PSC_border_blk-red_6badc1b4-f2cd-4d96-a070-cafbd33ff977.png",
             "logo_width": 140,
-            "category_label": "Accessory Drive Conversion Kits",
-            "product_title": "PSC Motorsports Installation Guide",
+            "category_label": "BIG BORE XD® Cylinder Assist® Kit",
+            "product_title": "RAM 2500 / 3500 (2014–2024)",
             "compatible_parts": "Part number 1\nPart number 2",
             "installation_label": "Installation Guide",
             "toc_heading": "Table of Contents",
@@ -261,6 +262,56 @@
         "padding_top": 0,
         "padding_bottom": 0
       }
+    },
+    "178881497285cf92a2": {
+      "type": "_blocks",
+      "settings": {}
+    },
+    "1788815228678481b8": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_257302d_VNRerN": {
+          "type": "ai_gen_block_257302d",
+          "settings": {
+            "heading_font": "system_ui_n4",
+            "body_font": "system_ui_n4",
+            "desktop_width_percent": 100,
+            "guide_part_name": "Accessory Drive Conversion Kits",
+            "guide_title": "GM Gen 5 LT Engine",
+            "guide_year": "2014+",
+            "part_numbers": "Part #: ADK-LT100\nPart #: ADK-LT200",
+            "cover_footer": "Installation Guide",
+            "toc_heading": "Table of Contents",
+            "toc_content": "<p><strong>01</strong> Before You Get Started</p><p><strong>02</strong> What's in the Kit</p><p><strong>03</strong> Step-by-Step Installation</p><p><strong>04</strong> Contact Us</p>",
+            "started_heading": "Before You Get Started",
+            "started_content": "<p>Read all instructions before beginning installation. Verify all parts and review the latest information at <a href=\"https://www.pscsteering.com\">pscsteering.com</a>.</p>",
+            "kit_heading": "What's in the Kit",
+            "kit_category_1": "Brackets",
+            "kit_items_1": "ADK-BKT-01 — Main mounting bracket\nADK-BKT-02 — Support bracket",
+            "kit_category_2": "Components",
+            "kit_items_2": "ADK-HW-01 — Hardware kit\nADK-PUL-01 — Pulley assembly",
+            "kit_category_3": "Supplies",
+            "kit_items_3": "ADK-LBL-01 — Installation label\nADK-MAN-01 — Instructions",
+            "steps_heading": "Step-by-Step Installation",
+            "step_1_title": "Prepare the vehicle",
+            "step_1_text": "Disconnect the battery. Remove components as required. Confirm mounting surfaces are clean and secure.",
+            "step_2_title": "Install brackets",
+            "step_2_text": "Position the brackets and hand-start all fasteners. Torque hardware to the vehicle and kit specifications.",
+            "step_3_title": "Complete the assembly",
+            "step_3_text": "Install remaining components, inspect belt alignment, and test the system before driving.",
+            "contact_heading": "Contact Us",
+            "contact_title": "CONTACT US",
+            "contact_subheading": "Our team is here to help.",
+            "contact_details": "<p><strong>Phone:</strong> 1-800-617-1811<br><strong>Hours:</strong> Monday–Friday, 8 AM–5 PM CT<br><strong>Email:</strong> sales@pscsteering.com</p>",
+            "website": "www.pscsteering.com"
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_257302d_VNRerN"
+      ],
+      "settings": {}
     }
   },
   "order": [
@@ -270,6 +321,8 @@
     "178215901468e81263",
     "17888100285ad9bd3d",
     "17888104119cc4f605",
-    "custom_liquid_PAq7Dy"
+    "custom_liquid_PAq7Dy",
+    "178881497285cf92a2",
+    "1788815228678481b8"
   ]
 }
