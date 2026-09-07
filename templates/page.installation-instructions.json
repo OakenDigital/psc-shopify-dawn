@@ -11,52 +11,6 @@
   "sections": {
     "1788815228678481b8": {
       "type": "_blocks",
-      "blocks": {
-        "ai_gen_block_257302d_VNRerN": {
-          "type": "ai_gen_block_257302d",
-          "settings": {
-            "heading_font": "system_ui_n4",
-            "body_font": "system_ui_n4",
-            "desktop_width_percent": 100,
-            "guide_part_name": "BIG BORE XD® Cylinder Assist® Kit",
-            "guide_title": "Ram 2500 / 3500",
-            "guide_year": "2014–2024",
-            "part_numbers": "– Bolt-On Installation\nPart #: SK858",
-            "kit_image": "shopify://shop_images/SK858.png",
-            "cover_footer": "Installation Guide",
-            "toc_heading": "Table of Contents",
-            "toc_content": "<p><strong>3</strong> Before You Start</p><p><strong>4</strong> What's in the Kit</p><p><strong>5</strong> Tools Needed & Safety Prep</p><p><strong>6-11</strong> Step-by-Step Installation</p><p><strong>12-13</strong> Bleeding the System</p><p><strong>14 </strong>Contact Us</p>",
-            "started_heading": "Before You Get Started",
-            "started_content": "<p>Before you dive in, take a minute to set yourself up right. This job’s straightforward if you’ve got the basics covered:</p><ul><li><strong>Park it solid. </strong>Level ground, parking brake on, wheels chocked. You don’t want<br/>that truck moving while you’re under it.</li><li><strong>Lift smart. </strong>If you’re using a jack, support the front axle with stands. Never<br/>trust just the jack.</li><li><strong>Eye and hand protection. P</strong>ower steering fluid isn’t something you want in your<br/>eyes—or all over your hands.</li><li><strong>Clean work area. </strong>Dirt and grit in the system will wreck a pump fast. Wipe down mounting surfaces before installing the new gear.</li><li><strong>Have a drain pan ready. </strong>You’ll lose some fluid when you pull the old lines. Keep<br/>it con­tained.</li><li><strong>Torque matters. </strong>Factory bolts and PSC hardware have specific torque specs. Use a torque wrench, not “good and tight.”</li><li><strong>Double-check steering wheel position. </strong>Center it and lock it before you pull the old steering gear. That keeps your alignment true.</li><li><strong>Plan for bleeding time. </strong>This isn’t a rush job—bleeding the system right is<br/>critical. Give yourself extra time and patience.</li></ul>",
-            "kit_heading": "What's in the Kit",
-            "kit_category_1": "Box 1 —",
-            "kit_items_1": "SG856R— Cylinder Assist Steering Gear",
-            "kit_category_2": "Box 2 — CAK858 — Cylinder Assist Axle Kit",
-            "kit_items_2": "(1) SC2200 – Cylinder Assist® – Single-Ended – 1.5” x 8.0”\n(1) MB34K – Mounting Bracket – Cylinder Assist® – Ram 2500/3500 (2019–2021)\n(1) HK2062 – Hose Kit – Ram 2500/3500 Cylinder Assist® (2014+)\n(1) REXFR10 – Rod End – Female Shank – RH Thread – 5/8-18 FR x 5/8” Ball\n(1) REXMR10-SS – Rod End – Male – 5/8-18 x 5/8” – Shortened .750”\n(2) FSNJ-5/8-18RH – 5/8-18 RH Jam Nut\n(1) FL-SWE715-4PAK – PSC 715 Power Steering Fluid – 4-Quart Pack",
-            "kit_category_3": "Tools Needed",
-            "kit_items_3": "•  Pitman arm puller\n•  5/8” drill bit\n•  Torque wrench (up to 180 ft-lbs)\n•  Standard hand tools",
-            "steps_heading": "Step-by-Step Installation",
-            "step_1_title": "Center & Lock the Steering Wheel",
-            "step_1_text": "Center and lock the steering wheel so the\nnew steering gear lines up exactly like the\nold one.\n\n(Photo shown is from a previous build, but\nthe process is the same.)",
-            "step_1_image": "shopify://shop_images/step_1.png",
-            "step_2_title": "Install brackets",
-            "step_2_text": "Position the brackets and hand-start all fasteners. Torque hardware to the vehicle and kit specifications.",
-            "step_2_image": "shopify://shop_images/step_2.png",
-            "step_3_title": "Remove Factory Lines",
-            "step_3_text": "Loosen and remove both factory steering lines. \n\nDrain fluid into a pan and set lines aside.",
-            "step_3_image": "shopify://shop_images/PSC_no_border_white-psc-2016svr.jpg",
-            "contact_heading": "Contact Us",
-            "contact_title": "CONTACT US",
-            "contact_subheading": "Our team is here to help.",
-            "contact_details": "<p><strong>Phone:</strong> 1-800-617-1811<br/><strong>Hours:</strong> Monday–Friday, 8 AM–5 PM CT<br/><strong>Email:</strong> sales@pscsteering.com</p>",
-            "website": "www.pscsteering.com"
-          },
-          "blocks": {}
-        }
-      },
-      "block_order": [
-        "ai_gen_block_257302d_VNRerN"
-      ],
       "settings": {}
     },
     "main": {
@@ -224,52 +178,6 @@
     },
     "17888100285ad9bd3d": {
       "type": "_blocks",
-      "blocks": {
-        "ai_gen_block_eef5293_Gr8NwF": {
-          "type": "ai_gen_block_eef5293",
-          "settings": {
-            "eyebrow": "BIG BORE XD® Cylinder Assist® Kit | Part #: SK858",
-            "title": "RAM 2500 / 3500 (2014–2024) |                  Bolt-On Installation",
-            "hero_image": "shopify://shop_images/SK858.png",
-            "overview_heading": "Before you begin",
-            "overview": "<p>Review the complete guide before beginning. Confirm the vehicle application, inspect all components, and follow the sequence below for a precise installation.</p>",
-            "tools_heading": "Required tools",
-            "tools_list": "<ul><li>Complete socket and wrench set</li><li>Calibrated torque wrench</li><li>Vehicle-approved lifting equipment</li></ul>",
-            "parts_heading": "Required parts",
-            "parts_list": "<ul><li>Installation hardware</li><li>Replacement seals and fittings</li><li>Approved fluid or lubricant</li></ul>",
-            "steps_heading": "Installation instructions",
-            "step_1_title": "Prepare the vehicle",
-            "step_1_description": "<p>Secure the vehicle on a level surface, disconnect power where required, and verify that the work area is clean and accessible.</p>",
-            "step_2_title": "Remove existing components",
-            "step_2_description": "<p>Remove the original components methodically. Retain hardware only when the service procedure specifies reuse.</p>",
-            "step_3_title": "Install the new assembly",
-            "step_3_description": "<p>Position the assembly, start all fasteners by hand, and tighten evenly to prevent misalignment or damage.</p>",
-            "step_4_title": "Verify and test",
-            "step_4_description": "<p>Confirm clearances, inspect connections, apply the specified torque, and perform a controlled functional test.</p>",
-            "notes_heading": "Important notes",
-            "notes": "<p><strong>Torque and safety:</strong> Always use the vehicle and component manufacturer specifications. Never substitute fasteners or operate the vehicle until all safety checks are complete.</p>",
-            "products_heading": "Related parts",
-            "product_1": "",
-            "product_2": "",
-            "product_3": "",
-            "desktop_width_percent": 100,
-            "heading_font": "system_ui_n4",
-            "body_font": "system_ui_n4",
-            "background_color": "#ffffff",
-            "hero_background": "#f3f3f3",
-            "heading_color": "#121212",
-            "text_color": "#121212",
-            "accent_color": "#d6001c",
-            "rule_color": "#d9d9d9",
-            "notes_background": "#f3f3f3",
-            "muted_color": "#555555"
-          },
-          "blocks": {}
-        }
-      },
-      "block_order": [
-        "ai_gen_block_eef5293_Gr8NwF"
-      ],
       "settings": {}
     },
     "17888104119cc4f605": {
@@ -278,6 +186,39 @@
     },
     "178881497285cf92a2": {
       "type": "_blocks",
+      "settings": {}
+    },
+    "17888186808996261c": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_57855f2_rkne9j": {
+          "type": "ai_gen_block_57855f2",
+          "settings": {
+            "logo_width": 140,
+            "guide_part_name": "Accessory Drive Conversion Kits",
+            "guide_title": "GM Gen 5 LT Engine",
+            "year": "2014+",
+            "part_numbers": "Part #: ADK-LT100",
+            "table_contents": "<p><strong>01 — BEFORE YOU GET STARTED</strong></p><ul><li>Important information</li></ul><p><strong>02 — WHAT'S IN THE KIT</strong></p><ul><li>Parts and components</li></ul><p><strong>03 — INSTALLATION</strong></p><ul><li>Step-by-step instructions</li></ul>",
+            "before_started": "<p>Read all instructions before beginning installation. Verify that all parts are present and consult a qualified technician if needed.</p>",
+            "kit_contents": "<h3>BRACKETS</h3><ul><li>Part number — Description</li></ul><h3>COMPONENTS</h3><ul><li>Part number — Description</li></ul><h3>POWER STEERING PUMP</h3><ul><li>Part number — Description</li></ul>",
+            "step_1_label": "Prepare the vehicle",
+            "step_1_text": "<ul><li>Disconnect the battery.</li><li>Confirm the work area is clean.</li></ul>",
+            "step_2_label": "Remove existing components",
+            "step_2_text": "<ul><li>Remove the original components carefully.</li><li>Retain hardware for reference.</li></ul>",
+            "step_3_label": "Install the kit",
+            "step_3_text": "<ul><li>Install the brackets and components.</li><li>Torque fasteners to the vehicle manufacturer's specification.</li></ul>",
+            "contact_subheading": "Questions about an install or need help finding the right part?",
+            "contact_details": "<p>Phone: (817) 572-6800<br>Hours: Monday–Friday, 8:00 AM–5:00 PM CT<br>Email: sales@pscsteering.com</p>",
+            "website": "www.pscsteering.com",
+            "desktop_width_percent": 100
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_57855f2_rkne9j"
+      ],
       "settings": {}
     }
   },
@@ -290,6 +231,7 @@
     "178215901468e81263",
     "17888100285ad9bd3d",
     "17888104119cc4f605",
-    "178881497285cf92a2"
+    "178881497285cf92a2",
+    "17888186808996261c"
   ]
 }
