@@ -9,6 +9,53 @@
  */
 {
   "sections": {
+    "1788815228678481b8": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_257302d_VNRerN": {
+          "type": "ai_gen_block_257302d",
+          "settings": {
+            "heading_font": "system_ui_n4",
+            "body_font": "system_ui_n4",
+            "desktop_width_percent": 100,
+            "guide_part_name": "BIG BORE XD® Cylinder Assist® Kit",
+            "guide_title": "Ram 2500 / 3500",
+            "guide_year": "2014–2024",
+            "part_numbers": "– Bolt-On Installation\nPart #: SK858",
+            "kit_image": "shopify://shop_images/SK858.png",
+            "cover_footer": "Installation Guide",
+            "toc_heading": "Table of Contents",
+            "toc_content": "<p><strong>3</strong> Before You Start</p><p><strong>4</strong> What's in the Kit</p><p><strong>5</strong> Tools Needed & Safety Prep</p><p><strong>6-11</strong> Step-by-Step Installation</p><p><strong>12-13</strong> Bleeding the System</p><p><strong>14 </strong>Contact Us</p>",
+            "started_heading": "Before You Get Started",
+            "started_content": "<p>Before you dive in, take a minute to set yourself up right. This job’s straightforward if you’ve got the basics covered:</p><ul><li><strong>Park it solid. </strong>Level ground, parking brake on, wheels chocked. You don’t want<br/>that truck moving while you’re under it.</li><li><strong>Lift smart. </strong>If you’re using a jack, support the front axle with stands. Never<br/>trust just the jack.</li><li><strong>Eye and hand protection. P</strong>ower steering fluid isn’t something you want in your<br/>eyes—or all over your hands.</li><li><strong>Clean work area. </strong>Dirt and grit in the system will wreck a pump fast. Wipe down mounting surfaces before installing the new gear.</li><li><strong>Have a drain pan ready. </strong>You’ll lose some fluid when you pull the old lines. Keep<br/>it con­tained.</li><li><strong>Torque matters. </strong>Factory bolts and PSC hardware have specific torque specs. Use a torque wrench, not “good and tight.”</li><li><strong>Double-check steering wheel position. </strong>Center it and lock it before you pull the old steering gear. That keeps your alignment true.</li><li><strong>Plan for bleeding time. </strong>This isn’t a rush job—bleeding the system right is<br/>critical. Give yourself extra time and patience.</li></ul>",
+            "kit_heading": "What's in the Kit",
+            "kit_category_1": "Brackets",
+            "kit_items_1": "ADK-BKT-01 — Main mounting bracket\nADK-BKT-02 — Support bracket",
+            "kit_category_2": "Components",
+            "kit_items_2": "ADK-HW-01 — Hardware kit\nADK-PUL-01 — Pulley assembly",
+            "kit_category_3": "Supplies",
+            "kit_items_3": "ADK-LBL-01 — Installation label\nADK-MAN-01 — Instructions",
+            "steps_heading": "Step-by-Step Installation",
+            "step_1_title": "Prepare the vehicle",
+            "step_1_text": "Disconnect the battery. Remove components as required. Confirm mounting surfaces are clean and secure.",
+            "step_2_title": "Install brackets",
+            "step_2_text": "Position the brackets and hand-start all fasteners. Torque hardware to the vehicle and kit specifications.",
+            "step_3_title": "Complete the assembly",
+            "step_3_text": "Install remaining components, inspect belt alignment, and test the system before driving.",
+            "contact_heading": "Contact Us",
+            "contact_title": "CONTACT US",
+            "contact_subheading": "Our team is here to help.",
+            "contact_details": "<p><strong>Phone:</strong> 1-800-617-1811<br/><strong>Hours:</strong> Monday–Friday, 8 AM–5 PM CT<br/><strong>Email:</strong> sales@pscsteering.com</p>",
+            "website": "www.pscsteering.com"
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_257302d_VNRerN"
+      ],
+      "settings": {}
+    },
     "main": {
       "type": "main-page",
       "disabled": true,
@@ -19,6 +66,7 @@
     },
     "custom_liquid_PAq7Dy": {
       "type": "custom-liquid",
+      "disabled": true,
       "name": "t:sections.custom-liquid.presets.name",
       "settings": {
         "custom_liquid": "<div style=\"text-align:center; background:#ffffff; color:#121212; padding:48px 24px 56px; font-family:inherit;\">\n  <div style=\"margin:0 auto 28px;\">\n    {% if settings.logo != blank %}{{ settings.logo | image_url: width: 320 | image_tag: alt: 'PSC Steering', style: 'max-width:160px;height:auto;margin:0 auto;' }}{% endif %}\n  </div>\n  <h2 style=\"margin:0 0 18px; font-weight:700; letter-spacing:.08em;\">CONTACT US</h2>\n  <p style=\"margin:0 auto 24px; max-width:620px; color:#d6001c; font-style:italic; font-weight:600;\">Questions about an install or need help finding the right part?</p>\n  <div style=\"line-height:1.8; margin:0 auto 44px;\">\n    <div>Phone: (817) 270-0102</div>\n    <div>Mon-Fri | 9 AM–5 PM CT</div>\n    <div>Email: <a href=\"mailto:support@pscmotorsports.com\" style=\"color:#121212;\">support@pscmotorsports.com</a></div>\n  </div>\n  <div style=\"font-size:clamp(1.35rem,3vw,2.25rem); font-weight:700; letter-spacing:.06em;\">WWW.PSCSTEERING.COM</div>\n</div>",
@@ -204,13 +252,13 @@
             "desktop_width_percent": 100,
             "heading_font": "system_ui_n4",
             "body_font": "system_ui_n4",
-            "background_color": "#FFFFFF",
-            "hero_background": "#F3F3F3",
+            "background_color": "#ffffff",
+            "hero_background": "#f3f3f3",
             "heading_color": "#121212",
             "text_color": "#121212",
-            "accent_color": "#D6001C",
-            "rule_color": "#D9D9D9",
-            "notes_background": "#F3F3F3",
+            "accent_color": "#d6001c",
+            "rule_color": "#d9d9d9",
+            "notes_background": "#f3f3f3",
             "muted_color": "#555555"
           },
           "blocks": {}
@@ -228,55 +276,10 @@
     "178881497285cf92a2": {
       "type": "_blocks",
       "settings": {}
-    },
-    "1788815228678481b8": {
-      "type": "_blocks",
-      "blocks": {
-        "ai_gen_block_257302d_VNRerN": {
-          "type": "ai_gen_block_257302d",
-          "settings": {
-            "heading_font": "system_ui_n4",
-            "body_font": "system_ui_n4",
-            "desktop_width_percent": 100,
-            "guide_part_name": "Accessory Drive Conversion Kits",
-            "guide_title": "GM Gen 5 LT Engine",
-            "guide_year": "2014+",
-            "part_numbers": "Part #: ADK-LT100\nPart #: ADK-LT200",
-            "cover_footer": "Installation Guide",
-            "toc_heading": "Table of Contents",
-            "toc_content": "<p><strong>01</strong> Before You Get Started</p><p><strong>02</strong> What's in the Kit</p><p><strong>03</strong> Step-by-Step Installation</p><p><strong>04</strong> Contact Us</p>",
-            "started_heading": "Before You Get Started",
-            "started_content": "<p>Read all instructions before beginning installation. Verify all parts and review the latest information at <a href=\"https://www.pscsteering.com\">pscsteering.com</a>.</p>",
-            "kit_heading": "What's in the Kit",
-            "kit_category_1": "Brackets",
-            "kit_items_1": "ADK-BKT-01 — Main mounting bracket\nADK-BKT-02 — Support bracket",
-            "kit_category_2": "Components",
-            "kit_items_2": "ADK-HW-01 — Hardware kit\nADK-PUL-01 — Pulley assembly",
-            "kit_category_3": "Supplies",
-            "kit_items_3": "ADK-LBL-01 — Installation label\nADK-MAN-01 — Instructions",
-            "steps_heading": "Step-by-Step Installation",
-            "step_1_title": "Prepare the vehicle",
-            "step_1_text": "Disconnect the battery. Remove components as required. Confirm mounting surfaces are clean and secure.",
-            "step_2_title": "Install brackets",
-            "step_2_text": "Position the brackets and hand-start all fasteners. Torque hardware to the vehicle and kit specifications.",
-            "step_3_title": "Complete the assembly",
-            "step_3_text": "Install remaining components, inspect belt alignment, and test the system before driving.",
-            "contact_heading": "Contact Us",
-            "contact_title": "CONTACT US",
-            "contact_subheading": "Our team is here to help.",
-            "contact_details": "<p><strong>Phone:</strong> 1-800-617-1811<br/><strong>Hours:</strong> Monday–Friday, 8 AM–5 PM CT<br/><strong>Email:</strong> sales@pscsteering.com</p>",
-            "website": "www.pscsteering.com"
-          },
-          "blocks": {}
-        }
-      },
-      "block_order": [
-        "ai_gen_block_257302d_VNRerN"
-      ],
-      "settings": {}
     }
   },
   "order": [
+    "1788815228678481b8",
     "main",
     "custom_liquid_PAq7Dy",
     "blocks_tdaxhL",
@@ -284,7 +287,6 @@
     "178215901468e81263",
     "17888100285ad9bd3d",
     "17888104119cc4f605",
-    "178881497285cf92a2",
-    "1788815228678481b8"
+    "178881497285cf92a2"
   ]
 }
