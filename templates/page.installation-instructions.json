@@ -193,6 +193,7 @@
       "blocks": {
         "ai_gen_block_57855f2_rkne9j": {
           "type": "ai_gen_block_57855f2",
+          "disabled": true,
           "settings": {
             "logo_width": 140,
             "guide_part_name": "Accessory Drive Conversion Kits",
@@ -209,7 +210,7 @@
             "step_3_label": "Install the kit",
             "step_3_text": "<ul><li>Install the brackets and components.</li><li>Torque fasteners to the vehicle manufacturer's specification.</li></ul>",
             "contact_subheading": "Questions about an install or need help finding the right part?",
-            "contact_details": "<p>Phone: (817) 572-6800<br>Hours: Monday–Friday, 8:00 AM–5:00 PM CT<br>Email: sales@pscsteering.com</p>",
+            "contact_details": "<p>Phone: (817) 572-6800<br/>Hours: Monday–Friday, 8:00 AM–5:00 PM CT<br/>Email: sales@pscsteering.com</p>",
             "website": "www.pscsteering.com",
             "desktop_width_percent": 100
           },
@@ -218,6 +219,76 @@
       },
       "block_order": [
         "ai_gen_block_57855f2_rkne9j"
+      ],
+      "settings": {}
+    },
+    "1788819316fcc4b546": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_6cc7971_Cm8yem": {
+          "type": "ai_gen_block_6cc7971",
+          "settings": {
+            "logo": "shopify://shop_images/PSC_border_blk-red_6badc1b4-f2cd-4d96-a070-cafbd33ff977.png",
+            "kit_image": "shopify://shop_images/SK858.png",
+            "heading_font": "system_ui_n4",
+            "body_font": "system_ui_n4",
+            "logo_width": 140,
+            "desktop_width_percent": 100,
+            "guide_category": "Technical installation guide",
+            "product_title": "Ram 2500 / 3500",
+            "product_application": "BIG BORE XD® Cylinder Assist® Kit",
+            "product_year": "2014–2024",
+            "part_numbers": "<p>Part # SK858</p>",
+            "cover_label": "INSTALLATION GUIDE",
+            "toc_title": "TABLE OF CONTENTS",
+            "toc_1_title": "Before you get started",
+            "toc_1_range": "3",
+            "toc_1_items": "<ul><li>Tools and safety</li></ul>",
+            "toc_2_title": "What's in the kit",
+            "toc_2_range": "4",
+            "toc_2_items": "<ul><li>Included components</li></ul>",
+            "toc_3_title": "Installation",
+            "toc_3_range": "5-13",
+            "toc_3_items": "<ul><li>Step-by-step procedure</li></ul>",
+            "toc_4_title": "Contact us",
+            "toc_4_range": "14",
+            "toc_4_items": "<ul><li>Technical support</li></ul>",
+            "before_title": "BEFORE YOU GET STARTED",
+            "before_body": "<p> Before you dive in, take a minute to set yourself up right.<br/>This job’s straightforward if you’ve got the basics covered:</p><ul><li><strong>Park it solid. </strong>Level ground, parking brake on, wheels chocked. You don’t want that truck moving while you’re under it.</li><li><strong>Lift smart. </strong>If you’re using a jack, support the front axle with stands. Never<br/>trust just the jack.</li><li><strong>Eye and hand protection. P</strong>ower steering fluid isn’t something you want in your eyes—or all over your hands.</li><li><strong>Clean work area. </strong>Dirt and grit in the system will wreck a pump fast. Wipe down mounting surfaces before installing the new gear.</li><li><strong>Have a drain pan ready. </strong>You’ll lose some fluid when you pull the old lines. Keep<br/>it con­tained.</li><li><strong>Torque matters. </strong>Factory bolts and PSC hardware have specific torque specs. Use a torque wrench, not “good and tight.”</li><li><strong>Double-check steering wheel position. </strong>Center it and lock it before you pull the old steering gear. That keeps your alignment true.</li><li><strong>Plan for bleeding time. </strong>This isn’t a rush job—bleeding the system right is<br/>critical. Give yourself extra time and patience.</li></ul>",
+            "kit_title": "WHAT'S IN THE KIT",
+            "kit_1_header": "Box 1 —",
+            "kit_1_body": "<ul><li>SG856R— Cylinder Assist Steering Gear</li></ul>",
+            "kit_2_header": "Box 2 — CAK858 — Cylinder Assist Axle Kit —",
+            "kit_2_body": "<ul><li>(1) SC2200 – Cylinder Assist® – Single-Ended – 1.5” x 8.0”</li><li>(1) MB34K – Mounting Bracket – Cylinder Assist® – Ram 2500/3500 (2019–2021)</li><li>(1) HK2062 – Hose Kit – Ram 2500/3500 Cylinder Assist® (2014+)</li><li>(1) REXFR10 – Rod End – Female Shank – RH Thread – 5/8-18 FR x 5/8” Ball</li><li>(1) REXMR10-SS – Rod End – Male – 5/8-18 x 5/8” – Shortened .750”</li><li>(2) FSNJ-5/8-18RH – 5/8-18 RH Jam Nut</li><li>(1) FL-SWE715-4PAK – PSC 715 Power Steering Fluid – 4-Quart Pack</li></ul>",
+            "kit_3_header": "Tools Needed",
+            "kit_3_body": "<ul><li>Pitman arm puller</li><li>5/8” drill bit</li><li>Torque wrench (up to 180 ft-lbs)</li><li>Standard hand tools</li></ul>",
+            "install_title": "INSTALLATION",
+            "step_1_enabled": true,
+            "step_1_header": "STEP 1",
+            "step_1_label": "Center & Lock the Steering Wheel",
+            "step_1_body": "<p>Center and lock the steering wheel so the<br/>new steering gear lines up exactly like the<br/>old one.</p><p><em>(Photo shown is from a previous build, but<br/>the process is the same.)</em></p>",
+            "step_2_enabled": true,
+            "step_2_header": "STEP 2",
+            "step_2_label": "Disconnect Steering Shaft",
+            "step_2_body": "<p>Remove the bolt from the lower steering<br/>shaft at the gear.</p><p>Slide the shaft off and move it out of the<br/>way.</p>",
+            "step_3_enabled": true,
+            "step_3_header": "STEP 3",
+            "step_3_label": "Remove Factory Lines",
+            "step_3_body": "<p>Loosen and remove both factory steering<br/>lines.</p><p>Drain fluid into a pan and set lines aside.</p>",
+            "step_4_enabled": true,
+            "step_4_header": "STEP 4",
+            "step_4_label": "Pull the Pitman Arm",
+            "step_4_body": "<p>Remove the nut and washer, then use a<br/>pitman arm puller to remove the arm<br/>completely.</p><p><em><strong>Tip:</strong></em><em> Before you pull the old steering gear,<br/>take note of the angle the pitman arm is<br/>pointing. That way, when you drop the new<br/>steering gear in, everything lines up exactly like the original.</em></p>",
+            "contact_title": "CONTACT US",
+            "contact_subheading": "Need help with your installation?",
+            "contact_details": "<p>Phone: 1-800-555-0199<br/>Hours: Monday–Friday, 8 AM–5 PM CDT<br/>Email: support@example.com</p>",
+            "website": "www.pscsteering.com"
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_6cc7971_Cm8yem"
       ],
       "settings": {}
     }
@@ -232,6 +303,7 @@
     "17888100285ad9bd3d",
     "17888104119cc4f605",
     "178881497285cf92a2",
-    "17888186808996261c"
+    "17888186808996261c",
+    "1788819316fcc4b546"
   ]
 }
