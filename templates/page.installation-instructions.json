@@ -17,6 +17,16 @@
         "padding_bottom": 28
       }
     },
+    "custom_liquid_PAq7Dy": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<div style=\"text-align:center; background:#ffffff; color:#121212; padding:48px 24px 56px; font-family:inherit;\">\n  <div style=\"margin:0 auto 28px;\">\n    {% if settings.logo != blank %}{{ settings.logo | image_url: width: 320 | image_tag: alt: 'PSC Steering', style: 'max-width:160px;height:auto;margin:0 auto;' }}{% endif %}\n  </div>\n  <h2 style=\"margin:0 0 18px; font-weight:700; letter-spacing:.08em;\">CONTACT US</h2>\n  <p style=\"margin:0 auto 24px; max-width:620px; color:#d6001c; font-style:italic; font-weight:600;\">Questions about an install or need help finding the right part?</p>\n  <div style=\"line-height:1.8; margin:0 auto 44px;\">\n    <div>Phone: (817) 270-0102</div>\n    <div>Mon-Fri | 9 AM–5 PM CT</div>\n    <div>Email: <a href=\"mailto:support@pscmotorsports.com\" style=\"color:#121212;\">support@pscmotorsports.com</a></div>\n  </div>\n  <div style=\"font-size:clamp(1.35rem,3vw,2.25rem); font-weight:700; letter-spacing:.06em;\">WWW.PSCSTEERING.COM</div>\n</div>",
+        "color_scheme": "scheme-1",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
     "blocks_tdaxhL": {
       "type": "_blocks",
       "blocks": {
@@ -167,8 +177,8 @@
         "ai_gen_block_eef5293_Gr8NwF": {
           "type": "ai_gen_block_eef5293",
           "settings": {
-            "eyebrow": "BIG BORE XD® Cylinder Assist® Kit",
-            "title": "RAM 2500 / 3500 (2014–2024)",
+            "eyebrow": "BIG BORE XD® Cylinder Assist® Kit | Part #: SK858",
+            "title": "RAM 2500 / 3500 (2014–2024)– Bolt-On Installation",
             "hero_image": "shopify://shop_images/SK858.png",
             "overview_heading": "Before you begin",
             "overview": "<p>Review the complete guide before beginning. Confirm the vehicle application, inspect all components, and follow the sequence below for a precise installation.</p>",
@@ -213,55 +223,7 @@
     },
     "17888104119cc4f605": {
       "type": "_blocks",
-      "blocks": {
-        "ai_gen_block_c1a1464_6xRmyL": {
-          "type": "ai_gen_block_c1a1464",
-          "settings": {
-            "desktop_width_percent": 100,
-            "heading_font": "system_ui_n4",
-            "body_font": "system_ui_n4",
-            "logo": "shopify://shop_images/PSC_border_blk-red_6badc1b4-f2cd-4d96-a070-cafbd33ff977.png",
-            "logo_width": 140,
-            "category_label": "BIG BORE XD® Cylinder Assist® Kit",
-            "product_title": "RAM 2500 / 3500 (2014–2024)",
-            "compatible_parts": "Part number 1\nPart number 2",
-            "installation_label": "Installation Guide",
-            "toc_heading": "Table of Contents",
-            "toc_titles": "Before You Get Started\nWhat's in the Kit\nInstallation",
-            "toc_pages": "2\n3\n4",
-            "toc_items": "Safety|Tools\nBrackets|Components|Pump\nPrep|Install|Checks",
-            "before_heading": "Before You Get Started",
-            "before_text": "<p>Read all instructions before beginning. Contact support for <a href=\"#\">part numbers</a>.</p>",
-            "kit_heading": "What's in the Kit",
-            "kit_categories": "Brackets\nComponents\nPower Steering Pump",
-            "kit_parts": "BRK-001 — Main bracket|BRK-002 — Support bracket\nCMP-001 — Hardware|CMP-002 — Hoses\nPMP-001 — Performance pump",
-            "steps_heading": "Step-by-Step Installation",
-            "step_1_title": "Prep the Engine",
-            "step_1_text": "<p><strong>Prepare safely.</strong></p><ul><li>Disconnect power.</li><li>Clean the mounting surface.</li></ul>",
-            "step_2_title": "Install the Brackets",
-            "step_2_text": "<p>Align and torque the brackets.</p>",
-            "step_3_title": "Install Components",
-            "step_3_text": "<p>Route hoses away from heat and moving parts.</p>",
-            "step_4_title": "Final Checks",
-            "step_4_text": "<p>Fill, bleed, and check for leaks.</p>"
-          },
-          "blocks": {}
-        }
-      },
-      "block_order": [
-        "ai_gen_block_c1a1464_6xRmyL"
-      ],
       "settings": {}
-    },
-    "custom_liquid_PAq7Dy": {
-      "type": "custom-liquid",
-      "name": "t:sections.custom-liquid.presets.name",
-      "settings": {
-        "custom_liquid": "<div style=\"text-align:center; background:#ffffff; color:#121212; padding:48px 24px 56px; font-family:inherit;\">\n  <div style=\"margin:0 auto 28px;\">\n    {% if settings.logo != blank %}{{ settings.logo | image_url: width: 320 | image_tag: alt: 'PSC Steering', style: 'max-width:160px;height:auto;margin:0 auto;' }}{% endif %}\n  </div>\n  <h2 style=\"margin:0 0 18px; font-weight:700; letter-spacing:.08em;\">CONTACT US</h2>\n  <p style=\"margin:0 auto 24px; max-width:620px; color:#d6001c; font-style:italic; font-weight:600;\">Questions about an install or need help finding the right part?</p>\n  <div style=\"line-height:1.8; margin:0 auto 44px;\">\n    <div>Phone: (817) 270-0102</div>\n    <div>Mon-Fri | 9 AM–5 PM CT</div>\n    <div>Email: <a href=\"mailto:support@pscmotorsports.com\" style=\"color:#121212;\">support@pscmotorsports.com</a></div>\n  </div>\n  <div style=\"font-size:clamp(1.35rem,3vw,2.25rem); font-weight:700; letter-spacing:.06em;\">WWW.PSCSTEERING.COM</div>\n</div>",
-        "color_scheme": "scheme-1",
-        "padding_top": 0,
-        "padding_bottom": 0
-      }
     },
     "178881497285cf92a2": {
       "type": "_blocks",
@@ -302,7 +264,7 @@
             "contact_heading": "Contact Us",
             "contact_title": "CONTACT US",
             "contact_subheading": "Our team is here to help.",
-            "contact_details": "<p><strong>Phone:</strong> 1-800-617-1811<br><strong>Hours:</strong> Monday–Friday, 8 AM–5 PM CT<br><strong>Email:</strong> sales@pscsteering.com</p>",
+            "contact_details": "<p><strong>Phone:</strong> 1-800-617-1811<br/><strong>Hours:</strong> Monday–Friday, 8 AM–5 PM CT<br/><strong>Email:</strong> sales@pscsteering.com</p>",
             "website": "www.pscsteering.com"
           },
           "blocks": {}
@@ -316,12 +278,12 @@
   },
   "order": [
     "main",
+    "custom_liquid_PAq7Dy",
     "blocks_tdaxhL",
     "rich_text_R3kECz",
     "178215901468e81263",
     "17888100285ad9bd3d",
     "17888104119cc4f605",
-    "custom_liquid_PAq7Dy",
     "178881497285cf92a2",
     "1788815228678481b8"
   ]
