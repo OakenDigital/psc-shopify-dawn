@@ -1,8 +1,7 @@
 {% comment %}
   PSC Motorsports Installation Guide
   Full-page section with cover, TOC, Before You Start, What's in the Kit,
-  unlimited step-by-step installation, and Contact Us.
-  All content is editable in the theme editor. Use blocks to add more steps / kit categories / TOC entries.
+  unlimited step-by-step installation (up to 4 images per step), and Contact Us.
 {% endcomment %}
 
 {% assign id = section.id | replace: '_', '' | downcase %}
@@ -185,8 +184,9 @@
     margin: 25px 0 10px;
   }
 
+  /* ===== STEPS ===== */
   .psc-guide-step-{{ id }} {
-    margin-bottom: 56px;
+    margin-bottom: 64px;
   }
   .psc-guide-step-grid-{{ id }} {
     display: grid;
@@ -194,6 +194,11 @@
     gap: 9%;
     align-items: start;
     margin-top: 18px;
+  }
+  .psc-guide-step-images-{{ id }} {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
   }
   .psc-guide-step-photo-{{ id }} {
     position: relative;
@@ -210,10 +215,10 @@
   }
   .psc-guide-step-number-{{ id }} {
     position: absolute;
-    top: 14px;
-    left: 14px;
-    width: 42px;
-    height: 42px;
+    top: 10px;
+    left: 10px;
+    width: 36px;
+    height: 36px;
     border: 3px solid var(--psc-red);
     border-radius: 50%;
     background: #fff;
@@ -221,7 +226,8 @@
     display: grid;
     place-items: center;
     font-weight: 700;
-    font-size: 18px;
+    font-size: 16px;
+    z-index: 2;
   }
 
   .psc-guide-contact-{{ id }} {
@@ -250,10 +256,10 @@
   }
   .psc-guide-empty-{{ id }} {
     position: absolute;
-    bottom: 18px;
+    bottom: 12px;
     background: #fff;
-    padding: 6px 10px;
-    font-size: 12px;
+    padding: 4px 8px;
+    font-size: 11px;
   }
 
   @media (max-width: 749px) {
@@ -261,6 +267,9 @@
     .psc-guide-step-grid-{{ id }} {
       grid-template-columns: 1fr;
       gap: 30px;
+    }
+    .psc-guide-step-images-{{ id }} {
+      grid-template-columns: 1fr 1fr;
     }
     .psc-guide-inner-{{ id }} {
       padding: 38px 5%;
@@ -330,46 +339,44 @@
   </section>
 
   {%- comment -%} ========== TABLE OF CONTENTS ========== {%- endcomment -%}
-  {% if section.blocks.size > 0 %}
-    {% assign has_toc = false %}
-    {% for block in section.blocks %}
-      {% if block.type == 'toc_entry' %}
-        {% assign has_toc = true %}
-        {% break %}
-      {% endif %}
-    {% endfor %}
-
-    {% if has_toc %}
-      <section class="psc-guide-section-{{ id }}">
-        <div class="psc-guide-interior-header-{{ id }}">
-          <div class="psc-guide-stripe-{{ id }}"></div>
-          {% if section.settings.logo != blank %}
-            <img class="psc-guide-logo-{{ id }}"
-                 src="{{ section.settings.logo | image_url: width: 500 }}"
-                 alt="{{ shop.name | escape }}"
-                 width="{{ section.settings.logo_width }}" height="auto" loading="lazy">
-          {% endif %}
-        </div>
-        <div class="psc-guide-inner-{{ id }}">
-          <h2 class="psc-guide-section-title-{{ id }}">{{ section.settings.toc_title | default: 'TABLE OF CONTENTS' }}</h2>
-          <div class="psc-guide-toc-{{ id }}">
-            {% for block in section.blocks %}
-              {% if block.type == 'toc_entry' %}
-                <div {{ block.shopify_attributes }}>
-                  <div class="psc-guide-pill-{{ id }}">
-                    <span>{{ block.settings.title }}</span>
-                    <span>{{ block.settings.range }}</span>
-                  </div>
-                  {% if block.settings.items != blank %}
-                    <div class="psc-guide-richtext-{{ id }}">{{ block.settings.items }}</div>
-                  {% endif %}
-                </div>
-              {% endif %}
-            {% endfor %}
-          </div>
-        </div>
-      </section>
+  {% assign has_toc = false %}
+  {% for block in section.blocks %}
+    {% if block.type == 'toc_entry' %}
+      {% assign has_toc = true %}
+      {% break %}
     {% endif %}
+  {% endfor %}
+
+  {% if has_toc %}
+    <section class="psc-guide-section-{{ id }}">
+      <div class="psc-guide-interior-header-{{ id }}">
+        <div class="psc-guide-stripe-{{ id }}"></div>
+        {% if section.settings.logo != blank %}
+          <img class="psc-guide-logo-{{ id }}"
+               src="{{ section.settings.logo | image_url: width: 500 }}"
+               alt="{{ shop.name | escape }}"
+               width="{{ section.settings.logo_width }}" height="auto" loading="lazy">
+        {% endif %}
+      </div>
+      <div class="psc-guide-inner-{{ id }}">
+        <h2 class="psc-guide-section-title-{{ id }}">{{ section.settings.toc_title | default: 'TABLE OF CONTENTS' }}</h2>
+        <div class="psc-guide-toc-{{ id }}">
+          {% for block in section.blocks %}
+            {% if block.type == 'toc_entry' %}
+              <div {{ block.shopify_attributes }}>
+                <div class="psc-guide-pill-{{ id }}">
+                  <span>{{ block.settings.title }}</span>
+                  <span>{{ block.settings.range }}</span>
+                </div>
+                {% if block.settings.items != blank %}
+                  <div class="psc-guide-richtext-{{ id }}">{{ block.settings.items }}</div>
+                {% endif %}
+              </div>
+            {% endif %}
+          {% endfor %}
+        </div>
+      </div>
+    </section>
   {% endif %}
 
   {%- comment -%} ========== BEFORE YOU GET STARTED ========== {%- endcomment -%}
@@ -481,18 +488,21 @@
                   {% endif %}
                 </div>
 
-                <div class="psc-guide-step-photo-{{ id }}">
-                  {% if block.settings.image != blank %}
-                    <img src="{{ block.settings.image | image_url: width: 1000 }}"
-                         alt="{{ block.settings.label | default: 'Step ' | append: step_counter | escape }}"
-                         width="500" height="375" loading="lazy">
-                  {% else %}
-                    <div class="psc-guide-placeholder-{{ id }}">
-                      {{ 'image' | placeholder_svg_tag }}
-                      <span class="psc-guide-empty-{{ id }}">Add step photo</span>
-                    </div>
-                  {% endif %}
-                  <span class="psc-guide-step-number-{{ id }}">{{ step_counter }}</span>
+                <div class="psc-guide-step-images-{{ id }}">
+                  {% for i in (1..4) %}
+                    {% assign image_key = 'image_' | append: i %}
+                    {% assign img = block.settings[image_key] %}
+                    {% if img != blank %}
+                      <div class="psc-guide-step-photo-{{ id }}">
+                        <img src="{{ img | image_url: width: 800 }}"
+                             alt="{{ block.settings.label | default: 'Step ' | append: step_counter | escape }} - photo {{ i }}"
+                             width="400" height="300" loading="lazy">
+                        {% if i == 1 %}
+                          <span class="psc-guide-step-number-{{ id }}">{{ step_counter }}</span>
+                        {% endif %}
+                      </div>
+                    {% endif %}
+                  {% endfor %}
                 </div>
               </div>
             </article>
@@ -731,9 +741,28 @@
           "default": "<ul><li>Disconnect the battery and secure the vehicle.</li></ul>"
         },
         {
+          "type": "header",
+          "content": "Step Images (up to 4)"
+        },
+        {
           "type": "image_picker",
-          "id": "image",
-          "label": "Step photo"
+          "id": "image_1",
+          "label": "Image 1"
+        },
+        {
+          "type": "image_picker",
+          "id": "image_2",
+          "label": "Image 2"
+        },
+        {
+          "type": "image_picker",
+          "id": "image_3",
+          "label": "Image 3"
+        },
+        {
+          "type": "image_picker",
+          "id": "image_4",
+          "label": "Image 4"
         }
       ]
     }
