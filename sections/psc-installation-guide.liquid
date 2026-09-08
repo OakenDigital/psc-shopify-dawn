@@ -1,0 +1,836 @@
+{% doc %}
+  PSC Motorsports Installation Guide
+  Full-page section with cover, TOC, Before You Start, What's in the Kit,
+  unlimited step-by-step installation, and Contact Us.
+  All content is editable in the theme editor. Use blocks to add more steps / kit categories / TOC entries.
+{% enddoc %}
+
+{% assign id = section.id | replace: '_', '' | downcase %}
+
+{% style %}
+  @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Barlow:wght@400;500;600&display=swap');
+
+  .psc-guide-{{ id }} {
+    --psc-red: #CC0000;
+    --psc-dark: #171717;
+    --psc-gray: #e8e8e8;
+    --psc-muted: #555;
+    font-family: 'Barlow', Arial, sans-serif;
+    color: var(--psc-dark);
+    background: #fff;
+    line-height: 1.55;
+    display: block;
+    width: 100%;
+  }
+
+  .psc-guide-{{ id }} h1,
+  .psc-guide-{{ id }} h2,
+  .psc-guide-{{ id }} h3 {
+    font-family: 'Barlow Condensed', Arial, sans-serif;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    margin: 0;
+  }
+
+  .psc-guide-inner-{{ id }} {
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 56px 6%;
+  }
+
+  /* Logo */
+  .psc-guide-logo-{{ id }} {
+    display: block;
+    width: {{ section.settings.logo_width }}px;
+    max-width: 70%;
+    height: auto;
+    margin: 0 auto 24px;
+  }
+
+  /* Cover page */
+  .psc-guide-eyebrow-{{ id }} {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    justify-content: center;
+    color: var(--psc-muted);
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 0.18em;
+    font-weight: 700;
+    margin-bottom: 8px;
+  }
+  .psc-guide-eyebrow-{{ id }}::before,
+  .psc-guide-eyebrow-{{ id }}::after {
+    content: '';
+    height: 1px;
+    background: #777;
+    flex: 1;
+  }
+
+  .psc-guide-cover-grid-{{ id }} {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 9%;
+    align-items: center;
+    margin-top: 42px;
+  }
+
+  .psc-guide-kit-image-{{ id }} {
+    aspect-ratio: 1;
+    border: 1px solid #bbb;
+    border-radius: 18px;
+    overflow: hidden;
+    background: #f2f2f2;
+  }
+  .psc-guide-kit-image-{{ id }} img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  .psc-guide-cover-info-{{ id }} {
+    display: grid;
+    gap: 22px;
+  }
+  .psc-guide-cover-title-{{ id }} {
+    color: var(--psc-red);
+    font-size: clamp(34px, 5vw, 68px);
+    line-height: 0.98;
+  }
+  .psc-guide-application-{{ id }} {
+    font-size: 24px;
+    font-weight: 700;
+  }
+  .psc-guide-year-{{ id }} {
+    font-size: 22px;
+  }
+  .psc-guide-parts-{{ id }} p {
+    margin: 0 0 8px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .psc-guide-parts-{{ id }} p::before {
+    content: '';
+    display: inline-block;
+    width: 9px;
+    height: 9px;
+    background: var(--psc-red);
+    flex-shrink: 0;
+  }
+
+  .psc-guide-cover-label-{{ id }} {
+    text-align: center;
+    margin: 58px 0 0;
+    font-size: 28px;
+    letter-spacing: 0.08em;
+  }
+
+  /* Interior header (stripe + logo) */
+  .psc-guide-section-{{ id }} {
+    border-top: 1px solid #ddd;
+  }
+  .psc-guide-interior-header-{{ id }} {
+    padding: 0 6% 22px;
+  }
+  .psc-guide-stripe-{{ id }} {
+    height: 78px;
+    background: repeating-linear-gradient(
+      135deg,
+      #111 0,
+      #111 28px,
+      #666 28px,
+      #666 56px,
+      #d0d0d0 56px,
+      #d0d0d0 82px
+    );
+  }
+  .psc-guide-section-title-{{ id }} {
+    text-align: center;
+    font-size: 34px;
+    margin-bottom: 35px;
+  }
+
+  /* TOC pills */
+  .psc-guide-toc-{{ id }} {
+    display: grid;
+    gap: 18px;
+    max-width: 760px;
+    margin: 0 auto;
+  }
+  .psc-guide-pill-{{ id }} {
+    background: var(--psc-gray);
+    border-radius: 999px;
+    padding: 12px 22px;
+    font-weight: 700;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    font-size: 15px;
+  }
+
+  /* Rich text */
+  .psc-guide-richtext-{{ id }} a {
+    color: var(--psc-red);
+    text-decoration: underline;
+  }
+  .psc-guide-richtext-{{ id }} ul {
+    padding-left: 1.2em;
+    margin: 0.5em 0;
+  }
+  .psc-guide-richtext-{{ id }} li {
+    margin-bottom: 0.4em;
+  }
+
+  /* Kit banners */
+  .psc-guide-banner-{{ id }} {
+    background: var(--psc-gray);
+    border-radius: 8px;
+    padding: 13px 20px;
+    font-weight: 700;
+    margin: 25px 0 10px;
+  }
+
+  /* Steps */
+  .psc-guide-step-{{ id }} {
+    margin-bottom: 56px;
+  }
+  .psc-guide-step-grid-{{ id }} {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 9%;
+    align-items: start;
+    margin-top: 18px;
+  }
+  .psc-guide-step-photo-{{ id }} {
+    position: relative;
+    aspect-ratio: 4/3;
+    border-radius: 12px;
+    overflow: hidden;
+    background: #eee;
+  }
+  .psc-guide-step-photo-{{ id }} img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  .psc-guide-step-number-{{ id }} {
+    position: absolute;
+    top: 14px;
+    left: 14px;
+    width: 42px;
+    height: 42px;
+    border: 3px solid var(--psc-red);
+    border-radius: 50%;
+    background: #fff;
+    color: var(--psc-red);
+    display: grid;
+    place-items: center;
+    font-weight: 700;
+    font-size: 18px;
+  }
+
+  /* Contact */
+  .psc-guide-contact-{{ id }} {
+    text-align: center;
+  }
+  .psc-guide-contact-subheading-{{ id }} {
+    color: var(--psc-red);
+    font-weight: 700;
+    font-size: 20px;
+    margin-bottom: 18px;
+  }
+  .psc-guide-website-{{ id }} {
+    font-size: clamp(28px, 5vw, 56px);
+    font-weight: 700;
+    margin-top: 28px;
+    font-family: 'Barlow Condensed', Arial, sans-serif;
+  }
+
+  /* Placeholder */
+  .psc-guide-placeholder-{{ id }} {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    color: #666;
+  }
+  .psc-guide-empty-{{ id }} {
+    position: absolute;
+    bottom: 18px;
+    background: #fff;
+    padding: 6px 10px;
+    font-size: 12px;
+  }
+
+  @media (max-width: 749px) {
+    .psc-guide-cover-grid-{{ id }},
+    .psc-guide-step-grid-{{ id }} {
+      grid-template-columns: 1fr;
+      gap: 30px;
+    }
+    .psc-guide-inner-{{ id }} {
+      padding: 38px 5%;
+    }
+    .psc-guide-cover-title-{{ id }} {
+      font-size: 42px;
+    }
+  }
+{% endstyle %}
+
+<div class="psc-guide-{{ id }}" {{ section.shopify_attributes }}>
+
+  {%- comment -%} ========== COVER PAGE ========== {%- endcomment -%}
+  <section>
+    <div class="psc-guide-inner-{{ id }}">
+      {% if section.settings.logo != blank %}
+        <img class="psc-guide-logo-{{ id }}"
+             src="{{ section.settings.logo | image_url: width: 600 }}"
+             alt="{{ shop.name | escape }}"
+             width="{{ section.settings.logo_width }}"
+             height="auto"
+             loading="eager">
+      {% endif %}
+
+      {% if section.settings.guide_category != blank %}
+        <div class="psc-guide-eyebrow-{{ id }}">{{ section.settings.guide_category }}</div>
+      {% endif %}
+
+      <div class="psc-guide-cover-grid-{{ id }}">
+        <div class="psc-guide-kit-image-{{ id }}">
+          {% if section.settings.kit_image != blank %}
+            <img src="{{ section.settings.kit_image | image_url: width: 1200 }}"
+                 alt="{{ section.settings.kit_image.alt | default: section.settings.product_title | escape }}"
+                 width="600" height="600" loading="eager">
+          {% else %}
+            <div class="psc-guide-placeholder-{{ id }}">
+              {{ 'image' | placeholder_svg_tag }}
+              <span class="psc-guide-empty-{{ id }}">Add kit image</span>
+            </div>
+          {% endif %}
+        </div>
+
+        <div class="psc-guide-cover-info-{{ id }}">
+          {% if section.settings.product_title != blank %}
+            <h1 class="psc-guide-cover-title-{{ id }}">{{ section.settings.product_title }}</h1>
+          {% endif %}
+          {% if section.settings.product_application != blank %}
+            <div class="psc-guide-application-{{ id }}">{{ section.settings.product_application }}</div>
+          {% endif %}
+          {% if section.settings.product_year != blank %}
+            <div class="psc-guide-year-{{ id }}">{{ section.settings.product_year }}</div>
+          {% endif %}
+          {% if section.settings.part_numbers != blank %}
+            <div class="psc-guide-parts-{{ id }} psc-guide-richtext-{{ id }}">
+              {{ section.settings.part_numbers }}
+            </div>
+          {% endif %}
+        </div>
+      </div>
+
+      {% if section.settings.cover_label != blank %}
+        <h2 class="psc-guide-cover-label-{{ id }}">{{ section.settings.cover_label }}</h2>
+      {% endif %}
+    </div>
+  </section>
+
+  {%- comment -%} ========== TABLE OF CONTENTS ========== {%- endcomment -%}
+  {% if section.blocks.size > 0 %}
+    {% assign has_toc = false %}
+    {% for block in section.blocks %}
+      {% if block.type == 'toc_entry' %}
+        {% assign has_toc = true %}
+        {% break %}
+      {% endif %}
+    {% endfor %}
+
+    {% if has_toc %}
+      <section class="psc-guide-section-{{ id }}">
+        <div class="psc-guide-interior-header-{{ id }}">
+          <div class="psc-guide-stripe-{{ id }}"></div>
+          {% if section.settings.logo != blank %}
+            <img class="psc-guide-logo-{{ id }}"
+                 src="{{ section.settings.logo | image_url: width: 500 }}"
+                 alt="{{ shop.name | escape }}"
+                 width="{{ section.settings.logo_width }}" height="auto" loading="lazy">
+          {% endif %}
+        </div>
+        <div class="psc-guide-inner-{{ id }}">
+          <h2 class="psc-guide-section-title-{{ id }}">{{ section.settings.toc_title | default: 'TABLE OF CONTENTS' }}</h2>
+          <div class="psc-guide-toc-{{ id }}">
+            {% for block in section.blocks %}
+              {% if block.type == 'toc_entry' %}
+                <div {{ block.shopify_attributes }}>
+                  <div class="psc-guide-pill-{{ id }}">
+                    <span>{{ block.settings.title }}</span>
+                    <span>{{ block.settings.range }}</span>
+                  </div>
+                  {% if block.settings.items != blank %}
+                    <div class="psc-guide-richtext-{{ id }}">{{ block.settings.items }}</div>
+                  {% endif %}
+                </div>
+              {% endif %}
+            {% endfor %}
+          </div>
+        </div>
+      </section>
+    {% endif %}
+  {% endif %}
+
+  {%- comment -%} ========== BEFORE YOU GET STARTED ========== {%- endcomment -%}
+  {% if section.settings.before_title != blank or section.settings.before_body != blank %}
+    <section class="psc-guide-section-{{ id }}">
+      <div class="psc-guide-interior-header-{{ id }}">
+        <div class="psc-guide-stripe-{{ id }}"></div>
+        {% if section.settings.logo != blank %}
+          <img class="psc-guide-logo-{{ id }}"
+               src="{{ section.settings.logo | image_url: width: 500 }}"
+               alt="{{ shop.name | escape }}"
+               width="{{ section.settings.logo_width }}" height="auto" loading="lazy">
+        {% endif %}
+      </div>
+      <div class="psc-guide-inner-{{ id }}">
+        {% if section.settings.before_title != blank %}
+          <h2 class="psc-guide-section-title-{{ id }}">{{ section.settings.before_title }}</h2>
+        {% endif %}
+        {% if section.settings.before_body != blank %}
+          <div class="psc-guide-richtext-{{ id }}">{{ section.settings.before_body }}</div>
+        {% endif %}
+      </div>
+    </section>
+  {% endif %}
+
+  {%- comment -%} ========== WHAT'S IN THE KIT ========== {%- endcomment -%}
+  {% assign has_kit = false %}
+  {% for block in section.blocks %}
+    {% if block.type == 'kit_category' %}
+      {% assign has_kit = true %}
+      {% break %}
+    {% endif %}
+  {% endfor %}
+
+  {% if has_kit or section.settings.kit_title != blank %}
+    <section class="psc-guide-section-{{ id }}">
+      <div class="psc-guide-interior-header-{{ id }}">
+        <div class="psc-guide-stripe-{{ id }}"></div>
+        {% if section.settings.logo != blank %}
+          <img class="psc-guide-logo-{{ id }}"
+               src="{{ section.settings.logo | image_url: width: 500 }}"
+               alt="{{ shop.name | escape }}"
+               width="{{ section.settings.logo_width }}" height="auto" loading="lazy">
+        {% endif %}
+      </div>
+      <div class="psc-guide-inner-{{ id }}">
+        {% if section.settings.kit_title != blank %}
+          <h2 class="psc-guide-section-title-{{ id }}">{{ section.settings.kit_title }}</h2>
+        {% endif %}
+
+        {% for block in section.blocks %}
+          {% if block.type == 'kit_category' %}
+            <div {{ block.shopify_attributes }}>
+              {% if block.settings.header != blank %}
+                <div class="psc-guide-banner-{{ id }}">{{ block.settings.header }}</div>
+              {% endif %}
+              {% if block.settings.body != blank %}
+                <div class="psc-guide-richtext-{{ id }}">{{ block.settings.body }}</div>
+              {% endif %}
+            </div>
+          {% endif %}
+        {% endfor %}
+      </div>
+    </section>
+  {% endif %}
+
+  {%- comment -%} ========== INSTALLATION STEPS ========== {%- endcomment -%}
+  {% assign has_steps = false %}
+  {% for block in section.blocks %}
+    {% if block.type == 'step' %}
+      {% assign has_steps = true %}
+      {% break %}
+    {% endif %}
+  {% endfor %}
+
+  {% if has_steps or section.settings.install_title != blank %}
+    <section class="psc-guide-section-{{ id }}">
+      <div class="psc-guide-interior-header-{{ id }}">
+        <div class="psc-guide-stripe-{{ id }}"></div>
+        {% if section.settings.logo != blank %}
+          <img class="psc-guide-logo-{{ id }}"
+               src="{{ section.settings.logo | image_url: width: 500 }}"
+               alt="{{ shop.name | escape }}"
+               width="{{ section.settings.logo_width }}" height="auto" loading="lazy">
+        {% endif %}
+      </div>
+      <div class="psc-guide-inner-{{ id }}">
+        {% if section.settings.install_title != blank %}
+          <h2 class="psc-guide-section-title-{{ id }}">{{ section.settings.install_title }}</h2>
+        {% endif %}
+
+        {% assign step_counter = 0 %}
+        {% for block in section.blocks %}
+          {% if block.type == 'step' %}
+            {% assign step_counter = step_counter | plus: 1 %}
+            <article class="psc-guide-step-{{ id }}" {{ block.shopify_attributes }}>
+              <div class="psc-guide-pill-{{ id }}">
+                <span>{{ block.settings.header | default: 'STEP' }}</span>
+                <span>{{ step_counter | prepend: '0' | slice: -2, 2 }}</span>
+              </div>
+
+              <div class="psc-guide-step-grid-{{ id }}">
+                <div>
+                  {% if block.settings.label != blank %}
+                    <h3 style="font-size: 22px; margin-bottom: 12px;">{{ block.settings.label }}</h3>
+                  {% endif %}
+                  {% if block.settings.body != blank %}
+                    <div class="psc-guide-richtext-{{ id }}">{{ block.settings.body }}</div>
+                  {% endif %}
+                </div>
+
+                <div class="psc-guide-step-photo-{{ id }}">
+                  {% if block.settings.image != blank %}
+                    <img src="{{ block.settings.image | image_url: width: 1000 }}"
+                         alt="{{ block.settings.label | default: 'Step ' | append: step_counter | escape }}"
+                         width="500" height="375" loading="lazy">
+                  {% else %}
+                    <div class="psc-guide-placeholder-{{ id }}">
+                      {{ 'image' | placeholder_svg_tag }}
+                      <span class="psc-guide-empty-{{ id }}">Add step photo</span>
+                    </div>
+                  {% endif %}
+                  <span class="psc-guide-step-number-{{ id }}">{{ step_counter }}</span>
+                </div>
+              </div>
+            </article>
+          {% endif %}
+        {% endfor %}
+      </div>
+    </section>
+  {% endif %}
+
+  {%- comment -%} ========== CONTACT US ========== {%- endcomment -%}
+  <section class="psc-guide-section-{{ id }}">
+    <div class="psc-guide-inner-{{ id }} psc-guide-contact-{{ id }}">
+      {% if section.settings.logo != blank %}
+        <img class="psc-guide-logo-{{ id }}"
+             src="{{ section.settings.logo | image_url: width: 600 }}"
+             alt="{{ shop.name | escape }}"
+             width="{{ section.settings.logo_width }}" height="auto" loading="lazy">
+      {% endif %}
+
+      {% if section.settings.contact_title != blank %}
+        <h2 class="psc-guide-section-title-{{ id }}">{{ section.settings.contact_title }}</h2>
+      {% endif %}
+
+      {% if section.settings.contact_subheading != blank %}
+        <div class="psc-guide-contact-subheading-{{ id }}">{{ section.settings.contact_subheading }}</div>
+      {% endif %}
+
+      {% if section.settings.contact_details != blank %}
+        <div class="psc-guide-richtext-{{ id }}">{{ section.settings.contact_details }}</div>
+      {% endif %}
+
+      {% if section.settings.website != blank %}
+        <div class="psc-guide-website-{{ id }}">{{ section.settings.website }}</div>
+      {% endif %}
+    </div>
+  </section>
+
+</div>
+
+{% schema %}
+{
+  "name": "PSC Installation Guide",
+  "tag": "section",
+  "class": "psc-installation-guide-section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Brand & Layout"
+    },
+    {
+      "type": "image_picker",
+      "id": "logo",
+      "label": "PSC logo"
+    },
+    {
+      "type": "range",
+      "id": "logo_width",
+      "label": "Logo width",
+      "min": 80,
+      "max": 300,
+      "step": 10,
+      "unit": "px",
+      "default": 140
+    },
+    {
+      "type": "header",
+      "content": "Cover Page"
+    },
+    {
+      "type": "image_picker",
+      "id": "kit_image",
+      "label": "Kit image"
+    },
+    {
+      "type": "text",
+      "id": "guide_category",
+      "label": "Guide category (eyebrow)",
+      "default": "TECHNICAL INSTALLATION GUIDE"
+    },
+    {
+      "type": "text",
+      "id": "product_title",
+      "label": "Product title (large red)",
+      "default": "Ram 2500 / 3500"
+    },
+    {
+      "type": "text",
+      "id": "product_application",
+      "label": "Product application",
+      "default": "BIG BORE XD® Cylinder Assist® Kit"
+    },
+    {
+      "type": "text",
+      "id": "product_year",
+      "label": "Product year",
+      "default": "2014–2024"
+    },
+    {
+      "type": "richtext",
+      "id": "part_numbers",
+      "label": "Part numbers",
+      "default": "<p>Part # SK858</p>"
+    },
+    {
+      "type": "text",
+      "id": "cover_label",
+      "label": "Cover label",
+      "default": "INSTALLATION GUIDE"
+    },
+    {
+      "type": "header",
+      "content": "Section Titles"
+    },
+    {
+      "type": "text",
+      "id": "toc_title",
+      "label": "Table of Contents heading",
+      "default": "TABLE OF CONTENTS"
+    },
+    {
+      "type": "text",
+      "id": "before_title",
+      "label": "Before You Get Started heading",
+      "default": "BEFORE YOU GET STARTED"
+    },
+    {
+      "type": "richtext",
+      "id": "before_body",
+      "label": "Before You Get Started body",
+      "default": "<p>Review all instructions before beginning. <a href=\"/pages/contact\">Contact technical support</a> with questions.</p>"
+    },
+    {
+      "type": "text",
+      "id": "kit_title",
+      "label": "What's in the Kit heading",
+      "default": "WHAT'S IN THE KIT"
+    },
+    {
+      "type": "text",
+      "id": "install_title",
+      "label": "Installation heading",
+      "default": "INSTALLATION"
+    },
+    {
+      "type": "header",
+      "content": "Contact Us"
+    },
+    {
+      "type": "text",
+      "id": "contact_title",
+      "label": "Contact heading",
+      "default": "CONTACT US"
+    },
+    {
+      "type": "text",
+      "id": "contact_subheading",
+      "label": "Contact subheading",
+      "default": "Need help with your installation?"
+    },
+    {
+      "type": "richtext",
+      "id": "contact_details",
+      "label": "Phone, hours & email",
+      "default": "<p>Phone: 1-800-555-0199<br>Hours: Monday–Friday, 8 AM–5 PM CDT<br>Email: support@example.com</p>"
+    },
+    {
+      "type": "text",
+      "id": "website",
+      "label": "Website URL",
+      "default": "www.pscsteering.com"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "toc_entry",
+      "name": "TOC Entry",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Section name",
+          "default": "Before you get started"
+        },
+        {
+          "type": "text",
+          "id": "range",
+          "label": "Page range",
+          "default": "03–04"
+        },
+        {
+          "type": "richtext",
+          "id": "items",
+          "label": "Sub-items",
+          "default": "<ul><li>Tools and safety</li></ul>"
+        }
+      ]
+    },
+    {
+      "type": "kit_category",
+      "name": "Kit Category",
+      "settings": [
+        {
+          "type": "text",
+          "id": "header",
+          "label": "Category header",
+          "default": "Box 1 —"
+        },
+        {
+          "type": "richtext",
+          "id": "body",
+          "label": "Parts list",
+          "default": "<ul><li>Part #12345 — Description</li></ul>"
+        }
+      ]
+    },
+    {
+      "type": "step",
+      "name": "Installation Step",
+      "settings": [
+        {
+          "type": "text",
+          "id": "header",
+          "label": "Step header (left side of pill)",
+          "default": "STEP"
+        },
+        {
+          "type": "text",
+          "id": "label",
+          "label": "Step title / sub-label",
+          "default": "Prepare the vehicle"
+        },
+        {
+          "type": "richtext",
+          "id": "body",
+          "label": "Instructions",
+          "default": "<ul><li>Disconnect the battery and secure the vehicle.</li></ul>"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Step photo"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "PSC Installation Guide",
+      "blocks": [
+        {
+          "type": "toc_entry",
+          "settings": {
+            "title": "Before you get started",
+            "range": "03–04",
+            "items": "<ul><li>Tools and safety</li></ul>"
+          }
+        },
+        {
+          "type": "toc_entry",
+          "settings": {
+            "title": "What's in the kit",
+            "range": "05–06",
+            "items": "<ul><li>Included components</li></ul>"
+          }
+        },
+        {
+          "type": "toc_entry",
+          "settings": {
+            "title": "Installation",
+            "range": "07–12",
+            "items": "<ul><li>Step-by-step procedure</li></ul>"
+          }
+        },
+        {
+          "type": "toc_entry",
+          "settings": {
+            "title": "Contact us",
+            "range": "13",
+            "items": "<ul><li>Technical support</li></ul>"
+          }
+        },
+        {
+          "type": "kit_category",
+          "settings": {
+            "header": "Box 1 —",
+            "body": "<ul><li>SG856R — Cylinder Assist Steering Gear</li></ul>"
+          }
+        },
+        {
+          "type": "kit_category",
+          "settings": {
+            "header": "Box 2 — CAK858 — Cylinder Assist Axle Kit —",
+            "body": "<ul><li>(1) SC2200 – Cylinder Assist® – Single-Ended – 1.5\" x 8.0\"</li><li>(1) MB34K – Mounting Bracket – Cylinder Assist</li></ul>"
+          }
+        },
+        {
+          "type": "step",
+          "settings": {
+            "header": "STEP",
+            "label": "Prepare the vehicle",
+            "body": "<ul><li>Disconnect the battery and secure the vehicle.</li></ul>"
+          }
+        },
+        {
+          "type": "step",
+          "settings": {
+            "header": "STEP",
+            "label": "Remove existing components",
+            "body": "<ul><li>Remove original components.</li></ul>"
+          }
+        },
+        {
+          "type": "step",
+          "settings": {
+            "header": "STEP",
+            "label": "Install the kit",
+            "body": "<ul><li>Position the kit and tighten hardware.</li></ul>"
+          }
+        },
+        {
+          "type": "step",
+          "settings": {
+            "header": "STEP",
+            "label": "Inspect and test",
+            "body": "<ul><li>Inspect connections and complete a careful test.</li></ul>"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
