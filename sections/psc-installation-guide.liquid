@@ -1,14 +1,13 @@
-{% comment %} 
+{% comment %}
   PSC Motorsports Installation Guide
   Full-page section with cover, TOC, Before You Start, What's in the Kit,
   unlimited step-by-step installation, and Contact Us.
-  All content is editable in the theme editor. Use blocks to add more steps / kit categories / TOC entries. {% endcomment %}
+  All content is editable in the theme editor. Use blocks to add more steps / kit categories / TOC entries.
+{% endcomment %}
 
 {% assign id = section.id | replace: '_', '' | downcase %}
 
 {% style %}
-  @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Barlow:wght@400;500;600&display=swap');
-
   .psc-guide-{{ id }} {
     --psc-red: #CC0000;
     --psc-dark: #171717;
@@ -37,7 +36,6 @@
     padding: 56px 6%;
   }
 
-  /* Logo */
   .psc-guide-logo-{{ id }} {
     display: block;
     width: {{ section.settings.logo_width }}px;
@@ -46,7 +44,6 @@
     margin: 0 auto 24px;
   }
 
-  /* Cover page */
   .psc-guide-eyebrow-{{ id }} {
     display: flex;
     align-items: center;
@@ -127,7 +124,6 @@
     letter-spacing: 0.08em;
   }
 
-  /* Interior header (stripe + logo) */
   .psc-guide-section-{{ id }} {
     border-top: 1px solid #ddd;
   }
@@ -152,7 +148,6 @@
     margin-bottom: 35px;
   }
 
-  /* TOC pills */
   .psc-guide-toc-{{ id }} {
     display: grid;
     gap: 18px;
@@ -170,7 +165,6 @@
     font-size: 15px;
   }
 
-  /* Rich text */
   .psc-guide-richtext-{{ id }} a {
     color: var(--psc-red);
     text-decoration: underline;
@@ -183,7 +177,6 @@
     margin-bottom: 0.4em;
   }
 
-  /* Kit banners */
   .psc-guide-banner-{{ id }} {
     background: var(--psc-gray);
     border-radius: 8px;
@@ -192,7 +185,6 @@
     margin: 25px 0 10px;
   }
 
-  /* Steps */
   .psc-guide-step-{{ id }} {
     margin-bottom: 56px;
   }
@@ -232,7 +224,6 @@
     font-size: 18px;
   }
 
-  /* Contact */
   .psc-guide-contact-{{ id }} {
     text-align: center;
   }
@@ -249,7 +240,6 @@
     font-family: 'Barlow Condensed', Arial, sans-serif;
   }
 
-  /* Placeholder */
   .psc-guide-placeholder-{{ id }} {
     height: 100%;
     display: flex;
@@ -280,6 +270,8 @@
     }
   }
 {% endstyle %}
+
+{{ 'https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Barlow:wght@400;500;600&display=swap' | stylesheet_tag }}
 
 <div class="psc-guide-{{ id }}" {{ section.shopify_attributes }}>
 
