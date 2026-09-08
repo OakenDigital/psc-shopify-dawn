@@ -1,6 +1,7 @@
 {% comment %}
   PSC Motorsports Installation Guide
-  Uses theme fonts + colors. Unlimited steps with up to 4 images each.
+  Theme fonts + text color. Keeps the original gray pill styling.
+  Unlimited steps with up to 4 images each.
 {% endcomment %}
 
 {% assign id = section.id | replace: '_', '' | downcase %}
@@ -8,12 +9,11 @@
 {% style %}
   .psc-guide-{{ id }} {
     --psc-red: {{ section.settings.accent_color }};
-    --psc-dark: rgb(var(--color-base-text));
-    --psc-gray: rgba(var(--color-base-text), 0.08);
-    --psc-muted: rgba(var(--color-base-text), 0.65);
+    --psc-gray: #e8e8e8;
+    --psc-muted: #555;
     font-family: var(--font-body-family);
     color: rgb(var(--color-base-text));
-    background: rgb(var(--color-base-background-1));
+    background: #fff;
     line-height: 1.55;
     display: block;
     width: 100%;
@@ -58,7 +58,7 @@
   .psc-guide-eyebrow-{{ id }}::after {
     content: '';
     height: 1px;
-    background: rgba(var(--color-base-text), 0.25);
+    background: #777;
     flex: 1;
   }
 
@@ -72,10 +72,10 @@
 
   .psc-guide-kit-image-{{ id }} {
     aspect-ratio: 1;
-    border: 1px solid rgba(var(--color-base-text), 0.15);
+    border: 1px solid #bbb;
     border-radius: 18px;
     overflow: hidden;
-    background: rgba(var(--color-base-text), 0.04);
+    background: #f2f2f2;
   }
   .psc-guide-kit-image-{{ id }} img {
     width: 100%;
@@ -123,7 +123,7 @@
   }
 
   .psc-guide-section-{{ id }} {
-    border-top: 1px solid rgba(var(--color-base-text), 0.12);
+    border-top: 1px solid #ddd;
   }
   .psc-guide-interior-header-{{ id }} {
     padding: 0 6% 22px;
@@ -204,7 +204,7 @@
     aspect-ratio: 4/3;
     border-radius: 12px;
     overflow: hidden;
-    background: rgba(var(--color-base-text), 0.05);
+    background: #eee;
   }
   .psc-guide-step-photo-{{ id }} img {
     width: 100%;
@@ -251,12 +251,12 @@
     align-items: center;
     justify-content: center;
     position: relative;
-    color: var(--psc-muted);
+    color: #666;
   }
   .psc-guide-empty-{{ id }} {
     position: absolute;
     bottom: 12px;
-    background: rgb(var(--color-base-background-1));
+    background: #fff;
     padding: 4px 8px;
     font-size: 11px;
   }
