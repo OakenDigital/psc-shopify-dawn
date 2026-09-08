@@ -1,20 +1,19 @@
 {% comment %}
   PSC Motorsports Installation Guide
-  Full-page section with cover, TOC, Before You Start, What's in the Kit,
-  unlimited step-by-step installation (up to 4 images per step), and Contact Us.
+  Uses theme fonts + colors. Unlimited steps with up to 4 images each.
 {% endcomment %}
 
 {% assign id = section.id | replace: '_', '' | downcase %}
 
 {% style %}
   .psc-guide-{{ id }} {
-    --psc-red: #CC0000;
-    --psc-dark: #171717;
-    --psc-gray: #e8e8e8;
-    --psc-muted: #555;
-    font-family: 'Barlow', Arial, sans-serif;
-    color: var(--psc-dark);
-    background: #fff;
+    --psc-red: {{ section.settings.accent_color }};
+    --psc-dark: rgb(var(--color-base-text));
+    --psc-gray: rgba(var(--color-base-text), 0.08);
+    --psc-muted: rgba(var(--color-base-text), 0.65);
+    font-family: var(--font-body-family);
+    color: rgb(var(--color-base-text));
+    background: rgb(var(--color-base-background-1));
     line-height: 1.55;
     display: block;
     width: 100%;
@@ -23,8 +22,8 @@
   .psc-guide-{{ id }} h1,
   .psc-guide-{{ id }} h2,
   .psc-guide-{{ id }} h3 {
-    font-family: 'Barlow Condensed', Arial, sans-serif;
-    font-weight: 700;
+    font-family: var(--font-heading-family);
+    font-weight: var(--font-heading-weight);
     letter-spacing: 0.04em;
     margin: 0;
   }
@@ -59,7 +58,7 @@
   .psc-guide-eyebrow-{{ id }}::after {
     content: '';
     height: 1px;
-    background: #777;
+    background: rgba(var(--color-base-text), 0.25);
     flex: 1;
   }
 
@@ -73,10 +72,10 @@
 
   .psc-guide-kit-image-{{ id }} {
     aspect-ratio: 1;
-    border: 1px solid #bbb;
+    border: 1px solid rgba(var(--color-base-text), 0.15);
     border-radius: 18px;
     overflow: hidden;
-    background: #f2f2f2;
+    background: rgba(var(--color-base-text), 0.04);
   }
   .psc-guide-kit-image-{{ id }} img {
     width: 100%;
@@ -124,7 +123,7 @@
   }
 
   .psc-guide-section-{{ id }} {
-    border-top: 1px solid #ddd;
+    border-top: 1px solid rgba(var(--color-base-text), 0.12);
   }
   .psc-guide-interior-header-{{ id }} {
     padding: 0 6% 22px;
@@ -205,7 +204,7 @@
     aspect-ratio: 4/3;
     border-radius: 12px;
     overflow: hidden;
-    background: #eee;
+    background: rgba(var(--color-base-text), 0.05);
   }
   .psc-guide-step-photo-{{ id }} img {
     width: 100%;
@@ -243,7 +242,7 @@
     font-size: clamp(28px, 5vw, 56px);
     font-weight: 700;
     margin-top: 28px;
-    font-family: 'Barlow Condensed', Arial, sans-serif;
+    font-family: var(--font-heading-family);
   }
 
   .psc-guide-placeholder-{{ id }} {
@@ -252,12 +251,12 @@
     align-items: center;
     justify-content: center;
     position: relative;
-    color: #666;
+    color: var(--psc-muted);
   }
   .psc-guide-empty-{{ id }} {
     position: absolute;
     bottom: 12px;
-    background: #fff;
+    background: rgb(var(--color-base-background-1));
     padding: 4px 8px;
     font-size: 11px;
   }
@@ -279,8 +278,6 @@
     }
   }
 {% endstyle %}
-
-{{ 'https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Barlow:wght@400;500;600&display=swap' | stylesheet_tag }}
 
 <div class="psc-guide-{{ id }}" {{ section.shopify_attributes }}>
 
@@ -566,6 +563,12 @@
       "step": 10,
       "unit": "px",
       "default": 140
+    },
+    {
+      "type": "color",
+      "id": "accent_color",
+      "label": "Accent color (titles, numbers, links)",
+      "default": "#CC0000"
     },
     {
       "type": "header",
