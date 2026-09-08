@@ -2,6 +2,7 @@
   PSC Motorsports Installation Guide
   Theme fonts + text color. Keeps the original gray pill styling.
   Unlimited steps with up to 4 images each.
+  Logo only appears on cover (top + under INSTALLATION GUIDE) and Contact Us.
 {% endcomment %}
 
 {% assign id = section.id | replace: '_', '' | downcase %}
@@ -117,7 +118,7 @@
 
   .psc-guide-cover-label-{{ id }} {
     text-align: center;
-    margin: 58px 0 0;
+    margin: 58px 0 24px;
     font-size: 28px;
     letter-spacing: 0.08em;
   }
@@ -332,6 +333,15 @@
       {% if section.settings.cover_label != blank %}
         <h2 class="psc-guide-cover-label-{{ id }}">{{ section.settings.cover_label }}</h2>
       {% endif %}
+
+      {% if section.settings.logo != blank %}
+        <img class="psc-guide-logo-{{ id }}"
+             src="{{ section.settings.logo | image_url: width: 600 }}"
+             alt="{{ shop.name | escape }}"
+             width="{{ section.settings.logo_width }}"
+             height="auto"
+             loading="lazy">
+      {% endif %}
     </div>
   </section>
 
@@ -348,12 +358,6 @@
     <section class="psc-guide-section-{{ id }}">
       <div class="psc-guide-interior-header-{{ id }}">
         <div class="psc-guide-stripe-{{ id }}"></div>
-        {% if section.settings.logo != blank %}
-          <img class="psc-guide-logo-{{ id }}"
-               src="{{ section.settings.logo | image_url: width: 500 }}"
-               alt="{{ shop.name | escape }}"
-               width="{{ section.settings.logo_width }}" height="auto" loading="lazy">
-        {% endif %}
       </div>
       <div class="psc-guide-inner-{{ id }}">
         <h2 class="psc-guide-section-title-{{ id }}">{{ section.settings.toc_title | default: 'TABLE OF CONTENTS' }}</h2>
@@ -381,12 +385,6 @@
     <section class="psc-guide-section-{{ id }}">
       <div class="psc-guide-interior-header-{{ id }}">
         <div class="psc-guide-stripe-{{ id }}"></div>
-        {% if section.settings.logo != blank %}
-          <img class="psc-guide-logo-{{ id }}"
-               src="{{ section.settings.logo | image_url: width: 500 }}"
-               alt="{{ shop.name | escape }}"
-               width="{{ section.settings.logo_width }}" height="auto" loading="lazy">
-        {% endif %}
       </div>
       <div class="psc-guide-inner-{{ id }}">
         {% if section.settings.before_title != blank %}
@@ -412,12 +410,6 @@
     <section class="psc-guide-section-{{ id }}">
       <div class="psc-guide-interior-header-{{ id }}">
         <div class="psc-guide-stripe-{{ id }}"></div>
-        {% if section.settings.logo != blank %}
-          <img class="psc-guide-logo-{{ id }}"
-               src="{{ section.settings.logo | image_url: width: 500 }}"
-               alt="{{ shop.name | escape }}"
-               width="{{ section.settings.logo_width }}" height="auto" loading="lazy">
-        {% endif %}
       </div>
       <div class="psc-guide-inner-{{ id }}">
         {% if section.settings.kit_title != blank %}
@@ -453,12 +445,6 @@
     <section class="psc-guide-section-{{ id }}">
       <div class="psc-guide-interior-header-{{ id }}">
         <div class="psc-guide-stripe-{{ id }}"></div>
-        {% if section.settings.logo != blank %}
-          <img class="psc-guide-logo-{{ id }}"
-               src="{{ section.settings.logo | image_url: width: 500 }}"
-               alt="{{ shop.name | escape }}"
-               width="{{ section.settings.logo_width }}" height="auto" loading="lazy">
-        {% endif %}
       </div>
       <div class="psc-guide-inner-{{ id }}">
         {% if section.settings.install_title != blank %}
