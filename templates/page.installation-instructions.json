@@ -227,6 +227,7 @@
       "blocks": {
         "ai_gen_block_6cc7971_Cm8yem": {
           "type": "ai_gen_block_6cc7971",
+          "disabled": true,
           "settings": {
             "logo": "shopify://shop_images/PSC_border_blk-red_6badc1b4-f2cd-4d96-a070-cafbd33ff977.png",
             "kit_image": "shopify://shop_images/SK858.png",
@@ -295,6 +296,123 @@
     "1788826094d0acbdea": {
       "type": "_blocks",
       "settings": {}
+    },
+    "psc_installation_guide_AA4Nef": {
+      "type": "psc-installation-guide",
+      "blocks": {
+        "toc_entry_RQkR4C": {
+          "type": "toc_entry",
+          "settings": {
+            "title": "Before you get started",
+            "range": "03–04",
+            "items": "<ul><li>Tools and safety</li></ul>"
+          }
+        },
+        "toc_entry_TLHLWC": {
+          "type": "toc_entry",
+          "settings": {
+            "title": "What's in the kit",
+            "range": "05–06",
+            "items": "<ul><li>Included components</li></ul>"
+          }
+        },
+        "toc_entry_MFPXmD": {
+          "type": "toc_entry",
+          "settings": {
+            "title": "Installation",
+            "range": "07–12",
+            "items": "<ul><li>Step-by-step procedure</li></ul>"
+          }
+        },
+        "toc_entry_YtUPLL": {
+          "type": "toc_entry",
+          "settings": {
+            "title": "Contact us",
+            "range": "13",
+            "items": "<ul><li>Technical support</li></ul>"
+          }
+        },
+        "kit_category_JbpLyq": {
+          "type": "kit_category",
+          "settings": {
+            "header": "Box 1 —",
+            "body": "<ul><li>SG856R — Cylinder Assist Steering Gear</li></ul>"
+          }
+        },
+        "kit_category_YcM36D": {
+          "type": "kit_category",
+          "settings": {
+            "header": "Box 2 — CAK858 — Cylinder Assist Axle Kit —",
+            "body": "<ul><li>(1) SC2200 – Cylinder Assist® – Single-Ended – 1.5\" x 8.0\"</li><li>(1) MB34K – Mounting Bracket – Cylinder Assist</li></ul>"
+          }
+        },
+        "step_K6k3PQ": {
+          "type": "step",
+          "settings": {
+            "header": "STEP",
+            "label": "Prepare the vehicle",
+            "body": "<ul><li>Disconnect the battery and secure the vehicle.</li></ul>"
+          }
+        },
+        "step_p4UDTU": {
+          "type": "step",
+          "settings": {
+            "header": "STEP",
+            "label": "Remove existing components",
+            "body": "<ul><li>Remove original components.</li></ul>"
+          }
+        },
+        "step_mPKCht": {
+          "type": "step",
+          "settings": {
+            "header": "STEP",
+            "label": "Install the kit",
+            "body": "<ul><li>Position the kit and tighten hardware.</li></ul>"
+          }
+        },
+        "step_Ti9JPh": {
+          "type": "step",
+          "settings": {
+            "header": "STEP",
+            "label": "Inspect and test",
+            "body": "<ul><li>Inspect connections and complete a careful test.</li></ul>"
+          }
+        }
+      },
+      "block_order": [
+        "toc_entry_RQkR4C",
+        "toc_entry_TLHLWC",
+        "toc_entry_MFPXmD",
+        "toc_entry_YtUPLL",
+        "kit_category_JbpLyq",
+        "kit_category_YcM36D",
+        "step_K6k3PQ",
+        "step_p4UDTU",
+        "step_mPKCht",
+        "step_Ti9JPh"
+      ],
+      "name": "PSC Installation Guide",
+      "settings": {
+        "logo": "shopify://shop_images/PSC_logo.png",
+        "logo_width": 140,
+        "accent_color": "#CC0000",
+        "kit_image": "shopify://shop_images/SK858.png",
+        "guide_category": "TECHNICAL INSTALLATION GUIDE",
+        "product_title": "Ram 2500 / 3500",
+        "product_application": "BIG BORE XD® Cylinder Assist® Kit",
+        "product_year": "2014–2024",
+        "part_numbers": "<p>Part # SK858</p>",
+        "cover_label": "INSTALLATION GUIDE",
+        "toc_title": "TABLE OF CONTENTS",
+        "before_title": "BEFORE YOU GET STARTED",
+        "before_body": "<p>Before you dive in, take a minute to set yourself up right.<br/>This job’s straightforward if you’ve got the basics covered:</p><ul><li><strong>Park it solid. </strong>Level ground, parking brake on, wheels chocked. You don’t want that truck moving while you’re under it.</li><li><strong>Lift smart. </strong>If you’re using a jack, support the front axle with stands. Never<br/>trust just the jack.</li><li><strong>Eye and hand protection. P</strong>ower steering fluid isn’t something you want in your eyes—or all over your hands.</li><li><strong>Clean work area. </strong>Dirt and grit in the system will wreck a pump fast. Wipe down mounting surfaces before installing the new gear.</li><li><strong>Have a drain pan ready. </strong>You’ll lose some fluid when you pull the old lines. Keep<br/>it con­tained.</li><li><strong>Torque matters. </strong>Factory bolts and PSC hardware have specific torque specs. Use a torque wrench, not “good and tight.”</li><li><strong>Double-check steering wheel position. </strong>Center it and lock it before you pull the old steering gear. That keeps your alignment true.</li><li><strong>Plan for bleeding time. </strong>This isn’t a rush job—bleeding the system right is<br/>critical. Give yourself extra time and patience.</li></ul>",
+        "kit_title": "WHAT'S IN THE KIT",
+        "install_title": "INSTALLATION",
+        "contact_title": "CONTACT US",
+        "contact_subheading": "Need help with your installation?",
+        "contact_details": "<p>Phone: 1-800-555-0199<br/>Hours: Monday–Friday, 8 AM–5 PM CDT<br/>Email: support@example.com</p>",
+        "website": "www.pscsteering.com"
+      }
     }
   },
   "order": [
@@ -309,6 +427,7 @@
     "178881497285cf92a2",
     "17888186808996261c",
     "1788819316fcc4b546",
-    "1788826094d0acbdea"
+    "1788826094d0acbdea",
+    "psc_installation_guide_AA4Nef"
   ]
 }
