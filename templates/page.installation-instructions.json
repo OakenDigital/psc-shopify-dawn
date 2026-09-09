@@ -349,6 +349,7 @@
         "step_K6k3PQ": {
           "type": "step",
           "settings": {
+            "image_position": "right",
             "header": "STEP",
             "label": "Prepare the vehicle",
             "body": "<ul><li>Disconnect the battery and secure the vehicle.</li></ul>",
@@ -358,6 +359,7 @@
         "step_p4UDTU": {
           "type": "step",
           "settings": {
+            "image_position": "right",
             "header": "STEP",
             "label": "Remove existing components",
             "body": "<ul><li>Remove original components.</li></ul>",
@@ -368,6 +370,7 @@
         "step_mPKCht": {
           "type": "step",
           "settings": {
+            "image_position": "left",
             "header": "STEP",
             "label": "Install the kit",
             "body": "<ul><li>Position the kit and tighten hardware.</li></ul>",
@@ -379,6 +382,7 @@
         "step_Ti9JPh": {
           "type": "step",
           "settings": {
+            "image_position": "split",
             "header": "STEP",
             "label": "Inspect and test",
             "body": "<ul><li>Inspect connections and complete a careful test.</li></ul>",
