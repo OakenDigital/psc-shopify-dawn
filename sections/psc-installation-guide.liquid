@@ -313,6 +313,33 @@
       font-size: 42px;
     }
   }
+
+  @media print {
+  /* Hide Shopify store headers, footers, and sidebars */
+  header, footer, .header, .footer, #shopify-section-header, #shopify-section-footer {
+    display: none !important;
+  }
+
+  /* Reset layout constraints so all content displays and breaks across pages */
+  body, main, #MainContent, .psc-guide-{{ id }} {
+    overflow: visible !important;
+    height: auto !important;
+    position: static !important;
+    display: block !important;
+    background: #ffffff !important;
+    color: #000000 !important;
+  }
+
+  /* Prevent sections and grid items from clipping */
+  .psc-guide-section-{{ id }},
+  .psc-guide-cover-grid-{{ id }},
+  .psc-guide-step-grid-{{ id }} {
+    overflow: visible !important;
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+}
+
 {% endstyle %}
 
 <div class="psc-guide-{{ id }}" {{ section.shopify_attributes }}>
