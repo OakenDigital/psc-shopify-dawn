@@ -398,6 +398,15 @@
             "image_3": "shopify://shop_images/hk3017.png",
             "image_4": "shopify://shop_images/PK4-JeepWrangler4XEEHPSPumpKit.png"
           }
+        },
+        "step_g4dyXM": {
+          "type": "step",
+          "settings": {
+            "image_position": "split",
+            "header": "STEP",
+            "label": "Prepare the vehicle",
+            "body": "<ul><li>Disconnect the battery and secure the vehicle.</li></ul>"
+          }
         }
       },
       "block_order": [
@@ -411,7 +420,8 @@
         "step_K6k3PQ",
         "step_p4UDTU",
         "step_mPKCht",
-        "step_Ti9JPh"
+        "step_Ti9JPh",
+        "step_g4dyXM"
       ],
       "name": "PSC Installation Guide",
       "settings": {
