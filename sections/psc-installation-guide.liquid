@@ -254,12 +254,19 @@
     font-size: 11px;
   }
 
-  /* Fixed Print Button */
+ /* Container adjustment for relative alignment */
+.psc-guide-{{ id }} {
+  position: relative;
+}
+
+/* Sticky Print Button (Inside White Area) */
 .psc-print-btn-{{ id }} {
-  position: fixed;
+  position: sticky;
   top: 20px;
-  right: 20px;
-  z-index: 9999;
+  float: right;
+  margin-top: 20px;
+  margin-right: 20px;
+  z-index: 100;
   background-color: var(--psc-red);
   color: #ffffff;
   border: none;
