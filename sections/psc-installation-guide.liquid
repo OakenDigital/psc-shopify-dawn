@@ -207,36 +207,6 @@
     gap: 12px;
   }
 
-  .psc-guide-step-number-{{ id }} {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    width: 36px;
-    height: 36px;
-    border: 3px solid var(--psc-red);
-    border-radius: 50%;
-    background: #fff;
-    color: var(--psc-red);
-    display: grid;
-    place-items: center;
-    font-weight: 700;
-    font-size: 16px;
-    z-index: 2;
-  }
-
-  .psc-guide-step-photo-{{ id }} {
-    position: relative;
-    aspect-ratio: 4/3;
-    border-radius: 12px;
-    overflow: hidden;
-    background: #eee;
-  }
-  .psc-guide-step-photo-{{ id }} img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-  }
   /* .psc-guide-step-number-{{ id }} {
     position: absolute;
     top: 10px;
@@ -254,6 +224,19 @@
     z-index: 2;
   } */
 
+  .psc-guide-step-photo-{{ id }} {
+    position: relative;
+    aspect-ratio: 4/3;
+    border-radius: 12px;
+    overflow: hidden;
+    background: #eee;
+  }
+  .psc-guide-step-photo-{{ id }} img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
   .psc-guide-contact-{{ id }} {
     text-align: center;
   }
