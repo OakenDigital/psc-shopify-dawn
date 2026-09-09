@@ -551,16 +551,13 @@
           <h2 class="psc-guide-section-title-{{ id }}">{{ section.settings.install_title }}</h2>
         {% endif %}
 
-        {% comment %} {% assign step_counter = 0 %} {% endcomment %}
         {% for block in section.blocks %}
           {% if block.type == 'step' %}
-            {% assign step_counter = step_counter | plus: 1 %}
             {% assign layout_mode = block.settings.image_position | default: 'right' %}
 
             <article class="psc-guide-step-{{ id }}" {{ block.shopify_attributes }}>
               <div class="psc-guide-pill-{{ id }}">
                 <span>{{ block.settings.header | default: 'STEP' }}</span>
-                {% comment %} <span>{{ step_counter | prepend: '0' | slice: -2, 2 }}</span> {% endcomment %}
               </div>
 
               <div class="psc-guide-step-grid-{{ id }} media-{{ layout_mode }}">
