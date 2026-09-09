@@ -220,7 +220,7 @@
     object-fit: cover;
     display: block;
   }
-  .psc-guide-step-number-{{ id }} {
+  /* .psc-guide-step-number-{{ id }} {
     position: absolute;
     top: 10px;
     left: 10px;
@@ -235,7 +235,7 @@
     font-weight: 700;
     font-size: 16px;
     z-index: 2;
-  }
+  } */
 
   .psc-guide-contact-{{ id }} {
     text-align: center;
@@ -560,7 +560,7 @@
             <article class="psc-guide-step-{{ id }}" {{ block.shopify_attributes }}>
               <div class="psc-guide-pill-{{ id }}">
                 <span>{{ block.settings.header | default: 'STEP' }}</span>
-                <span>{{ step_counter | prepend: '0' | slice: -2, 2 }}</span>
+                {% comment %} <span>{{ step_counter | prepend: '0' | slice: -2, 2 }}</span> {% endcomment %}
               </div>
 
               <div class="psc-guide-step-grid-{{ id }} media-{{ layout_mode }}">
