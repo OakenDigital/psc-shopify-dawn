@@ -351,7 +351,8 @@
           "settings": {
             "header": "STEP",
             "label": "Prepare the vehicle",
-            "body": "<ul><li>Disconnect the battery and secure the vehicle.</li></ul>"
+            "body": "<ul><li>Disconnect the battery and secure the vehicle.</li></ul>",
+            "image_1": "shopify://shop_images/DFviqylvMJniHLdQAb8UCw.jpg"
           }
         },
         "step_p4UDTU": {
@@ -359,7 +360,9 @@
           "settings": {
             "header": "STEP",
             "label": "Remove existing components",
-            "body": "<ul><li>Remove original components.</li></ul>"
+            "body": "<ul><li>Remove original components.</li></ul>",
+            "image_1": "shopify://shop_images/kelderman_truck_83948b96-a190-455f-a79f-abe3e7a56749.png",
+            "image_2": "shopify://shop_images/DFviqylvMJniHLdQAb8UCw.jpg"
           }
         },
         "step_mPKCht": {
@@ -367,7 +370,10 @@
           "settings": {
             "header": "STEP",
             "label": "Install the kit",
-            "body": "<ul><li>Position the kit and tighten hardware.</li></ul>"
+            "body": "<ul><li>Position the kit and tighten hardware.</li></ul>",
+            "image_1": "shopify://shop_images/Kelderman_Truck.jpg",
+            "image_2": "shopify://shop_images/isn2uW2frxnDbTPOW2jjXw.jpg",
+            "image_3": "shopify://shop_images/roll_over_cans_2.jpg"
           }
         },
         "step_Ti9JPh": {
@@ -375,7 +381,11 @@
           "settings": {
             "header": "STEP",
             "label": "Inspect and test",
-            "body": "<ul><li>Inspect connections and complete a careful test.</li></ul>"
+            "body": "<ul><li>Inspect connections and complete a careful test.</li></ul>",
+            "image_1": "shopify://shop_images/HK3017_1of1.jpg",
+            "image_2": "shopify://shop_images/DFviqylvMJniHLdQAb8UCw.jpg",
+            "image_3": "shopify://shop_images/hk3017.png",
+            "image_4": "shopify://shop_images/PK4-JeepWrangler4XEEHPSPumpKit.png"
           }
         }
       },
