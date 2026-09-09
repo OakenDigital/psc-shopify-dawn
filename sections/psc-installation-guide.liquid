@@ -254,6 +254,39 @@
     font-size: 11px;
   }
 
+  /* Fixed Print Button */
+.psc-print-btn-{{ id }} {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 9999;
+  background-color: var(--psc-red);
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 16px;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.psc-print-btn-{{ id }}:hover {
+  background-color: #aa0000;
+  transform: translateY(-2px);
+}
+
+/* Hide the print button when generating/printing the page */
+@media print {
+  .psc-print-btn-{{ id }} {
+    display: none !important;
+  }
+}
+
   @media (max-width: 749px) {
     .psc-guide-cover-grid-{{ id }},
     .psc-guide-step-grid-{{ id }} {
@@ -277,6 +310,16 @@
   {%- comment -%} ========== COVER PAGE ========== {%- endcomment -%}
   <section>
     <div class="psc-guide-inner-{{ id }}">
+
+      <button type="button" class="psc-print-btn-{{ id }}" onclick="window.print();" aria-label="Print Guide">
+  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <polyline points="6 9 6 2 18 2 18 9"></polyline>
+    <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path>
+    <rect x="6" y="14" width="12" height="8"></rect>
+  </svg>
+  <span>Print</span>
+</button>
+
       {% if section.settings.logo != blank %}
         <img class="psc-guide-logo-{{ id }}"
              src="{{ section.settings.logo | image_url: width: 600 }}"
