@@ -346,6 +346,13 @@
             "body": "<ul><li>(1) SC2200 – Cylinder Assist® – Single-Ended – 1.5\" x 8.0\"</li><li>(1) MB34K – Mounting Bracket – Cylinder Assist</li></ul>"
           }
         },
+        "kit_category_66x9Jy": {
+          "type": "kit_category",
+          "settings": {
+            "header": "Tools Needed",
+            "body": "<ul><li>Part #12345 — Description</li></ul>"
+          }
+        },
         "step_K6k3PQ": {
           "type": "step",
           "settings": {
@@ -400,6 +407,7 @@
         "toc_entry_YtUPLL",
         "kit_category_JbpLyq",
         "kit_category_YcM36D",
+        "kit_category_66x9Jy",
         "step_K6k3PQ",
         "step_p4UDTU",
         "step_mPKCht",
@@ -409,6 +417,7 @@
       "settings": {
         "logo": "shopify://shop_images/PSC_logo.png",
         "logo_width": 300,
+        "logo_width_mobile": 100,
         "accent_color": "#cc0000",
         "kit_image": "shopify://shop_images/SK858.png",
         "guide_category": "INSTALLATION GUIDE",
