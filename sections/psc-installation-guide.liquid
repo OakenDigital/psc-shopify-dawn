@@ -259,14 +259,17 @@
   position: relative;
 }
 
-/* Sticky Print Button (Inside White Area) */
+/* Container must be relative */
+.psc-guide-{{ id }} {
+  position: relative;
+}
+
+/* Absolute Button (Inside White Area) */
 .psc-print-btn-{{ id }} {
-  position: sticky;
-  top: 20px;
-  float: right;
-  margin-top: 20px;
-  margin-right: 20px;
-  z-index: 100;
+  position: absolute;
+  top: 24px;
+  right: 6%;
+  z-index: 10;
   background-color: var(--psc-red);
   color: #ffffff;
   border: none;
