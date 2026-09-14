@@ -304,7 +304,7 @@
           "type": "toc_entry",
           "settings": {
             "title": "Before you get started",
-            "range": "03–04",
+            "range": "",
             "items": "<ul><li>Tools and safety</li></ul>"
           }
         },
@@ -312,7 +312,7 @@
           "type": "toc_entry",
           "settings": {
             "title": "What's in the kit",
-            "range": "05–06",
+            "range": "",
             "items": "<ul><li>Included components</li><li>Tools Needed</li></ul>"
           }
         },
@@ -320,7 +320,7 @@
           "type": "toc_entry",
           "settings": {
             "title": "Installation",
-            "range": "07–12",
+            "range": "",
             "items": "<ul><li>Step-by-step procedure</li><li>Bleeding Procedure</li></ul>"
           }
         },
@@ -328,22 +328,22 @@
           "type": "toc_entry",
           "settings": {
             "title": "Contact us",
-            "range": "13",
+            "range": "",
             "items": "<ul><li>Technical support</li></ul>"
           }
         },
         "kit_category_JbpLyq": {
           "type": "kit_category",
           "settings": {
-            "header": "Box 1 —",
+            "header": "Box 1 - Steering Gear",
             "body": "<ul><li>SG856R — Cylinder Assist Steering Gear</li></ul>"
           }
         },
         "kit_category_YcM36D": {
           "type": "kit_category",
           "settings": {
-            "header": "Box 2 — CAK858 — Cylinder Assist Axle Kit —",
-            "body": "<ul><li>(1) SC2200 – Cylinder Assist® – Single-Ended – 1.5\" x 8.0\"</li><li>(1) MB34K – Mounting Bracket – Cylinder Assist</li></ul>"
+            "header": "Box 2 - CAK858 - Cylinder Assist Axle Kit",
+            "body": "<ul><li>(1) SC2200 – Cylinder Assist® – Single-Ended – 1.5” x 8.0”</li><li>(1) MB34K – Mounting Bracket – Cylinder Assist® – Ram 2500/3500 (2019–2021)</li><li>(1) HK2062 – Hose Kit – Ram 2500/3500 Cylinder Assist® (2014+)</li><li>(1) REXFR10 – Rod End – Female Shank – RH Thread – 5/8-18 FR x 5/8” Ball</li><li>(1) REXMR10-SS – Rod End – Male – 5/8-18 x 5/8” – Shortened .750”</li><li>(2) FSNJ-5/8-18RH – 5/8-18 RH Jam Nut</li><li>(1) FL-SWE715-4PAK – PSC 715 Power Steering Fluid – 4-Quart Pack</li></ul>"
           }
         },
         "kit_category_66x9Jy": {
@@ -358,9 +358,9 @@
           "settings": {
             "image_position": "right",
             "header": "STEP",
-            "label": "Prepare the vehicle",
-            "body": "<ul><li>Disconnect the battery and secure the vehicle.</li></ul>",
-            "image_1": "shopify://shop_images/DFviqylvMJniHLdQAb8UCw.jpg"
+            "label": "Center & Lock the Steering Wheel",
+            "body": "<p>Center and lock the steering wheel so the new steering gear lines up exactly like the old one.</p><p><em>(Photo shown is from a previous build, but the  process is the same.)</em></p>",
+            "image_2": "shopify://shop_images/step_1_c7b0f619-bd45-498c-88ee-02d45243db48.png"
           }
         },
         "step_p4UDTU": {
@@ -368,8 +368,8 @@
           "settings": {
             "image_position": "right",
             "header": "STEP",
-            "label": "Remove existing components",
-            "body": "<ul><li>Remove original components.</li></ul>",
+            "label": "Disconnect Steering Shaft",
+            "body": "<p>Remove the bolt from the lower steering shaft at the gear.</p><p>Slide the shaft off and move it out of the way</p>",
             "image_1": "shopify://shop_images/kelderman_truck_83948b96-a190-455f-a79f-abe3e7a56749.png",
             "image_2": "shopify://shop_images/DFviqylvMJniHLdQAb8UCw.jpg"
           }
