@@ -335,22 +335,50 @@
         "kit_category_JbpLyq": {
           "type": "kit_category",
           "settings": {
-            "header": "Box 1 - Steering Gear",
-            "body": "<ul><li>SG856R — Cylinder Assist Steering Gear</li></ul>"
+            "header": "Brackets",
+            "body": "<p>• (1) 12.21A — Alternator Mounting Bracket (Front)<br/>• (1) 12.21B — Alternator Mounting Bracket (Rear)<br/>• (1) 12.22LH — Driver-Side Water Pump Adapter<br/>• (1) 12.22RH — Passenger-Side Water Pump Adapter Bracket (Temperature Sensor Port)<br/>• (1) 12.23 — Idler Pulley Bracket<br/><br/></p>"
           }
         },
         "kit_category_YcM36D": {
           "type": "kit_category",
           "settings": {
-            "header": "Box 2 - CAK858 - Cylinder Assist Axle Kit",
-            "body": "<ul><li>(1) SC2200 – Cylinder Assist® – Single-Ended – 1.5” x 8.0”</li><li>(1) MB34K – Mounting Bracket – Cylinder Assist® – Ram 2500/3500 (2019–2021)</li><li>(1) HK2062 – Hose Kit – Ram 2500/3500 Cylinder Assist® (2014+)</li><li>(1) REXFR10 – Rod End – Female Shank – RH Thread – 5/8-18 FR x 5/8” Ball</li><li>(1) REXMR10-SS – Rod End – Male – 5/8-18 x 5/8” – Shortened .750”</li><li>(2) FSNJ-5/8-18RH – 5/8-18 RH Jam Nut</li><li>(1) FL-SWE715-4PAK – PSC 715 Power Steering Fluid – 4-Quart Pack</li></ul>"
+            "header": "Components",
+            "body": "<p>• (1) TNR-100K — Belt Tensioner<br/>• (1) BT60845 — 6-Rib Serpentine Belt, 84.5”<br/>• (2) GK-LT1WP — Water Pump Gaskets<br/>• Required mounting hardware and fasteners<br/><br/></p>"
+          }
+        },
+        "kit_category_gmYbYG": {
+          "type": "kit_category",
+          "settings": {
+            "header": "Power Steering Pump",
+            "body": "<p>One of the following pumps is included depending on kit purchased:</p><ul><li>SP33332S-3608 — LHD CBR Pump (-6 AN Pressure, -12 AN Feed)<br/></li><li>SP32232-3608 — RHD CBR Pump (-6 AN Pressure, -12 AN Feed)</li></ul>"
+          }
+        },
+        "kit_category_whAfV7": {
+          "type": "kit_category",
+          "settings": {
+            "header": "ADK-LT100G & ADK-LT100R Only",
+            "body": "<p>• (1) 12.20 — A/C Mounting Bracket<br/>• Associated hardware and fasteners</p>"
+          }
+        },
+        "kit_category_H9LMjn": {
+          "type": "kit_category",
+          "settings": {
+            "header": "Spacer Inventory",
+            "body": "<p>• (1) 15.103 Spacer, 2.015”<br/>• (1) 15.203 Spacer, 0.950”<br/>• (3) 15.112 Spacers, 0.875”</p>"
+          }
+        },
+        "kit_category_LiT3Mi": {
+          "type": "kit_category",
+          "settings": {
+            "header": "Applicable Kits",
+            "body": "<p>This installation guide applies to the following PSC Accessory Drive Conversion Kits:</p><p><br/>• ADK-LT100G<br/>• ADK-LT100R<br/>• ADK-LT101G<br/>• ADK-LT101R</p><p><br/>Note: ADK-LT100 Series kits include the A/C mounting bracket. ADK-LT101 Series kits<br/>do not include the A/C mounting bracket. Contents may vary slightly </p>"
           }
         },
         "kit_category_66x9Jy": {
           "type": "kit_category",
           "settings": {
             "header": "Tools Needed",
-            "body": "<ul><li>Pitman arm puller</li><li>5/8” drill bit</li><li>Torque wrench (up to 180 ft-lbs)</li><li>Standard hand tools</li></ul>"
+            "body": "<p>• Basic hand tools<br/>• Hex/Allen key socket set<br/>• Thread sealant<br/>• Drain pan/ rags<br/>• M10 1.5 bottom end tap<br/>• M8 1.25 bottom end tap</p><p><br/>Use medium strength thread locker on all bolts unless the bolt uses a lock nut.<br/><br/></p>"
           }
         },
         "step_K6k3PQ": {
@@ -416,6 +444,10 @@
         "toc_entry_YtUPLL",
         "kit_category_JbpLyq",
         "kit_category_YcM36D",
+        "kit_category_gmYbYG",
+        "kit_category_whAfV7",
+        "kit_category_H9LMjn",
+        "kit_category_LiT3Mi",
         "kit_category_66x9Jy",
         "step_K6k3PQ",
         "step_p4UDTU",
