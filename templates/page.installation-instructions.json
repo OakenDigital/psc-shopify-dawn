@@ -386,9 +386,8 @@
           "settings": {
             "image_position": "right",
             "header": "STEP",
-            "label": "Center & Lock the Steering Wheel",
-            "body": "<p>Center and lock the steering wheel so the new steering gear lines up exactly like the old one.</p><p><em>(Photo shown is from a previous build, but the  process is the same.)</em></p>",
-            "image_2": "shopify://shop_images/step_1_c7b0f619-bd45-498c-88ee-02d45243db48.png"
+            "label": "Prep the Engine",
+            "body": "<ul><li><em>Disconnect the battery</em></li><li><em>Drain the coolant</em></li></ul>"
           }
         },
         "step_p4UDTU": {
