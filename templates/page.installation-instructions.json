@@ -395,10 +395,9 @@
           "settings": {
             "image_position": "right",
             "header": "STEP",
-            "label": "Disconnect Steering Shaft",
+            "label": "Strip the Front of the Engine",
             "body": "<p>Remove the bolt from the lower steering shaft at the gear.</p><p>Slide the shaft off and move it out of the way</p>",
-            "image_1": "shopify://shop_images/kelderman_truck_83948b96-a190-455f-a79f-abe3e7a56749.png",
-            "image_2": "shopify://shop_images/DFviqylvMJniHLdQAb8UCw.jpg"
+            "image_1": "shopify://shop_images/ADK-LT100_Pic_1.jpg"
           }
         },
         "step_mPKCht": {
