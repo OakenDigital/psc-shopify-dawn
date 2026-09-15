@@ -404,7 +404,7 @@
           "type": "step",
           "settings": {
             "image_position": "left",
-            "header": "VVT Solenoid Adjustment",
+            "header": "STEP",
             "label": "Remove the VVT Solenoid",
             "body": "<p>Disconnect the electrical connector, then remove and retain the three mounting bolts.</p>",
             "image_1": "shopify://shop_images/ADK-LT100_Pic_3.jpg"
@@ -413,14 +413,11 @@
         "step_Ti9JPh": {
           "type": "step",
           "settings": {
-            "image_position": "split",
+            "image_position": "right",
             "header": "STEP",
-            "label": "Inspect and test",
-            "body": "<ul><li>Inspect connections and complete a careful test.</li></ul>",
-            "image_1": "shopify://shop_images/HK3017_1of1.jpg",
-            "image_2": "shopify://shop_images/DFviqylvMJniHLdQAb8UCw.jpg",
-            "image_3": "shopify://shop_images/hk3017.png",
-            "image_4": "shopify://shop_images/PK4-JeepWrangler4XEEHPSPumpKit.png"
+            "label": "Rotate and Modify",
+            "body": "<p>Rotate the VVT solenoid counterclockwise one mounting position so the electrical connector is positioned behind the crank pulley. Loosely reinstall two bolts to hold.</p><p><strong>Mark the VVT solenoid at the third bolt hole. Then remove and modify using a small angle grinder.</strong></p><p><strong>NOTE: </strong>Be careful not to damage the O-ring on the VVT solenoid during removal or modification.</p>",
+            "image_1": "shopify://shop_images/ADK-LT100_Pic_5-1.jpg"
           }
         },
         "step_g4dyXM": {
