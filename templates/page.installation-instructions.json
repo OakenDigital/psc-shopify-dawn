@@ -44,6 +44,14 @@
             "items": "<ul><li>Installation</li><li>VVT Solenoid Adjustment</li><li>A/C Bracket (Only for ADK‑LT100)</li><li>Water Pump & Adapter Plates</li><li>Power Steering Brackets & Pump</li><li>Alternator Brackets & Tensioner</li><li>Belt Install</li><li>Final Checks</li></ul>"
           }
         },
+        "toc_entry_DrpYNi": {
+          "type": "toc_entry",
+          "settings": {
+            "title": "Bleed Instructions",
+            "range": "",
+            "items": "<ul><li>Fill Fluid</li><li>Remove Air</li></ul>"
+          }
+        },
         "toc_entry_YtUPLL": {
           "type": "toc_entry",
           "settings": {
@@ -284,6 +292,7 @@
         "toc_entry_RQkR4C",
         "toc_entry_TLHLWC",
         "toc_entry_MFPXmD",
+        "toc_entry_DrpYNi",
         "toc_entry_YtUPLL",
         "kit_category_JbpLyq",
         "kit_category_YcM36D",
@@ -319,13 +328,13 @@
         "accent_color": "#cc0000",
         "kit_image": "shopify://shop_images/ADK.jpg",
         "guide_category": "INSTALLATION GUIDE",
-        "product_title": "GM Gen 5 LT Engine",
-        "product_application": "Accessory Drive Conversion Kits",
-        "product_year": "(2014+)",
-        "part_numbers": "<ul><li>ADK-LT100</li><li>ADK-LT101</li></ul>",
+        "product_title": "Cylinder Assist® Axle Kit",
+        "product_application": "Jeep Wrangler JL/JT",
+        "product_year": "(2018–2023)",
+        "part_numbers": "<ul><li>CAK689R-OE</li></ul>",
         "toc_title": "TABLE OF CONTENTS",
-        "before_title": "BEFORE YOU GET STARTED",
-        "before_body": "<p>You’ll need a GM water pump, AC Delco Part #GM12681186. This isn’t the standard replacement water pump for the engine, but it’s the correct pump for this conversion. Your kit includes one set of water pump gaskets, so you’ll have what<br/>you need for installation. Before you get started, make sure all threaded holes are clean. If needed, use a thread chaser to clean up dirty or rusty thread<br/><br/></p>",
+        "before_title": "What This Kit Does",
+        "before_body": "<p>The PSC Cylinder Assist® Axle Kit is designed to reduce steering effort and improve control by assisting your factory steering gear with a hydraulic cylinder mounted between the axle and tie rod.<br/><br/>On Jeep Wrangler JL and JT platforms running a factory axle and factory tie rod, this system helps take strain off the steering gear when turning larger tires, navigating obstacles, or driving in conditions where steering loads are higher than stock. The result is smoother, more consistent steering with better control and reduced kickback at the wheel.<br/><br/>This kit works with your PSC ported steering gear and pump kit and is intended as an assist — not full hydraulic steering. All factory steering linkages remain in place.</p>",
         "kit_title": "WHAT'S IN THE KIT",
         "install_title": "INSTALLATION",
         "custom_section_title": "Bleeding Procedure",
