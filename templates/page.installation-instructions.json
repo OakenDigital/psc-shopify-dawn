@@ -55,7 +55,7 @@
         "toc_entry_YtUPLL": {
           "type": "toc_entry",
           "settings": {
-            "title": "Contact us",
+            "title": "Contact us{{ page.metafields.custom.instructions_toc_header_5.value }}",
             "range": "",
             "items": "<ul><li>Technical support</li></ul>"
           }
