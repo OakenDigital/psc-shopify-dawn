@@ -266,17 +266,17 @@
           "settings": {
             "image_position": "right",
             "header": "STEP",
-            "label": "Prepare the vehicle",
-            "body": "<ul><li>Disconnect the battery and secure the vehicle.</li></ul>"
+            "label": "Install the Belt",
+            "body": "<p>Route the BT60845 belt according to the routing diagram as shown.</p>"
           }
         },
         "step_e66zbV": {
           "type": "step",
           "settings": {
-            "image_position": "right",
+            "image_position": "split",
             "header": "STEP",
-            "label": "Prepare the vehicle",
-            "body": "<ul><li>Disconnect the battery and secure the vehicle.</li></ul>"
+            "label": "Final Inspection",
+            "body": "<ul><li>Make sure wiring and hoses have clearance.</li><li>Refill coolant.</li><li>Fill power steering system.</li><li>Reconnect battery</li><li>Start engine and let it run for 5 minutes.</li><li>Check for coolant leaks and belt alignment.</li></ul>"
           }
         }
       },
