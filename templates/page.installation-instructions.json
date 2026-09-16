@@ -23,9 +23,9 @@
         "toc_entry_RQkR4C": {
           "type": "toc_entry",
           "settings": {
-            "title": "Before you get started",
+            "title": "Before you get started{{ page.metafields.custom.instructions_toc_header.value }}",
             "range": "",
-            "items": "<ul><li>Tools and safety</li></ul>"
+            "items": "<ul><li>Tools and safety{{ page.metafields.custom.instructions_toc_content_1 | metafield_tag }}</li></ul>"
           }
         },
         "toc_entry_TLHLWC": {
@@ -322,16 +322,16 @@
       ],
       "name": "PSC Installation Guide",
       "settings": {
-        "logo": "shopify://shop_images/PSC_logo.png",
+        "logo": "{{ page.metafields.custom.instructions_logo.value }}",
         "logo_width": 300,
         "logo_width_mobile": 100,
         "accent_color": "#cc0000",
-        "kit_image": "shopify://shop_images/ADK.jpg",
+        "kit_image": "{{ page.metafields.custom.instructions_cover_image.value }}",
         "guide_category": "INSTALLATION GUIDE",
-        "product_title": "Cylinder Assist® Axle Kit",
-        "product_application": "Jeep Wrangler JL/JT",
-        "product_year": "(2018–2023)",
-        "part_numbers": "<ul><li>CAK689R-OE</li></ul>",
+        "product_title": "{{ page.metafields.custom.instruction_title.value }}Title",
+        "product_application": "Vehice{{ page.metafields.custom.instructions_vehicle.value }}",
+        "product_year": "Year{{ page.title }}",
+        "part_numbers": "<ul><li>{{ page.metafields.custom.part_number.value }}Part Number</li></ul>",
         "toc_title": "TABLE OF CONTENTS",
         "before_title": "What This Kit Does",
         "before_body": "<p>The PSC Cylinder Assist® Axle Kit is designed to reduce steering effort and improve control by assisting your factory steering gear with a hydraulic cylinder mounted between the axle and tie rod.<br/><br/>On Jeep Wrangler JL and JT platforms running a factory axle and factory tie rod, this system helps take strain off the steering gear when turning larger tires, navigating obstacles, or driving in conditions where steering loads are higher than stock. The result is smoother, more consistent steering with better control and reduced kickback at the wheel.<br/><br/>This kit works with your PSC ported steering gear and pump kit and is intended as an assist — not full hydraulic steering. All factory steering linkages remain in place.</p>",
