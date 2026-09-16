@@ -180,6 +180,45 @@
             "image_1": "shopify://shop_images/ADK-LT100_Pic_13.jpg",
             "image_3": "shopify://shop_images/ADK-LT100_Pic_19.jpg"
           }
+        },
+        "step_ffDf7T": {
+          "type": "step",
+          "settings": {
+            "image_position": "right",
+            "header": "STEP",
+            "label": "Install the 12.19 Pump Bracket",
+            "body": "<p>Driver side cylinder head →<br/>Use:</p><ul><li>(1) 8 mm hex socket</li><li>(3) M10 1.5 x 45 mm bolts</li><li>(3) 15.112 spacers between the head and the bracket.</li></ul><p>Torque the bolts to 55 lb-ft.</p>",
+            "image_1": "shopify://shop_images/ADK-LT100_Pic_21.jpg"
+          }
+        },
+        "step_qHpddh": {
+          "type": "step",
+          "settings": {
+            "image_position": "right",
+            "header": "STEP",
+            "label": "Install the 12.23 Idler Bracket",
+            "body": "<p>Remove the two driver side upper water pump bolts <br/>Loosely mount the 12.23 idler bracket.<br/></p>",
+            "image_1": "shopify://shop_images/ADK-LT100_Pic_24.jpg"
+          }
+        },
+        "step_Y3Vxd7": {
+          "type": "step",
+          "settings": {
+            "image_position": "right",
+            "header": "STEP",
+            "label": "Install the Power Steering Pump",
+            "body": "<p>Between the 12.19 and 12.23 brackets:<br/>Use:</p><ul><li>(1) 5/16 18 x 3.5” + washer (top hole)</li><li>(1) 5/16 18 x 3” + washer (bottom hole)</li><li>(1) M8 1.25 x 30 mm flange bolt (inner hole)</li></ul><p>Once the pump is properly positioned, tighten all pump mounting hardware evenly. Torque 8mm bolts to 30 lb-ft and the 5/16 bolts to 25 lb-ft.<br/><br/><br/><br/><br/><br/></p>",
+            "image_1": "shopify://shop_images/ADK-LT100_pump.jpg"
+          }
+        },
+        "step_kNUzab": {
+          "type": "step",
+          "settings": {
+            "image_position": "right",
+            "header": "STEP",
+            "label": "Assemble and Install the Idler Pulley",
+            "body": "<p>Use:</p><ul><li>PP4103 idler pulley to the 12.23 bracket.</li><li>15.203 spacer (between pulley and bracket)</li><li>(1) M10 1.5 x 50 mm bolt</li><li>Heavy duty washer</li><li>Lock nut</li></ul><p><strong>NOTE:</strong> Snap ring faces forward.</p>"
+          }
         }
       },
       "block_order": [
@@ -201,7 +240,11 @@
         "step_g4dyXM",
         "step_xkAxXJ",
         "step_Mw8NCM",
-        "step_V3gA8w"
+        "step_V3gA8w",
+        "step_ffDf7T",
+        "step_qHpddh",
+        "step_Y3Vxd7",
+        "step_kNUzab"
       ],
       "name": "PSC Installation Guide",
       "settings": {
