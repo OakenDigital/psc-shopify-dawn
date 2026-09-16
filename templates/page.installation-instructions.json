@@ -63,15 +63,15 @@
         "kit_category_JbpLyq": {
           "type": "kit_category",
           "settings": {
-            "header": "Brackets",
-            "body": "<p>• (1) 12.21A — Alternator Mounting Bracket (Front)<br/>• (1) 12.21B — Alternator Mounting Bracket (Rear)<br/>• (1) 12.22LH — Driver-Side Water Pump Adapter<br/>• (1) 12.22RH — Passenger-Side Water Pump Adapter Bracket (Temperature Sensor Port)<br/>• (1) 12.23 — Idler Pulley Bracket<br/><br/></p>"
+            "header": "Brackets{{ page.metafields.custom.instructions_included_header.value }}",
+            "body": "<p>{{ page.metafields.custom.instructions_included_content | metafield_tag }}</p>"
           }
         },
         "kit_category_YcM36D": {
           "type": "kit_category",
           "settings": {
-            "header": "Components",
-            "body": "<p>• (1) TNR-100K — Belt Tensioner<br/>• (1) BT60845 — 6-Rib Serpentine Belt, 84.5”<br/>• (2) GK-LT1WP — Water Pump Gaskets<br/>• Required mounting hardware and fasteners<br/><br/></p>"
+            "header": "Components{{ page.metafields.custom.instructions_included_header_2.value }}",
+            "body": "<p>{{ page.metafields.custom.instructions_included_content_2 | metafield_tag }}</p>"
           }
         },
         "kit_category_gmYbYG": {
