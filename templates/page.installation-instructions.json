@@ -240,6 +240,42 @@
             "body": "<p>Mount it to the water pump bosses using an 8 mm hex socket:</p><ul><li>(2) M10 1.5 x 45 mm bolts</li><li>Torque to 55 lb-ft</li></ul>",
             "image_1": "shopify://shop_images/ADK-LT100_Pic_37.jpg"
           }
+        },
+        "step_byGprp": {
+          "type": "step",
+          "settings": {
+            "image_position": "right",
+            "header": "STEP",
+            "label": "Prepare the vehicle",
+            "body": "<ul><li>Disconnect the battery and secure the vehicle.</li></ul>"
+          }
+        },
+        "step_rhGMA9": {
+          "type": "step",
+          "settings": {
+            "image_position": "right",
+            "header": "STEP",
+            "label": "Prepare the vehicle",
+            "body": "<ul><li>Disconnect the battery and secure the vehicle.</li></ul>"
+          }
+        },
+        "step_CeQMB4": {
+          "type": "step",
+          "settings": {
+            "image_position": "right",
+            "header": "STEP",
+            "label": "Prepare the vehicle",
+            "body": "<ul><li>Disconnect the battery and secure the vehicle.</li></ul>"
+          }
+        },
+        "step_e66zbV": {
+          "type": "step",
+          "settings": {
+            "image_position": "right",
+            "header": "STEP",
+            "label": "Prepare the vehicle",
+            "body": "<ul><li>Disconnect the battery and secure the vehicle.</li></ul>"
+          }
         }
       },
       "block_order": [
@@ -267,7 +303,11 @@
         "step_Y3Vxd7",
         "step_kNUzab",
         "step_8XM3YY",
-        "step_cHqj7f"
+        "step_cHqj7f",
+        "step_byGprp",
+        "step_rhGMA9",
+        "step_CeQMB4",
+        "step_e66zbV"
       ],
       "name": "PSC Installation Guide",
       "settings": {
