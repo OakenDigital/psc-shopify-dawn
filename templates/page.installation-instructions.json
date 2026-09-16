@@ -98,8 +98,8 @@
         "kit_category_LiT3Mi": {
           "type": "kit_category",
           "settings": {
-            "header": "Applicable Kits",
-            "body": "<p>This installation guide applies to the following PSC Accessory Drive Conversion Kits:</p><p><br/>• ADK-LT100G<br/>• ADK-LT100R<br/>• ADK-LT101G<br/>• ADK-LT101R</p><p><br/>Note: ADK-LT100 Series kits include the A/C mounting bracket. ADK-LT101 Series kits<br/>do not include the A/C mounting bracket. Contents may vary slightly </p>"
+            "header": "Applicable Kits{{ page.metafields.custom.instructions_included_header_6.value }}",
+            "body": "<p>{{ page.metafields.custom.instructions_included_content_6 | metafield_tag }}</p>"
           }
         },
         "kit_category_66x9Jy": {
