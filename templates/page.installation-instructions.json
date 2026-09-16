@@ -165,8 +165,9 @@
           "settings": {
             "image_position": "right",
             "header": "STEP",
-            "label": "Prepare the vehicle",
-            "body": "<ul><li>Disconnect the battery and secure the vehicle.</li></ul>"
+            "label": "Install the A/C Compressor",
+            "body": "<p>Install the A/C compressor using:</p><ul><li>1) M8 1.25 x 150 mm bolt and flat washer (upper mounting hole)</li><li>(1) M8 1.25 x 90 mm bolt and flat washer (lower mounting hole)</li></ul><p>Apply Loctite to the bolt threads and tighten all three mounting bolts securely. Reinstall the A/C stretch belt if it is in good condition, or replace it with a new belt.</p><p><br/><strong>Note</strong>: A/C stretch belt manufacturers recommend replacing the belt once removed. Use a stretch belt installation tool or an approved zip-tie installation method. Do not use a screwdriver, pry bar or similar tool to force the belt onto the pulley, as damage to the belt may result.<br/></p>",
+            "image_1": "shopify://shop_images/ADK-LT100_Pic_15.jpg"
           }
         }
       },
