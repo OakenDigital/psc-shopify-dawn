@@ -20,15 +20,6 @@
     "psc_installation_guide_AA4Nef": {
       "type": "psc-installation-guide",
       "blocks": {
-        "step_V3gA8w": {
-          "type": "step",
-          "settings": {
-            "image_position": "right",
-            "header": "STEP",
-            "label": "Prepare the vehicle",
-            "body": "<ul><li>Disconnect the battery</li><li>Drain the coolant.</li></ul>"
-          }
-        },
         "toc_entry_RQkR4C": {
           "type": "toc_entry",
           "settings": {
@@ -110,6 +101,15 @@
             "body": "<p>• Basic hand tools<br/>• Hex/Allen key socket set<br/>• Thread sealant<br/>• Drain pan/ rags<br/>• M10 1.5 bottom end tap<br/>• M8 1.25 bottom end tap</p><p><br/>Use medium strength thread locker on all bolts unless the bolt uses a lock nut.<br/><br/></p>"
           }
         },
+        "step_K6k3PQ": {
+          "type": "step",
+          "settings": {
+            "image_position": "right",
+            "header": "STEP",
+            "label": "Prep the Engine",
+            "body": "<ul><li><em>Disconnect the battery</em></li><li><em>Drain the coolant</em></li></ul>"
+          }
+        },
         "step_p4UDTU": {
           "type": "step",
           "settings": {
@@ -170,18 +170,19 @@
             "image_1": "shopify://shop_images/ADK-LT100_Pic_15.jpg"
           }
         },
-        "step_K6k3PQ": {
+        "step_V3gA8w": {
           "type": "step",
           "settings": {
-            "image_position": "right",
+            "image_position": "split",
             "header": "STEP",
-            "label": "Prep the Engine",
-            "body": "<ul><li><em>Disconnect the battery</em></li><li><em>Drain the coolant</em></li></ul>"
+            "label": "Install the Water Pump and Adapters",
+            "body": "<p>Using a 6MM hex socket. Install the water pump with the 12.22 RH and 12.22 LH adapters using six (6) M8‑1.25 x 130 mm socket head bolts with flat washers. Loosely install the top two (2) driver-side bolts and torque the rest to 30 lb-ft<br/>The driver-side adapter (12.22 RH) has the temperature sensor port.<br/>After securing the pump, install the temperature sensor.<br/><strong>Tip:</strong> To make installation easier, apply a few drops of gasket adhesive to hold the gaskets in place while positioning the water pump assembly.</p>",
+            "image_1": "shopify://shop_images/ADK-LT100_Pic_13.jpg",
+            "image_3": "shopify://shop_images/ADK-LT100_Pic_19.jpg"
           }
         }
       },
       "block_order": [
-        "step_V3gA8w",
         "toc_entry_RQkR4C",
         "toc_entry_TLHLWC",
         "toc_entry_MFPXmD",
@@ -193,13 +194,14 @@
         "kit_category_H9LMjn",
         "kit_category_LiT3Mi",
         "kit_category_66x9Jy",
+        "step_K6k3PQ",
         "step_p4UDTU",
         "step_mPKCht",
         "step_Ti9JPh",
         "step_g4dyXM",
         "step_xkAxXJ",
         "step_Mw8NCM",
-        "step_K6k3PQ"
+        "step_V3gA8w"
       ],
       "name": "PSC Installation Guide",
       "settings": {
