@@ -41,7 +41,7 @@
           "settings": {
             "title": "Installation{{ page.metafields.custom.instructions_toc_header_3.value }}",
             "range": "",
-            "items": "<ol><li></li></ol>"
+            "items": "<ol><li>{{ page.metafields.custom.instructions_toc_content_3 | metafield_tag }}</li></ol>"
           }
         },
         "toc_entry_DrpYNi": {
