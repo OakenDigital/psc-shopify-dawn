@@ -256,8 +256,9 @@
           "settings": {
             "image_position": "right",
             "header": "STEP",
-            "label": "Prepare the vehicle",
-            "body": "<ul><li>Disconnect the battery and secure the vehicle.</li></ul>"
+            "label": "Install the Belt Tensioner",
+            "body": "<p>Mount the tensioner to the 12.21A bracket using:</p><ul><li>(1) M10 1.5 x 70 mm bolt + heavy duty washer</li></ul><p>Torque M10 bolt to 55 lb-ft.</p>",
+            "image_1": "shopify://shop_images/ADK-LT100_Pic_41.jpg"
           }
         },
         "step_CeQMB4": {
