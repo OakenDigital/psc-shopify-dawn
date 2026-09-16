@@ -217,7 +217,17 @@
             "image_position": "right",
             "header": "STEP",
             "label": "Assemble and Install the Idler Pulley",
-            "body": "<p>Use:</p><ul><li>PP4103 idler pulley to the 12.23 bracket.</li><li>15.203 spacer (between pulley and bracket)</li><li>(1) M10 1.5 x 50 mm bolt</li><li>Heavy duty washer</li><li>Lock nut</li></ul><p><strong>NOTE:</strong> Snap ring faces forward.</p>"
+            "body": "<p>Use:</p><ul><li>PP4103 idler pulley to the 12.23 bracket.</li><li>15.203 spacer (between pulley and bracket)</li><li>(1) M10 1.5 x 50 mm bolt</li><li>Heavy duty washer</li><li>Lock nut</li></ul><p><strong>NOTE:</strong> Snap ring faces forward.</p>",
+            "image_1": "shopify://shop_images/ADK-LT100_Pic_34.jpg"
+          }
+        },
+        "step_8XM3YY": {
+          "type": "step",
+          "settings": {
+            "image_position": "right",
+            "header": "STEP",
+            "label": "Prepare the vehicle",
+            "body": "<ul><li>Disconnect the battery and secure the vehicle.</li></ul>"
           }
         }
       },
@@ -244,7 +254,8 @@
         "step_ffDf7T",
         "step_qHpddh",
         "step_Y3Vxd7",
-        "step_kNUzab"
+        "step_kNUzab",
+        "step_8XM3YY"
       ],
       "name": "PSC Installation Guide",
       "settings": {
