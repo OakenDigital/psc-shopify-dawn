@@ -330,7 +330,7 @@
         "guide_category": "INSTALLATION GUIDE",
         "product_title": "{{ page.metafields.custom.instruction_title.value }}Title",
         "product_application": "Vehice{{ page.metafields.custom.instructions_vehicle.value }}",
-        "product_year": "Year{{ page.title }}",
+        "product_year": "Year{{ page.metafields.custom.instructions_year.value }}",
         "part_numbers": "<ul><li>{{ page.metafields.custom.part_number.value }}Part Number</li></ul>",
         "toc_title": "TABLE OF CONTENTS",
         "before_title": "What This Kit Does{{ page.metafields.custom.instructions_bys_header.value }}",
