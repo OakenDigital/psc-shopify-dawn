@@ -31,9 +31,9 @@
         "toc_entry_TLHLWC": {
           "type": "toc_entry",
           "settings": {
-            "title": "What's in the kit",
+            "title": "What's in the kit{{ page.metafields.custom.instructions_toc_header.value }}",
             "range": "",
-            "items": "<ul><li>Included components</li><li>Tools Needed</li></ul>"
+            "items": "<ul><li>Included components</li><li>Tools Needed{{ page.metafields.custom.instructions_toc_content_1 | metafield_tag }}</li></ul>"
           }
         },
         "toc_entry_MFPXmD": {
