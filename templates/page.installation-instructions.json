@@ -104,7 +104,7 @@
         "step_K6k3PQ": {
           "type": "step",
           "settings": {
-            "image_position": "right",
+            "image_position": "split",
             "header": "STEP",
             "label": "Prep the Engine",
             "body": "<ul><li><em>Disconnect the battery</em></li><li><em>Drain the coolant</em></li></ul>"
