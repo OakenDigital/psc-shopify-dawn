@@ -9,10 +9,6 @@
  */
 {
   "sections": {
-    "1788815228678481b8": {
-      "type": "_blocks",
-      "settings": {}
-    },
     "main": {
       "type": "main-page",
       "disabled": true,
@@ -20,282 +16,6 @@
         "padding_top": 48,
         "padding_bottom": 28
       }
-    },
-    "custom_liquid_PAq7Dy": {
-      "type": "custom-liquid",
-      "disabled": true,
-      "name": "t:sections.custom-liquid.presets.name",
-      "settings": {
-        "custom_liquid": "<div style=\"text-align:center; background:#ffffff; color:#121212; padding:48px 24px 56px; font-family:inherit;\">\n  <div style=\"margin:0 auto 28px;\">\n    {% if settings.logo != blank %}{{ settings.logo | image_url: width: 320 | image_tag: alt: 'PSC Steering', style: 'max-width:160px;height:auto;margin:0 auto;' }}{% endif %}\n  </div>\n  <h2 style=\"margin:0 0 18px; font-weight:700; letter-spacing:.08em;\">CONTACT US</h2>\n  <p style=\"margin:0 auto 24px; max-width:620px; color:#d6001c; font-style:italic; font-weight:600;\">Questions about an install or need help finding the right part?</p>\n  <div style=\"line-height:1.8; margin:0 auto 44px;\">\n    <div>Phone: (817) 270-0102</div>\n    <div>Mon-Fri | 9 AM–5 PM CT</div>\n    <div>Email: <a href=\"mailto:support@pscmotorsports.com\" style=\"color:#121212;\">support@pscmotorsports.com</a></div>\n  </div>\n  <div style=\"font-size:clamp(1.35rem,3vw,2.25rem); font-weight:700; letter-spacing:.06em;\">WWW.PSCSTEERING.COM</div>\n</div>",
-        "color_scheme": "scheme-1",
-        "padding_top": 0,
-        "padding_bottom": 0
-      }
-    },
-    "blocks_tdaxhL": {
-      "type": "_blocks",
-      "blocks": {
-        "ai_gen_block_25ef8da_wLWtKV": {
-          "type": "ai_gen_block_25ef8da",
-          "name": "Image row",
-          "settings": {
-            "max_width": 1600,
-            "spacing": 8,
-            "spacing_mobile": 8,
-            "padding_vertical": 0,
-            "padding_horizontal": 0,
-            "aspect_ratio": 100,
-            "border_radius": 0
-          },
-          "blocks": {}
-        },
-        "ai_gen_block_25ef8da_JdYRiq": {
-          "type": "ai_gen_block_25ef8da",
-          "name": "Image row",
-          "settings": {
-            "max_width": 1600,
-            "spacing": 8,
-            "spacing_mobile": 8,
-            "padding_vertical": 0,
-            "padding_horizontal": 0,
-            "aspect_ratio": 100,
-            "border_radius": 0
-          },
-          "blocks": {}
-        },
-        "ai_gen_block_25ef8da_DcJtcG": {
-          "type": "ai_gen_block_25ef8da",
-          "settings": {
-            "max_width": 1600,
-            "spacing": 8,
-            "spacing_mobile": 8,
-            "padding_vertical": 0,
-            "padding_horizontal": 0,
-            "aspect_ratio": 100,
-            "border_radius": 0
-          },
-          "blocks": {}
-        },
-        "ai_gen_block_25ef8da_eYyqpQ": {
-          "type": "ai_gen_block_25ef8da",
-          "name": "Image row",
-          "settings": {
-            "max_width": 1600,
-            "spacing": 8,
-            "spacing_mobile": 8,
-            "padding_vertical": 0,
-            "padding_horizontal": 0,
-            "aspect_ratio": 100,
-            "border_radius": 0
-          },
-          "blocks": {}
-        }
-      },
-      "block_order": [
-        "ai_gen_block_25ef8da_wLWtKV",
-        "ai_gen_block_25ef8da_JdYRiq",
-        "ai_gen_block_25ef8da_DcJtcG",
-        "ai_gen_block_25ef8da_eYyqpQ"
-      ],
-      "disabled": true,
-      "custom_css": [],
-      "name": "Image row",
-      "settings": {}
-    },
-    "rich_text_R3kECz": {
-      "type": "rich-text",
-      "blocks": {
-        "heading_Uqzg9F": {
-          "type": "heading",
-          "settings": {
-            "heading": "",
-            "heading_size": "h1"
-          }
-        },
-        "text_wfz38t": {
-          "type": "text",
-          "settings": {
-            "text": ""
-          }
-        },
-        "button_bh7DDd": {
-          "type": "button",
-          "settings": {
-            "button_label": "Show us your build!",
-            "button_link": "/pages/contact",
-            "button_style_secondary": false,
-            "button_label_2": "",
-            "button_link_2": "",
-            "button_style_secondary_2": false
-          }
-        }
-      },
-      "block_order": [
-        "heading_Uqzg9F",
-        "text_wfz38t",
-        "button_bh7DDd"
-      ],
-      "disabled": true,
-      "name": "t:sections.rich-text.presets.name",
-      "settings": {
-        "desktop_content_position": "center",
-        "content_alignment": "center",
-        "color_scheme": "",
-        "full_width": true,
-        "padding_top": 40,
-        "padding_bottom": 40
-      }
-    },
-    "178215901468e81263": {
-      "type": "apps",
-      "blocks": {
-        "forms_inline_mfktQr": {
-          "type": "shopify://apps/forms/blocks/inline/8744a304-fcb1-4347-b211-bb6b4759a76a",
-          "settings": {
-            "form_id": "1044041",
-            "text_color": "#202020",
-            "button_background_color": "#202020",
-            "button_label_color": "#ffffff",
-            "links_color": "#1878b9",
-            "errors_color": "#e02229",
-            "text_alignment": "center",
-            "form_alignment": "flex-start",
-            "padding_top": 24,
-            "padding_bottom": 24,
-            "padding_right": 64,
-            "padding_left": 64
-          }
-        }
-      },
-      "block_order": [
-        "forms_inline_mfktQr"
-      ],
-      "disabled": true,
-      "settings": {
-        "include_margins": true,
-        "full_width": true
-      }
-    },
-    "17888100285ad9bd3d": {
-      "type": "_blocks",
-      "settings": {}
-    },
-    "17888104119cc4f605": {
-      "type": "_blocks",
-      "settings": {}
-    },
-    "178881497285cf92a2": {
-      "type": "_blocks",
-      "settings": {}
-    },
-    "17888186808996261c": {
-      "type": "_blocks",
-      "blocks": {
-        "ai_gen_block_57855f2_rkne9j": {
-          "type": "ai_gen_block_57855f2",
-          "disabled": true,
-          "settings": {
-            "logo_width": 140,
-            "guide_part_name": "Accessory Drive Conversion Kits",
-            "guide_title": "GM Gen 5 LT Engine",
-            "year": "2014+",
-            "part_numbers": "Part #: ADK-LT100",
-            "table_contents": "<p><strong>01 — BEFORE YOU GET STARTED</strong></p><ul><li>Important information</li></ul><p><strong>02 — WHAT'S IN THE KIT</strong></p><ul><li>Parts and components</li></ul><p><strong>03 — INSTALLATION</strong></p><ul><li>Step-by-step instructions</li></ul>",
-            "before_started": "<p>Read all instructions before beginning installation. Verify that all parts are present and consult a qualified technician if needed.</p>",
-            "kit_contents": "<h3>BRACKETS</h3><ul><li>Part number — Description</li></ul><h3>COMPONENTS</h3><ul><li>Part number — Description</li></ul><h3>POWER STEERING PUMP</h3><ul><li>Part number — Description</li></ul>",
-            "step_1_label": "Prepare the vehicle",
-            "step_1_text": "<ul><li>Disconnect the battery.</li><li>Confirm the work area is clean.</li></ul>",
-            "step_2_label": "Remove existing components",
-            "step_2_text": "<ul><li>Remove the original components carefully.</li><li>Retain hardware for reference.</li></ul>",
-            "step_3_label": "Install the kit",
-            "step_3_text": "<ul><li>Install the brackets and components.</li><li>Torque fasteners to the vehicle manufacturer's specification.</li></ul>",
-            "contact_subheading": "Questions about an install or need help finding the right part?",
-            "contact_details": "<p>Phone: (817) 572-6800<br/>Hours: Monday–Friday, 8:00 AM–5:00 PM CT<br/>Email: sales@pscsteering.com</p>",
-            "website": "www.pscsteering.com",
-            "desktop_width_percent": 100
-          },
-          "blocks": {}
-        }
-      },
-      "block_order": [
-        "ai_gen_block_57855f2_rkne9j"
-      ],
-      "settings": {}
-    },
-    "1788819316fcc4b546": {
-      "type": "_blocks",
-      "blocks": {
-        "ai_gen_block_6cc7971_Cm8yem": {
-          "type": "ai_gen_block_6cc7971",
-          "disabled": true,
-          "settings": {
-            "logo": "shopify://shop_images/PSC_border_blk-red_6badc1b4-f2cd-4d96-a070-cafbd33ff977.png",
-            "kit_image": "shopify://shop_images/SK858.png",
-            "heading_font": "system_ui_n4",
-            "body_font": "system_ui_n4",
-            "logo_width": 140,
-            "desktop_width_percent": 100,
-            "guide_category": "Technical installation guide",
-            "product_title": "Ram 2500 / 3500",
-            "product_application": "BIG BORE XD® Cylinder Assist® Kit",
-            "product_year": "2014–2024",
-            "part_numbers": "<p>Part # SK858</p>",
-            "cover_label": "INSTALLATION GUIDE",
-            "toc_title": "TABLE OF CONTENTS",
-            "toc_1_title": "Before you get started",
-            "toc_1_range": "3",
-            "toc_1_items": "<ul><li>Tools and safety</li></ul>",
-            "toc_2_title": "What's in the kit",
-            "toc_2_range": "4",
-            "toc_2_items": "<ul><li>Included components</li></ul>",
-            "toc_3_title": "Installation",
-            "toc_3_range": "5-13",
-            "toc_3_items": "<ul><li>Step-by-step procedure</li></ul>",
-            "toc_4_title": "Contact us",
-            "toc_4_range": "14",
-            "toc_4_items": "<ul><li>Technical support</li></ul>",
-            "before_title": "BEFORE YOU GET STARTED",
-            "before_body": "<p> Before you dive in, take a minute to set yourself up right.<br/>This job’s straightforward if you’ve got the basics covered:</p><ul><li><strong>Park it solid. </strong>Level ground, parking brake on, wheels chocked. You don’t want that truck moving while you’re under it.</li><li><strong>Lift smart. </strong>If you’re using a jack, support the front axle with stands. Never<br/>trust just the jack.</li><li><strong>Eye and hand protection. P</strong>ower steering fluid isn’t something you want in your eyes—or all over your hands.</li><li><strong>Clean work area. </strong>Dirt and grit in the system will wreck a pump fast. Wipe down mounting surfaces before installing the new gear.</li><li><strong>Have a drain pan ready. </strong>You’ll lose some fluid when you pull the old lines. Keep<br/>it con­tained.</li><li><strong>Torque matters. </strong>Factory bolts and PSC hardware have specific torque specs. Use a torque wrench, not “good and tight.”</li><li><strong>Double-check steering wheel position. </strong>Center it and lock it before you pull the old steering gear. That keeps your alignment true.</li><li><strong>Plan for bleeding time. </strong>This isn’t a rush job—bleeding the system right is<br/>critical. Give yourself extra time and patience.</li></ul>",
-            "kit_title": "WHAT'S IN THE KIT",
-            "kit_1_header": "Box 1 —",
-            "kit_1_body": "<ul><li>SG856R— Cylinder Assist Steering Gear</li></ul>",
-            "kit_2_header": "Box 2 — CAK858 — Cylinder Assist Axle Kit —",
-            "kit_2_body": "<ul><li>(1) SC2200 – Cylinder Assist® – Single-Ended – 1.5” x 8.0”</li><li>(1) MB34K – Mounting Bracket – Cylinder Assist® – Ram 2500/3500 (2019–2021)</li><li>(1) HK2062 – Hose Kit – Ram 2500/3500 Cylinder Assist® (2014+)</li><li>(1) REXFR10 – Rod End – Female Shank – RH Thread – 5/8-18 FR x 5/8” Ball</li><li>(1) REXMR10-SS – Rod End – Male – 5/8-18 x 5/8” – Shortened .750”</li><li>(2) FSNJ-5/8-18RH – 5/8-18 RH Jam Nut</li><li>(1) FL-SWE715-4PAK – PSC 715 Power Steering Fluid – 4-Quart Pack</li></ul>",
-            "kit_3_header": "Tools Needed",
-            "kit_3_body": "<ul><li>Pitman arm puller</li><li>5/8” drill bit</li><li>Torque wrench (up to 180 ft-lbs)</li><li>Standard hand tools</li></ul>",
-            "install_title": "INSTALLATION",
-            "step_1_enabled": true,
-            "step_1_header": "STEP 1",
-            "step_1_label": "Center & Lock the Steering Wheel",
-            "step_1_body": "<p>Center and lock the steering wheel so the<br/>new steering gear lines up exactly like the<br/>old one.</p><p><em>(Photo shown is from a previous build, but<br/>the process is the same.)</em></p>",
-            "step_2_enabled": true,
-            "step_2_header": "STEP 2",
-            "step_2_label": "Disconnect Steering Shaft",
-            "step_2_body": "<p>Remove the bolt from the lower steering<br/>shaft at the gear.</p><p>Slide the shaft off and move it out of the<br/>way.</p>",
-            "step_3_enabled": true,
-            "step_3_header": "STEP 3",
-            "step_3_label": "Remove Factory Lines",
-            "step_3_body": "<p>Loosen and remove both factory steering<br/>lines.</p><p>Drain fluid into a pan and set lines aside.</p>",
-            "step_4_enabled": true,
-            "step_4_header": "STEP 4",
-            "step_4_label": "Pull the Pitman Arm",
-            "step_4_body": "<p>Remove the nut and washer, then use a<br/>pitman arm puller to remove the arm<br/>completely.</p><p><em><strong>Tip:</strong></em><em> Before you pull the old steering gear,<br/>take note of the angle the pitman arm is<br/>pointing. That way, when you drop the new<br/>steering gear in, everything lines up exactly like the original.</em></p>",
-            "contact_title": "CONTACT US",
-            "contact_subheading": "Need help with your installation?",
-            "contact_details": "<p>Phone: 1-800-555-0199<br/>Hours: Monday–Friday, 8 AM–5 PM CDT<br/>Email: support@example.com</p>",
-            "website": "www.pscsteering.com"
-          },
-          "blocks": {}
-        }
-      },
-      "block_order": [
-        "ai_gen_block_6cc7971_Cm8yem"
-      ],
-      "settings": {}
-    },
-    "1788826094d0acbdea": {
-      "type": "_blocks",
-      "settings": {}
     },
     "psc_installation_guide_AA4Nef": {
       "type": "psc-installation-guide",
@@ -439,6 +159,15 @@
             "body": "<p>Use:</p><ul><li>(1) M8 1.25 x 75 mm bolt + washer (middle  hole)</li><li>Leave it loose for now.<br/></li></ul>",
             "image_1": "shopify://shop_images/ADK-LT100_Pic_12.jpg"
           }
+        },
+        "step_Mw8NCM": {
+          "type": "step",
+          "settings": {
+            "image_position": "right",
+            "header": "STEP",
+            "label": "Prepare the vehicle",
+            "body": "<ul><li>Disconnect the battery and secure the vehicle.</li></ul>"
+          }
         }
       },
       "block_order": [
@@ -458,7 +187,8 @@
         "step_mPKCht",
         "step_Ti9JPh",
         "step_g4dyXM",
-        "step_xkAxXJ"
+        "step_xkAxXJ",
+        "step_Mw8NCM"
       ],
       "name": "PSC Installation Guide",
       "settings": {
@@ -487,18 +217,7 @@
     }
   },
   "order": [
-    "1788815228678481b8",
     "main",
-    "custom_liquid_PAq7Dy",
-    "blocks_tdaxhL",
-    "rich_text_R3kECz",
-    "178215901468e81263",
-    "17888100285ad9bd3d",
-    "17888104119cc4f605",
-    "178881497285cf92a2",
-    "17888186808996261c",
-    "1788819316fcc4b546",
-    "1788826094d0acbdea",
     "psc_installation_guide_AA4Nef"
   ]
 }
