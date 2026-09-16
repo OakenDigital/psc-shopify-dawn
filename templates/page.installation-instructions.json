@@ -47,9 +47,9 @@
         "toc_entry_DrpYNi": {
           "type": "toc_entry",
           "settings": {
-            "title": "Bleed Instructions",
+            "title": "Bleed Instructions{{ page.metafields.custom.instructions_toc_header_4.value }}",
             "range": "",
-            "items": "<ul><li>Fill Fluid</li><li>Remove Air</li></ul>"
+            "items": "<ul><li>{{ page.metafields.custom.instructions_toc_content_4 | metafield_tag }}</li></ul>"
           }
         },
         "toc_entry_YtUPLL": {
