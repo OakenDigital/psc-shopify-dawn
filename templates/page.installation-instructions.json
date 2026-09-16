@@ -91,8 +91,8 @@
         "kit_category_H9LMjn": {
           "type": "kit_category",
           "settings": {
-            "header": "Spacer Inventory",
-            "body": "<p>• (1) 15.103 Spacer, 2.015”<br/>• (1) 15.203 Spacer, 0.950”<br/>• (3) 15.112 Spacers, 0.875”</p>"
+            "header": "Spacer Inventory{{ page.metafields.custom.instructions_included_header_5.value }}",
+            "body": "<p>• (1) 15.103 Spacer, 2.015”<br/>• (1) 15.203 Spacer, 0.950”<br/>• (3) 15.112 Spacers, 0.875”{{ page.metafields.custom.instructions_included_content_5 | metafield_tag }}</p>"
           }
         },
         "kit_category_LiT3Mi": {
