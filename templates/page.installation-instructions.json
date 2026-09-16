@@ -115,7 +115,8 @@
             "image_position": "split",
             "header": "STEP",
             "label": "{{ page.metafields.custom.instructions_step_1.value }}",
-            "body": "<ul><li><em>Disconnect the battery</em></li><li><em>Drain the coolant</em></li></ul>"
+            "body": "<ul><li><em>Disconnect the battery</em></li><li><em>Drain the coolant</em></li></ul>",
+            "image_1": "{{ page.metafields.custom.instructions_step_1_image.value }}"
           }
         },
         "step_p4UDTU": {
@@ -125,7 +126,7 @@
             "header": "STEP",
             "label": "Strip the Front of the Engine{{ page.metafields.custom.instructions_step_2.value }}",
             "body": "<p><strong>Remove and discard:</strong></p><ul><li>All factory belts</li><li>Factory accessory brackets</li><li>Factory accessories</li><li>OEM water pump and housing </li></ul><p><strong>Remove and retain for installation:</strong></p><ul><li>Alternator</li><li>A/C compressor</li><li>If your A/C uses a stretch belt, OEMs recommend replacing it.</li></ul>",
-            "image_1": "shopify://shop_images/ADK-LT100_Pic_1.jpg"
+            "image_1": "{{ page.metafields.custom.instructions_step_2_image.value }}"
           }
         },
         "step_mPKCht": {
@@ -135,7 +136,7 @@
             "header": "STEP",
             "label": "Remove the VVT Solenoid{{ page.metafields.custom.instructions_step_3.value }}",
             "body": "<p>Disconnect the electrical connector, then remove and retain the three mounting bolts.</p>",
-            "image_1": "shopify://shop_images/ADK-LT100_Pic_3.jpg"
+            "image_1": "{{ page.metafields.custom.instructions_step_3_image.value }}"
           }
         },
         "step_Ti9JPh": {
@@ -145,7 +146,7 @@
             "header": "STEP",
             "label": "Rotate and Modify{{ page.metafields.custom.instructions_step_4.value }}",
             "body": "<p>Rotate the VVT solenoid counterclockwise one mounting position so the electrical connector is positioned behind the crank pulley. Loosely reinstall two bolts to hold.</p><p><strong>Mark the VVT solenoid at the third bolt hole. Then remove and modify using a small angle grinder.</strong></p><p><strong>NOTE: </strong>Be careful not to damage the O-ring on the VVT solenoid during removal or modification.</p>",
-            "image_1": "shopify://shop_images/ADK-LT100_Pic_5-1.jpg"
+            "image_1": "{{ page.metafields.custom.instructions_step_4_image.value }}"
           }
         },
         "step_g4dyXM": {
@@ -155,7 +156,7 @@
             "header": "STEP",
             "label": "Reinstall the Solenoid{{ page.metafields.custom.instructions_step_5.value }}",
             "body": "<p>Reinstall the VVT solenoid using the factory bolts and reconnect the electrical connector. Torque the bolts to 9 lb-ft.<br/>Secure the wiring harness to an adjacent factory harness or bracket using zip ties, making sure it cannot contact the crank damper, pulley, or belt.<br/><br/></p>",
-            "image_1": "shopify://shop_images/ADK-LT100_Pic_9.jpg"
+            "image_1": "{{ page.metafields.custom.instructions_step_5_image.value }}"
           }
         },
         "step_xkAxXJ": {
@@ -165,7 +166,7 @@
             "header": "A/C Bracket NOTE: If you’re using ADK LT101, skip to Step 9.",
             "label": "Install the A/C Bracket (12.20){{ page.metafields.custom.instructions_step_6.value }}",
             "body": "<p>Use:</p><ul><li>(1) M8 1.25 x 75 mm bolt + washer (middle  hole)</li><li>Leave it loose for now.<br/></li></ul>",
-            "image_1": "shopify://shop_images/ADK-LT100_Pic_12.jpg"
+            "image_1": "{{ page.metafields.custom.instructions_step_6_image.value }}"
           }
         },
         "step_Mw8NCM": {
@@ -175,7 +176,7 @@
             "header": "STEP",
             "label": "Install the A/C Compressor{{ page.metafields.custom.instructions_step_7.value }}",
             "body": "<p>Install the A/C compressor using:</p><ul><li>1) M8 1.25 x 150 mm bolt and flat washer (upper mounting hole)</li><li>(1) M8 1.25 x 90 mm bolt and flat washer (lower mounting hole)</li></ul><p>Apply Loctite to the bolt threads and tighten all three mounting bolts securely. Reinstall the A/C stretch belt if it is in good condition, or replace it with a new belt.</p><p><br/><strong>Note</strong>: A/C stretch belt manufacturers recommend replacing the belt once removed. Use a stretch belt installation tool or an approved zip-tie installation method. Do not use a screwdriver, pry bar or similar tool to force the belt onto the pulley, as damage to the belt may result.<br/></p>",
-            "image_1": "shopify://shop_images/ADK-LT100_Pic_15.jpg"
+            "image_1": "{{ page.metafields.custom.instructions_step_7_image.value }}"
           }
         },
         "step_V3gA8w": {
@@ -185,8 +186,7 @@
             "header": "STEP",
             "label": "Install the Water Pump and Adapters{{ page.metafields.custom.instructions_step_8.value }}",
             "body": "<p>Using a 6MM hex socket. Install the water pump with the 12.22 RH and 12.22 LH adapters using six (6) M8‑1.25 x 130 mm socket head bolts with flat washers. Loosely install the top two (2) driver-side bolts and torque the rest to 30 lb-ft<br/>The driver-side adapter (12.22 RH) has the temperature sensor port.<br/>After securing the pump, install the temperature sensor.<br/><strong>Tip:</strong> To make installation easier, apply a few drops of gasket adhesive to hold the gaskets in place while positioning the water pump assembly.</p>",
-            "image_1": "shopify://shop_images/ADK-LT100_Pic_13.jpg",
-            "image_3": "shopify://shop_images/ADK-LT100_Pic_19.jpg"
+            "image_1": "{{ page.metafields.custom.instructions_step_8_image.value }}"
           }
         },
         "step_ffDf7T": {
@@ -196,7 +196,7 @@
             "header": "STEP",
             "label": "Install the 12.19 Pump Bracket",
             "body": "<p>Driver side cylinder head →<br/>Use:</p><ul><li>(1) 8 mm hex socket</li><li>(3) M10 1.5 x 45 mm bolts</li><li>(3) 15.112 spacers between the head and the bracket.</li></ul><p>Torque the bolts to 55 lb-ft.</p>",
-            "image_1": "shopify://shop_images/ADK-LT100_Pic_21.jpg"
+            "image_1": "{{ page.metafields.custom.instructions_step_9_image.value }}"
           }
         },
         "step_qHpddh": {
@@ -206,7 +206,7 @@
             "header": "STEP",
             "label": "Install the 12.23 Idler Bracket",
             "body": "<p>Remove the two driver side upper water pump bolts <br/>Loosely mount the 12.23 idler bracket.<br/></p>",
-            "image_1": "shopify://shop_images/ADK-LT100_Pic_24.jpg"
+            "image_1": "{{ page.metafields.custom.instructions_step_10_image.value }}"
           }
         },
         "step_Y3Vxd7": {
@@ -216,7 +216,7 @@
             "header": "STEP",
             "label": "Install the Power Steering Pump",
             "body": "<p>Between the 12.19 and 12.23 brackets:<br/>Use:</p><ul><li>(1) 5/16 18 x 3.5” + washer (top hole)</li><li>(1) 5/16 18 x 3” + washer (bottom hole)</li><li>(1) M8 1.25 x 30 mm flange bolt (inner hole)</li></ul><p>Once the pump is properly positioned, tighten all pump mounting hardware evenly. Torque 8mm bolts to 30 lb-ft and the 5/16 bolts to 25 lb-ft.<br/><br/><br/><br/><br/><br/></p>",
-            "image_1": "shopify://shop_images/ADK-LT100_pump.jpg"
+            "image_1": "{{ page.metafields.custom.instructions_step_11_image.value }}"
           }
         },
         "step_kNUzab": {
@@ -226,7 +226,7 @@
             "header": "STEP",
             "label": "Assemble and Install the Idler Pulley",
             "body": "<p>Use:</p><ul><li>PP4103 idler pulley to the 12.23 bracket.</li><li>15.203 spacer (between pulley and bracket)</li><li>(1) M10 1.5 x 50 mm bolt</li><li>Heavy duty washer</li><li>Lock nut</li></ul><p><strong>NOTE:</strong> Snap ring faces forward.</p>",
-            "image_1": "shopify://shop_images/ADK-LT100_Pic_34.jpg"
+            "image_1": "{{ page.metafields.custom.instructions_step_12_image.value }}"
           }
         },
         "step_8XM3YY": {
@@ -236,7 +236,7 @@
             "header": "STEP",
             "label": "Install the 12.21B Bracket (Rear)",
             "body": "<p>Passenger side cylinder head →<br/>Loosely install:</p><ul><li>(1) M10 1.5 x 35 mm flange bolt</li><li>(1) M8 1.25 x 35 mm flange bolt</li></ul><p>Don’t tighten yet.<br/></p>",
-            "image_1": "shopify://shop_images/ADK-LT100_Pic_35.jpg"
+            "image_1": "{{ page.metafields.custom.instructions_step_13_image.value }}"
           }
         },
         "step_cHqj7f": {
