@@ -423,10 +423,21 @@
         "step_g4dyXM": {
           "type": "step",
           "settings": {
-            "image_position": "split",
+            "image_position": "left",
             "header": "STEP",
-            "label": "Prepare the vehicle",
-            "body": "<ul><li>Disconnect the battery and secure the vehicle.</li></ul>"
+            "label": "Reinstall the Solenoid",
+            "body": "<p>Reinstall the VVT solenoid using the factory bolts and reconnect the electrical connector. Torque the bolts to 9 lb-ft.<br/>Secure the wiring harness to an adjacent factory harness or bracket using zip ties, making sure it cannot contact the crank damper, pulley, or belt.<br/><br/></p>",
+            "image_1": "shopify://shop_images/ADK-LT100_Pic_9.jpg"
+          }
+        },
+        "step_xkAxXJ": {
+          "type": "step",
+          "settings": {
+            "image_position": "right",
+            "header": "A/C Bracket NOTE: If you’re using ADK LT101, skip to Step 9.",
+            "label": "Install the A/C Bracket (12.20)",
+            "body": "<p>Use:</p><ul><li>(1) M8 1.25 x 75 mm bolt + washer (middle  hole)</li><li>Leave it loose for now.<br/></li></ul>",
+            "image_1": "shopify://shop_images/ADK-LT100_Pic_12.jpg"
           }
         }
       },
@@ -446,7 +457,8 @@
         "step_p4UDTU",
         "step_mPKCht",
         "step_Ti9JPh",
-        "step_g4dyXM"
+        "step_g4dyXM",
+        "step_xkAxXJ"
       ],
       "name": "PSC Installation Guide",
       "settings": {
