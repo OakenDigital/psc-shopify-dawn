@@ -31,17 +31,17 @@
         "toc_entry_TLHLWC": {
           "type": "toc_entry",
           "settings": {
-            "title": "What's in the kit{{ page.metafields.custom.instructions_toc_header.value }}",
+            "title": "What's in the kit{{ page.metafields.custom.instructions_toc_header_2.value }}",
             "range": "",
-            "items": "<ul><li>Included components</li><li>Tools Needed{{ page.metafields.custom.instructions_toc_content_1 | metafield_tag }}</li></ul>"
+            "items": "<ul><li>{{ page.metafields.custom.instructions_toc_content2 | metafield_tag }}</li></ul>"
           }
         },
         "toc_entry_MFPXmD": {
           "type": "toc_entry",
           "settings": {
-            "title": "Installation",
+            "title": "Installation{{ page.metafields.custom.instructions_toc_header_3.value }}",
             "range": "",
-            "items": "<ul><li>Installation</li><li>VVT Solenoid Adjustment</li><li>A/C Bracket (Only for ADK‑LT100)</li><li>Water Pump & Adapter Plates</li><li>Power Steering Brackets & Pump</li><li>Alternator Brackets & Tensioner</li><li>Belt Install</li><li>Final Checks</li></ul>"
+            "items": "<ol><li></li></ol>"
           }
         },
         "toc_entry_DrpYNi": {
