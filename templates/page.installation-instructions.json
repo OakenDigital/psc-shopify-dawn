@@ -155,7 +155,7 @@
             "image_position": "left",
             "header": "STEP",
             "label": "{{ page.metafields.custom.instructions_step_5.value }}",
-            "body": "<p><br/><br/></p>",
+            "body": "<p>{{ page.metafields.custom.step_5_content | metafield_tag }}</p>",
             "image_1": "{{ page.metafields.custom.instructions_step_5_image.value }}"
           }
         },
