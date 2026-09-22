@@ -23,6 +23,10 @@
           "type": "ai_gen_block_25ef8da",
           "name": "Image row",
           "settings": {
+            "image_1": "shopify://shop_images/kL7m-3aN0r2HEw0GcMHnEA.png",
+            "image_2": "shopify://shop_images/DSC03409_1.jpg",
+            "image_3": "shopify://shop_images/Ram_Power_Wagon.png",
+            "image_4": "shopify://shop_images/1999_GMC_2500.png",
             "max_width": 1600,
             "spacing": 8,
             "spacing_mobile": 8,
