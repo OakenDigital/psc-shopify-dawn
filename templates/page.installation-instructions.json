@@ -246,7 +246,7 @@
             "header": "STEP",
             "label": "{{ page.metafields.custom.instructions_step_14.value }}",
             "body": "<p>{{ page.metafields.custom.step_14_content | metafield_tag }}</p>",
-            "image_1": "shopify://shop_images/ADK-LT100_Pic_37.jpg"
+            "image_1": "{{ page.metafields.custom.instructions_step_14_image.value }}"
           }
         },
         "step_byGprp": {
@@ -254,9 +254,9 @@
           "settings": {
             "image_position": "right",
             "header": "STEP",
-            "label": "Install the Alternator",
-            "body": "<p>Use:</p><ul><li>(1) M10 1.5 x 130 mm bolt through 12.21A → alternator → 15.103 spacer → into 12.21B</li><li>(1) M10 1.5 x 70 mm bolt + lock nut (inner hole)</li></ul><p>Tighten alternator bolts first, then tighten the 12.21B hardware from Step 14. Torque the M10 bolts to 55 lb-ft and the M8 bolt to 30 lb-ft.<br/></p>",
-            "image_1": "shopify://shop_images/ADK-LT100_Pic_39.jpg"
+            "label": "{{ page.metafields.custom.instructions_step_15.value }}",
+            "body": "<p>{{ page.metafields.custom.step_15_content | metafield_tag }}<br/></p>",
+            "image_1": "{{ page.metafields.custom.instructions_step_15_image.value }}"
           }
         },
         "step_rhGMA9": {
@@ -264,9 +264,9 @@
           "settings": {
             "image_position": "right",
             "header": "STEP",
-            "label": "Install the Belt Tensioner",
-            "body": "<p>Mount the tensioner to the 12.21A bracket using:</p><ul><li>(1) M10 1.5 x 70 mm bolt + heavy duty washer</li></ul><p>Torque M10 bolt to 55 lb-ft.</p>",
-            "image_1": "shopify://shop_images/ADK-LT100_Pic_41.jpg"
+            "label": "{{ page.metafields.custom.instructions_step_16.value }}",
+            "body": "<p>{{ page.metafields.custom.step_16_content | metafield_tag }}</p>",
+            "image_1": "{{ page.metafields.custom.instructions_step_16_image.value }}"
           }
         },
         "step_CeQMB4": {
