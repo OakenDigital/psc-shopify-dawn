@@ -63,7 +63,7 @@
         "kit_category_JbpLyq": {
           "type": "kit_category",
           "settings": {
-            "header": "Brackets{{ page.metafields.custom.instructions_included_header.value }}",
+            "header": "{{ page.metafields.custom.instructions_included_header.value }}",
             "body": "<p>{{ page.metafields.custom.instructions_included_content | metafield_tag }}</p>"
           }
         },
