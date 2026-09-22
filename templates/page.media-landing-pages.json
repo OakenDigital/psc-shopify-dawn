@@ -13,7 +13,7 @@
       "type": "main-page",
       "settings": {
         "padding_top": 76,
-        "padding_bottom": 12
+        "padding_bottom": 4
       }
     },
     "rich_text_YKchqN": {
@@ -58,37 +58,6 @@
         "full_width": true,
         "padding_top": 40,
         "padding_bottom": 52
-      }
-    },
-    "featured_collection_KRAYtc": {
-      "type": "featured-collection",
-      "name": "t:sections.featured-collection.presets.name",
-      "settings": {
-        "collection": "",
-        "products_to_show": 4,
-        "eyebrow_text": "UPGRADE",
-        "eyebrow_color": "#dc2626",
-        "title": "Popular PSC Upgrades for Larger Tires",
-        "heading_size": "h1",
-        "description": "",
-        "show_description": false,
-        "description_style": "body",
-        "columns_desktop": 4,
-        "enable_desktop_slider": false,
-        "full_width": false,
-        "show_view_all": true,
-        "view_all_style": "solid",
-        "color_scheme": "scheme-2a3099ff-9a3c-4a9e-8233-7c59b10461d1",
-        "image_ratio": "adapt",
-        "image_shape": "default",
-        "show_secondary_image": false,
-        "show_vendor": false,
-        "show_rating": false,
-        "quick_add": "none",
-        "columns_mobile": "2",
-        "swipe_on_mobile": true,
-        "padding_top": 36,
-        "padding_bottom": 36
       }
     },
     "blocks_tdaxhL": {
@@ -240,14 +209,65 @@
         "include_margins": true,
         "full_width": true
       }
+    },
+    "collection_list_3CVb8V": {
+      "type": "collection-list",
+      "blocks": {
+        "featured_collection_fAWLpC": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "dynamic-damping-stabilizer-dds"
+          }
+        },
+        "featured_collection_xYtGcJ": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "big-bore-xd-steering-gear-kits"
+          }
+        },
+        "featured_collection_JhzPJr": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "cylinder-assist-kits"
+          }
+        },
+        "featured_collection_w9mHiV": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "cylinder-assist-kits"
+          }
+        }
+      },
+      "block_order": [
+        "featured_collection_fAWLpC",
+        "featured_collection_xYtGcJ",
+        "featured_collection_JhzPJr",
+        "featured_collection_w9mHiV"
+      ],
+      "name": "t:sections.collection-list.presets.name",
+      "settings": {
+        "eyebrow_text": "UPGRADES",
+        "eyebrow_color": "#dc2626",
+        "title": "Popular PSC Upgrades for Larger Tires",
+        "description": "<p>Explore our curated collections of top-quality steering systems and components, designed for peak performance and durability.</p>",
+        "heading_size": "h1",
+        "image_ratio": "square",
+        "columns_desktop": 3,
+        "color_scheme": "scheme-a03118e4-1d97-43bc-bd4f-655039a52abb",
+        "show_view_all": false,
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
     "main",
     "rich_text_YKchqN",
-    "featured_collection_KRAYtc",
     "blocks_tdaxhL",
     "rich_text_R3kECz",
-    "178215901468e81263"
+    "178215901468e81263",
+    "collection_list_3CVb8V"
   ]
 }
