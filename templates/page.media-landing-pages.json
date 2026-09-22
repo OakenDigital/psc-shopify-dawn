@@ -210,67 +210,12 @@
         "full_width": true
       }
     },
-    "image_with_text_LdFtxi": {
-      "type": "image-with-text",
-      "blocks": {
-        "tagline_tBHVdK": {
-          "type": "tagline",
-          "settings": {
-            "tagline": "ADD A TAGLINE",
-            "tagline_color": ""
-          }
-        },
-        "heading_wcYhnY": {
-          "type": "heading",
-          "settings": {
-            "heading": "Image with text",
-            "heading_size": "h1"
-          }
-        },
-        "text_MCkb3H": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
-            "text_style": "body"
-          }
-        },
-        "button_J6VxAJ": {
-          "type": "button",
-          "settings": {
-            "button_label": "Button label",
-            "button_link": "",
-            "button_style_secondary": false,
-            "button_color_scheme": ""
-          }
-        }
-      },
-      "block_order": [
-        "tagline_tBHVdK",
-        "heading_wcYhnY",
-        "text_MCkb3H",
-        "button_J6VxAJ"
-      ],
-      "name": "t:sections.image-with-text.presets.name",
-      "settings": {
-        "height": "adapt",
-        "desktop_image_width": "medium",
-        "layout": "image_first",
-        "image_behavior": "none",
-        "content_layout": "no-overlap",
-        "desktop_content_position": "top",
-        "desktop_content_alignment": "left",
-        "mobile_content_alignment": "left",
-        "section_color_scheme": "",
-        "color_scheme": "",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
     "image_with_text_p44JUJ": {
       "type": "image-with-text",
       "blocks": {
         "tagline_aYzTkU": {
           "type": "tagline",
+          "disabled": true,
           "settings": {
             "tagline": "ADD A TAGLINE",
             "tagline_color": ""
@@ -318,7 +263,7 @@
         "desktop_content_alignment": "left",
         "mobile_content_alignment": "left",
         "section_color_scheme": "",
-        "color_scheme": "",
+        "color_scheme": "scheme-2",
         "padding_top": 36,
         "padding_bottom": 36
       }
@@ -407,71 +352,6 @@
         "padding_bottom": 36
       }
     },
-    "collection_list_3CVb8V": {
-      "type": "collection-list",
-      "blocks": {
-        "featured_collection_fAWLpC": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "dynamic-damping-stabilizer-dds"
-          }
-        },
-        "featured_collection_xYtGcJ": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "big-bore-xd-steering-gear-kits"
-          }
-        },
-        "featured_collection_JhzPJr": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "cylinder-assist-kits"
-          }
-        },
-        "featured_collection_w9mHiV": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "ehps-kits-electric-hydraulic-power-steering"
-          }
-        },
-        "featured_collection_JRUDNU": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "adventure-steering-kits"
-          }
-        },
-        "featured_collection_fqXkxU": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "steering-systems"
-          }
-        }
-      },
-      "block_order": [
-        "featured_collection_fAWLpC",
-        "featured_collection_xYtGcJ",
-        "featured_collection_JhzPJr",
-        "featured_collection_w9mHiV",
-        "featured_collection_JRUDNU",
-        "featured_collection_fqXkxU"
-      ],
-      "name": "t:sections.collection-list.presets.name",
-      "settings": {
-        "eyebrow_text": "UPGRADES",
-        "eyebrow_color": "#dc2626",
-        "title": "Steering Solutions Built for Bigger Tires",
-        "description": "<p>The bigger the tire, the harder your steering system has to work. These PSC products are designed to help meet the challenge.</p>",
-        "heading_size": "h1",
-        "image_ratio": "square",
-        "columns_desktop": 3,
-        "color_scheme": "scheme-a03118e4-1d97-43bc-bd4f-655039a52abb",
-        "show_view_all": false,
-        "columns_mobile": "1",
-        "swipe_on_mobile": true,
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
     "collection_list_bVj6bU": {
       "type": "collection-list",
       "blocks": {
@@ -522,7 +402,7 @@
         "heading_size": "h1",
         "image_ratio": "square",
         "columns_desktop": 5,
-        "color_scheme": "scheme-1",
+        "color_scheme": "scheme-5",
         "show_view_all": false,
         "columns_mobile": "2",
         "swipe_on_mobile": true,
@@ -580,7 +460,7 @@
         "heading_size": "h1",
         "image_ratio": "square",
         "columns_desktop": 5,
-        "color_scheme": "scheme-1",
+        "color_scheme": "scheme-7129e445-c91f-4fd0-9a08-140437301697",
         "show_view_all": false,
         "columns_mobile": "2",
         "swipe_on_mobile": true,
@@ -595,10 +475,8 @@
     "blocks_tdaxhL",
     "rich_text_R3kECz",
     "178215901468e81263",
-    "image_with_text_LdFtxi",
     "image_with_text_p44JUJ",
     "multicolumn_9aeify",
-    "collection_list_3CVb8V",
     "collection_list_bVj6bU",
     "collection_list_6GzJ6U"
   ]
