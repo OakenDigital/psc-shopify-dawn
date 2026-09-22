@@ -472,34 +472,92 @@
         "padding_bottom": 36
       }
     },
-    "collection_list_k3Uhgk": {
+    "collection_list_bVj6bU": {
       "type": "collection-list",
       "blocks": {
-        "featured_collection_QXXCdX": {
+        "featured_collection_8PgNaG": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "dynamic-damping-stabilizer-dds"
+          }
+        },
+        "featured_collection_TjPGNq": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "big-bore-xd-steering-gear-kits"
+          }
+        },
+        "featured_collection_EXNNCx": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "steering-cylinders"
+          }
+        },
+        "featured_collection_FakdnM": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "ehps-kits-electric-hydraulic-power-steering"
+          }
+        },
+        "featured_collection_pXPQmN": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "steering-systems"
+          }
+        }
+      },
+      "block_order": [
+        "featured_collection_8PgNaG",
+        "featured_collection_TjPGNq",
+        "featured_collection_EXNNCx",
+        "featured_collection_FakdnM",
+        "featured_collection_pXPQmN"
+      ],
+      "name": "t:sections.collection-list.presets.name",
+      "settings": {
+        "eyebrow_text": "",
+        "eyebrow_color": "#d6001c",
+        "title": "Shop by Vehicle",
+        "description": "<p>Check out our lineup of steering systems and components built tough for real-world performance. Every part’s engineered for durability and tested to keep you turning strong.</p>",
+        "heading_size": "h1",
+        "image_ratio": "square",
+        "columns_desktop": 5,
+        "color_scheme": "scheme-1",
+        "show_view_all": false,
+        "columns_mobile": "2",
+        "swipe_on_mobile": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "collection_list_6GzJ6U": {
+      "type": "collection-list",
+      "blocks": {
+        "featured_collection_eJ4JdL": {
           "type": "featured_collection",
           "settings": {
             "collection": "jeep"
           }
         },
-        "featured_collection_CNGeFe": {
+        "featured_collection_BwpeWt": {
           "type": "featured_collection",
           "settings": {
             "collection": "ford"
           }
         },
-        "featured_collection_KLzWRW": {
+        "featured_collection_PjBMQT": {
           "type": "featured_collection",
           "settings": {
             "collection": "ram"
           }
         },
-        "featured_collection_RmyN8q": {
+        "featured_collection_PVEPEC": {
           "type": "featured_collection",
           "settings": {
             "collection": "chevrolet-gmc"
           }
         },
-        "featured_collection_UiEbbp": {
+        "featured_collection_3in3H4": {
           "type": "featured_collection",
           "settings": {
             "collection": "street-muscle-performance-car-trucks"
@@ -507,25 +565,25 @@
         }
       },
       "block_order": [
-        "featured_collection_QXXCdX",
-        "featured_collection_CNGeFe",
-        "featured_collection_KLzWRW",
-        "featured_collection_RmyN8q",
-        "featured_collection_UiEbbp"
+        "featured_collection_eJ4JdL",
+        "featured_collection_BwpeWt",
+        "featured_collection_PjBMQT",
+        "featured_collection_PVEPEC",
+        "featured_collection_3in3H4"
       ],
       "name": "t:sections.collection-list.presets.name",
       "settings": {
         "eyebrow_text": "",
-        "eyebrow_color": "#dc2626",
-        "title": "SHOP BY VEHICLE",
+        "eyebrow_color": "#d6001c",
+        "title": "Shop by Vehicle",
         "description": "<p>Check out our lineup of steering systems and components built tough for real-world performance. Every part’s engineered for durability and tested to keep you turning strong.</p>",
         "heading_size": "h1",
         "image_ratio": "square",
-        "columns_desktop": 3,
-        "color_scheme": "",
+        "columns_desktop": 5,
+        "color_scheme": "scheme-1",
         "show_view_all": false,
-        "columns_mobile": "1",
-        "swipe_on_mobile": false,
+        "columns_mobile": "2",
+        "swipe_on_mobile": true,
         "padding_top": 36,
         "padding_bottom": 36
       }
@@ -541,6 +599,7 @@
     "image_with_text_p44JUJ",
     "multicolumn_9aeify",
     "collection_list_3CVb8V",
-    "collection_list_k3Uhgk"
+    "collection_list_bVj6bU",
+    "collection_list_6GzJ6U"
   ]
 }
