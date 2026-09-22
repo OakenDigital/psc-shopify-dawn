@@ -214,8 +214,8 @@
           "settings": {
             "image_position": "right",
             "header": "STEP",
-            "label": "Install the Power Steering Pump",
-            "body": "<p>Between the 12.19 and 12.23 brackets:<br/>Use:</p><ul><li>(1) 5/16 18 x 3.5” + washer (top hole)</li><li>(1) 5/16 18 x 3” + washer (bottom hole)</li><li>(1) M8 1.25 x 30 mm flange bolt (inner hole)</li></ul><p>Once the pump is properly positioned, tighten all pump mounting hardware evenly. Torque 8mm bolts to 30 lb-ft and the 5/16 bolts to 25 lb-ft.<br/><br/><br/><br/><br/><br/></p>",
+            "label": "{{ page.metafields.custom.instructions_step_11.value }}",
+            "body": "<p>{{ page.metafields.custom.step_11_content | metafield_tag }}<br/><br/><br/><br/></p>",
             "image_1": "{{ page.metafields.custom.instructions_step_11_image.value }}"
           }
         },
