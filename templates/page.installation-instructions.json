@@ -84,7 +84,7 @@
         "kit_category_whAfV7": {
           "type": "kit_category",
           "settings": {
-            "header": "ADK-LT100G & ADK-LT100R Only{{ page.metafields.custom.instructions_included_header_4.value }}",
+            "header": "{{ page.metafields.custom.instructions_included_header_4.value }}",
             "body": "<p>{{ page.metafields.custom.instructions_included_content_4 | metafield_tag }}</p>"
           }
         },
