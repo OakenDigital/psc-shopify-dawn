@@ -70,7 +70,7 @@
         "kit_category_YcM36D": {
           "type": "kit_category",
           "settings": {
-            "header": "Components{{ page.metafields.custom.instructions_included_header_2.value }}",
+            "header": "{{ page.metafields.custom.instructions_included_header_2.value }}",
             "body": "<p>{{ page.metafields.custom.instructions_included_content_2 | metafield_tag }}</p>"
           }
         },
