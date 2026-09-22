@@ -39,7 +39,7 @@
         "toc_entry_MFPXmD": {
           "type": "toc_entry",
           "settings": {
-            "title": "Installation{{ page.metafields.custom.instructions_toc_header_3.value }}",
+            "title": "{{ page.metafields.custom.instructions_toc_header_3.value }}",
             "range": "",
             "items": "<p>{{ page.metafields.custom.instructions_toc_content_3 | metafield_tag }}</p>"
           }
