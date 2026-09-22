@@ -163,9 +163,9 @@
           "type": "step",
           "settings": {
             "image_position": "right",
-            "header": "A/C Bracket NOTE: If you’re using ADK LT101, skip to Step 9.",
-            "label": "Install the A/C Bracket (12.20){{ page.metafields.custom.instructions_step_6.value }}",
-            "body": "<p>Use:</p><ul><li>(1) M8 1.25 x 75 mm bolt + washer (middle  hole)</li><li>Leave it loose for now.<br/></li></ul>",
+            "header": "STEP",
+            "label": "{{ page.metafields.custom.instructions_step_6.value }}",
+            "body": "<p><br/>A/C Bracket NOTE: If you’re using ADK LT101, skip to Step 9.</p><p>Use:</p><ul><li>(1) M8 1.25 x 75 mm bolt + washer (middle  hole)</li><li>Leave it loose for now.<br/></li></ul>",
             "image_1": "{{ page.metafields.custom.instructions_step_6_image.value }}"
           }
         },
