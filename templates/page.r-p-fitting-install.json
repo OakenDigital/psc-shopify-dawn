@@ -23,7 +23,7 @@
         "step_K6k3PQ": {
           "type": "step",
           "settings": {
-            "image_position": "split",
+            "image_position": "left",
             "header": "{{ page.metafields.custom.step.value }}",
             "label": "{{ page.metafields.custom.instructions_step_1.value }}",
             "body": "<p>{{ page.metafields.custom.step_1_content | metafield_tag }}</p>",
@@ -33,7 +33,7 @@
         "step_p4UDTU": {
           "type": "step",
           "settings": {
-            "image_position": "split",
+            "image_position": "left",
             "header": "{{ page.metafields.custom.step.value }}",
             "label": "{{ page.metafields.custom.instructions_step_2.value }}",
             "body": "<p>{{ page.metafields.custom.step_2_content | metafield_tag }}</p>",
@@ -43,7 +43,7 @@
         "step_mPKCht": {
           "type": "step",
           "settings": {
-            "image_position": "split",
+            "image_position": "left",
             "header": "{{ page.metafields.custom.step.value }}",
             "label": "{{ page.metafields.custom.instructions_step_3.value }}",
             "body": "<p>{{ page.metafields.custom.step_3_content | metafield_tag }}</p>",
@@ -53,7 +53,7 @@
         "step_Ti9JPh": {
           "type": "step",
           "settings": {
-            "image_position": "split",
+            "image_position": "left",
             "header": "{{ page.metafields.custom.step.value }}",
             "label": "{{ page.metafields.custom.instructions_step_4.value }}",
             "body": "<p>{{ page.metafields.custom.step_4_content | metafield_tag }}</p>",
@@ -63,7 +63,7 @@
         "step_g4dyXM": {
           "type": "step",
           "settings": {
-            "image_position": "split",
+            "image_position": "left",
             "header": "{{ page.metafields.custom.step.value }}",
             "label": "{{ page.metafields.custom.instructions_step_5.value }}",
             "body": "<p>{{ page.metafields.custom.step_5_content | metafield_tag }}</p>",
@@ -73,7 +73,7 @@
         "step_xkAxXJ": {
           "type": "step",
           "settings": {
-            "image_position": "split",
+            "image_position": "left",
             "header": "{{ page.metafields.custom.step.value }}",
             "label": "{{ page.metafields.custom.instructions_step_6.value }}",
             "body": "<p>{{ page.metafields.custom.step_6_content | metafield_tag }}</p>",
@@ -83,7 +83,7 @@
         "step_Mw8NCM": {
           "type": "step",
           "settings": {
-            "image_position": "split",
+            "image_position": "left",
             "header": "{{ page.metafields.custom.step.value }}",
             "label": "{{ page.metafields.custom.instructions_step_7.value }}",
             "body": "<p>{{ page.metafields.custom.step_7_content | metafield_tag }}</p>",
@@ -93,7 +93,7 @@
         "step_V3gA8w": {
           "type": "step",
           "settings": {
-            "image_position": "split",
+            "image_position": "left",
             "header": "{{ page.metafields.custom.step.value }}",
             "label": "{{ page.metafields.custom.instructions_step_8.value }}",
             "body": "<p>{{ page.metafields.custom.step_8_content | metafield_tag }}</p>",
