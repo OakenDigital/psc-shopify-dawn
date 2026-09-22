@@ -224,8 +224,8 @@
           "settings": {
             "image_position": "right",
             "header": "STEP",
-            "label": "Assemble and Install the Idler Pulley",
-            "body": "<p>Use:</p><ul><li>PP4103 idler pulley to the 12.23 bracket.</li><li>15.203 spacer (between pulley and bracket)</li><li>(1) M10 1.5 x 50 mm bolt</li><li>Heavy duty washer</li><li>Lock nut</li></ul><p><strong>NOTE:</strong> Snap ring faces forward.</p>",
+            "label": "{{ page.metafields.custom.instructions_step_12.value }}",
+            "body": "<p>{{ page.metafields.custom.step_12_content | metafield_tag }}</p>",
             "image_1": "{{ page.metafields.custom.instructions_step_12_image.value }}"
           }
         },
