@@ -234,8 +234,8 @@
           "settings": {
             "image_position": "right",
             "header": "STEP",
-            "label": "Install the 12.21B Bracket (Rear)",
-            "body": "<p>Passenger side cylinder head →<br/>Loosely install:</p><ul><li>(1) M10 1.5 x 35 mm flange bolt</li><li>(1) M8 1.25 x 35 mm flange bolt</li></ul><p>Don’t tighten yet.<br/></p>",
+            "label": "{{ page.metafields.custom.instructions_step_13.value }}",
+            "body": "<p>{{ page.metafields.custom.step_13_content | metafield_tag }}</p>",
             "image_1": "{{ page.metafields.custom.instructions_step_13_image.value }}"
           }
         },
