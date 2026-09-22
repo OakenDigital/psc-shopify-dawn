@@ -98,7 +98,7 @@
         "kit_category_LiT3Mi": {
           "type": "kit_category",
           "settings": {
-            "header": "Applicable Kits{{ page.metafields.custom.instructions_included_header_6.value }}",
+            "header": "{{ page.metafields.custom.instructions_included_header_6.value }}",
             "body": "<p>{{ page.metafields.custom.instructions_included_content_6 | metafield_tag }}</p>"
           }
         },
