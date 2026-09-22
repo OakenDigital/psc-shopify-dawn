@@ -47,9 +47,9 @@
         "toc_entry_DrpYNi": {
           "type": "toc_entry",
           "settings": {
-            "title": "Bleed Instructions{{ page.metafields.custom.instructions_toc_header_4.value }}",
+            "title": "{{ page.metafields.custom.instructions_toc_header_4.value }}",
             "range": "",
-            "items": "<ul><li>{{ page.metafields.custom.instructions_toc_content_4 | metafield_tag }}</li></ul>"
+            "items": "<p>{{ page.metafields.custom.instructions_toc_content_4 | metafield_tag }}</p>"
           }
         },
         "toc_entry_YtUPLL": {
@@ -57,7 +57,7 @@
           "settings": {
             "title": "Contact us{{ page.metafields.custom.instructions_toc_header_5.value }}",
             "range": "",
-            "items": "<ul><li>Technical support{{ page.metafields.custom.instructions_toc_content_5 | metafield_tag }}</li></ul>"
+            "items": "<p>{{ page.metafields.custom.instructions_toc_content_5 | metafield_tag }}</p>"
           }
         },
         "kit_category_JbpLyq": {
