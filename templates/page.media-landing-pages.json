@@ -234,7 +234,19 @@
         "featured_collection_w9mHiV": {
           "type": "featured_collection",
           "settings": {
-            "collection": "cylinder-assist-kits"
+            "collection": "ehps-kits-electric-hydraulic-power-steering"
+          }
+        },
+        "featured_collection_JRUDNU": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "adventure-steering-kits"
+          }
+        },
+        "featured_collection_fqXkxU": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "steering-systems"
           }
         }
       },
@@ -242,7 +254,9 @@
         "featured_collection_fAWLpC",
         "featured_collection_xYtGcJ",
         "featured_collection_JhzPJr",
-        "featured_collection_w9mHiV"
+        "featured_collection_w9mHiV",
+        "featured_collection_JRUDNU",
+        "featured_collection_fqXkxU"
       ],
       "name": "t:sections.collection-list.presets.name",
       "settings": {
