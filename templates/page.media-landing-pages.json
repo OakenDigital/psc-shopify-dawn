@@ -498,13 +498,20 @@
           "settings": {
             "collection": "chevrolet-gmc"
           }
+        },
+        "featured_collection_UiEbbp": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "street-muscle-performance-car-trucks"
+          }
         }
       },
       "block_order": [
         "featured_collection_QXXCdX",
         "featured_collection_CNGeFe",
         "featured_collection_KLzWRW",
-        "featured_collection_RmyN8q"
+        "featured_collection_RmyN8q",
+        "featured_collection_UiEbbp"
       ],
       "name": "t:sections.collection-list.presets.name",
       "settings": {
