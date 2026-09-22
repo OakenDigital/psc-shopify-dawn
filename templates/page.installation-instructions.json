@@ -135,7 +135,7 @@
             "image_position": "left",
             "header": "STEP",
             "label": "{{ page.metafields.custom.instructions_step_3.value }}",
-            "body": "<p>Disconnect the electrical connector, then remove and retain the three mounting bolts.</p>",
+            "body": "<p>{{ page.metafields.custom.step_3_content | metafield_tag }}</p>",
             "image_1": "{{ page.metafields.custom.instructions_step_3_image.value }}"
           }
         },
