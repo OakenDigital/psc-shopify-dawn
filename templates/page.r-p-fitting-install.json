@@ -22,6 +22,7 @@
       "blocks": {
         "toc_entry_RQkR4C": {
           "type": "toc_entry",
+          "disabled": true,
           "settings": {
             "title": "{{ page.metafields.custom.instructions_toc_header.value }}",
             "range": "",
@@ -30,6 +31,7 @@
         },
         "toc_entry_TLHLWC": {
           "type": "toc_entry",
+          "disabled": true,
           "settings": {
             "title": "What's in the kit{{ page.metafields.custom.instructions_toc_header_2.value }}",
             "range": "",
@@ -38,6 +40,7 @@
         },
         "toc_entry_MFPXmD": {
           "type": "toc_entry",
+          "disabled": true,
           "settings": {
             "title": "{{ page.metafields.custom.instructions_toc_header_3.value }}",
             "range": "",
@@ -46,6 +49,7 @@
         },
         "toc_entry_DrpYNi": {
           "type": "toc_entry",
+          "disabled": true,
           "settings": {
             "title": "{{ page.metafields.custom.instructions_toc_header_4.value }}",
             "range": "",
@@ -54,6 +58,7 @@
         },
         "toc_entry_YtUPLL": {
           "type": "toc_entry",
+          "disabled": true,
           "settings": {
             "title": "Contact us{{ page.metafields.custom.instructions_toc_header_5.value }}",
             "range": "",
@@ -62,6 +67,7 @@
         },
         "kit_category_JbpLyq": {
           "type": "kit_category",
+          "disabled": true,
           "settings": {
             "header": "{{ page.metafields.custom.instructions_included_header.value }}",
             "body": "<p>{{ page.metafields.custom.instructions_included_content | metafield_tag }}</p>"
@@ -69,6 +75,7 @@
         },
         "kit_category_YcM36D": {
           "type": "kit_category",
+          "disabled": true,
           "settings": {
             "header": "{{ page.metafields.custom.instructions_included_header_2.value }}",
             "body": "<p>{{ page.metafields.custom.instructions_included_content_2 | metafield_tag }}</p>"
@@ -76,6 +83,7 @@
         },
         "kit_category_gmYbYG": {
           "type": "kit_category",
+          "disabled": true,
           "settings": {
             "header": "{{ page.metafields.custom.instructions_included_header_3.value }}",
             "body": "<p>{{ page.metafields.custom.instructions_included_content_3 | metafield_tag }}</p>"
@@ -83,6 +91,7 @@
         },
         "kit_category_whAfV7": {
           "type": "kit_category",
+          "disabled": true,
           "settings": {
             "header": "{{ page.metafields.custom.instructions_included_header_4.value }}",
             "body": "<p>{{ page.metafields.custom.instructions_included_content_4 | metafield_tag }}</p>"
@@ -90,6 +99,7 @@
         },
         "kit_category_H9LMjn": {
           "type": "kit_category",
+          "disabled": true,
           "settings": {
             "header": "{{ page.metafields.custom.instructions_included_header_5.value }}",
             "body": "<p>{{ page.metafields.custom.instructions_included_content_5 | metafield_tag }}</p>"
@@ -97,6 +107,7 @@
         },
         "kit_category_LiT3Mi": {
           "type": "kit_category",
+          "disabled": true,
           "settings": {
             "header": "{{ page.metafields.custom.instructions_included_header_6.value }}",
             "body": "<p>{{ page.metafields.custom.instructions_included_content_6 | metafield_tag }}</p>"
@@ -104,6 +115,7 @@
         },
         "kit_category_ewdDUK": {
           "type": "kit_category",
+          "disabled": true,
           "settings": {
             "header": "{{ page.metafields.custom.instructions_included_header_7.value }}",
             "body": "<p>{{ page.metafields.custom.instructions_included_content_7 | metafield_tag }}</p>"
