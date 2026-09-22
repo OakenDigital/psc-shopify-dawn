@@ -286,6 +286,24 @@
             "label": "{{ page.metafields.custom.instructions_step_18.value }}",
             "body": "<p>{{ page.metafields.custom.step_18_content | metafield_tag }}</p>"
           }
+        },
+        "step_AnjD4q": {
+          "type": "step",
+          "settings": {
+            "image_position": "right",
+            "header": "STEP",
+            "label": "",
+            "body": "<p>Torque all hardware to the following specifications: <br/>M6 - 10 ft lbs<br/>M8 - 24 ft lbs<br/>M10 - 48 ft lbs<br/>M12 - 85 ft lbs<br/>5/8 - 150 ft lbs.</p>"
+          }
+        },
+        "step_GtfRgX": {
+          "type": "step",
+          "settings": {
+            "image_position": "right",
+            "header": "STEP",
+            "label": "",
+            "body": "<p>Check and tighten all lines. Proceed to bleeding the system. <br/></p><p></p><p>Note: Installation photos in this guide may include a combination of rendered images (created by a real person), display-stand installations, and vehicle-installed components. Appearance and component positioning may vary slightly from what is shown.<br/></p>"
+          }
         }
       },
       "block_order": [
@@ -318,7 +336,9 @@
         "step_byGprp",
         "step_rhGMA9",
         "step_CeQMB4",
-        "step_e66zbV"
+        "step_e66zbV",
+        "step_AnjD4q",
+        "step_GtfRgX"
       ],
       "name": "PSC Installation Guide",
       "settings": {
