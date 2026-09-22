@@ -64,7 +64,7 @@
           "type": "kit_category",
           "settings": {
             "header": "{{ page.metafields.custom.instructions_included_header.value }}",
-            "body": "<p>{{ page.metafields.custom.instructions_included_content | metafield_tag }}</p>"
+            "body": "<ul><li>{{ page.metafields.custom.instructions_included_content | metafield_tag }}</li></ul>"
           }
         },
         "kit_category_YcM36D": {
