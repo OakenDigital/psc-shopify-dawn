@@ -25,7 +25,7 @@
           "settings": {
             "title": "{{ page.metafields.custom.instructions_toc_header.value }}",
             "range": "",
-            "items": "<ul><li>{{ page.metafields.custom.instructions_toc_content_1 | metafield_tag }}</li></ul>"
+            "items": "<p>{{ page.metafields.custom.instructions_toc_content_1 | metafield_tag }}</p>"
           }
         },
         "toc_entry_TLHLWC": {
@@ -33,7 +33,7 @@
           "settings": {
             "title": "What's in the kit{{ page.metafields.custom.instructions_toc_header_2.value }}",
             "range": "",
-            "items": "<ul><li>{{ page.metafields.custom.instructions_toc_content2 | metafield_tag }}</li></ul>"
+            "items": "<p>{{ page.metafields.custom.instructions_toc_content2 | metafield_tag }}</p>"
           }
         },
         "toc_entry_MFPXmD": {
@@ -41,7 +41,7 @@
           "settings": {
             "title": "Installation{{ page.metafields.custom.instructions_toc_header_3.value }}",
             "range": "",
-            "items": "<ol><li>{{ page.metafields.custom.instructions_toc_content_3 | metafield_tag }}</li></ol>"
+            "items": "<p>{{ page.metafields.custom.instructions_toc_content_3 | metafield_tag }}</p>"
           }
         },
         "toc_entry_DrpYNi": {
