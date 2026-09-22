@@ -23,7 +23,7 @@
         "step_K6k3PQ": {
           "type": "step",
           "settings": {
-            "image_position": "right",
+            "image_position": "left",
             "header": "{{ page.metafields.custom.step.value }}",
             "label": "{{ page.metafields.custom.instructions_step_1.value }}",
             "body": "<p>{{ page.metafields.custom.step_1_content | metafield_tag }}</p>",
