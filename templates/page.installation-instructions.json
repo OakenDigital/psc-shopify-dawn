@@ -274,8 +274,8 @@
           "settings": {
             "image_position": "right",
             "header": "STEP",
-            "label": "Install the Belt",
-            "body": "<p>Route the BT60845 belt according to the routing diagram as shown.</p>"
+            "label": "{{ page.metafields.custom.instructions_step_17.value }}",
+            "body": "<p>{{ page.metafields.custom.step_17_content | metafield_tag }}</p>"
           }
         },
         "step_e66zbV": {
