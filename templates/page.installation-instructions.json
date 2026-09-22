@@ -204,8 +204,8 @@
           "settings": {
             "image_position": "right",
             "header": "STEP",
-            "label": "Install the 12.23 Idler Bracket",
-            "body": "<p>Remove the two driver side upper water pump bolts <br/>Loosely mount the 12.23 idler bracket.<br/></p>",
+            "label": "{{ page.metafields.custom.instructions_step_10.value }}",
+            "body": "<p>{{ page.metafields.custom.step_10_content | metafield_tag }}<br/></p>",
             "image_1": "{{ page.metafields.custom.instructions_step_10_image.value }}"
           }
         },
