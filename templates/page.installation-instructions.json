@@ -102,11 +102,11 @@
             "body": "<p>{{ page.metafields.custom.instructions_included_content_6 | metafield_tag }}</p>"
           }
         },
-        "kit_category_66x9Jy": {
+        "kit_category_ewdDUK": {
           "type": "kit_category",
           "settings": {
-            "header": "",
-            "body": "<p>• Basic hand tools<br/>• Hex/Allen key socket set<br/>• Thread sealant<br/>• Drain pan/ rags<br/>• M10 1.5 bottom end tap<br/>• M8 1.25 bottom end tap</p><p><br/>Use medium strength thread locker on all bolts unless the bolt uses a lock nut.<br/><br/></p>"
+            "header": "{{ page.metafields.custom.instructions_included_header_7.value }}",
+            "body": "<p>{{ page.metafields.custom.instructions_included_content_7 | metafield_tag }}</p>"
           }
         },
         "step_K6k3PQ": {
@@ -300,7 +300,7 @@
         "kit_category_whAfV7",
         "kit_category_H9LMjn",
         "kit_category_LiT3Mi",
-        "kit_category_66x9Jy",
+        "kit_category_ewdDUK",
         "step_K6k3PQ",
         "step_p4UDTU",
         "step_mPKCht",
