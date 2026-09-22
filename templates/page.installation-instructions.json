@@ -283,8 +283,8 @@
           "settings": {
             "image_position": "split",
             "header": "STEP",
-            "label": "Final Inspection",
-            "body": "<ul><li>Make sure wiring and hoses have clearance.</li><li>Refill coolant.</li><li>Fill power steering system.</li><li>Reconnect battery</li><li>Start engine and let it run for 5 minutes.</li><li>Check for coolant leaks and belt alignment.</li></ul>"
+            "label": "{{ page.metafields.custom.instructions_step_18.value }}",
+            "body": "<p>{{ page.metafields.custom.step_18_content | metafield_tag }}</p>"
           }
         }
       },
