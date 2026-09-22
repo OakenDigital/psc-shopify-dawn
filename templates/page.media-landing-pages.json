@@ -210,71 +210,6 @@
         "full_width": true
       }
     },
-    "collection_list_3CVb8V": {
-      "type": "collection-list",
-      "blocks": {
-        "featured_collection_fAWLpC": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "dynamic-damping-stabilizer-dds"
-          }
-        },
-        "featured_collection_xYtGcJ": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "big-bore-xd-steering-gear-kits"
-          }
-        },
-        "featured_collection_JhzPJr": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "cylinder-assist-kits"
-          }
-        },
-        "featured_collection_w9mHiV": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "ehps-kits-electric-hydraulic-power-steering"
-          }
-        },
-        "featured_collection_JRUDNU": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "adventure-steering-kits"
-          }
-        },
-        "featured_collection_fqXkxU": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "steering-systems"
-          }
-        }
-      },
-      "block_order": [
-        "featured_collection_fAWLpC",
-        "featured_collection_xYtGcJ",
-        "featured_collection_JhzPJr",
-        "featured_collection_w9mHiV",
-        "featured_collection_JRUDNU",
-        "featured_collection_fqXkxU"
-      ],
-      "name": "t:sections.collection-list.presets.name",
-      "settings": {
-        "eyebrow_text": "UPGRADES",
-        "eyebrow_color": "#dc2626",
-        "title": "Popular PSC Upgrades for Larger Tires",
-        "description": "<p>Explore our curated collections of top-quality steering systems and components, designed for peak performance and durability.</p>",
-        "heading_size": "h1",
-        "image_ratio": "square",
-        "columns_desktop": 3,
-        "color_scheme": "scheme-a03118e4-1d97-43bc-bd4f-655039a52abb",
-        "show_view_all": false,
-        "columns_mobile": "1",
-        "swipe_on_mobile": true,
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
     "image_with_text_LdFtxi": {
       "type": "image-with-text",
       "blocks": {
@@ -465,7 +400,123 @@
         "columns_desktop": 3,
         "column_alignment": "left",
         "background_style": "primary",
+        "color_scheme": "scheme-1",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "collection_list_3CVb8V": {
+      "type": "collection-list",
+      "blocks": {
+        "featured_collection_fAWLpC": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "dynamic-damping-stabilizer-dds"
+          }
+        },
+        "featured_collection_xYtGcJ": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "big-bore-xd-steering-gear-kits"
+          }
+        },
+        "featured_collection_JhzPJr": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "cylinder-assist-kits"
+          }
+        },
+        "featured_collection_w9mHiV": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "ehps-kits-electric-hydraulic-power-steering"
+          }
+        },
+        "featured_collection_JRUDNU": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "adventure-steering-kits"
+          }
+        },
+        "featured_collection_fqXkxU": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "steering-systems"
+          }
+        }
+      },
+      "block_order": [
+        "featured_collection_fAWLpC",
+        "featured_collection_xYtGcJ",
+        "featured_collection_JhzPJr",
+        "featured_collection_w9mHiV",
+        "featured_collection_JRUDNU",
+        "featured_collection_fqXkxU"
+      ],
+      "name": "t:sections.collection-list.presets.name",
+      "settings": {
+        "eyebrow_text": "UPGRADES",
+        "eyebrow_color": "#dc2626",
+        "title": "Steering Solutions Built for Bigger Tires",
+        "description": "<p>The bigger the tire, the harder your steering system has to work. These PSC products are designed to help meet the challenge.</p>",
+        "heading_size": "h1",
+        "image_ratio": "square",
+        "columns_desktop": 3,
+        "color_scheme": "scheme-a03118e4-1d97-43bc-bd4f-655039a52abb",
+        "show_view_all": false,
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "collection_list_k3Uhgk": {
+      "type": "collection-list",
+      "blocks": {
+        "featured_collection_QXXCdX": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "jeep"
+          }
+        },
+        "featured_collection_CNGeFe": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "ford"
+          }
+        },
+        "featured_collection_KLzWRW": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "ram"
+          }
+        },
+        "featured_collection_RmyN8q": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "chevrolet-gmc"
+          }
+        }
+      },
+      "block_order": [
+        "featured_collection_QXXCdX",
+        "featured_collection_CNGeFe",
+        "featured_collection_KLzWRW",
+        "featured_collection_RmyN8q"
+      ],
+      "name": "t:sections.collection-list.presets.name",
+      "settings": {
+        "eyebrow_text": "",
+        "eyebrow_color": "#dc2626",
+        "title": "SHOP BY VEHICLE",
+        "description": "<p>Check out our lineup of steering systems and components built tough for real-world performance. Every part’s engineered for durability and tested to keep you turning strong.</p>",
+        "heading_size": "h1",
+        "image_ratio": "square",
+        "columns_desktop": 3,
         "color_scheme": "",
+        "show_view_all": false,
         "columns_mobile": "1",
         "swipe_on_mobile": false,
         "padding_top": 36,
@@ -479,9 +530,10 @@
     "blocks_tdaxhL",
     "rich_text_R3kECz",
     "178215901468e81263",
-    "collection_list_3CVb8V",
     "image_with_text_LdFtxi",
     "image_with_text_p44JUJ",
-    "multicolumn_9aeify"
+    "multicolumn_9aeify",
+    "collection_list_3CVb8V",
+    "collection_list_k3Uhgk"
   ]
 }
