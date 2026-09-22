@@ -1,0 +1,353 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 48,
+        "padding_bottom": 28
+      }
+    },
+    "psc_installation_guide_AA4Nef": {
+      "type": "psc-installation-guide",
+      "blocks": {
+        "toc_entry_RQkR4C": {
+          "type": "toc_entry",
+          "settings": {
+            "title": "{{ page.metafields.custom.instructions_toc_header.value }}",
+            "range": "",
+            "items": "<p>{{ page.metafields.custom.instructions_toc_content_1 | metafield_tag }}</p>"
+          }
+        },
+        "toc_entry_TLHLWC": {
+          "type": "toc_entry",
+          "settings": {
+            "title": "What's in the kit{{ page.metafields.custom.instructions_toc_header_2.value }}",
+            "range": "",
+            "items": "<p>{{ page.metafields.custom.instructions_toc_content2 | metafield_tag }}</p>"
+          }
+        },
+        "toc_entry_MFPXmD": {
+          "type": "toc_entry",
+          "settings": {
+            "title": "{{ page.metafields.custom.instructions_toc_header_3.value }}",
+            "range": "",
+            "items": "<p>{{ page.metafields.custom.instructions_toc_content_3 | metafield_tag }}</p>"
+          }
+        },
+        "toc_entry_DrpYNi": {
+          "type": "toc_entry",
+          "settings": {
+            "title": "{{ page.metafields.custom.instructions_toc_header_4.value }}",
+            "range": "",
+            "items": "<p>{{ page.metafields.custom.instructions_toc_content_4 | metafield_tag }}</p>"
+          }
+        },
+        "toc_entry_YtUPLL": {
+          "type": "toc_entry",
+          "settings": {
+            "title": "Contact us{{ page.metafields.custom.instructions_toc_header_5.value }}",
+            "range": "",
+            "items": "<p>{{ page.metafields.custom.instructions_toc_content_5 | metafield_tag }}</p>"
+          }
+        },
+        "kit_category_JbpLyq": {
+          "type": "kit_category",
+          "settings": {
+            "header": "{{ page.metafields.custom.instructions_included_header.value }}",
+            "body": "<p>{{ page.metafields.custom.instructions_included_content | metafield_tag }}</p>"
+          }
+        },
+        "kit_category_YcM36D": {
+          "type": "kit_category",
+          "settings": {
+            "header": "{{ page.metafields.custom.instructions_included_header_2.value }}",
+            "body": "<p>{{ page.metafields.custom.instructions_included_content_2 | metafield_tag }}</p>"
+          }
+        },
+        "kit_category_gmYbYG": {
+          "type": "kit_category",
+          "settings": {
+            "header": "{{ page.metafields.custom.instructions_included_header_3.value }}",
+            "body": "<p>{{ page.metafields.custom.instructions_included_content_3 | metafield_tag }}</p>"
+          }
+        },
+        "kit_category_whAfV7": {
+          "type": "kit_category",
+          "settings": {
+            "header": "{{ page.metafields.custom.instructions_included_header_4.value }}",
+            "body": "<p>{{ page.metafields.custom.instructions_included_content_4 | metafield_tag }}</p>"
+          }
+        },
+        "kit_category_H9LMjn": {
+          "type": "kit_category",
+          "settings": {
+            "header": "{{ page.metafields.custom.instructions_included_header_5.value }}",
+            "body": "<p>{{ page.metafields.custom.instructions_included_content_5 | metafield_tag }}</p>"
+          }
+        },
+        "kit_category_LiT3Mi": {
+          "type": "kit_category",
+          "settings": {
+            "header": "{{ page.metafields.custom.instructions_included_header_6.value }}",
+            "body": "<p>{{ page.metafields.custom.instructions_included_content_6 | metafield_tag }}</p>"
+          }
+        },
+        "kit_category_ewdDUK": {
+          "type": "kit_category",
+          "settings": {
+            "header": "{{ page.metafields.custom.instructions_included_header_7.value }}",
+            "body": "<p>{{ page.metafields.custom.instructions_included_content_7 | metafield_tag }}</p>"
+          }
+        },
+        "step_K6k3PQ": {
+          "type": "step",
+          "settings": {
+            "image_position": "right",
+            "header": "{{ page.metafields.custom.step.value }}",
+            "label": "{{ page.metafields.custom.instructions_step_1.value }}",
+            "body": "<p>{{ page.metafields.custom.step_1_content | metafield_tag }}</p>",
+            "image_1": "{{ page.metafields.custom.instructions_step_1_image.value }}"
+          }
+        },
+        "step_p4UDTU": {
+          "type": "step",
+          "settings": {
+            "image_position": "right",
+            "header": "{{ page.metafields.custom.step.value }}",
+            "label": "{{ page.metafields.custom.instructions_step_2.value }}",
+            "body": "<p>{{ page.metafields.custom.step_2_content | metafield_tag }}</p>",
+            "image_1": "{{ page.metafields.custom.instructions_step_2_image.value }}"
+          }
+        },
+        "step_mPKCht": {
+          "type": "step",
+          "settings": {
+            "image_position": "left",
+            "header": "{{ page.metafields.custom.step.value }}",
+            "label": "{{ page.metafields.custom.instructions_step_3.value }}",
+            "body": "<p>{{ page.metafields.custom.step_3_content | metafield_tag }}</p>",
+            "image_1": "{{ page.metafields.custom.instructions_step_3_image.value }}"
+          }
+        },
+        "step_Ti9JPh": {
+          "type": "step",
+          "settings": {
+            "image_position": "right",
+            "header": "{{ page.metafields.custom.step.value }}",
+            "label": "{{ page.metafields.custom.instructions_step_4.value }}",
+            "body": "<p>{{ page.metafields.custom.step_4_content | metafield_tag }}</p>",
+            "image_1": "{{ page.metafields.custom.instructions_step_4_image.value }}"
+          }
+        },
+        "step_g4dyXM": {
+          "type": "step",
+          "settings": {
+            "image_position": "left",
+            "header": "{{ page.metafields.custom.step.value }}",
+            "label": "{{ page.metafields.custom.instructions_step_5.value }}",
+            "body": "<p>{{ page.metafields.custom.step_5_content | metafield_tag }}</p>",
+            "image_1": "{{ page.metafields.custom.instructions_step_5_image.value }}"
+          }
+        },
+        "step_xkAxXJ": {
+          "type": "step",
+          "settings": {
+            "image_position": "right",
+            "header": "{{ page.metafields.custom.step.value }}",
+            "label": "{{ page.metafields.custom.instructions_step_6.value }}",
+            "body": "<p>{{ page.metafields.custom.step_6_content | metafield_tag }}</p>",
+            "image_1": "{{ page.metafields.custom.instructions_step_6_image.value }}"
+          }
+        },
+        "step_Mw8NCM": {
+          "type": "step",
+          "settings": {
+            "image_position": "right",
+            "header": "{{ page.metafields.custom.step.value }}",
+            "label": "{{ page.metafields.custom.instructions_step_7.value }}",
+            "body": "<p>{{ page.metafields.custom.step_7_content | metafield_tag }}</p>",
+            "image_1": "{{ page.metafields.custom.instructions_step_7_image.value }}"
+          }
+        },
+        "step_V3gA8w": {
+          "type": "step",
+          "settings": {
+            "image_position": "right",
+            "header": "{{ page.metafields.custom.step.value }}",
+            "label": "{{ page.metafields.custom.instructions_step_8.value }}",
+            "body": "<p>{{ page.metafields.custom.step_8_content | metafield_tag }}</p>",
+            "image_1": "{{ page.metafields.custom.instructions_step_8_image.value }}"
+          }
+        },
+        "step_ffDf7T": {
+          "type": "step",
+          "settings": {
+            "image_position": "right",
+            "header": "{{ page.metafields.custom.step.value }}",
+            "label": "{{ page.metafields.custom.instructions_step_9.value }}",
+            "body": "<p>{{ page.metafields.custom.step_9_content | metafield_tag }}</p>",
+            "image_1": "{{ page.metafields.custom.instructions_step_9_image.value }}"
+          }
+        },
+        "step_qHpddh": {
+          "type": "step",
+          "settings": {
+            "image_position": "right",
+            "header": "{{ page.metafields.custom.step.value }}",
+            "label": "{{ page.metafields.custom.instructions_step_10.value }}",
+            "body": "<p>{{ page.metafields.custom.step_10_content | metafield_tag }}<br/></p>",
+            "image_1": "{{ page.metafields.custom.instructions_step_10_image.value }}"
+          }
+        },
+        "step_Y3Vxd7": {
+          "type": "step",
+          "settings": {
+            "image_position": "right",
+            "header": "{{ page.metafields.custom.step.value }}",
+            "label": "{{ page.metafields.custom.instructions_step_11.value }}",
+            "body": "<p>{{ page.metafields.custom.step_11_content | metafield_tag }}<br/><br/><br/><br/></p>",
+            "image_1": "{{ page.metafields.custom.instructions_step_11_image.value }}"
+          }
+        },
+        "step_kNUzab": {
+          "type": "step",
+          "settings": {
+            "image_position": "right",
+            "header": "{{ page.metafields.custom.step.value }}",
+            "label": "{{ page.metafields.custom.instructions_step_12.value }}",
+            "body": "<p>{{ page.metafields.custom.step_12_content | metafield_tag }}</p>",
+            "image_1": "{{ page.metafields.custom.instructions_step_12_image.value }}"
+          }
+        },
+        "step_8XM3YY": {
+          "type": "step",
+          "settings": {
+            "image_position": "right",
+            "header": "{{ page.metafields.custom.step.value }}",
+            "label": "{{ page.metafields.custom.instructions_step_13.value }}",
+            "body": "<p>{{ page.metafields.custom.step_13_content | metafield_tag }}</p>",
+            "image_1": "{{ page.metafields.custom.instructions_step_13_image.value }}"
+          }
+        },
+        "step_cHqj7f": {
+          "type": "step",
+          "settings": {
+            "image_position": "right",
+            "header": "{{ page.metafields.custom.step.value }}",
+            "label": "{{ page.metafields.custom.instructions_step_14.value }}",
+            "body": "<p>{{ page.metafields.custom.step_14_content | metafield_tag }}</p>",
+            "image_1": "{{ page.metafields.custom.instructions_step_14_image.value }}"
+          }
+        },
+        "step_byGprp": {
+          "type": "step",
+          "settings": {
+            "image_position": "right",
+            "header": "{{ page.metafields.custom.step.value }}",
+            "label": "{{ page.metafields.custom.instructions_step_15.value }}",
+            "body": "<p>{{ page.metafields.custom.step_15_content | metafield_tag }}<br/></p>",
+            "image_1": "{{ page.metafields.custom.instructions_step_15_image.value }}"
+          }
+        },
+        "step_rhGMA9": {
+          "type": "step",
+          "settings": {
+            "image_position": "right",
+            "header": "{{ page.metafields.custom.step.value }}",
+            "label": "{{ page.metafields.custom.instructions_step_16.value }}",
+            "body": "<p>{{ page.metafields.custom.step_16_content | metafield_tag }}</p>",
+            "image_1": "{{ page.metafields.custom.instructions_step_16_image.value }}"
+          }
+        },
+        "step_CeQMB4": {
+          "type": "step",
+          "settings": {
+            "image_position": "right",
+            "header": "",
+            "label": "{{ page.metafields.custom.instructions_step_17.value }}",
+            "body": "<p>{{ page.metafields.custom.step_17_content | metafield_tag }}</p>"
+          }
+        },
+        "step_e66zbV": {
+          "type": "step",
+          "settings": {
+            "image_position": "split",
+            "header": "STEP",
+            "label": "{{ page.metafields.custom.instructions_step_18.value }}",
+            "body": "<p>{{ page.metafields.custom.step_18_content | metafield_tag }}</p>"
+          }
+        }
+      },
+      "block_order": [
+        "toc_entry_RQkR4C",
+        "toc_entry_TLHLWC",
+        "toc_entry_MFPXmD",
+        "toc_entry_DrpYNi",
+        "toc_entry_YtUPLL",
+        "kit_category_JbpLyq",
+        "kit_category_YcM36D",
+        "kit_category_gmYbYG",
+        "kit_category_whAfV7",
+        "kit_category_H9LMjn",
+        "kit_category_LiT3Mi",
+        "kit_category_ewdDUK",
+        "step_K6k3PQ",
+        "step_p4UDTU",
+        "step_mPKCht",
+        "step_Ti9JPh",
+        "step_g4dyXM",
+        "step_xkAxXJ",
+        "step_Mw8NCM",
+        "step_V3gA8w",
+        "step_ffDf7T",
+        "step_qHpddh",
+        "step_Y3Vxd7",
+        "step_kNUzab",
+        "step_8XM3YY",
+        "step_cHqj7f",
+        "step_byGprp",
+        "step_rhGMA9",
+        "step_CeQMB4",
+        "step_e66zbV"
+      ],
+      "name": "PSC Installation Guide",
+      "settings": {
+        "logo": "{{ page.metafields.custom.instructions_logo.value }}",
+        "logo_width": 300,
+        "logo_width_mobile": 100,
+        "accent_color": "#cc0000",
+        "kit_image": "{{ page.metafields.custom.instructions_cover_image.value }}",
+        "guide_category": "INSTALLATION GUIDE",
+        "product_title": "{{ page.metafields.custom.instruction_title.value }}",
+        "product_application": "{{ page.metafields.custom.instructions_vehicle.value }}",
+        "product_year": "{{ page.metafields.custom.instructions_year.value }}",
+        "part_numbers": "<ul><li>{{ page.metafields.custom.part_number.value }}</li></ul>",
+        "toc_title": "TABLE OF CONTENTS",
+        "before_title": "{{ page.metafields.custom.instructions_bys_header.value }}",
+        "before_body": "<p>{{ page.metafields.custom.instructions_bys_content | metafield_tag }}</p>",
+        "kit_title": "",
+        "install_title": "",
+        "custom_section_title": "Bleeding Procedure",
+        "custom_section_body": "<p><br/>It’s critical to purge all the air out of the system to prevent damage to the pump.</p><p><br/><strong>Step 1:</strong> With the engine off, jack up the front of the vehicle and put jack stands under the front axle. This makes the bleeding process easier.</p><p><br/><strong>Step 2:</strong> Add PSC fluid to the reservoir until it’s about 1” to 1-1/2” from the top or with an<br/>OEM reservoir keep the level between min and max.</p><p><strong>NOTE:</strong> With a PSC reservoir make sure<br/>the filter submerged in fluid at all times.</p><p><br/><strong>Step 3:</strong> Turn the steering wheel lock-to-lock (all the way right and all the way left) to pull more fluid through the system. Keep adding fluid a little at a time, checking the level after each round — whether that’s with a dipstick, sight glass, or fill plug — until it’s consistently sitting where it should be. You’re looking for steady, not bouncing around.</p><p><br/><strong>Step 4:</strong> Put the cap on the reservoir and start the engine for about 30 seconds—but do not turn the steering wheel yet.<br/></p><p><strong>NOTE:</strong> The fluid level in the reservoir will drop and get aerated. Letting a few minutes pass between startups will allow air bubbles to work their way out of the system. Refill the reservoir<br/>and repeat this process a couple of times.</p><p><br/><strong>Step 5:</strong> Start the engine and turn the steering wheel completely right and then left 10-15 times. Shut the engine off and let the vehicle sit for 10 minutes. Check and add fluid as necessary. Repeat this process 3-4 times. At this point the fluid level should move about one inch up or down when cycling the steering, and no bubbles should be visible in the reservoir<br/><br/><strong>Step 6:</strong> Lower the vehicle to the ground and repeat the process above one more time. Check<br/>the fluid level again.</p><p><br/><strong>Step 7:</strong> Take the vehicle for a test drive. Listen for pump noise-that’s a sign of fluid aeration. If you hear it, shut the vehicle off to let the bubbles dissipate. If noise keeps coming back, double check the low-pressure lines and make sure all fittings are tight. Top off the fluid and drive the vehicle again. Let the system cool down once you believe it’s properly bled.</p><p><br/><strong>Step 8:</strong> Remove the reservoir cap and have someone start the vehicle while you watch the fluid level. If the level drops on startup, there’s still air in the system. If it stays steady, you’ll be good.</p><p><strong>NOTE:</strong> Getting all the air out of the system can take some time. If the pump is whining, you are aerating the fluid which is not good for the pump. If you’re running your vehicle for an extended time and your pump has not stopped whining, it needs to <br/><br/><br/></p>",
+        "contact_title": "CONTACT US",
+        "contact_subheading": "Need help with your installation?",
+        "contact_details": "<p>Phone: 1-817-270-0102<br/>Hours: Monday–Friday, 8 AM–5 PM CDT<br/>Email: support@pscmotorsports.com</p>",
+        "website": "www.pscsteering.com"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "psc_installation_guide_AA4Nef"
+  ]
+}
