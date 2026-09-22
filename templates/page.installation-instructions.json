@@ -77,8 +77,8 @@
         "kit_category_gmYbYG": {
           "type": "kit_category",
           "settings": {
-            "header": "Power Steering Pump{{ page.metafields.custom.instructions_included_header_3.value }}",
-            "body": "<p>One of the following pumps is included depending on kit purchased:</p><ul><li>SP33332S-3608 — LHD CBR Pump (-6 AN Pressure, -12 AN Feed)<br/></li><li>SP32232-3608 — RHD CBR Pump (-6 AN Pressure, -12 AN Feed){{ page.metafields.custom.instructions_included_content_3 | metafield_tag }}</li></ul>"
+            "header": "{{ page.metafields.custom.instructions_included_header_3.value }}",
+            "body": "<p>{{ page.metafields.custom.instructions_included_content_3 | metafield_tag }}</p>"
           }
         },
         "kit_category_whAfV7": {
