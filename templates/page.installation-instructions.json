@@ -328,7 +328,7 @@
         "accent_color": "#cc0000",
         "kit_image": "{{ page.metafields.custom.instructions_cover_image.value }}",
         "guide_category": "INSTALLATION GUIDE",
-        "product_title": "{{ page.metafields.custom.instruction_title.value }}Title",
+        "product_title": "{{ page.metafields.custom.instruction_title.value }}",
         "product_application": "{{ page.metafields.custom.instructions_vehicle.value }}",
         "product_year": "{{ page.metafields.custom.instructions_year.value }}",
         "part_numbers": "<ul><li>{{ page.metafields.custom.part_number.value }}</li></ul>",
