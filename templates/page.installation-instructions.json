@@ -251,7 +251,6 @@
         },
         "step_byGprp": {
           "type": "step",
-          "disabled": true,
           "settings": {
             "image_position": "right",
             "header": "{{ page.metafields.custom.step.value }}",
@@ -262,7 +261,6 @@
         },
         "step_rhGMA9": {
           "type": "step",
-          "disabled": true,
           "settings": {
             "image_position": "right",
             "header": "{{ page.metafields.custom.step.value }}",
@@ -273,7 +271,6 @@
         },
         "step_CeQMB4": {
           "type": "step",
-          "disabled": true,
           "settings": {
             "image_position": "right",
             "header": "",
@@ -283,7 +280,6 @@
         },
         "step_e66zbV": {
           "type": "step",
-          "disabled": true,
           "settings": {
             "image_position": "split",
             "header": "STEP",
