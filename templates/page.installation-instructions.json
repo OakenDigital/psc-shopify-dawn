@@ -194,8 +194,8 @@
           "settings": {
             "image_position": "right",
             "header": "STEP",
-            "label": "Install the 12.19 Pump Bracket",
-            "body": "<p>Driver side cylinder head →<br/>Use:</p><ul><li>(1) 8 mm hex socket</li><li>(3) M10 1.5 x 45 mm bolts</li><li>(3) 15.112 spacers between the head and the bracket.</li></ul><p>Torque the bolts to 55 lb-ft.</p>",
+            "label": "{{ page.metafields.custom.instructions_step_9.value }}",
+            "body": "<p>{{ page.metafields.custom.step_9_content | metafield_tag }}</p>",
             "image_1": "{{ page.metafields.custom.instructions_step_9_image.value }}"
           }
         },
