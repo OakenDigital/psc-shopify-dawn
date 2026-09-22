@@ -124,7 +124,7 @@
           "settings": {
             "image_position": "right",
             "header": "STEP",
-            "label": "Strip the Front of the Engine{{ page.metafields.custom.instructions_step_2.value }}",
+            "label": "{{ page.metafields.custom.instructions_step_2.value }}",
             "body": "<p><strong>Remove and discard:</strong></p><ul><li>All factory belts</li><li>Factory accessory brackets</li><li>Factory accessories</li><li>OEM water pump and housing </li></ul><p><strong>Remove and retain for installation:</strong></p><ul><li>Alternator</li><li>A/C compressor</li><li>If your A/C uses a stretch belt, OEMs recommend replacing it.</li></ul>",
             "image_1": "{{ page.metafields.custom.instructions_step_2_image.value }}"
           }
