@@ -417,12 +417,42 @@
             "link_label": "",
             "link": ""
           }
+        },
+        "column_68xTWM": {
+          "type": "column",
+          "settings": {
+            "title": "Steering Wheel Kickback",
+            "text": "<p>Every rock and rut gets transferred to your hands.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_zimLch": {
+          "type": "column",
+          "settings": {
+            "title": "Premature Component Wear",
+            "text": "<p>Gears, pumps, and related components wearing out sooner than expected.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_McDaGr": {
+          "type": "column",
+          "settings": {
+            "title": "Less Confidence Behind the Wheel",
+            "text": "<p>Whether towing, daily driving, or off-roading.</p>",
+            "link_label": "",
+            "link": ""
+          }
         }
       },
       "block_order": [
         "column_UEHDW8",
         "column_FrWc4r",
-        "column_WNA9gC"
+        "column_WNA9gC",
+        "column_68xTWM",
+        "column_zimLch",
+        "column_McDaGr"
       ],
       "name": "t:sections.multicolumn.presets.name",
       "settings": {
@@ -430,7 +460,7 @@
         "heading_size": "h1",
         "image_width": "full",
         "image_ratio": "adapt",
-        "button_label": "Button label",
+        "button_label": "",
         "button_link": "",
         "columns_desktop": 3,
         "column_alignment": "left",
