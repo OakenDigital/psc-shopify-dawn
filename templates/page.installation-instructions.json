@@ -113,7 +113,7 @@
           "type": "step",
           "settings": {
             "image_position": "right",
-            "header": "STEP",
+            "header": "{{ page.metafields.custom.step.value }}",
             "label": "{{ page.metafields.custom.instructions_step_1.value }}",
             "body": "<p>{{ page.metafields.custom.step_1_content | metafield_tag }}</p>",
             "image_1": "{{ page.metafields.custom.instructions_step_1_image.value }}"
@@ -123,7 +123,7 @@
           "type": "step",
           "settings": {
             "image_position": "right",
-            "header": "STEP",
+            "header": "{{ page.metafields.custom.step.value }}",
             "label": "{{ page.metafields.custom.instructions_step_2.value }}",
             "body": "<p>{{ page.metafields.custom.step_2_content | metafield_tag }}</p>",
             "image_1": "{{ page.metafields.custom.instructions_step_2_image.value }}"
@@ -133,7 +133,7 @@
           "type": "step",
           "settings": {
             "image_position": "left",
-            "header": "STEP",
+            "header": "{{ page.metafields.custom.step.value }}",
             "label": "{{ page.metafields.custom.instructions_step_3.value }}",
             "body": "<p>{{ page.metafields.custom.step_3_content | metafield_tag }}</p>",
             "image_1": "{{ page.metafields.custom.instructions_step_3_image.value }}"
@@ -143,7 +143,7 @@
           "type": "step",
           "settings": {
             "image_position": "right",
-            "header": "STEP",
+            "header": "{{ page.metafields.custom.step.value }}",
             "label": "{{ page.metafields.custom.instructions_step_4.value }}",
             "body": "<p>{{ page.metafields.custom.step_4_content | metafield_tag }}</p>",
             "image_1": "{{ page.metafields.custom.instructions_step_4_image.value }}"
@@ -153,7 +153,7 @@
           "type": "step",
           "settings": {
             "image_position": "left",
-            "header": "STEP",
+            "header": "{{ page.metafields.custom.step.value }}",
             "label": "{{ page.metafields.custom.instructions_step_5.value }}",
             "body": "<p>{{ page.metafields.custom.step_5_content | metafield_tag }}</p>",
             "image_1": "{{ page.metafields.custom.instructions_step_5_image.value }}"
@@ -163,7 +163,7 @@
           "type": "step",
           "settings": {
             "image_position": "right",
-            "header": "STEP",
+            "header": "{{ page.metafields.custom.step.value }}",
             "label": "{{ page.metafields.custom.instructions_step_6.value }}",
             "body": "<p>{{ page.metafields.custom.step_6_content | metafield_tag }}</p>",
             "image_1": "{{ page.metafields.custom.instructions_step_6_image.value }}"
@@ -173,7 +173,7 @@
           "type": "step",
           "settings": {
             "image_position": "right",
-            "header": "STEP",
+            "header": "{{ page.metafields.custom.step.value }}",
             "label": "{{ page.metafields.custom.instructions_step_7.value }}",
             "body": "<p>{{ page.metafields.custom.step_7_content | metafield_tag }}</p>",
             "image_1": "{{ page.metafields.custom.instructions_step_7_image.value }}"
@@ -183,7 +183,7 @@
           "type": "step",
           "settings": {
             "image_position": "right",
-            "header": "STEP",
+            "header": "{{ page.metafields.custom.step.value }}",
             "label": "{{ page.metafields.custom.instructions_step_8.value }}",
             "body": "<p>{{ page.metafields.custom.step_8_content | metafield_tag }}</p>",
             "image_1": "{{ page.metafields.custom.instructions_step_8_image.value }}"
@@ -193,7 +193,7 @@
           "type": "step",
           "settings": {
             "image_position": "right",
-            "header": "STEP",
+            "header": "{{ page.metafields.custom.step.value }}",
             "label": "{{ page.metafields.custom.instructions_step_9.value }}",
             "body": "<p>{{ page.metafields.custom.step_9_content | metafield_tag }}</p>",
             "image_1": "{{ page.metafields.custom.instructions_step_9_image.value }}"
@@ -203,7 +203,7 @@
           "type": "step",
           "settings": {
             "image_position": "right",
-            "header": "STEP",
+            "header": "{{ page.metafields.custom.step.value }}",
             "label": "{{ page.metafields.custom.instructions_step_10.value }}",
             "body": "<p>{{ page.metafields.custom.step_10_content | metafield_tag }}<br/></p>",
             "image_1": "{{ page.metafields.custom.instructions_step_10_image.value }}"
@@ -213,7 +213,7 @@
           "type": "step",
           "settings": {
             "image_position": "right",
-            "header": "STEP",
+            "header": "{{ page.metafields.custom.step.value }}",
             "label": "{{ page.metafields.custom.instructions_step_11.value }}",
             "body": "<p>{{ page.metafields.custom.step_11_content | metafield_tag }}<br/><br/><br/><br/></p>",
             "image_1": "{{ page.metafields.custom.instructions_step_11_image.value }}"
@@ -223,7 +223,7 @@
           "type": "step",
           "settings": {
             "image_position": "right",
-            "header": "STEP",
+            "header": "{{ page.metafields.custom.step.value }}",
             "label": "{{ page.metafields.custom.instructions_step_12.value }}",
             "body": "<p>{{ page.metafields.custom.step_12_content | metafield_tag }}</p>",
             "image_1": "{{ page.metafields.custom.instructions_step_12_image.value }}"
@@ -233,7 +233,7 @@
           "type": "step",
           "settings": {
             "image_position": "right",
-            "header": "STEP",
+            "header": "{{ page.metafields.custom.step.value }}",
             "label": "{{ page.metafields.custom.instructions_step_13.value }}",
             "body": "<p>{{ page.metafields.custom.step_13_content | metafield_tag }}</p>",
             "image_1": "{{ page.metafields.custom.instructions_step_13_image.value }}"
@@ -243,7 +243,7 @@
           "type": "step",
           "settings": {
             "image_position": "right",
-            "header": "STEP",
+            "header": "{{ page.metafields.custom.step.value }}",
             "label": "{{ page.metafields.custom.instructions_step_14.value }}",
             "body": "<p>{{ page.metafields.custom.step_14_content | metafield_tag }}</p>",
             "image_1": "{{ page.metafields.custom.instructions_step_14_image.value }}"
@@ -253,7 +253,7 @@
           "type": "step",
           "settings": {
             "image_position": "right",
-            "header": "STEP",
+            "header": "{{ page.metafields.custom.step.value }}",
             "label": "{{ page.metafields.custom.instructions_step_15.value }}",
             "body": "<p>{{ page.metafields.custom.step_15_content | metafield_tag }}<br/></p>",
             "image_1": "{{ page.metafields.custom.instructions_step_15_image.value }}"
@@ -263,7 +263,7 @@
           "type": "step",
           "settings": {
             "image_position": "right",
-            "header": "STEP",
+            "header": "{{ page.metafields.custom.step.value }}",
             "label": "{{ page.metafields.custom.instructions_step_16.value }}",
             "body": "<p>{{ page.metafields.custom.step_16_content | metafield_tag }}</p>",
             "image_1": "{{ page.metafields.custom.instructions_step_16_image.value }}"
@@ -273,7 +273,7 @@
           "type": "step",
           "settings": {
             "image_position": "right",
-            "header": "STEP",
+            "header": "",
             "label": "{{ page.metafields.custom.instructions_step_17.value }}",
             "body": "<p>{{ page.metafields.custom.step_17_content | metafield_tag }}</p>"
           }
