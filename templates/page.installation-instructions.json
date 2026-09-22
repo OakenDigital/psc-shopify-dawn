@@ -125,7 +125,7 @@
             "image_position": "right",
             "header": "STEP",
             "label": "{{ page.metafields.custom.instructions_step_2.value }}",
-            "body": "<p><strong>Remove and discard:</strong></p><ul><li>All factory belts</li><li>Factory accessory brackets</li><li>Factory accessories</li><li>OEM water pump and housing </li></ul><p><strong>Remove and retain for installation:</strong></p><ul><li>Alternator</li><li>A/C compressor</li><li>If your A/C uses a stretch belt, OEMs recommend replacing it.</li></ul>",
+            "body": "<p>{{ page.metafields.custom.step_2_content | metafield_tag }}</p>",
             "image_1": "{{ page.metafields.custom.instructions_step_2_image.value }}"
           }
         },
@@ -134,7 +134,7 @@
           "settings": {
             "image_position": "left",
             "header": "STEP",
-            "label": "Remove the VVT Solenoid{{ page.metafields.custom.instructions_step_3.value }}",
+            "label": "{{ page.metafields.custom.instructions_step_3.value }}",
             "body": "<p>Disconnect the electrical connector, then remove and retain the three mounting bolts.</p>",
             "image_1": "{{ page.metafields.custom.instructions_step_3_image.value }}"
           }
@@ -144,7 +144,7 @@
           "settings": {
             "image_position": "right",
             "header": "STEP",
-            "label": "Rotate and Modify{{ page.metafields.custom.instructions_step_4.value }}",
+            "label": "{{ page.metafields.custom.instructions_step_4.value }}",
             "body": "<p>Rotate the VVT solenoid counterclockwise one mounting position so the electrical connector is positioned behind the crank pulley. Loosely reinstall two bolts to hold.</p><p><strong>Mark the VVT solenoid at the third bolt hole. Then remove and modify using a small angle grinder.</strong></p><p><strong>NOTE: </strong>Be careful not to damage the O-ring on the VVT solenoid during removal or modification.</p>",
             "image_1": "{{ page.metafields.custom.instructions_step_4_image.value }}"
           }
