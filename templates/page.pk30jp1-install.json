@@ -31,7 +31,7 @@
         "toc_entry_TLHLWC": {
           "type": "toc_entry",
           "settings": {
-            "title": "What's in the kit{{ page.metafields.custom.instructions_toc_header_2.value }}",
+            "title": "{{ page.metafields.custom.instructions_toc_header_2.value }}",
             "range": "",
             "items": "<p>{{ page.metafields.custom.instructions_toc_content2 | metafield_tag }}</p>"
           }
