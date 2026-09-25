@@ -151,7 +151,7 @@
         "step_xkAxXJ": {
           "type": "step",
           "settings": {
-            "image_position": "right",
+            "image_position": "split",
             "header": "STEP",
             "label": "{{ page.metafields.custom.instructions_step_6.value }}",
             "body": "<p>{{ page.metafields.custom.step_6_content | metafield_tag }}</p>",
@@ -221,7 +221,7 @@
         "step_8XM3YY": {
           "type": "step",
           "settings": {
-            "image_position": "right",
+            "image_position": "split",
             "header": "STEP",
             "label": "{{ page.metafields.custom.instructions_step_13.value }}",
             "body": "<p>{{ page.metafields.custom.step_13_content | metafield_tag }}</p>",
