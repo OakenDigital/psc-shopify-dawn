@@ -122,7 +122,7 @@
         "step_p4UDTU": {
           "type": "step",
           "settings": {
-            "image_position": "right",
+            "image_position": "split",
             "header": "{{ page.metafields.custom.step.value }}",
             "label": "{{ page.metafields.custom.instructions_step_2.value }}",
             "body": "<p>{{ page.metafields.custom.step_2_content | metafield_tag }}</p>",
