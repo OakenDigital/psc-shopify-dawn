@@ -55,9 +55,17 @@
         "toc_entry_YtUPLL": {
           "type": "toc_entry",
           "settings": {
-            "title": "Contact us{{ page.metafields.custom.instructions_toc_header_5.value }}",
+            "title": "{{ page.metafields.custom.instructions_toc_header_5.value }}",
             "range": "",
             "items": "<p>{{ page.metafields.custom.instructions_toc_content_5 | metafield_tag }}</p>"
+          }
+        },
+        "toc_entry_VT8HPD": {
+          "type": "toc_entry",
+          "settings": {
+            "title": "Contact us",
+            "range": "",
+            "items": ""
           }
         },
         "kit_category_JbpLyq": {
@@ -312,6 +320,7 @@
         "toc_entry_MFPXmD",
         "toc_entry_DrpYNi",
         "toc_entry_YtUPLL",
+        "toc_entry_VT8HPD",
         "kit_category_JbpLyq",
         "kit_category_YcM36D",
         "kit_category_gmYbYG",
