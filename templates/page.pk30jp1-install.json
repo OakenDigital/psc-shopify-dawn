@@ -109,7 +109,7 @@
         "step_p4UDTU": {
           "type": "step",
           "settings": {
-            "image_position": "right",
+            "image_position": "left",
             "header": "STEP",
             "label": "{{ page.metafields.custom.instructions_step_2.value }}",
             "body": "<p>{{ page.metafields.custom.step_2_content | metafield_tag }}</p>",
@@ -119,11 +119,13 @@
         "step_mPKCht": {
           "type": "step",
           "settings": {
-            "image_position": "left",
+            "image_position": "split",
             "header": "STEP",
             "label": "{{ page.metafields.custom.instructions_step_3.value }}",
             "body": "<p>{{ page.metafields.custom.step_3_content | metafield_tag }}</p>",
-            "image_1": "{{ page.metafields.custom.instructions_step_3_image.value }}"
+            "image_1": "{{ page.metafields.custom.instructions_step_3_image.value }}",
+            "image_2": "shopify://shop_images/DSC_0006_v2.png",
+            "image_3": "shopify://shop_images/IMG_1516.png"
           }
         },
         "step_Ti9JPh": {
