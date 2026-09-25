@@ -276,7 +276,8 @@
             "header": "STEP",
             "label": "{{ page.metafields.custom.instructions_step_18.value }}",
             "body": "<p>{{ page.metafields.custom.step_18_content | metafield_tag }}</p>",
-            "image_1": "{{ page.metafields.custom.instructions_step_18_image.value }}"
+            "image_1": "{{ page.metafields.custom.instructions_step_18_image.value }}",
+            "image_4": "shopify://shop_images/20230809_142206_v2.png"
           }
         },
         "step_AnjD4q": {
@@ -285,7 +286,8 @@
             "image_position": "right",
             "header": "STEP",
             "label": "On the bench, install the fittings and plugs onto the C212S cooler.",
-            "body": "<p>The AN fitting goes on the bottom right side of the cooler.</p><p><br/>NOTE: All O-ring sides of the fittings go into the cooler.<br/></p>"
+            "body": "<p>The AN fitting goes on the bottom right side of the cooler.</p><p><br/>NOTE: All O-ring sides of the fittings go into the cooler.<br/></p>",
+            "image_1": "shopify://shop_images/DSC_0011_v2.png"
           }
         },
         "step_GtfRgX": {
@@ -294,7 +296,8 @@
             "image_position": "right",
             "header": "STEP",
             "label": "Mount the cooler onto the 16.302 bracket.",
-            "body": "<p>Use (2) M6-1.0 T slot nuts and (2) M6- 1.0 x 12 BHCS bolts.</p><p><br/>The cooler should sit in the lower holes of the bracket and be centered as best as possible.</p><p><br/>Torque: 20 ft-lb<br/></p>"
+            "body": "<p>Use (2) M6-1.0 T slot nuts and (2) M6- 1.0 x 12 BHCS bolts.</p><p><br/>The cooler should sit in the lower holes of the bracket and be centered as best as possible.</p><p><br/>Torque: 20 ft-lb<br/></p>",
+            "image_1": "shopify://shop_images/DSC_0001.png"
           }
         },
         "step_mfDWLU": {
@@ -303,7 +306,8 @@
             "image_position": "right",
             "header": "STEP",
             "label": "Install the cooler + bracket assembly.",
-            "body": "<p>Use:</p><ul><li>(2) 1/4-20 x 3/4 bolts</li><li>(2) 1/4” flat washers</li><li>(2) 1/4-20 lock nuts (top holes)</li><li>(2) FSHST-1/4-14-1.0 self tapping screws (bottom holes)</li></ul>"
+            "body": "<p>Use:</p><ul><li>(2) 1/4-20 x 3/4 bolts</li><li>(2) 1/4” flat washers</li><li>(2) 1/4-20 lock nuts (top holes)</li><li>(2) FSHST-1/4-14-1.0 self tapping screws (bottom holes)</li></ul>",
+            "image_1": "shopify://shop_images/DSC_0026.png"
           }
         },
         "step_txWrdW": {
@@ -312,7 +316,8 @@
             "image_position": "right",
             "header": "STEP",
             "label": "Connect both hoses (HA-L130 and HA-L131) to the cooler.",
-            "body": ""
+            "body": "",
+            "image_1": "shopify://shop_images/DSC_0026_v2.png"
           }
         },
         "step_yRAwED": {
@@ -321,7 +326,9 @@
             "image_position": "right",
             "header": "STEP",
             "label": "Before reinstalling the grille, trim the two retaining clips under the camera by 1/8”.",
-            "body": "<p>A quick cut or grind fixes it.</p>"
+            "body": "<p>A quick cut or grind fixes it.</p>",
+            "image_1": "shopify://shop_images/DSC_0014.png",
+            "image_2": "shopify://shop_images/DSC_0020.png"
           }
         },
         "step_wjtNf4": {
@@ -330,7 +337,8 @@
             "image_position": "right",
             "header": "STEP",
             "label": "Reinstall the grille. Ensure all trim clips are fully seated.",
-            "body": ""
+            "body": "",
+            "image_1": "shopify://shop_images/DSC_0005_6f9d282c-0ff8-4dad-8f3a-9666a3551e9e.png"
           }
         },
         "step_Vz6pBd": {
@@ -348,7 +356,8 @@
             "image_position": "right",
             "header": "STEP",
             "label": "Reinstall the turbo inlet tube and tighten clamps.",
-            "body": ""
+            "body": "",
+            "image_1": "shopify://shop_images/20230809_102747.png"
           }
         },
         "step_wKcmMk": {
@@ -366,7 +375,8 @@
             "image_position": "right",
             "header": "STEP",
             "label": "Reinstall the turbo outlet tube.",
-            "body": ""
+            "body": "",
+            "image_1": "shopify://shop_images/20230809_102353_v2.png"
           }
         },
         "step_RRHWcR": {
@@ -375,7 +385,8 @@
             "image_position": "right",
             "header": "STEP",
             "label": "Reinstall the power steering fill     reservoir using the OEM bolt.",
-            "body": ""
+            "body": "",
+            "image_1": "shopify://shop_images/20230809_101954.png"
           }
         },
         "step_9RAP64": {
