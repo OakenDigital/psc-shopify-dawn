@@ -203,7 +203,7 @@
         "step_qHpddh": {
           "type": "step",
           "settings": {
-            "image_position": "right",
+            "image_position": "left",
             "header": "{{ page.metafields.custom.step.value }}",
             "label": "{{ page.metafields.custom.instructions_step_10.value }}",
             "body": "<p>{{ page.metafields.custom.step_10_content | metafield_tag }}<br/></p>",
@@ -223,7 +223,7 @@
         "step_kNUzab": {
           "type": "step",
           "settings": {
-            "image_position": "right",
+            "image_position": "left",
             "header": "{{ page.metafields.custom.step.value }}",
             "label": "{{ page.metafields.custom.instructions_step_12.value }}",
             "body": "<p>{{ page.metafields.custom.step_12_content | metafield_tag }}</p>",
@@ -233,18 +233,17 @@
         "step_8XM3YY": {
           "type": "step",
           "settings": {
-            "image_position": "split",
+            "image_position": "right",
             "header": "{{ page.metafields.custom.step.value }}",
             "label": "{{ page.metafields.custom.instructions_step_13.value }}",
             "body": "<p>{{ page.metafields.custom.step_13_content | metafield_tag }}</p>",
-            "image_1": "{{ page.metafields.custom.instructions_step_13_image.value }}",
-            "image_4": "shopify://shop_images/ADK-LT100_Pic_35.jpg"
+            "image_1": "{{ page.metafields.custom.instructions_step_13_image.value }}"
           }
         },
         "step_cHqj7f": {
           "type": "step",
           "settings": {
-            "image_position": "right",
+            "image_position": "left",
             "header": "{{ page.metafields.custom.step.value }}",
             "label": "{{ page.metafields.custom.instructions_step_14.value }}",
             "body": "<p>{{ page.metafields.custom.step_14_content | metafield_tag }}</p>",
@@ -264,7 +263,7 @@
         "step_rhGMA9": {
           "type": "step",
           "settings": {
-            "image_position": "right",
+            "image_position": "left",
             "header": "{{ page.metafields.custom.step.value }}",
             "label": "{{ page.metafields.custom.instructions_step_16.value }}",
             "body": "<p>{{ page.metafields.custom.step_16_content | metafield_tag }}</p>",
@@ -283,7 +282,7 @@
         "step_e66zbV": {
           "type": "step",
           "settings": {
-            "image_position": "right",
+            "image_position": "split",
             "header": "STEP",
             "label": "{{ page.metafields.custom.instructions_step_18.value }}",
             "body": "<p>{{ page.metafields.custom.step_18_content | metafield_tag }}</p>",
