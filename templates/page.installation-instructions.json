@@ -112,7 +112,7 @@
         "step_K6k3PQ": {
           "type": "step",
           "settings": {
-            "image_position": "right",
+            "image_position": "left",
             "header": "{{ page.metafields.custom.step.value }}",
             "label": "{{ page.metafields.custom.instructions_step_1.value }}",
             "body": "<p>{{ page.metafields.custom.step_1_content | metafield_tag }}</p>",
@@ -122,7 +122,7 @@
         "step_p4UDTU": {
           "type": "step",
           "settings": {
-            "image_position": "left",
+            "image_position": "right",
             "header": "{{ page.metafields.custom.step.value }}",
             "label": "{{ page.metafields.custom.instructions_step_2.value }}",
             "body": "<p><strong>Remove and discard:</strong></p><ul><li>All factory belts</li><li>Factory accessory brackets</li><li>Factory accessories</li><li>OEM water pump and housing&nbsp;<br/></li></ul><p><strong>Remove and retain for installation:</strong></p><ul><li>Alternator</li><li>A/C compressor</li><li>If your A/C uses a stretch belt, OEMs recommend replacing it.<br/><br/><br/><br/><br/></li></ul>",
