@@ -93,28 +93,7 @@
           "type": "kit_category",
           "settings": {
             "header": "{{ page.metafields.custom.instructions_included_header_4.value }}",
-            "body": "<p>{{ page.metafields.custom.instructions_included_content_4 | metafield_tag }}</p><p><strong>Hand Tools</strong></p><ul><li>Metric socket set</li><li>Ratchet with short and long extensions</li><li>Torx bit set (for grille, fender, and inner fender hardware)</li><li>Flathead screwdriver or panel trim tool (for push rivets and clips)</li><li>Pliers (for spring clamps on hoses)</li><li>Utility knife or hose cutter (to remove OEM low pressure line)</li></ul><p><strong>Fluid & Catching Gear</strong></p><ul><li>Drain pan for catching old power steering fluid</li><li>Funnel for filling system</li><li>Shop towels or rags</li></ul><p><strong>Body & Fitment Tools</strong></p><ul><li>Panel clip pliers (makes fender removal faster - optional but helpful)</li><li>Small grinder, Dremel, or file (to trim 1/8 - off the grille retaining clips)</li></ul><p><strong>Safety</strong></p><ul><li>Safety glasses</li><li>Light gloves (optional, but good for working around sharp body panels)<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/></li></ul>"
-          }
-        },
-        "kit_category_H9LMjn": {
-          "type": "kit_category",
-          "settings": {
-            "header": "{{ page.metafields.custom.instructions_included_header_5.value }}",
-            "body": "<p>{{ page.metafields.custom.instructions_included_content_5 | metafield_tag }}</p>"
-          }
-        },
-        "kit_category_LiT3Mi": {
-          "type": "kit_category",
-          "settings": {
-            "header": "{{ page.metafields.custom.instructions_included_header_6.value }}",
-            "body": "<p>{{ page.metafields.custom.instructions_included_content_6 | metafield_tag }}</p>"
-          }
-        },
-        "kit_category_ewdDUK": {
-          "type": "kit_category",
-          "settings": {
-            "header": "{{ page.metafields.custom.instructions_included_header_7.value }}",
-            "body": "<p>{{ page.metafields.custom.instructions_included_content_7 | metafield_tag }}</p>"
+            "body": "<p>{{ page.metafields.custom.instructions_included_content_4 | metafield_tag }}</p><p><strong>Hand Tools</strong></p><ul><li>Metric socket set</li><li>Ratchet with short and long extensions</li><li>Torx bit set (for grille, fender, and inner fender hardware)</li><li>Flathead screwdriver or panel trim tool (for push rivets and clips)</li><li>Pliers (for spring clamps on hoses)</li><li>Utility knife or hose cutter (to remove OEM low pressure line)</li></ul><p><strong>Fluid & Catching Gear</strong></p><ul><li>Drain pan for catching old power steering fluid</li><li>Funnel for filling system</li><li>Shop towels or rags</li></ul><p><strong>Body & Fitment Tools</strong></p><ul><li>Panel clip pliers (makes fender removal faster - optional but helpful)</li><li>Small grinder, Dremel, or file (to trim 1/8 - off the grille retaining clips)</li></ul><p><strong>Safety</strong></p><ul><li>Safety glasses</li><li>Light gloves (optional, but good for working around sharp body panels)<br/><br/><br/><br/></li></ul>"
           }
         },
         "step_K6k3PQ": {
@@ -300,8 +279,8 @@
           "settings": {
             "image_position": "right",
             "header": "STEP",
-            "label": "",
-            "body": "<p>Torque all hardware to the following specifications: <br/>M6 - 10 ft lbs<br/>M8 - 24 ft lbs<br/>M10 - 48 ft lbs<br/>M12 - 85 ft lbs<br/>5/8 - 150 ft lbs.</p>"
+            "label": "On the bench, install the fittings and plugs onto the C212S cooler.",
+            "body": "<p>The AN fitting goes on the bottom right side of the cooler.</p><p><br/>NOTE: All O-ring sides of the fittings go into the cooler.<br/></p>"
           }
         },
         "step_GtfRgX": {
@@ -309,8 +288,98 @@
           "settings": {
             "image_position": "right",
             "header": "STEP",
-            "label": "",
-            "body": "<p>Check and tighten all lines. Proceed to bleeding the system. <br/></p><p></p><p>Note: Installation photos in this guide may include a combination of rendered images (created by a real person), display-stand installations, and vehicle-installed components. Appearance and component positioning may vary slightly from what is shown.<br/></p>"
+            "label": "Mount the cooler onto the 16.302 bracket.",
+            "body": "<p>Use (2) M6-1.0 T slot nuts and (2) M6- 1.0 x 12 BHCS bolts.</p><p><br/>The cooler should sit in the lower holes of the bracket and be centered as best as possible.</p><p><br/>Torque: 20 ft-lb<br/></p>"
+          }
+        },
+        "step_mfDWLU": {
+          "type": "step",
+          "settings": {
+            "image_position": "right",
+            "header": "STEP",
+            "label": "Install the cooler + bracket assembly.",
+            "body": "<p>Use:</p><ul><li>(2) 1/4-20 x 3/4 bolts</li><li>(2) 1/4” flat washers</li><li>(2) 1/4-20 lock nuts (top holes)</li><li>(2) FSHST-1/4-14-1.0 self tapping screws (bottom holes)</li></ul>"
+          }
+        },
+        "step_txWrdW": {
+          "type": "step",
+          "settings": {
+            "image_position": "right",
+            "header": "STEP",
+            "label": "Connect both hoses (HA-L130 and HA-L131) to the cooler.",
+            "body": ""
+          }
+        },
+        "step_yRAwED": {
+          "type": "step",
+          "settings": {
+            "image_position": "right",
+            "header": "STEP",
+            "label": "Before reinstalling the grille, trim the two retaining clips under the camera by 1/8”.",
+            "body": "<p>A quick cut or grind fixes it.</p>"
+          }
+        },
+        "step_wjtNf4": {
+          "type": "step",
+          "settings": {
+            "image_position": "right",
+            "header": "STEP",
+            "label": "Reinstall the grille. Ensure all trim clips are fully seated.",
+            "body": ""
+          }
+        },
+        "step_Vz6pBd": {
+          "type": "step",
+          "settings": {
+            "image_position": "right",
+            "header": "STEP",
+            "label": "Reinstall the passenger-side inner fender.",
+            "body": ""
+          }
+        },
+        "step_XDfjQH": {
+          "type": "step",
+          "settings": {
+            "image_position": "right",
+            "header": "STEP",
+            "label": "Reinstall the turbo inlet tube and tighten clamps.",
+            "body": ""
+          }
+        },
+        "step_wKcmMk": {
+          "type": "step",
+          "settings": {
+            "image_position": "right",
+            "header": "STEP",
+            "label": "Reinstall the air filter box and tighten clamps.",
+            "body": ""
+          }
+        },
+        "step_yxgdaD": {
+          "type": "step",
+          "settings": {
+            "image_position": "right",
+            "header": "STEP",
+            "label": "Reinstall the turbo outlet tube.",
+            "body": ""
+          }
+        },
+        "step_RRHWcR": {
+          "type": "step",
+          "settings": {
+            "image_position": "right",
+            "header": "STEP",
+            "label": "Reinstall the power steering fill     reservoir using the OEM bolt.",
+            "body": ""
+          }
+        },
+        "step_9RAP64": {
+          "type": "step",
+          "settings": {
+            "image_position": "right",
+            "header": "STEP",
+            "label": "Reinstall the engine dust cover.",
+            "body": "<p>Proceed to Bleeding Procedure</p>"
           }
         }
       },
@@ -325,9 +394,6 @@
         "kit_category_YcM36D",
         "kit_category_gmYbYG",
         "kit_category_whAfV7",
-        "kit_category_H9LMjn",
-        "kit_category_LiT3Mi",
-        "kit_category_ewdDUK",
         "step_K6k3PQ",
         "step_p4UDTU",
         "step_mPKCht",
@@ -347,7 +413,17 @@
         "step_CeQMB4",
         "step_e66zbV",
         "step_AnjD4q",
-        "step_GtfRgX"
+        "step_GtfRgX",
+        "step_mfDWLU",
+        "step_txWrdW",
+        "step_yRAwED",
+        "step_wjtNf4",
+        "step_Vz6pBd",
+        "step_XDfjQH",
+        "step_wKcmMk",
+        "step_yxgdaD",
+        "step_RRHWcR",
+        "step_9RAP64"
       ],
       "name": "PSC Installation Guide",
       "settings": {
