@@ -71,7 +71,7 @@
           "type": "kit_category",
           "settings": {
             "header": "{{ page.metafields.custom.instructions_included_header_2.value }}",
-            "body": "<p>{{ page.metafields.custom.instructions_included_content_2 | metafield_tag }}</p>"
+            "body": "<p>{{ page.metafields.custom.instructions_included_content_2 | metafield_tag }}(1) 16.302P - Mounting Bracket, Fluid Cooler Jeep JL/JT<br/>(1) C212S-ANO - PSC 12” High Flow Heat Sink Fluid Cooler-Single Pass - Black Anodized<br/>(1) CMK212S-6TN - Cooler Master Kit for C212S/C214S Single Pass -6 AN Fittings<br/>(1) HA-L130 - Hose Assembly, Cooler to Steering Gear EHPS Equipped<br/>(1) HA-L153- Hose Assembly, Cooler to PSC EHPS Pump (24 Inches)<br/>(1) HWK-CK220 - Hardware Kit for CK220 Cooler Kit:<br/>&nbsp; &nbsp; (2) FSHHD-1/4-20-.75<br/>&nbsp; &nbsp; (2) FSHST-1/4-14-1.0<br/>&nbsp; &nbsp; (2) FSNL-1/4-20 - Lock Nut<br/>&nbsp; &nbsp; (2) FSW-1/4 &nbsp;SAE- Washers</p>"
           }
         },
         "kit_category_gmYbYG": {
