@@ -85,7 +85,7 @@
           "type": "kit_category",
           "settings": {
             "header": "{{ page.metafields.custom.instructions_included_header_4.value }}",
-            "body": "<p>{{ page.metafields.custom.instructions_included_content_4 | metafield_tag }}</p>"
+            "body": "<p>{{ page.metafields.custom.instructions_included_content_4 | metafield_tag }}</p><p><strong>Hand Tools</strong></p><ul><li>Metric socket set</li><li>Ratchet with short and long extensions</li><li>Torx bit set (for grille, fender, and inner fender hardware)</li><li>Flathead screwdriver or panel trim tool (for push rivets and clips)</li><li>Pliers (for spring clamps on hoses)</li><li>Utility knife or hose cutter (to remove OEM low pressure line)</li></ul><p><strong>Fluid & Catching Gear</strong></p><ul><li>Drain pan for catching old power steering fluid</li><li>Funnel for filling system</li><li>Shop towels or rags</li></ul><p><strong>Body & Fitment Tools</strong></p><ul><li>Panel clip pliers (makes fender removal faster - optional but helpful)</li><li>Small grinder, Dremel, or file (to trim 1/8 - off the grille retaining clips)</li></ul><p><strong>Safety</strong></p><ul><li>Safety glasses</li><li>Light gloves (optional, but good for working around sharp body panels)<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/></li></ul>"
           }
         },
         "kit_category_H9LMjn": {
