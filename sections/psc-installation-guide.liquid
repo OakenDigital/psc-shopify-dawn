@@ -85,11 +85,11 @@
     gap: 22px;
   }
   .psc-guide-cover-title-{{ id }} {
-    color: var(--psc-red);
-    font-size: clamp(24px, 3.2vw, 44px); /* Scaled down slightly to allow full titles on 1–2 lines */
-    line-height: 1.15; /* Prevents text collision */
-    hyphens: none; /* Prevents awkward word hyphenation */
-    word-break: normal; /* Ensures whole words wrap together */
+    color: {{ section.settings.accent_color }} !important;
+    font-size: clamp(24px, 3.2vw, 44px);
+    line-height: 1.15;
+    hyphens: none;
+    word-break: normal;
     overflow-wrap: normal;
   }
   .psc-guide-application-{{ id }} {
