@@ -122,11 +122,12 @@
         "step_p4UDTU": {
           "type": "step",
           "settings": {
-            "image_position": "split",
+            "image_position": "left",
             "header": "{{ page.metafields.custom.step.value }}",
             "label": "{{ page.metafields.custom.instructions_step_2.value }}",
             "body": "<p><strong>Remove and discard:</strong></p><ul><li>All factory belts</li><li>Factory accessory brackets</li><li>Factory accessories</li><li>OEM water pump and housing&nbsp;<br/></li></ul><p><strong>Remove and retain for installation:</strong></p><ul><li>Alternator</li><li>A/C compressor</li><li>If your A/C uses a stretch belt, OEMs recommend replacing it.<br/><br/><br/><br/><br/></li></ul>",
-            "image_1": "{{ page.metafields.custom.instructions_step_2_image.value }}"
+            "image_1": "{{ page.metafields.custom.instructions_step_2_image.value }}",
+            "image_2": "shopify://shop_images/ADK-LT100_Pic_1.jpg"
           }
         },
         "step_mPKCht": {
