@@ -276,7 +276,8 @@
             "image_position": "right",
             "header": "",
             "label": "{{ page.metafields.custom.instructions_step_17.value }}",
-            "body": "<p>{{ page.metafields.custom.step_17_content | metafield_tag }}</p>"
+            "body": "<p>{{ page.metafields.custom.step_17_content | metafield_tag }}</p>",
+            "image_1": "shopify://shop_images/adk_complete.png"
           }
         },
         "step_e66zbV": {
@@ -285,8 +286,7 @@
             "image_position": "split",
             "header": "STEP",
             "label": "{{ page.metafields.custom.instructions_step_18.value }}",
-            "body": "<p>{{ page.metafields.custom.step_18_content | metafield_tag }}</p>",
-            "image_1": "shopify://shop_images/adk_complete.png"
+            "body": "<p>{{ page.metafields.custom.step_18_content | metafield_tag }}</p>"
           }
         }
       },
