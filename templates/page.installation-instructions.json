@@ -232,11 +232,12 @@
         "step_8XM3YY": {
           "type": "step",
           "settings": {
-            "image_position": "right",
+            "image_position": "split",
             "header": "{{ page.metafields.custom.step.value }}",
             "label": "{{ page.metafields.custom.instructions_step_13.value }}",
             "body": "<p>{{ page.metafields.custom.step_13_content | metafield_tag }}</p>",
-            "image_1": "{{ page.metafields.custom.instructions_step_13_image.value }}"
+            "image_1": "{{ page.metafields.custom.instructions_step_13_image.value }}",
+            "image_4": "shopify://shop_images/ADK-LT100_Pic_35.jpg"
           }
         },
         "step_cHqj7f": {
