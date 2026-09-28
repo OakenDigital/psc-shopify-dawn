@@ -75,6 +75,13 @@
             "body": "<p>{{ page.metafields.custom.instructions_included_content | metafield_tag }}</p>"
           }
         },
+        "kit_category_WFUmJh": {
+          "type": "kit_category",
+          "settings": {
+            "header": "Tie Rod Mounting Bracket Kit",
+            "body": "<p>(1) Tie Rod End-Cylinder Mount Bracket<br/>(2) M12-1.5 x 55mm Hex Head Bolts<br/>(2) M12-1.5 Lock Nuts</p>"
+          }
+        },
         "kit_category_YcM36D": {
           "type": "kit_category",
           "settings": {
@@ -113,8 +120,8 @@
         "kit_category_ewdDUK": {
           "type": "kit_category",
           "settings": {
-            "header": "{{ page.metafields.custom.instructions_included_header_7.value }}",
-            "body": "<p>{{ page.metafields.custom.instructions_included_content_7 | metafield_tag }}</p>"
+            "header": "Safety & Prep",
+            "body": "<ul><li>Park on level ground and set the parking brake.</li><li>Center the steering wheel and secure it so it cannot rotate during installation. A ratchet strap around the wheel works well.</li><li>Use jack stands. Never rely on a jack alone.</li><li>Wear eye protection and gloves.</li><li>Before disconnecting any hoses, verify the engine is off and the steering system is not under pressure. Place a drain pan beneath the work area to catch any fluid released when the hoses are disconnected.</li><li>Keep hydraulic fluid handy for topping off after install.</li></ul>"
           }
         },
         "step_K6k3PQ": {
@@ -322,6 +329,7 @@
         "toc_entry_YtUPLL",
         "toc_entry_A3tDJN",
         "kit_category_JbpLyq",
+        "kit_category_WFUmJh",
         "kit_category_YcM36D",
         "kit_category_gmYbYG",
         "kit_category_whAfV7",
@@ -365,7 +373,7 @@
         "before_title": "{{ page.metafields.custom.instructions_bys_header.value }}",
         "before_body": "<p>{{ page.metafields.custom.instructions_bys_content | metafield_tag }}</p>",
         "kit_title": "What's in the Kit",
-        "install_title": "",
+        "install_title": "Installation",
         "custom_section_title": "Bleeding Procedure",
         "custom_section_body": "<p><br/>It’s critical to purge all the air out of the system to prevent damage to the pump.</p><p><br/><strong>Step 1:</strong> With the engine off, jack up the front of the vehicle and put jack stands under the front axle. This makes the bleeding process easier.</p><p><br/><strong>Step 2:</strong> Add PSC fluid to the reservoir until it’s about 1” to 1-1/2” from the top or with an<br/>OEM reservoir keep the level between min and max.</p><p><strong>NOTE:</strong> With a PSC reservoir make sure<br/>the filter submerged in fluid at all times.</p><p><br/><strong>Step 3:</strong> Turn the steering wheel lock-to-lock (all the way right and all the way left) to pull more fluid through the system. Keep adding fluid a little at a time, checking the level after each round — whether that’s with a dipstick, sight glass, or fill plug — until it’s consistently sitting where it should be. You’re looking for steady, not bouncing around.</p><p><br/><strong>Step 4:</strong> Put the cap on the reservoir and start the engine for about 30 seconds—but do not turn the steering wheel yet.<br/></p><p><strong>NOTE:</strong> The fluid level in the reservoir will drop and get aerated. Letting a few minutes pass between startups will allow air bubbles to work their way out of the system. Refill the reservoir<br/>and repeat this process a couple of times.</p><p><br/><strong>Step 5:</strong> Start the engine and turn the steering wheel completely right and then left 10-15 times. Shut the engine off and let the vehicle sit for 10 minutes. Check and add fluid as necessary. Repeat this process 3-4 times. At this point the fluid level should move about one inch up or down when cycling the steering, and no bubbles should be visible in the reservoir<br/><br/><strong>Step 6:</strong> Lower the vehicle to the ground and repeat the process above one more time. Check<br/>the fluid level again.</p><p><br/><strong>Step 7:</strong> Take the vehicle for a test drive. Listen for pump noise-that’s a sign of fluid aeration. If you hear it, shut the vehicle off to let the bubbles dissipate. If noise keeps coming back, double check the low-pressure lines and make sure all fittings are tight. Top off the fluid and drive the vehicle again. Let the system cool down once you believe it’s properly bled.</p><p><br/><strong>Step 8:</strong> Remove the reservoir cap and have someone start the vehicle while you watch the fluid level. If the level drops on startup, there’s still air in the system. If it stays steady, you’ll be good.</p><p><strong>NOTE:</strong> Getting all the air out of the system can take some time. If the pump is whining, you are aerating the fluid which is not good for the pump. If you’re running your vehicle for an extended time and your pump has not stopped whining, it needs to&nbsp;<br/><br/><br/></p>",
         "contact_title": "CONTACT US",
