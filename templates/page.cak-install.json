@@ -215,112 +215,6 @@
             "body": "<p>{{ page.metafields.custom.step_9_content | metafield_tag }}</p>",
             "image_1": "{{ page.metafields.custom.instructions_step_9_image.value }}"
           }
-        },
-        "step_qHpddh": {
-          "type": "step",
-          "settings": {
-            "image_position": "right",
-            "header": "{{ page.metafields.custom.step.value }}",
-            "label": "{{ page.metafields.custom.instructions_step_10.value }}",
-            "body": "<p>{{ page.metafields.custom.step_10_content | metafield_tag }}<br/></p>",
-            "image_1": "{{ page.metafields.custom.instructions_step_10_image.value }}"
-          }
-        },
-        "step_Y3Vxd7": {
-          "type": "step",
-          "settings": {
-            "image_position": "right",
-            "header": "{{ page.metafields.custom.step.value }}",
-            "label": "{{ page.metafields.custom.instructions_step_11.value }}",
-            "body": "<p>{{ page.metafields.custom.step_11_content | metafield_tag }}<br/><br/><br/><br/></p>",
-            "image_1": "{{ page.metafields.custom.instructions_step_11_image.value }}"
-          }
-        },
-        "step_kNUzab": {
-          "type": "step",
-          "settings": {
-            "image_position": "right",
-            "header": "{{ page.metafields.custom.step.value }}",
-            "label": "{{ page.metafields.custom.instructions_step_12.value }}",
-            "body": "<p>{{ page.metafields.custom.step_12_content | metafield_tag }}</p>",
-            "image_1": "{{ page.metafields.custom.instructions_step_12_image.value }}"
-          }
-        },
-        "step_8XM3YY": {
-          "type": "step",
-          "settings": {
-            "image_position": "right",
-            "header": "{{ page.metafields.custom.step.value }}",
-            "label": "{{ page.metafields.custom.instructions_step_13.value }}",
-            "body": "<p>{{ page.metafields.custom.step_13_content | metafield_tag }}</p>",
-            "image_1": "{{ page.metafields.custom.instructions_step_13_image.value }}"
-          }
-        },
-        "step_cHqj7f": {
-          "type": "step",
-          "settings": {
-            "image_position": "right",
-            "header": "{{ page.metafields.custom.step.value }}",
-            "label": "{{ page.metafields.custom.instructions_step_14.value }}",
-            "body": "<p>{{ page.metafields.custom.step_14_content | metafield_tag }}</p>",
-            "image_1": "{{ page.metafields.custom.instructions_step_14_image.value }}"
-          }
-        },
-        "step_byGprp": {
-          "type": "step",
-          "settings": {
-            "image_position": "right",
-            "header": "{{ page.metafields.custom.step.value }}",
-            "label": "{{ page.metafields.custom.instructions_step_15.value }}",
-            "body": "<p>{{ page.metafields.custom.step_15_content | metafield_tag }}<br/></p>",
-            "image_1": "{{ page.metafields.custom.instructions_step_15_image.value }}"
-          }
-        },
-        "step_rhGMA9": {
-          "type": "step",
-          "settings": {
-            "image_position": "right",
-            "header": "{{ page.metafields.custom.step.value }}",
-            "label": "{{ page.metafields.custom.instructions_step_16.value }}",
-            "body": "<p>{{ page.metafields.custom.step_16_content | metafield_tag }}</p>",
-            "image_1": "{{ page.metafields.custom.instructions_step_16_image.value }}"
-          }
-        },
-        "step_CeQMB4": {
-          "type": "step",
-          "settings": {
-            "image_position": "right",
-            "header": "",
-            "label": "{{ page.metafields.custom.instructions_step_17.value }}",
-            "body": "<p>{{ page.metafields.custom.step_17_content | metafield_tag }}</p>"
-          }
-        },
-        "step_e66zbV": {
-          "type": "step",
-          "settings": {
-            "image_position": "split",
-            "header": "STEP",
-            "label": "{{ page.metafields.custom.instructions_step_18.value }}",
-            "body": "<p>{{ page.metafields.custom.step_18_content | metafield_tag }}</p>"
-          }
-        },
-        "step_xMFfx7": {
-          "type": "step",
-          "settings": {
-            "image_position": "right",
-            "header": "STEP",
-            "label": "Prepare the vehicle",
-            "body": "<ul><li>Disconnect the battery and secure the vehicle.</li></ul>"
-          }
-        },
-        "step_gqMT3G": {
-          "type": "step",
-          "settings": {
-            "image_position": "right",
-            "header": "STEP",
-            "label": "Prepare the vehicle",
-            "body": "<ul><li>Disconnect the battery and secure the vehicle.</li></ul>"
-          }
         }
       },
       "block_order": [
@@ -346,18 +240,7 @@
         "step_xkAxXJ",
         "step_Mw8NCM",
         "step_V3gA8w",
-        "step_ffDf7T",
-        "step_qHpddh",
-        "step_Y3Vxd7",
-        "step_kNUzab",
-        "step_8XM3YY",
-        "step_cHqj7f",
-        "step_byGprp",
-        "step_rhGMA9",
-        "step_CeQMB4",
-        "step_e66zbV",
-        "step_xMFfx7",
-        "step_gqMT3G"
+        "step_ffDf7T"
       ],
       "name": "PSC Installation Guide",
       "settings": {
