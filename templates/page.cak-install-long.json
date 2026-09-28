@@ -172,7 +172,7 @@
         "step_Mw8NCM": {
           "type": "step",
           "settings": {
-            "image_position": "right",
+            "image_position": "left",
             "header": "STEP",
             "label": "{{ page.metafields.custom.instructions_step_7.value }}",
             "body": "<p>{{ page.metafields.custom.step_7_content | metafield_tag }}</p>",
@@ -192,7 +192,7 @@
         "step_ffDf7T": {
           "type": "step",
           "settings": {
-            "image_position": "right",
+            "image_position": "left",
             "header": "STEP",
             "label": "{{ page.metafields.custom.instructions_step_9.value }}",
             "body": "<p>{{ page.metafields.custom.step_9_content | metafield_tag }}</p>",
@@ -212,7 +212,7 @@
         "step_Y3Vxd7": {
           "type": "step",
           "settings": {
-            "image_position": "right",
+            "image_position": "left",
             "header": "STEP",
             "label": "{{ page.metafields.custom.instructions_step_11.value }}",
             "body": "<p>{{ page.metafields.custom.step_11_content | metafield_tag }}<br/><br/><br/><br/></p>",
@@ -232,7 +232,7 @@
         "step_8XM3YY": {
           "type": "step",
           "settings": {
-            "image_position": "right",
+            "image_position": "left",
             "header": "STEP",
             "label": "{{ page.metafields.custom.instructions_step_13.value }}",
             "body": "<p>{{ page.metafields.custom.step_13_content | metafield_tag }}</p>",
@@ -252,7 +252,7 @@
         "step_byGprp": {
           "type": "step",
           "settings": {
-            "image_position": "right",
+            "image_position": "left",
             "header": "STEP",
             "label": "{{ page.metafields.custom.instructions_step_15.value }}",
             "body": "<p>{{ page.metafields.custom.step_15_content | metafield_tag }}<br/></p>",
@@ -272,37 +272,40 @@
         "step_CeQMB4": {
           "type": "step",
           "settings": {
-            "image_position": "right",
+            "image_position": "left",
             "header": "STEP",
             "label": "{{ page.metafields.custom.instructions_step_17.value }}",
-            "body": "<p>{{ page.metafields.custom.step_17_content | metafield_tag }}</p>"
+            "body": "<p>{{ page.metafields.custom.step_17_content | metafield_tag }}</p>",
+            "image_1": "{{ page.metafields.custom.instructions_step_17_image.value }}"
           }
         },
         "step_e66zbV": {
           "type": "step",
           "settings": {
-            "image_position": "split",
+            "image_position": "right",
             "header": "STEP",
             "label": "{{ page.metafields.custom.instructions_step_18.value }}",
-            "body": "<p>{{ page.metafields.custom.step_18_content | metafield_tag }}</p>"
+            "body": "<p>{{ page.metafields.custom.step_18_content | metafield_tag }}</p>",
+            "image_1": "{{ page.metafields.custom.instructions_step_18_image.value }}"
           }
         },
         "step_AnjD4q": {
           "type": "step",
           "settings": {
-            "image_position": "right",
+            "image_position": "left",
             "header": "STEP",
             "label": "",
-            "body": "<p>Torque all hardware to the following specifications: <br/>M6 - 10 ft lbs<br/>M8 - 24 ft lbs<br/>M10 - 48 ft lbs<br/>M12 - 85 ft lbs<br/>5/8 - 150 ft lbs.</p>"
+            "body": "<p>Torque all hardware to the following specifications:&nbsp;<br/>M6 - 10 ft lbs<br/>M8 - 24 ft lbs<br/>M10 - 48 ft lbs<br/>M12 - 85 ft lbs<br/>5/8 - 150 ft lbs.</p>",
+            "image_1": "shopify://shop_images/step_19.png"
           }
         },
         "step_GtfRgX": {
           "type": "step",
           "settings": {
-            "image_position": "right",
+            "image_position": "split",
             "header": "STEP",
             "label": "",
-            "body": "<p>Check and tighten all lines. Proceed to bleeding the system. <br/></p><p></p><p>Note: Installation photos in this guide may include a combination of rendered images (created by a real person), display-stand installations, and vehicle-installed components. Appearance and component positioning may vary slightly from what is shown.<br/></p>"
+            "body": "<p>Check and tighten all lines. Proceed to bleeding the system.&nbsp;<br/></p><p></p><p>Note: Installation photos in this guide may include a combination of rendered images (created by a real person), display-stand installations, and vehicle-installed components. Appearance and component positioning may vary slightly from what is shown.<br/></p>"
           }
         }
       },
