@@ -68,32 +68,25 @@
             "items": ""
           }
         },
-        "kit_category_JbpLyq": {
-          "type": "kit_category",
-          "settings": {
-            "header": "{{ page.metafields.custom.instructions_included_header.value }}",
-            "body": "<p>{{ page.metafields.custom.instructions_included_content | metafield_tag }}</p>"
-          }
-        },
         "kit_category_YcM36D": {
           "type": "kit_category",
           "settings": {
-            "header": "{{ page.metafields.custom.instructions_included_header_2.value }}",
-            "body": "<p>{{ page.metafields.custom.instructions_included_content_2 | metafield_tag }}(1) 16.302P - Mounting Bracket, Fluid Cooler Jeep JL/JT<br/>(1) C212S-ANO - PSC 12” High Flow Heat Sink Fluid Cooler-Single Pass - Black Anodized<br/>(1) CMK212S-6TN - Cooler Master Kit for C212S/C214S Single Pass -6 AN Fittings<br/>(1) HA-L130 - Hose Assembly, Cooler to Steering Gear EHPS Equipped<br/>(1) HA-L153- Hose Assembly, Cooler to PSC EHPS Pump (24 Inches)<br/>(1) HWK-CK220 - Hardware Kit for CK220 Cooler Kit:<br/>&nbsp; &nbsp; (2) FSHHD-1/4-20-.75<br/>&nbsp; &nbsp; (2) FSHST-1/4-14-1.0<br/>&nbsp; &nbsp; (2) FSNL-1/4-20 - Lock Nut<br/>&nbsp; &nbsp; (2) FSW-1/4 &nbsp;SAE- Washers</p>"
-          }
-        },
-        "kit_category_gmYbYG": {
-          "type": "kit_category",
-          "settings": {
-            "header": "{{ page.metafields.custom.instructions_included_header_3.value }}",
-            "body": "<p>{{ page.metafields.custom.instructions_included_content_3 | metafield_tag }}</p>"
+            "header": "{{ page.metafields.custom.instructions_included_header_2.value }}Parts",
+            "body": "<ul><li>SP43362JP‑2402 — PSC Power Steering Pump w/PP2402 pulley installed</li><li>MB11K — Pump Mounting Bracket</li><li>CK220 — Cooler Kit with ‑8 AN fittings</li><li>SR300K — Power Steering Fluid Tank with mounting hardware</li><li>SR350K — Fluid Remote Filler Neck</li><li>HA‑H100 — ‑8 AN Low‑Pressure Cooler → Reservoir hose</li><li>HA‑L101 — ‑8 AN Low‑Pressure Steering Gear → Cooler hose</li><li>HA‑L102 — ‑12 AN Low‑Pressure Reservoir → Pump Intake hose</li><li>HA‑L103 — ‑8 AN Remote Fill → Reservoir hose</li><li>HA‑L104 — ‑4 AN Reservoir Drain hose</li><li>HK2094 — ‑6 AN High‑Pressure hose (OE‑style)</li><li>SR‑VT — Remote System Relief Valve / Anti‑Splash Vent Kit</li><li>60905 — Serpentine Belt</li><li>PSC 715 Power Steering Fluid — 4 quarts</li></ul><p></p><p></p>"
           }
         },
         "kit_category_whAfV7": {
           "type": "kit_category",
           "settings": {
-            "header": "{{ page.metafields.custom.instructions_included_header_4.value }}",
-            "body": "<p>{{ page.metafields.custom.instructions_included_content_4 | metafield_tag }}</p><p><strong>Hand Tools</strong></p><ul><li>Metric socket set</li><li>Ratchet with short and long extensions</li><li>Torx bit set (for grille, fender, and inner fender hardware)</li><li>Flathead screwdriver or panel trim tool (for push rivets and clips)</li><li>Pliers (for spring clamps on hoses)</li><li>Utility knife or hose cutter (to remove OEM low pressure line)</li></ul><p><strong>Fluid & Catching Gear</strong></p><ul><li>Drain pan for catching old power steering fluid</li><li>Funnel for filling system</li><li>Shop towels or rags</li></ul><p><strong>Body & Fitment Tools</strong></p><ul><li>Panel clip pliers (makes fender removal faster - optional but helpful)</li><li>Small grinder, Dremel, or file (to trim 1/8 - off the grille retaining clips)</li></ul><p><strong>Safety</strong></p><ul><li>Safety glasses</li><li>Light gloves (optional, but good for working around sharp body panels)<br/><br/><br/><br/></li></ul>"
+            "header": "{{ page.metafields.custom.instructions_included_header_4.value }}Tools Needed",
+            "body": "<ul><li>Basic hand tools</li><li>46 mm socket & torque wrench (for&nbsp;</li><li>pitman arm nut 225 ft‑lb if you’re also installing a steering gear)</li><li>8 mm & 10 mm sockets/keys for brackets and accessories</li><li>Bungee/strap to safely hang alternator assembly</li><li>Thread sealant</li><li>Zip ties for tidy hose management<br/>Drain pan & rags<br/></li></ul>"
+          }
+        },
+        "kit_category_iMq7aX": {
+          "type": "kit_category",
+          "settings": {
+            "header": "Safety & Prep",
+            "body": "<ul><li>Disconnect the battery before you start.</li><li>Lift/secure the Jeep as needed; chock wheels.</li><li>Keep hoses off hot surfaces and sharp edges.</li><li>Clock and tighten AN fittings by hand first—don’t over‑torque.</li><li>Use thread sealant on any NPT threads noted below; not on AN flare seats.</li><li>Secure steering wheel if installing steering gear.</li></ul>"
           }
         },
         "step_K6k3PQ": {
@@ -408,10 +401,9 @@
         "toc_entry_DrpYNi",
         "toc_entry_YtUPLL",
         "toc_entry_VT8HPD",
-        "kit_category_JbpLyq",
         "kit_category_YcM36D",
-        "kit_category_gmYbYG",
         "kit_category_whAfV7",
+        "kit_category_iMq7aX",
         "step_K6k3PQ",
         "step_p4UDTU",
         "step_mPKCht",
