@@ -151,7 +151,9 @@
             "header": "{{ page.metafields.custom.step.value }}",
             "label": "{{ page.metafields.custom.instructions_step_3.value }}",
             "body": "<p>{{ page.metafields.custom.step_3_content | metafield_tag }}</p>",
-            "image_1": "{{ page.metafields.custom.instructions_step_3_image.value }}"
+            "image_1": "{{ page.metafields.custom.instructions_step_3_image.value }}",
+            "image_2": "shopify://shop_images/step_3.3.png",
+            "image_3": "shopify://shop_images/step_3_6998ec17-9dec-4c31-af3c-a12fc334a20d.png"
           }
         },
         "step_Ti9JPh": {
