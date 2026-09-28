@@ -92,9 +92,9 @@
         "step_K6k3PQ": {
           "type": "step",
           "settings": {
-            "image_position": "right",
+            "image_position": "split",
             "header": "STEP",
-            "label": "{{ page.metafields.custom.instructions_step_1.value }}",
+            "label": "{{ page.metafields.custom.instructions_step_1.value }}Disconnect the battery.",
             "body": "<p>{{ page.metafields.custom.step_1_content | metafield_tag }}</p>",
             "image_1": "{{ page.metafields.custom.instructions_step_1_image.value }}"
           }
@@ -102,23 +102,21 @@
         "step_p4UDTU": {
           "type": "step",
           "settings": {
-            "image_position": "left",
+            "image_position": "right",
             "header": "STEP",
             "label": "{{ page.metafields.custom.instructions_step_2.value }}",
-            "body": "<p>{{ page.metafields.custom.step_2_content | metafield_tag }}</p>",
+            "body": "<p>{{ page.metafields.custom.step_2_content | metafield_tag }}by removing &nbsp;the six push‑rivets across the top of the grille. Then pull out at the bottom edge of grille to release the snap connectors.</p>",
             "image_1": "{{ page.metafields.custom.instructions_step_2_image.value }}"
           }
         },
         "step_mPKCht": {
           "type": "step",
           "settings": {
-            "image_position": "split",
+            "image_position": "right",
             "header": "STEP",
-            "label": "{{ page.metafields.custom.instructions_step_3.value }}",
-            "body": "<p>{{ page.metafields.custom.step_3_content | metafield_tag }}</p>",
-            "image_1": "{{ page.metafields.custom.instructions_step_3_image.value }}",
-            "image_2": "shopify://shop_images/DSC_0006_v2.png",
-            "image_3": "shopify://shop_images/IMG_1516.png"
+            "label": "{{ page.metafields.custom.instructions_step_3.value }}Remove air filter Assembly",
+            "body": "<p>{{ page.metafields.custom.step_3_content | metafield_tag }}as an assembly using a 10 mm socket and a flat head screwdriver.</p>",
+            "image_1": "{{ page.metafields.custom.instructions_step_3_image.value }}"
           }
         },
         "step_Ti9JPh": {
@@ -126,8 +124,8 @@
           "settings": {
             "image_position": "right",
             "header": "STEP",
-            "label": "{{ page.metafields.custom.instructions_step_4.value }}",
-            "body": "<p>{{ page.metafields.custom.step_4_content | metafield_tag }}</p>",
+            "label": "{{ page.metafields.custom.instructions_step_4.value }}Remove the fresh‑air inlet tub and mount bracket",
+            "body": "<p>{{ page.metafields.custom.step_4_content | metafield_tag }}under the air box.</p>",
             "image_1": "{{ page.metafields.custom.instructions_step_4_image.value }}"
           }
         },
@@ -136,18 +134,18 @@
           "settings": {
             "image_position": "left",
             "header": "STEP",
-            "label": "{{ page.metafields.custom.instructions_step_5.value }}",
-            "body": "<p>{{ page.metafields.custom.step_5_content | metafield_tag }}</p>",
+            "label": "{{ page.metafields.custom.instructions_step_5.value }}Remove passenger inner fender.",
+            "body": "<p>{{ page.metafields.custom.step_5_content | metafield_tag }}We’ve found it’s faster and easier to pull the inner fender and fender flare off as one complete piece by removing the four bolts and the push pin that secure the inner &nbsp; fender to the body. There are several YouTube videos that walk through this process if you need a visual.&nbsp;</p><p><br/><strong>NOTE</strong>: A few of the body clips may get damaged during removal. Replacements are easy to find from multiple sources. Mopar part number: 6852‑6185‑AA‑008</p>",
             "image_1": "{{ page.metafields.custom.instructions_step_5_image.value }}"
           }
         },
         "step_xkAxXJ": {
           "type": "step",
           "settings": {
-            "image_position": "split",
+            "image_position": "right",
             "header": "STEP",
-            "label": "{{ page.metafields.custom.instructions_step_6.value }}",
-            "body": "<p>{{ page.metafields.custom.step_6_content | metafield_tag }}</p>",
+            "label": "{{ page.metafields.custom.instructions_step_6.value }}Disconnect OE power steering pump lines",
+            "body": "<ul><li>Position a drain pan beneath the vehicle to catch any power steering fluid.</li><li>Disconnect the power steering pump lines and remove the pump assembly. Retain one power steering pump mounting bolt for reuse during installation.</li><li>Remove the fluid reservoir and hose.<br/></li></ul>",
             "image_1": "{{ page.metafields.custom.instructions_step_6_image.value }}"
           }
         },
