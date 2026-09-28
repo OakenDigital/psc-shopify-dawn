@@ -196,7 +196,7 @@
             "header": "STEP",
             "label": "{{ page.metafields.custom.instructions_step_11.value }}Remove the idler pulley / bracket",
             "body": "<p>{{ page.metafields.custom.step_11_content | metafield_tag }}on the passenger side and discard bracket and hardware.<br/></p>",
-            "image_1": "{{ page.metafields.custom.instructions_step_11_image.value }}"
+            "image_1": "shopify://shop_images/step_11_888fa48e-6015-482b-880a-9af5e60d0273.png"
           }
         },
         "step_kNUzab": {
@@ -206,7 +206,7 @@
             "header": "STEP",
             "label": "{{ page.metafields.custom.instructions_step_12.value }}Install the PSC pump to the PSC bracket",
             "body": "<p>{{ page.metafields.custom.step_12_content | metafield_tag }}using the supplied (2) 8 mm x 30 mm flange bolts (Part #MB11K).</p><p><strong>Torque: 25 ft-lb</strong></p>",
-            "image_1": "{{ page.metafields.custom.instructions_step_12_image.value }}"
+            "image_1": "shopify://shop_images/step_12_bab3a36f-b451-420a-975d-8eabea9c87a5.png"
           }
         },
         "step_8XM3YY": {
@@ -216,7 +216,7 @@
             "header": "STEP",
             "label": "{{ page.metafields.custom.instructions_step_13.value }}",
             "body": "<p>{{ page.metafields.custom.step_13_content | metafield_tag }}Install the pump/bracket assembly on the passenger side of the engine where the idler‑pulley/bracket assembly was removed in Step 11.</p><p>Secure it using the supplied (3) 8 mm x 30 mm flange bolts.</p><p><strong>Torque: 25 ft-lb</strong></p>",
-            "image_1": "{{ page.metafields.custom.instructions_step_13_image.value }}"
+            "image_1": "shopify://shop_images/step_13-14.png"
           }
         },
         "step_cHqj7f": {
@@ -225,19 +225,18 @@
             "image_position": "split",
             "header": "STEP",
             "label": "{{ page.metafields.custom.instructions_step_14.value }}Install the new 4060900 belt",
-            "body": "<p>{{ page.metafields.custom.step_14_content | metafield_tag }}Reinstall the alternator/bracket (place the belt over the alternator pulley first). Release the tensioner and make sure the belt is seated in all pulleys.</p>",
-            "image_1": "{{ page.metafields.custom.instructions_step_14_image.value }}",
-            "image_4": "shopify://shop_images/Picture2.png"
+            "body": "<p>{{ page.metafields.custom.step_14_content | metafield_tag }}Reinstall the alternator/bracket (place the belt over the alternator pulley first). Release the tensioner and make sure the belt is seated in all pulleys.</p>"
           }
         },
         "step_byGprp": {
           "type": "step",
           "settings": {
-            "image_position": "split",
+            "image_position": "right",
             "header": "STEP",
             "label": "{{ page.metafields.custom.instructions_step_15.value }}Cooler & Hose Routing",
             "body": "<p>Thread the cooler fittings with thread sealant. The cooler mount uses the stock high‑pressure hose mounting locations under the radiator.</p><p><strong>Torque: 20 ft-lb</strong><br/></p>",
-            "image_1": "{{ page.metafields.custom.instructions_step_15_image.value }}"
+            "image_1": "{{ page.metafields.custom.instructions_step_15_image.value }}",
+            "image_2": "shopify://shop_images/step_15_715f8dcd-da59-420d-b19d-337db61903bf.png"
           }
         },
         "step_rhGMA9": {
@@ -247,7 +246,8 @@
             "header": "STEP",
             "label": "{{ page.metafields.custom.instructions_step_16.value }}Mount the cooler then route:",
             "body": "<ul><li>Steering Gear→ Cooler inlet using HA‑L101</li><li>Cooler outlet → Reservoir return using HA‑H100</li></ul>",
-            "image_1": "{{ page.metafields.custom.instructions_step_16_image.value }}"
+            "image_1": "shopify://shop_images/step_16_e3728c5a-16fe-4724-8215-6f1f7345913b.png",
+            "image_2": "shopify://shop_images/16.1.png"
           }
         },
         "step_CeQMB4": {
@@ -257,7 +257,7 @@
             "header": "STEP",
             "label": "{{ page.metafields.custom.instructions_step_17.value }}Pre‑assemble the reservoir:",
             "body": "<ul><li>Install H6802‑8‑8 45° fitting into the reservoir port toward the radiator, clocked about 10° up (use sealant).</li><li>Install FRA499104BL drain fitting in the bottom drain port (sealant).</li><li>Slide HA‑L102 (‑12 AN) supply hose onto the reservoir outlet with a #12 worm‑gear clamp (leave loose for now).</li></ul>",
-            "image_1": "{{ page.metafields.custom.instructions_step_17_image.value }}"
+            "image_1": "shopify://shop_images/step_17-18.png"
           }
         },
         "step_e66zbV": {
@@ -267,8 +267,7 @@
             "header": "STEP",
             "label": "{{ page.metafields.custom.instructions_step_18.value }}Mount the reservoir:",
             "body": "<ul><li>Set the reservoir over the bracket, start the HA‑L102 hose fitting onto the pump intake, then lower the reservoir into place.</li><li>Front hole: reuse the OE 8 mm bolt. Torque: 20 ft-lb</li><li>Rear hole: use the 8 mm x 100 mm bolt with a flat washer. Torque: 18 ft-lb</li><li>Tighten the -12 clamp at the reservoir and the supply fitting at the pump.</li><li>Install the HA‑L104 drain hose and tie it down neatly.</li><li>Connect the cooler‑to‑reservoir hose (HA‑H100) to the reservoir.</li></ul>",
-            "image_1": "{{ page.metafields.custom.instructions_step_18_image.value }}",
-            "image_4": "shopify://shop_images/20230809_142206_v2.png"
+            "image_1": "{{ page.metafields.custom.instructions_step_18_image.value }}"
           }
         },
         "step_AnjD4q": {
@@ -278,17 +277,19 @@
             "header": "STEP",
             "label": "",
             "body": "<p>Route the HK2094 high‑pressure hose below the radiator, across the front of the crossmember, and up under the radiator toward the pump and steering gear, as shown.<br/><br/>Loosely install the (2) HCL1213 rubber‑coated hose clamps around the hose and into the OE mounting points using the OE bolts.<br/><br/>Do not tighten the clamps until both hose ends are connected and fully tightened<br/></p>",
-            "image_1": "shopify://shop_images/DSC_0011_v2.png"
+            "image_1": "shopify://shop_images/step_19_ff413a81-90da-4b46-9b58-ea6e0507de8b.png"
           }
         },
         "step_GtfRgX": {
           "type": "step",
           "settings": {
-            "image_position": "right",
+            "image_position": "split",
             "header": "STEP",
             "label": "Hose Map Reference",
             "body": "<ul><li>Pump → Steering Gear (High‑Pressure): HK2094 via SF01‑HF at the gear</li><li>Steering Gear Return → Cooler Inlet: HA‑L101 via SF11 at the gear</li><li>Cooler Outlet → Reservoir Return: HA‑H100</li><li>Reservoir Supply → Pump Intake: HA‑L102 (‑12 AN)</li><li>Remote Fill → Reservoir: HA‑L103</li><li>Reservoir Drain: HA‑L104</li><li>Vent/Relief: SR‑VT (mount Anti‑Splash Vent per reservoir cap kit)</li></ul><p>R-VT Anti-Splash Reservoir Vent Mounting Location:</p>",
-            "image_1": "shopify://shop_images/DSC_0001.png"
+            "image_1": "shopify://shop_images/step_20.1.png",
+            "image_2": "shopify://shop_images/step_20.png",
+            "image_4": "shopify://shop_images/step_20.2.png"
           }
         }
       },
