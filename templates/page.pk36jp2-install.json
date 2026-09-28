@@ -154,8 +154,8 @@
           "settings": {
             "image_position": "right",
             "header": "STEP",
-            "label": "{{ page.metafields.custom.instructions_step_7.value }}",
-            "body": "<p>{{ page.metafields.custom.step_7_content | metafield_tag }}</p>",
+            "label": "{{ page.metafields.custom.instructions_step_7.value }}Disconnect clamp bolts then, remove the OE pressure and return lines",
+            "body": "<p>{{ page.metafields.custom.step_7_content | metafield_tag }}the pump and steering gear. (Cutting them can speed things up if you’re not saving the hoses.)</p>",
             "image_1": "{{ page.metafields.custom.instructions_step_7_image.value }}"
           }
         },
@@ -164,8 +164,8 @@
           "settings": {
             "image_position": "right",
             "header": "STEP",
-            "label": "{{ page.metafields.custom.instructions_step_8.value }}",
-            "body": "<p>{{ page.metafields.custom.step_8_content | metafield_tag }}</p>",
+            "label": "{{ page.metafields.custom.instructions_step_8.value }}Remove the vacuum‑pump assembly by taking out the two 8 mm bolts from the underside of the alternator bracket",
+            "body": "<p>{{ page.metafields.custom.step_8_content | metafield_tag }}Disconnect the line clamps and let the pump hang down out of the way.&nbsp;</p>",
             "image_1": "{{ page.metafields.custom.instructions_step_8_image.value }}"
           }
         },
@@ -174,8 +174,8 @@
           "settings": {
             "image_position": "right",
             "header": "STEP",
-            "label": "{{ page.metafields.custom.instructions_step_9.value }}",
-            "body": "<p>{{ page.metafields.custom.step_9_content | metafield_tag }}</p>",
+            "label": "{{ page.metafields.custom.instructions_step_9.value }}Note the belt routing",
+            "body": "<p>{{ page.metafields.custom.step_9_content | metafield_tag }}Release the tensioner and slip the belt off the idler pulley.</p>",
             "image_1": "{{ page.metafields.custom.instructions_step_9_image.value }}"
           }
         },
@@ -184,8 +184,8 @@
           "settings": {
             "image_position": "right",
             "header": "STEP",
-            "label": "{{ page.metafields.custom.instructions_step_10.value }}",
-            "body": "<p>{{ page.metafields.custom.step_10_content | metafield_tag }}<br/></p>",
+            "label": "{{ page.metafields.custom.instructions_step_10.value }}Remove the alternator with its bracket",
+            "body": "<p>{{ page.metafields.custom.step_10_content | metafield_tag }}by pulling (3) 10 mm and (1) 8 mm bolts.&nbsp;</p><p>Support it with a strap and lay to the side.</p><p>Remove and <strong>discard the OE belt</strong>.</p>",
             "image_1": "{{ page.metafields.custom.instructions_step_10_image.value }}"
           }
         },
@@ -194,8 +194,8 @@
           "settings": {
             "image_position": "right",
             "header": "STEP",
-            "label": "{{ page.metafields.custom.instructions_step_11.value }}",
-            "body": "<p>{{ page.metafields.custom.step_11_content | metafield_tag }}<br/></p>",
+            "label": "{{ page.metafields.custom.instructions_step_11.value }}Remove the idler pulley / bracket",
+            "body": "<p>{{ page.metafields.custom.step_11_content | metafield_tag }}on the passenger side and discard bracket and hardware.<br/></p>",
             "image_1": "{{ page.metafields.custom.instructions_step_11_image.value }}"
           }
         },
@@ -204,8 +204,8 @@
           "settings": {
             "image_position": "right",
             "header": "STEP",
-            "label": "{{ page.metafields.custom.instructions_step_12.value }}",
-            "body": "<p>{{ page.metafields.custom.step_12_content | metafield_tag }}</p>",
+            "label": "{{ page.metafields.custom.instructions_step_12.value }}Install the PSC pump to the PSC bracket",
+            "body": "<p>{{ page.metafields.custom.step_12_content | metafield_tag }}using the supplied (2) 8 mm x 30 mm flange bolts (Part #MB11K).</p><p><strong>Torque: 25 ft-lb</strong></p>",
             "image_1": "{{ page.metafields.custom.instructions_step_12_image.value }}"
           }
         },
@@ -215,7 +215,7 @@
             "image_position": "split",
             "header": "STEP",
             "label": "{{ page.metafields.custom.instructions_step_13.value }}",
-            "body": "<p>{{ page.metafields.custom.step_13_content | metafield_tag }}</p>",
+            "body": "<p>{{ page.metafields.custom.step_13_content | metafield_tag }}Install the pump/bracket assembly on the passenger side of the engine where the idler‑pulley/bracket assembly was removed in Step 11.</p><p>Secure it using the supplied (3) 8 mm x 30 mm flange bolts.</p><p><strong>Torque: 25 ft-lb</strong></p>",
             "image_1": "{{ page.metafields.custom.instructions_step_13_image.value }}"
           }
         },
@@ -224,8 +224,8 @@
           "settings": {
             "image_position": "split",
             "header": "STEP",
-            "label": "{{ page.metafields.custom.instructions_step_14.value }}",
-            "body": "<p>{{ page.metafields.custom.step_14_content | metafield_tag }}</p>",
+            "label": "{{ page.metafields.custom.instructions_step_14.value }}Install the new 4060900 belt",
+            "body": "<p>{{ page.metafields.custom.step_14_content | metafield_tag }}Reinstall the alternator/bracket (place the belt over the alternator pulley first). Release the tensioner and make sure the belt is seated in all pulleys.</p>",
             "image_1": "{{ page.metafields.custom.instructions_step_14_image.value }}",
             "image_4": "shopify://shop_images/Picture2.png"
           }
@@ -235,8 +235,8 @@
           "settings": {
             "image_position": "split",
             "header": "STEP",
-            "label": "{{ page.metafields.custom.instructions_step_15.value }}",
-            "body": "<p>{{ page.metafields.custom.step_15_content | metafield_tag }}<br/></p>",
+            "label": "{{ page.metafields.custom.instructions_step_15.value }}Cooler & Hose Routing",
+            "body": "<p>Thread the cooler fittings with thread sealant. The cooler mount uses the stock high‑pressure hose mounting locations under the radiator.</p><p><strong>Torque: 20 ft-lb</strong><br/></p>",
             "image_1": "{{ page.metafields.custom.instructions_step_15_image.value }}"
           }
         },
@@ -245,8 +245,8 @@
           "settings": {
             "image_position": "right",
             "header": "STEP",
-            "label": "{{ page.metafields.custom.instructions_step_16.value }}",
-            "body": "<p>{{ page.metafields.custom.step_16_content | metafield_tag }}</p>",
+            "label": "{{ page.metafields.custom.instructions_step_16.value }}Mount the cooler then route:",
+            "body": "<ul><li>Steering Gear→ Cooler inlet using HA‑L101</li><li>Cooler outlet → Reservoir return using HA‑H100</li></ul>",
             "image_1": "{{ page.metafields.custom.instructions_step_16_image.value }}"
           }
         },
@@ -255,8 +255,8 @@
           "settings": {
             "image_position": "right",
             "header": "STEP",
-            "label": "{{ page.metafields.custom.instructions_step_17.value }}",
-            "body": "<p>{{ page.metafields.custom.step_17_content | metafield_tag }}</p>",
+            "label": "{{ page.metafields.custom.instructions_step_17.value }}Pre‑assemble the reservoir:",
+            "body": "<ul><li>Install H6802‑8‑8 45° fitting into the reservoir port toward the radiator, clocked about 10° up (use sealant).</li><li>Install FRA499104BL drain fitting in the bottom drain port (sealant).</li><li>Slide HA‑L102 (‑12 AN) supply hose onto the reservoir outlet with a #12 worm‑gear clamp (leave loose for now).</li></ul>",
             "image_1": "{{ page.metafields.custom.instructions_step_17_image.value }}"
           }
         },
@@ -265,8 +265,8 @@
           "settings": {
             "image_position": "split",
             "header": "STEP",
-            "label": "{{ page.metafields.custom.instructions_step_18.value }}",
-            "body": "<p>{{ page.metafields.custom.step_18_content | metafield_tag }}</p>",
+            "label": "{{ page.metafields.custom.instructions_step_18.value }}Mount the reservoir:",
+            "body": "<ul><li>Set the reservoir over the bracket, start the HA‑L102 hose fitting onto the pump intake, then lower the reservoir into place.</li><li>Front hole: reuse the OE 8 mm bolt. Torque: 20 ft-lb</li><li>Rear hole: use the 8 mm x 100 mm bolt with a flat washer. Torque: 18 ft-lb</li><li>Tighten the -12 clamp at the reservoir and the supply fitting at the pump.</li><li>Install the HA‑L104 drain hose and tie it down neatly.</li><li>Connect the cooler‑to‑reservoir hose (HA‑H100) to the reservoir.</li></ul>",
             "image_1": "{{ page.metafields.custom.instructions_step_18_image.value }}",
             "image_4": "shopify://shop_images/20230809_142206_v2.png"
           }
@@ -276,8 +276,8 @@
           "settings": {
             "image_position": "right",
             "header": "STEP",
-            "label": "On the bench, install the fittings and plugs onto the C212S cooler.",
-            "body": "<p>The AN fitting goes on the bottom right side of the cooler.</p><p><br/>NOTE: All O-ring sides of the fittings go into the cooler.<br/></p>",
+            "label": "",
+            "body": "<p>Route the HK2094 high‑pressure hose below the radiator, across the front of the crossmember, and up under the radiator toward the pump and steering gear, as shown.<br/><br/>Loosely install the (2) HCL1213 rubber‑coated hose clamps around the hose and into the OE mounting points using the OE bolts.<br/><br/>Do not tighten the clamps until both hose ends are connected and fully tightened<br/></p>",
             "image_1": "shopify://shop_images/DSC_0011_v2.png"
           }
         },
@@ -286,109 +286,9 @@
           "settings": {
             "image_position": "right",
             "header": "STEP",
-            "label": "Mount the cooler onto the 16.302 bracket.",
-            "body": "<p>Use (2) M6-1.0 T slot nuts and (2) M6- 1.0 x 12 BHCS bolts.</p><p><br/>The cooler should sit in the lower holes of the bracket and be centered as best as possible.</p><p><br/>Torque: 20 ft-lb<br/></p>",
+            "label": "Hose Map Reference",
+            "body": "<ul><li>Pump → Steering Gear (High‑Pressure): HK2094 via SF01‑HF at the gear</li><li>Steering Gear Return → Cooler Inlet: HA‑L101 via SF11 at the gear</li><li>Cooler Outlet → Reservoir Return: HA‑H100</li><li>Reservoir Supply → Pump Intake: HA‑L102 (‑12 AN)</li><li>Remote Fill → Reservoir: HA‑L103</li><li>Reservoir Drain: HA‑L104</li><li>Vent/Relief: SR‑VT (mount Anti‑Splash Vent per reservoir cap kit)</li></ul><p>R-VT Anti-Splash Reservoir Vent Mounting Location:</p>",
             "image_1": "shopify://shop_images/DSC_0001.png"
-          }
-        },
-        "step_mfDWLU": {
-          "type": "step",
-          "settings": {
-            "image_position": "right",
-            "header": "STEP",
-            "label": "Install the cooler + bracket assembly.",
-            "body": "<p>Use:</p><ul><li>(2) 1/4-20 x 3/4 bolts</li><li>(2) 1/4” flat washers</li><li>(2) 1/4-20 lock nuts (top holes)</li><li>(2) FSHST-1/4-14-1.0 self tapping screws (bottom holes)</li></ul>",
-            "image_1": "shopify://shop_images/DSC_0026.png"
-          }
-        },
-        "step_txWrdW": {
-          "type": "step",
-          "settings": {
-            "image_position": "right",
-            "header": "STEP",
-            "label": "Connect both hoses (HA-L130 and HA-L131) to the cooler.",
-            "body": "",
-            "image_1": "shopify://shop_images/DSC_0026_v2.png"
-          }
-        },
-        "step_yRAwED": {
-          "type": "step",
-          "settings": {
-            "image_position": "right",
-            "header": "STEP",
-            "label": "Before reinstalling the grille, trim the two retaining clips under the camera by 1/8”.",
-            "body": "<p>A quick cut or grind fixes it.</p>",
-            "image_1": "shopify://shop_images/DSC_0014.png",
-            "image_2": "shopify://shop_images/DSC_0020.png"
-          }
-        },
-        "step_wjtNf4": {
-          "type": "step",
-          "settings": {
-            "image_position": "right",
-            "header": "STEP",
-            "label": "Reinstall the grille. Ensure all trim clips are fully seated.",
-            "body": "",
-            "image_1": "shopify://shop_images/DSC_0005_6f9d282c-0ff8-4dad-8f3a-9666a3551e9e.png"
-          }
-        },
-        "step_Vz6pBd": {
-          "type": "step",
-          "settings": {
-            "image_position": "split",
-            "header": "STEP",
-            "label": "Reinstall the passenger-side inner fender.",
-            "body": ""
-          }
-        },
-        "step_XDfjQH": {
-          "type": "step",
-          "settings": {
-            "image_position": "right",
-            "header": "STEP",
-            "label": "Reinstall the turbo inlet tube and tighten clamps.",
-            "body": "",
-            "image_1": "shopify://shop_images/20230809_102747.png"
-          }
-        },
-        "step_wKcmMk": {
-          "type": "step",
-          "settings": {
-            "image_position": "right",
-            "header": "STEP",
-            "label": "Reinstall the air filter box and tighten clamps.",
-            "body": "",
-            "image_1": "shopify://shop_images/step_8_v2.png"
-          }
-        },
-        "step_yxgdaD": {
-          "type": "step",
-          "settings": {
-            "image_position": "right",
-            "header": "STEP",
-            "label": "Reinstall the turbo outlet tube.",
-            "body": "",
-            "image_1": "shopify://shop_images/20230809_102353_v2.png"
-          }
-        },
-        "step_RRHWcR": {
-          "type": "step",
-          "settings": {
-            "image_position": "right",
-            "header": "STEP",
-            "label": "Reinstall the power steering fill     reservoir using the OEM bolt.",
-            "body": "",
-            "image_1": "shopify://shop_images/20230809_101954.png"
-          }
-        },
-        "step_9RAP64": {
-          "type": "step",
-          "settings": {
-            "image_position": "right",
-            "header": "STEP",
-            "label": "Reinstall the engine dust cover.",
-            "body": "<p>Proceed to Bleeding Procedure</p>",
-            "image_1": "shopify://shop_images/step_7_v1.png"
           }
         }
       },
@@ -421,17 +321,7 @@
         "step_CeQMB4",
         "step_e66zbV",
         "step_AnjD4q",
-        "step_GtfRgX",
-        "step_mfDWLU",
-        "step_txWrdW",
-        "step_yRAwED",
-        "step_wjtNf4",
-        "step_Vz6pBd",
-        "step_XDfjQH",
-        "step_wKcmMk",
-        "step_yxgdaD",
-        "step_RRHWcR",
-        "step_9RAP64"
+        "step_GtfRgX"
       ],
       "name": "PSC Installation Guide",
       "settings": {
