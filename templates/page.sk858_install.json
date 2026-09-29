@@ -82,39 +82,11 @@
             "body": "<ul><li>(1) SC2200 – Cylinder Assist® – Single-Ended – 1.5” x 8.0”</li><li>(1) MB34K – Mounting Bracket – Cylinder Assist® – Ram 2500/3500 (2019–2021)</li><li>(1) HK2062 – Hose Kit – Ram 2500/3500 Cylinder Assist® (2014+)</li><li>(1) REXFR10 – Rod End – Female Shank – RH Thread – 5/8-18 FR x 5/8” Ball</li><li>(1) REXMR10-SS – Rod End – Male – 5/8-18 x 5/8” – Shortened .750”</li><li>(2) FSNJ-5/8-18RH – 5/8-18 RH Jam Nut</li><li>(1) FL-SWE715-4PAK – PSC 715 Power Steering Fluid – 4-Quart Pack<br/><br/><br/><br/><br/><br/></li></ul>"
           }
         },
-        "kit_category_gmYbYG": {
+        "kit_category_RYU3V8": {
           "type": "kit_category",
           "settings": {
-            "header": "{{ page.metafields.custom.instructions_included_header_3.value }}",
-            "body": "<p>{{ page.metafields.custom.instructions_included_content_3 | metafield_tag }}</p>"
-          }
-        },
-        "kit_category_whAfV7": {
-          "type": "kit_category",
-          "settings": {
-            "header": "{{ page.metafields.custom.instructions_included_header_4.value }}",
-            "body": "<p>{{ page.metafields.custom.instructions_included_content_4 | metafield_tag }}</p>"
-          }
-        },
-        "kit_category_H9LMjn": {
-          "type": "kit_category",
-          "settings": {
-            "header": "{{ page.metafields.custom.instructions_included_header_5.value }}",
-            "body": "<p>{{ page.metafields.custom.instructions_included_content_5 | metafield_tag }}</p>"
-          }
-        },
-        "kit_category_LiT3Mi": {
-          "type": "kit_category",
-          "settings": {
-            "header": "{{ page.metafields.custom.instructions_included_header_6.value }}",
-            "body": "<p>{{ page.metafields.custom.instructions_included_content_6 | metafield_tag }}</p>"
-          }
-        },
-        "kit_category_ewdDUK": {
-          "type": "kit_category",
-          "settings": {
-            "header": "{{ page.metafields.custom.instructions_included_header_7.value }}",
-            "body": "<p>{{ page.metafields.custom.instructions_included_content_7 | metafield_tag }}</p>"
+            "header": "Tools Needed",
+            "body": "<ul><li>Pitman arm puller</li><li>5/8” drill bit</li><li>Torque wrench (up to 180 ft-lbs)</li><li>Standard hand tools</li></ul>"
           }
         },
         "step_K6k3PQ": {
@@ -307,11 +279,7 @@
         "toc_entry_FLzEji",
         "kit_category_JbpLyq",
         "kit_category_YcM36D",
-        "kit_category_gmYbYG",
-        "kit_category_whAfV7",
-        "kit_category_H9LMjn",
-        "kit_category_LiT3Mi",
-        "kit_category_ewdDUK",
+        "kit_category_RYU3V8",
         "step_K6k3PQ",
         "step_p4UDTU",
         "step_mPKCht",
