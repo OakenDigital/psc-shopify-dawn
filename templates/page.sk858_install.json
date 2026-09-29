@@ -92,10 +92,10 @@
         "step_K6k3PQ": {
           "type": "step",
           "settings": {
-            "image_position": "left",
+            "image_position": "right",
             "header": "{{ page.metafields.custom.step.value }}",
-            "label": "{{ page.metafields.custom.instructions_step_1.value }}",
-            "body": "<p>{{ page.metafields.custom.step_1_content | metafield_tag }}</p>",
+            "label": "Center & Lock the Steering Wheel",
+            "body": "<p>Center and lock the steering wheel so the new steering gear lines up exactly like the old one.<br/>(Photo shown is from a previous build, but the process is the same.)</p>",
             "image_1": "{{ page.metafields.custom.instructions_step_1_image.value }}"
           }
         },
