@@ -144,8 +144,8 @@
           "settings": {
             "image_position": "right",
             "header": "{{ page.metafields.custom.step.value }}",
-            "label": "{{ page.metafields.custom.instructions_step_6.value }}",
-            "body": "<p>{{ page.metafields.custom.step_6_content | metafield_tag }}</p>",
+            "label": "Prep for Install",
+            "body": "<p>Remove the (2) cylinder assist port caps from the steering gear.&nbsp;</p><p><br/>Clean and inspect all mounting and sealing surfaces before installation.</p><p><br/>Install the new O-rings supplied with the steering gear onto the factory power steering line fittings.<br/></p>",
             "image_1": "{{ page.metafields.custom.instructions_step_6_image.value }}"
           }
         },
@@ -154,8 +154,8 @@
           "settings": {
             "image_position": "right",
             "header": "{{ page.metafields.custom.step.value }}",
-            "label": "{{ page.metafields.custom.instructions_step_7.value }}",
-            "body": "<p>{{ page.metafields.custom.step_7_content | metafield_tag }}</p>",
+            "label": "Install New Gear",
+            "body": "<p>Use the (3) factory bolts. Torque to 115 ft-lbs.</p>",
             "image_1": "{{ page.metafields.custom.instructions_step_7_image.value }}"
           }
         },
@@ -164,8 +164,8 @@
           "settings": {
             "image_position": "split",
             "header": "{{ page.metafields.custom.step.value }}",
-            "label": "{{ page.metafields.custom.instructions_step_8.value }}",
-            "body": "<p>{{ page.metafields.custom.step_8_content | metafield_tag }}</p>",
+            "label": "Install Pitman Arm",
+            "body": "<p>Factory arm goes back on with lock-nut and washer. Torque to 180 ft-lbs.<br/></p>",
             "image_1": "{{ page.metafields.custom.instructions_step_8_image.value }}",
             "image_4": "shopify://shop_images/ADK-LT100_Pic_19.jpg"
           }
