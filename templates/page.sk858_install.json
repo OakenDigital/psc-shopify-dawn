@@ -165,9 +165,7 @@
             "image_position": "split",
             "header": "{{ page.metafields.custom.step.value }}",
             "label": "Install Pitman Arm",
-            "body": "<p>Factory arm goes back on with lock-nut and washer. Torque to 180 ft-lbs.<br/></p>",
-            "image_1": "{{ page.metafields.custom.instructions_step_8_image.value }}",
-            "image_4": "shopify://shop_images/ADK-LT100_Pic_19.jpg"
+            "body": "<p>Factory arm goes back on with lock-nut and washer. Torque to 180 ft-lbs.<br/></p>"
           }
         },
         "step_ffDf7T": {
@@ -175,8 +173,8 @@
           "settings": {
             "image_position": "right",
             "header": "{{ page.metafields.custom.step.value }}",
-            "label": "{{ page.metafields.custom.instructions_step_9.value }}",
-            "body": "<p>{{ page.metafields.custom.step_9_content | metafield_tag }}</p>",
+            "label": "Reconnect Factory Lines",
+            "body": "<p>Install in the same ports and tighten.</p>",
             "image_1": "{{ page.metafields.custom.instructions_step_9_image.value }}"
           }
         },
@@ -185,8 +183,8 @@
           "settings": {
             "image_position": "left",
             "header": "{{ page.metafields.custom.step.value }}",
-            "label": "{{ page.metafields.custom.instructions_step_10.value }}",
-            "body": "<p>{{ page.metafields.custom.step_10_content | metafield_tag }}<br/></p>",
+            "label": "Reattach Steering Shaft",
+            "body": "<p>Slide the coupler fully onto the gear and secure with the factory bolt.<br/></p>",
             "image_1": "{{ page.metafields.custom.instructions_step_10_image.value }}"
           }
         },
@@ -195,8 +193,8 @@
           "settings": {
             "image_position": "right",
             "header": "{{ page.metafields.custom.step.value }}",
-            "label": "{{ page.metafields.custom.instructions_step_11.value }}",
-            "body": "<p>{{ page.metafields.custom.step_11_content | metafield_tag }}<br/><br/><br/><br/></p>",
+            "label": "Drill Stabilizer Mount",
+            "body": "<p>Use a 5/8” bit to enlarge the factory hole for the supplied hardware.<br/><br/><br/><br/></p>",
             "image_1": "{{ page.metafields.custom.instructions_step_11_image.value }}"
           }
         },
@@ -205,8 +203,8 @@
           "settings": {
             "image_position": "left",
             "header": "{{ page.metafields.custom.step.value }}",
-            "label": "{{ page.metafields.custom.instructions_step_12.value }}",
-            "body": "<p>{{ page.metafields.custom.step_12_content | metafield_tag }}</p>",
+            "label": "Assemble Cylinder Kit",
+            "body": "<ul><li>Thread heim joints and lock nuts.&nbsp;</li><li>Stationary side mounts to axle with spacers.<br/></li></ul>",
             "image_1": "{{ page.metafields.custom.instructions_step_12_image.value }}"
           }
         },
@@ -215,8 +213,8 @@
           "settings": {
             "image_position": "right",
             "header": "{{ page.metafields.custom.step.value }}",
-            "label": "{{ page.metafields.custom.instructions_step_13.value }}",
-            "body": "<p>{{ page.metafields.custom.step_13_content | metafield_tag }}</p>",
+            "label": "Install Tie-Rod Bracket",
+            "body": "<p>Using the two factory bolts, install the tie‑rod mount bracket as shown above.<br/>Install the bolts from the bottom up and secure them with the factory nuts.</p><p><br/>The shaft side of the Cylinder Assist will mount to this bracket using the supplied hardware.</p><p><strong>Torque specs:</strong></p><ul><li>Tie‑rod link bolts: 50 ft‑lbs</li><li>Cylinder mount bolt: 70 ft‑lbs<br/></li></ul><p><br/></p>",
             "image_1": "{{ page.metafields.custom.instructions_step_13_image.value }}"
           }
         },
@@ -225,8 +223,8 @@
           "settings": {
             "image_position": "left",
             "header": "{{ page.metafields.custom.step.value }}",
-            "label": "{{ page.metafields.custom.instructions_step_14.value }}",
-            "body": "<p>{{ page.metafields.custom.step_14_content | metafield_tag }}</p>",
+            "label": "Connect High-Pressure Lines",
+            "body": "<p>Use the HA-H2062-P hose, the longer hose in this kit, on the top port of the gear.</p><p><br/>Angle lines forward for clearance.<br/></p>",
             "image_1": "{{ page.metafields.custom.instructions_step_14_image.value }}"
           }
         },
@@ -235,8 +233,8 @@
           "settings": {
             "image_position": "right",
             "header": "{{ page.metafields.custom.step.value }}",
-            "label": "{{ page.metafields.custom.instructions_step_15.value }}",
-            "body": "<p>{{ page.metafields.custom.step_15_content | metafield_tag }}<br/></p>",
+            "label": "Connect Cylinder Lines",
+            "body": "<p>Longer hose to passenger side, shorter to driver side.&nbsp;</p><p><br/>Angle fittings inward.</p>",
             "image_1": "{{ page.metafields.custom.instructions_step_15_image.value }}"
           }
         },
@@ -245,8 +243,8 @@
           "settings": {
             "image_position": "left",
             "header": "{{ page.metafields.custom.step.value }}",
-            "label": "{{ page.metafields.custom.instructions_step_16.value }}",
-            "body": "<p>{{ page.metafields.custom.step_16_content | metafield_tag }}</p>",
+            "label": "Secure Hoses",
+            "body": "<p>Drill (2) ¼” holes in cross member for “P” clamps. Zip-tie lines together toward cylinder.</p>",
             "image_1": "{{ page.metafields.custom.instructions_step_16_image.value }}"
           }
         },
@@ -255,9 +253,8 @@
           "settings": {
             "image_position": "right",
             "header": "",
-            "label": "{{ page.metafields.custom.instructions_step_17.value }}",
-            "body": "<p>{{ page.metafields.custom.step_17_content | metafield_tag }}</p>",
-            "image_1": "shopify://shop_images/adk_complete.png"
+            "label": "Check Movement",
+            "body": "<p>With vehicle lifted, cycle steering lock-to-lock. Confirm smooth travel and no binding</p>"
           }
         },
         "step_e66zbV": {
@@ -265,8 +262,8 @@
           "settings": {
             "image_position": "split",
             "header": "STEP",
-            "label": "{{ page.metafields.custom.instructions_step_18.value }}",
-            "body": "<p>{{ page.metafields.custom.step_18_content | metafield_tag }}</p>"
+            "label": "Bleed the System",
+            "body": "<p>The final step is bleeding your steering system. Follow the bleeding procedure on the next two pages.</p><p><strong>IMPORTANT:&nbsp;</strong></p><p>Don’t rush this step. Bleeding the system is one of the most important parts of the installation. Take your time and follow the procedure as closely as possible to remove all air from the system and ensure proper steering performance.</p>"
           }
         }
       },
