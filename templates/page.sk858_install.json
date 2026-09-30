@@ -114,8 +114,8 @@
           "settings": {
             "image_position": "left",
             "header": "{{ page.metafields.custom.step.value }}",
-            "label": "{{ page.metafields.custom.instructions_step_3.value }}",
-            "body": "<p>{{ page.metafields.custom.step_3_content | metafield_tag }}</p>",
+            "label": "Remove Factory Lines",
+            "body": "<p>Loosen and remove both factory steering lines.&nbsp;</p><p><br/>Drain fluid into a pan and set lines aside.</p>",
             "image_1": "{{ page.metafields.custom.instructions_step_3_image.value }}"
           }
         },
@@ -124,8 +124,8 @@
           "settings": {
             "image_position": "right",
             "header": "{{ page.metafields.custom.step.value }}",
-            "label": "{{ page.metafields.custom.instructions_step_4.value }}",
-            "body": "<p>{{ page.metafields.custom.step_4_content | metafield_tag }}</p>",
+            "label": "Pull the Pitman Arm",
+            "body": "<p>Remove the nut and washer, then use a pitman arm puller to remove the arm completely.</p><p><br/><strong>Tip: </strong>Before you pull the old steering gear, take note of the angle the pitman arm is pointing. That way, when you drop the new steering gear in, everything lines up exactly like the original.<br/></p>",
             "image_1": "{{ page.metafields.custom.instructions_step_4_image.value }}"
           }
         },
@@ -134,8 +134,8 @@
           "settings": {
             "image_position": "left",
             "header": "{{ page.metafields.custom.step.value }}",
-            "label": "{{ page.metafields.custom.instructions_step_5.value }}",
-            "body": "<p>{{ page.metafields.custom.step_5_content | metafield_tag }}</p>",
+            "label": "Remove Steering Gear",
+            "body": "<p>Take out the (3) bolts that go through the frame and hold the steering gear in place.</p><p><br/>It helps to have someone underneath supporting the gear while you back the bolts out.</p><p><br/>Once it’s free, <strong>pull the gear out through the bottom</strong>.<br/></p>",
             "image_1": "{{ page.metafields.custom.instructions_step_5_image.value }}"
           }
         },
