@@ -377,6 +377,45 @@
         "ai_gen_block_274256d_DBjPg8"
       ],
       "settings": {}
+    },
+    "179079766281adbdb6": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_8504989_RbwQqx": {
+          "type": "ai_gen_block_8504989",
+          "disabled": true,
+          "settings": {
+            "kicker": "Field notes · Issue 01",
+            "heading": "Built for the road less traveled",
+            "intro": "<p>Engineering insights, product stories, and practical knowledge from the world of performance steering.</p>",
+            "title_size": 65,
+            "desktop_width_percent": 100,
+            "caption": "",
+            "feature_title": "Precision steering starts with the right foundation",
+            "feature_copy": "<p>Explore the details behind dependable control, carefully engineered components, and a setup built to perform when the terrain gets demanding.</p>",
+            "feature_link": "",
+            "feature_link_label": "Read the story",
+            "side_kicker": "Workshop",
+            "side_title": "What to consider when upgrading your steering system",
+            "side_copy": "A practical look at fitment, intended use, and the components that work together.",
+            "side_link": "",
+            "second_kicker": "Product insight",
+            "second_title": "Designed for confidence under load",
+            "second_copy": "Learn how thoughtful component choices can support a responsive, reliable build.",
+            "second_link": "",
+            "background_color": "#FFFFFF",
+            "text_color": "#121212",
+            "muted_color": "#575757",
+            "accent_color": "#D6001C",
+            "rule_color": "#D1D1D1"
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_8504989_RbwQqx"
+      ],
+      "settings": {}
     }
   },
   "order": [
@@ -388,6 +427,7 @@
     "featured_collection_i3dKzT",
     "newsletter_agMNU6",
     "1779380124cb5a4913",
-    "1782146385a493dd23"
+    "1782146385a493dd23",
+    "179079766281adbdb6"
   ]
 }
