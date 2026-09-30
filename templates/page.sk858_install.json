@@ -96,7 +96,8 @@
             "header": "{{ page.metafields.custom.step.value }}",
             "label": "Center & Lock the Steering Wheel",
             "body": "<p>Center and lock the steering wheel so the new steering gear lines up exactly like the old one.<br/>(Photo shown is from a previous build, but the process is the same.)</p>",
-            "image_1": "{{ page.metafields.custom.instructions_step_1_image.value }}"
+            "image_1": "{{ page.metafields.custom.instructions_step_1_image.value }}",
+            "image_2": "shopify://shop_images/step_1_54590e58-6863-495d-af0f-6a3d8877b978.png"
           }
         },
         "step_p4UDTU": {
@@ -106,13 +107,13 @@
             "header": "{{ page.metafields.custom.step.value }}",
             "label": "{{ page.metafields.custom.instructions_step_2.value }}",
             "body": "<p><strong>Remove and discard:</strong></p><ul><li>All factory belts</li><li>Factory accessory brackets</li><li>Factory accessories</li><li>OEM water pump and housing&nbsp;<br/></li></ul><p><strong>Remove and retain for installation:</strong></p><ul><li>Alternator</li><li>A/C compressor</li><li>If your A/C uses a stretch belt, OEMs recommend replacing it.<br/><br/><br/><br/><br/></li></ul>",
-            "image_1": "{{ page.metafields.custom.instructions_step_2_image.value }}"
+            "image_1": "shopify://shop_images/step_2_7ceda34b-19dd-460c-a90d-f133d00807df.png"
           }
         },
         "step_mPKCht": {
           "type": "step",
           "settings": {
-            "image_position": "left",
+            "image_position": "split",
             "header": "{{ page.metafields.custom.step.value }}",
             "label": "Remove Factory Lines",
             "body": "<p>Loosen and remove both factory steering lines.&nbsp;</p><p><br/>Drain fluid into a pan and set lines aside.</p>",
@@ -126,13 +127,13 @@
             "header": "{{ page.metafields.custom.step.value }}",
             "label": "Pull the Pitman Arm",
             "body": "<p>Remove the nut and washer, then use a pitman arm puller to remove the arm completely.</p><p><br/><strong>Tip: </strong>Before you pull the old steering gear, take note of the angle the pitman arm is pointing. That way, when you drop the new steering gear in, everything lines up exactly like the original.<br/></p>",
-            "image_1": "{{ page.metafields.custom.instructions_step_4_image.value }}"
+            "image_1": "shopify://shop_images/step_4_405e7f11-6bbc-4fad-bdb2-b710cecf97de.png"
           }
         },
         "step_g4dyXM": {
           "type": "step",
           "settings": {
-            "image_position": "left",
+            "image_position": "split",
             "header": "{{ page.metafields.custom.step.value }}",
             "label": "Remove Steering Gear",
             "body": "<p>Take out the (3) bolts that go through the frame and hold the steering gear in place.</p><p><br/>It helps to have someone underneath supporting the gear while you back the bolts out.</p><p><br/>Once it’s free, <strong>pull the gear out through the bottom</strong>.<br/></p>",
@@ -146,13 +147,13 @@
             "header": "{{ page.metafields.custom.step.value }}",
             "label": "Prep for Install",
             "body": "<p>Remove the (2) cylinder assist port caps from the steering gear.&nbsp;</p><p><br/>Clean and inspect all mounting and sealing surfaces before installation.</p><p><br/>Install the new O-rings supplied with the steering gear onto the factory power steering line fittings.<br/></p>",
-            "image_1": "{{ page.metafields.custom.instructions_step_6_image.value }}"
+            "image_1": "shopify://shop_images/step_6_6c55b38a-7d86-4602-85e8-b9bac83f17be.png"
           }
         },
         "step_Mw8NCM": {
           "type": "step",
           "settings": {
-            "image_position": "right",
+            "image_position": "split",
             "header": "{{ page.metafields.custom.step.value }}",
             "label": "Install New Gear",
             "body": "<p>Use the (3) factory bolts. Torque to 115 ft-lbs.</p>",
@@ -162,16 +163,17 @@
         "step_V3gA8w": {
           "type": "step",
           "settings": {
-            "image_position": "split",
+            "image_position": "right",
             "header": "{{ page.metafields.custom.step.value }}",
             "label": "Install Pitman Arm",
-            "body": "<p>Factory arm goes back on with lock-nut and washer. Torque to 180 ft-lbs.<br/></p>"
+            "body": "<p>Factory arm goes back on with lock-nut and washer. Torque to 180 ft-lbs.<br/></p>",
+            "image_1": "shopify://shop_images/step_8_3a9358bd-5732-4216-9a82-6e27e698f700.png"
           }
         },
         "step_ffDf7T": {
           "type": "step",
           "settings": {
-            "image_position": "right",
+            "image_position": "left",
             "header": "{{ page.metafields.custom.step.value }}",
             "label": "Reconnect Factory Lines",
             "body": "<p>Install in the same ports and tighten.</p>",
@@ -181,7 +183,7 @@
         "step_qHpddh": {
           "type": "step",
           "settings": {
-            "image_position": "left",
+            "image_position": "right",
             "header": "{{ page.metafields.custom.step.value }}",
             "label": "Reattach Steering Shaft",
             "body": "<p>Slide the coupler fully onto the gear and secure with the factory bolt.<br/></p>",
@@ -195,7 +197,7 @@
             "header": "{{ page.metafields.custom.step.value }}",
             "label": "Drill Stabilizer Mount",
             "body": "<p>Use a 5/8” bit to enlarge the factory hole for the supplied hardware.<br/><br/><br/><br/></p>",
-            "image_1": "{{ page.metafields.custom.instructions_step_11_image.value }}"
+            "image_1": "shopify://shop_images/step_11_2fc4e0b0-4ac0-4911-b843-7195d3936cb4.png"
           }
         },
         "step_kNUzab": {
@@ -205,7 +207,7 @@
             "header": "{{ page.metafields.custom.step.value }}",
             "label": "Assemble Cylinder Kit",
             "body": "<ul><li>Thread heim joints and lock nuts.&nbsp;</li><li>Stationary side mounts to axle with spacers.<br/></li></ul>",
-            "image_1": "{{ page.metafields.custom.instructions_step_12_image.value }}"
+            "image_1": "shopify://shop_images/step_12_b97ed09f-0483-4a0a-9d32-70c7eddd3acb.png"
           }
         },
         "step_8XM3YY": {
@@ -215,13 +217,13 @@
             "header": "{{ page.metafields.custom.step.value }}",
             "label": "Install Tie-Rod Bracket",
             "body": "<p>Using the two factory bolts, install the tie‑rod mount bracket as shown above.<br/>Install the bolts from the bottom up and secure them with the factory nuts.</p><p><br/>The shaft side of the Cylinder Assist will mount to this bracket using the supplied hardware.</p><p><strong>Torque specs:</strong></p><ul><li>Tie‑rod link bolts: 50 ft‑lbs</li><li>Cylinder mount bolt: 70 ft‑lbs<br/></li></ul><p><br/></p>",
-            "image_1": "{{ page.metafields.custom.instructions_step_13_image.value }}"
+            "image_1": "shopify://shop_images/step_13_e07c1622-f4c5-4a13-845f-e06fb5e4fc3c.png"
           }
         },
         "step_cHqj7f": {
           "type": "step",
           "settings": {
-            "image_position": "left",
+            "image_position": "split",
             "header": "{{ page.metafields.custom.step.value }}",
             "label": "Connect High-Pressure Lines",
             "body": "<p>Use the HA-H2062-P hose, the longer hose in this kit, on the top port of the gear.</p><p><br/>Angle lines forward for clearance.<br/></p>",
@@ -235,7 +237,7 @@
             "header": "{{ page.metafields.custom.step.value }}",
             "label": "Connect Cylinder Lines",
             "body": "<p>Longer hose to passenger side, shorter to driver side.&nbsp;</p><p><br/>Angle fittings inward.</p>",
-            "image_1": "{{ page.metafields.custom.instructions_step_15_image.value }}"
+            "image_1": "shopify://shop_images/step_15_1193e32a-ee96-4f84-8350-6c96a337cd6b.png"
           }
         },
         "step_rhGMA9": {
@@ -245,7 +247,7 @@
             "header": "{{ page.metafields.custom.step.value }}",
             "label": "Secure Hoses",
             "body": "<p>Drill (2) ¼” holes in cross member for “P” clamps. Zip-tie lines together toward cylinder.</p>",
-            "image_1": "{{ page.metafields.custom.instructions_step_16_image.value }}"
+            "image_1": "shopify://shop_images/step_16_911181c8-4d21-4f1b-a304-82872d063ea1.png"
           }
         },
         "step_CeQMB4": {
