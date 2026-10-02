@@ -3,7 +3,7 @@
   Compatible with Shopify OS 2.0
 {% endcomment %}
 
-{{ 'landing-page-builder.css' | asset_url | stylesheet_tag }}
+{% comment %} {{ 'landing-page-builder.css' | asset_url | stylesheet_tag }}
 
 <div class="lp-container">
   {% for block in section.blocks %}
@@ -348,4 +348,4 @@
     }
   ]
 }
-{% endschema %}
+{% endschema %} {% endcomment %}
