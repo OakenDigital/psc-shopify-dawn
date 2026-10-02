@@ -47,7 +47,7 @@
             "section_id": "",
             "title": "Which Engine Do You Have?",
             "subtitle": "",
-            "columns": "2",
+            "columns": "4",
             "card_1_title": "3.0L EcoDiesel",
             "card_1_sub": "2020-2023 JL/JT",
             "card_1_val": "dds-ecodiesel-rubicon44-steer-smarts",
@@ -100,6 +100,36 @@
             "card_6_val": ""
           }
         },
+        "filter_step_QPMNUF": {
+          "type": "filter_step",
+          "settings": {
+            "step_number": "1",
+            "step_type": "tierod",
+            "section_id": "",
+            "title": "What is your Tie Rod Diameter",
+            "subtitle": "",
+            "columns": "3",
+            "card_1_title": "1.25\"",
+            "card_1_sub": "",
+            "card_1_val": "",
+            "card_1_img": "shopify://shop_images/TRCL1.25.png",
+            "card_2_title": "",
+            "card_2_sub": "",
+            "card_2_val": "",
+            "card_3_title": "",
+            "card_3_sub": "",
+            "card_3_val": "",
+            "card_4_title": "",
+            "card_4_sub": "",
+            "card_4_val": "",
+            "card_5_title": "",
+            "card_5_sub": "",
+            "card_5_val": "",
+            "card_6_title": "",
+            "card_6_sub": "",
+            "card_6_val": ""
+          }
+        },
         "order_guide_UaJXrX": {
           "type": "order_guide",
           "settings": {
@@ -121,6 +151,7 @@
         "feature_overview_CQTeRB",
         "filter_step_H38e3f",
         "filter_step_AthWUa",
+        "filter_step_QPMNUF",
         "order_guide_UaJXrX",
         "faq_item_g4MN3F"
       ],
