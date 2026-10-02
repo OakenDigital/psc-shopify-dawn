@@ -1359,31 +1359,36 @@
     });
 
     function filterTieRods(selectedAxle) {
-      const tieRodCards = document.querySelectorAll('.lp-select-card[data-step="tierod"]');
-      let currentTieRodStillValid = false;
+  const tieRodCards = document.querySelectorAll('.lp-select-card[data-step="tierod"]');
+  let currentTieRodStillValid = false;
 
-      tieRodCards.forEach(card => {
-        const parentVal = card.getAttribute('data-parent-value');
-        
-        // Display card if it has no parent restriction OR matches the selected axle
-        if (!parentVal || parentVal === selectedAxle) {
-          card.classList.remove('lp-hidden');
-          card.style.display = '';
-          if (card.classList.contains('active')) {
-            currentTieRodStillValid = true;
-          }
-        } else {
-          card.classList.add('lp-hidden');
-          card.style.display = 'none';
-          card.classList.remove('active');
-        }
-      });
+  tieRodCards.forEach(card => {
+    const parentVal = card.getAttribute('data-parent-value');
+    
+    // Parse comma-separated parent values into an array of trimmed, lowercase strings
+    const allowedAxles = parentVal 
+      ? parentVal.split(',').map(item => item.trim().toLowerCase()) 
+      : [];
 
-      // Reset tie rod selection state if previously chosen tie rod is no longer applicable
-      if (!currentTieRodStillValid) {
-        selections.tierod = null;
+    // Display card if it has no parent restriction OR if the selected axle is included in the list
+    if (!parentVal || allowedAxles.includes(selectedAxle.toLowerCase())) {
+      card.classList.remove('lp-hidden');
+      card.style.display = '';
+      if (card.classList.contains('active')) {
+        currentTieRodStillValid = true;
       }
+    } else {
+      card.classList.add('lp-hidden');
+      card.style.display = 'none';
+      card.classList.remove('active');
     }
+  });
+
+  // Reset tie rod selection state if previously chosen tie rod is no longer applicable
+  if (!currentTieRodStillValid) {
+    selections.tierod = null;
+  }
+}
 
     function checkSelectionsAndFetch() {
       if (selections.engine && selections.axle && selections.tierod) {
