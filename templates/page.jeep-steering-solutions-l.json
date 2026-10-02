@@ -34,6 +34,7 @@
         "feature_overview_CQTeRB": {
           "type": "feature_overview",
           "settings": {
+            "image": "shopify://shop_images/banner_for_homepage.png",
             "heading": "What is DDS?",
             "copy": "<p>Traditional steering stabilizers only react after the hit. PSC's Dynamic Damping Stabilizer uses hydraulic damping to help control unwanted steering movement caused by rocks, ruts, ledges, and rough terrain.</p>",
             "bullets": "<p>✅ Reduced steering kickback<br/>✅ Improved control on technical trails<br/>✅ More confidence at speed<br/>✅ Compatible with PSC Cylinder Assist® systems<br/>✅ Built and tested in Texas</p>"
