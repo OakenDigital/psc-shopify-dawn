@@ -576,91 +576,52 @@
     const cards = document.querySelectorAll('.lp-select-card');
     const statusText = document.getElementById('lp-system-status');
     const wrapper = document.getElementById('lp-recommended-products-wrapper');
+    const bundleBtn = document.getElementById('lp-build-bundle-btn');
 
     cards.forEach(card => {
       card.addEventListener('click', function() {
         const step = this.getAttribute('data-step');
         const val = this.getAttribute('data-value');
 
-        // Toggle active styling within same group
+        // Toggle active styling within same step group
         document.querySelectorAll(`.lp-select-card[data-step="${step}"]`).forEach(c => c.classList.remove('active'));
         this.classList.add('active');
 
         selections[step] = val;
 
-        checkSelectionsAndFetch();
+        checkSelectionsAndRedirect();
       });
     });
 
-    function checkSelectionsAndFetch() {
+    function checkSelectionsAndRedirect() {
       if (selections.engine && selections.axle && selections.tierod) {
-        statusText.textContent = 'Loading your custom steering configuration...';
+        // Construct the collection handle based on your naming convention
+        const collectionHandle = `dds-${selections.engine}-${selections.axle}-${selections.tierod}`;
+        const collectionUrl = `/collections/${collectionHandle}`;
+
+        statusText.textContent = 'Configuration complete! Click below to view your custom kit setup.';
         
-        // Fetch product handles/data using Shopify Storefront API or Ajax handles
-        fetchRecommendation(selections);
+        if (bundleBtn) {
+          bundleBtn.setAttribute('href', collectionUrl);
+          bundleBtn.textContent = 'View Matching DDS Collection';
+        }
+        
+        wrapper.style.display = 'block';
+
+        // Optional: Smooth scroll user to Section 6 automatically upon completing selections
+        const targetSection = document.getElementById('recommended-system-section');
+        if (targetSection) {
+          targetSection.scrollIntoView({ behavior: 'smooth' });
+        }
       } else {
         const missing = [];
         if (!selections.engine) missing.push('Engine');
         if (!selections.axle) missing.push('Axle');
         if (!selections.tierod) missing.push('Tie Rod');
         
-        statusText.textContent = `Please select your ${missing.join(', ')} above to generate your complete system.`;
+        statusText.textContent = `Please select your ${missing.join(', ')} above to generate your setup.`;
         wrapper.style.display = 'none';
       }
-    }
-
-    function fetchRecommendation(config) {
-      // Build search handle or query based on selections
-      // Example handle convention: "dds-kit-[engine]-[axle]-[tierod]"
-      const ddsProductHandle = `dds-kit-${config.engine}-${config.axle}-${config.tierod}`;
-
-      // Fetch Shopify Product JSON for the dynamic DDS Kit
-      fetch(`/products/${ddsProductHandle}.js`)
-        .then(res => {
-          if (!res.ok) throw new Error('Kit not found');
-          return res.json();
-        })
-        .then(ddsProduct => {
-          // Update Section 6 with returned product details
-          updateSlot(3, ddsProduct);
-
-          // Optionally fetch base components (Gear, Pump, Hose)
-          fetchBaseComponents(config);
-
-          statusText.textContent = 'Recommended Complete Steering Setup:';
-          wrapper.style.display = 'block';
-        })
-        .catch(err => {
-          // Fallback if specific handle isn't created yet
-          statusText.textContent = `Showing standard configuration for ${config.engine.toUpperCase()} / ${config.axle.toUpperCase()}:`;
-          wrapper.style.display = 'block';
-        });
-    }
-
-    function fetchBaseComponents(config) {
-      // Default Base Hardware SKUs/Handles
-      const gearHandle = 'sg691r';
-      const hoseHandle = 'h4000';
-
-      fetchProductToSlot(1, gearHandle);
-      fetchProductToSlot(4, hoseHandle);
-    }
-
-    function fetchProductToSlot(slotIndex, handle) {
-      fetch(`/products/${handle}.js`)
-        .then(res => res.json())
-        .then(product => updateSlot(slotIndex, product))
-        .catch(err => console.error(`Error loading slot ${slotIndex}:`, err));
-    }
-
-    function updateSlot(slotIndex, product) {
-      const slot = document.getElementById(`system-slot-${slotIndex}`);
-      if (!slot) return;
-
-      slot.querySelector('.slot-img').src = product.featured_image;
-      slot.querySelector('.slot-title').textContent = product.title;
-      slot.querySelector('.slot-sku').textContent = `SKU: ${product.variants[0].sku || 'N/A'}`;
-      slot.querySelector('.slot-price').textContent = `$${(product.price / 100).toFixed(2)}`;
     }
   });
 </script>
