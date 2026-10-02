@@ -36,58 +36,45 @@
           "settings": {
             "heading": "What is DDS?",
             "copy": "<p>Traditional steering stabilizers only react after the hit. PSC's Dynamic Damping Stabilizer uses hydraulic damping to help control unwanted steering movement caused by rocks, ruts, ledges, and rough terrain.</p>",
-            "bullets": "<p>✅ Reduced steering kickback<br>✅ Improved control on technical trails<br>✅ More confidence at speed<br>✅ Compatible with PSC Cylinder Assist® systems<br>✅ Built and tested in Texas</p>"
+            "bullets": "<p>✅ Reduced steering kickback<br/>✅ Improved control on technical trails<br/>✅ More confidence at speed<br/>✅ Compatible with PSC Cylinder Assist® systems<br/>✅ Built and tested in Texas</p>"
           }
         },
-        "card_grid_zLbjHK": {
-          "type": "card_grid",
+        "filter_step_H38e3f": {
+          "type": "filter_step",
           "settings": {
+            "step_number": "1",
+            "step_type": "engine",
             "section_id": "",
-            "title": "Find Your Fit",
-            "subtitle": "Select an option below to narrow down your setup.",
-            "columns": "3",
-            "card_1_title": "",
-            "card_1_sub": "",
-            "card_1_link": "",
-            "card_2_title": "",
-            "card_2_sub": "",
-            "card_2_link": "",
+            "title": "Which Engine Do You Have?",
+            "subtitle": "",
+            "columns": "2",
+            "card_1_title": "3.0L EcoDiesel",
+            "card_1_sub": "2020-2023 JL/JT",
+            "card_1_val": "dds-ecodiesel-rubicon44-steer-smarts",
+            "card_1_img": "shopify://shop_images/Squared_PSC_Rubicon-_EJS_2025_2.png",
+            "card_2_title": "eTorque",
+            "card_2_sub": "2018-2025 JL",
+            "card_2_val": "",
+            "card_2_img": "shopify://shop_images/jeep_wranglerJL2018_red.jpg",
             "card_3_title": "",
             "card_3_sub": "",
-            "card_3_link": "",
+            "card_3_val": "",
             "card_4_title": "",
             "card_4_sub": "",
-            "card_4_link": "",
+            "card_4_val": "",
             "card_5_title": "",
             "card_5_sub": "",
-            "card_5_link": "",
+            "card_5_val": "",
             "card_6_title": "",
             "card_6_sub": "",
-            "card_6_link": ""
-          }
-        },
-        "system_builder_QrhgCd": {
-          "type": "system_builder",
-          "settings": {
-            "title": "Build the Complete Steering System",
-            "subtitle": "Recommended components for peak performance.",
-            "label_1": "XD Steering Gear",
-            "product_1": "",
-            "label_2": "XD Pump Kit",
-            "product_2": "",
-            "label_3": "DDS System",
-            "product_3": "",
-            "label_4": "XTREME-DUTY Hose Kit",
-            "product_4": "",
-            "cta_text": "Build My Complete System",
-            "cta_link": ""
+            "card_6_val": ""
           }
         },
         "order_guide_UaJXrX": {
           "type": "order_guide",
           "settings": {
             "title": "Before Ordering",
-            "checklist": "<p>You'll need:<br>✓ Jeep model and year<br>✓ Engine package<br>✓ Front axle<br>✓ Tie-rod manufacturer</p>",
+            "checklist": "<p>You'll need:<br/>✓ Jeep model and year<br/>✓ Engine package<br/>✓ Front axle<br/>✓ Tie-rod manufacturer</p>",
             "contact_info": "<p>If you're not sure, call PSC at <strong>817-270-0102</strong> and we'll help identify the correct kit.</p>"
           }
         },
@@ -102,8 +89,7 @@
       "block_order": [
         "hero_cXakMW",
         "feature_overview_CQTeRB",
-        "card_grid_zLbjHK",
-        "system_builder_QrhgCd",
+        "filter_step_H38e3f",
         "order_guide_UaJXrX",
         "faq_item_g4MN3F"
       ],
