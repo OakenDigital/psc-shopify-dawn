@@ -155,7 +155,7 @@
           "type": "order_guide",
           "settings": {
             "title": "Before Ordering",
-            "checklist": "<p>You'll need:<br/>✓ Jeep model and year<br/>✓ Engine package<br/>✓ Front axle<br/>✓ Tie-rod manufacturer</p>",
+            "checklist": "<p>You'll need:<br/>✓ Jeep model and year<br/>✓ Engine package<br/>✓ Front axle<br/>✓ Tie-rod Diameter</p>",
             "contact_info": "<p>If you're not sure, call PSC at <strong>817-270-0102</strong> and we'll help identify the correct kit.</p>"
           }
         },
