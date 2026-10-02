@@ -238,7 +238,7 @@
     box-shadow: 0 0 0 1px var(--lp-color-primary); 
   }
   
-  /* Hidden card state for conditional rendering */
+  /* Hidden card state for dependent filtering */
   .lp-select-card.lp-hidden {
     display: none !important;
   }
@@ -491,7 +491,7 @@
 
         selections[step] = val;
 
-        // Dependent filtering logic for Tie Rod step based on Axle
+        // Dynamic filtering for Tie Rod step based on chosen Axle
         if (step === 'axle') {
           filterTieRods(val);
         }
@@ -507,7 +507,7 @@
       tieRodCards.forEach(card => {
         const parentVal = card.getAttribute('data-parent-value');
         
-        // Show card if it has no parent restriction OR matches the selected axle
+        // Display card if it has no parent restriction OR matches the selected axle
         if (!parentVal || parentVal === selectedAxle) {
           card.classList.remove('lp-hidden');
           if (card.classList.contains('active')) {
@@ -519,7 +519,7 @@
         }
       });
 
-      // Clear tie rod selection if the previously selected one isn't applicable to the new axle
+      // Reset tie rod selection state if previously chosen tie rod is no longer applicable
       if (!currentTieRodStillValid) {
         selections.tierod = null;
       }
@@ -1026,31 +1026,40 @@
   .lp-grid-3col { grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
   .lp-grid-4col { grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
 
+  /* --- CENTERED CARD GRID LAYOUT --- */
   .lp-card-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 12px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+  }
+
+  .lp-card-grid .lp-select-card {
+    width: 100%;
+    box-sizing: border-box;
   }
 
   @media (min-width: 769px) {
-    .lp-card-grid.lp-grid-cols-2 { grid-template-columns: repeat(2, 1fr); }
-    .lp-card-grid.lp-grid-cols-3 { grid-template-columns: repeat(3, 1fr); }
-    .lp-card-grid.lp-grid-cols-4 { grid-template-columns: repeat(4, 1fr); }
-    .lp-card-grid.lp-grid-cols-5 { grid-template-columns: repeat(5, 1fr); }
-    .lp-card-grid.lp-grid-cols-6 { grid-template-columns: repeat(6, 1fr); }
+    /* 3 Columns: ~33.33% minus gap */
+    .lp-card-grid.lp-grid-cols-3 .lp-select-card {
+      width: calc(33.333% - 11px);
+    }
+    /* 4 Columns: ~25% minus gap */
+    .lp-card-grid.lp-grid-cols-4 .lp-select-card {
+      width: calc(25% - 12px);
+    }
   }
 
   .lp-select-card { 
     background: #fff; 
     border: 2px solid var(--lp-color-border); 
     border-radius: 6px; 
-    padding: 12px; 
+    padding: 16px 12px; 
     color: inherit; 
     display: flex; 
     flex-direction: column; 
     justify-content: center; 
     align-items: center; 
-    width: 100%; 
     text-align: center; 
     transition: all 0.2s ease; 
     cursor: pointer; 
@@ -1067,7 +1076,15 @@
     display: none !important;
   }
 
-  .lp-card-img img { max-width: 100%; height: auto; max-height: 100px; object-fit: contain; }
+  .lp-card-img {
+    margin-bottom: 8px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .lp-card-img img { max-width: 100%; height: auto; max-height: 110px; object-fit: contain; }
 
   .lp-product-card { 
     border: 1px solid var(--lp-color-border); 
@@ -1334,11 +1351,13 @@
         // Display card if it has no parent restriction OR matches the selected axle
         if (!parentVal || parentVal === selectedAxle) {
           card.classList.remove('lp-hidden');
+          card.style.display = '';
           if (card.classList.contains('active')) {
             currentTieRodStillValid = true;
           }
         } else {
           card.classList.add('lp-hidden');
+          card.style.display = 'none';
           card.classList.remove('active');
         }
       });
@@ -1533,10 +1552,8 @@
           "id": "columns", 
           "label": "Grid Columns", 
           "options": [
-            { "value": "2", "label": "2 Columns" },
             { "value": "3", "label": "3 Columns" },
-            { "value": "4", "label": "4 Columns" },
-            { "value": "6", "label": "6 Columns" }
+            { "value": "4", "label": "4 Columns" }
           ], 
           "default": "3" 
         },
