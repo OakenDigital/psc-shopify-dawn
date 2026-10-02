@@ -549,78 +549,96 @@
   }
 }
 
-    function checkSelectionsAndFetch() {
-      if (selections.engine && selections.axle && selections.tierod) {
-        const collectionHandle = `dds-${selections.engine}-${selections.axle}-${selections.tierod}`;
-        const collectionUrl = `/collections/${collectionHandle}`;
+    // Helper function to turn raw card tags into clean handle-safe strings
+function slugify(text) {
+  return text
+    .toString()
+    .toLowerCase()
+    .trim()
+    .replace(/\//g, '-')       // Replace slashes with hyphens (e.g., 5/8 -> 5-8)
+    .replace(/\./g, '-')       // Replace decimals with hyphens (e.g., 1.5 -> 1-5)
+    .replace(/[^a-z0-9 -]/g, '')// Remove special characters (like quotes/inches)
+    .replace(/\s+/g, '-')      // Replace spaces with hyphens
+    .replace(/-+/g, '-');      // Collapse multiple hyphens
+}
 
-        statusText.textContent = 'Loading your custom setup...';
-        wrapper.style.display = 'block';
+function checkSelectionsAndFetch() {
+  if (selections.engine && selections.axle && selections.tierod) {
+    // Sanitize selected tags to match Shopify collection handle format
+    const engineHandle = slugify(selections.engine);
+    const axleHandle = slugify(selections.axle);
+    const tierodHandle = slugify(selections.tierod);
 
-        fetch(`${collectionUrl}/products.json`)
-          .then(response => {
-            if (!response.ok) throw new Error('Collection not found');
-            return response.json();
-          })
-          .then(data => {
-            const products = data.products || [];
-            
-            if (products.length === 0) {
-              statusText.textContent = 'No matching system kit found for this exact combination. Please contact our support team.';
-              return;
-            }
+    const collectionHandle = `dds-${engineHandle}-${axleHandle}-${tierodHandle}`;
+    const collectionUrl = `/collections/${collectionHandle}`;
 
-            statusText.textContent = 'Configuration complete! Here is your recommended setup:';
+    statusText.textContent = 'Loading your custom setup...';
+    wrapper.style.display = 'block';
 
-            for (let i = 1; i <= 4; i++) {
-              const slot = document.getElementById(`system-slot-${i}`);
-              if (!slot) continue;
-
-              const product = products[i - 1];
-              if (product) {
-                const variant = product.variants[0] || {};
-                const imgUrl = product.images.length > 0 ? product.images[0].src : '';
-
-                slot.querySelector('.slot-img').src = imgUrl;
-                slot.querySelector('.slot-img').alt = product.title;
-                slot.querySelector('.slot-title').textContent = product.title;
-                slot.querySelector('.slot-sku').textContent = variant.sku ? `SKU: ${variant.sku}` : '';
-                slot.querySelector('.slot-price').textContent = variant.price ? `$${variant.price}` : '';
-                slot.style.display = 'flex';
-              } else {
-                slot.style.display = 'none';
-              }
-            }
-
-            if (bundleBtn) {
-              bundleBtn.setAttribute('href', collectionUrl);
-              bundleBtn.textContent = 'View Complete Kit Collection';
-            }
-
-            const targetSection = document.getElementById('recommended-system-section');
-            if (targetSection) {
-              targetSection.scrollIntoView({ behavior: 'smooth' });
-            }
-          })
-          .catch(err => {
-            console.warn('System lookup error:', err);
-            statusText.textContent = 'Configuration set! Click below to explore your matching collection.';
-            if (bundleBtn) {
-              bundleBtn.setAttribute('href', collectionUrl);
-              bundleBtn.textContent = 'View Matching DDS Collection';
-            }
-          });
-
-      } else {
-        const missing = [];
-        if (!selections.engine) missing.push('Engine');
-        if (!selections.axle) missing.push('Axle');
-        if (!selections.tierod) missing.push('Tie Rod');
+    fetch(`${collectionUrl}/products.json`)
+      .then(response => {
+        if (!response.ok) throw new Error('Collection not found');
+        return response.json();
+      })
+      .then(data => {
+        const products = data.products || [];
         
-        statusText.textContent = `Please select your ${missing.join(', ')} above to generate your setup.`;
-        wrapper.style.display = 'none';
-      }
-    }
+        if (products.length === 0) {
+          statusText.textContent = 'No matching system kit found for this exact combination. Please contact our support team.';
+          return;
+        }
+
+        statusText.textContent = 'Configuration complete! Here is your recommended setup:';
+
+        for (let i = 1; i <= 4; i++) {
+          const slot = document.getElementById(`system-slot-${i}`);
+          if (!slot) continue;
+
+          const product = products[i - 1];
+          if (product) {
+            const variant = product.variants[0] || {};
+            const imgUrl = product.images.length > 0 ? product.images[0].src : '';
+
+            slot.querySelector('.slot-img').src = imgUrl;
+            slot.querySelector('.slot-img').alt = product.title;
+            slot.querySelector('.slot-title').textContent = product.title;
+            slot.querySelector('.slot-sku').textContent = variant.sku ? `SKU: ${variant.sku}` : '';
+            slot.querySelector('.slot-price').textContent = variant.price ? `$${variant.price}` : '';
+            slot.style.display = 'flex';
+          } else {
+            slot.style.display = 'none';
+          }
+        }
+
+        if (bundleBtn) {
+          bundleBtn.setAttribute('href', collectionUrl);
+          bundleBtn.textContent = 'View Complete Kit Collection';
+        }
+
+        const targetSection = document.getElementById('recommended-system-section');
+        if (targetSection) {
+          targetSection.scrollIntoView({ behavior: 'smooth' });
+        }
+      })
+      .catch(err => {
+        console.warn('System lookup error for handle:', collectionHandle, err);
+        statusText.textContent = 'Configuration set! Click below to explore your matching collection.';
+        if (bundleBtn) {
+          bundleBtn.setAttribute('href', collectionUrl);
+          bundleBtn.textContent = 'View Matching DDS Collection';
+        }
+      });
+
+  } else {
+    const missing = [];
+    if (!selections.engine) missing.push('Engine');
+    if (!selections.axle) missing.push('Axle');
+    if (!selections.tierod) missing.push('Tie Rod');
+    
+    statusText.textContent = `Please select your ${missing.join(', ')} above to generate your setup.`;
+    wrapper.style.display = 'none';
+  }
+}
   });
 </script>
 
