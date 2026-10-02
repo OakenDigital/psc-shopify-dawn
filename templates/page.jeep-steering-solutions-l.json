@@ -11,159 +11,108 @@
   "sections": {
     "main": {
       "type": "main-page",
+      "disabled": true,
       "settings": {
         "padding_top": 48,
         "padding_bottom": 28
       }
     },
-    "blocks_tdaxhL": {
-      "type": "_blocks",
+    "landing_page_builder_FBPiD9": {
+      "type": "landing-page-builder",
       "blocks": {
-        "ai_gen_block_25ef8da_wLWtKV": {
-          "type": "ai_gen_block_25ef8da",
-          "name": "Image row",
+        "hero_cXakMW": {
+          "type": "hero",
           "settings": {
-            "max_width": 1600,
-            "spacing": 8,
-            "spacing_mobile": 8,
-            "padding_vertical": 0,
-            "padding_horizontal": 0,
-            "aspect_ratio": 100,
-            "border_radius": 0
-          },
-          "blocks": {}
+            "headline": "Dynamic Damping Stabilizer Kits for Jeep JL & JT",
+            "subheadline": "Reduce steering kickback. Improve control. Built for real-world wheeling.",
+            "btn1_text": "Shop Complete DDS Kits",
+            "btn1_link": "",
+            "btn2_text": "Already Have PSC Steering? Shop DDS Add-On Kits",
+            "btn2_link": ""
+          }
         },
-        "ai_gen_block_25ef8da_JdYRiq": {
-          "type": "ai_gen_block_25ef8da",
-          "name": "Image row",
+        "feature_overview_CQTeRB": {
+          "type": "feature_overview",
           "settings": {
-            "max_width": 1600,
-            "spacing": 8,
-            "spacing_mobile": 8,
-            "padding_vertical": 0,
-            "padding_horizontal": 0,
-            "aspect_ratio": 100,
-            "border_radius": 0
-          },
-          "blocks": {}
+            "heading": "What is DDS?",
+            "copy": "<p>Traditional steering stabilizers only react after the hit. PSC's Dynamic Damping Stabilizer uses hydraulic damping to help control unwanted steering movement caused by rocks, ruts, ledges, and rough terrain.</p>",
+            "bullets": "<p>✅ Reduced steering kickback<br>✅ Improved control on technical trails<br>✅ More confidence at speed<br>✅ Compatible with PSC Cylinder Assist® systems<br>✅ Built and tested in Texas</p>"
+          }
         },
-        "ai_gen_block_25ef8da_DcJtcG": {
-          "type": "ai_gen_block_25ef8da",
+        "card_grid_zLbjHK": {
+          "type": "card_grid",
           "settings": {
-            "max_width": 1600,
-            "spacing": 8,
-            "spacing_mobile": 8,
-            "padding_vertical": 0,
-            "padding_horizontal": 0,
-            "aspect_ratio": 100,
-            "border_radius": 0
-          },
-          "blocks": {}
+            "section_id": "",
+            "title": "Find Your Fit",
+            "subtitle": "Select an option below to narrow down your setup.",
+            "columns": "3",
+            "card_1_title": "",
+            "card_1_sub": "",
+            "card_1_link": "",
+            "card_2_title": "",
+            "card_2_sub": "",
+            "card_2_link": "",
+            "card_3_title": "",
+            "card_3_sub": "",
+            "card_3_link": "",
+            "card_4_title": "",
+            "card_4_sub": "",
+            "card_4_link": "",
+            "card_5_title": "",
+            "card_5_sub": "",
+            "card_5_link": "",
+            "card_6_title": "",
+            "card_6_sub": "",
+            "card_6_link": ""
+          }
         },
-        "ai_gen_block_25ef8da_eYyqpQ": {
-          "type": "ai_gen_block_25ef8da",
-          "name": "Image row",
+        "system_builder_QrhgCd": {
+          "type": "system_builder",
           "settings": {
-            "max_width": 1600,
-            "spacing": 8,
-            "spacing_mobile": 8,
-            "padding_vertical": 0,
-            "padding_horizontal": 0,
-            "aspect_ratio": 100,
-            "border_radius": 0
-          },
-          "blocks": {}
+            "title": "Build the Complete Steering System",
+            "subtitle": "Recommended components for peak performance.",
+            "label_1": "XD Steering Gear",
+            "product_1": "",
+            "label_2": "XD Pump Kit",
+            "product_2": "",
+            "label_3": "DDS System",
+            "product_3": "",
+            "label_4": "XTREME-DUTY Hose Kit",
+            "product_4": "",
+            "cta_text": "Build My Complete System",
+            "cta_link": ""
+          }
+        },
+        "order_guide_UaJXrX": {
+          "type": "order_guide",
+          "settings": {
+            "title": "Before Ordering",
+            "checklist": "<p>You'll need:<br>✓ Jeep model and year<br>✓ Engine package<br>✓ Front axle<br>✓ Tie-rod manufacturer</p>",
+            "contact_info": "<p>If you're not sure, call PSC at <strong>817-270-0102</strong> and we'll help identify the correct kit.</p>"
+          }
+        },
+        "faq_item_g4MN3F": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Does DDS replace my steering stabilizer?",
+            "answer": "Yes, the DDS system replaces traditional steering stabilizers with dynamic hydraulic damping."
+          }
         }
       },
       "block_order": [
-        "ai_gen_block_25ef8da_wLWtKV",
-        "ai_gen_block_25ef8da_JdYRiq",
-        "ai_gen_block_25ef8da_DcJtcG",
-        "ai_gen_block_25ef8da_eYyqpQ"
+        "hero_cXakMW",
+        "feature_overview_CQTeRB",
+        "card_grid_zLbjHK",
+        "system_builder_QrhgCd",
+        "order_guide_UaJXrX",
+        "faq_item_g4MN3F"
       ],
-      "disabled": true,
-      "name": "Image row",
+      "name": "Landing Page Builder",
       "settings": {}
-    },
-    "rich_text_R3kECz": {
-      "type": "rich-text",
-      "blocks": {
-        "heading_Uqzg9F": {
-          "type": "heading",
-          "settings": {
-            "heading": "",
-            "heading_size": "h1"
-          }
-        },
-        "text_wfz38t": {
-          "type": "text",
-          "settings": {
-            "text": ""
-          }
-        },
-        "button_bh7DDd": {
-          "type": "button",
-          "settings": {
-            "button_label": "Show us your build!",
-            "button_link": "/pages/contact",
-            "button_style_secondary": false,
-            "button_label_2": "",
-            "button_link_2": "",
-            "button_style_secondary_2": false
-          }
-        }
-      },
-      "block_order": [
-        "heading_Uqzg9F",
-        "text_wfz38t",
-        "button_bh7DDd"
-      ],
-      "disabled": true,
-      "name": "t:sections.rich-text.presets.name",
-      "settings": {
-        "desktop_content_position": "center",
-        "content_alignment": "center",
-        "color_scheme": "",
-        "full_width": true,
-        "padding_top": 40,
-        "padding_bottom": 40
-      }
-    },
-    "178215901468e81263": {
-      "type": "apps",
-      "blocks": {
-        "forms_inline_mfktQr": {
-          "type": "shopify://apps/forms/blocks/inline/8744a304-fcb1-4347-b211-bb6b4759a76a",
-          "settings": {
-            "form_id": "1044041",
-            "text_color": "#202020",
-            "button_background_color": "#202020",
-            "button_label_color": "#ffffff",
-            "links_color": "#1878b9",
-            "errors_color": "#e02229",
-            "text_alignment": "center",
-            "form_alignment": "flex-start",
-            "padding_top": 24,
-            "padding_bottom": 24,
-            "padding_right": 64,
-            "padding_left": 64
-          }
-        }
-      },
-      "block_order": [
-        "forms_inline_mfktQr"
-      ],
-      "disabled": true,
-      "settings": {
-        "include_margins": true,
-        "full_width": true
-      }
     }
   },
   "order": [
     "main",
-    "blocks_tdaxhL",
-    "rich_text_R3kECz",
-    "178215901468e81263"
+    "landing_page_builder_FBPiD9"
   ]
 }
