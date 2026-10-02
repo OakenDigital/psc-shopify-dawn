@@ -130,6 +130,18 @@
             "card_6_val": ""
           }
         },
+        "dynamic_system_9D6W8x": {
+          "type": "dynamic_system",
+          "settings": {
+            "title": "Build the Complete Steering System",
+            "default_prompt": "Select your Engine, Axle, and Tie Rod above to view your recommended setup.",
+            "label_1": "XD Steering Gear",
+            "label_2": "XD Pump Kit",
+            "label_3": "DDS System",
+            "label_4": "XTREME-DUTY Hose Kit",
+            "cta_text": "Build My Complete System"
+          }
+        },
         "order_guide_UaJXrX": {
           "type": "order_guide",
           "settings": {
@@ -152,6 +164,7 @@
         "filter_step_H38e3f",
         "filter_step_AthWUa",
         "filter_step_QPMNUF",
+        "dynamic_system_9D6W8x",
         "order_guide_UaJXrX",
         "faq_item_g4MN3F"
       ],
