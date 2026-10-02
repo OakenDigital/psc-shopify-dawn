@@ -142,6 +142,15 @@
             "cta_text": "Build My Complete System"
           }
         },
+        "product_grid_FTttAX": {
+          "type": "product_grid",
+          "settings": {
+            "title": "DDS Add-On Axle Kits",
+            "subtitle": "Perfect for customers already running PSC steering who want to add Dynamic Damping Stabilizer performance.",
+            "collection": "",
+            "limit": 6
+          }
+        },
         "order_guide_UaJXrX": {
           "type": "order_guide",
           "settings": {
@@ -165,6 +174,7 @@
         "filter_step_AthWUa",
         "filter_step_QPMNUF",
         "dynamic_system_9D6W8x",
+        "product_grid_FTttAX",
         "order_guide_UaJXrX",
         "faq_item_g4MN3F"
       ],
