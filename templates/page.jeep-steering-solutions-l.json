@@ -73,7 +73,7 @@
         "filter_step_AthWUa": {
           "type": "filter_step",
           "settings": {
-            "step_number": "1",
+            "step_number": "2",
             "step_type": "axle",
             "section_id": "",
             "title": "Choose your front axle",
@@ -103,7 +103,7 @@
         "filter_step_QPMNUF": {
           "type": "filter_step",
           "settings": {
-            "step_number": "1",
+            "step_number": "3",
             "step_type": "tierod",
             "section_id": "",
             "title": "What is your Tie Rod Diameter",
