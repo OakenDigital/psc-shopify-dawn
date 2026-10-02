@@ -28,7 +28,7 @@
             "btn1_text": "Shop Complete DDS Kits",
             "btn1_link": "#select-engine",
             "btn2_text": "Already Have PSC Steering? Shop DDS Add-On Kits",
-            "btn2_link": ""
+            "btn2_link": "#dds-addon-kits"
           }
         },
         "feature_overview_CQTeRB": {
@@ -145,6 +145,7 @@
         "product_grid_FTttAX": {
           "type": "product_grid",
           "settings": {
+            "section_id": "dds-addon-kits",
             "title": "DDS Add-On Axle Kits",
             "subtitle": "Perfect for customers already running PSC steering who want to add Dynamic Damping Stabilizer performance.",
             "collection": "",
@@ -179,7 +180,13 @@
         "faq_item_g4MN3F"
       ],
       "name": "Landing Page Builder",
-      "settings": {}
+      "settings": {
+        "section_gap": 25,
+        "divider_gap": 30,
+        "scroll_offset": 110,
+        "padding_top": 10,
+        "padding_bottom": 10
+      }
     }
   },
   "order": [
