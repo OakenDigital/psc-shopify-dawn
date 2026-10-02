@@ -349,3 +349,455 @@
   ]
 }
 {% endschema %} {% endcomment %}
+
+{% comment %}
+  Dynamic Landing Page Builder Section with Step-by-Step Selection & Filtering
+{% endcomment %}
+
+{{ 'landing-page-builder.css' | asset_url | stylesheet_tag }}
+
+<div class="lp-container" id="dds-interactive-builder">
+  {% for block in section.blocks %}
+    {% case block.type %}
+
+      {% comment %} --- SECTION 1: HERO --- {% endcomment %}
+      {% when 'hero' %}
+        <div class="lp-section lp-hero" {{ block.shopify_attributes }}>
+          <div class="lp-hero-content">
+            <h1>{{ block.settings.headline }}</h1>
+            <p class="lp-subheadline">{{ block.settings.subheadline }}</p>
+            <div class="lp-btn-group">
+              {% if block.settings.btn1_text != blank %}
+                <a href="{{ block.settings.btn1_link }}" class="lp-btn lp-btn-primary">{{ block.settings.btn1_text }}</a>
+              {% endif %}
+              {% if block.settings.btn2_text != blank %}
+                <a href="{{ block.settings.btn2_link }}" class="lp-btn lp-btn-secondary">{{ block.settings.btn2_text }}</a>
+              {% endif %}
+            </div>
+          </div>
+        </div>
+
+      {% comment %} --- SECTION 2: FEATURE / INFO --- {% endcomment %}
+      {% when 'feature_overview' %}
+        <div class="lp-section lp-feature" {{ block.shopify_attributes }}>
+          <div class="lp-grid lp-grid-2col">
+            <div class="lp-feature-media">
+              {% if block.settings.image != blank %}
+                <img src="{{ block.settings.image | image_url: width: 800 }}" alt="{{ block.settings.heading }}" loading="lazy">
+              {% else %}
+                {{ 'image' | placeholder_svg_tag: 'lp-placeholder' }}
+              {% endif %}
+            </div>
+            <div class="lp-feature-content">
+              <h2>{{ block.settings.heading }}</h2>
+              <div class="lp-rte">{{ block.settings.copy }}</div>
+              {% if block.settings.bullets != blank %}
+                <div class="lp-bullets">
+                  {{ block.settings.bullets }}
+                </div>
+              {% endif %}
+            </div>
+          </div>
+        </div>
+
+      {% comment %} --- SECTIONS 3, 4, 5: FILTER SELECTION GRIDS --- {% endcomment %}
+      {% when 'filter_step' %}
+        <div class="lp-section lp-filter-step" id="{{ block.settings.section_id }}" data-step="{{ block.settings.step_type }}" {{ block.shopify_attributes }}>
+          <div class="lp-section-header">
+            <h2><span class="lp-step-num">{{ block.settings.step_number }}</span> {{ block.settings.title }}</h2>
+            {% if block.settings.subtitle != blank %}
+              <p>{{ block.settings.subtitle }}</p>
+            {% endif %}
+          </div>
+          <div class="lp-card-grid lp-grid-cols-{{ block.settings.columns }}">
+            {% for i in (1..6) %}
+              {% capture title_key %}card_{{ i }}_title{% endcapture %}
+              {% capture sub_key %}card_{{ i }}_sub{% endcapture %}
+              {% capture val_key %}card_{{ i }}_val{% endcapture %}
+              {% capture img_key %}card_{{ i }}_img{% endcapture %}
+
+              {% assign title = block.settings[title_key] %}
+              {% assign sub = block.settings[sub_key] %}
+              {% assign val = block.settings[val_key] %}
+              {% assign img = block.settings[img_key] %}
+
+              {% if title != blank %}
+                <button type="button" class="lp-card lp-select-card" data-step="{{ block.settings.step_type }}" data-value="{{ val | downcase | escape }}">
+                  {% if img != blank %}
+                    <div class="lp-card-img">
+                      <img src="{{ img | image_url: width: 400 }}" alt="{{ title }}" loading="lazy">
+                    </div>
+                  {% endif %}
+                  <div class="lp-card-info">
+                    <h3>{{ title }}</h3>
+                    {% if sub != blank %}<p>{{ sub }}</p>{% endif %}
+                  </div>
+                </button>
+              {% endif %}
+            {% endfor %}
+          </div>
+        </div>
+
+      {% comment %} --- SECTION 6: DYNAMIC RECOMMENDED SYSTEM --- {% endcomment %}
+      {% when 'dynamic_system' %}
+        <div class="lp-section lp-system-builder" id="recommended-system-section" {{ block.shopify_attributes }}>
+          <div class="lp-section-header">
+            <h2>{{ block.settings.title }}</h2>
+            <p id="lp-system-status">{{ block.settings.default_prompt }}</p>
+          </div>
+
+          <div id="lp-recommended-products-wrapper" style="display: none;">
+            <div class="lp-grid lp-grid-4col">
+              {% for i in (1..4) %}
+                {% capture label_key %}label_{{ i }}{% endcapture %}
+                {% assign label = block.settings[label_key] %}
+                <div class="lp-product-card" id="system-slot-{{ i }}">
+                  <span class="lp-card-badge">{{ label }}</span>
+                  <img src="" alt="" class="slot-img" loading="lazy">
+                  <h4 class="slot-title"></h4>
+                  <p class="lp-sku slot-sku"></p>
+                  <p class="lp-price slot-price"></p>
+                </div>
+              {% endfor %}
+            </div>
+            {% if block.settings.cta_text != blank %}
+              <div class="lp-text-center lp-mt-20">
+                <a href="#" id="lp-build-bundle-btn" class="lp-btn lp-btn-primary">{{ block.settings.cta_text }}</a>
+              </div>
+            {% endif %}
+          </div>
+        </div>
+
+      {% comment %} --- SECTION 7: ADD-ON PRODUCTS GRID --- {% endcomment %}
+      {% when 'product_grid' %}
+        <div class="lp-section lp-product-grid-section" {{ block.shopify_attributes }}>
+          <div class="lp-section-header">
+            <h2>{{ block.settings.title }}</h2>
+            <p>{{ block.settings.subtitle }}</p>
+          </div>
+          <div class="lp-grid lp-grid-3col">
+            {% for product in block.settings.collection.products limit: block.settings.limit %}
+              <div class="lp-product-card">
+                <img src="{{ product.featured_image | image_url: width: 300 }}" alt="{{ product.title }}" loading="lazy">
+                <h4>{{ product.title }}</h4>
+                <p class="lp-sku">SKU: {{ product.selected_or_first_available_variant.sku }}</p>
+                <p class="lp-price">{{ product.price | money }}</p>
+                <a href="{{ product.url }}" class="lp-btn lp-btn-secondary lp-btn-sm">View Details</a>
+              </div>
+            {% endfor %}
+          </div>
+        </div>
+
+      {% comment %} --- SECTION 8: HOW TO ORDER --- {% endcomment %}
+      {% when 'order_guide' %}
+        <div class="lp-section lp-order-guide" {{ block.shopify_attributes }}>
+          <div class="lp-guide-card">
+            <h2>{{ block.settings.title }}</h2>
+            <div class="lp-rte">{{ block.settings.checklist }}</div>
+            {% if block.settings.contact_info != blank %}
+              <div class="lp-guide-footer">
+                {{ block.settings.contact_info }}
+              </div>
+            {% endif %}
+          </div>
+        </div>
+
+      {% comment %} --- SECTION 9: FAQ BLOCK --- {% endcomment %}
+      {% when 'faq_item' %}
+        <div class="lp-faq-item" {{ block.shopify_attributes }}>
+          <details>
+            <summary><strong>{{ block.settings.question }}</strong></summary>
+            <div class="lp-faq-answer">
+              <p>{{ block.settings.answer }}</p>
+            </div>
+          </details>
+        </div>
+
+    {% endcase %}
+  {% endfor %}
+</div>
+
+<style>
+  .lp-container { max-width: 1200px; margin: 0 auto; padding: 20px; font-family: inherit; }
+  .lp-section { margin-bottom: 60px; scroll-margin-top: 40px; }
+  .lp-hero { text-align: center; padding: 60px 20px; background-color: #f8f9fa; border-radius: 8px; }
+  .lp-hero h1 { font-size: 2.5rem; margin-bottom: 15px; }
+  .lp-subheadline { font-size: 1.2rem; max-width: 800px; margin: 0 auto 25px; color: #555; }
+  .lp-btn-group { display: flex; gap: 15px; justify-content: center; flex-wrap: wrap; }
+  .lp-btn { display: inline-block; padding: 12px 24px; text-decoration: none; border-radius: 4px; font-weight: bold; text-align: center; cursor: pointer; border: none; }
+  .lp-btn-primary { background-color: #d32f2f; color: #fff; }
+  .lp-btn-secondary { background-color: #333; color: #fff; }
+  .lp-btn-sm { padding: 8px 16px; font-size: 0.9rem; margin-top: 10px; }
+  
+  .lp-step-num { background: #d32f2f; color: #fff; border-radius: 50%; width: 28px; height: 28px; display: inline-flex; align-items: center; justify-content: center; font-size: 0.9rem; margin-right: 8px; }
+  .lp-grid { display: grid; gap: 20px; }
+  .lp-grid-2col { grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); align-items: center; }
+  .lp-grid-3col { grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
+  .lp-grid-4col { grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
+  
+  .lp-grid-cols-2 { grid-template-columns: repeat(2, 1fr); }
+  .lp-grid-cols-3 { grid-template-columns: repeat(3, 1fr); }
+  .lp-grid-cols-4 { grid-template-columns: repeat(4, 1fr); }
+  .lp-grid-cols-6 { grid-template-columns: repeat(3, 1fr); }
+
+  .lp-select-card { background: #fff; border: 2px solid #e0e0e0; border-radius: 6px; padding: 20px; color: inherit; display: block; width: 100%; text-align: center; transition: all 0.2s ease; cursor: pointer; }
+  .lp-select-card:hover { border-color: #999; transform: translateY(-2px); }
+  .lp-select-card.active { border-color: #d32f2f; background-color: #fff8f8; box-shadow: 0 0 0 1px #d32f2f; }
+  .lp-card-img img { max-width: 100%; height: auto; max-height: 120px; object-fit: contain; }
+
+  .lp-product-card { border: 1px solid #e0e0e0; border-radius: 6px; padding: 15px; text-align: center; position: relative; background: #fff; }
+  .lp-product-card img { max-width: 100%; height: 160px; object-fit: contain; }
+  .lp-card-badge { position: absolute; top: 10px; left: 10px; background: #111; color: #fff; font-size: 0.75rem; padding: 4px 8px; border-radius: 3px; }
+  .lp-sku { font-size: 0.85rem; color: #666; margin: 4px 0; }
+  .lp-price { font-weight: bold; color: #d32f2f; margin-top: 6px; }
+
+  .lp-order-guide { background: #f4f4f4; padding: 30px; border-radius: 8px; border-left: 5px solid #d32f2f; }
+  .lp-faq-item { border-bottom: 1px solid #e0e0e0; padding: 15px 0; }
+  .lp-faq-item summary { cursor: pointer; font-size: 1.1rem; }
+  .lp-faq-answer { padding-top: 10px; color: #444; }
+
+  .lp-section-header { text-align: center; margin-bottom: 30px; }
+  .lp-text-center { text-align: center; }
+  .lp-mt-20 { margin-top: 20px; }
+
+  @media (max-width: 768px) {
+    .lp-grid-cols-2, .lp-grid-cols-3, .lp-grid-cols-4, .lp-grid-cols-6 { grid-template-columns: 1fr; }
+  }
+</style>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const selections = {
+      engine: null,
+      axle: null,
+      tierod: null
+    };
+
+    const cards = document.querySelectorAll('.lp-select-card');
+    const statusText = document.getElementById('lp-system-status');
+    const wrapper = document.getElementById('lp-recommended-products-wrapper');
+
+    cards.forEach(card => {
+      card.addEventListener('click', function() {
+        const step = this.getAttribute('data-step');
+        const val = this.getAttribute('data-value');
+
+        // Toggle active styling within same group
+        document.querySelectorAll(`.lp-select-card[data-step="${step}"]`).forEach(c => c.classList.remove('active'));
+        this.classList.add('active');
+
+        selections[step] = val;
+
+        checkSelectionsAndFetch();
+      });
+    });
+
+    function checkSelectionsAndFetch() {
+      if (selections.engine && selections.axle && selections.tierod) {
+        statusText.textContent = 'Loading your custom steering configuration...';
+        
+        // Fetch product handles/data using Shopify Storefront API or Ajax handles
+        fetchRecommendation(selections);
+      } else {
+        const missing = [];
+        if (!selections.engine) missing.push('Engine');
+        if (!selections.axle) missing.push('Axle');
+        if (!selections.tierod) missing.push('Tie Rod');
+        
+        statusText.textContent = `Please select your ${missing.join(', ')} above to generate your complete system.`;
+        wrapper.style.display = 'none';
+      }
+    }
+
+    function fetchRecommendation(config) {
+      // Build search handle or query based on selections
+      // Example handle convention: "dds-kit-[engine]-[axle]-[tierod]"
+      const ddsProductHandle = `dds-kit-${config.engine}-${config.axle}-${config.tierod}`;
+
+      // Fetch Shopify Product JSON for the dynamic DDS Kit
+      fetch(`/products/${ddsProductHandle}.js`)
+        .then(res => {
+          if (!res.ok) throw new Error('Kit not found');
+          return res.json();
+        })
+        .then(ddsProduct => {
+          // Update Section 6 with returned product details
+          updateSlot(3, ddsProduct);
+
+          // Optionally fetch base components (Gear, Pump, Hose)
+          fetchBaseComponents(config);
+
+          statusText.textContent = 'Recommended Complete Steering Setup:';
+          wrapper.style.display = 'block';
+        })
+        .catch(err => {
+          // Fallback if specific handle isn't created yet
+          statusText.textContent = `Showing standard configuration for ${config.engine.toUpperCase()} / ${config.axle.toUpperCase()}:`;
+          wrapper.style.display = 'block';
+        });
+    }
+
+    function fetchBaseComponents(config) {
+      // Default Base Hardware SKUs/Handles
+      const gearHandle = 'sg691r';
+      const hoseHandle = 'h4000';
+
+      fetchProductToSlot(1, gearHandle);
+      fetchProductToSlot(4, hoseHandle);
+    }
+
+    function fetchProductToSlot(slotIndex, handle) {
+      fetch(`/products/${handle}.js`)
+        .then(res => res.json())
+        .then(product => updateSlot(slotIndex, product))
+        .catch(err => console.error(`Error loading slot ${slotIndex}:`, err));
+    }
+
+    function updateSlot(slotIndex, product) {
+      const slot = document.getElementById(`system-slot-${slotIndex}`);
+      if (!slot) return;
+
+      slot.querySelector('.slot-img').src = product.featured_image;
+      slot.querySelector('.slot-title').textContent = product.title;
+      slot.querySelector('.slot-sku').textContent = `SKU: ${product.variants[0].sku || 'N/A'}`;
+      slot.querySelector('.slot-price').textContent = `$${(product.price / 100).toFixed(2)}`;
+    }
+  });
+</script>
+
+{% schema %}
+{
+  "name": "Landing Page Builder",
+  "tag": "section",
+  "class": "section-landing-page",
+  "settings": [],
+  "blocks": [
+    {
+      "type": "hero",
+      "name": "1. Hero Section",
+      "settings": [
+        { "type": "text", "id": "headline", "label": "Headline", "default": "Dynamic Damping Stabilizer Kits for Jeep JL & JT" },
+        { "type": "textarea", "id": "subheadline", "label": "Subheadline", "default": "Reduce steering kickback. Improve control. Built for real-world wheeling." },
+        { "type": "text", "id": "btn1_text", "label": "Button 1 Text", "default": "Shop Complete DDS Kits" },
+        { "type": "url", "id": "btn1_link", "label": "Button 1 Link" },
+        { "type": "text", "id": "btn2_text", "label": "Button 2 Text", "default": "Already Have PSC Steering? Shop DDS Add-On Kits" },
+        { "type": "url", "id": "btn2_link", "label": "Button 2 Link" }
+      ]
+    },
+    {
+      "type": "feature_overview",
+      "name": "2. What is DDS (Feature)",
+      "settings": [
+        { "type": "image_picker", "id": "image", "label": "System Image" },
+        { "type": "text", "id": "heading", "label": "Heading", "default": "What is DDS?" },
+        { "type": "richtext", "id": "copy", "label": "Main Copy", "default": "<p>Traditional steering stabilizers only react after the hit. PSC's Dynamic Damping Stabilizer uses hydraulic damping to help control unwanted steering movement caused by rocks, ruts, ledges, and rough terrain.</p>" },
+        { "type": "richtext", "id": "bullets", "label": "Benefits List", "default": "<p>✅ Reduced steering kickback<br>✅ Improved control on technical trails<br>✅ More confidence at speed<br>✅ Compatible with PSC Cylinder Assist® systems<br>✅ Built and tested in Texas</p>" }
+      ]
+    },
+    {
+      "type": "filter_step",
+      "name": "3-5. Filter Step Block",
+      "settings": [
+        { "type": "text", "id": "step_number", "label": "Step Number (e.g. 1, 2, 3)", "default": "1" },
+        { "type": "select", "id": "step_type", "label": "Selection Type", "options": [
+          { "value": "engine", "label": "Engine Selection" },
+          { "value": "axle", "label": "Axle Selection" },
+          { "value": "tierod", "label": "Tie Rod Selection" }
+        ], "default": "engine" },
+        { "type": "text", "id": "section_id", "label": "Section Anchor ID (e.g. select-engine)" },
+        { "type": "text", "id": "title", "label": "Step Heading", "default": "Which Engine Do You Have?" },
+        { "type": "text", "id": "subtitle", "label": "Subheading" },
+        { "type": "select", "id": "columns", "label": "Grid Columns", "options": [
+          { "value": "2", "label": "2 Columns" },
+          { "value": "3", "label": "3 Columns" },
+          { "value": "4", "label": "4 Columns" },
+          { "value": "6", "label": "6 Columns" }
+        ], "default": "3" },
+        { "type": "header", "content": "Card 1" },
+        { "type": "text", "id": "card_1_title", "label": "Title" },
+        { "type": "text", "id": "card_1_sub", "label": "Subtitle" },
+        { "type": "text", "id": "card_1_val", "label": "Filter Value Tag (e.g. 3-0-ecodiesel)" },
+        { "type": "image_picker", "id": "card_1_img", "label": "Image" },
+        { "type": "header", "content": "Card 2" },
+        { "type": "text", "id": "card_2_title", "label": "Title" },
+        { "type": "text", "id": "card_2_sub", "label": "Subtitle" },
+        { "type": "text", "id": "card_2_val", "label": "Filter Value Tag" },
+        { "type": "image_picker", "id": "card_2_img", "label": "Image" },
+        { "type": "header", "content": "Card 3" },
+        { "type": "text", "id": "card_3_title", "label": "Title" },
+        { "type": "text", "id": "card_3_sub", "label": "Subtitle" },
+        { "type": "text", "id": "card_3_val", "label": "Filter Value Tag" },
+        { "type": "image_picker", "id": "card_3_img", "label": "Image" },
+        { "type": "header", "content": "Card 4" },
+        { "type": "text", "id": "card_4_title", "label": "Title" },
+        { "type": "text", "id": "card_4_sub", "label": "Subtitle" },
+        { "type": "text", "id": "card_4_val", "label": "Filter Value Tag" },
+        { "type": "image_picker", "id": "card_4_img", "label": "Image" },
+        { "type": "header", "content": "Card 5" },
+        { "type": "text", "id": "card_5_title", "label": "Title" },
+        { "type": "text", "id": "card_5_sub", "label": "Subtitle" },
+        { "type": "text", "id": "card_5_val", "label": "Filter Value Tag" },
+        { "type": "image_picker", "id": "card_5_img", "label": "Image" },
+        { "type": "header", "content": "Card 6" },
+        { "type": "text", "id": "card_6_title", "label": "Title" },
+        { "type": "text", "id": "card_6_sub", "label": "Subtitle" },
+        { "type": "text", "id": "card_6_val", "label": "Filter Value Tag" },
+        { "type": "image_picker", "id": "card_6_img", "label": "Image" }
+      ]
+    },
+    {
+      "type": "dynamic_system",
+      "name": "6.Recommended System",
+      "settings": [
+        { "type": "text", "id": "title", "label": "Heading", "default": "Build the Complete Steering System" },
+        { "type": "text", "id": "default_prompt", "label": "Default Prompt Text", "default": "Select your Engine, Axle, and Tie Rod above to view your recommended setup." },
+        { "type": "text", "id": "label_1", "label": "Slot 1 Label", "default": "XD Steering Gear" },
+        { "type": "text", "id": "label_2", "label": "Slot 2 Label", "default": "XD Pump Kit" },
+        { "type": "text", "id": "label_3", "label": "Slot 3 Label", "default": "DDS System" },
+        { "type": "text", "id": "label_4", "label": "Slot 4 Label", "default": "XTREME-DUTY Hose Kit" },
+        { "type": "text", "id": "cta_text", "label": "CTA Button Text", "default": "Build My Complete System" }
+      ]
+    },
+    {
+      "type": "product_grid",
+      "name": "7. Add-On Products",
+      "settings": [
+        { "type": "text", "id": "title", "label": "Heading", "default": "DDS Add-On Axle Kits" },
+        { "type": "text", "id": "subtitle", "label": "Subheading", "default": "Perfect for customers already running PSC steering who want to add Dynamic Damping Stabilizer performance." },
+        { "type": "collection", "id": "collection", "label": "Collection to Display" },
+        { "type": "range", "id": "limit", "label": "Product Limit", "min": 3, "max": 12, "step": 3, "default": 6 }
+      ]
+    },
+    {
+      "type": "order_guide",
+      "name": "8. How To Order",
+      "settings": [
+        { "type": "text", "id": "title", "label": "Heading", "default": "Before Ordering" },
+        { "type": "richtext", "id": "checklist", "default": "<p>You'll need:<br>✓ Jeep model and year<br>✓ Engine package<br>✓ Front axle<br>✓ Tie-rod manufacturer</p>", "label": "Checklist" },
+        { "type": "richtext", "id": "contact_info", "default": "<p>If you're not sure, call PSC at <strong>817-270-0102</strong> and we'll help identify the correct kit.</p>", "label": "Contact Notes" }
+      ]
+    },
+    {
+      "type": "faq_item",
+      "name": "9. FAQ Item",
+      "settings": [
+        { "type": "text", "id": "question", "label": "Question", "default": "Does DDS replace my steering stabilizer?" },
+        { "type": "textarea", "id": "answer", "label": "Answer", "default": "Yes, the DDS system replaces traditional steering stabilizers with dynamic hydraulic damping." }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Landing Page Builder",
+      "blocks": [
+        { "type": "hero" },
+        { "type": "feature_overview" },
+        { "type": "filter_step" },
+        { "type": "dynamic_system" },
+        { "type": "order_guide" },
+        { "type": "faq_item" }
+      ]
+    }
+  ]
+}
+{% endschema %}
