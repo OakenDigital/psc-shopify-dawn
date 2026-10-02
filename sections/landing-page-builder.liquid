@@ -530,39 +530,32 @@
   .lp-btn-sm { padding: 8px 16px; font-size: 0.9rem; margin-top: 10px; }
   
   .lp-step-num { background: #d32f2f; color: #fff; border-radius: 50%; width: 28px; height: 28px; display: inline-flex; align-items: center; justify-content: center; font-size: 0.9rem; margin-right: 8px; }
+  /* Grid Base & Mobile Layout (Default Column Layout) */
   .lp-grid { display: grid; gap: 20px; }
   .lp-grid-2col { grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); align-items: center; }
   .lp-grid-3col { grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
   .lp-grid-4col { grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
   
-  .lp-grid-cols-2 { grid-template-columns: repeat(2, 1fr); }
-  .lp-grid-cols-3 { grid-template-columns: repeat(3, 1fr); }
-  .lp-grid-cols-4 { grid-template-columns: repeat(4, 1fr); }
-  .lp-grid-cols-6 { grid-template-columns: repeat(3, 1fr); }
+  /* Filter Card Grid Defaults (Stacked in a column for Mobile) */
+  .lp-card-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
 
-  .lp-select-card { background: #fff; border: 2px solid #e0e0e0; border-radius: 6px; padding: 20px; color: inherit; display: block; width: 100%; text-align: center; transition: all 0.2s ease; cursor: pointer; }
+  /* Desktop Layout (Single Horizontal Row) */
+  @media (min-width: 769px) {
+    .lp-card-grid.lp-grid-cols-2 { grid-template-columns: repeat(2, 1fr); }
+    .lp-card-grid.lp-grid-cols-3 { grid-template-columns: repeat(3, 1fr); }
+    .lp-card-grid.lp-grid-cols-4 { grid-template-columns: repeat(4, 1fr); }
+    .lp-card-grid.lp-grid-cols-5 { grid-template-columns: repeat(5, 1fr); }
+    .lp-card-grid.lp-grid-cols-6 { grid-template-columns: repeat(6, 1fr); }
+  }
+
+  .lp-select-card { background: #fff; border: 2px solid #e0e0e0; border-radius: 6px; padding: 20px; color: inherit; display: flex; flex-direction: column; justify-content: center; align-items: center; width: 100%; text-align: center; transition: all 0.2s ease; cursor: pointer; }
   .lp-select-card:hover { border-color: #999; transform: translateY(-2px); }
   .lp-select-card.active { border-color: #d32f2f; background-color: #fff8f8; box-shadow: 0 0 0 1px #d32f2f; }
   .lp-card-img img { max-width: 100%; height: auto; max-height: 120px; object-fit: contain; }
-
-  .lp-product-card { border: 1px solid #e0e0e0; border-radius: 6px; padding: 15px; text-align: center; position: relative; background: #fff; }
-  .lp-product-card img { max-width: 100%; height: 160px; object-fit: contain; }
-  .lp-card-badge { position: absolute; top: 10px; left: 10px; background: #111; color: #fff; font-size: 0.75rem; padding: 4px 8px; border-radius: 3px; }
-  .lp-sku { font-size: 0.85rem; color: #666; margin: 4px 0; }
-  .lp-price { font-weight: bold; color: #d32f2f; margin-top: 6px; }
-
-  .lp-order-guide { background: #f4f4f4; padding: 30px; border-radius: 8px; border-left: 5px solid #d32f2f; }
-  .lp-faq-item { border-bottom: 1px solid #e0e0e0; padding: 15px 0; }
-  .lp-faq-item summary { cursor: pointer; font-size: 1.1rem; }
-  .lp-faq-answer { padding-top: 10px; color: #444; }
-
-  .lp-section-header { text-align: center; margin-bottom: 30px; }
-  .lp-text-center { text-align: center; }
-  .lp-mt-20 { margin-top: 20px; }
-
-  @media (max-width: 768px) {
-    .lp-grid-cols-2, .lp-grid-cols-3, .lp-grid-cols-4, .lp-grid-cols-6 { grid-template-columns: 1fr; }
-  }
 </style>
 
 <script>
