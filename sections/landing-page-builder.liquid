@@ -606,32 +606,64 @@
     const wrapper = document.getElementById('lp-recommended-products-wrapper');
     const bundleBtn = document.getElementById('lp-build-bundle-btn');
 
+    // Handle clicks across all step cards
     cards.forEach(card => {
       card.addEventListener('click', function() {
         const step = this.getAttribute('data-step');
         const val = this.getAttribute('data-value');
 
+        // Toggle active visual state in current step
         document.querySelectorAll(`.lp-select-card[data-step="${step}"]`).forEach(c => c.classList.remove('active'));
         this.classList.add('active');
 
+        // Update current selection state
         selections[step] = val;
 
-        if (step === 'axle') {
-          filterTieRods(val);
-        }
+        // Cascade down through remaining filters
+        updateCascadingFilters();
 
+        // Check if all steps are selected and fetch system products
         checkSelectionsAndFetch();
       });
     });
 
-    function filterTieRods(selectedAxle) {
+    function updateCascadingFilters() {
+      const selectedEngine = selections.engine ? selections.engine.trim().toLowerCase() : null;
+      const selectedAxle = selections.axle ? selections.axle.trim().toLowerCase() : null;
+
+      // STEP 1: Filter Axle Cards based on Engine
+      const axleCards = document.querySelectorAll('.lp-select-card[data-step="axle"]');
+      let currentAxleStillValid = false;
+
+      axleCards.forEach(card => {
+        const hasParentAttr = card.hasAttribute('data-parent-value');
+        const parentVal = (card.getAttribute('data-parent-value') || '').trim().toLowerCase();
+
+        if (!selectedEngine || !hasParentAttr || !parentVal || parentVal === selectedEngine) {
+          card.classList.remove('lp-hidden');
+          if (card.classList.contains('active')) {
+            currentAxleStillValid = true;
+          }
+        } else {
+          card.classList.add('lp-hidden');
+          card.classList.remove('active');
+        }
+      });
+
+      if (!currentAxleStillValid && selections.axle) {
+        selections.axle = null;
+      }
+
+      // STEP 2: Filter Tie Rod Cards based on Axle
       const tieRodCards = document.querySelectorAll('.lp-select-card[data-step="tierod"]');
       let currentTieRodStillValid = false;
+      const activeAxle = selections.axle ? selections.axle.trim().toLowerCase() : null;
 
       tieRodCards.forEach(card => {
-        const parentVal = card.getAttribute('data-parent-value');
-        
-        if (!parentVal || parentVal === selectedAxle) {
+        const hasParentAttr = card.hasAttribute('data-parent-value');
+        const parentVal = (card.getAttribute('data-parent-value') || '').trim().toLowerCase();
+
+        if (!activeAxle || !hasParentAttr || !parentVal || parentVal === activeAxle) {
           card.classList.remove('lp-hidden');
           if (card.classList.contains('active')) {
             currentTieRodStillValid = true;
@@ -642,7 +674,7 @@
         }
       });
 
-      if (!currentTieRodStillValid) {
+      if (!currentTieRodStillValid && selections.tierod) {
         selections.tierod = null;
       }
     }
@@ -868,84 +900,84 @@
         { "type": "text", "id": "card_1_title", "label": "Title", "default": "JL Non-eTorque" },
         { "type": "text", "id": "card_1_sub", "label": "Subtitle" },
         { "type": "text", "id": "card_1_val", "label": "Filter Value Tag", "default": "jl-non-etorque" },
-        { "type": "text", "id": "card_1_parent_val", "label": "Required Parent Axle Tag (Step 3 only)" },
+        { "type": "text", "id": "card_1_parent_val", "label": "Required Parent Tag (Axle for Tie Rod / Engine for Axle)" },
         { "type": "image_picker", "id": "card_1_img", "label": "Image" },
 
         { "type": "header", "content": "Card 2" },
         { "type": "text", "id": "card_2_title", "label": "Title", "default": "JL eTorque" },
         { "type": "text", "id": "card_2_sub", "label": "Subtitle" },
         { "type": "text", "id": "card_2_val", "label": "Filter Value Tag", "default": "jl-etorque" },
-        { "type": "text", "id": "card_2_parent_val", "label": "Required Parent Axle Tag (Step 3 only)" },
+        { "type": "text", "id": "card_2_parent_val", "label": "Required Parent Tag (Axle for Tie Rod / Engine for Axle)" },
         { "type": "image_picker", "id": "card_2_img", "label": "Image" },
 
         { "type": "header", "content": "Card 3" },
         { "type": "text", "id": "card_3_title", "label": "Title", "default": "JL 392" },
         { "type": "text", "id": "card_3_sub", "label": "Subtitle" },
         { "type": "text", "id": "card_3_val", "label": "Filter Value Tag", "default": "jl-392" },
-        { "type": "text", "id": "card_3_parent_val", "label": "Required Parent Axle Tag (Step 3 only)" },
+        { "type": "text", "id": "card_3_parent_val", "label": "Required Parent Tag (Axle for Tie Rod / Engine for Axle)" },
         { "type": "image_picker", "id": "card_3_img", "label": "Image" },
 
         { "type": "header", "content": "Card 4" },
         { "type": "text", "id": "card_4_title", "label": "Title", "default": "JL 4XE" },
         { "type": "text", "id": "card_4_sub", "label": "Subtitle" },
         { "type": "text", "id": "card_4_val", "label": "Filter Value Tag", "default": "jl-4xe" },
-        { "type": "text", "id": "card_4_parent_val", "label": "Required Parent Axle Tag (Step 3 only)" },
+        { "type": "text", "id": "card_4_parent_val", "label": "Required Parent Tag (Axle for Tie Rod / Engine for Axle)" },
         { "type": "image_picker", "id": "card_4_img", "label": "Image" },
 
         { "type": "header", "content": "Card 5" },
         { "type": "text", "id": "card_5_title", "label": "Title", "default": "EcoDiesel JL/JT" },
         { "type": "text", "id": "card_5_sub", "label": "Subtitle" },
         { "type": "text", "id": "card_5_val", "label": "Filter Value Tag", "default": "ecodiesel" },
-        { "type": "text", "id": "card_5_parent_val", "label": "Required Parent Axle Tag (Step 3 only)" },
+        { "type": "text", "id": "card_5_parent_val", "label": "Required Parent Tag (Axle for Tie Rod / Engine for Axle)" },
         { "type": "image_picker", "id": "card_5_img", "label": "Image" },
 
         { "type": "header", "content": "Card 6" },
         { "type": "text", "id": "card_6_title", "label": "Title" },
         { "type": "text", "id": "card_6_sub", "label": "Subtitle" },
         { "type": "text", "id": "card_6_val", "label": "Filter Value Tag" },
-        { "type": "text", "id": "card_6_parent_val", "label": "Required Parent Axle Tag (Step 3 only)" },
+        { "type": "text", "id": "card_6_parent_val", "label": "Required Parent Tag (Axle for Tie Rod / Engine for Axle)" },
         { "type": "image_picker", "id": "card_6_img", "label": "Image" },
 
         { "type": "header", "content": "Card 7" },
         { "type": "text", "id": "card_7_title", "label": "Title" },
         { "type": "text", "id": "card_7_sub", "label": "Subtitle" },
         { "type": "text", "id": "card_7_val", "label": "Filter Value Tag" },
-        { "type": "text", "id": "card_7_parent_val", "label": "Required Parent Axle Tag (Step 3 only)" },
+        { "type": "text", "id": "card_7_parent_val", "label": "Required Parent Tag (Axle for Tie Rod / Engine for Axle)" },
         { "type": "image_picker", "id": "card_7_img", "label": "Image" },
 
         { "type": "header", "content": "Card 8" },
         { "type": "text", "id": "card_8_title", "label": "Title" },
         { "type": "text", "id": "card_8_sub", "label": "Subtitle" },
         { "type": "text", "id": "card_8_val", "label": "Filter Value Tag" },
-        { "type": "text", "id": "card_8_parent_val", "label": "Required Parent Axle Tag (Step 3 only)" },
+        { "type": "text", "id": "card_8_parent_val", "label": "Required Parent Tag (Axle for Tie Rod / Engine for Axle)" },
         { "type": "image_picker", "id": "card_8_img", "label": "Image" },
 
         { "type": "header", "content": "Card 9" },
         { "type": "text", "id": "card_9_title", "label": "Title" },
         { "type": "text", "id": "card_9_sub", "label": "Subtitle" },
         { "type": "text", "id": "card_9_val", "label": "Filter Value Tag" },
-        { "type": "text", "id": "card_9_parent_val", "label": "Required Parent Axle Tag (Step 3 only)" },
+        { "type": "text", "id": "card_9_parent_val", "label": "Required Parent Tag (Axle for Tie Rod / Engine for Axle)" },
         { "type": "image_picker", "id": "card_9_img", "label": "Image" },
 
         { "type": "header", "content": "Card 10" },
         { "type": "text", "id": "card_10_title", "label": "Title" },
         { "type": "text", "id": "card_10_sub", "label": "Subtitle" },
         { "type": "text", "id": "card_10_val", "label": "Filter Value Tag" },
-        { "type": "text", "id": "card_10_parent_val", "label": "Required Parent Axle Tag (Step 3 only)" },
+        { "type": "text", "id": "card_10_parent_val", "label": "Required Parent Tag (Axle for Tie Rod / Engine for Axle)" },
         { "type": "image_picker", "id": "card_10_img", "label": "Image" },
 
         { "type": "header", "content": "Card 11" },
         { "type": "text", "id": "card_11_title", "label": "Title" },
         { "type": "text", "id": "card_11_sub", "label": "Subtitle" },
         { "type": "text", "id": "card_11_val", "label": "Filter Value Tag" },
-        { "type": "text", "id": "card_11_parent_val", "label": "Required Parent Axle Tag (Step 3 only)" },
+        { "type": "text", "id": "card_11_parent_val", "label": "Required Parent Tag (Axle for Tie Rod / Engine for Axle)" },
         { "type": "image_picker", "id": "card_11_img", "label": "Image" },
 
         { "type": "header", "content": "Card 12" },
         { "type": "text", "id": "card_12_title", "label": "Title" },
         { "type": "text", "id": "card_12_sub", "label": "Subtitle" },
         { "type": "text", "id": "card_12_val", "label": "Filter Value Tag" },
-        { "type": "text", "id": "card_12_parent_val", "label": "Required Parent Axle Tag (Step 3 only)" },
+        { "type": "text", "id": "card_12_parent_val", "label": "Required Parent Tag (Axle for Tie Rod / Engine for Axle)" },
         { "type": "image_picker", "id": "card_12_img", "label": "Image" }
       ]
     },
