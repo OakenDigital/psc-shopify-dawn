@@ -496,7 +496,7 @@
         </div>
 
       {% comment %} --- SECTION 7: DYNAMIC RECOMMENDED SYSTEM --- {% endcomment %}
-      {% when 'system' %}
+      {% comment %} {% when 'system' %}
         <div class="lp-section lp-system-builder" id="recommended-system-section" {{ block.shopify_attributes }}>
           <div class="lp-section-header">
             <h2>{{ block.settings.title }}</h2>
@@ -520,6 +520,28 @@
                 </div>
               {% endfor %}
             </div>
+            {% if block.settings.cta_text != blank %}
+              <div class="lp-text-center lp-mt-20">
+                <a href="#" id="lp-build-bundle-btn" class="lp-btn lp-btn-primary">{{ block.settings.cta_text }}</a>
+              </div>
+            {% endif %}
+          </div>
+        </div> {% endcomment %}
+
+        {% comment %} --- SECTION 7: DYNAMIC RECOMMENDED SYSTEM GRID --- {% endcomment %}
+      {% when 'system' %}
+        <div class="lp-section lp-system-builder" id="recommended-system-section" {{ block.shopify_attributes }}>
+          <div class="lp-section-header">
+            <h2>{{ block.settings.title }}</h2>
+            <p>{{ block.settings.subtitle }}</p>
+            <p id="lp-system-status" style="margin-top: 10px; font-weight: bold; font-size: 1.05rem;">{{ block.settings.default_prompt }}</p>
+          </div>
+
+          <div id="lp-recommended-products-wrapper" style="display: none; margin-top: 25px;">
+            <div id="lp-system-product-grid" class="lp-grid lp-grid-3col">
+              {% comment %} Dynamic collection product cards will render here via JS {% endcomment %}
+            </div>
+
             {% if block.settings.cta_text != blank %}
               <div class="lp-text-center lp-mt-20">
                 <a href="#" id="lp-build-bundle-btn" class="lp-btn lp-btn-primary">{{ block.settings.cta_text }}</a>
