@@ -31,12 +31,12 @@
             "btn2_link": "#dds-addon-kits"
           }
         },
-        "why_rrr9ht": {
-          "type": "why",
+        "features_z94TU7": {
+          "type": "features",
           "settings": {
-            "heading": "Why Jeep Owners Upgrade To DDS",
-            "intro_text": "You feel it every time the trail gets rough:",
-            "solution_text": "PSC's Dynamic Damping Stabilizer® system helps control unwanted steering movement before it gets transferred to the steering wheel."
+            "heading": "What Is Dynamic Damping Stabilizer®?",
+            "copy": "<p>Traditional stabilizers react after impact. DDS uses hydraulic damping to help control steering disturbances before they reach the driver.</p>",
+            "bullets": "<p>✅ Reduced steering kickback<br/>✅ Better steering control<br/>✅ More driver confidence<br/>✅ Works with PSC Cylinder Assist®<br/>✅ Built and tested in Texas</p>"
           }
         },
         "cases_ybBzna": {
@@ -45,12 +45,12 @@
             "heading": "Built For The Way You Use Your Jeep"
           }
         },
-        "features_z94TU7": {
-          "type": "features",
+        "why_rrr9ht": {
+          "type": "why",
           "settings": {
-            "heading": "What Is Dynamic Damping Stabilizer®?",
-            "copy": "<p>Traditional stabilizers react after impact. DDS uses hydraulic damping to help control steering disturbances before they reach the driver.</p>",
-            "bullets": "<p>✅ Reduced steering kickback<br/>✅ Better steering control<br/>✅ More driver confidence<br/>✅ Works with PSC Cylinder Assist®<br/>✅ Built and tested in Texas</p>"
+            "heading": "Why Jeep Owners Upgrade To DDS",
+            "intro_text": "You feel it every time the trail gets rough:",
+            "solution_text": "PSC's Dynamic Damping Stabilizer® system helps control unwanted steering movement before it gets transferred to the steering wheel."
           }
         },
         "step_th6fRk": {
@@ -280,9 +280,9 @@
       },
       "block_order": [
         "hero_cXakMW",
-        "why_rrr9ht",
-        "cases_ybBzna",
         "features_z94TU7",
+        "cases_ybBzna",
+        "why_rrr9ht",
         "step_th6fRk",
         "step_ymryCh",
         "step_fPehVW",
