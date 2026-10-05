@@ -1,4 +1,4 @@
-{{ 'landing-page-builder.css' | asset_url | stylesheet_tag }}
+{% comment %} {{ 'landing-page-builder.css' | asset_url | stylesheet_tag }}
 
 <style>
   /* --- CUSTOM FONT FACES --- */
@@ -1074,12 +1074,12 @@
   ]
 }
 {% endschema %} 
+ {% endcomment %}
 
 
 
 
-
-{% comment %} {{ 'landing-page-builder.css' | asset_url | stylesheet_tag }}
+{{ 'landing-page-builder.css' | asset_url | stylesheet_tag }}
 
 <style>
   /* --- CUSTOM FONT FACES --- */
@@ -1901,4 +1901,4 @@
     }
   ]
 }
-{% endschema %} {% endcomment %}
+{% endschema %} {
