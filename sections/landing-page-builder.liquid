@@ -1293,7 +1293,6 @@
     .lp-card-grid.lp-grid-cols-2 { grid-template-columns: repeat(2, 1fr); }
     .lp-card-grid.lp-grid-cols-3 { grid-template-columns: repeat(3, 1fr); }
     .lp-card-grid.lp-grid-cols-4 { grid-template-columns: repeat(4, 1fr); }
-    .lp-card-grid.lp-grid-cols-5 { grid-template-columns: repeat(5, 1fr); }
     .lp-card-grid.lp-grid-cols-6 { grid-template-columns: repeat(6, 1fr); }
   }
 
@@ -1427,7 +1426,7 @@
             {% endif %}
           </div>
           <div class="lp-card-grid lp-grid-cols-{{ block.settings.columns }}">
-            {% for i in (1..6) %}
+            {% for i in (1..12) %}
               {% capture title_key %}card_{{ i }}_title{% endcapture %}
               {% capture sub_key %}card_{{ i }}_sub{% endcapture %}
               {% capture val_key %}card_{{ i }}_val{% endcapture %}
@@ -1837,7 +1836,49 @@
         { "type": "text", "id": "card_6_sub", "label": "Subtitle" },
         { "type": "text", "id": "card_6_val", "label": "Filter Value Tag" },
         { "type": "text", "id": "card_6_parent_val", "label": "Required Parent Axle Tag (Step 3 only)" },
-        { "type": "image_picker", "id": "card_6_img", "label": "Image" }
+        { "type": "image_picker", "id": "card_6_img", "label": "Image" },
+
+        { "type": "header", "content": "Card 7" },
+        { "type": "text", "id": "card_7_title", "label": "Title" },
+        { "type": "text", "id": "card_7_sub", "label": "Subtitle" },
+        { "type": "text", "id": "card_7_val", "label": "Filter Value Tag" },
+        { "type": "text", "id": "card_7_parent_val", "label": "Required Parent Axle Tag (Step 3 only)" },
+        { "type": "image_picker", "id": "card_7_img", "label": "Image" },
+
+        { "type": "header", "content": "Card 8" },
+        { "type": "text", "id": "card_8_title", "label": "Title" },
+        { "type": "text", "id": "card_8_sub", "label": "Subtitle" },
+        { "type": "text", "id": "card_8_val", "label": "Filter Value Tag" },
+        { "type": "text", "id": "card_8_parent_val", "label": "Required Parent Axle Tag (Step 3 only)" },
+        { "type": "image_picker", "id": "card_8_img", "label": "Image" },
+
+        { "type": "header", "content": "Card 9" },
+        { "type": "text", "id": "card_9_title", "label": "Title" },
+        { "type": "text", "id": "card_9_sub", "label": "Subtitle" },
+        { "type": "text", "id": "card_9_val", "label": "Filter Value Tag" },
+        { "type": "text", "id": "card_9_parent_val", "label": "Required Parent Axle Tag (Step 3 only)" },
+        { "type": "image_picker", "id": "card_9_img", "label": "Image" },
+
+        { "type": "header", "content": "Card 10" },
+        { "type": "text", "id": "card_10_title", "label": "Title" },
+        { "type": "text", "id": "card_10_sub", "label": "Subtitle" },
+        { "type": "text", "id": "card_10_val", "label": "Filter Value Tag" },
+        { "type": "text", "id": "card_10_parent_val", "label": "Required Parent Axle Tag (Step 3 only)" },
+        { "type": "image_picker", "id": "card_10_img", "label": "Image" },
+
+        { "type": "header", "content": "Card 11" },
+        { "type": "text", "id": "card_11_title", "label": "Title" },
+        { "type": "text", "id": "card_11_sub", "label": "Subtitle" },
+        { "type": "text", "id": "card_11_val", "label": "Filter Value Tag" },
+        { "type": "text", "id": "card_11_parent_val", "label": "Required Parent Axle Tag (Step 3 only)" },
+        { "type": "image_picker", "id": "card_11_img", "label": "Image" },
+
+        { "type": "header", "content": "Card 12" },
+        { "type": "text", "id": "card_12_title", "label": "Title" },
+        { "type": "text", "id": "card_12_sub", "label": "Subtitle" },
+        { "type": "text", "id": "card_12_val", "label": "Filter Value Tag" },
+        { "type": "text", "id": "card_12_parent_val", "label": "Required Parent Axle Tag (Step 3 only)" },
+        { "type": "image_picker", "id": "card_12_img", "label": "Image" }
       ]
     },
     {
@@ -1901,4 +1942,4 @@
     }
   ]
 }
-{% endschema %} {
+{% endschema %}
