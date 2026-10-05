@@ -625,36 +625,27 @@
     });
 
     function filterTieRods(selectedAxle) {
-  const tieRodCards = document.querySelectorAll('.lp-select-card[data-step="tierod"]');
-  let currentTieRodStillValid = false;
+      const tieRodCards = document.querySelectorAll('.lp-select-card[data-step="tierod"]');
+      let currentTieRodStillValid = false;
 
-  // Clean the selected axle string (remove trailing/leading spaces & lower-case)
-  const cleanAxle = (selectedAxle || '').toString().trim().toLowerCase();
+      tieRodCards.forEach(card => {
+        const parentVal = card.getAttribute('data-parent-value');
+        
+        if (!parentVal || parentVal === selectedAxle) {
+          card.classList.remove('lp-hidden');
+          if (card.classList.contains('active')) {
+            currentTieRodStillValid = true;
+          }
+        } else {
+          card.classList.add('lp-hidden');
+          card.classList.remove('active');
+        }
+      });
 
-  tieRodCards.forEach(card => {
-    // Check if data-parent-value attribute exists
-    const hasParentAttr = card.hasAttribute('data-parent-value');
-    const parentVal = (card.getAttribute('data-parent-value') || '').trim().toLowerCase();
-    
-    // Show card if:
-    // 1. It has NO parent value set (universal option)
-    // 2. OR its parent value matches the selected axle
-    if (!hasParentAttr || !parentVal || parentVal === cleanAxle) {
-      card.classList.remove('lp-hidden');
-      if (card.classList.contains('active')) {
-        currentTieRodStillValid = true;
+      if (!currentTieRodStillValid) {
+        selections.tierod = null;
       }
-    } else {
-      card.classList.add('lp-hidden');
-      card.classList.remove('active');
     }
-  });
-
-  // If the user previously picked a Tie Rod that is now hidden, reset the selection
-  if (!currentTieRodStillValid) {
-    selections.tierod = null;
-  }
-}
 
     function checkSelectionsAndFetch() {
       if (selections.engine && selections.axle && selections.tierod) {
