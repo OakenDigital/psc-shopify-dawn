@@ -654,16 +654,15 @@
         selections.axle = null;
       }
 
-      // STEP 2: Filter Tie Rod Cards based on Axle
+      function filterTieRods(selectedAxle) {
       const tieRodCards = document.querySelectorAll('.lp-select-card[data-step="tierod"]');
       let currentTieRodStillValid = false;
-      const activeAxle = selections.axle ? selections.axle.trim().toLowerCase() : null;
 
       tieRodCards.forEach(card => {
-        const hasParentAttr = card.hasAttribute('data-parent-value');
-        const parentVal = (card.getAttribute('data-parent-value') || '').trim().toLowerCase();
-
-        if (!activeAxle || !hasParentAttr || !parentVal || parentVal === activeAxle) {
+        const parentVal = card.getAttribute('data-parent-value');
+        
+        // Show card if it has no parent restriction OR matches the selected axle
+        if (!parentVal || parentVal === selectedAxle) {
           card.classList.remove('lp-hidden');
           if (card.classList.contains('active')) {
             currentTieRodStillValid = true;
@@ -674,7 +673,8 @@
         }
       });
 
-      if (!currentTieRodStillValid && selections.tierod) {
+      // Clear tie rod selection if the previously selected one isn't applicable to the new axle
+      if (!currentTieRodStillValid) {
         selections.tierod = null;
       }
     }
