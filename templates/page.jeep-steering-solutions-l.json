@@ -58,7 +58,7 @@
           "settings": {
             "step_number": "1",
             "step_type": "engine",
-            "section_id": "#select-engine",
+            "section_id": "select-engine",
             "title": "See What's Available For Your Jeep",
             "subtitle": "Select Your Model",
             "columns": "3",
