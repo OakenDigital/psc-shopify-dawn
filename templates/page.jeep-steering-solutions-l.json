@@ -58,10 +58,10 @@
           "settings": {
             "step_number": "1",
             "step_type": "engine",
-            "section_id": "",
+            "section_id": "#select-engine",
             "title": "See What's Available For Your Jeep",
-            "subtitle": "Select Your Setup",
-            "columns": "5",
+            "subtitle": "Select Your Model",
+            "columns": "3",
             "center_incomplete_rows": true,
             "card_1_title": "JL Non-eTorque",
             "card_1_sub": "",
