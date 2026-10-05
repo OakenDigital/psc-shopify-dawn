@@ -93,7 +93,7 @@
   
   .lp-hero h1 { 
     font-family: 'Gotham Black Italic', sans-serif; 
-    font-size: 2.4rem; 
+    font-size: 2.5rem; 
     margin-bottom: 10px; 
     line-height: 1.1;
     color: var(--lp-color-dark);
@@ -101,10 +101,10 @@
   
   .lp-subheadline { 
     font-family: 'Eurostile Bold Oblique', sans-serif; 
-    font-size: 1.15rem; 
+    font-size: 1.25rem; 
     max-width: 800px; 
     margin: 0 auto 20px; 
-    color: #555; 
+    color: #444; 
   }
 
   .lp-card-info h3, .slot-title, .lp-product-card h4 {
@@ -132,8 +132,50 @@
   .lp-btn-secondary:hover { background-color: var(--lp-color-dark-hover); }
   .lp-btn-sm { padding: 8px 16px; font-size: 0.85rem; margin-top: 8px; }
 
-  .lp-hero { text-align: center; padding: 40px 20px; background-color: var(--lp-color-bg-light); border-radius: 8px; border-top: 4px solid var(--lp-color-primary); }
+  .lp-hero { text-align: center; padding: 50px 20px; background-color: var(--lp-color-bg-light); border-radius: 8px; border-top: 5px solid var(--lp-color-primary); }
   .lp-btn-group { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+
+  /* SECTION 2: WHY UPGRADE */
+  .lp-why-upgrade {
+    background: #fff;
+    border: 1px solid var(--lp-color-border);
+    border-radius: 8px;
+    padding: 30px;
+  }
+  .lp-why-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    align-items: center;
+  }
+  @media (min-width: 769px) {
+    .lp-why-grid { grid-template-columns: 1fr 1fr; }
+  }
+  .lp-pain-points {
+    background: #fff0f0;
+    border-left: 4px solid var(--lp-color-primary);
+    padding: 15px 20px;
+    margin: 15px 0;
+    border-radius: 0 6px 6px 0;
+  }
+  .lp-pain-points ul { margin: 0; padding-left: 20px; }
+  .lp-pain-points li { margin-bottom: 6px; font-family: 'Eurostile Bold', sans-serif; color: var(--lp-color-primary); }
+
+  /* SECTION 3: USE CASES */
+  .lp-usecases-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+  }
+  .lp-usecase-card {
+    background: var(--lp-color-bg-light);
+    border: 1px solid var(--lp-color-border);
+    border-radius: 8px;
+    overflow: hidden;
+    text-align: center;
+  }
+  .lp-usecase-card img { width: 100%; height: 200px; object-fit: cover; }
+  .lp-usecase-card-body { padding: 20px; }
 
   .lp-feature {
     background: var(--lp-color-bg-light);
@@ -151,9 +193,7 @@
   }
 
   @media (min-width: 769px) {
-    .lp-grid-2col {
-      grid-template-columns: 1fr 1fr;
-    }
+    .lp-grid-2col { grid-template-columns: 1fr 1fr; }
   }
 
   .lp-feature-media {
@@ -175,17 +215,6 @@
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
   }
 
-  .lp-feature-content h2 {
-    font-size: 1.75rem;
-    margin-top: 0;
-    margin-bottom: 12px;
-  }
-
-  .lp-bullets {
-    margin-top: 15px;
-    line-height: 1.6;
-  }
-
   .lp-step-num { 
     background: var(--lp-color-primary); 
     color: #fff; 
@@ -202,26 +231,25 @@
   .lp-grid-3col { grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
   .lp-grid-4col { grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
 
-  /* FLEX LAYOUT FOR CARDS (TOGGLEABLE CENTERING) */
+  /* FLEX LAYOUT FOR CARDS */
   .lp-card-grid {
     display: flex;
     flex-wrap: wrap;
     gap: 12px;
-    justify-content: flex-start; /* Standard/Regular alignment */
+    justify-content: flex-start;
   }
 
   .lp-card-grid.lp-grid-centered {
-    justify-content: center; /* Centered alignment for incomplete rows */
+    justify-content: center;
   }
 
-  .lp-card-grid .lp-select-card {
-    flex: 1 1 100%;
-  }
+  .lp-card-grid .lp-select-card { flex: 1 1 100%; }
 
   @media (min-width: 769px) {
     .lp-card-grid.lp-grid-cols-2 .lp-select-card { flex: 0 0 calc(50% - 12px); max-width: calc(50% - 12px); }
     .lp-card-grid.lp-grid-cols-3 .lp-select-card { flex: 0 0 calc(33.333% - 12px); max-width: calc(33.333% - 12px); }
     .lp-card-grid.lp-grid-cols-4 .lp-select-card { flex: 0 0 calc(25% - 12px); max-width: calc(25% - 12px); }
+    .lp-card-grid.lp-grid-cols-5 .lp-select-card { flex: 0 0 calc(20% - 12px); max-width: calc(20% - 12px); }
     .lp-card-grid.lp-grid-cols-6 .lp-select-card { flex: 0 0 calc(16.666% - 12px); max-width: calc(16.666% - 12px); }
   }
 
@@ -248,12 +276,8 @@
     box-shadow: 0 0 0 1px var(--lp-color-primary); 
   }
   
-  /* Hidden card state for conditional rendering */
-  .lp-select-card.lp-hidden {
-    display: none !important;
-  }
-
-  .lp-card-img img { max-width: 100%; height: auto; max-height: 100px; object-fit: contain; }
+  .lp-select-card.lp-hidden { display: none !important; }
+  .lp-card-img img { max-width: 100%; height: auto; max-height: 110px; object-fit: contain; }
 
   .lp-product-card { 
     border: 1px solid var(--lp-color-border); 
@@ -281,19 +305,37 @@
     border-radius: 3px; 
     z-index: 1; 
   }
+
+  /* GALLERY GRID */
+  .lp-gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 15px;
+  }
+  .lp-gallery-item img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 6px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  }
+  .lp-gallery-item p {
+    text-align: center;
+    font-family: 'Eurostile Demi', sans-serif;
+    margin-top: 6px;
+    font-size: 0.9rem;
+  }
   
   .lp-sku { font-family: 'Eurostile Regular', sans-serif; font-size: 0.8rem; color: #666; margin: 4px 0; }
   .lp-price { font-family: 'Eurostile Bold', sans-serif; font-size: 1.1rem; color: var(--lp-color-primary); margin-top: 4px; }
 
   .lp-order-guide { 
     background: var(--lp-color-bg-light); 
-    padding: 20px 25px; 
+    padding: 25px; 
     border-radius: 8px; 
     border-left: 5px solid var(--lp-color-primary); 
+    text-align: center;
   }
-  .lp-faq-item { border-bottom: 1px solid var(--lp-color-border); padding: 10px 0; }
-  .lp-faq-item summary { cursor: pointer; font-family: 'Eurostile Bold', sans-serif; font-size: 1rem; color: var(--lp-color-dark); }
-  .lp-faq-answer { padding-top: 8px; font-family: 'Eurostile Regular', sans-serif; color: #444; }
 
   .lp-section-header { text-align: center; margin-bottom: 15px; }
   .lp-section-header h2 { margin-bottom: 5px; font-size: 1.6rem; }
@@ -306,7 +348,7 @@
   {% for block in section.blocks %}
     {% case block.type %}
 
-      {% comment %} --- SECTION 1: HERO --- {% endcomment %}
+      {% comment %} --- SECTION 1: HERO SECTION --- {% endcomment %}
       {% when 'hero' %}
         <div class="lp-section lp-hero" {{ block.shopify_attributes }}>
           <div class="lp-hero-content">
@@ -323,8 +365,71 @@
           </div>
         </div>
 
-      {% comment %} --- SECTION 2: FEATURE / INFO --- {% endcomment %}
-      {% when 'feature_overview' %}
+      {% comment %} --- SECTION 2: WHY JEEP OWNERS UPGRADE TO DDS --- {% endcomment %}
+      {% when 'why' %}
+        <div class="lp-section lp-why-upgrade" {{ block.shopify_attributes }}>
+          <div class="lp-why-grid">
+            <div>
+              <h2>{{ block.settings.heading }}</h2>
+              <p>{{ block.settings.intro_text }}</p>
+              <div class="lp-pain-points">
+                <ul>
+                  <li>⚡ Steering wheel jerk</li>
+                  <li>⚡ Sudden kickback</li>
+                  <li>⚡ Driver fatigue</li>
+                  <li>⚡ Constant correction</li>
+                  <li>⚡ Reduced confidence at speed</li>
+                </ul>
+              </div>
+            </div>
+            <div>
+              <p style="font-size: 1.1rem; line-height: 1.5;">{{ block.settings.solution_text }}</p>
+              <p style="font-family: 'Eurostile Bold', sans-serif; font-size: 1.2rem; color: var(--lp-color-primary);">
+                Not a band-aid. A steering solution built for serious wheeling.
+              </p>
+            </div>
+          </div>
+        </div>
+
+      {% comment %} --- SECTION 3: BUILT FOR THE WAY YOU USE YOUR JEEP --- {% endcomment %}
+      {% when 'cases' %}
+        <div class="lp-section" {{ block.shopify_attributes }}>
+          <div class="lp-section-header">
+            <h2>{{ block.settings.heading }}</h2>
+          </div>
+          <div class="lp-usecases-grid">
+            <div class="lp-usecase-card">
+              {% if block.settings.img_1 != blank %}
+                <img src="{{ block.settings.img_1 | image_url: width: 500 }}" alt="Weekend Trail Rider" loading="lazy">
+              {% endif %}
+              <div class="lp-usecase-card-body">
+                <h3>Weekend Trail Rider</h3>
+                <p>More control. Less steering shock.</p>
+              </div>
+            </div>
+            <div class="lp-usecase-card">
+              {% if block.settings.img_2 != blank %}
+                <img src="{{ block.settings.img_2 | image_url: width: 500 }}" alt="Overland Builder" loading="lazy">
+              {% endif %}
+              <div class="lp-usecase-card-body">
+                <h3>Overland Builder</h3>
+                <p>Improved confidence on long days behind the wheel.</p>
+              </div>
+            </div>
+            <div class="lp-usecase-card">
+              {% if block.settings.img_3 != blank %}
+                <img src="{{ block.settings.img_3 | image_url: width: 500 }}" alt="Hardcore Rock Crawler" loading="lazy">
+              {% endif %}
+              <div class="lp-usecase-card-body">
+                <h3>Hardcore Rock Crawler</h3>
+                <p>Designed to handle aggressive terrain and large tires.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      {% comment %} --- SECTION 4: WHAT IS DYNAMIC DAMPING STABILIZER --- {% endcomment %}
+      {% when 'features' %}
         <div class="lp-section lp-feature" {{ block.shopify_attributes }}>
           <div class="lp-grid-2col">
             <div class="lp-feature-media">
@@ -338,7 +443,7 @@
               <h2>{{ block.settings.heading }}</h2>
               <div class="lp-rte">{{ block.settings.copy }}</div>
               {% if block.settings.bullets != blank %}
-                <div class="lp-bullets">
+                <div class="lp-bullets" style="margin-top: 15px; line-height: 1.6;">
                   {{ block.settings.bullets }}
                 </div>
               {% endif %}
@@ -346,8 +451,8 @@
           </div>
         </div>
 
-      {% comment %} --- SECTIONS 3, 4, 5: FILTER SELECTION STEPS --- {% endcomment %}
-      {% when 'filter_step' %}
+      {% comment %} --- SECTIONS 5 & 6: FILTER SELECTION STEPS --- {% endcomment %}
+      {% when 'step' %}
         <div class="lp-section lp-filter-step" id="{{ block.settings.section_id }}" data-step="{{ block.settings.step_type }}" {{ block.shopify_attributes }}>
           <div class="lp-section-header">
             <h2><span class="lp-step-num">{{ block.settings.step_number }}</span> {{ block.settings.title }}</h2>
@@ -390,12 +495,13 @@
           </div>
         </div>
 
-      {% comment %} --- SECTION 6: DYNAMIC RECOMMENDED SYSTEM --- {% endcomment %}
-      {% when 'dynamic_system' %}
+      {% comment %} --- SECTION 7: DYNAMIC RECOMMENDED SYSTEM --- {% endcomment %}
+      {% when 'system' %}
         <div class="lp-section lp-system-builder" id="recommended-system-section" {{ block.shopify_attributes }}>
           <div class="lp-section-header">
             <h2>{{ block.settings.title }}</h2>
-            <p id="lp-system-status">{{ block.settings.default_prompt }}</p>
+            <p>{{ block.settings.subtitle }}</p>
+            <p id="lp-system-status" style="margin-top: 8px; font-weight: bold;">{{ block.settings.default_prompt }}</p>
           </div>
 
           <div id="lp-recommended-products-wrapper" style="display: none;">
@@ -422,8 +528,8 @@
           </div>
         </div>
 
-      {% comment %} --- SECTION 7: ADD-ON PRODUCTS GRID --- {% endcomment %}
-      {% when 'product_grid' %}
+      {% comment %} --- SECTION 8: ADD-ON PRODUCTS GRID --- {% endcomment %}
+      {% when 'products' %}
         <div class="lp-section lp-product-grid-section" id="{{ block.settings.section_id }}" {{ block.shopify_attributes }}>
           <div class="lp-section-header">
             <h2>{{ block.settings.title }}</h2>
@@ -444,29 +550,38 @@
           </div>
         </div>
 
-      {% comment %} --- SECTION 8: HOW TO ORDER --- {% endcomment %}
-      {% when 'order_guide' %}
-        <div class="lp-section lp-order-guide" {{ block.shopify_attributes }}>
-          <div class="lp-guide-card">
+      {% comment %} --- SECTION 9: REAL JEEPS. REAL TRAILS. GALLERY --- {% endcomment %}
+      {% when 'gallery' %}
+        <div class="lp-section" {{ block.shopify_attributes }}>
+          <div class="lp-section-header">
             <h2>{{ block.settings.title }}</h2>
-            <div class="lp-rte">{{ block.settings.checklist }}</div>
-            {% if block.settings.contact_info != blank %}
-              <div class="lp-guide-footer">
-                {{ block.settings.contact_info }}
-              </div>
-            {% endif %}
+            <p>{{ block.settings.subtitle }}</p>
+          </div>
+          <div class="lp-gallery-grid">
+            {% for i in (1..5) %}
+              {% capture img_key %}gallery_img_{{ i }}{% endcapture %}
+              {% capture caption_key %}gallery_cap_{{ i }}{% endcapture %}
+              {% assign g_img = block.settings[img_key] %}
+              {% assign g_cap = block.settings[caption_key] %}
+              {% if g_img != blank %}
+                <div class="lp-gallery-item">
+                  <img src="{{ g_img | image_url: width: 500 }}" alt="{{ g_cap }}" loading="lazy">
+                  {% if g_cap != blank %}<p>{{ g_cap }}</p>{% endif %}
+                </div>
+              {% endif %}
+            {% endfor %}
           </div>
         </div>
 
-      {% comment %} --- SECTION 9: FAQ BLOCK --- {% endcomment %}
-      {% when 'faq_item' %}
-        <div class="lp-faq-item" {{ block.shopify_attributes }}>
-          <details>
-            <summary>{{ block.settings.question }}</summary>
-            <div class="lp-faq-answer">
-              <p>{{ block.settings.answer }}</p>
-            </div>
-          </details>
+      {% comment %} --- SECTION 10: CONTACT & HELP --- {% endcomment %}
+      {% when 'guide' %}
+        <div class="lp-section lp-order-guide" {{ block.shopify_attributes }}>
+          <h2>{{ block.settings.title }}</h2>
+          <p style="font-size: 1.1rem; margin-bottom: 10px;">{{ block.settings.subtitle }}</p>
+          <div class="lp-rte">
+            <p><strong>Phone:</strong> {{ block.settings.phone }}<br>
+            <strong>Email:</strong> <a href="mailto:{{ block.settings.email }}">{{ block.settings.email }}</a></p>
+          </div>
         </div>
 
     {% endcase %}
@@ -596,7 +711,7 @@
 
       } else {
         const missing = [];
-        if (!selections.engine) missing.push('Engine');
+        if (!selections.engine) missing.push('Jeep Model/Engine');
         if (!selections.axle) missing.push('Axle');
         if (!selections.tierod) missing.push('Tie Rod');
         
@@ -645,8 +760,7 @@
       "step": 5,
       "unit": "px",
       "label": "Sticky Header Scroll Offset",
-      "default": 110,
-      "info": "Adjust this slider to prevent sticky headers from covering titles when jumping via button links."
+      "default": 110
     },
     {
       "type": "range",
@@ -674,27 +788,46 @@
       "type": "hero",
       "name": "1. Hero Section",
       "settings": [
-        { "type": "text", "id": "headline", "label": "Headline", "default": "Dynamic Damping Stabilizer Kits for Jeep JL & JT" },
-        { "type": "textarea", "id": "subheadline", "label": "Subheadline", "default": "Reduce steering kickback. Improve control. Built for real-world wheeling." },
-        { "type": "text", "id": "btn1_text", "label": "Button 1 Text", "default": "Shop Complete DDS Kits" },
+        { "type": "text", "id": "headline", "label": "Headline", "default": "Stop Fighting The Steering Wheel." },
+        { "type": "textarea", "id": "subheadline", "label": "Subheadline", "default": "Dynamic Damping Stabilizer® for Jeep JL & JT. Designed to reduce steering kickback and improve control when the terrain gets rough." },
+        { "type": "text", "id": "btn1_text", "label": "Button 1 Text", "default": "Explore Systems" },
         { "type": "url", "id": "btn1_link", "label": "Button 1 Link" },
-        { "type": "text", "id": "btn2_text", "label": "Button 2 Text", "default": "Already Have PSC Steering? Shop DDS Add-On Kits" },
+        { "type": "text", "id": "btn2_text", "label": "Button 2 Text", "default": "Watch It In Action" },
         { "type": "url", "id": "btn2_link", "label": "Button 2 Link" }
       ]
     },
     {
-      "type": "feature_overview",
-      "name": "2. What is DDS (Feature)",
+      "type": "why",
+      "name": "2. Why Upgrade To DDS",
       "settings": [
-        { "type": "image_picker", "id": "image", "label": "System Image" },
-        { "type": "text", "id": "heading", "label": "Heading", "default": "What is DDS?" },
-        { "type": "richtext", "id": "copy", "label": "Main Copy", "default": "<p>Traditional steering stabilizers only react after the hit. PSC's Dynamic Damping Stabilizer uses hydraulic damping to help control unwanted steering movement caused by rocks, ruts, ledges, and rough terrain.</p>" },
-        { "type": "richtext", "id": "bullets", "label": "Benefits List", "default": "<p>✅ Reduced steering kickback<br>✅ Improved control on technical trails<br>✅ More confidence at speed<br>✅ Compatible with PSC Cylinder Assist® systems<br>✅ Built and tested in Texas</p>" }
+        { "type": "text", "id": "heading", "label": "Heading", "default": "Why Jeep Owners Upgrade To DDS" },
+        { "type": "textarea", "id": "intro_text", "label": "Intro Text", "default": "You feel it every time the trail gets rough:" },
+        { "type": "textarea", "id": "solution_text", "label": "Solution Text", "default": "PSC's Dynamic Damping Stabilizer® system helps control unwanted steering movement before it gets transferred to the steering wheel." }
       ]
     },
     {
-      "type": "filter_step",
-      "name": "3-5. Filter Step Block",
+      "type": "cases",
+      "name": "3. Built For Your Jeep",
+      "settings": [
+        { "type": "text", "id": "heading", "label": "Heading", "default": "Built For The Way You Use Your Jeep" },
+        { "type": "image_picker", "id": "img_1", "label": "Weekend Trail Rider Image" },
+        { "type": "image_picker", "id": "img_2", "label": "Overland Builder Image" },
+        { "type": "image_picker", "id": "img_3", "label": "Hardcore Rock Crawler Image" }
+      ]
+    },
+    {
+      "type": "features",
+      "name": "4. What is DDS",
+      "settings": [
+        { "type": "image_picker", "id": "image", "label": "Cutaway Image" },
+        { "type": "text", "id": "heading", "label": "Heading", "default": "What Is Dynamic Damping Stabilizer®?" },
+        { "type": "richtext", "id": "copy", "label": "Main Copy", "default": "<p>Traditional stabilizers react after impact. DDS uses hydraulic damping to help control steering disturbances before they reach the driver.</p>" },
+        { "type": "richtext", "id": "bullets", "label": "Benefits List", "default": "<p>✅ Reduced steering kickback<br>✅ Better steering control<br>✅ More driver confidence<br>✅ Works with PSC Cylinder Assist®<br>✅ Built and tested in Texas</p>" }
+      ]
+    },
+    {
+      "type": "step",
+      "name": "5-6. Filter Step",
       "settings": [
         { "type": "text", "id": "step_number", "label": "Step Number (e.g. 1, 2, 3)", "default": "1" },
         { 
@@ -702,15 +835,15 @@
           "id": "step_type", 
           "label": "Selection Type", 
           "options": [
-            { "value": "engine", "label": "Engine Selection" },
+            { "value": "engine", "label": "Jeep Engine / Model" },
             { "value": "axle", "label": "Axle Selection" },
             { "value": "tierod", "label": "Tie Rod Selection" }
           ], 
           "default": "engine" 
         },
-        { "type": "text", "id": "section_id", "label": "Section Anchor ID (e.g. select-engine)" },
-        { "type": "text", "id": "title", "label": "Step Heading", "default": "Which Engine Do You Have?" },
-        { "type": "text", "id": "subtitle", "label": "Subheading" },
+        { "type": "text", "id": "section_id", "label": "Section Anchor ID (e.g. select-jeep)" },
+        { "type": "text", "id": "title", "label": "Step Heading", "default": "See What's Available For Your Jeep" },
+        { "type": "text", "id": "subtitle", "label": "Subheading", "default": "Select Your Jeep" },
         { 
           "type": "select", 
           "id": "columns", 
@@ -719,49 +852,50 @@
             { "value": "2", "label": "2 Columns" },
             { "value": "3", "label": "3 Columns" },
             { "value": "4", "label": "4 Columns" },
+            { "value": "5", "label": "5 Columns" },
             { "value": "6", "label": "6 Columns" }
           ], 
-          "default": "3" 
+          "default": "5" 
         },
         { 
           "type": "checkbox", 
           "id": "center_incomplete_rows", 
           "label": "Center cards on incomplete final row", 
-          "default": false,
+          "default": true,
           "info": "When checked, cards in an unfinished row will center. Unchecked leaves them aligned to the left grid." 
         },
         { "type": "header", "content": "Card 1" },
-        { "type": "text", "id": "card_1_title", "label": "Title" },
+        { "type": "text", "id": "card_1_title", "label": "Title", "default": "JL Non-eTorque" },
         { "type": "text", "id": "card_1_sub", "label": "Subtitle" },
-        { "type": "text", "id": "card_1_val", "label": "Filter Value Tag (e.g. stock-1-58)" },
-        { "type": "text", "id": "card_1_parent_val", "label": "Required Parent Axle Tag (Step 3 only, e.g. dan44)", "info": "Leave blank if this tie rod choice applies to all axles." },
+        { "type": "text", "id": "card_1_val", "label": "Filter Value Tag", "default": "jl-non-etorque" },
+        { "type": "text", "id": "card_1_parent_val", "label": "Required Parent Axle Tag (Step 3 only)" },
         { "type": "image_picker", "id": "card_1_img", "label": "Image" },
 
         { "type": "header", "content": "Card 2" },
-        { "type": "text", "id": "card_2_title", "label": "Title" },
+        { "type": "text", "id": "card_2_title", "label": "Title", "default": "JL eTorque" },
         { "type": "text", "id": "card_2_sub", "label": "Subtitle" },
-        { "type": "text", "id": "card_2_val", "label": "Filter Value Tag" },
+        { "type": "text", "id": "card_2_val", "label": "Filter Value Tag", "default": "jl-etorque" },
         { "type": "text", "id": "card_2_parent_val", "label": "Required Parent Axle Tag (Step 3 only)" },
         { "type": "image_picker", "id": "card_2_img", "label": "Image" },
 
         { "type": "header", "content": "Card 3" },
-        { "type": "text", "id": "card_3_title", "label": "Title" },
+        { "type": "text", "id": "card_3_title", "label": "Title", "default": "JL 392" },
         { "type": "text", "id": "card_3_sub", "label": "Subtitle" },
-        { "type": "text", "id": "card_3_val", "label": "Filter Value Tag" },
+        { "type": "text", "id": "card_3_val", "label": "Filter Value Tag", "default": "jl-392" },
         { "type": "text", "id": "card_3_parent_val", "label": "Required Parent Axle Tag (Step 3 only)" },
         { "type": "image_picker", "id": "card_3_img", "label": "Image" },
 
         { "type": "header", "content": "Card 4" },
-        { "type": "text", "id": "card_4_title", "label": "Title" },
+        { "type": "text", "id": "card_4_title", "label": "Title", "default": "JL 4XE" },
         { "type": "text", "id": "card_4_sub", "label": "Subtitle" },
-        { "type": "text", "id": "card_4_val", "label": "Filter Value Tag" },
+        { "type": "text", "id": "card_4_val", "label": "Filter Value Tag", "default": "jl-4xe" },
         { "type": "text", "id": "card_4_parent_val", "label": "Required Parent Axle Tag (Step 3 only)" },
         { "type": "image_picker", "id": "card_4_img", "label": "Image" },
 
         { "type": "header", "content": "Card 5" },
-        { "type": "text", "id": "card_5_title", "label": "Title" },
+        { "type": "text", "id": "card_5_title", "label": "Title", "default": "EcoDiesel JL/JT" },
         { "type": "text", "id": "card_5_sub", "label": "Subtitle" },
-        { "type": "text", "id": "card_5_val", "label": "Filter Value Tag" },
+        { "type": "text", "id": "card_5_val", "label": "Filter Value Tag", "default": "ecodiesel" },
         { "type": "text", "id": "card_5_parent_val", "label": "Required Parent Axle Tag (Step 3 only)" },
         { "type": "image_picker", "id": "card_5_img", "label": "Image" },
 
@@ -816,21 +950,22 @@
       ]
     },
     {
-      "type": "dynamic_system",
-      "name": "6. Recommended System",
+      "type": "system",
+      "name": "7. Complete System",
       "settings": [
-        { "type": "text", "id": "title", "label": "Heading", "default": "Build the Complete Steering System" },
-        { "type": "text", "id": "default_prompt", "label": "Default Prompt Text", "default": "Select your Engine, Axle, and Tie Rod above to view your recommended setup." },
+        { "type": "text", "id": "title", "label": "Heading", "default": "Build A Complete PSC Steering System" },
+        { "type": "text", "id": "subtitle", "label": "Subheading", "default": "Designed To Work Together. Instead of piecing together random parts, build a complete PSC steering system." },
+        { "type": "text", "id": "default_prompt", "label": "Default Prompt Text", "default": "Select your Jeep model and Axle above to generate your complete setup." },
         { "type": "text", "id": "label_1", "label": "Slot 1 Label", "default": "XD Steering Gear" },
-        { "type": "text", "id": "label_2", "label": "Slot 2 Label", "default": "XD Pump Kit" },
-        { "type": "text", "id": "label_3", "label": "Slot 3 Label", "default": "DDS System" },
-        { "type": "text", "id": "label_4", "label": "Slot 4 Label", "default": "XTREME-DUTY Hose Kit" },
-        { "type": "text", "id": "cta_text", "label": "CTA Button Text", "default": "Build My Complete System" }
+        { "type": "text", "id": "label_2", "label": "Slot 2 Label", "default": "High Performance Pump Kit" },
+        { "type": "text", "id": "label_3", "label": "Slot 3 Label", "default": "Dynamic Damping Stabilizer®" },
+        { "type": "text", "id": "label_4", "label": "Slot 4 Label", "default": "XTREME-DUTY Hoses" },
+        { "type": "text", "id": "cta_text", "label": "CTA Button Text", "default": "Build Complete Steering System" }
       ]
     },
     {
-      "type": "product_grid",
-      "name": "7. Add-On Products",
+      "type": "products",
+      "name": "8. Add-On Products",
       "settings": [
         { 
           "type": "text", 
@@ -838,27 +973,38 @@
           "label": "Section Anchor ID", 
           "default": "dds-addon-kits"
         },
-        { "type": "text", "id": "title", "label": "Heading", "default": "DDS Add-On Axle Kits" },
-        { "type": "text", "id": "subtitle", "label": "Subheading", "default": "Perfect for customers already running PSC steering who want to add Dynamic Damping Stabilizer performance." },
+        { "type": "text", "id": "title", "label": "Heading", "default": "Already Running PSC Steering?" },
+        { "type": "text", "id": "subtitle", "label": "Subheading", "default": "Add DDS To Your Existing Setup with our DDS Add-On Axle Kits." },
         { "type": "collection", "id": "collection", "label": "Collection to Display" },
         { "type": "range", "id": "limit", "label": "Product Limit", "min": 3, "max": 12, "step": 3, "default": 6 }
       ]
     },
     {
-      "type": "order_guide",
-      "name": "8. How To Order",
+      "type": "gallery",
+      "name": "9. Real Jeeps Gallery",
       "settings": [
-        { "type": "text", "id": "title", "label": "Heading", "default": "Before Ordering" },
-        { "type": "richtext", "id": "checklist", "default": "<p>You'll need:<br>✓ Jeep model and year<br>✓ Engine package<br>✓ Front axle<br>✓ Tie-rod manufacturer</p>", "label": "Checklist" },
-        { "type": "richtext", "id": "contact_info", "default": "<p>If you're not sure, call PSC at <strong>817-270-0102</strong> and we'll help identify the correct kit.</p>", "label": "Contact Notes" }
+        { "type": "text", "id": "title", "label": "Heading", "default": "Real Jeeps. Real Trails." },
+        { "type": "text", "id": "subtitle", "label": "Subheading", "default": "Built for real-world wheeling." },
+        { "type": "image_picker", "id": "gallery_img_1", "label": "Image 1" },
+        { "type": "text", "id": "gallery_cap_1", "label": "Caption 1", "default": "JL on rocks" },
+        { "type": "image_picker", "id": "gallery_img_2", "label": "Image 2" },
+        { "type": "text", "id": "gallery_cap_2", "label": "Caption 2", "default": "JT in Moab" },
+        { "type": "image_picker", "id": "gallery_img_3", "label": "Image 3" },
+        { "type": "text", "id": "gallery_cap_3", "label": "Caption 3", "default": "392 on trail" },
+        { "type": "image_picker", "id": "gallery_img_4", "label": "Image 4" },
+        { "type": "text", "id": "gallery_cap_4", "label": "Caption 4", "default": "4XE build" },
+        { "type": "image_picker", "id": "gallery_img_5", "label": "Image 5" },
+        { "type": "text", "id": "gallery_cap_5", "label": "Caption 5", "default": "Overland setup" }
       ]
     },
     {
-      "type": "faq_item",
-      "name": "9. FAQ Item",
+      "type": "guide",
+      "name": "10. Contact Support",
       "settings": [
-        { "type": "text", "id": "question", "label": "Question", "default": "Does DDS replace my steering stabilizer?" },
-        { "type": "textarea", "id": "answer", "label": "Answer", "default": "Yes, the DDS system replaces traditional steering stabilizers with dynamic hydraulic damping." }
+        { "type": "text", "id": "title", "label": "Heading", "default": "Not Sure Which System Fits?" },
+        { "type": "text", "id": "subtitle", "label": "Subheadline", "default": "Call us. We'll help you identify the right setup." },
+        { "type": "text", "id": "phone", "label": "Phone Number", "default": "817-270-0102" },
+        { "type": "text", "id": "email", "label": "Email Address", "default": "support@pscsteering.com" }
       ]
     }
   ],
@@ -867,11 +1013,19 @@
       "name": "Landing Page Builder",
       "blocks": [
         { "type": "hero" },
-        { "type": "feature_overview" },
-        { "type": "filter_step" },
-        { "type": "dynamic_system" },
-        { "type": "order_guide" },
-        { "type": "faq_item" }
+        { "type": "why" },
+        { "type": "cases" },
+        { "type": "features" },
+        { 
+          "type": "step",
+          "settings": {
+            "step_type": "engine"
+          }
+        },
+        { "type": "system" },
+        { "type": "products" },
+        { "type": "gallery" },
+        { "type": "guide" }
       ]
     }
   ]
