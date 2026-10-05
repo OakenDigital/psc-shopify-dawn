@@ -31,46 +31,58 @@
             "btn2_link": "#dds-addon-kits"
           }
         },
-        "feature_overview_CQTeRB": {
-          "type": "feature_overview",
+        "why_QP9KHc": {
+          "type": "why",
           "settings": {
-            "image": "shopify://shop_images/banner_for_homepage.png",
-            "heading": "What is DDS?",
-            "copy": "<p>Traditional steering stabilizers only react after the hit. PSC's Dynamic Damping Stabilizer uses hydraulic damping to help control unwanted steering movement caused by rocks, ruts, ledges, and rough terrain.</p>",
-            "bullets": "<p>✅ Reduced steering kickback<br/>✅ Improved control on technical trails<br/>✅ More confidence at speed<br/>✅ Compatible with PSC Cylinder Assist® systems<br/>✅ Built and tested in Texas</p>"
+            "heading": "Why Jeep Owners Upgrade To DDS",
+            "intro_text": "You feel it every time the trail gets rough:",
+            "solution_text": "PSC's Dynamic Damping Stabilizer® system helps control unwanted steering movement before it gets transferred to the steering wheel."
           }
         },
-        "filter_step_H38e3f": {
-          "type": "filter_step",
+        "cases_dHh6KW": {
+          "type": "cases",
+          "settings": {
+            "heading": "Built For The Way You Use Your Jeep"
+          }
+        },
+        "features_BJdqx6": {
+          "type": "features",
+          "settings": {
+            "image": "shopify://shop_images/banner_for_homepage_c22cf541-b710-4af0-9933-d8cf8e8bbe32.png",
+            "heading": "What Is Dynamic Damping Stabilizer®?",
+            "copy": "<p>Traditional stabilizers react after impact. DDS uses hydraulic damping to help control steering disturbances before they reach the driver.</p>",
+            "bullets": "<p>✅ Reduced steering kickback<br/>✅ Better steering control<br/>✅ More driver confidence<br/>✅ Works with PSC Cylinder Assist®<br/>✅ Built and tested in Texas</p>"
+          }
+        },
+        "step_dJ43pJ": {
+          "type": "step",
           "settings": {
             "step_number": "1",
             "step_type": "engine",
-            "section_id": "select-engine",
-            "title": "Which Engine Do You Have?",
-            "subtitle": "",
+            "section_id": "",
+            "title": "See What's Available For Your Jeep",
+            "subtitle": "Select Your Jeep",
             "columns": "3",
-            "card_1_title": "3.0L EcoDiesel",
-            "card_1_sub": "2020-2023 JL/JT",
-            "card_1_val": "dds-ecodiesel-rubicon44-steer-smarts",
+            "center_incomplete_rows": true,
+            "card_1_title": "JL Non-eTorque",
+            "card_1_sub": "",
+            "card_1_val": "jl-non-etorque",
             "card_1_parent_val": "",
-            "card_1_img": "shopify://shop_images/Squared_PSC_Rubicon-_EJS_2025_2.png",
-            "card_2_title": "eTorque",
-            "card_2_sub": "2018-2025 JL",
-            "card_2_val": "",
+            "card_2_title": "JL eTorque",
+            "card_2_sub": "",
+            "card_2_val": "jl-etorque",
             "card_2_parent_val": "",
-            "card_2_img": "shopify://shop_images/jeep_wranglerJL2018_red.jpg",
-            "card_3_title": "Non-eTorque",
-            "card_3_sub": "2018-2025 JL",
-            "card_3_val": "",
+            "card_3_title": "JL 392",
+            "card_3_sub": "",
+            "card_3_val": "jl-392",
             "card_3_parent_val": "",
-            "card_4_title": "392",
-            "card_4_sub": "2021-2024 JL",
-            "card_4_val": "",
+            "card_4_title": "JL 4XE",
+            "card_4_sub": "",
+            "card_4_val": "jl-4xe",
             "card_4_parent_val": "",
-            "card_4_img": "shopify://shop_images/banner_for_homepage_c22cf541-b710-4af0-9933-d8cf8e8bbe32.png",
-            "card_5_title": "4xe",
-            "card_5_sub": "2018-2024 JL",
-            "card_5_val": "",
+            "card_5_title": "EcoDiesel JL/JT",
+            "card_5_sub": "",
+            "card_5_val": "ecodiesel",
             "card_5_parent_val": "",
             "card_6_title": "",
             "card_6_sub": "",
@@ -102,174 +114,61 @@
             "card_12_parent_val": ""
           }
         },
-        "filter_step_AthWUa": {
-          "type": "filter_step",
+        "system_kfDKFF": {
+          "type": "system",
           "settings": {
-            "step_number": "2",
-            "step_type": "axle",
-            "section_id": "",
-            "title": "Choose your front axle",
-            "subtitle": "",
-            "columns": "4",
-            "card_1_title": "OEM Rubicon Dana 44",
-            "card_1_sub": "",
-            "card_1_val": "d44",
-            "card_1_parent_val": "",
-            "card_1_img": "shopify://shop_images/step_1_5814f1c1-d9a8-4528-b000-93ad080964b0.png",
-            "card_2_title": "UD60",
-            "card_2_sub": "",
-            "card_2_val": "ud60",
-            "card_2_parent_val": "",
-            "card_3_title": "Tera60",
-            "card_3_sub": "",
-            "card_3_val": "tera60",
-            "card_3_parent_val": "",
-            "card_4_title": "Currie 70",
-            "card_4_sub": "",
-            "card_4_val": "Currie70",
-            "card_4_parent_val": "",
-            "card_5_title": "",
-            "card_5_sub": "",
-            "card_5_val": "",
-            "card_5_parent_val": "",
-            "card_6_title": "",
-            "card_6_sub": "",
-            "card_6_val": "",
-            "card_6_parent_val": "",
-            "card_7_title": "",
-            "card_7_sub": "",
-            "card_7_val": "",
-            "card_7_parent_val": "",
-            "card_8_title": "",
-            "card_8_sub": "",
-            "card_8_val": "",
-            "card_8_parent_val": "",
-            "card_9_title": "",
-            "card_9_sub": "",
-            "card_9_val": "",
-            "card_9_parent_val": "",
-            "card_10_title": "",
-            "card_10_sub": "",
-            "card_10_val": "",
-            "card_10_parent_val": "",
-            "card_11_title": "",
-            "card_11_sub": "",
-            "card_11_val": "",
-            "card_11_parent_val": "",
-            "card_12_title": "",
-            "card_12_sub": "",
-            "card_12_val": "",
-            "card_12_parent_val": ""
-          }
-        },
-        "filter_step_QPMNUF": {
-          "type": "filter_step",
-          "settings": {
-            "step_number": "3",
-            "step_type": "tierod",
-            "section_id": "",
-            "title": "What is your Tie Rod Diameter",
-            "subtitle": "",
-            "columns": "3",
-            "card_1_title": "Apex Chassis",
-            "card_1_sub": "",
-            "card_1_val": "apex",
-            "card_1_parent_val": "d44",
-            "card_1_img": "shopify://shop_images/TRCL1.25.png",
-            "card_2_title": "Steer Smart",
-            "card_2_sub": "",
-            "card_2_val": "steer-smart",
-            "card_2_parent_val": "d44",
-            "card_3_title": "Synergy",
-            "card_3_sub": "",
-            "card_3_val": "synergy",
-            "card_3_parent_val": "d44",
-            "card_4_title": "RPM Steering",
-            "card_4_sub": "",
-            "card_4_val": "rpm",
-            "card_4_parent_val": "d44",
-            "card_5_title": "Metalcloak",
-            "card_5_sub": "",
-            "card_5_val": "metalcloak",
-            "card_5_parent_val": "d44",
-            "card_6_title": "RockKrawler / Rusty's",
-            "card_6_sub": "",
-            "card_6_val": "rusty",
-            "card_6_parent_val": "d44",
-            "card_7_title": "1-5/8\"",
-            "card_7_sub": "",
-            "card_7_val": "1.5",
-            "card_7_parent_val": "ud60, tera60",
-            "card_8_title": "1-3/4\"",
-            "card_8_sub": "",
-            "card_8_val": "1.75",
-            "card_8_parent_val": "ud60",
-            "card_9_title": "2.0\"",
-            "card_9_sub": "",
-            "card_9_val": "2.0",
-            "card_9_parent_val": "ud60",
-            "card_10_title": "1-3/8\"",
-            "card_10_sub": "",
-            "card_10_val": "1.375",
-            "card_10_parent_val": "currie70",
-            "card_11_title": "",
-            "card_11_sub": "",
-            "card_11_val": "",
-            "card_11_parent_val": "",
-            "card_12_title": "",
-            "card_12_sub": "",
-            "card_12_val": "",
-            "card_12_parent_val": ""
-          }
-        },
-        "dynamic_system_9D6W8x": {
-          "type": "dynamic_system",
-          "settings": {
-            "title": "Build the Complete Steering System",
-            "default_prompt": "Select your Engine, Axle, and Tie Rod above to view your recommended setup.",
+            "title": "Build A Complete PSC Steering System",
+            "subtitle": "Designed To Work Together. Instead of piecing together random parts, build a complete PSC steering system.",
+            "default_prompt": "Select your Jeep model and Axle above to generate your complete setup.",
             "label_1": "XD Steering Gear",
-            "label_2": "XD Pump Kit",
-            "label_3": "DDS System",
-            "label_4": "XTREME-DUTY Hose Kit",
-            "cta_text": "Build My Complete System"
+            "label_2": "High Performance Pump Kit",
+            "label_3": "Dynamic Damping Stabilizer®",
+            "label_4": "XTREME-DUTY Hoses",
+            "cta_text": "Build Complete Steering System"
           }
         },
-        "product_grid_FTttAX": {
-          "type": "product_grid",
+        "products_DcWDDG": {
+          "type": "products",
           "settings": {
             "section_id": "dds-addon-kits",
-            "title": "DDS Add-On Axle Kits",
-            "subtitle": "Perfect for customers already running PSC steering who want to add Dynamic Damping Stabilizer performance.",
+            "title": "Already Running PSC Steering?",
+            "subtitle": "Add DDS To Your Existing Setup with our DDS Add-On Axle Kits.",
             "collection": "",
             "limit": 6
           }
         },
-        "order_guide_UaJXrX": {
-          "type": "order_guide",
+        "gallery_GTeGFz": {
+          "type": "gallery",
           "settings": {
-            "title": "Before Ordering",
-            "checklist": "<p>You'll need:<br/>✓ Jeep model and year<br/>✓ Engine package<br/>✓ Front axle<br/>✓ Tie-rod Diameter</p>",
-            "contact_info": "<p>If you're not sure, call PSC at <strong>817-270-0102</strong> and we'll help identify the correct kit.</p>"
+            "title": "Real Jeeps. Real Trails.",
+            "subtitle": "Built for real-world wheeling.",
+            "gallery_cap_1": "JL on rocks",
+            "gallery_cap_2": "JT in Moab",
+            "gallery_cap_3": "392 on trail",
+            "gallery_cap_4": "4XE build",
+            "gallery_cap_5": "Overland setup"
           }
         },
-        "faq_item_g4MN3F": {
-          "type": "faq_item",
+        "guide_UjJbxD": {
+          "type": "guide",
           "settings": {
-            "question": "Does DDS replace my steering stabilizer?",
-            "answer": "Yes, the DDS system replaces traditional steering stabilizers with dynamic hydraulic damping."
+            "title": "Not Sure Which System Fits?",
+            "subtitle": "Call us. We'll help you identify the right setup.",
+            "phone": "817-270-0102",
+            "email": "support@pscsteering.com"
           }
         }
       },
       "block_order": [
         "hero_cXakMW",
-        "feature_overview_CQTeRB",
-        "filter_step_H38e3f",
-        "filter_step_AthWUa",
-        "filter_step_QPMNUF",
-        "dynamic_system_9D6W8x",
-        "product_grid_FTttAX",
-        "order_guide_UaJXrX",
-        "faq_item_g4MN3F"
+        "why_QP9KHc",
+        "cases_dHh6KW",
+        "features_BJdqx6",
+        "step_dJ43pJ",
+        "system_kfDKFF",
+        "products_DcWDDG",
+        "gallery_GTeGFz",
+        "guide_UjJbxD"
       ],
       "name": "Landing Page Builder",
       "settings": {
