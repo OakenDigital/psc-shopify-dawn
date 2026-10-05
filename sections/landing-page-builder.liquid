@@ -202,23 +202,17 @@
   .lp-grid-3col { grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
   .lp-grid-4col { grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
 
-  /* FLEX LAYOUT FOR CARDS TO CENTER INCOMPLETE ROWS */
   .lp-card-grid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: 1fr;
     gap: 12px;
   }
 
-  .lp-card-grid .lp-select-card {
-    flex: 1 1 100%;
-  }
-
   @media (min-width: 769px) {
-    .lp-card-grid.lp-grid-cols-2 .lp-select-card { flex: 0 0 calc(50% - 12px); max-width: calc(50% - 12px); }
-    .lp-card-grid.lp-grid-cols-3 .lp-select-card { flex: 0 0 calc(33.333% - 12px); max-width: calc(33.333% - 12px); }
-    .lp-card-grid.lp-grid-cols-4 .lp-select-card { flex: 0 0 calc(25% - 12px); max-width: calc(25% - 12px); }
-    .lp-card-grid.lp-grid-cols-6 .lp-select-card { flex: 0 0 calc(16.666% - 12px); max-width: calc(16.666% - 12px); }
+    .lp-card-grid.lp-grid-cols-2 { grid-template-columns: repeat(2, 1fr); }
+    .lp-card-grid.lp-grid-cols-3 { grid-template-columns: repeat(3, 1fr); }
+    .lp-card-grid.lp-grid-cols-4 { grid-template-columns: repeat(4, 1fr); }
+    .lp-card-grid.lp-grid-cols-6 { grid-template-columns: repeat(6, 1fr); }
   }
 
   .lp-select-card { 
@@ -235,7 +229,6 @@
     text-align: center; 
     transition: all 0.2s ease; 
     cursor: pointer; 
-    box-sizing: border-box;
   }
   .lp-select-card:hover { border-color: var(--lp-color-dark); transform: translateY(-2px); }
   .lp-select-card.active { 
