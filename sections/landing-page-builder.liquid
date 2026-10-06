@@ -544,7 +544,7 @@
         </div>
 
       {% comment %} --- SECTION 9: REAL JEEPS. REAL TRAILS. GALLERY --- {% endcomment %}
-      {% when 'gallery' %}
+      {% comment %} {% when 'gallery' %}
         <div class="lp-section" {{ block.shopify_attributes }}>
           <div class="lp-section-header">
             <h2 style=" font-size: 2rem;">{{ block.settings.title }}</h2>
@@ -564,6 +564,44 @@
               {% endif %}
             {% endfor %}
           </div>
+        </div> {% endcomment %}
+
+        {% comment %} --- SECTION 9: REAL JEEPS. REAL TRAILS. GALLERY (YOTPO) --- {% endcomment %}
+      {% when 'gallery' %}
+        <div class="lp-section" {{ block.shopify_attributes }}>
+          {% if block.settings.title != blank or block.settings.subtitle != blank %}
+            <div class="lp-section-header">
+              {% if block.settings.title != blank %}
+                <h2 style="font-size: 2rem;">{{ block.settings.title }}</h2>
+              {% endif %}
+              {% if block.settings.subtitle != blank %}
+                <p>{{ block.settings.subtitle }}</p>
+              {% endif %}
+            </div>
+          {% endif %}
+
+          {% if block.settings.yotpo_gallery_id != blank %}
+            <div 
+              class="yotpo yotpo-pictures-widget" 
+              data-gallery-id="{{ block.settings.yotpo_gallery_id }}">
+            </div>
+          {% else %}
+            {% comment %} Fallback liquid gallery if no Yotpo ID is provided {% endcomment %}
+            <div class="lp-gallery-grid">
+              {% for i in (1..5) %}
+                {% capture img_key %}gallery_img_{{ i }}{% endcapture %}
+                {% capture caption_key %}gallery_cap_{{ i }}{% endcapture %}
+                {% assign g_img = block.settings[img_key] %}
+                {% assign g_cap = block.settings[caption_key] %}
+                {% if g_img != blank %}
+                  <div class="lp-gallery-item">
+                    <img src="{{ g_img | image_url: width: 500 }}" alt="{{ g_cap }}" loading="lazy">
+                    {% if g_cap != blank %}<p>{{ g_cap }}</p>{% endif %}
+                  </div>
+                {% endif %}
+              {% endfor %}
+            </div>
+          {% endif %}
         </div>
 
       {% comment %} --- SECTION 10: CONTACT & HELP --- {% endcomment %}
@@ -1029,12 +1067,36 @@
         { "type": "range", "id": "limit", "label": "Product Limit", "min": 3, "max": 12, "step": 3, "default": 6 }
       ]
     },
-    {
+   {
       "type": "gallery",
       "name": "9. Real Jeeps Gallery",
       "settings": [
-        { "type": "text", "id": "title", "label": "Heading", "default": "Real Jeeps. Real Trails." },
-        { "type": "text", "id": "subtitle", "label": "Subheading", "default": "Built for real-world wheeling." },
+        { 
+          "type": "text", 
+          "id": "title", 
+          "label": "Heading", 
+          "default": "Real Jeeps. Real Trails." 
+        },
+        { 
+          "type": "text", 
+          "id": "subtitle", 
+          "label": "Subheading", 
+          "default": "Built for real-world wheeling." 
+        },
+        {
+          "type": "header",
+          "content": "Yotpo Visual UGC Gallery Settings"
+        },
+        { 
+          "type": "text", 
+          "id": "yotpo_gallery_id", 
+          "label": "Yotpo Gallery ID", 
+          "info": "Enter your Yotpo Gallery ID (e.g., 60f8a2b5...). If left blank, the standard image grid below will be used as a fallback." 
+        },
+        {
+          "type": "header",
+          "content": "Fallback Static Images"
+        },
         { "type": "image_picker", "id": "gallery_img_1", "label": "Image 1" },
         { "type": "text", "id": "gallery_cap_1", "label": "Caption 1", "default": "JL on rocks" },
         { "type": "image_picker", "id": "gallery_img_2", "label": "Image 2" },
