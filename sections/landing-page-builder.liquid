@@ -567,21 +567,9 @@
         </div>
 
       {% comment %} --- SECTION 10: CONTACT & HELP --- {% endcomment %}
-
-       {% comment %} {% when 'guide' %}
-        <div class="lp-section lp-order-guide" {{ block.shopify_attributes }}>
-          <h2>{{ block.settings.title }}</h2>
-          <p style="font-size: 1.1rem; margin-bottom: 10px;">{{ block.settings.subtitle }}</p>
-          <div class="lp-rte">
-            <p><strong>Phone:</strong> {{ block.settings.phone }}<br>
-            <strong>Email:</strong> <a href="mailto:{{ block.settings.email }}">{{ block.settings.email }}</a></p>
-          </div>
-        </div> {% endcomment %}
-
-        
       {% when 'guide' %}
         <div class="lp-section lp-order-guide" {{ block.shopify_attributes }}>
-          <h2>{{ block.settings.title }}</h2>
+          <h2 style=" font-size: 1.5rem">{{ block.settings.title }}</h2>
           <p style="font-size: 1.1rem; margin-bottom: 20px;">{{ block.settings.subtitle }}</p>
           {% if block.settings.button_text != blank %}
             <div>
