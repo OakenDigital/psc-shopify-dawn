@@ -24,7 +24,7 @@
           "type": "hero",
           "settings": {
             "headline": "Stop Fighting The Steering Wheel.",
-            "subheadline": "<p><strong>Dynamic Damping Stabilizer® for Jeep JL & JT</strong><br/>Engineered to reduce on-road drivability issues caused by lifted suspensions and oversized tires while delivering better steering control on the trail.<br/><em>More stable on the highway. More controlled off-road.</em> DDS®&nbsp;</p>",
+            "subheadline": "<p><strong>Dynamic Damping Stabilizer® for Jeep JL & JT</strong></p><p><br>Engineered to reduce on-road drivability issues caused by lifted suspensions and oversized tires while delivering better steering control on the trail.</p><p><br><em>More stable on the highway. More controlled off-road.</em> </p>",
             "btn1_text": "Shop Complete DDS Kits",
             "btn1_link": "shopify://collections/dds-dynamic-damping-stabilizer-system-jeep-wrangler-jl-jt",
             "btn2_text": "Already Have PSC Steering? Shop DDS Add-On Kits",
@@ -52,15 +52,6 @@
           "type": "cases",
           "settings": {
             "heading": "Built For The Way You Use Your Jeep"
-          }
-        },
-        "system_77mfNi": {
-          "type": "system",
-          "settings": {
-            "title": "Build A Complete PSC Steering System",
-            "subtitle": "Designed To Work Together. Instead of piecing together random parts, build a complete PSC steering system.",
-            "default_prompt": "Select your Jeep Engine, Axle, and Tie Rod above to generate your complete setup.",
-            "cta_text": "Build Complete Steering System"
           }
         },
         "step_th6fRk": {
@@ -263,6 +254,15 @@
             "card_12_parent_val": "3, 4"
           }
         },
+        "system_77mfNi": {
+          "type": "system",
+          "settings": {
+            "title": "Build A Complete PSC Steering System",
+            "subtitle": "Designed To Work Together. Instead of piecing together random parts, build a complete PSC steering system.",
+            "default_prompt": "Select your Jeep Engine, Axle, and Tie Rod above to generate your complete setup.",
+            "cta_text": "Build Complete Steering System"
+          }
+        },
         "products_grP84k": {
           "type": "products",
           "settings": {
@@ -290,8 +290,8 @@
           "settings": {
             "title": "Not Sure Which System Fits?",
             "subtitle": "Call us. We'll help you identify the right setup.",
-            "phone": "817-270-0102",
-            "email": "support@pscsteering.com"
+            "button_text": "Contact Us",
+            "button_url": "shopify://pages/contact"
           }
         }
       },
@@ -300,10 +300,10 @@
         "features_z94TU7",
         "why_rrr9ht",
         "cases_ybBzna",
-        "system_77mfNi",
         "step_th6fRk",
         "step_ymryCh",
         "step_fPehVW",
+        "system_77mfNi",
         "products_grP84k",
         "gallery_pBVpjd",
         "guide_MGdwCa"
