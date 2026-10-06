@@ -569,8 +569,8 @@
       {% comment %} --- SECTION 10: CONTACT & HELP --- {% endcomment %}
       {% when 'guide' %}
         <div class="lp-section lp-order-guide" {{ block.shopify_attributes }}>
-          <h2 style=" font-size: 1.5rem">{{ block.settings.title }}</h2>
-          <p style="font-size: 1.1rem; margin-bottom: 20px;">{{ block.settings.subtitle }}</p>
+          <h2>{{ block.settings.title }}</h2>
+          <p style="font-size: 1.5rem; margin-bottom: 20px;">{{ block.settings.subtitle }}</p>
           {% if block.settings.button_text != blank %}
             <div>
               <a href="{{ block.settings.button_url }}" class="lp-btn lp-btn-primary">
