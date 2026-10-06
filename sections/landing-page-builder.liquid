@@ -459,7 +459,7 @@
       {% when 'step' %}
         <div class="lp-section lp-filter-step" id="{{ block.settings.section_id }}" data-step="{{ block.settings.step_type }}" {{ block.shopify_attributes }}>
           <div class="lp-section-header">
-            <h2><span class="lp-step-num">{{ block.settings.step_number }}</span> {{ block.settings.title }}</h2>
+            <h2 style=" font-size: 2rem;"><span class="lp-step-num">{{ block.settings.step_number }}</span> {{ block.settings.title }}</h2>
             {% if block.settings.subtitle != blank %}
               <p>{{ block.settings.subtitle }}</p>
             {% endif %}
