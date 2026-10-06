@@ -1,4 +1,4 @@
-{{ 'landing-page-builder.css' | asset_url | stylesheet_tag }}
+{% comment %} {{ 'landing-page-builder.css' | asset_url | stylesheet_tag }}
 
 <style>
   /* --- CUSTOM FONT FACES --- */
@@ -431,67 +431,6 @@
             </div>
           </div>
         </div>
-      {% comment %} {% when 'why' %}
-        <div class="lp-section lp-why-upgrade" {{ block.shopify_attributes }}>
-          <div class="lp-why-grid">
-            <div>
-              <h2>{{ block.settings.heading }}</h2>
-              <p>{{ block.settings.intro_text }}</p>
-              <div class="lp-pain-points">
-                <ul>
-                  <li>⚡ Steering wheel jerk</li>
-                  <li>⚡ Sudden kickback</li>
-                  <li>⚡ Driver fatigue</li>
-                  <li>⚡ Constant correction</li>
-                  <li>⚡ Reduced confidence at speed</li>
-                </ul>
-              </div>
-            </div>
-            <div>
-              <p style="font-size: 2rem; line-height: 1.5;">{{ block.settings.solution_text }}</p>
-              <p style="font-family: 'Eurostile Bold', sans-serif; font-size: 2rem; color: var(--lp-color-primary);">
-                Not a band-aid. A steering solution built for serious wheeling.
-              </p>
-            </div>
-          </div>
-        </div>
-
-      {% comment %} --- SECTION 3: BUILT FOR THE WAY YOU USE YOUR JEEP --- {% endcomment %}
-      {% when 'cases' %}
-        <div class="lp-section" {{ block.shopify_attributes }}>
-          <div class="lp-section-header">
-            <h2>{{ block.settings.heading }}</h2>
-          </div>
-          <div class="lp-usecases-grid">
-            <div class="lp-usecase-card">
-              {% if block.settings.img_1 != blank %}
-                <img src="{{ block.settings.img_1 | image_url: width: 500 }}" alt="Weekend Trail Rider" loading="lazy">
-              {% endif %}
-              <div class="lp-usecase-card-body">
-                <h3>Weekend Trail Rider</h3>
-                <p>More control. Less steering shock.</p>
-              </div>
-            </div>
-            <div class="lp-usecase-card">
-              {% if block.settings.img_2 != blank %}
-                <img src="{{ block.settings.img_2 | image_url: width: 500 }}" alt="Overland Builder" loading="lazy">
-              {% endif %}
-              <div class="lp-usecase-card-body">
-                <h3>Overland Builder</h3>
-                <p>Improved confidence on long days behind the wheel.</p>
-              </div>
-            </div>
-            <div class="lp-usecase-card">
-              {% if block.settings.img_3 != blank %}
-                <img src="{{ block.settings.img_3 | image_url: width: 500 }}" alt="Hardcore Rock Crawler" loading="lazy">
-              {% endif %}
-              <div class="lp-usecase-card-body">
-                <h3>Hardcore Rock Crawler</h3>
-                <p>Designed to handle aggressive terrain and large tires.</p>
-              </div>
-            </div>
-          </div>
-        </div> {% endcomment %}
 
       {% comment %} --- SECTION 4: WHAT IS DYNAMIC DAMPING STABILIZER --- {% endcomment %}
       {% when 'features' %}
@@ -604,28 +543,6 @@
           </div>
         </div>
 
-      {% comment %} --- SECTION 9: REAL JEEPS. REAL TRAILS. GALLERY --- {% endcomment %}
-      {% comment %} {% when 'gallery' %}
-        <div class="lp-section" {{ block.shopify_attributes }}>
-          <div class="lp-section-header">
-            <h2 style=" font-size: 2rem;">{{ block.settings.title }}</h2>
-            <p>{{ block.settings.subtitle }}</p>
-          </div>
-          <div class="lp-gallery-grid">
-            {% for i in (1..5) %}
-              {% capture img_key %}gallery_img_{{ i }}{% endcapture %}
-              {% capture caption_key %}gallery_cap_{{ i }}{% endcapture %}
-              {% assign g_img = block.settings[img_key] %}
-              {% assign g_cap = block.settings[caption_key] %}
-              {% if g_img != blank %}
-                <div class="lp-gallery-item">
-                  <img src="{{ g_img | image_url: width: 500 }}" alt="{{ g_cap }}" loading="lazy">
-                  {% if g_cap != blank %}<p>{{ g_cap }}</p>{% endif %}
-                </div>
-              {% endif %}
-            {% endfor %}
-          </div>
-        </div> {% endcomment %}
 
         {% comment %} --- SECTION 9: REAL JEEPS. REAL TRAILS. GALLERY (YOTPO) --- {% endcomment %}
       {% when 'gallery' %}
@@ -1264,6 +1181,1224 @@
       ]
     }
     
+  ],
+  "presets": [
+    {
+      "name": "Landing Page Builder",
+      "blocks": [
+        { "type": "hero" },
+        { "type": "why" },
+        { "type": "cases" },
+        { "type": "features" },
+        { 
+          "type": "step",
+          "settings": {
+            "step_number": "1",
+            "step_type": "engine",
+            "section_id": "select-engine",
+            "title": "Which Jeep Model / Engine Do You Have?",
+            "subtitle": "Step 1: Select Your Vehicle Platform"
+          }
+        },
+        { 
+          "type": "step",
+          "settings": {
+            "step_number": "2",
+            "step_type": "axle",
+            "section_id": "select-axle",
+            "title": "Which Front Axle Are You Running?",
+            "subtitle": "Step 2: Select Your Front Axle"
+          }
+        },
+        { 
+          "type": "step",
+          "settings": {
+            "step_number": "3",
+            "step_type": "tierod",
+            "section_id": "select-tierod",
+            "title": "Which Tie Rod Clamp Size Do You Need?",
+            "subtitle": "Step 3: Select Your Tie Rod"
+          }
+        },
+        { "type": "system" },
+        { "type": "products" },
+        { "type": "gallery" },
+        { "type": "guide" }
+      ]
+    }
+  ]
+}
+{% endschema %} {% endcomment %}
+
+
+{{ 'landing-page-builder.css' | asset_url | stylesheet_tag }}
+
+<style>
+  /* --- CUSTOM FONT FACES --- */
+  @font-face {
+    font-family: 'Eurostile Bold';
+    src: url('{{ "eurostile-bold.woff2" | asset_url }}') format('woff2'),
+         url('{{ "eurostile-bold.woff" | asset_url }}') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: 'Eurostile Bold Oblique';
+    src: url('{{ "eurostile-bold-oblique.woff2" | asset_url }}') format('woff2'),
+         url('{{ "eurostile-bold-oblique.woff" | asset_url }}') format('woff');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: 'Eurostile Demi';
+    src: url('{{ "eurostile-demi.woff2" | asset_url }}') format('woff2'),
+         url('{{ "eurostile-demi.woff" | asset_url }}') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: 'Eurostile Regular';
+    src: url('{{ "eurostile-regular.woff2" | asset_url }}') format('woff2'),
+         url('{{ "eurostile-regular.woff" | asset_url }}') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: 'Gotham Black Italic';
+    src: url('{{ "gotham-black-italic.woff2" | asset_url }}') format('woff2'),
+         url('{{ "gotham-black-italic.woff" | asset_url }}') format('woff');
+    font-weight: 900;
+    font-style: italic;
+    font-display: swap;
+  }
+
+  /* --- BRAND COLOR & SPACING VARIABLES --- */
+  :root {
+    --lp-color-primary: #D6001C;
+    --lp-color-primary-hover: #b00017;
+    --lp-color-dark: #2D2926;
+    --lp-color-dark-hover: #1a1816;
+    --lp-color-bg-light: #f8f9fa;
+    --lp-color-border: #e0e0e0;
+
+    --lp-padding-top: {{ section.settings.padding_top }}px;
+    --lp-padding-bottom: {{ section.settings.padding_bottom }}px;
+    --lp-section-gap: {{ section.settings.section_gap }}px;
+    --lp-divider-gap: {{ section.settings.divider_gap }}px;
+    --lp-scroll-offset: {{ section.settings.scroll_offset }}px;
+  }
+
+  /* --- GLOBAL SECTION STYLES --- */
+  .lp-container { 
+    max-width: 1200px; 
+    margin: 0 auto; 
+    padding-top: var(--lp-padding-top);
+    padding-bottom: var(--lp-padding-bottom);
+    padding-left: 20px;
+    padding-right: 20px;
+    font-family: 'Eurostile Regular', sans-serif; 
+    color: var(--lp-color-dark);
+  }
+
+  .lp-section { 
+    margin-bottom: var(--lp-section-gap); 
+    scroll-margin-top: var(--lp-scroll-offset); 
+  }
+  
+  .lp-divider {
+    border: 0;
+    height: 1px;
+    background: var(--lp-color-border);
+    margin-top: var(--lp-divider-gap);
+    margin-bottom: var(--lp-divider-gap);
+  }
+
+  .lp-container h1, 
+  .lp-container h2, 
+  .lp-container h3, 
+  .lp-step-num { 
+    font-family: 'Eurostile Bold', sans-serif; 
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--lp-color-dark);
+  }
+  
+  .lp-hero h1 { 
+    font-family: 'Gotham Black Italic', sans-serif; 
+    font-size: 2.75rem; 
+    margin-bottom: 15px; 
+    line-height: 1.1;
+    color: var(--lp-color-dark);
+  }
+  
+  .lp-hero .lp-subheadline,
+  .lp-hero .lp-subheadline p { 
+    font-family: 'Eurostile Bold Oblique', sans-serif; 
+    font-size: 1.65rem; 
+    max-width: 800px; 
+    margin: 0 auto 20px; 
+    color: #444; 
+    line-height: 1.2;
+  }
+
+  .lp-hero .lp-subheadline strong,
+  .lp-hero .lp-subheadline b {
+    font-family: 'Eurostile Bold Oblique', sans-serif;
+    font-weight: bold;
+  }
+
+  .lp-card-info h3, .slot-title, .lp-product-card h4 {
+    font-family: 'Eurostile Demi', sans-serif;
+    font-size: 1.05rem;
+    margin: 6px 0 4px;
+    color: var(--lp-color-dark);
+  }
+
+  .lp-btn { 
+    display: inline-block; 
+    padding: 12px 24px; 
+    text-decoration: none; 
+    border-radius: 4px; 
+    font-family: 'Eurostile Bold', sans-serif; 
+    text-transform: uppercase;
+    text-align: center; 
+    cursor: pointer; 
+    border: none; 
+    transition: all 0.2s ease; 
+  }
+  .lp-btn-primary { background-color: var(--lp-color-primary); color: #fff; }
+  .lp-btn-primary:hover { background-color: var(--lp-color-primary-hover); }
+  .lp-btn-secondary { background-color: var(--lp-color-dark); color: #fff; }
+  .lp-btn-secondary:hover { background-color: var(--lp-color-dark-hover); }
+  .lp-btn-sm { padding: 8px 16px; font-size: 0.85rem; margin-top: 8px; }
+
+  .lp-hero { text-align: center; padding: 50px 20px; background-color: var(--lp-color-bg-light); border-radius: 8px; border-top: 5px solid var(--lp-color-primary); }
+  .lp-btn-group { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+
+  /* SECTION 2: WHY UPGRADE */
+  .lp-why-upgrade {
+    background: #fff;
+    border: 1px solid var(--lp-color-border);
+    border-radius: 8px;
+    padding: 30px;
+  }
+  .lp-why-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    align-items: center;
+  }
+  @media (min-width: 769px) {
+    .lp-why-grid { grid-template-columns: 1fr 1fr; }
+  }
+  .lp-pain-points {
+    background: #fff0f0;
+    border-left: 4px solid var(--lp-color-primary);
+    padding: 15px 20px;
+    margin: 15px 0;
+    border-radius: 0 6px 6px 0;
+  }
+  .lp-pain-points ul { margin: 0; padding-left: 20px; }
+  .lp-pain-points li { margin-bottom: 6px; font-family: 'Eurostile Bold', sans-serif; color: var(--lp-color-primary); }
+
+  /* SECTION 3: USE CASES */
+  .lp-usecases-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+  }
+  .lp-usecase-card {
+    background: var(--lp-color-bg-light);
+    border: 1px solid var(--lp-color-border);
+    border-radius: 8px;
+    overflow: hidden;
+    text-align: center;
+  }
+  .lp-usecase-card img { width: 100%; height: 200px; object-fit: cover; }
+  .lp-usecase-card-body { padding: 20px; }
+
+  .lp-feature {
+    background: var(--lp-color-bg-light);
+    border-radius: 8px;
+    padding: 24px;
+    border: 1px solid var(--lp-color-border);
+  }
+
+  .lp-grid { display: grid; gap: 20px; }
+  .lp-grid-2col { 
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px; 
+    align-items: center; 
+  }
+
+  @media (min-width: 769px) {
+    .lp-grid-2col { grid-template-columns: 1fr 1fr; }
+  }
+
+  .lp-feature-media {
+    width: 100%;
+    overflow: hidden;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .lp-feature-media img {
+    width: 100%;
+    height: auto;
+    max-height: 450px;
+    object-fit: cover;
+    display: block;
+    border-radius: 6px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  }
+
+  .lp-step-num { 
+    background: var(--lp-color-primary); 
+    color: #fff; 
+    border-radius: 50%; 
+    width: 28px; 
+    height: 28px; 
+    display: inline-flex; 
+    align-items: center; 
+    justify-content: center; 
+    font-size: 1.5rem; 
+    margin-right: 8px; 
+  }
+
+  .lp-grid-3col { grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
+  .lp-grid-4col { grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
+
+  /* FLEX LAYOUT FOR CARDS */
+  .lp-card-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: flex-start;
+  }
+
+  .lp-card-grid.lp-grid-centered {
+    justify-content: center;
+  }
+
+  .lp-card-grid .lp-select-card { flex: 1 1 100%; }
+
+  @media (min-width: 769px) {
+    .lp-card-grid.lp-grid-cols-2 .lp-select-card { flex: 0 0 calc(50% - 12px); max-width: calc(50% - 12px); }
+    .lp-card-grid.lp-grid-cols-3 .lp-select-card { flex: 0 0 calc(33.333% - 12px); max-width: calc(33.333% - 12px); }
+    .lp-card-grid.lp-grid-cols-4 .lp-select-card { flex: 0 0 calc(25% - 12px); max-width: calc(25% - 12px); }
+    .lp-card-grid.lp-grid-cols-5 .lp-select-card { flex: 0 0 calc(20% - 12px); max-width: calc(20% - 12px); }
+    .lp-card-grid.lp-grid-cols-6 .lp-select-card { flex: 0 0 calc(16.666% - 12px); max-width: calc(16.666% - 12px); }
+  }
+
+  .lp-select-card { 
+    background: #fff; 
+    border: 2px solid var(--lp-color-border); 
+    border-radius: 6px; 
+    padding: 12px; 
+    color: inherit; 
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center; 
+    width: 100%; 
+    text-align: center; 
+    transition: all 0.2s ease; 
+    cursor: pointer; 
+    box-sizing: border-box;
+  }
+  .lp-select-card:hover { border-color: var(--lp-color-dark); transform: translateY(-2px); }
+  .lp-select-card.active { 
+    border-color: var(--lp-color-primary); 
+    background-color: #fff9f9; 
+    box-shadow: 0 0 0 1px var(--lp-color-primary); 
+  }
+  
+  .lp-select-card.lp-hidden { display: none !important; }
+  .lp-card-img img { max-width: 100%; height: auto; max-height: 110px; object-fit: contain; }
+
+  .lp-product-card { 
+    border: 1px solid var(--lp-color-border); 
+    border-radius: 6px; 
+    padding: 12px; 
+    text-align: center; 
+    position: relative; 
+    background: #fff; 
+    display: flex; 
+    flex-direction: column; 
+    justify-content: space-between; 
+  }
+  .lp-product-card-img { height: 140px; display: flex; align-items: center; justify-content: center; margin-bottom: 8px; }
+  .lp-product-card-img img { max-width: 100%; max-height: 100%; object-fit: contain; }
+  
+  .lp-card-badge { 
+    position: absolute; 
+    top: 8px; 
+    left: 8px; 
+    background: var(--lp-color-dark); 
+    color: #fff; 
+    font-family: 'Eurostile Bold', sans-serif;
+    font-size: 0.7rem; 
+    padding: 3px 6px; 
+    border-radius: 3px; 
+    z-index: 1; 
+  }
+
+  /* GALLERY GRID FALLBACK */
+  .lp-gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 15px;
+  }
+  .lp-gallery-item img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 6px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  }
+  .lp-gallery-item p {
+    text-align: center;
+    font-family: 'Eurostile Demi', sans-serif;
+    margin-top: 6px;
+    font-size: 0.9rem;
+  }
+  
+  .lp-sku { font-family: 'Eurostile Regular', sans-serif; font-size: 0.8rem; color: #666; margin: 4px 0; }
+  .lp-price { font-family: 'Eurostile Bold', sans-serif; font-size: 1.1rem; color: var(--lp-color-primary); margin-top: 4px; }
+
+  .lp-order-guide { 
+    background: var(--lp-color-bg-light); 
+    padding: 25px; 
+    border-radius: 8px; 
+    border-left: 5px solid var(--lp-color-primary); 
+    text-align: center;
+  }
+
+  .lp-section-header { text-align: center; margin-bottom: 15px; }
+  .lp-section-header h2 { margin-bottom: 5px; font-size: 1.6rem; }
+  .lp-section-header p { margin: 0; font-family: 'Eurostile Regular', sans-serif; color: #666; }
+  .lp-text-center { text-align: center; }
+  .lp-mt-20 { margin-top: 15px; }
+</style>
+
+<div class="lp-container" id="dds-interactive-builder">
+  {% for block in section.blocks %}
+    {% case block.type %}
+
+      {% comment %} --- SECTION 1: HERO SECTION --- {% endcomment %}
+      {% when 'hero' %}
+        <div class="lp-section lp-hero" {{ block.shopify_attributes }}>
+          <div class="lp-hero-content">
+            <h1>{{ block.settings.headline }}</h1>
+            <div class="lp-subheadline">{{ block.settings.subheadline }}</div>
+            <div class="lp-btn-group">
+              {% if block.settings.btn1_text != blank %}
+                <a href="{{ block.settings.btn1_link }}" class="lp-btn lp-btn-primary">{{ block.settings.btn1_text }}</a>
+              {% endif %}
+              {% if block.settings.btn2_text != blank %}
+                <a href="{{ block.settings.btn2_link }}" class="lp-btn lp-btn-secondary">{{ block.settings.btn2_text }}</a>
+              {% endif %}
+            </div>
+          </div>
+        </div>
+
+      {% comment %} --- SECTION 2: WHY JEEP OWNERS UPGRADE TO DDS --- {% endcomment %}
+      {% when 'why' %}
+        <div class="lp-section lp-why-upgrade" {{ block.shopify_attributes }}>
+          <div class="lp-why-grid">
+            <div>
+              <h2>{{ block.settings.heading }}</h2>
+              <p>{{ block.settings.intro_text }}</p>
+              {% if block.settings.pain_points != blank %}
+                <div class="lp-pain-points">
+                  {{ block.settings.pain_points }}
+                </div>
+              {% endif %}
+            </div>
+            <div>
+              <p style="font-size: 2rem; line-height: 1.5;">{{ block.settings.solution_text }}</p>
+              {% if block.settings.highlight_text != blank %}
+                <p style="font-family: 'Eurostile Bold', sans-serif; font-size: 2rem; color: var(--lp-color-primary);">
+                  {{ block.settings.highlight_text }}
+                </p>
+              {% endif %}
+            </div>
+          </div>
+        </div>
+
+      {% comment %} --- SECTION 3: BUILT FOR THE WAY YOU USE YOUR JEEP --- {% endcomment %}
+      {% when 'cases' %}
+        <div class="lp-section" {{ block.shopify_attributes }}>
+          {% if block.settings.heading != blank %}
+            <div class="lp-section-header">
+              <h2>{{ block.settings.heading }}</h2>
+            </div>
+          {% endif %}
+          <div class="lp-usecases-grid">
+            <div class="lp-usecase-card">
+              {% if block.settings.img_1 != blank %}
+                <img src="{{ block.settings.img_1 | image_url: width: 500 }}" alt="{{ block.settings.title_1 | escape }}" loading="lazy">
+              {% endif %}
+              <div class="lp-usecase-card-body">
+                <h3>{{ block.settings.title_1 }}</h3>
+                <p>{{ block.settings.copy_1 }}</p>
+              </div>
+            </div>
+            <div class="lp-usecase-card">
+              {% if block.settings.img_2 != blank %}
+                <img src="{{ block.settings.img_2 | image_url: width: 500 }}" alt="{{ block.settings.title_2 | escape }}" loading="lazy">
+              {% endif %}
+              <div class="lp-usecase-card-body">
+                <h3>{{ block.settings.title_2 }}</h3>
+                <p>{{ block.settings.copy_2 }}</p>
+              </div>
+            </div>
+            <div class="lp-usecase-card">
+              {% if block.settings.img_3 != blank %}
+                <img src="{{ block.settings.img_3 | image_url: width: 500 }}" alt="{{ block.settings.title_3 | escape }}" loading="lazy">
+              {% endif %}
+              <div class="lp-usecase-card-body">
+                <h3>{{ block.settings.title_3 }}</h3>
+                <p>{{ block.settings.copy_3 }}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      {% comment %} --- SECTION 4: WHAT IS DYNAMIC DAMPING STABILIZER --- {% endcomment %}
+      {% when 'features' %}
+        <div class="lp-section lp-feature" {{ block.shopify_attributes }}>
+          <div class="lp-grid-2col">
+            <div class="lp-feature-media">
+              {% if block.settings.image != blank %}
+                <img src="{{ block.settings.image | image_url: width: 800 }}" alt="{{ block.settings.heading }}" loading="lazy">
+              {% else %}
+                {{ 'image' | placeholder_svg_tag: 'lp-placeholder' }}
+              {% endif %}
+            </div>
+            <div class="lp-feature-content">
+              <h2>{{ block.settings.heading }}</h2>
+              <div class="lp-rte">{{ block.settings.copy }}</div>
+              {% if block.settings.bullets != blank %}
+                <div class="lp-bullets" style="margin-top: 15px; line-height: 1.6;">
+                  {{ block.settings.bullets }}
+                </div>
+              {% endif %}
+            </div>
+          </div>
+        </div>
+
+      {% comment %} --- SECTIONS 5, 6 & 7: FILTER SELECTION STEPS --- {% endcomment %}
+      {% when 'step' %}
+        <div class="lp-section lp-filter-step" id="{{ block.settings.section_id }}" data-step="{{ block.settings.step_type }}" {{ block.shopify_attributes }}>
+          <div class="lp-section-header">
+            <h2 style="font-size: 2rem;"><span class="lp-step-num">{{ block.settings.step_number }}</span> {{ block.settings.title }}</h2>
+            {% if block.settings.subtitle != blank %}
+              <p>{{ block.settings.subtitle }}</p>
+            {% endif %}
+          </div>
+          <div class="lp-card-grid lp-grid-cols-{{ block.settings.columns }}{% if block.settings.center_incomplete_rows %} lp-grid-centered{% endif %}">
+            {% for i in (1..12) %}
+              {% capture title_key %}card_{{ i }}_title{% endcapture %}
+              {% capture sub_key %}card_{{ i }}_sub{% endcapture %}
+              {% capture val_key %}card_{{ i }}_val{% endcapture %}
+              {% capture parent_val_key %}card_{{ i }}_parent_val{% endcapture %}
+              {% capture img_key %}card_{{ i }}_img{% endcapture %}
+
+              {% assign title = block.settings[title_key] %}
+              {% assign sub = block.settings[sub_key] %}
+              {% assign val = block.settings[val_key] %}
+              {% assign parent_val = block.settings[parent_val_key] %}
+              {% assign img = block.settings[img_key] %}
+
+              {% if title != blank %}
+                <button type="button" 
+                        class="lp-card lp-select-card" 
+                        data-step="{{ block.settings.step_type }}" 
+                        data-value="{{ val | downcase | strip }}"
+                        {% if parent_val != blank %}data-parent-value="{{ parent_val | downcase | strip }}"{% endif %}>
+                  {% if img != blank %}
+                    <div class="lp-card-img">
+                      <img src="{{ img | image_url: width: 400 }}" alt="{{ title }}" loading="lazy">
+                    </div>
+                  {% endif %}
+                  <div class="lp-card-info">
+                    <h3>{{ title }}</h3>
+                    {% if sub != blank %}<p>{{ sub }}</p>{% endif %}
+                  </div>
+                </button>
+              {% endif %}
+            {% endfor %}
+          </div>
+        </div>
+
+      {% comment %} --- SECTION 7: DYNAMIC RECOMMENDED SYSTEM GRID --- {% endcomment %}
+      {% when 'system' %}
+        <div class="lp-section lp-system-builder" id="recommended-system-section" {{ block.shopify_attributes }}>
+          <div class="lp-section-header">
+            <h2 style="font-size: 2rem;">{{ block.settings.title }}</h2>
+            <p>{{ block.settings.subtitle }}</p>
+            <p id="lp-system-status" style="margin-top: 10px; font-size: 1.75rem;">{{ block.settings.default_prompt }}</p>
+          </div>
+
+          <div id="lp-recommended-products-wrapper" style="display: none; margin-top: 25px;">
+            <div id="lp-system-product-grid" class="lp-grid lp-grid-3col">
+              {% comment %} Dynamic collection product cards render here via JS {% endcomment %}
+            </div>
+
+            {% if block.settings.cta_text != blank %}
+              <div class="lp-text-center lp-mt-20">
+                <a href="#" id="lp-build-bundle-btn" class="lp-btn lp-btn-primary">{{ block.settings.cta_text }}</a>
+              </div>
+            {% endif %}
+          </div>
+        </div>
+
+      {% comment %} --- SECTION 8: ADD-ON PRODUCTS GRID --- {% endcomment %}
+      {% when 'products' %}
+        <div class="lp-section lp-product-grid-section" id="{{ block.settings.section_id }}" {{ block.shopify_attributes }}>
+          <div class="lp-section-header">
+            <h2 style="font-size: 2rem;">{{ block.settings.title }}</h2>
+            <p>{{ block.settings.subtitle }}</p>
+          </div>
+          <div class="lp-grid lp-grid-3col">
+            {% for product in block.settings.collection.products limit: block.settings.limit %}
+              <div class="lp-product-card">
+                <div class="lp-product-card-img">
+                  <img src="{{ product.featured_image | image_url: width: 300 }}" alt="{{ product.title }}" loading="lazy">
+                </div>
+                <h4>{{ product.title }}</h4>
+                <p class="lp-sku">SKU: {{ product.selected_or_first_available_variant.sku }}</p>
+                <p class="lp-price">{{ product.price | money }}</p>
+                <a href="{{ product.url }}" class="lp-btn lp-btn-secondary lp-btn-sm">View Details</a>
+              </div>
+            {% endfor %}
+          </div>
+        </div>
+
+      {% comment %} --- SECTION 9: REAL JEEPS. REAL TRAILS. GALLERY (YOTPO) --- {% endcomment %}
+      {% when 'gallery' %}
+        <div class="lp-section" {{ block.shopify_attributes }}>
+          {% if block.settings.title != blank or block.settings.subtitle != blank %}
+            <div class="lp-section-header">
+              {% if block.settings.title != blank %}
+                <h2 style="font-size: 2rem;">{{ block.settings.title }}</h2>
+              {% endif %}
+              {% if block.settings.subtitle != blank %}
+                <p>{{ block.settings.subtitle }}</p>
+              {% endif %}
+            </div>
+          {% endif %}
+
+          {% if block.settings.yotpo_gallery_id != blank %}
+            <div 
+              class="yotpo yotpo-pictures-widget" 
+              data-gallery-id="{{ block.settings.yotpo_gallery_id }}">
+            </div>
+          {% else %}
+            <div class="lp-gallery-grid">
+              {% for i in (1..5) %}
+                {% capture img_key %}gallery_img_{{ i }}{% endcapture %}
+                {% capture caption_key %}gallery_cap_{{ i }}{% endcapture %}
+                {% assign g_img = block.settings[img_key] %}
+                {% assign g_cap = block.settings[caption_key] %}
+                {% if g_img != blank %}
+                  <div class="lp-gallery-item">
+                    <img src="{{ g_img | image_url: width: 500 }}" alt="{{ g_cap }}" loading="lazy">
+                    {% if g_cap != blank %}<p>{{ g_cap }}</p>{% endif %}
+                  </div>
+                {% endif %}
+              {% endfor %}
+            </div>
+          {% endif %}
+        </div>
+
+      {% comment %} --- SECTION 10: CONTACT & HELP --- {% endcomment %}
+      {% when 'guide' %}
+        <div class="lp-section lp-order-guide" {{ block.shopify_attributes }}>
+          <h2>{{ block.settings.title }}</h2>
+          <p style="font-size: 1.65rem; margin-bottom: 20px;">{{ block.settings.subtitle }}</p>
+          {% if block.settings.button_text != blank %}
+            <div>
+              <a href="{{ block.settings.button_url }}" class="lp-btn lp-btn-primary">
+                {{ block.settings.button_text }}
+              </a>
+            </div>
+          {% endif %}
+        </div>
+
+    {% endcase %}
+
+    {% unless forloop.last %}
+      <hr class="lp-divider">
+    {% endunless %}
+
+  {% endfor %} 
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const selections = {
+      engine: null,
+      axle: null,
+      tierod: null
+    };
+
+    const cards = document.querySelectorAll('.lp-select-card');
+    const statusText = document.getElementById('lp-system-status');
+    const wrapper = document.getElementById('lp-recommended-products-wrapper');
+    const productGrid = document.getElementById('lp-system-product-grid');
+    const bundleBtn = document.getElementById('lp-build-bundle-btn');
+
+    cards.forEach(card => {
+      card.addEventListener('click', function() {
+        const step = this.getAttribute('data-step');
+        const val = this.getAttribute('data-value');
+
+        document.querySelectorAll(`.lp-select-card[data-step="${step}"]`).forEach(c => c.classList.remove('active'));
+        this.classList.add('active');
+
+        selections[step] = val;
+
+        updateCascadingFilters();
+        checkSelectionsAndFetch();
+      });
+    });
+
+    function updateCascadingFilters() {
+      const selectedEngine = selections.engine ? selections.engine.trim().toLowerCase() : null;
+
+      const axleCards = document.querySelectorAll('.lp-select-card[data-step="axle"]');
+      let currentAxleStillValid = false;
+
+      axleCards.forEach(card => {
+        const hasParentAttr = card.hasAttribute('data-parent-value');
+        const rawParentVal = card.getAttribute('data-parent-value') || '';
+        const allowedParents = rawParentVal.split(',').map(p => p.trim().toLowerCase()).filter(p => p.length > 0);
+
+        if (!selectedEngine || !hasParentAttr || allowedParents.length === 0 || allowedParents.includes(selectedEngine)) {
+          card.classList.remove('lp-hidden');
+          if (card.classList.contains('active')) {
+            currentAxleStillValid = true;
+          }
+        } else {
+          card.classList.add('lp-hidden');
+          card.classList.remove('active');
+        }
+      });
+
+      if (!currentAxleStillValid && selections.axle) {
+        selections.axle = null;
+      }
+
+      const tieRodCards = document.querySelectorAll('.lp-select-card[data-step="tierod"]');
+      let currentTieRodStillValid = false;
+      const activeAxle = selections.axle ? selections.axle.trim().toLowerCase() : null;
+
+      tieRodCards.forEach(card => {
+        const hasParentAttr = card.hasAttribute('data-parent-value');
+        const rawParentVal = card.getAttribute('data-parent-value') || '';
+        const allowedParents = rawParentVal.split(',').map(p => p.trim().toLowerCase()).filter(p => p.length > 0);
+
+        if (!activeAxle || !hasParentAttr || allowedParents.length === 0 || allowedParents.includes(activeAxle)) {
+          card.classList.remove('lp-hidden');
+          if (card.classList.contains('active')) {
+            currentTieRodStillValid = true;
+          }
+        } else {
+          card.classList.add('lp-hidden');
+          card.classList.remove('active');
+        }
+      });
+
+      if (!currentTieRodStillValid && selections.tierod) {
+        selections.tierod = null;
+      }
+    }
+
+    function checkSelectionsAndFetch() {
+      if (selections.engine && selections.axle && selections.tierod) {
+        const engineSlug = selections.engine.trim().toLowerCase().replace(/[^a-z0-9]+/g, '-');
+        const axleSlug = selections.axle.trim().toLowerCase().replace(/[^a-z0-9]+/g, '-');
+        const tierodSlug = selections.tierod.trim().toLowerCase().replace(/[^a-z0-9]+/g, '-');
+
+        const collectionHandle = `dds-${engineSlug}-${axleSlug}-${tierodSlug}`;
+        const collectionUrl = `/collections/${collectionHandle}`;
+
+        statusText.textContent = 'Finding matching complete systems...';
+        wrapper.style.display = 'block';
+        productGrid.innerHTML = ''; 
+
+        fetch(`${collectionUrl}/products.json`)
+          .then(response => {
+            if (!response.ok) throw new Error('Collection handle not found');
+            return response.json();
+          })
+          .then(data => {
+            const products = data.products || [];
+
+            if (products.length === 0) {
+              statusText.textContent = 'No complete system kits currently listed for this combination. Please contact our support team for a custom configuration.';
+              if (bundleBtn) bundleBtn.style.display = 'none';
+              return;
+            }
+
+            statusText.textContent = 'Configuration complete! Here are the available systems for your setup:';
+
+            products.forEach(product => {
+              const variant = product.variants[0] || {};
+              const imgUrl = product.images && product.images.length > 0 ? product.images[0].src : '';
+              const productUrl = `/products/${product.handle}`;
+              const priceText = variant.price ? `$${parseFloat(variant.price).toFixed(2)}` : '';
+
+              const cardHtml = `
+                <div class="lp-product-card">
+                  <div class="lp-product-card-img">
+                    ${imgUrl ? `<img src="${imgUrl}" alt="${product.title}" loading="lazy">` : ''}
+                  </div>
+                  <h4>${product.title}</h4>
+                  ${variant.sku ? `<p class="lp-sku">SKU: ${variant.sku}</p>` : ''}
+                  ${priceText ? `<p class="lp-price">${priceText}</p>` : ''}
+                  <a href="${productUrl}" class="lp-btn lp-btn-secondary lp-btn-sm">View System Details</a>
+                </div>
+              `;
+              productGrid.insertAdjacentHTML('beforeend', cardHtml);
+            });
+
+            if (bundleBtn) {
+              bundleBtn.style.display = 'inline-block';
+              bundleBtn.setAttribute('href', collectionUrl);
+              bundleBtn.textContent = 'View Entire Collection Page';
+            }
+
+            const targetSection = document.getElementById('recommended-system-section');
+            if (targetSection) {
+              targetSection.scrollIntoView({ behavior: 'smooth' });
+            }
+          })
+          .catch(err => {
+            console.warn('System collection lookup error:', err);
+            statusText.textContent = 'Matching setup selected! Click below to view the available options.';
+            if (bundleBtn) {
+              bundleBtn.style.display = 'inline-block';
+              bundleBtn.setAttribute('href', collectionUrl);
+              bundleBtn.textContent = 'Browse Matching Collection';
+            }
+          });
+
+      } else {
+        const missing = [];
+        if (!selections.engine) missing.push('Jeep Model/Engine');
+        if (!selections.axle) missing.push('Axle');
+        if (!selections.tierod) missing.push('Tie Rod');
+
+        statusText.textContent = `Please select your ${missing.join(', ')} above to view compatible complete systems.`;
+        wrapper.style.display = 'none';
+        productGrid.innerHTML = '';
+      }
+    }
+  });
+</script>
+
+{% schema %}
+{
+  "name": "Landing Page Builder",
+  "tag": "section",
+  "class": "section-landing-page",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Vertical Layout & Spacing Controls"
+    },
+    {
+      "type": "range",
+      "id": "section_gap",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "label": "Space Between Blocks",
+      "default": 25
+    },
+    {
+      "type": "range",
+      "id": "divider_gap",
+      "min": 0,
+      "max": 80,
+      "step": 5,
+      "unit": "px",
+      "label": "Divider Line Margin",
+      "default": 30
+    },
+    {
+      "type": "range",
+      "id": "scroll_offset",
+      "min": 0,
+      "max": 200,
+      "step": 5,
+      "unit": "px",
+      "label": "Sticky Header Scroll Offset",
+      "default": 110
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "label": "Overall Top Padding",
+      "default": 10
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "label": "Overall Bottom Padding",
+      "default": 10
+    }
+  ],
+  "blocks": [
+    {
+      "type": "hero",
+      "name": "1. Hero Section",
+      "settings": [
+        { "type": "text", "id": "headline", "label": "Headline", "default": "Stop Fighting The Steering Wheel." },
+        { 
+          "type": "richtext", 
+          "id": "subheadline", 
+          "label": "Subheadline", 
+          "default": "<p>Dynamic Damping Stabilizer® for Jeep JL & JT. Designed to reduce steering kickback and improve control when the terrain gets rough.</p>" 
+        },
+        { "type": "text", "id": "btn1_text", "label": "Button 1 Text", "default": "Explore Systems" },
+        { "type": "url", "id": "btn1_link", "label": "Button 1 Link" },
+        { "type": "text", "id": "btn2_text", "label": "Button 2 Text", "default": "Watch It In Action" },
+        { "type": "url", "id": "btn2_link", "label": "Button 2 Link" }
+      ]
+    },
+    {
+      "type": "why",
+      "name": "2. Why Upgrade To DDS",
+      "settings": [
+        { 
+          "type": "text", 
+          "id": "heading", 
+          "label": "Heading", 
+          "default": "Why Jeep Owners Upgrade To DDS" 
+        },
+        { 
+          "type": "textarea", 
+          "id": "intro_text", 
+          "label": "Intro Text", 
+          "default": "You feel it every time the trail gets rough:" 
+        },
+        { 
+          "type": "richtext", 
+          "id": "pain_points", 
+          "label": "Pain Points Bullet List", 
+          "default": "<ul><li>⚡ Steering wheel jerk</li><li>⚡ Sudden kickback</li><li>⚡ Driver fatigue</li><li>⚡ Constant correction</li><li>⚡ Reduced confidence at speed</li></ul>" 
+        },
+        { 
+          "type": "textarea", 
+          "id": "solution_text", 
+          "label": "Solution Description", 
+          "default": "PSC's Dynamic Damping Stabilizer® system helps control unwanted steering movement before it gets transferred to the steering wheel." 
+        },
+        { 
+          "type": "text", 
+          "id": "highlight_text", 
+          "label": "Highlighted Tagline Text", 
+          "default": "Not a band-aid. A steering solution built for serious wheeling." 
+        }
+      ]
+    },
+    {
+      "type": "cases",
+      "name": "3. Built For Your Jeep",
+      "settings": [
+        { 
+          "type": "text", 
+          "id": "heading", 
+          "label": "Section Heading", 
+          "default": "Built For The Way You Use Your Jeep" 
+        },
+        { "type": "header", "content": "Use Case 1" },
+        { 
+          "type": "image_picker", 
+          "id": "img_1", 
+          "label": "Card 1 Image" 
+        },
+        { 
+          "type": "text", 
+          "id": "title_1", 
+          "label": "Card 1 Title", 
+          "default": "Weekend Trail Rider" 
+        },
+        { 
+          "type": "text", 
+          "id": "copy_1", 
+          "label": "Card 1 Description", 
+          "default": "More control. Less steering shock." 
+        },
+        { "type": "header", "content": "Use Case 2" },
+        { 
+          "type": "image_picker", 
+          "id": "img_2", 
+          "label": "Card 2 Image" 
+        },
+        { 
+          "type": "text", 
+          "id": "title_2", 
+          "label": "Card 2 Title", 
+          "default": "Overland Builder" 
+        },
+        { 
+          "type": "text", 
+          "id": "copy_2", 
+          "label": "Card 2 Description", 
+          "default": "Improved confidence on long days behind the wheel." 
+        },
+        { "type": "header", "content": "Use Case 3" },
+        { 
+          "type": "image_picker", 
+          "id": "img_3", 
+          "label": "Card 3 Image" 
+        },
+        { 
+          "type": "text", 
+          "id": "title_3", 
+          "label": "Card 3 Title", 
+          "default": "Hardcore Rock Crawler" 
+        },
+        { 
+          "type": "text", 
+          "id": "copy_3", 
+          "label": "Card 3 Description", 
+          "default": "Designed to handle aggressive terrain and large tires." 
+        }
+      ]
+    },
+    {
+      "type": "features",
+      "name": "4. What is DDS",
+      "settings": [
+        { "type": "image_picker", "id": "image", "label": "Cutaway Image" },
+        { "type": "text", "id": "heading", "label": "Heading", "default": "What Is Dynamic Damping Stabilizer®?" },
+        { "type": "richtext", "id": "copy", "label": "Main Copy", "default": "<p>Traditional stabilizers react after impact. DDS uses hydraulic damping to help control steering disturbances before they reach the driver.</p>" },
+        { "type": "richtext", "id": "bullets", "label": "Benefits List", "default": "<p>✅ Reduced steering kickback<br>✅ Better steering control<br>✅ More driver confidence<br>✅ Works with PSC Cylinder Assist®<br>✅ Built and tested in Texas</p>" }
+      ]
+    },
+    {
+      "type": "step",
+      "name": "5-6. Filter Step",
+      "settings": [
+        { "type": "text", "id": "step_number", "label": "Step Number (e.g. 1, 2, 3)", "default": "1" },
+        { 
+          "type": "select", 
+          "id": "step_type", 
+          "label": "Selection Type", 
+          "options": [
+            { "value": "engine", "label": "Jeep Engine / Model" },
+            { "value": "axle", "label": "Axle Selection" },
+            { "value": "tierod", "label": "Tie Rod Selection" }
+          ], 
+          "default": "engine" 
+        },
+        { "type": "text", "id": "section_id", "label": "Section Anchor ID (e.g. select-jeep)" },
+        { "type": "text", "id": "title", "label": "Step Heading", "default": "See What's Available For Your Jeep" },
+        { "type": "text", "id": "subtitle", "label": "Subheading", "default": "Select Your Setup" },
+        { 
+          "type": "select", 
+          "id": "columns", 
+          "label": "Grid Columns", 
+          "options": [
+            { "value": "2", "label": "2 Columns" },
+            { "value": "3", "label": "3 Columns" },
+            { "value": "4", "label": "4 Columns" },
+            { "value": "5", "label": "5 Columns" },
+            { "value": "6", "label": "6 Columns" }
+          ], 
+          "default": "5" 
+        },
+        { 
+          "type": "checkbox", 
+          "id": "center_incomplete_rows", 
+          "label": "Center cards on incomplete final row", 
+          "default": true
+        },
+        { "type": "header", "content": "Card 1" },
+        { "type": "text", "id": "card_1_title", "label": "Title", "default": "JL Non-eTorque" },
+        { "type": "text", "id": "card_1_sub", "label": "Subtitle" },
+        { "type": "text", "id": "card_1_val", "label": "Filter Value Tag", "default": "jl-non-etorque" },
+        { "type": "text", "id": "card_1_parent_val", "label": "Required Parent Tag (Axle for Tie Rod / Engine for Axle)" },
+        { "type": "image_picker", "id": "card_1_img", "label": "Image" },
+
+        { "type": "header", "content": "Card 2" },
+        { "type": "text", "id": "card_2_title", "label": "Title", "default": "JL eTorque" },
+        { "type": "text", "id": "card_2_sub", "label": "Subtitle" },
+        { "type": "text", "id": "card_2_val", "label": "Filter Value Tag", "default": "jl-etorque" },
+        { "type": "text", "id": "card_2_parent_val", "label": "Required Parent Tag (Axle for Tie Rod / Engine for Axle)" },
+        { "type": "image_picker", "id": "card_2_img", "label": "Image" },
+
+        { "type": "header", "content": "Card 3" },
+        { "type": "text", "id": "card_3_title", "label": "Title", "default": "JL 392" },
+        { "type": "text", "id": "card_3_sub", "label": "Subtitle" },
+        { "type": "text", "id": "card_3_val", "label": "Filter Value Tag", "default": "jl-392" },
+        { "type": "text", "id": "card_3_parent_val", "label": "Required Parent Tag (Axle for Tie Rod / Engine for Axle)" },
+        { "type": "image_picker", "id": "card_3_img", "label": "Image" },
+
+        { "type": "header", "content": "Card 4" },
+        { "type": "text", "id": "card_4_title", "label": "Title", "default": "JL 4XE" },
+        { "type": "text", "id": "card_4_sub", "label": "Subtitle" },
+        { "type": "text", "id": "card_4_val", "label": "Filter Value Tag", "default": "jl-4xe" },
+        { "type": "text", "id": "card_4_parent_val", "label": "Required Parent Tag (Axle for Tie Rod / Engine for Axle)" },
+        { "type": "image_picker", "id": "card_4_img", "label": "Image" },
+
+        { "type": "header", "content": "Card 5" },
+        { "type": "text", "id": "card_5_title", "label": "Title", "default": "EcoDiesel JL/JT" },
+        { "type": "text", "id": "card_5_sub", "label": "Subtitle" },
+        { "type": "text", "id": "card_5_val", "label": "Filter Value Tag", "default": "ecodiesel" },
+        { "type": "text", "id": "card_5_parent_val", "label": "Required Parent Tag (Axle for Tie Rod / Engine for Axle)" },
+        { "type": "image_picker", "id": "card_5_img", "label": "Image" },
+
+        { "type": "header", "content": "Card 6" },
+        { "type": "text", "id": "card_6_title", "label": "Title" },
+        { "type": "text", "id": "card_6_sub", "label": "Subtitle" },
+        { "type": "text", "id": "card_6_val", "label": "Filter Value Tag" },
+        { "type": "text", "id": "card_6_parent_val", "label": "Required Parent Tag (Axle for Tie Rod / Engine for Axle)" },
+        { "type": "image_picker", "id": "card_6_img", "label": "Image" },
+
+        { "type": "header", "content": "Card 7" },
+        { "type": "text", "id": "card_7_title", "label": "Title" },
+        { "type": "text", "id": "card_7_sub", "label": "Subtitle" },
+        { "type": "text", "id": "card_7_val", "label": "Filter Value Tag" },
+        { "type": "text", "id": "card_7_parent_val", "label": "Required Parent Tag (Axle for Tie Rod / Engine for Axle)" },
+        { "type": "image_picker", "id": "card_7_img", "label": "Image" },
+
+        { "type": "header", "content": "Card 8" },
+        { "type": "text", "id": "card_8_title", "label": "Title" },
+        { "type": "text", "id": "card_8_sub", "label": "Subtitle" },
+        { "type": "text", "id": "card_8_val", "label": "Filter Value Tag" },
+        { "type": "text", "id": "card_8_parent_val", "label": "Required Parent Tag (Axle for Tie Rod / Engine for Axle)" },
+        { "type": "image_picker", "id": "card_8_img", "label": "Image" },
+
+        { "type": "header", "content": "Card 9" },
+        { "type": "text", "id": "card_9_title", "label": "Title" },
+        { "type": "text", "id": "card_9_sub", "label": "Subtitle" },
+        { "type": "text", "id": "card_9_val", "label": "Filter Value Tag" },
+        { "type": "text", "id": "card_9_parent_val", "label": "Required Parent Tag (Axle for Tie Rod / Engine for Axle)" },
+        { "type": "image_picker", "id": "card_9_img", "label": "Image" },
+
+        { "type": "header", "content": "Card 10" },
+        { "type": "text", "id": "card_10_title", "label": "Title" },
+        { "type": "text", "id": "card_10_sub", "label": "Subtitle" },
+        { "type": "text", "id": "card_10_val", "label": "Filter Value Tag" },
+        { "type": "text", "id": "card_10_parent_val", "label": "Required Parent Tag (Axle for Tie Rod / Engine for Axle)" },
+        { "type": "image_picker", "id": "card_10_img", "label": "Image" },
+
+        { "type": "header", "content": "Card 11" },
+        { "type": "text", "id": "card_11_title", "label": "Title" },
+        { "type": "text", "id": "card_11_sub", "label": "Subtitle" },
+        { "type": "text", "id": "card_11_val", "label": "Filter Value Tag" },
+        { "type": "text", "id": "card_11_parent_val", "label": "Required Parent Tag (Axle for Tie Rod / Engine for Axle)" },
+        { "type": "image_picker", "id": "card_11_img", "label": "Image" },
+
+        { "type": "header", "content": "Card 12" },
+        { "type": "text", "id": "card_12_title", "label": "Title" },
+        { "type": "text", "id": "card_12_sub", "label": "Subtitle" },
+        { "type": "text", "id": "card_12_val", "label": "Filter Value Tag" },
+        { "type": "text", "id": "card_12_parent_val", "label": "Required Parent Tag (Axle for Tie Rod / Engine for Axle)" },
+        { "type": "image_picker", "id": "card_12_img", "label": "Image" }
+      ]
+    },
+    {
+      "type": "system",
+      "name": "7. Complete System Grid",
+      "settings": [
+        { "type": "text", "id": "title", "label": "Heading", "default": "Compatible Complete Systems" },
+        { "type": "text", "id": "subtitle", "label": "Subheading", "default": "Designed To Work Together. Complete steering systems for your exact setup." },
+        { "type": "text", "id": "default_prompt", "label": "Default Prompt Text", "default": "Select your Jeep Engine, Axle, and Tie Rod above to generate matching systems." },
+        { "type": "text", "id": "cta_text", "label": "CTA Button Text", "default": "View Full Collection Page" }
+      ]
+    },
+    {
+      "type": "products",
+      "name": "8. Add-On Products",
+      "settings": [
+        { 
+          "type": "text", 
+          "id": "section_id", 
+          "label": "Section Anchor ID", 
+          "default": "dds-addon-kits"
+        },
+        { "type": "text", "id": "title", "label": "Heading", "default": "Already Running PSC Steering?" },
+        { "type": "text", "id": "subtitle", "label": "Subheading", "default": "Add DDS To Your Existing Setup with our DDS Add-On Axle Kits." },
+        { "type": "collection", "id": "collection", "label": "Collection to Display" },
+        { "type": "range", "id": "limit", "label": "Product Limit", "min": 3, "max": 12, "step": 3, "default": 6 }
+      ]
+    },
+    {
+      "type": "gallery",
+      "name": "9. Real Jeeps Gallery",
+      "settings": [
+        { 
+          "type": "text", 
+          "id": "title", 
+          "label": "Heading", 
+          "default": "Real Jeeps. Real Trails." 
+        },
+        { 
+          "type": "text", 
+          "id": "subtitle", 
+          "label": "Subheading", 
+          "default": "Built for real-world wheeling." 
+        },
+        {
+          "type": "header",
+          "content": "Yotpo Visual UGC Gallery Settings"
+        },
+        { 
+          "type": "text", 
+          "id": "yotpo_gallery_id", 
+          "label": "Yotpo Gallery ID", 
+          "info": "Enter your Yotpo Gallery ID. If left blank, the standard image grid below will be used as a fallback." 
+        },
+        {
+          "type": "header",
+          "content": "Fallback Static Images"
+        },
+        { "type": "image_picker", "id": "gallery_img_1", "label": "Image 1" },
+        { "type": "text", "id": "gallery_cap_1", "label": "Caption 1", "default": "JL on rocks" },
+        { "type": "image_picker", "id": "gallery_img_2", "label": "Image 2" },
+        { "type": "text", "id": "gallery_cap_2", "label": "Caption 2", "default": "JT in Moab" },
+        { "type": "image_picker", "id": "gallery_img_3", "label": "Image 3" },
+        { "type": "text", "id": "gallery_cap_3", "label": "Caption 3", "default": "392 on trail" },
+        { "type": "image_picker", "id": "gallery_img_4", "label": "Image 4" },
+        { "type": "text", "id": "gallery_cap_4", "label": "Caption 4", "default": "4XE build" },
+        { "type": "image_picker", "id": "gallery_img_5", "label": "Image 5" },
+        { "type": "text", "id": "gallery_cap_5", "label": "Caption 5", "default": "Overland setup" }
+      ]
+    },
+    {
+      "type": "guide",
+      "name": "10. Contact Support",
+      "settings": [
+        { "type": "text", "id": "title", "label": "Heading", "default": "Not Sure Which System Fits?" },
+        { "type": "text", "id": "subtitle", "label": "Subheadline", "default": "Reach out to our team. We'll help you identify the right setup." },
+        { "type": "text", "id": "button_text", "label": "Button Text", "default": "Contact Us" },
+        { "type": "url", "id": "button_url", "label": "Button Link" }
+      ]
+    }
   ],
   "presets": [
     {
