@@ -368,7 +368,70 @@
         </div>
 
       {% comment %} --- SECTION 2: WHY JEEP OWNERS UPGRADE TO DDS --- {% endcomment %}
+
+      {% comment %} --- SECTION 2: WHY JEEP OWNERS UPGRADE TO DDS --- {% endcomment %}
       {% when 'why' %}
+        <div class="lp-section lp-why-upgrade" {{ block.shopify_attributes }}>
+          <div class="lp-why-grid">
+            <div>
+              <h2>{{ block.settings.heading }}</h2>
+              <p>{{ block.settings.intro_text }}</p>
+              {% if block.settings.pain_points != blank %}
+                <div class="lp-pain-points">
+                  {{ block.settings.pain_points }}
+                </div>
+              {% endif %}
+            </div>
+            <div>
+              <p style="font-size: 2rem; line-height: 1.5;">{{ block.settings.solution_text }}</p>
+              {% if block.settings.highlight_text != blank %}
+                <p style="font-family: 'Eurostile Bold', sans-serif; font-size: 2rem; color: var(--lp-color-primary);">
+                  {{ block.settings.highlight_text }}
+                </p>
+              {% endif %}
+            </div>
+          </div>
+        </div>
+
+      {% comment %} --- SECTION 3: BUILT FOR THE WAY YOU USE YOUR JEEP --- {% endcomment %}
+      {% when 'cases' %}
+        <div class="lp-section" {{ block.shopify_attributes }}>
+          {% if block.settings.heading != blank %}
+            <div class="lp-section-header">
+              <h2>{{ block.settings.heading }}</h2>
+            </div>
+          {% endif %}
+          <div class="lp-usecases-grid">
+            <div class="lp-usecase-card">
+              {% if block.settings.img_1 != blank %}
+                <img src="{{ block.settings.img_1 | image_url: width: 500 }}" alt="{{ block.settings.title_1 | escape }}" loading="lazy">
+              {% endif %}
+              <div class="lp-usecase-card-body">
+                <h3>{{ block.settings.title_1 }}</h3>
+                <p>{{ block.settings.copy_1 }}</p>
+              </div>
+            </div>
+            <div class="lp-usecase-card">
+              {% if block.settings.img_2 != blank %}
+                <img src="{{ block.settings.img_2 | image_url: width: 500 }}" alt="{{ block.settings.title_2 | escape }}" loading="lazy">
+              {% endif %}
+              <div class="lp-usecase-card-body">
+                <h3>{{ block.settings.title_2 }}</h3>
+                <p>{{ block.settings.copy_2 }}</p>
+              </div>
+            </div>
+            <div class="lp-usecase-card">
+              {% if block.settings.img_3 != blank %}
+                <img src="{{ block.settings.img_3 | image_url: width: 500 }}" alt="{{ block.settings.title_3 | escape }}" loading="lazy">
+              {% endif %}
+              <div class="lp-usecase-card-body">
+                <h3>{{ block.settings.title_3 }}</h3>
+                <p>{{ block.settings.copy_3 }}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      {% comment %} {% when 'why' %}
         <div class="lp-section lp-why-upgrade" {{ block.shopify_attributes }}>
           <div class="lp-why-grid">
             <div>
@@ -428,7 +491,7 @@
               </div>
             </div>
           </div>
-        </div>
+        </div> {% endcomment %}
 
       {% comment %} --- SECTION 4: WHAT IS DYNAMIC DAMPING STABILIZER --- {% endcomment %}
       {% when 'features' %}
