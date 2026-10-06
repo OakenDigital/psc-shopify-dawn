@@ -24,9 +24,9 @@
           "type": "hero",
           "settings": {
             "headline": "Stop Fighting The Steering Wheel.",
-            "subheadline": "<p><strong>Dynamic Damping Stabilizer® for Jeep JL & JT</strong></p><p><br>Engineered to reduce on-road drivability issues caused by lifted suspensions and oversized tires while delivering better steering control on the trail.</p><p><br><em>More stable on the highway. More controlled off-road.</em> </p>",
+            "subheadline": "<p><strong>Dynamic Damping Stabilizer® for Jeep JL & JT</strong></p><p><br/>Engineered to reduce on-road drivability issues caused by lifted suspensions and oversized tires while delivering better steering control on the trail.</p><p><br/><em>More stable on the highway. More controlled off-road.</em>&nbsp;</p>",
             "btn1_text": "Shop Complete DDS Kits",
-            "btn1_link": "shopify://collections/dds-dynamic-damping-stabilizer-system-jeep-wrangler-jl-jt",
+            "btn1_link": "#select-engine",
             "btn2_text": "Already Have PSC Steering? Shop DDS Add-On Kits",
             "btn2_link": "#dds-addon-kits"
           }
@@ -45,13 +45,21 @@
           "settings": {
             "heading": "Why Jeep Owners Upgrade To DDS",
             "intro_text": "You feel it on the trail. You feel it on the highway.",
-            "solution_text": "DDS helps control unwanted steering movement before it gets transferred to the driver."
+            "pain_points": "<ul><li>⚡ Steering wheel jerk</li><li>⚡ Sudden kickback</li><li>⚡ Driver fatigue</li><li>⚡ Constant correction</li><li>⚡ Reduced confidence at speed</li></ul>",
+            "solution_text": "DDS helps control unwanted steering movement before it gets transferred to the driver.",
+            "highlight_text": "Not a band-aid. A steering solution built for serious wheeling."
           }
         },
         "cases_ybBzna": {
           "type": "cases",
           "settings": {
-            "heading": "Built For The Way You Use Your Jeep"
+            "heading": "Built For The Way You Use Your Jeep",
+            "title_1": "Weekend Trail Rider",
+            "copy_1": "More control. Less steering shock.",
+            "title_2": "Overland Builder",
+            "copy_2": "Improved confidence on long days behind the wheel.",
+            "title_3": "Hardcore Rock Crawler",
+            "copy_3": "Designed to handle aggressive terrain and large tires."
           }
         },
         "step_th6fRk": {
