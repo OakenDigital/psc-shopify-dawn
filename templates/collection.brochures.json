@@ -103,13 +103,20 @@
           "settings": {
             "collection": "hose-kits"
           }
+        },
+        "featured_collection_7Kr7Tz": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "steering-fluids"
+          }
         }
       },
       "block_order": [
         "featured_collection_3z8Rqt",
         "featured_collection_VQ9CpM",
         "featured_collection_NJCQmP",
-        "featured_collection_yAmhiC"
+        "featured_collection_yAmhiC",
+        "featured_collection_7Kr7Tz"
       ],
       "name": "t:sections.collection-list.presets.name",
       "settings": {
