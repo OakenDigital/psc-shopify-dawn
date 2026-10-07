@@ -81,16 +81,10 @@
     "collection_list_c83jm7": {
       "type": "collection-list",
       "blocks": {
-        "featured_collection_EwBXfU": {
+        "featured_collection_tcaTqk": {
           "type": "featured_collection",
           "settings": {
-            "collection": "jeep-xd-steering-gears"
-          }
-        },
-        "featured_collection_UBqc63": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "jeep-dds-add-on-axle-kits"
+            "collection": "dds-dynamic-damping-stabilizer-system-jeep-wrangler-jl-jt"
           }
         },
         "featured_collection_MPD7tK": {
@@ -99,25 +93,31 @@
             "collection": "jeep-xtreme-duty-hose-kits"
           }
         },
+        "featured_collection_EwBXfU": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "jeep-xd-steering-gears"
+          }
+        },
         "featured_collection_VHTy9X": {
           "type": "featured_collection",
           "settings": {
             "collection": "jeep-xd-pump-kits"
           }
         },
-        "featured_collection_tcaTqk": {
+        "featured_collection_UBqc63": {
           "type": "featured_collection",
           "settings": {
-            "collection": "dds-dynamic-damping-stabilizer-system-jeep-wrangler-jl-jt"
+            "collection": "jeep-dds-add-on-axle-kits"
           }
         }
       },
       "block_order": [
-        "featured_collection_EwBXfU",
-        "featured_collection_UBqc63",
+        "featured_collection_tcaTqk",
         "featured_collection_MPD7tK",
+        "featured_collection_EwBXfU",
         "featured_collection_VHTy9X",
-        "featured_collection_tcaTqk"
+        "featured_collection_UBqc63"
       ],
       "name": "t:sections.collection-list.presets.name",
       "settings": {
