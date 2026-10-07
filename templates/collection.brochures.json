@@ -77,6 +77,57 @@
         "color_scheme": "scheme-1"
       }
     },
+    "collection_list_9mJtRT": {
+      "type": "collection-list",
+      "blocks": {
+        "featured_collection_3z8Rqt": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "steering-gears"
+          }
+        },
+        "featured_collection_VQ9CpM": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "power-steering-pump-kits"
+          }
+        },
+        "featured_collection_NJCQmP": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "axle-kits"
+          }
+        },
+        "featured_collection_yAmhiC": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "hose-kits"
+          }
+        }
+      },
+      "block_order": [
+        "featured_collection_3z8Rqt",
+        "featured_collection_VQ9CpM",
+        "featured_collection_NJCQmP",
+        "featured_collection_yAmhiC"
+      ],
+      "name": "t:sections.collection-list.presets.name",
+      "settings": {
+        "eyebrow_text": "SHOP BY CATEGORY",
+        "eyebrow_color": "#dc2626",
+        "title": "&nbsp;Jeep JL & JT Steering Solutions&nbsp;",
+        "description": "<p>need copy here</p>",
+        "heading_size": "h1",
+        "image_ratio": "square",
+        "columns_desktop": 3,
+        "color_scheme": "",
+        "show_view_all": false,
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "product-grid": {
       "type": "main-collection-product-grid",
       "custom_css": [],
@@ -103,6 +154,7 @@
     "breadcrumbs_Njfh8P",
     "apps_CATkbB",
     "banner",
+    "collection_list_9mJtRT",
     "product-grid"
   ]
 }
