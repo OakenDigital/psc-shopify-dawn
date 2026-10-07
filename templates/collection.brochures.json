@@ -71,6 +71,7 @@
     },
     "banner": {
       "type": "main-collection-banner",
+      "disabled": true,
       "settings": {
         "show_collection_description": true,
         "show_collection_image": false,
@@ -120,10 +121,10 @@
       ],
       "name": "t:sections.collection-list.presets.name",
       "settings": {
-        "eyebrow_text": "",
+        "eyebrow_text": "for JL and JT",
         "eyebrow_color": "#d6001c",
-        "title": "Shop by Vehicle",
-        "description": "<p>Check out our lineup of steering systems and components built tough for real-world performance. Every part’s engineered for durability and tested to keep you turning strong.</p>",
+        "title": "Jeep JL & JT Steering Solutions&nbsp;",
+        "description": "<p>Whether you're running larger tires, tackling technical trails, daily driving, or building a dedicated off-road rig, PSC offers steering solutions designed specifically for Jeep Wrangler JL and Gladiator JT applications.</p><p>From DDS® Dynamic Damping Stabilizer systems and XD Cylinder Assist® steering gears to electric power steering pump kits, hose kits, and steering upgrades, every component is engineered to help improve steering control, durability, and driver confidence.</p>",
         "heading_size": "h1",
         "image_ratio": "square",
         "columns_desktop": 5,
