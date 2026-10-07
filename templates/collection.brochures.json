@@ -98,16 +98,16 @@
             "collection": "hose-kits"
           }
         },
-        "featured_collection_tcaTqk": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "steering-fluids"
-          }
-        },
         "featured_collection_VHTy9X": {
           "type": "featured_collection",
           "settings": {
             "collection": "power-steering-pump-kits"
+          }
+        },
+        "featured_collection_tcaTqk": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "steering-fluids"
           }
         }
       },
@@ -115,8 +115,8 @@
         "featured_collection_EwBXfU",
         "featured_collection_UBqc63",
         "featured_collection_MPD7tK",
-        "featured_collection_tcaTqk",
-        "featured_collection_VHTy9X"
+        "featured_collection_VHTy9X",
+        "featured_collection_tcaTqk"
       ],
       "name": "t:sections.collection-list.presets.name",
       "settings": {
