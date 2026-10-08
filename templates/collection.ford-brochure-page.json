@@ -84,31 +84,37 @@
         "featured_collection_tcaTqk": {
           "type": "featured_collection",
           "settings": {
-            "collection": "dds-dynamic-damping-stabilizer-system-jeep-wrangler-jl-jt"
+            "collection": "ford-super-duty-dds-kits"
           }
         },
         "featured_collection_MPD7tK": {
           "type": "featured_collection",
           "settings": {
-            "collection": "jeep-xtreme-duty-hose-kits"
+            "collection": "ford-super-duty-dds-axle-kits"
           }
         },
         "featured_collection_EwBXfU": {
           "type": "featured_collection",
           "settings": {
-            "collection": "jeep-xd-steering-gears"
+            "collection": "ford-super-duty-big-bore-xd-gears"
           }
         },
         "featured_collection_VHTy9X": {
           "type": "featured_collection",
           "settings": {
-            "collection": "jeep-xd-pump-kits"
+            "collection": "ford-super-duty-xtreme-duty-hose-kits"
           }
         },
         "featured_collection_UBqc63": {
           "type": "featured_collection",
           "settings": {
-            "collection": "jeep-dds-add-on-axle-kits"
+            "collection": "ford-super-duty-xd-pump-kits"
+          }
+        },
+        "featured_collection_dHJKYK": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "ford-super-duty-performance-pulleys"
           }
         }
       },
@@ -117,7 +123,8 @@
         "featured_collection_MPD7tK",
         "featured_collection_EwBXfU",
         "featured_collection_VHTy9X",
-        "featured_collection_UBqc63"
+        "featured_collection_UBqc63",
+        "featured_collection_dHJKYK"
       ],
       "name": "t:sections.collection-list.presets.name",
       "settings": {
