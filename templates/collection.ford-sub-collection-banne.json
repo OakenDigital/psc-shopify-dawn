@@ -61,6 +61,7 @@
       "block_order": [
         "partfinder_year_make_model_vehicle_search_bar_QcgNNg"
       ],
+      "disabled": true,
       "custom_css": [
         ".auto-part-search-bar .gv-mmy-bar {padding: 2rem 1rem;}"
       ],
@@ -71,7 +72,6 @@
     },
     "banner": {
       "type": "main-collection-banner",
-      "disabled": true,
       "settings": {
         "show_collection_description": true,
         "show_collection_image": false,
@@ -169,7 +169,7 @@
     "breadcrumbs_Njfh8P",
     "apps_CATkbB",
     "banner",
-    "collection_list_c83jm7",
-    "product-grid"
+    "product-grid",
+    "collection_list_c83jm7"
   ]
 }
