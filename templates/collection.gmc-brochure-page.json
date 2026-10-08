@@ -81,6 +81,12 @@
     "collection_list_c83jm7": {
       "type": "collection-list",
       "blocks": {
+        "featured_collection_UBqc63": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "gmc-steering-kits"
+          }
+        },
         "featured_collection_tcaTqk": {
           "type": "featured_collection",
           "settings": {
@@ -104,20 +110,14 @@
           "settings": {
             "collection": "gmc-xtreme-duty-hose-kits"
           }
-        },
-        "featured_collection_UBqc63": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "gmc-steering-kits"
-          }
         }
       },
       "block_order": [
+        "featured_collection_UBqc63",
         "featured_collection_tcaTqk",
         "featured_collection_MPD7tK",
         "featured_collection_EwBXfU",
-        "featured_collection_VHTy9X",
-        "featured_collection_UBqc63"
+        "featured_collection_VHTy9X"
       ],
       "name": "t:sections.collection-list.presets.name",
       "settings": {
