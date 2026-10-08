@@ -108,13 +108,7 @@
         "featured_collection_UBqc63": {
           "type": "featured_collection",
           "settings": {
-            "collection": "ford-super-duty-xd-pump-kits"
-          }
-        },
-        "featured_collection_dHJKYK": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "ford-super-duty-performance-pulleys"
+            "collection": "ram-steering-kits"
           }
         }
       },
@@ -123,8 +117,7 @@
         "featured_collection_MPD7tK",
         "featured_collection_EwBXfU",
         "featured_collection_VHTy9X",
-        "featured_collection_UBqc63",
-        "featured_collection_dHJKYK"
+        "featured_collection_UBqc63"
       ],
       "name": "t:sections.collection-list.presets.name",
       "settings": {
