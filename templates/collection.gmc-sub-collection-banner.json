@@ -108,16 +108,16 @@
             "collection": "gmc-steering-kits"
           }
         },
-        "featured_collection_tcaTqk": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "gmc-big-bore-xd-gears"
-          }
-        },
         "featured_collection_MPD7tK": {
           "type": "featured_collection",
           "settings": {
             "collection": "gmc-xd-pumps"
+          }
+        },
+        "featured_collection_tcaTqk": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "gmc-big-bore-xd-gears"
           }
         },
         "featured_collection_EwBXfU": {
@@ -135,8 +135,8 @@
       },
       "block_order": [
         "featured_collection_UBqc63",
-        "featured_collection_tcaTqk",
         "featured_collection_MPD7tK",
+        "featured_collection_tcaTqk",
         "featured_collection_EwBXfU",
         "featured_collection_VHTy9X"
       ],
