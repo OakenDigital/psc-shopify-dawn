@@ -1,0 +1,227 @@
+{% doc %}
+  @prompt
+    Create a cohesive Open Positions section for PSC Motorsports’ careers page, replacing the visual design of a separate heading and gray rich-text job-links area. Use a white background, left-aligned Open Positions heading, and the introduction ‘Explore opportunities to join the PSC Motorsports team.’ Display three full-width stacked job rows: Accountant, CNC Machinist, Manufacturing Specialist. Each row has a bold title on the left and a ‘View Job Description →’ link on the right, with thin light-gray dividers and generous intentional spacing. On mobile, put the link below the title. Match the existing theme’s typography and straightforward industrial styling; avoid cards and carousels. Make the heading, introduction, each role title, and each job-description link editable. Use the existing job-description destinations if available; otherwise leave link pickers unset rather than inventing URLs. Do not change the application form or other careers-page content.
+{% enddoc %}
+{% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
+
+{% style %}
+  .ai-open-positions-{{ ai_gen_id }} {
+    display: block;
+    width: {{ block.settings.desktop_width_percent }}%;
+    max-width: 100%;
+    background: #ffffff;
+    color: #121212;
+    font-family: var(--font-body-family);
+    padding: 32px 0;
+  }
+
+  .ai-open-positions-{{ ai_gen_id }}__inner {
+    width: 100%;
+  }
+
+  .ai-open-positions-{{ ai_gen_id }}__heading {
+    color: inherit;
+    font-family: var(--font-heading-family);
+    font-size: clamp(2.4rem, 4vw, 3.6rem);
+    font-weight: 700;
+    line-height: 1.05;
+    margin: 0 0 12px;
+    text-align: left;
+  }
+
+  .ai-open-positions-{{ ai_gen_id }}__intro {
+    color: inherit;
+    font-size: 1.8rem;
+    line-height: 1.45;
+    margin: 0 0 28px;
+  }
+
+  .ai-open-positions-{{ ai_gen_id }}__list {
+    border-top: 1px solid #d9d9d9;
+  }
+
+  .ai-open-positions-{{ ai_gen_id }}__row {
+    align-items: center;
+    border-bottom: 1px solid #d9d9d9;
+    display: flex;
+    justify-content: space-between;
+    gap: 24px;
+    min-height: 88px;
+    padding: 24px 0;
+  }
+
+  .ai-open-positions-{{ ai_gen_id }}__title {
+    color: inherit;
+    font-size: 2.1rem;
+    font-weight: 700;
+    line-height: 1.25;
+    margin: 0;
+  }
+
+  .ai-open-positions-{{ ai_gen_id }}__link {
+    align-items: center;
+    color: #121212;
+    display: inline-flex;
+    flex: 0 0 auto;
+    font-size: 1.6rem;
+    font-weight: 600;
+    gap: 6px;
+    line-height: 1.4;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+
+  .ai-open-positions-{{ ai_gen_id }}__link:focus-visible {
+    outline: 2px solid currentColor;
+    outline-offset: 4px;
+  }
+
+  @media screen and (max-width: 749px) {
+    .ai-open-positions-{{ ai_gen_id }} {
+      padding: 24px 0;
+    }
+
+    .ai-open-positions-{{ ai_gen_id }}__intro {
+      margin-bottom: 20px;
+    }
+
+    .ai-open-positions-{{ ai_gen_id }}__row {
+      align-items: flex-start;
+      flex-direction: column;
+      gap: 10px;
+      min-height: 0;
+      padding: 20px 0;
+    }
+  }
+{% endstyle %}
+
+<div class="ai-open-positions-{{ ai_gen_id }}" {{ block.shopify_attributes }}>
+  <div class="ai-open-positions-{{ ai_gen_id }}__inner">
+    {% if block.settings.heading != blank %}
+      <h2 class="ai-open-positions-{{ ai_gen_id }}__heading">{{ block.settings.heading | escape }}</h2>
+    {% endif %}
+    {% if block.settings.introduction != blank %}
+      <p class="ai-open-positions-{{ ai_gen_id }}__intro">{{ block.settings.introduction | escape }}</p>
+    {% endif %}
+    <div class="ai-open-positions-{{ ai_gen_id }}__list">
+      {% for i in (1..3) %}
+        {% liquid
+          assign role_key = 'role_' | append: i
+          assign label_key = 'link_label_' | append: i
+          assign url_key = 'job_url_' | append: i
+          assign role = block.settings[role_key]
+          assign link_label = block.settings[label_key]
+          assign job_url = block.settings[url_key]
+        %}
+        <div class="ai-open-positions-{{ ai_gen_id }}__row">
+          <h3 class="ai-open-positions-{{ ai_gen_id }}__title">{{ role | escape }}</h3>
+          {% if job_url != blank %}
+            <a class="ai-open-positions-{{ ai_gen_id }}__link" href="{{ job_url }}">{{ link_label | escape }}</a>
+          {% else %}
+            <span class="ai-open-positions-{{ ai_gen_id }}__link">{{ link_label | escape }}</span>
+          {% endif %}
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Open positions",
+  "settings": [
+    {
+      "type": "range",
+      "id": "desktop_width_percent",
+      "label": "Desktop width",
+      "min": 50,
+      "max": 100,
+      "step": 5,
+      "unit": "%",
+      "default": 100
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Open Positions"
+    },
+    {
+      "type": "text",
+      "id": "introduction",
+      "label": "Introduction",
+      "default": "Explore opportunities to join the PSC Motorsports team."
+    },
+    {
+      "type": "header",
+      "content": "Accountant"
+    },
+    {
+      "type": "text",
+      "id": "role_1",
+      "label": "Role title",
+      "default": "Accountant"
+    },
+    {
+      "type": "text",
+      "id": "link_label_1",
+      "label": "Link label",
+      "default": "View Job Description →"
+    },
+    {
+      "type": "url",
+      "id": "job_url_1",
+      "label": "Job description link"
+    },
+    {
+      "type": "header",
+      "content": "CNC machinist"
+    },
+    {
+      "type": "text",
+      "id": "role_2",
+      "label": "Role title",
+      "default": "CNC Machinist"
+    },
+    {
+      "type": "text",
+      "id": "link_label_2",
+      "label": "Link label",
+      "default": "View Job Description →"
+    },
+    {
+      "type": "url",
+      "id": "job_url_2",
+      "label": "Job description link"
+    },
+    {
+      "type": "header",
+      "content": "Manufacturing specialist"
+    },
+    {
+      "type": "text",
+      "id": "role_3",
+      "label": "Role title",
+      "default": "Manufacturing Specialist"
+    },
+    {
+      "type": "text",
+      "id": "link_label_3",
+      "label": "Link label",
+      "default": "View Job Description →"
+    },
+    {
+      "type": "url",
+      "id": "job_url_3",
+      "label": "Job description link"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Open positions"
+    }
+  ],
+  "tag": null,
+  "class": "open-positions-block"
+}
+{% endschema %}
