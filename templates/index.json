@@ -403,17 +403,44 @@
             "second_title": "Designed for confidence under load",
             "second_copy": "Learn how thoughtful component choices can support a responsive, reliable build.",
             "second_link": "",
-            "background_color": "#FFFFFF",
+            "background_color": "#ffffff",
             "text_color": "#121212",
             "muted_color": "#575757",
-            "accent_color": "#D6001C",
-            "rule_color": "#D1D1D1"
+            "accent_color": "#d6001c",
+            "rule_color": "#d1d1d1"
           },
           "blocks": {}
         }
       },
       "block_order": [
         "ai_gen_block_8504989_RbwQqx"
+      ],
+      "settings": {}
+    },
+    "1792011571e327f6d3": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_52adeca_B4nEFc": {
+          "type": "ai_gen_block_52adeca",
+          "settings": {
+            "desktop_width_percent": 55,
+            "heading": "Open Positions",
+            "introduction": "Explore opportunities to join the PSC Motorsports team.",
+            "role_1": "Accountant",
+            "link_label_1": "View Job Description →",
+            "job_url_1": "https://cdn.shopify.com/s/files/1/0642/9743/5241/files/Job_Description_Accountant.pdf?v=1792010596",
+            "role_2": "CNC Machinist",
+            "link_label_2": "View Job Description →",
+            "job_url_2": "https://cdn.shopify.com/s/files/1/0642/9743/5241/files/Job_Description_CNC.pdf?v=1791211378",
+            "role_3": "Manufacturing Specialist",
+            "link_label_3": "View Job Description →",
+            "job_url_3": "https://cdn.shopify.com/s/files/1/0642/9743/5241/files/Job_Description_Manufacturing_Specialist.pdf?v=1773848862"
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_52adeca_B4nEFc"
       ],
       "settings": {}
     }
@@ -428,6 +455,7 @@
     "newsletter_agMNU6",
     "1779380124cb5a4913",
     "1782146385a493dd23",
-    "179079766281adbdb6"
+    "179079766281adbdb6",
+    "1792011571e327f6d3"
   ]
 }
