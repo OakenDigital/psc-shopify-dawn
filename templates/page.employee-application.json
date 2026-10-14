@@ -348,6 +348,62 @@
         "include_margins": true,
         "full_width": true
       }
+    },
+    "blocks_HgPytA": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_52adeca_FjM76N": {
+          "type": "ai_gen_block_52adeca",
+          "disabled": true,
+          "settings": {
+            "desktop_width_percent": 55,
+            "heading": "Open Positions",
+            "introduction": "Explore opportunities to join the PSC Motorsports team.",
+            "role_1": "Accountant",
+            "link_label_1": "View Job Description →",
+            "job_url_1": "https://cdn.shopify.com/s/files/1/0642/9743/5241/files/Job_Description_Accountant.pdf?v=1792010596",
+            "role_2": "CNC Machinist",
+            "link_label_2": "View Job Description →",
+            "job_url_2": "https://cdn.shopify.com/s/files/1/0642/9743/5241/files/Job_Description_CNC.pdf?v=1791211378",
+            "role_3": "Manufacturing Specialist",
+            "link_label_3": "View Job Description →",
+            "job_url_3": "https://cdn.shopify.com/s/files/1/0642/9743/5241/files/Job_Description_Manufacturing_Specialist.pdf?v=1773848862"
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_52adeca_FjM76N"
+      ],
+      "settings": {}
+    },
+    "blocks_nHKJNK": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_52adeca_ED3N4q": {
+          "type": "ai_gen_block_52adeca",
+          "disabled": true,
+          "settings": {
+            "desktop_width_percent": 55,
+            "heading": "Open Positions",
+            "introduction": "Explore opportunities to join the PSC Motorsports team.",
+            "role_1": "Accountant",
+            "link_label_1": "View Job Description →",
+            "job_url_1": "https://cdn.shopify.com/s/files/1/0642/9743/5241/files/Job_Description_Accountant.pdf?v=1792010596",
+            "role_2": "CNC Machinist",
+            "link_label_2": "View Job Description →",
+            "job_url_2": "https://cdn.shopify.com/s/files/1/0642/9743/5241/files/Job_Description_CNC.pdf?v=1791211378",
+            "role_3": "Manufacturing Specialist",
+            "link_label_3": "View Job Description →",
+            "job_url_3": "https://cdn.shopify.com/s/files/1/0642/9743/5241/files/Job_Description_Manufacturing_Specialist.pdf?v=1773848862"
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_52adeca_ED3N4q"
+      ],
+      "settings": {}
     }
   },
   "order": [
@@ -359,6 +415,8 @@
     "rich_text_BPAf6t",
     "rich_text_66ywkY",
     "forms",
-    "17681686994eae9bed"
+    "17681686994eae9bed",
+    "blocks_HgPytA",
+    "blocks_nHKJNK"
   ]
 }
