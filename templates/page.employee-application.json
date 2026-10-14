@@ -17,33 +17,6 @@
         "padding_bottom": 28
       }
     },
-    "blocks_HgPytA": {
-      "type": "_blocks",
-      "blocks": {
-        "ai_gen_block_52adeca_FjM76N": {
-          "type": "ai_gen_block_52adeca",
-          "settings": {
-            "desktop_width_percent": 55,
-            "heading": "Open Positions",
-            "introduction": "Explore opportunities to join the PSC Motorsports team.",
-            "role_1": "Accountant",
-            "link_label_1": "View Job Description →",
-            "job_url_1": "https://cdn.shopify.com/s/files/1/0642/9743/5241/files/Job_Description_Accountant.pdf?v=1792010596",
-            "role_2": "CNC Machinist",
-            "link_label_2": "View Job Description →",
-            "job_url_2": "https://cdn.shopify.com/s/files/1/0642/9743/5241/files/Job_Description_CNC.pdf?v=1791211378",
-            "role_3": "Manufacturing Specialist",
-            "link_label_3": "View Job Description →",
-            "job_url_3": "https://cdn.shopify.com/s/files/1/0642/9743/5241/files/Job_Description_Manufacturing_Specialist.pdf?v=1773848862"
-          },
-          "blocks": {}
-        }
-      },
-      "block_order": [
-        "ai_gen_block_52adeca_FjM76N"
-      ],
-      "settings": {}
-    },
     "blocks_68Uirc": {
       "type": "_blocks",
       "blocks": {
@@ -182,6 +155,33 @@
         "padding_bottom": 52
       }
     },
+    "blocks_HgPytA": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_52adeca_FjM76N": {
+          "type": "ai_gen_block_52adeca",
+          "settings": {
+            "desktop_width_percent": 55,
+            "heading": "Open Positions",
+            "introduction": "Explore opportunities to join the PSC Motorsports team.",
+            "role_1": "Accountant",
+            "link_label_1": "View Job Description →",
+            "job_url_1": "https://cdn.shopify.com/s/files/1/0642/9743/5241/files/Job_Description_Accountant.pdf?v=1792010596",
+            "role_2": "CNC Machinist",
+            "link_label_2": "View Job Description →",
+            "job_url_2": "https://cdn.shopify.com/s/files/1/0642/9743/5241/files/Job_Description_CNC.pdf?v=1791211378",
+            "role_3": "Manufacturing Specialist",
+            "link_label_3": "View Job Description →",
+            "job_url_3": "https://cdn.shopify.com/s/files/1/0642/9743/5241/files/Job_Description_Manufacturing_Specialist.pdf?v=1773848862"
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_52adeca_FjM76N"
+      ],
+      "settings": {}
+    },
     "rich_text_hxAiDD": {
       "type": "rich-text",
       "blocks": {
@@ -221,120 +221,6 @@
         "desktop_content_position": "center",
         "content_alignment": "left",
         "color_scheme": "scheme-1",
-        "full_width": true,
-        "padding_top": 40,
-        "padding_bottom": 52
-      }
-    },
-    "rich_text_BPAf6t": {
-      "type": "rich-text",
-      "blocks": {
-        "heading_Dg9d9P": {
-          "type": "heading",
-          "settings": {
-            "heading": "Open Positions",
-            "heading_size": "h0"
-          }
-        },
-        "button_QexEVE": {
-          "type": "button",
-          "disabled": true,
-          "settings": {
-            "button_label": "Button label",
-            "button_link": "",
-            "button_style_secondary": false,
-            "button_label_2": "",
-            "button_link_2": "",
-            "button_style_secondary_2": false
-          }
-        }
-      },
-      "block_order": [
-        "heading_Dg9d9P",
-        "button_QexEVE"
-      ],
-      "name": "t:sections.rich-text.presets.name",
-      "settings": {
-        "desktop_content_position": "left",
-        "content_alignment": "left",
-        "color_scheme": "",
-        "full_width": true,
-        "padding_top": 8,
-        "padding_bottom": 8
-      }
-    },
-    "rich_text_66ywkY": {
-      "type": "rich-text",
-      "blocks": {
-        "heading_43VqXj": {
-          "type": "heading",
-          "settings": {
-            "heading": "<a href=\"https://cdn.shopify.com/s/files/1/0642/9743/5241/files/Job_Description_Accountant.pdf?v=1792010596\" target=\"_blank\" title=\"Job Description: Accountant\"><strong>Accountant: View Job Description</strong></a>",
-            "heading_size": "h2"
-          }
-        },
-        "text_jG4jBe": {
-          "type": "text",
-          "disabled": true,
-          "settings": {
-            "text": "<p><a href=\"https://cdn.shopify.com/s/files/1/0642/9743/5241/files/Job_Description_Accountant.pdf?v=1792010596\" title=\"View Job Description: Accountant\">Accountant: View Job Description</a></p>"
-          }
-        },
-        "heading_FbA3gy": {
-          "type": "heading",
-          "settings": {
-            "heading": "<a href=\"https://cdn.shopify.com/s/files/1/0642/9743/5241/files/Job_Description_CNC.pdf?v=1791211378\" target=\"_blank\" title=\"CNC Machinist: View Job Description\">CNC Machinist: View Job Description</a>",
-            "heading_size": "h2"
-          }
-        },
-        "text_6rqWqN": {
-          "type": "text",
-          "disabled": true,
-          "settings": {
-            "text": "<p><a href=\"https://cdn.shopify.com/s/files/1/0642/9743/5241/files/Job_Description_CNC.pdf?v=1791211378\" target=\"_blank\" title=\"https://cdn.shopify.com/s/files/1/0642/9743/5241/files/Job_Description_CNC.pdf?v=1791211378\">View Job Description</a></p>"
-          }
-        },
-        "heading_zmhTCL": {
-          "type": "heading",
-          "settings": {
-            "heading": "<a href=\"https://cdn.shopify.com/s/files/1/0642/9743/5241/files/Job_Description_Manufacturing_Specialist.pdf?v=1773848862\" target=\"_blank\" title=\"Manufacturing Specialist: View Job Description\">Manufacturing Specialist: View Job Description</a>",
-            "heading_size": "h2"
-          }
-        },
-        "text_AYmzQF": {
-          "type": "text",
-          "disabled": true,
-          "settings": {
-            "text": "<p><a href=\"https://cdn.shopify.com/s/files/1/0642/9743/5241/files/Job_Description_Manufacturing_Specialist.pdf?v=1773848862\" target=\"_blank\" title=\"https://cdn.shopify.com/s/files/1/0642/9743/5241/files/Job_Description_Manufacturing_Specialist.pdf?v=1773848862\">View Job Description</a></p>"
-          }
-        },
-        "button_B4j7Fy": {
-          "type": "button",
-          "disabled": true,
-          "settings": {
-            "button_label": "Button label",
-            "button_link": "",
-            "button_style_secondary": false,
-            "button_label_2": "",
-            "button_link_2": "",
-            "button_style_secondary_2": false
-          }
-        }
-      },
-      "block_order": [
-        "heading_43VqXj",
-        "text_jG4jBe",
-        "heading_FbA3gy",
-        "text_6rqWqN",
-        "heading_zmhTCL",
-        "text_AYmzQF",
-        "button_B4j7Fy"
-      ],
-      "name": "t:sections.rich-text.presets.name",
-      "settings": {
-        "desktop_content_position": "left",
-        "content_alignment": "left",
-        "color_scheme": "scheme-2a3099ff-9a3c-4a9e-8233-7c59b10461d1",
         "full_width": true,
         "padding_top": 20,
         "padding_bottom": 20
@@ -379,13 +265,11 @@
   },
   "order": [
     "cd0a8e3a-cfbd-42e7-88bb-b206f7176d40",
-    "blocks_HgPytA",
     "blocks_68Uirc",
     "image_banner_tAVEGK",
     "rich_text_F44yVz",
+    "blocks_HgPytA",
     "rich_text_hxAiDD",
-    "rich_text_BPAf6t",
-    "rich_text_66ywkY",
     "forms",
     "17681686994eae9bed"
   ]
