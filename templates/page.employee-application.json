@@ -261,6 +261,60 @@
         "include_margins": true,
         "full_width": true
       }
+    },
+    "multicolumn_a8RTiD": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_fXb3hb": {
+          "type": "column",
+          "settings": {
+            "title": "&nbsp;Accountant",
+            "text": "<p>View Job Description →</p>",
+            "link_label": "",
+            "link": "https://cdn.shopify.com/s/files/1/0642/9743/5241/files/Job_Description_Accountant.pdf?v=1792010596"
+          }
+        },
+        "column_HrJCaX": {
+          "type": "column",
+          "settings": {
+            "title": "&nbsp;CNC Machinist",
+            "text": "<p>View Job Description →</p>",
+            "link_label": "",
+            "link": "https://cdn.shopify.com/s/files/1/0642/9743/5241/files/Job_Description_CNC.pdf?v=1791211378"
+          }
+        },
+        "column_BkD6aC": {
+          "type": "column",
+          "settings": {
+            "title": "&nbsp;Manufacturing Specialist",
+            "text": "<p>View Job Description →</p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_fXb3hb",
+        "column_HrJCaX",
+        "column_BkD6aC"
+      ],
+      "name": "t:sections.multicolumn.presets.name",
+      "settings": {
+        "title": "&nbsp;Open Positions&nbsp;",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "button_label": "Apply Now",
+        "button_link": "",
+        "columns_desktop": 3,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
@@ -271,6 +325,7 @@
     "blocks_HgPytA",
     "rich_text_hxAiDD",
     "forms",
-    "17681686994eae9bed"
+    "17681686994eae9bed",
+    "multicolumn_a8RTiD"
   ]
 }
