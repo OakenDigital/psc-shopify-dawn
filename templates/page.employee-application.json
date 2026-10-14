@@ -159,6 +159,60 @@
       "type": "_blocks",
       "settings": {}
     },
+    "multicolumn_a8RTiD": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_fXb3hb": {
+          "type": "column",
+          "settings": {
+            "title": "&nbsp;Accountant",
+            "text": "<p>View Job Description →</p>",
+            "link_label": "",
+            "link": "https://cdn.shopify.com/s/files/1/0642/9743/5241/files/Job_Description_Accountant.pdf?v=1792010596"
+          }
+        },
+        "column_HrJCaX": {
+          "type": "column",
+          "settings": {
+            "title": "&nbsp;CNC Machinist",
+            "text": "<p>View Job Description →</p>",
+            "link_label": "",
+            "link": "https://cdn.shopify.com/s/files/1/0642/9743/5241/files/Job_Description_CNC.pdf?v=1791211378"
+          }
+        },
+        "column_BkD6aC": {
+          "type": "column",
+          "settings": {
+            "title": "&nbsp;Manufacturing Specialist",
+            "text": "<p>View Job Description →</p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_fXb3hb",
+        "column_HrJCaX",
+        "column_BkD6aC"
+      ],
+      "name": "t:sections.multicolumn.presets.name",
+      "settings": {
+        "title": "&nbsp;Open Positions&nbsp;",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "button_label": "Apply Now",
+        "button_link": "#shopify-section-template--18327695786089__forms",
+        "columns_desktop": 3,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "rich_text_hxAiDD": {
       "type": "rich-text",
       "blocks": {
@@ -172,7 +226,7 @@
         "text_QMfKWq": {
           "type": "text",
           "settings": {
-            "text": "<p>At PSC, we've been designing and building steering systems for decades. From CNC machining and manufacturing to assembly and shipping, every person on the team plays a role in getting quality products out the door.<br/><br/>If you enjoy solving problems, working with your hands, and being part of a team that values doing things right, you'll feel right at home here.</p><h2>What We Do</h2><p>We design and build steering components for trucks, Jeeps, UTVs, race vehicles, and off-road builds. Every day, our team machines parts, assembles products, ships orders, and supports customers across the country.</p><h2>Why Work Here</h2><ul><li><strong>Steady Work, Solid Team</strong><br/>We're not a giant corporation. You'll work alongside people who know your name and appreciate the work you do.</li><li><strong>Hands-On Every Day</strong><br/>Whether you're machining parts, building products, or helping ship orders, you'll stay busy and see the results of your work.</li><li><strong>Build Something Real</strong><br/>The products leaving our facility are trusted by builders, racers, and off-road enthusiasts across the country. You'll be part of the team that makes it happen.</li></ul><h2>Who We’re Looking For</h2><p>People who:</p><ul><li>Show up on time and do what they say they'll do.</li><li>Pay attention to the details.</li><li>Enjoy learning new skills and solving problems.</li><li>Work well with others and aren't afraid to jump in where needed.</li></ul><p>Experience with steering systems or hydraulics is a plus, but mechanical aptitude, a strong work ethic, and a willingness to learn go a long way. We'll help you learn the rest.</p>"
+            "text": "<p>At PSC, we've been designing and building steering systems for decades. From CNC machining and manufacturing to assembly and shipping, every person on the team plays a role in getting quality products out the door.<br/><br/>If you enjoy solving problems, working with your hands, and being part of a team that values doing things right, you'll feel right at home here.</p><h2>What We Do</h2><p>We design and build steering components for trucks, Jeeps, UTVs, race vehicles, and off-road builds. Every day, our team machines parts, assembles products, ships orders, and supports customers across the country.</p><h2>Why Work Here</h2><p><strong>Steady Work, Solid Team</strong><br/>We're not a giant corporation. You'll work alongside people who know your name and appreciate the work you do.</p><p><strong>Hands-On Every Day</strong><br/>Whether you're machining parts, building products, or helping ship orders, you'll stay busy and see the results of your work.</p><p><strong>Build Something Real</strong><br/>The products leaving our facility are trusted by builders, racers, and off-road enthusiasts across the country. You'll be part of the team that makes it happen.</p><h2>Who We’re Looking For</h2><p>People who:</p><ul><li>Show up on time and do what they say they'll do.</li><li>Pay attention to the details.</li><li>Enjoy learning new skills and solving problems.</li><li>Work well with others and aren't afraid to jump in where needed.</li></ul><p>Experience with steering systems or hydraulics is a plus, but mechanical aptitude, a strong work ethic, and a willingness to learn go a long way. We'll help you learn the rest.</p>"
           }
         },
         "button_tiN79B": {
@@ -237,60 +291,6 @@
       "settings": {
         "include_margins": true,
         "full_width": true
-      }
-    },
-    "multicolumn_a8RTiD": {
-      "type": "multicolumn",
-      "blocks": {
-        "column_fXb3hb": {
-          "type": "column",
-          "settings": {
-            "title": "&nbsp;Accountant",
-            "text": "<p>View Job Description →</p>",
-            "link_label": "",
-            "link": "https://cdn.shopify.com/s/files/1/0642/9743/5241/files/Job_Description_Accountant.pdf?v=1792010596"
-          }
-        },
-        "column_HrJCaX": {
-          "type": "column",
-          "settings": {
-            "title": "&nbsp;CNC Machinist",
-            "text": "<p>View Job Description →</p>",
-            "link_label": "",
-            "link": "https://cdn.shopify.com/s/files/1/0642/9743/5241/files/Job_Description_CNC.pdf?v=1791211378"
-          }
-        },
-        "column_BkD6aC": {
-          "type": "column",
-          "settings": {
-            "title": "&nbsp;Manufacturing Specialist",
-            "text": "<p>View Job Description →</p>",
-            "link_label": "",
-            "link": ""
-          }
-        }
-      },
-      "block_order": [
-        "column_fXb3hb",
-        "column_HrJCaX",
-        "column_BkD6aC"
-      ],
-      "name": "t:sections.multicolumn.presets.name",
-      "settings": {
-        "title": "&nbsp;Open Positions&nbsp;",
-        "heading_size": "h1",
-        "image_width": "full",
-        "image_ratio": "adapt",
-        "button_label": "Apply Now",
-        "button_link": "#shopify-section-template--18327695786089__forms",
-        "columns_desktop": 3,
-        "column_alignment": "left",
-        "background_style": "primary",
-        "color_scheme": "",
-        "columns_mobile": "1",
-        "swipe_on_mobile": false,
-        "padding_top": 36,
-        "padding_bottom": 36
       }
     }
   },
