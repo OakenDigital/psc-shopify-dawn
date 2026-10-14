@@ -422,6 +422,7 @@
       "blocks": {
         "ai_gen_block_52adeca_B4nEFc": {
           "type": "ai_gen_block_52adeca",
+          "disabled": true,
           "settings": {
             "desktop_width_percent": 55,
             "heading": "Open Positions",
