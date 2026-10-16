@@ -274,6 +274,75 @@
         "padding_top": 40,
         "padding_bottom": 52
       }
+    },
+    "1792187178ba907a19": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_8b35149_xy7XeU": {
+          "type": "ai_gen_block_8b35149",
+          "settings": {
+            "desktop_width_percent": 100,
+            "heading": "Installation Guides & Technical Resources",
+            "directory_heading": "Guide Directory",
+            "videos_heading": "Tech Videos",
+            "articles_heading": "Troubleshooting Articles",
+            "support_heading": "Contact Tech Support",
+            "search_label": "Search guides",
+            "search_placeholder": "Search by title, vehicle, or category",
+            "vehicle_label": "Vehicle application",
+            "category_label": "Product category",
+            "reset_label": "Reset filters",
+            "no_results": "No guides match your search. Adjust or reset the filters.",
+            "download_label": "Download PDF",
+            "watch_label": "Watch video",
+            "article_link_label": "Read article",
+            "guide_1_title": "",
+            "guide_1_vehicle": "",
+            "guide_1_category": "",
+            "guide_1_pdf": "",
+            "guide_2_title": "",
+            "guide_2_vehicle": "",
+            "guide_2_category": "",
+            "guide_2_pdf": "",
+            "guide_3_title": "",
+            "guide_3_vehicle": "",
+            "guide_3_category": "",
+            "guide_3_pdf": "",
+            "guide_4_title": "",
+            "guide_4_vehicle": "",
+            "guide_4_category": "",
+            "guide_4_pdf": "",
+            "guide_5_title": "",
+            "guide_5_vehicle": "",
+            "guide_5_category": "",
+            "guide_5_pdf": "",
+            "guide_6_title": "",
+            "guide_6_vehicle": "",
+            "guide_6_category": "",
+            "guide_6_pdf": "",
+            "video_1_title": "",
+            "video_1_url": "",
+            "video_2_title": "",
+            "video_2_url": "",
+            "video_3_title": "",
+            "video_3_url": "",
+            "article_1_title": "",
+            "article_1_url": "",
+            "article_2_title": "",
+            "article_2_url": "",
+            "article_3_title": "",
+            "article_3_url": "",
+            "support_copy": "",
+            "support_email": "",
+            "support_phone": ""
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_8b35149_xy7XeU"
+      ],
+      "settings": {}
     }
   },
   "order": [
@@ -281,6 +350,7 @@
     "tech_resource_cards",
     "video_library",
     "troubleshooting",
-    "service_info"
+    "service_info",
+    "1792187178ba907a19"
   ]
 }

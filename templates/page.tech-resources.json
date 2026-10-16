@@ -22,7 +22,7 @@
         "text": {
           "type": "text",
           "settings": {
-            "text": "The right information can save a lot of time in the shop. Browse PSC installation guides, product instructions, and technical resources for steering gears, pumps, &nbsp; Dynamic Damping Stabilizers, Cylinder Assist® systems, hose kits, and more. If you need additional help, our team is here to assist.",
+            "text": "Need installation information? You're in the right place. Find installation guides, product instructions, tech videos, and troubleshooting resources for PSC steering systems and components.",
             "text_style": "body"
           }
         },
@@ -104,6 +104,7 @@
         "card_2",
         "card_3"
       ],
+      "disabled": true,
       "settings": {
         "title": "Step-By-Step Help, Without the Guesswork",
         "subtitle": "Every PSC kit is designed to bolt on and go—but a little guidance never hurts. Download PDF install guides, follow along with our video tutorials, and get it done right the first time.",
