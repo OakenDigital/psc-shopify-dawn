@@ -15,22 +15,22 @@
         "heading": {
           "type": "heading",
           "settings": {
-            "heading": "Steering Re-Engineered Starts Here",
+            "heading": "Installation Guides & Tech Support",
             "heading_size": "h1"
           }
         },
         "text": {
           "type": "text",
           "settings": {
-            "text": "Whether you're wrenching in the garage or running a shop, we've got the know-how to keep you turning strong. Find install guides, watch our tech videos, or ask the guys who build it every day.",
-            "text_style": "subtitle"
+            "text": "The right information can save a lot of time in the shop. Browse PSC installation guides, product instructions, and technical resources for steering gears, pumps, &nbsp; Dynamic Damping Stabilizers, Cylinder Assist® systems, hose kits, and more. If you need additional help, our team is here to assist.",
+            "text_style": "body"
           }
         },
         "button": {
           "type": "buttons",
           "settings": {
             "button_layout": "inline",
-            "button_label_1": "View all Install Guides",
+            "button_label_1": "View Installation Guides",
             "button_link_1": "shopify://pages/install-guides",
             "button_style_secondary_1": false,
             "button_color_scheme_1": "scheme-f95fc31b-0c1b-4da3-82af-ed2967ed4967",
