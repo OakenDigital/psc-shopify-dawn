@@ -16,14 +16,14 @@
           "type": "heading",
           "settings": {
             "heading": "Steering Re-Engineered Starts Here",
-            "heading_size": "hxl"
+            "heading_size": "h1"
           }
         },
         "text": {
           "type": "text",
           "settings": {
-            "text": "Whether you're wrenching in the garage or running a shop, we've got the know-how to keep you turning strong. Browse install guides, watch our tech videos, or ask the guys who build it every day.",
-            "text_style": "body"
+            "text": "Whether you're wrenching in the garage or running a shop, we've got the know-how to keep you turning strong. Find install guides, watch our tech videos, or ask the guys who build it every day.",
+            "text_style": "subtitle"
           }
         },
         "button": {
@@ -49,11 +49,13 @@
       "settings": {
         "image": "shopify://shop_images/IMG_1382_compressed.jpg",
         "image_overlay_opacity": 70,
-        "image_height": "large",
+        "image_height": "small",
         "image_behavior": "none",
         "desktop_content_position": "middle-center",
         "desktop_content_alignment": "center",
         "show_text_box": false,
+        "margin_horizontal": 0,
+        "margin_horizontal_mobile": 0,
         "color_scheme": "scheme-f95fc31b-0c1b-4da3-82af-ed2967ed4967",
         "stack_images_on_mobile": true,
         "mobile_content_alignment": "center",
