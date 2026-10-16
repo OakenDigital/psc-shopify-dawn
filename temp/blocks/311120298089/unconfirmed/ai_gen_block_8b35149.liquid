@@ -1,6 +1,128 @@
+{% doc %}
+  @prompt
+    Build a new technical resources directory for PSC Motorsports, intended ONLY for the new page template tech-resources-v2. Do not change the original Tech Resources template or the waiver page; the editor currently previews the waiver page with view=tech-resources-v2, which is only preview context. Match the existing theme styling. Use this exact order: 'Installation Guides & Technical Resources' heading; guide search bar with vehicle application and product category filters; 'Guide Directory' showing repeatable rows with guide title, vehicle application, category, and 'Download PDF' link; 'Tech Videos'; 'Troubleshooting Articles'; 'Contact Tech Support'. Make search and both filters work together, with reset and no-results messaging. Use responsive rows that stack on mobile and accessible labeled controls. Make all copy, guide metadata, PDF links, video links, article links, and support contact information merchant-editable. Preserve and reuse existing technical-resource content and links where available, but do not invent PDF URLs, videos, articles, or contact details. This is a replacement layout on tech-resources-v2 only, not a duplicate to add to the original template.
+{% enddoc %}
+{% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
+{% style %}
+  .ai-tech-directory-{{ ai_gen_id }} { display:block; width:{{ block.settings.desktop_width_percent }}%; max-width:100%; margin:0 auto; color:rgb(var(--color-foreground)); }
+  .ai-tech-directory-{{ ai_gen_id }}__inner { padding:clamp(24px, 5vw, 64px) 0; }
+  .ai-tech-directory-{{ ai_gen_id }} h1,.ai-tech-directory-{{ ai_gen_id }} h2 { margin:0 0 20px; line-height:1.1; }
+  .ai-tech-directory-{{ ai_gen_id }} h1 { font-size:clamp(2.4rem,5vw,4rem); text-transform:uppercase; }
+  .ai-tech-directory-{{ ai_gen_id }} h2 { font-size:clamp(1.8rem,3vw,2.6rem); text-transform:uppercase; }
+  .ai-tech-directory-{{ ai_gen_id }}__section { margin-top:52px; }
+  .ai-tech-directory-{{ ai_gen_id }}__filters { display:grid; grid-template-columns:2fr 1fr 1fr auto; gap:12px; padding:20px; background:rgba(var(--color-foreground),.045); margin-top:28px; }
+  .ai-tech-directory-{{ ai_gen_id }} input,.ai-tech-directory-{{ ai_gen_id }} select { box-sizing:border-box; width:100%; min-height:48px; padding:10px 12px; border:1px solid rgba(var(--color-foreground),.45); border-radius:0; background:rgb(var(--color-background)); color:rgb(var(--color-foreground)); font:inherit; }
+  .ai-tech-directory-{{ ai_gen_id }} button,.ai-tech-directory-{{ ai_gen_id }}__link { display:inline-flex; align-items:center; justify-content:center; min-height:46px; padding:10px 18px; border:1px solid rgb(var(--color-foreground)); background:rgb(var(--color-foreground)); color:rgb(var(--color-background)); font:inherit; font-weight:700; text-decoration:none; cursor:pointer; }
+  .ai-tech-directory-{{ ai_gen_id }} button:focus-visible,.ai-tech-directory-{{ ai_gen_id }} a:focus-visible,.ai-tech-directory-{{ ai_gen_id }} input:focus-visible,.ai-tech-directory-{{ ai_gen_id }} select:focus-visible { outline:3px solid #d6001c; outline-offset:3px; }
+  .ai-tech-directory-{{ ai_gen_id }}__table-head,.ai-tech-directory-{{ ai_gen_id }}__row { display:grid; grid-template-columns:2fr 1.3fr 1fr auto; align-items:center; gap:18px; padding:16px 18px; }
+  .ai-tech-directory-{{ ai_gen_id }}__table-head { margin-top:14px; background:rgb(var(--color-foreground)); color:rgb(var(--color-background)); font-weight:700; text-transform:uppercase; }
+  .ai-tech-directory-{{ ai_gen_id }}__row { border-bottom:1px solid rgba(var(--color-foreground),.2); }
+  .ai-tech-directory-{{ ai_gen_id }}__title { font-weight:700; }
+  .ai-tech-directory-{{ ai_gen_id }}__link { min-height:40px; white-space:nowrap; }
+  .ai-tech-directory-{{ ai_gen_id }}__empty { padding:22px 18px; border:1px solid rgba(var(--color-foreground),.25); }
+  .ai-tech-directory-{{ ai_gen_id }}__cards { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:14px; }
+  .ai-tech-directory-{{ ai_gen_id }}__card { padding:20px; border:1px solid rgba(var(--color-foreground),.22); }
+  .ai-tech-directory-{{ ai_gen_id }}__card h3 { margin:0 0 14px; font-size:1.5rem; }
+  .ai-tech-directory-{{ ai_gen_id }}__support { padding:24px; background:rgba(var(--color-foreground),.045); }
+  .ai-tech-directory-{{ ai_gen_id }}__support p { margin:8px 0; }
+  @media(max-width:749px) {
+    .ai-tech-directory-{{ ai_gen_id }}__filters { grid-template-columns:1fr; padding:14px; }
+    .ai-tech-directory-{{ ai_gen_id }}__table-head { display:none; }
+    .ai-tech-directory-{{ ai_gen_id }}__row { grid-template-columns:1fr; gap:7px; padding:17px 12px; }
+    .ai-tech-directory-{{ ai_gen_id }}__row [data-label]::before { content:attr(data-label) ': '; font-weight:700; }
+    .ai-tech-directory-{{ ai_gen_id }}__cards { grid-template-columns:1fr; }
+  }
+{% endstyle %}
+<tech-directory-{{ ai_gen_id }} class="ai-tech-directory-{{ ai_gen_id }}" style="width:{{ block.settings.desktop_width_percent }}%;" {{ block.shopify_attributes }}>
+  <div class="ai-tech-directory-{{ ai_gen_id }}__inner">
+    <h1>{{ block.settings.heading | escape }}</h1>
+    <section aria-labelledby="ai-tech-guides-{{ ai_gen_id }}">
+      <div class="ai-tech-directory-{{ ai_gen_id }}__filters">
+        <div><label for="ai-tech-search-{{ ai_gen_id }}">{{ block.settings.search_label | escape }}</label><input id="ai-tech-search-{{ ai_gen_id }}" type="search" placeholder="{{ block.settings.search_placeholder | escape }}"></div>
+        <div><label for="ai-tech-vehicle-{{ ai_gen_id }}">{{ block.settings.vehicle_label | escape }}</label><select id="ai-tech-vehicle-{{ ai_gen_id }}"><option value="">All vehicle applications</option></select></div>
+        <div><label for="ai-tech-category-{{ ai_gen_id }}">{{ block.settings.category_label | escape }}</label><select id="ai-tech-category-{{ ai_gen_id }}"><option value="">All categories</option></select></div>
+        <button type="button" data-reset>{{ block.settings.reset_label | escape }}</button>
+      </div>
+      <h2 id="ai-tech-guides-{{ ai_gen_id }}" class="ai-tech-directory-{{ ai_gen_id }}__section">{{ block.settings.directory_heading | escape }}</h2>
+      <div class="ai-tech-directory-{{ ai_gen_id }}__table-head" aria-hidden="true"><span>Guide title</span><span>Vehicle application</span><span>Category</span><span>Download</span></div>
+      <div data-guide-list>
+        {% for i in (1..6) %}
+          {% assign title_key = 'guide_' | append: i | append: '_title' %}{% assign vehicle_key = 'guide_' | append: i | append: '_vehicle' %}{% assign category_key = 'guide_' | append: i | append: '_category' %}{% assign pdf_key = 'guide_' | append: i | append: '_pdf' %}
+          {% assign guide_title = block.settings[title_key] %}{% assign guide_vehicle = block.settings[vehicle_key] %}{% assign guide_category = block.settings[category_key] %}{% assign guide_pdf = block.settings[pdf_key] %}
+          {% if guide_title != blank or guide_vehicle != blank or guide_category != blank or guide_pdf != blank %}
+            <article class="ai-tech-directory-{{ ai_gen_id }}__row" data-guide data-title="{{ guide_title | escape }}" data-vehicle="{{ guide_vehicle | escape }}" data-category="{{ guide_category | escape }}">
+              <span class="ai-tech-directory-{{ ai_gen_id }}__title" data-label="Guide">{{ guide_title | escape }}</span><span data-label="Vehicle application">{{ guide_vehicle | escape }}</span><span data-label="Category">{{ guide_category | escape }}</span>
+              <span>{% if guide_pdf != blank %}<a class="ai-tech-directory-{{ ai_gen_id }}__link" href="{{ guide_pdf }}" target="_blank" rel="noopener">{{ block.settings.download_label | escape }}</a>{% endif %}</span>
+            </article>
+          {% endif %}
+        {% endfor %}
+      </div>
+      <p class="ai-tech-directory-{{ ai_gen_id }}__empty" data-no-results hidden>{{ block.settings.no_results | escape }}</p>
+    </section>
+    <section class="ai-tech-directory-{{ ai_gen_id }}__section"><h2>{{ block.settings.videos_heading | escape }}</h2><div class="ai-tech-directory-{{ ai_gen_id }}__cards">
+      {% for i in (1..3) %}{% assign title_key = 'video_' | append: i | append: '_title' %}{% assign url_key = 'video_' | append: i | append: '_url' %}{% assign item_title = block.settings[title_key] %}{% assign item_url = block.settings[url_key] %}{% if item_title != blank and item_url != blank %}<article class="ai-tech-directory-{{ ai_gen_id }}__card"><h3>{{ item_title | escape }}</h3><a class="ai-tech-directory-{{ ai_gen_id }}__link" href="{{ item_url }}" target="_blank" rel="noopener">{{ block.settings.watch_label | escape }}</a></article>{% endif %}{% endfor %}
+    </div></section>
+    <section class="ai-tech-directory-{{ ai_gen_id }}__section"><h2>{{ block.settings.articles_heading | escape }}</h2><div class="ai-tech-directory-{{ ai_gen_id }}__cards">
+      {% for i in (1..3) %}{% assign title_key = 'article_' | append: i | append: '_title' %}{% assign url_key = 'article_' | append: i | append: '_url' %}{% assign item_title = block.settings[title_key] %}{% assign item_url = block.settings[url_key] %}{% if item_title != blank and item_url != blank %}<article class="ai-tech-directory-{{ ai_gen_id }}__card"><h3>{{ item_title | escape }}</h3><a class="ai-tech-directory-{{ ai_gen_id }}__link" href="{{ item_url }}">{{ block.settings.article_link_label | escape }}</a></article>{% endif %}{% endfor %}
+    </div></section>
+    <section class="ai-tech-directory-{{ ai_gen_id }}__section"><h2>{{ block.settings.support_heading | escape }}</h2><div class="ai-tech-directory-{{ ai_gen_id }}__support">{% if block.settings.support_copy != blank %}<p>{{ block.settings.support_copy | escape }}</p>{% endif %}{% if block.settings.support_email != blank %}<p><a href="mailto:{{ block.settings.support_email | escape }}">{{ block.settings.support_email | escape }}</a></p>{% endif %}{% if block.settings.support_phone != blank %}<p><a href="tel:{{ block.settings.support_phone | remove: ' ' | escape }}">{{ block.settings.support_phone | escape }}</a></p>{% endif %}</div></section>
+  </div>
+</tech-directory-{{ ai_gen_id }}>
+<script>
+(function(){
+  const tag='tech-directory-{{ ai_gen_id }}';
+  if(customElements.get(tag)) return;
+  class TechDirectory extends HTMLElement {
+    connectedCallback(){
+      this.search=this.querySelector('input[type="search"]'); this.vehicle=this.querySelector('#ai-tech-vehicle-{{ ai_gen_id }}'); this.category=this.querySelector('#ai-tech-category-{{ ai_gen_id }}'); this.rows=[...this.querySelectorAll('[data-guide]')]; this.empty=this.querySelector('[data-no-results]');
+      this.populate(this.vehicle,'vehicle','All vehicle applications'); this.populate(this.category,'category','All categories');
+      [this.search,this.vehicle,this.category].forEach(control=>control.addEventListener('input',()=>this.filter()));
+      this.querySelector('[data-reset]').addEventListener('click',()=>{this.search.value='';this.vehicle.value='';this.category.value='';this.filter();this.search.focus();});
+      this.filter();
+    }
+    populate(select,key,placeholder){const values=[...new Set(this.rows.map(row=>row.dataset[key].trim()).filter(Boolean))].sort((a,b)=>a.localeCompare(b)); values.forEach(value=>{const option=document.createElement('option');option.value=value.toLocaleLowerCase();option.textContent=value;select.append(option);});}
+    filter(){const term=this.search.value.trim().toLocaleLowerCase();let count=0;this.rows.forEach(row=>{const matchesText=(row.dataset.title+' '+row.dataset.vehicle+' '+row.dataset.category).toLocaleLowerCase().includes(term);const matchesVehicle=!this.vehicle.value||row.dataset.vehicle.trim().toLocaleLowerCase()===this.vehicle.value;const matchesCategory=!this.category.value||row.dataset.category.trim().toLocaleLowerCase()===this.category.value;const visible=matchesText&&matchesVehicle&&matchesCategory;row.hidden=!visible;if(visible)count++;});this.empty.hidden=count!==0;}
+  }
+  customElements.define(tag,TechDirectory);
+})();
+</script>
 {% schema %}
- {
-   "name": "AI_Block",
-   "tag": "shopify-ai-generated-block"
- }
+{
+  "name": "Tech resources directory",
+  "settings": [
+    {"type":"range","id":"desktop_width_percent","label":"Desktop width","min":50,"max":100,"step":5,"unit":"%","default":100},
+    {"type":"header","content":"Headings and controls"},
+    {"type":"text","id":"heading","label":"Main heading","default":"Installation Guides & Technical Resources"},
+    {"type":"text","id":"directory_heading","label":"Directory heading","default":"Guide Directory"},
+    {"type":"text","id":"videos_heading","label":"Videos heading","default":"Tech Videos"},
+    {"type":"text","id":"articles_heading","label":"Articles heading","default":"Troubleshooting Articles"},
+    {"type":"text","id":"support_heading","label":"Support heading","default":"Contact Tech Support"},
+    {"type":"text","id":"search_label","label":"Search label","default":"Search guides"},
+    {"type":"text","id":"search_placeholder","label":"Search prompt","default":"Search by title, vehicle, or category"},
+    {"type":"text","id":"vehicle_label","label":"Vehicle filter label","default":"Vehicle application"},
+    {"type":"text","id":"category_label","label":"Category filter label","default":"Product category"},
+    {"type":"text","id":"reset_label","label":"Reset button","default":"Reset filters"},
+    {"type":"text","id":"no_results","label":"No-results message","default":"No guides match your search. Adjust or reset the filters."},
+    {"type":"text","id":"download_label","label":"PDF link label","default":"Download PDF"},
+    {"type":"text","id":"watch_label","label":"Video link label","default":"Watch video"},
+    {"type":"text","id":"article_link_label","label":"Article link label","default":"Read article"},
+    {"type":"header","content":"Guide directory"},
+    {"type":"paragraph","content":"Add up to six guides. Leave a guide blank to omit its row; categories and vehicles populate the filters automatically."},
+    {"type":"text","id":"guide_1_title","label":"Guide 1 title"},{"type":"text","id":"guide_1_vehicle","label":"Guide 1 vehicle"},{"type":"text","id":"guide_1_category","label":"Guide 1 category"},{"type":"url","id":"guide_1_pdf","label":"Guide 1 PDF"},
+    {"type":"text","id":"guide_2_title","label":"Guide 2 title"},{"type":"text","id":"guide_2_vehicle","label":"Guide 2 vehicle"},{"type":"text","id":"guide_2_category","label":"Guide 2 category"},{"type":"url","id":"guide_2_pdf","label":"Guide 2 PDF"},
+    {"type":"text","id":"guide_3_title","label":"Guide 3 title"},{"type":"text","id":"guide_3_vehicle","label":"Guide 3 vehicle"},{"type":"text","id":"guide_3_category","label":"Guide 3 category"},{"type":"url","id":"guide_3_pdf","label":"Guide 3 PDF"},
+    {"type":"text","id":"guide_4_title","label":"Guide 4 title"},{"type":"text","id":"guide_4_vehicle","label":"Guide 4 vehicle"},{"type":"text","id":"guide_4_category","label":"Guide 4 category"},{"type":"url","id":"guide_4_pdf","label":"Guide 4 PDF"},
+    {"type":"text","id":"guide_5_title","label":"Guide 5 title"},{"type":"text","id":"guide_5_vehicle","label":"Guide 5 vehicle"},{"type":"text","id":"guide_5_category","label":"Guide 5 category"},{"type":"url","id":"guide_5_pdf","label":"Guide 5 PDF"},
+    {"type":"text","id":"guide_6_title","label":"Guide 6 title"},{"type":"text","id":"guide_6_vehicle","label":"Guide 6 vehicle"},{"type":"text","id":"guide_6_category","label":"Guide 6 category"},{"type":"url","id":"guide_6_pdf","label":"Guide 6 PDF"},
+    {"type":"header","content":"Tech videos"},
+    {"type":"text","id":"video_1_title","label":"Video 1 title"},{"type":"url","id":"video_1_url","label":"Video 1 link"},{"type":"text","id":"video_2_title","label":"Video 2 title"},{"type":"url","id":"video_2_url","label":"Video 2 link"},{"type":"text","id":"video_3_title","label":"Video 3 title"},{"type":"url","id":"video_3_url","label":"Video 3 link"},
+    {"type":"header","content":"Troubleshooting articles"},
+    {"type":"text","id":"article_1_title","label":"Article 1 title"},{"type":"url","id":"article_1_url","label":"Article 1 link"},{"type":"text","id":"article_2_title","label":"Article 2 title"},{"type":"url","id":"article_2_url","label":"Article 2 link"},{"type":"text","id":"article_3_title","label":"Article 3 title"},{"type":"url","id":"article_3_url","label":"Article 3 link"},
+    {"type":"header","content":"Tech support"},
+    {"type":"textarea","id":"support_copy","label":"Support information"},{"type":"text","id":"support_email","label":"Support email"},{"type":"text","id":"support_phone","label":"Support phone"}
+  ],
+  "presets": [{"name":"Tech resources directory"}],
+  "tag": null,
+  "class": "tech-resources-directory"
+}
 {% endschema %}
