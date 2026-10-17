@@ -17,6 +17,30 @@
         "padding_bottom": 28
       }
     },
+    "rich_text_PGFBYC": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_ygy3Bq": {
+          "type": "heading",
+          "settings": {
+            "heading": "Install Guides & Tech Resources",
+            "heading_size": "h1"
+          }
+        }
+      },
+      "block_order": [
+        "heading_ygy3Bq"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
     "blocks_tdaxhL": {
       "type": "_blocks",
       "blocks": {
@@ -114,50 +138,6 @@
       "settings": {
         "include_margins": true,
         "full_width": true
-      }
-    },
-    "rich_text_DmFmYC": {
-      "type": "rich-text",
-      "blocks": {
-        "heading_7R4YHL": {
-          "type": "heading",
-          "disabled": true,
-          "settings": {
-            "heading": "Talk about your brand",
-            "heading_size": "h1"
-          }
-        },
-        "text_LLCmMz": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.</p>"
-          }
-        },
-        "button_WLmR7W": {
-          "type": "button",
-          "settings": {
-            "button_label": "Button label",
-            "button_link": "",
-            "button_style_secondary": false,
-            "button_label_2": "",
-            "button_link_2": "",
-            "button_style_secondary_2": false
-          }
-        }
-      },
-      "block_order": [
-        "heading_7R4YHL",
-        "text_LLCmMz",
-        "button_WLmR7W"
-      ],
-      "name": "t:sections.rich-text.presets.name",
-      "settings": {
-        "desktop_content_position": "center",
-        "content_alignment": "center",
-        "color_scheme": "",
-        "full_width": true,
-        "padding_top": 40,
-        "padding_bottom": 52
       }
     },
     "1792193374196641af": {
@@ -303,9 +283,9 @@
   },
   "order": [
     "main",
+    "rich_text_PGFBYC",
     "blocks_tdaxhL",
     "178215901468e81263",
-    "rich_text_DmFmYC",
     "1792193374196641af",
     "1792194718735e8122",
     "1792252347baa65dd8"
