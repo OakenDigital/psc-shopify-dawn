@@ -1,6 +1,97 @@
+{% doc %}
+  @prompt
+    Create a NEW replacement PSC Motorsports Install guide table on the currently selected psc-install-guides template. Preserve the existing table untouched. Essential requirement: rows must be individually reorderable in the theme editor, not fixed Row 1 through Row 21 settings. Use independent repeatable row blocks with native editor drag-and-drop ordering if supported. Each row must keep its four editable text cells and unique editable PDF URL together when moved. Start with 21 rows and allow adding/removing rows. Table has five editable column headings. Fifth column displays one shared Download image selected by a shared image picker, with each row image linked to that row's unique PDF URL; blank URL means unlinked image. Keep image width editable. Reuse existing table content and Download image if accessible without altering original; otherwise leave fields empty rather than invent content or URLs. Match site's inherited font family, colors, and button/image styling. Use slightly smaller readable body type, default 14px with an editable font-size control, comfortable line height and cell padding; headers should remain clear and consistent with site. Accessible semantic table with horizontally scrollable container on mobile and no page overflow. Do not change About Us content or assignment, it is only the preview resource. If the generator cannot create native reorderable row blocks, do not silently build another fixed-row table; instead provide an explicit editable row-order setting listing stable row IDs in display order, preserving each row's data and URL together and validating duplicates/invalid IDs. Prefer native draggable rows over this fallback.
+{% enddoc %}
+{% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
+{% assign order_ids = block.settings.row_order | split: ',' %}
+{% capture valid_ids %}|{% for n in (1..21) %}r{{ n }}|{% endfor %}{% endcapture %}
+
+{% style %}
+  .psc-guide-{{ ai_gen_id }} { display:block; width:{{ block.settings.desktop_width_percent }}%; max-width:100%; color:rgb(var(--color-foreground)); font-family:var(--font-body-family); }
+  .psc-guide-{{ ai_gen_id }}__scroll { width:100%; max-width:100%; overflow-x:auto; overscroll-behavior-inline:contain; -webkit-overflow-scrolling:touch; border:1px solid rgba(var(--color-foreground),.25); }
+  .psc-guide-{{ ai_gen_id }} table { width:100%; min-width:680px; border-collapse:collapse; font-family:inherit; font-size:{{ block.settings.body_font_size }}px; line-height:1.5; }
+  .psc-guide-{{ ai_gen_id }} th,.psc-guide-{{ ai_gen_id }} td { padding:{{ block.settings.cell_padding }}px; text-align:left; vertical-align:middle; border-bottom:1px solid rgba(var(--color-foreground),.2); }
+  .psc-guide-{{ ai_gen_id }} th { font-weight:700; background:rgba(var(--color-foreground),.06); }
+  .psc-guide-{{ ai_gen_id }} .psc-guide-{{ ai_gen_id }}__image { display:inline-block; width:{{ block.settings.image_width }}px; max-width:100%; height:auto; }
+  .psc-guide-{{ ai_gen_id }} .psc-guide__placeholder { display:inline-block; width:{{ block.settings.image_width }}px; max-width:100%; }
+  .psc-guide-{{ ai_gen_id }} .psc-guide__placeholder svg { width:100%; height:auto; }
+  .psc-guide-{{ ai_gen_id }} a { color:inherit; }
+  .psc-guide-{{ ai_gen_id }} a:focus-visible { outline:2px solid currentColor; outline-offset:3px; }
+  @media(max-width:749px) { .psc-guide-{{ ai_gen_id }} { width:100%; } }
+{% endstyle %}
+
+<div class="psc-guide-{{ ai_gen_id }}" {{ block.shopify_attributes }}>
+  <div class="psc-guide-{{ ai_gen_id }}__scroll" role="region" aria-label="{{ block.settings.table_label | escape }}" tabindex="0">
+    <table><caption class="visually-hidden">{{ block.settings.table_label | escape }}</caption>
+      <thead><tr><th scope="col">{{ block.settings.heading_one | escape }}</th><th scope="col">{{ block.settings.heading_two | escape }}</th><th scope="col">{{ block.settings.heading_three | escape }}</th><th scope="col">{{ block.settings.heading_four | escape }}</th><th scope="col">{{ block.settings.heading_five | escape }}</th></tr></thead>
+      <tbody>
+        {% assign rendered_ids = '|' %}
+        {% for raw_id in order_ids %}
+          {% assign row_id = raw_id | strip | downcase %}
+          {% capture check_id %}|{{ row_id }}|{% endcapture %}
+          {% if valid_ids contains check_id %}
+            {% unless rendered_ids contains check_id %}
+              {% assign rendered_ids = rendered_ids | append: row_id | append: '|' %}
+              {% assign row_num = row_id | remove: 'r' | plus: 0 %}
+              {% assign c1key = 'row_' | append: row_num | append: '_cell_1' %}
+              {% assign c2key = 'row_' | append: row_num | append: '_cell_2' %}
+              {% assign c3key = 'row_' | append: row_num | append: '_cell_3' %}
+              {% assign c4key = 'row_' | append: row_num | append: '_cell_4' %}
+              {% assign urlkey = 'row_' | append: row_num | append: '_pdf' %}
+              <tr><td>{{ block.settings[c1key] | escape }}</td><td>{{ block.settings[c2key] | escape }}</td><td>{{ block.settings[c3key] | escape }}</td><td>{{ block.settings[c4key] | escape }}</td><td>{% if block.settings.download_image != blank %}{% if block.settings[urlkey] != blank %}<a href="{{ block.settings[urlkey] }}" target="_blank" rel="noopener">{% endif %}<img class="psc-guide-{{ ai_gen_id }}__image" src="{{ block.settings.download_image | image_url: width: 500 }}" alt="{{ block.settings.download_image.alt | default: 'Download guide' | escape }}" loading="lazy">{% if block.settings[urlkey] != blank %}</a>{% endif %}{% else %}<span class="psc-guide__placeholder" aria-label="Select a shared download image">{{ 'image' | placeholder_svg_tag }}</span>{% endif %}</td></tr>
+            {% endunless %}
+          {% endif %}
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</div>
+
 {% schema %}
- {
-   "name": "AI_Block",
-   "tag": "shopify-ai-generated-block"
- }
+{
+  "name": "PSC install guides",
+  "settings": [
+    { "type": "header", "content": "Table headings" },
+    { "type": "text", "id": "table_label", "label": "Accessible table label", "default": "PSC Motorsports install guides" },
+    { "type": "text", "id": "heading_one", "label": "Column heading 1", "default": "Product" },
+    { "type": "text", "id": "heading_two", "label": "Column heading 2", "default": "Vehicle" },
+    { "type": "text", "id": "heading_three", "label": "Column heading 3", "default": "Year" },
+    { "type": "text", "id": "heading_four", "label": "Column heading 4", "default": "Notes" },
+    { "type": "text", "id": "heading_five", "label": "Column heading 5", "default": "Download" },
+    { "type": "image_picker", "id": "download_image", "label": "Shared download image" },
+    { "type": "range", "id": "image_width", "label": "Image width", "min": 40, "max": 240, "step": 10, "unit": "px", "default": 100 },
+    { "type": "header", "content": "Row order and style" },
+    { "type": "text", "id": "row_order", "label": "Display order (comma-separated IDs)", "default": "r1,r2,r3,r4,r5,r6,r7,r8,r9,r10,r11,r12,r13,r14,r15,r16,r17,r18,r19,r20,r21" },
+    { "type": "paragraph", "content": "Use each ID r1 through r21 once. Unknown IDs and duplicate IDs are ignored; remove an ID to hide its row. Row data and PDF remain tied to its ID." },
+    { "type": "range", "id": "desktop_width_percent", "label": "Desktop width", "min": 50, "max": 100, "step": 5, "unit": "%", "default": 100 },
+    { "type": "range", "id": "body_font_size", "label": "Body font size", "min": 12, "max": 20, "step": 1, "unit": "px", "default": 14 },
+    { "type": "range", "id": "cell_padding", "label": "Cell padding", "min": 6, "max": 24, "step": 2, "unit": "px", "default": 12 },
+    { "type": "header", "content": "Row fields" },
+    { "type": "paragraph", "content": "21 editable row records. Leave fields blank if importing existing guide data later." },
+    { "type": "text", "id": "row_1_cell_1", "label": "r1 · Cell 1" }, { "type": "text", "id": "row_1_cell_2", "label": "r1 · Cell 2" }, { "type": "text", "id": "row_1_cell_3", "label": "r1 · Cell 3" }, { "type": "text", "id": "row_1_cell_4", "label": "r1 · Cell 4" }, { "type": "url", "id": "row_1_pdf", "label": "r1 · PDF URL" },
+    { "type": "text", "id": "row_2_cell_1", "label": "r2 · Cell 1" }, { "type": "text", "id": "row_2_cell_2", "label": "r2 · Cell 2" }, { "type": "text", "id": "row_2_cell_3", "label": "r2 · Cell 3" }, { "type": "text", "id": "row_2_cell_4", "label": "r2 · Cell 4" }, { "type": "url", "id": "row_2_pdf", "label": "r2 · PDF URL" },
+    { "type": "text", "id": "row_3_cell_1", "label": "r3 · Cell 1" }, { "type": "text", "id": "row_3_cell_2", "label": "r3 · Cell 2" }, { "type": "text", "id": "row_3_cell_3", "label": "r3 · Cell 3" }, { "type": "text", "id": "row_3_cell_4", "label": "r3 · Cell 4" }, { "type": "url", "id": "row_3_pdf", "label": "r3 · PDF URL" },
+    { "type": "text", "id": "row_4_cell_1", "label": "r4 · Cell 1" }, { "type": "text", "id": "row_4_cell_2", "label": "r4 · Cell 2" }, { "type": "text", "id": "row_4_cell_3", "label": "r4 · Cell 3" }, { "type": "text", "id": "row_4_cell_4", "label": "r4 · Cell 4" }, { "type": "url", "id": "row_4_pdf", "label": "r4 · PDF URL" },
+    { "type": "text", "id": "row_5_cell_1", "label": "r5 · Cell 1" }, { "type": "text", "id": "row_5_cell_2", "label": "r5 · Cell 2" }, { "type": "text", "id": "row_5_cell_3", "label": "r5 · Cell 3" }, { "type": "text", "id": "row_5_cell_4", "label": "r5 · Cell 4" }, { "type": "url", "id": "row_5_pdf", "label": "r5 · PDF URL" },
+    { "type": "text", "id": "row_6_cell_1", "label": "r6 · Cell 1" }, { "type": "text", "id": "row_6_cell_2", "label": "r6 · Cell 2" }, { "type": "text", "id": "row_6_cell_3", "label": "r6 · Cell 3" }, { "type": "text", "id": "row_6_cell_4", "label": "r6 · Cell 4" }, { "type": "url", "id": "row_6_pdf", "label": "r6 · PDF URL" },
+    { "type": "text", "id": "row_7_cell_1", "label": "r7 · Cell 1" }, { "type": "text", "id": "row_7_cell_2", "label": "r7 · Cell 2" }, { "type": "text", "id": "row_7_cell_3", "label": "r7 · Cell 3" }, { "type": "text", "id": "row_7_cell_4", "label": "r7 · Cell 4" }, { "type": "url", "id": "row_7_pdf", "label": "r7 · PDF URL" },
+    { "type": "text", "id": "row_8_cell_1", "label": "r8 · Cell 1" }, { "type": "text", "id": "row_8_cell_2", "label": "r8 · Cell 2" }, { "type": "text", "id": "row_8_cell_3", "label": "r8 · Cell 3" }, { "type": "text", "id": "row_8_cell_4", "label": "r8 · Cell 4" }, { "type": "url", "id": "row_8_pdf", "label": "r8 · PDF URL" },
+    { "type": "text", "id": "row_9_cell_1", "label": "r9 · Cell 1" }, { "type": "text", "id": "row_9_cell_2", "label": "r9 · Cell 2" }, { "type": "text", "id": "row_9_cell_3", "label": "r9 · Cell 3" }, { "type": "text", "id": "row_9_cell_4", "label": "r9 · Cell 4" }, { "type": "url", "id": "row_9_pdf", "label": "r9 · PDF URL" },
+    { "type": "text", "id": "row_10_cell_1", "label": "r10 · Cell 1" }, { "type": "text", "id": "row_10_cell_2", "label": "r10 · Cell 2" }, { "type": "text", "id": "row_10_cell_3", "label": "r10 · Cell 3" }, { "type": "text", "id": "row_10_cell_4", "label": "r10 · Cell 4" }, { "type": "url", "id": "row_10_pdf", "label": "r10 · PDF URL" },
+    { "type": "text", "id": "row_11_cell_1", "label": "r11 · Cell 1" }, { "type": "text", "id": "row_11_cell_2", "label": "r11 · Cell 2" }, { "type": "text", "id": "row_11_cell_3", "label": "r11 · Cell 3" }, { "type": "text", "id": "row_11_cell_4", "label": "r11 · Cell 4" }, { "type": "url", "id": "row_11_pdf", "label": "r11 · PDF URL" },
+    { "type": "text", "id": "row_12_cell_1", "label": "r12 · Cell 1" }, { "type": "text", "id": "row_12_cell_2", "label": "r12 · Cell 2" }, { "type": "text", "id": "row_12_cell_3", "label": "r12 · Cell 3" }, { "type": "text", "id": "row_12_cell_4", "label": "r12 · Cell 4" }, { "type": "url", "id": "row_12_pdf", "label": "r12 · PDF URL" },
+    { "type": "text", "id": "row_13_cell_1", "label": "r13 · Cell 1" }, { "type": "text", "id": "row_13_cell_2", "label": "r13 · Cell 2" }, { "type": "text", "id": "row_13_cell_3", "label": "r13 · Cell 3" }, { "type": "text", "id": "row_13_cell_4", "label": "r13 · Cell 4" }, { "type": "url", "id": "row_13_pdf", "label": "r13 · PDF URL" },
+    { "type": "text", "id": "row_14_cell_1", "label": "r14 · Cell 1" }, { "type": "text", "id": "row_14_cell_2", "label": "r14 · Cell 2" }, { "type": "text", "id": "row_14_cell_3", "label": "r14 · Cell 3" }, { "type": "text", "id": "row_14_cell_4", "label": "r14 · Cell 4" }, { "type": "url", "id": "row_14_pdf", "label": "r14 · PDF URL" },
+    { "type": "text", "id": "row_15_cell_1", "label": "r15 · Cell 1" }, { "type": "text", "id": "row_15_cell_2", "label": "r15 · Cell 2" }, { "type": "text", "id": "row_15_cell_3", "label": "r15 · Cell 3" }, { "type": "text", "id": "row_15_cell_4", "label": "r15 · Cell 4" }, { "type": "url", "id": "row_15_pdf", "label": "r15 · PDF URL" },
+    { "type": "text", "id": "row_16_cell_1", "label": "r16 · Cell 1" }, { "type": "text", "id": "row_16_cell_2", "label": "r16 · Cell 2" }, { "type": "text", "id": "row_16_cell_3", "label": "r16 · Cell 3" }, { "type": "text", "id": "row_16_cell_4", "label": "r16 · Cell 4" }, { "type": "url", "id": "row_16_pdf", "label": "r16 · PDF URL" },
+    { "type": "text", "id": "row_17_cell_1", "label": "r17 · Cell 1" }, { "type": "text", "id": "row_17_cell_2", "label": "r17 · Cell 2" }, { "type": "text", "id": "row_17_cell_3", "label": "r17 · Cell 3" }, { "type": "text", "id": "row_17_cell_4", "label": "r17 · Cell 4" }, { "type": "url", "id": "row_17_pdf", "label": "r17 · PDF URL" },
+    { "type": "text", "id": "row_18_cell_1", "label": "r18 · Cell 1" }, { "type": "text", "id": "row_18_cell_2", "label": "r18 · Cell 2" }, { "type": "text", "id": "row_18_cell_3", "label": "r18 · Cell 3" }, { "type": "text", "id": "row_18_cell_4", "label": "r18 · Cell 4" }, { "type": "url", "id": "row_18_pdf", "label": "r18 · PDF URL" },
+    { "type": "text", "id": "row_19_cell_1", "label": "r19 · Cell 1" }, { "type": "text", "id": "row_19_cell_2", "label": "r19 · Cell 2" }, { "type": "text", "id": "row_19_cell_3", "label": "r19 · Cell 3" }, { "type": "text", "id": "row_19_cell_4", "label": "r19 · Cell 4" }, { "type": "url", "id": "row_19_pdf", "label": "r19 · PDF URL" },
+    { "type": "text", "id": "row_20_cell_1", "label": "r20 · Cell 1" }, { "type": "text", "id": "row_20_cell_2", "label": "r20 · Cell 2" }, { "type": "text", "id": "row_20_cell_3", "label": "r20 · Cell 3" }, { "type": "text", "id": "row_20_cell_4", "label": "r20 · Cell 4" }, { "type": "url", "id": "row_20_pdf", "label": "r20 · PDF URL" },
+    { "type": "text", "id": "row_21_cell_1", "label": "r21 · Cell 1" }, { "type": "text", "id": "row_21_cell_2", "label": "r21 · Cell 2" }, { "type": "text", "id": "row_21_cell_3", "label": "r21 · Cell 3" }, { "type": "text", "id": "row_21_cell_4", "label": "r21 · Cell 4" }, { "type": "url", "id": "row_21_pdf", "label": "r21 · PDF URL" }
+  ],
+  "presets": [{ "name": "PSC install guides" }],
+  "tag": null,
+  "class": "psc-install-guides"
+}
 {% endschema %}
