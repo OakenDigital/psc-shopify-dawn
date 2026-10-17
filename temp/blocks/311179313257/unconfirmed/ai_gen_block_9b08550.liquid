@@ -1,6 +1,189 @@
+{% doc %}
+  @prompt
+    Create a how-to video section for the PSC Motorsports install guides page. Display a responsive grid of video cards, each with an editable thumbnail image, video title, optional short description, and destination URL. Clicking the thumbnail or title should open the specified URL, rather than playing an embedded video. Include a play icon overlay to clearly identify video content. Allow cards to be added, removed, and reordered, and provide an editable section heading, desktop column count, spacing, and colors. Match the existing page's styling and work well on mobile. Keep the existing install guide table and all other page content unchanged.
+{% enddoc %}
+{% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
+
+{% style %}
+  .ai-video-guides-{{ ai_gen_id }} {
+    display: block;
+    width: {{ block.settings.desktop_width_percent }}%;
+    max-width: 100%;
+    padding: 28px 0;
+    color: {{ block.settings.text_color }};
+    background: {{ block.settings.background_color }};
+  }
+
+  .ai-video-guides-{{ ai_gen_id }}__inner { width: 100%; }
+  .ai-video-guides-{{ ai_gen_id }}__heading {
+    margin: 0 0 22px;
+    font: inherit;
+    font-size: clamp(1.7rem, 3vw, 2.4rem);
+    line-height: 1.1;
+    color: {{ block.settings.text_color }};
+  }
+  .ai-video-guides-{{ ai_gen_id }}__grid {
+    display: grid;
+    grid-template-columns: repeat({{ block.settings.desktop_columns }}, minmax(0, 1fr));
+    gap: {{ block.settings.card_spacing }}px;
+  }
+  .ai-video-guides-{{ ai_gen_id }}__card {
+    min-width: 0;
+    overflow: hidden;
+    background: {{ block.settings.card_color }};
+    border: 1px solid rgba(18, 18, 18, 0.12);
+  }
+  .ai-video-guides-{{ ai_gen_id }}__media {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    aspect-ratio: 16 / 9;
+    background: #e8e8e8;
+    color: #fff;
+  }
+  .ai-video-guides-{{ ai_gen_id }}__media img,
+  .ai-video-guides-{{ ai_gen_id }}__placeholder svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .ai-video-guides-{{ ai_gen_id }}__placeholder { width: 100%; height: 100%; }
+  .ai-video-guides-{{ ai_gen_id }}__placeholder svg { background: #e8e8e8; }
+  .ai-video-guides-{{ ai_gen_id }}__play {
+    position: absolute;
+    inset: 50% auto auto 50%;
+    display: grid;
+    width: 54px;
+    height: 54px;
+    place-items: center;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    background: {{ block.settings.play_color }};
+    color: #fff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, .28);
+  }
+  .ai-video-guides-{{ ai_gen_id }}__play svg { width: 20px; height: 20px; margin-left: 3px; }
+  .ai-video-guides-{{ ai_gen_id }}__body { padding: 16px; }
+  .ai-video-guides-{{ ai_gen_id }}__title {
+    display: inline-block;
+    margin: 0;
+    color: {{ block.settings.text_color }};
+    font-size: 1.25rem;
+    line-height: 1.2;
+    font-weight: 700;
+    text-decoration: none;
+  }
+  .ai-video-guides-{{ ai_gen_id }}__title:hover { text-decoration: underline; text-underline-offset: 3px; }
+  .ai-video-guides-{{ ai_gen_id }}__title:focus-visible,
+  .ai-video-guides-{{ ai_gen_id }}__media:focus-visible { outline: 3px solid {{ block.settings.play_color }}; outline-offset: 3px; }
+  .ai-video-guides-{{ ai_gen_id }}__description { margin: 8px 0 0; color: {{ block.settings.text_color }}; line-height: 1.45; }
+  .ai-video-guides-{{ ai_gen_id }}__empty {
+    grid-column: 1 / -1;
+    padding: 28px;
+    border: 1px dashed rgba(18, 18, 18, .35);
+    text-align: center;
+    color: {{ block.settings.text_color }};
+  }
+  @media screen and (max-width: 749px) {
+    .ai-video-guides-{{ ai_gen_id }} { width: 100%; padding: 22px 0; }
+    .ai-video-guides-{{ ai_gen_id }}__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: min({{ block.settings.card_spacing }}px, 16px); }
+    .ai-video-guides-{{ ai_gen_id }}__body { padding: 12px; }
+    .ai-video-guides-{{ ai_gen_id }}__title { font-size: 1.1rem; }
+    .ai-video-guides-{{ ai_gen_id }}__play { width: 46px; height: 46px; }
+  }
+  @media screen and (max-width: 480px) {
+    .ai-video-guides-{{ ai_gen_id }}__grid { grid-template-columns: 1fr; }
+  }
+{% endstyle %}
+
+<div class="ai-video-guides-{{ ai_gen_id }}" {{ block.shopify_attributes }}>
+  <div class="ai-video-guides-{{ ai_gen_id }}__inner">
+    {% if block.settings.heading != blank %}<h2 class="ai-video-guides-{{ ai_gen_id }}__heading">{{ block.settings.heading | escape }}</h2>{% endif %}
+    <div class="ai-video-guides-{{ ai_gen_id }}__grid">
+      {% for i in (1..12) %}
+        {% liquid
+          assign title_key = 'video_' | append: i | append: '_title'
+          assign description_key = 'video_' | append: i | append: '_description'
+          assign image_key = 'video_' | append: i | append: '_image'
+          assign url_key = 'video_' | append: i | append: '_url'
+          assign card_title = block.settings[title_key]
+          assign card_description = block.settings[description_key]
+          assign card_image = block.settings[image_key]
+          assign card_url = block.settings[url_key]
+        %}
+        {% if card_title != blank or card_image != blank %}
+          <article class="ai-video-guides-{{ ai_gen_id }}__card">
+            {% if card_url != blank %}
+              <a class="ai-video-guides-{{ ai_gen_id }}__media" href="{{ card_url }}" aria-label="{{ card_title | default: 'Watch video guide' | escape }}" target="_blank" rel="noopener noreferrer">
+                {% if card_image %}<img src="{{ card_image | image_url: width: 1000 }}" alt="{{ card_image.alt | default: card_title | escape }}" loading="lazy" width="{{ card_image.width }}" height="{{ card_image.height }}">{% else %}<div class="ai-video-guides-{{ ai_gen_id }}__placeholder">{{ 'image' | placeholder_svg_tag }}</div>{% endif %}
+                <span class="ai-video-guides-{{ ai_gen_id }}__play" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5.5v13l10-6.5z"/></svg></span>
+              </a>
+            {% else %}
+              <div class="ai-video-guides-{{ ai_gen_id }}__media" aria-hidden="true">
+                {% if card_image %}<img src="{{ card_image | image_url: width: 1000 }}" alt="{{ card_image.alt | default: card_title | escape }}" loading="lazy" width="{{ card_image.width }}" height="{{ card_image.height }}">{% else %}<div class="ai-video-guides-{{ ai_gen_id }}__placeholder">{{ 'image' | placeholder_svg_tag }}</div>{% endif %}
+                <span class="ai-video-guides-{{ ai_gen_id }}__play"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5.5v13l10-6.5z"/></svg></span>
+              </div>
+            {% endif %}
+            <div class="ai-video-guides-{{ ai_gen_id }}__body">
+              {% if card_title != blank %}
+                {% if card_url != blank %}<a class="ai-video-guides-{{ ai_gen_id }}__title" href="{{ card_url }}" target="_blank" rel="noopener noreferrer">{{ card_title | escape }}</a>{% else %}<h3 class="ai-video-guides-{{ ai_gen_id }}__title">{{ card_title | escape }}</h3>{% endif %}
+              {% endif %}
+              {% if card_description != blank %}<p class="ai-video-guides-{{ ai_gen_id }}__description">{{ card_description | escape }}</p>{% endif %}
+            </div>
+          </article>
+        {% endif %}
+      {% endfor %}
+      {% assign any_videos = false %}
+      {% for i in (1..12) %}
+        {% assign title_key = 'video_' | append: i | append: '_title' %}
+        {% assign image_key = 'video_' | append: i | append: '_image' %}
+        {% if block.settings[title_key] != blank or block.settings[image_key] != blank %}{% assign any_videos = true %}{% endif %}
+      {% endfor %}
+      {% unless any_videos %}<div class="ai-video-guides-{{ ai_gen_id }}__empty">Add video cards using the block settings to build this guide library.</div>{% endunless %}
+    </div>
+  </div>
+</div>
+
 {% schema %}
- {
-   "name": "AI_Block",
-   "tag": "shopify-ai-generated-block"
- }
+{
+  "name": "How-to video grid",
+  "settings": [
+    {"type":"text","id":"heading","label":"Section heading","default":"How-to videos"},
+    {"type":"range","id":"desktop_width_percent","label":"Desktop width","min":50,"max":100,"step":5,"unit":"%","default":100},
+    {"type":"select","id":"desktop_columns","label":"Desktop columns","options":[{"value":"2","label":"2"},{"value":"3","label":"3"},{"value":"4","label":"4"}],"default":"3"},
+    {"type":"range","id":"card_spacing","label":"Card spacing","min":8,"max":40,"step":4,"unit":"px","default":20},
+    {"type":"color","id":"background_color","label":"Background","default":"#FFFFFF"},
+    {"type":"color","id":"card_color","label":"Card background","default":"#FFFFFF"},
+    {"type":"color","id":"text_color","label":"Text","default":"#121212"},
+    {"type":"color","id":"play_color","label":"Play icon background","default":"#D6001C"},
+    {"type":"header","content":"Video card 1"},
+    {"type":"image_picker","id":"video_1_image","label":"Thumbnail"},{"type":"text","id":"video_1_title","label":"Title"},{"type":"text","id":"video_1_description","label":"Short description"},{"type":"url","id":"video_1_url","label":"Destination URL"},
+    {"type":"header","content":"Video card 2"},
+    {"type":"image_picker","id":"video_2_image","label":"Thumbnail"},{"type":"text","id":"video_2_title","label":"Title"},{"type":"text","id":"video_2_description","label":"Short description"},{"type":"url","id":"video_2_url","label":"Destination URL"},
+    {"type":"header","content":"Video card 3"},
+    {"type":"image_picker","id":"video_3_image","label":"Thumbnail"},{"type":"text","id":"video_3_title","label":"Title"},{"type":"text","id":"video_3_description","label":"Short description"},{"type":"url","id":"video_3_url","label":"Destination URL"},
+    {"type":"header","content":"Video card 4"},
+    {"type":"image_picker","id":"video_4_image","label":"Thumbnail"},{"type":"text","id":"video_4_title","label":"Title"},{"type":"text","id":"video_4_description","label":"Short description"},{"type":"url","id":"video_4_url","label":"Destination URL"},
+    {"type":"header","content":"Video card 5"},
+    {"type":"image_picker","id":"video_5_image","label":"Thumbnail"},{"type":"text","id":"video_5_title","label":"Title"},{"type":"text","id":"video_5_description","label":"Short description"},{"type":"url","id":"video_5_url","label":"Destination URL"},
+    {"type":"header","content":"Video card 6"},
+    {"type":"image_picker","id":"video_6_image","label":"Thumbnail"},{"type":"text","id":"video_6_title","label":"Title"},{"type":"text","id":"video_6_description","label":"Short description"},{"type":"url","id":"video_6_url","label":"Destination URL"},
+    {"type":"header","content":"Video card 7"},
+    {"type":"image_picker","id":"video_7_image","label":"Thumbnail"},{"type":"text","id":"video_7_title","label":"Title"},{"type":"text","id":"video_7_description","label":"Short description"},{"type":"url","id":"video_7_url","label":"Destination URL"},
+    {"type":"header","content":"Video card 8"},
+    {"type":"image_picker","id":"video_8_image","label":"Thumbnail"},{"type":"text","id":"video_8_title","label":"Title"},{"type":"text","id":"video_8_description","label":"Short description"},{"type":"url","id":"video_8_url","label":"Destination URL"},
+    {"type":"header","content":"Video card 9"},
+    {"type":"image_picker","id":"video_9_image","label":"Thumbnail"},{"type":"text","id":"video_9_title","label":"Title"},{"type":"text","id":"video_9_description","label":"Short description"},{"type":"url","id":"video_9_url","label":"Destination URL"},
+    {"type":"header","content":"Video card 10"},
+    {"type":"image_picker","id":"video_10_image","label":"Thumbnail"},{"type":"text","id":"video_10_title","label":"Title"},{"type":"text","id":"video_10_description","label":"Short description"},{"type":"url","id":"video_10_url","label":"Destination URL"},
+    {"type":"header","content":"Video card 11"},
+    {"type":"image_picker","id":"video_11_image","label":"Thumbnail"},{"type":"text","id":"video_11_title","label":"Title"},{"type":"text","id":"video_11_description","label":"Short description"},{"type":"url","id":"video_11_url","label":"Destination URL"},
+    {"type":"header","content":"Video card 12"},
+    {"type":"image_picker","id":"video_12_image","label":"Thumbnail"},{"type":"text","id":"video_12_title","label":"Title"},{"type":"text","id":"video_12_description","label":"Short description"},{"type":"url","id":"video_12_url","label":"Destination URL"}
+  ],
+  "presets": [{"name":"How-to video grid"}],
+  "tag": null,
+  "class": "psc-how-to-video-grid"
+}
 {% endschema %}
