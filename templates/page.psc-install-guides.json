@@ -41,75 +41,6 @@
         "padding_bottom": 52
       }
     },
-    "blocks_tdaxhL": {
-      "type": "_blocks",
-      "blocks": {
-        "ai_gen_block_25ef8da_wLWtKV": {
-          "type": "ai_gen_block_25ef8da",
-          "name": "Image row",
-          "settings": {
-            "max_width": 1600,
-            "spacing": 8,
-            "spacing_mobile": 8,
-            "padding_vertical": 0,
-            "padding_horizontal": 0,
-            "aspect_ratio": 100,
-            "border_radius": 0
-          },
-          "blocks": {}
-        },
-        "ai_gen_block_25ef8da_JdYRiq": {
-          "type": "ai_gen_block_25ef8da",
-          "name": "Image row",
-          "settings": {
-            "max_width": 1600,
-            "spacing": 8,
-            "spacing_mobile": 8,
-            "padding_vertical": 0,
-            "padding_horizontal": 0,
-            "aspect_ratio": 100,
-            "border_radius": 0
-          },
-          "blocks": {}
-        },
-        "ai_gen_block_25ef8da_DcJtcG": {
-          "type": "ai_gen_block_25ef8da",
-          "settings": {
-            "max_width": 1600,
-            "spacing": 8,
-            "spacing_mobile": 8,
-            "padding_vertical": 0,
-            "padding_horizontal": 0,
-            "aspect_ratio": 100,
-            "border_radius": 0
-          },
-          "blocks": {}
-        },
-        "ai_gen_block_25ef8da_eYyqpQ": {
-          "type": "ai_gen_block_25ef8da",
-          "name": "Image row",
-          "settings": {
-            "max_width": 1600,
-            "spacing": 8,
-            "spacing_mobile": 8,
-            "padding_vertical": 0,
-            "padding_horizontal": 0,
-            "aspect_ratio": 100,
-            "border_radius": 0
-          },
-          "blocks": {}
-        }
-      },
-      "block_order": [
-        "ai_gen_block_25ef8da_wLWtKV",
-        "ai_gen_block_25ef8da_JdYRiq",
-        "ai_gen_block_25ef8da_DcJtcG",
-        "ai_gen_block_25ef8da_eYyqpQ"
-      ],
-      "disabled": true,
-      "name": "Image row",
-      "settings": {}
-    },
     "178215901468e81263": {
       "type": "apps",
       "blocks": {
@@ -279,15 +210,74 @@
         "ai_gen_block_3ca92a6_8Bj6Tq"
       ],
       "settings": {}
+    },
+    "1792255569f899c741": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_9b08550_hbV7pT": {
+          "type": "ai_gen_block_9b08550",
+          "settings": {
+            "heading": "How-to videos",
+            "desktop_width_percent": 100,
+            "desktop_columns": "4",
+            "card_spacing": 20,
+            "background_color": "#FFFFFF",
+            "card_color": "#FFFFFF",
+            "text_color": "#121212",
+            "play_color": "#D6001C",
+            "video_1_title": "PSC BIG BORE XD® DDS® Steering Installation Video | 2018-2025 Ford F-450/F-550 4WD",
+            "video_1_description": "",
+            "video_1_url": "https://youtu.be/SVFTFr39cr0",
+            "video_2_title": "",
+            "video_2_description": "",
+            "video_2_url": "",
+            "video_3_title": "",
+            "video_3_description": "",
+            "video_3_url": "",
+            "video_4_title": "",
+            "video_4_description": "",
+            "video_4_url": "",
+            "video_5_title": "",
+            "video_5_description": "",
+            "video_5_url": "",
+            "video_6_title": "",
+            "video_6_description": "",
+            "video_6_url": "",
+            "video_7_title": "",
+            "video_7_description": "",
+            "video_7_url": "",
+            "video_8_title": "",
+            "video_8_description": "",
+            "video_8_url": "",
+            "video_9_title": "",
+            "video_9_description": "",
+            "video_9_url": "",
+            "video_10_title": "",
+            "video_10_description": "",
+            "video_10_url": "",
+            "video_11_title": "",
+            "video_11_description": "",
+            "video_11_url": "",
+            "video_12_title": "",
+            "video_12_description": "",
+            "video_12_url": ""
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_9b08550_hbV7pT"
+      ],
+      "settings": {}
     }
   },
   "order": [
     "main",
     "rich_text_PGFBYC",
-    "blocks_tdaxhL",
     "178215901468e81263",
     "1792193374196641af",
     "1792194718735e8122",
-    "1792252347baa65dd8"
+    "1792252347baa65dd8",
+    "1792255569f899c741"
   ]
 }
