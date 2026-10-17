@@ -1,6 +1,147 @@
+{% doc %}
+  @prompt
+    Create one page-specific technical resources search block for PSC Motorsports’ Tech Resources page. It must filter the existing install-guide table and How-to video cards on this page together, in place, without navigating to store search. Preserve all existing sections, content, links, settings, widths, and centering. Inspect the existing blocks and integrate with their actual structure: the guide table uses .psc-guide-<generated id> and the video section uses .ai-video-guides-<generated id> with __grid and __card elements. Match case-insensitively against each guide row's visible text and each video card's title and description, including part numbers, applications, vehicles, and topics when those are present. Do not claim to search inside linked PDFs or videos. Use an accessible labeled search field with editable placeholder 'Search by part number, vehicle, or topic', a clear-search control, an accessible results count, and an editable no-results message. Empty search restores all originally visible resources; do not reveal intentionally hidden rows or cards. Preserve table headers and only filter resource rows, not layout or heading rows. Clearing search must restore the original layout. Scope behavior to these technical-resource blocks on this page and handle theme editor section reloads without duplicate listeners. Include merchant-editable heading, width, spacing and colors, center the search container at reduced widths, and match the current page on desktop and mobile. If the existing resource blocks cannot be reliably located, show a configuration message in the theme editor rather than a search box that silently does nothing.
+{% enddoc %}
+{% assign ai_gen_id = block.id | remove: '_' | downcase %}
+
+{% style %}
+  .ai-resource-search-{{ ai_gen_id }} {
+    display: block;
+    width: {{ block.settings.desktop_width_percent }}%;
+    max-width: 100%;
+    margin: {{ block.settings.spacing }}px auto;
+    color: {{ block.settings.text_color }};
+  }
+  .ai-resource-search-{{ ai_gen_id }}__heading { margin: 0 0 12px; color: {{ block.settings.text_color }}; }
+  .ai-resource-search-{{ ai_gen_id }}__form { display: flex; gap: 8px; align-items: stretch; width: 100%; }
+  .ai-resource-search-{{ ai_gen_id }}__input {
+    flex: 1; min-width: 0; padding: 12px 14px; border: 1px solid {{ block.settings.border_color }};
+    border-radius: 0; background: {{ block.settings.field_color }}; color: {{ block.settings.text_color }}; font: inherit;
+  }
+  .ai-resource-search-{{ ai_gen_id }}__input:focus-visible,
+  .ai-resource-search-{{ ai_gen_id }}__clear:focus-visible { outline: 2px solid {{ block.settings.text_color }}; outline-offset: 2px; }
+  .ai-resource-search-{{ ai_gen_id }}__clear {
+    padding: 10px 16px; border: 1px solid {{ block.settings.text_color }}; border-radius: 0;
+    background: {{ block.settings.text_color }}; color: {{ block.settings.field_color }}; font: inherit; cursor: pointer;
+  }
+  .ai-resource-search-{{ ai_gen_id }}__status { margin: 8px 0 0; color: {{ block.settings.text_color }}; }
+  .ai-resource-search-{{ ai_gen_id }}__config { margin: 8px 0 0; color: {{ block.settings.text_color }}; }
+  @media screen and (max-width: 749px) {
+    .ai-resource-search-{{ ai_gen_id }} { width: 100%; }
+    .ai-resource-search-{{ ai_gen_id }}__form { gap: 6px; }
+    .ai-resource-search-{{ ai_gen_id }}__input { padding: 11px 10px; }
+    .ai-resource-search-{{ ai_gen_id }}__clear { padding: 10px 12px; }
+  }
+{% endstyle %}
+
+<psc-resource-search-{{ ai_gen_id }} class="ai-resource-search-{{ ai_gen_id }}" data-editor="{% if request.design_mode %}true{% else %}false{% endif %}" {{ block.shopify_attributes }}>
+  {% if block.settings.heading != blank %}<h2 class="ai-resource-search-{{ ai_gen_id }}__heading">{{ block.settings.heading | escape }}</h2>{% endif %}
+  <div class="ai-resource-search-{{ ai_gen_id }}__form" role="search">
+    <label class="visually-hidden" for="ai-resource-search-input-{{ ai_gen_id }}">{{ block.settings.heading | default: 'Search technical resources' | escape }}</label>
+    <input id="ai-resource-search-input-{{ ai_gen_id }}" class="ai-resource-search-{{ ai_gen_id }}__input" type="search" placeholder="{{ block.settings.placeholder | escape }}" autocomplete="off">
+    <button type="button" class="ai-resource-search-{{ ai_gen_id }}__clear">{{ block.settings.clear_label | escape }}</button>
+  </div>
+  <p class="ai-resource-search-{{ ai_gen_id }}__status" aria-live="polite" aria-atomic="true"></p>
+  <p class="ai-resource-search-{{ ai_gen_id }}__config" hidden>Technical resource search could not find both the guide table and video cards on this page. Confirm their blocks are present and try reloading the theme editor.</p>
+</psc-resource-search-{{ ai_gen_id }}>
+
+<script>
+(function() {
+  const tagName = 'psc-resource-search-{{ ai_gen_id }}';
+  if (customElements.get(tagName)) return;
+  class PscResourceSearch{{ ai_gen_id }} extends HTMLElement {
+    connectedCallback() {
+      if (this.initialized) return;
+      this.initialized = true;
+      this.input = this.querySelector('input[type="search"]');
+      this.status = this.querySelector('[aria-live="polite"]');
+      this.config = this.querySelector('.ai-resource-search-{{ ai_gen_id }}__config');
+      this.clear = this.querySelector('button');
+      this.onInput = () => this.applyFilter();
+      this.onClear = () => { this.input.value = ''; this.applyFilter(); this.input.focus(); };
+      this.input.addEventListener('input', this.onInput);
+      this.clear.addEventListener('click', this.onClear);
+      this.discover();
+      this.observer = new MutationObserver(() => this.discover());
+      this.observer.observe(document.documentElement, { childList: true, subtree: true });
+    }
+    disconnectedCallback() {
+      if (this.observer) this.observer.disconnect();
+      if (this.input && this.onInput) this.input.removeEventListener('input', this.onInput);
+      if (this.clear && this.onClear) this.clear.removeEventListener('click', this.onClear);
+      this.initialized = false;
+    }
+    discover() {
+      if (window.location.pathname !== '/pages/tech-resources') {
+        this.hidden = true;
+        return;
+      }
+      this.hidden = false;
+      const guides = Array.from(document.querySelectorAll('[class*="psc-guide-"]')).filter(el => Array.from(el.classList).some(name => name.startsWith('psc-guide-')));
+      const videos = Array.from(document.querySelectorAll('[class*="ai-video-guides-"]')).filter(el => Array.from(el.classList).some(name => name.startsWith('ai-video-guides-')));
+      const guideRoot = guides.find(root => root.querySelector('table'));
+      const videoRoot = videos.find(root => root.querySelector('[class*="__grid"] [class*="__card"]'));
+      if (!guideRoot || !videoRoot) {
+        this.config.hidden = this.dataset.editor !== 'true';
+        this.status.textContent = '';
+        this.items = null;
+        return;
+      }
+      this.config.hidden = true;
+      const nodes = [];
+      guideRoot.querySelectorAll('tr').forEach(row => {
+        if (!row.querySelector('td')) return;
+        if (row.dataset.aiSearchOriginalDisplay === undefined) {
+          row.dataset.aiSearchOriginalDisplay = row.style.display;
+          row.dataset.aiSearchOriginalHidden = row.hidden ? 'true' : 'false';
+          row.dataset.aiSearchWasVisible = !row.hidden && getComputedStyle(row).display !== 'none' ? 'true' : 'false';
+        }
+        if (row.dataset.aiSearchWasVisible === 'true') nodes.push({ element: row, text: row.innerText || row.textContent || '' });
+      });
+      videoRoot.querySelectorAll('[class*="__grid"] [class*="__card"]').forEach(card => {
+        if (card.dataset.aiSearchOriginalDisplay === undefined) {
+          card.dataset.aiSearchOriginalDisplay = card.style.display;
+          card.dataset.aiSearchOriginalHidden = card.hidden ? 'true' : 'false';
+          card.dataset.aiSearchWasVisible = !card.hidden && getComputedStyle(card).display !== 'none' ? 'true' : 'false';
+        }
+        if (card.dataset.aiSearchWasVisible === 'true') nodes.push({ element: card, text: card.innerText || card.textContent || '' });
+      });
+      this.items = nodes;
+      this.applyFilter();
+    }
+    applyFilter() {
+      if (!this.items) return;
+      const query = this.input.value.trim().toLocaleLowerCase();
+      let matches = 0;
+      this.items.forEach(item => {
+        const match = !query || item.text.toLocaleLowerCase().includes(query);
+        item.element.hidden = !match;
+        item.element.style.display = match ? item.element.dataset.aiSearchOriginalDisplay : 'none';
+        if (match) matches += 1;
+      });
+      this.status.textContent = query && matches === 0 ? {{ block.settings.no_results | json }} : `${matches} ${matches === 1 ? 'resource' : 'resources'} found`;
+    }
+  }
+  customElements.define(tagName, PscResourceSearch{{ ai_gen_id }});
+})();
+</script>
+
 {% schema %}
- {
-   "name": "AI_Block",
-   "tag": "shopify-ai-generated-block"
- }
+{
+  "name": "Tech resource search",
+  "settings": [
+    { "type": "text", "id": "heading", "label": "Heading", "default": "Search technical resources" },
+    { "type": "text", "id": "placeholder", "label": "Search placeholder", "default": "Search by part number, vehicle, or topic" },
+    { "type": "text", "id": "clear_label", "label": "Clear button label", "default": "Clear" },
+    { "type": "text", "id": "no_results", "label": "No-results message", "default": "No matching technical resources found." },
+    { "type": "range", "id": "desktop_width_percent", "label": "Desktop width", "min": 50, "max": 100, "step": 5, "unit": "%", "default": 100 },
+    { "type": "range", "id": "spacing", "label": "Vertical spacing", "min": 0, "max": 60, "step": 4, "unit": "px", "default": 16 },
+    { "type": "color", "id": "text_color", "label": "Text", "default": "#121212" },
+    { "type": "color", "id": "field_color", "label": "Field background", "default": "#FFFFFF" },
+    { "type": "color", "id": "border_color", "label": "Field border", "default": "#767676" }
+  ],
+  "presets": [{ "name": "Tech resource search" }],
+  "tag": null,
+  "class": "tech-resource-search-block"
+}
 {% endschema %}
