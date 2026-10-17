@@ -7,7 +7,15 @@
 {% capture valid_ids %}|{% for n in (1..21) %}r{{ n }}|{% endfor %}{% endcapture %}
 
 {% style %}
-  .psc-guide-{{ ai_gen_id }} { display:block; width:{{ block.settings.desktop_width_percent }}%; max-width:100%; color:rgb(var(--color-foreground)); font-family:var(--font-body-family); }
+  .psc-guide-{{ ai_gen_id }} {
+  display: block;
+  width: {{ block.settings.desktop_width_percent }}%;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  color: rgb(var(--color-foreground));
+  font-family: var(--font-body-family);
+}
   .psc-guide-{{ ai_gen_id }}__scroll { width:100%; max-width:100%; overflow-x:auto; overscroll-behavior-inline:contain; -webkit-overflow-scrolling:touch; border:1px solid rgba(var(--color-foreground),.25); }
   .psc-guide-{{ ai_gen_id }} table { width:100%; min-width:680px; border-collapse:collapse; font-family:inherit; font-size:{{ block.settings.body_font_size }}px; line-height:1.5; }
   .psc-guide-{{ ai_gen_id }} th,.psc-guide-{{ ai_gen_id }} td { padding:{{ block.settings.cell_padding }}px; text-align:left; vertical-align:middle; border-bottom:1px solid rgba(var(--color-foreground),.2); }
