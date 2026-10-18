@@ -41,6 +41,31 @@
         "padding_bottom": 52
       }
     },
+    "179226628716dc901a": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_8aa9089_RrVTFK": {
+          "type": "ai_gen_block_8aa9089",
+          "disabled": true,
+          "settings": {
+            "heading": "Search technical resources",
+            "placeholder": "Search by part number, vehicle, or topic",
+            "clear_label": "Clear",
+            "no_results": "No matching technical resources found.",
+            "desktop_width_percent": 100,
+            "spacing": 16,
+            "text_color": "#121212",
+            "field_color": "#ffffff",
+            "border_color": "#767676"
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_8aa9089_RrVTFK"
+      ],
+      "settings": {}
+    },
     "178215901468e81263": {
       "type": "apps",
       "blocks": {
@@ -275,30 +300,6 @@
       },
       "block_order": [
         "ai_gen_block_9b08550_hbV7pT"
-      ],
-      "settings": {}
-    },
-    "179226628716dc901a": {
-      "type": "_blocks",
-      "blocks": {
-        "ai_gen_block_8aa9089_RrVTFK": {
-          "type": "ai_gen_block_8aa9089",
-          "settings": {
-            "heading": "Search technical resources",
-            "placeholder": "Search by part number, vehicle, or topic",
-            "clear_label": "Clear",
-            "no_results": "No matching technical resources found.",
-            "desktop_width_percent": 100,
-            "spacing": 16,
-            "text_color": "#121212",
-            "field_color": "#FFFFFF",
-            "border_color": "#767676"
-          },
-          "blocks": {}
-        }
-      },
-      "block_order": [
-        "ai_gen_block_8aa9089_RrVTFK"
       ],
       "settings": {}
     }
