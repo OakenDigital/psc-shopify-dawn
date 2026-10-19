@@ -31,7 +31,7 @@
       "block_order": [
         "heading_ygy3Bq"
       ],
-      "name": "t:sections.rich-text.presets.name",
+      "name": "Main Header",
       "settings": {
         "desktop_content_position": "center",
         "content_alignment": "center",
@@ -55,8 +55,8 @@
             "button_hover_color": "#333333",
             "button_hover_text_color": "#ffffff",
             "button_1_enabled": true,
-            "button_1_label": "JEEP",
-            "button_1_heading": "JEEP INSTALL GUIDES",
+            "button_1_label": "Jeep",
+            "button_1_heading": "Jeep Install Guides",
             "button_1_anchor": "",
             "button_2_enabled": true,
             "button_2_label": "FORD",
@@ -85,69 +85,7 @@
       "block_order": [
         "ai_gen_block_0afcd07_73MLgG"
       ],
-      "settings": {}
-    },
-    "179226628716dc901a": {
-      "type": "_blocks",
-      "blocks": {
-        "ai_gen_block_8aa9089_RrVTFK": {
-          "type": "ai_gen_block_8aa9089",
-          "disabled": true,
-          "settings": {
-            "heading": "Search technical resources",
-            "placeholder": "Search by part number, vehicle, or topic",
-            "clear_label": "Clear",
-            "no_results": "No matching technical resources found.",
-            "desktop_width_percent": 100,
-            "spacing": 16,
-            "text_color": "#121212",
-            "field_color": "#ffffff",
-            "border_color": "#767676"
-          },
-          "blocks": {}
-        }
-      },
-      "block_order": [
-        "ai_gen_block_8aa9089_RrVTFK"
-      ],
-      "settings": {}
-    },
-    "178215901468e81263": {
-      "type": "apps",
-      "blocks": {
-        "forms_inline_mfktQr": {
-          "type": "shopify://apps/forms/blocks/inline/8744a304-fcb1-4347-b211-bb6b4759a76a",
-          "settings": {
-            "form_id": "1044041",
-            "text_color": "#202020",
-            "button_background_color": "#202020",
-            "button_label_color": "#ffffff",
-            "links_color": "#1878b9",
-            "errors_color": "#e02229",
-            "text_alignment": "center",
-            "form_alignment": "flex-start",
-            "padding_top": 24,
-            "padding_bottom": 24,
-            "padding_right": 64,
-            "padding_left": 64
-          }
-        }
-      },
-      "block_order": [
-        "forms_inline_mfktQr"
-      ],
-      "disabled": true,
-      "settings": {
-        "include_margins": true,
-        "full_width": true
-      }
-    },
-    "1792193374196641af": {
-      "type": "_blocks",
-      "settings": {}
-    },
-    "1792194718735e8122": {
-      "type": "_blocks",
+      "name": "Page Menu",
       "settings": {}
     },
     "rich_text_nppJA6": {
@@ -628,6 +566,7 @@
       "blocks": {
         "heading_9hzrAt": {
           "type": "heading",
+          "name": "DODGE/RAM heading",
           "settings": {
             "heading": "DODGE/RAM INSTALL GUIDES",
             "heading_size": "h1"
@@ -796,6 +735,7 @@
       "block_order": [
         "ai_gen_block_3ca92a6_CVLwUj"
       ],
+      "name": "dodge/ram install guides",
       "settings": {}
     },
     "blocks_6EXgUz": {
@@ -856,6 +796,7 @@
       "block_order": [
         "ai_gen_block_9b08550_PhaPdR"
       ],
+      "name": "DODGE/RAM videos",
       "settings": {}
     },
     "rich_text_cbqxcp": {
@@ -1274,10 +1215,6 @@
     "main",
     "rich_text_PGFBYC",
     "179242398103caee5f",
-    "179226628716dc901a",
-    "178215901468e81263",
-    "1792193374196641af",
-    "1792194718735e8122",
     "rich_text_nppJA6",
     "1792252347baa65dd8",
     "blocks_hE9kq7",
