@@ -119,6 +119,23 @@
           assign card_description = block.settings[description_key]
           assign card_image = block.settings[image_key]
           assign card_url = block.settings[url_key]
+          assign youtube_id = ''
+assign clean_url = card_url | split: '#' | first
+
+if clean_url contains 'youtu.be/'
+  assign youtube_id = clean_url | split: 'youtu.be/' | last
+elsif clean_url contains 'youtube.com/watch'
+  if clean_url contains 'v='
+    assign youtube_id = clean_url | split: 'v=' | last
+  endif
+elsif clean_url contains 'youtube.com/shorts/'
+  assign youtube_id = clean_url | split: '/shorts/' | last
+elsif clean_url contains 'youtube.com/embed/'
+  assign youtube_id = clean_url | split: '/embed/' | last
+endif
+
+assign youtube_id = youtube_id | split: '&' | first | split: '?' | first | split: '/' | first
+
         %}
         {% if card_title != blank or card_image != blank %}
           <article class="ai-video-guides-{{ ai_gen_id }}__card">
