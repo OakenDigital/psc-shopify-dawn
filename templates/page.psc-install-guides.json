@@ -289,8 +289,8 @@
             "desktop_width_percent": 85,
             "desktop_columns": "4",
             "card_spacing": 20,
-            "background_color": "#E4E4E4",
-            "card_color": "#FFFFFF",
+            "background_color": "#e4e4e4",
+            "card_color": "#ffffff",
             "text_color": "#121212",
             "play_color": "#d6001c",
             "video_1_title": "",
@@ -526,7 +526,7 @@
             "desktop_width_percent": 85,
             "desktop_columns": "4",
             "card_spacing": 20,
-            "background_color": "#E4E4E4",
+            "background_color": "#e4e4e4",
             "card_color": "#ffffff",
             "text_color": "#121212",
             "play_color": "#d6001c",
@@ -762,7 +762,7 @@
             "desktop_width_percent": 85,
             "desktop_columns": "4",
             "card_spacing": 20,
-            "background_color": "#E4E4E4",
+            "background_color": "#e4e4e4",
             "card_color": "#ffffff",
             "text_color": "#121212",
             "play_color": "#d6001c",
@@ -1172,7 +1172,7 @@
             "desktop_width_percent": 85,
             "desktop_columns": "4",
             "card_spacing": 20,
-            "background_color": "#E4E4E4",
+            "background_color": "#e4e4e4",
             "card_color": "#ffffff",
             "text_color": "#121212",
             "play_color": "#d6001c",
@@ -1222,6 +1222,52 @@
         "ai_gen_block_9b08550_hbV7pT"
       ],
       "settings": {}
+    },
+    "179242398103caee5f": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_0afcd07_73MLgG": {
+          "type": "ai_gen_block_0afcd07",
+          "settings": {
+            "desktop_width_percent": 70,
+            "scroll_offset": 100,
+            "button_color": "#121212",
+            "button_text_color": "#FFFFFF",
+            "button_border_color": "#121212",
+            "button_hover_color": "#333333",
+            "button_hover_text_color": "#FFFFFF",
+            "button_1_enabled": true,
+            "button_1_label": "JEEP",
+            "button_1_heading": "JEEP",
+            "button_1_anchor": "",
+            "button_2_enabled": true,
+            "button_2_label": "FORD",
+            "button_2_heading": "FORD",
+            "button_2_anchor": "",
+            "button_3_enabled": true,
+            "button_3_label": "DODGE/RAM",
+            "button_3_heading": "DODGE/RAM",
+            "button_3_anchor": "",
+            "button_4_enabled": true,
+            "button_4_label": "CHEVY/GMC",
+            "button_4_heading": "CHEVY/GMC",
+            "button_4_anchor": "",
+            "button_5_enabled": true,
+            "button_5_label": "TECH & SUPPORT",
+            "button_5_heading": "TECH & SUPPORT",
+            "button_5_anchor": "",
+            "button_6_enabled": false,
+            "button_6_label": "",
+            "button_6_heading": "",
+            "button_6_anchor": ""
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_0afcd07_73MLgG"
+      ],
+      "settings": {}
     }
   },
   "order": [
@@ -1244,6 +1290,7 @@
     "blocks_hzNmXW",
     "rich_text_G4AdA9",
     "blocks_AgxHeQ",
-    "1792255569f899c741"
+    "1792255569f899c741",
+    "179242398103caee5f"
   ]
 }
