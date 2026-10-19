@@ -1109,6 +1109,67 @@
         "ai_gen_block_9b08550_hbV7pT": {
           "type": "ai_gen_block_9b08550",
           "settings": {
+            "heading": "TECH & SUPPORT VIDEOS",
+            "desktop_width_percent": 85,
+            "desktop_columns": "4",
+            "card_spacing": 20,
+            "background_color": "#ffffff",
+            "card_color": "#ffffff",
+            "text_color": "#121212",
+            "play_color": "#d6001c",
+            "video_1_title": "",
+            "video_1_description": "",
+            "video_1_url": "",
+            "video_2_title": "",
+            "video_2_description": "",
+            "video_2_url": "",
+            "video_3_title": "",
+            "video_3_description": "",
+            "video_3_url": "https://youtu.be/zoJhomdKXAA",
+            "video_4_title": "",
+            "video_4_description": "",
+            "video_4_url": "",
+            "video_5_image": "shopify://shop_images/howtovideomeasurestroke.png",
+            "video_5_title": "PSC Cylinder Assist® Measurement Tech Tip | Ian Johnson, Big Tire Garage",
+            "video_5_description": "",
+            "video_5_url": "https://youtu.be/H9MOKsGlTcs",
+            "video_6_title": "",
+            "video_6_description": "",
+            "video_6_url": "",
+            "video_7_image": "shopify://shop_images/Ultimate_Power_Steering_Guide.png",
+            "video_7_title": "Ultimate Power Steering Guide: Service Tips with PSC Motorsports",
+            "video_7_description": "",
+            "video_7_url": "https://youtu.be/BvUq6FMdLlU",
+            "video_8_title": "",
+            "video_8_description": "",
+            "video_8_url": "",
+            "video_9_title": "PSC Hydraulic Line Assembly Video | Reusable Fittings",
+            "video_9_description": "",
+            "video_9_url": "https://youtu.be/QD7fPtL_D1M",
+            "video_10_title": "Mastering Power Steering: Fluid Levels Made Simple",
+            "video_10_description": "",
+            "video_10_url": "https://youtu.be/mdMhe7pq-UI",
+            "video_11_title": "Ian Johnson Breaks Down PSC’s Hydraulic System | BIG TIRE GARAGE",
+            "video_11_description": "",
+            "video_11_url": "https://youtu.be/SETlPV7oFUk",
+            "video_12_title": "",
+            "video_12_description": "",
+            "video_12_url": ""
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_9b08550_hbV7pT"
+      ],
+      "settings": {}
+    },
+    "blocks_Yp4zfR": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_9b08550_bHwne3": {
+          "type": "ai_gen_block_9b08550",
+          "settings": {
             "heading": "How-to videos",
             "desktop_width_percent": 85,
             "desktop_columns": "4",
@@ -1166,7 +1227,7 @@
         }
       },
       "block_order": [
-        "ai_gen_block_9b08550_hbV7pT"
+        "ai_gen_block_9b08550_bHwne3"
       ],
       "settings": {}
     }
@@ -1190,6 +1251,7 @@
     "blocks_hzNmXW",
     "rich_text_G4AdA9",
     "blocks_AgxHeQ",
-    "1792255569f899c741"
+    "1792255569f899c741",
+    "blocks_Yp4zfR"
   ]
 }
