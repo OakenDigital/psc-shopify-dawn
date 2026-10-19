@@ -61,7 +61,7 @@
             "button_2_enabled": true,
             "button_2_label": "FORD",
             "button_2_heading": "FORD",
-            "button_2_anchor": "",
+            "button_2_anchor": "#ford-install-guides",
             "button_3_enabled": true,
             "button_3_label": "DODGE/RAM",
             "button_3_heading": "DODGE/RAM",
