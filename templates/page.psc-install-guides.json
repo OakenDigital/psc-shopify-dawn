@@ -139,12 +139,12 @@
       ],
       "name": "t:sections.rich-text.presets.name",
       "settings": {
-        "desktop_content_position": "center",
-        "content_alignment": "center",
-        "color_scheme": "",
+        "desktop_content_position": "left",
+        "content_alignment": "left",
+        "color_scheme": "scheme-3",
         "full_width": true,
-        "padding_top": 40,
-        "padding_bottom": 52
+        "padding_top": 12,
+        "padding_bottom": 12
       }
     },
     "1792252347baa65dd8": {
@@ -153,7 +153,7 @@
         "ai_gen_block_3ca92a6_8Bj6Tq": {
           "type": "ai_gen_block_3ca92a6",
           "settings": {
-            "table_label": "PSC Motorsports install guides",
+            "table_label": "PSC Motorsports install guides for Jeeps",
             "heading_one": "Part #",
             "heading_two": "Part",
             "heading_three": "Make/Model",
@@ -289,8 +289,8 @@
             "desktop_width_percent": 85,
             "desktop_columns": "4",
             "card_spacing": 20,
-            "background_color": "#ffffff",
-            "card_color": "#ffffff",
+            "background_color": "#E4E4E4",
+            "card_color": "#FFFFFF",
             "text_color": "#121212",
             "play_color": "#d6001c",
             "video_1_title": "",
@@ -376,12 +376,12 @@
       ],
       "name": "t:sections.rich-text.presets.name",
       "settings": {
-        "desktop_content_position": "center",
-        "content_alignment": "center",
-        "color_scheme": "",
+        "desktop_content_position": "left",
+        "content_alignment": "left",
+        "color_scheme": "scheme-3",
         "full_width": true,
-        "padding_top": 40,
-        "padding_bottom": 52
+        "padding_top": 12,
+        "padding_bottom": 12
       }
     },
     "blocks_KPrJHa": {
@@ -526,7 +526,7 @@
             "desktop_width_percent": 85,
             "desktop_columns": "4",
             "card_spacing": 20,
-            "background_color": "#ffffff",
+            "background_color": "#E4E4E4",
             "card_color": "#ffffff",
             "text_color": "#121212",
             "play_color": "#d6001c",
@@ -612,12 +612,12 @@
       ],
       "name": "t:sections.rich-text.presets.name",
       "settings": {
-        "desktop_content_position": "center",
-        "content_alignment": "center",
-        "color_scheme": "",
+        "desktop_content_position": "left",
+        "content_alignment": "left",
+        "color_scheme": "scheme-3",
         "full_width": true,
-        "padding_top": 40,
-        "padding_bottom": 52
+        "padding_top": 12,
+        "padding_bottom": 12
       }
     },
     "blocks_V834Ht": {
@@ -762,7 +762,7 @@
             "desktop_width_percent": 85,
             "desktop_columns": "4",
             "card_spacing": 20,
-            "background_color": "#ffffff",
+            "background_color": "#E4E4E4",
             "card_color": "#ffffff",
             "text_color": "#121212",
             "play_color": "#d6001c",
@@ -847,12 +847,12 @@
       ],
       "name": "t:sections.rich-text.presets.name",
       "settings": {
-        "desktop_content_position": "center",
-        "content_alignment": "center",
-        "color_scheme": "",
+        "desktop_content_position": "left",
+        "content_alignment": "left",
+        "color_scheme": "scheme-3",
         "full_width": true,
-        "padding_top": 40,
-        "padding_bottom": 52
+        "padding_top": 12,
+        "padding_bottom": 12
       }
     },
     "blocks_hzNmXW": {
@@ -1022,12 +1022,12 @@
       ],
       "name": "t:sections.rich-text.presets.name",
       "settings": {
-        "desktop_content_position": "center",
-        "content_alignment": "center",
-        "color_scheme": "",
+        "desktop_content_position": "left",
+        "content_alignment": "left",
+        "color_scheme": "scheme-3",
         "full_width": true,
-        "padding_top": 40,
-        "padding_bottom": 52
+        "padding_top": 12,
+        "padding_bottom": 12
       }
     },
     "blocks_AgxHeQ": {
@@ -1172,7 +1172,7 @@
             "desktop_width_percent": 85,
             "desktop_columns": "4",
             "card_spacing": 20,
-            "background_color": "#ffffff",
+            "background_color": "#E4E4E4",
             "card_color": "#ffffff",
             "text_color": "#121212",
             "play_color": "#d6001c",
@@ -1222,73 +1222,6 @@
         "ai_gen_block_9b08550_hbV7pT"
       ],
       "settings": {}
-    },
-    "blocks_Yp4zfR": {
-      "type": "_blocks",
-      "blocks": {
-        "ai_gen_block_9b08550_bHwne3": {
-          "type": "ai_gen_block_9b08550",
-          "settings": {
-            "heading": "How-to videos",
-            "desktop_width_percent": 85,
-            "desktop_columns": "4",
-            "card_spacing": 20,
-            "background_color": "#ffffff",
-            "card_color": "#ffffff",
-            "text_color": "#121212",
-            "play_color": "#d6001c",
-            "video_1_image": "shopify://shop_images/bigborehowto.png",
-            "video_1_title": "PSC BIG BORE XD® DDS® Steering Installation Video | 2018-2025 Ford F-450/F-550 4WD",
-            "video_1_description": "",
-            "video_1_url": "https://youtu.be/SVFTFr39cr0",
-            "video_2_image": "shopify://shop_images/howtovideojeep392.png",
-            "video_2_title": "PSC Full Hydraulic Steering Kit Installation Video | 2021-2024 Jeep Wrangler 392",
-            "video_2_description": "",
-            "video_2_url": "",
-            "video_3_image": "shopify://shop_images/howtovideocommoninstallerrors.png",
-            "video_3_title": "PSC Big Bore® Steering Gear Install Tips | Avoid This Common Dodge Ram Mistake",
-            "video_3_description": "",
-            "video_3_url": "https://youtu.be/zoJhomdKXAA",
-            "video_4_image": "shopify://shop_images/howtovideo392ehps.png",
-            "video_4_title": "PSC Cylinder Assist® EHPS Steering Installation Video | 2021-2024 Jeep Wrangler 392",
-            "video_4_description": "",
-            "video_4_url": "https://youtu.be/k0PlwQDxRpk",
-            "video_5_image": "shopify://shop_images/howtovideomeasurestroke.png",
-            "video_5_title": "PSC Cylinder Assist® Measurement Tech Tip | Ian Johnson, Big Tire Garage",
-            "video_5_description": "",
-            "video_5_url": "https://youtu.be/H9MOKsGlTcs",
-            "video_6_image": "shopify://shop_images/howtovideojeepjkbigbore.png",
-            "video_6_title": "PSC Adventure Steering Kit Installation Video | 2012-2018 Jeep JK Wrangler",
-            "video_6_description": "",
-            "video_6_url": "https://youtu.be/5YiDze2oW7Y",
-            "video_7_image": "shopify://shop_images/Ultimate_Power_Steering_Guide.png",
-            "video_7_title": "Ultimate Power Steering Guide: Service Tips with PSC Motorsports",
-            "video_7_description": "",
-            "video_7_url": "https://youtu.be/BvUq6FMdLlU",
-            "video_8_image": "shopify://shop_images/installingpscsteeringgear.png",
-            "video_8_title": "PSC Big Bore® Steering Gear Installation Video | 2011-2020 Ford Super Duty F-250/F-350",
-            "video_8_description": "",
-            "video_8_url": "https://youtu.be/BLDZvjFfGag",
-            "video_9_title": "PSC Hydraulic Line Assembly Video | Reusable Fittings",
-            "video_9_description": "",
-            "video_9_url": "https://youtu.be/QD7fPtL_D1M",
-            "video_10_title": "Mastering Power Steering: Fluid Levels Made Simple",
-            "video_10_description": "",
-            "video_10_url": "https://youtu.be/mdMhe7pq-UI",
-            "video_11_title": "Ian Johnson Breaks Down PSC’s Hydraulic System | BIG TIRE GARAGE",
-            "video_11_description": "",
-            "video_11_url": "https://youtu.be/SETlPV7oFUk",
-            "video_12_title": "PSC Cylinder Assist Kit Install | 1999–2003 Ford F-250, F-350 & Excursion",
-            "video_12_description": "",
-            "video_12_url": "https://youtu.be/usX_5mSZLwM"
-          },
-          "blocks": {}
-        }
-      },
-      "block_order": [
-        "ai_gen_block_9b08550_bHwne3"
-      ],
-      "settings": {}
     }
   },
   "order": [
@@ -1311,7 +1244,6 @@
     "blocks_hzNmXW",
     "rich_text_G4AdA9",
     "blocks_AgxHeQ",
-    "1792255569f899c741",
-    "blocks_Yp4zfR"
+    "1792255569f899c741"
   ]
 }
