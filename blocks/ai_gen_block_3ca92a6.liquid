@@ -26,6 +26,13 @@
   .psc-guide-{{ ai_gen_id }} a { color:inherit; }
   .psc-guide-{{ ai_gen_id }} a:focus-visible { outline:2px solid currentColor; outline-offset:3px; }
   @media(max-width:749px) { .psc-guide-{{ ai_gen_id }} { width:100%; } }
+    .psc-guide-{{ ai_gen_id }} th:nth-child(5),
+  .psc-guide-{{ ai_gen_id }} td:nth-child(5) {
+    width: 110px;
+    white-space: normal;
+    overflow-wrap: anywhere;
+  }
+
 {% endstyle %}
 
 <div class="psc-guide-{{ ai_gen_id }}" {{ block.shopify_attributes }}>
