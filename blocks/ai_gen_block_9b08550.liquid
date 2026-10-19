@@ -184,7 +184,28 @@ assign youtube_id = youtube_id | split: '&' | first | split: '?' | first | split
               </a>
             {% else %}
               <div class="ai-video-guides-{{ ai_gen_id }}__media" aria-hidden="true">
-                {% if card_image %}<img src="{{ card_image | image_url: width: 1000 }}" alt="{{ card_image.alt | default: card_title | escape }}" loading="lazy" width="{{ card_image.width }}" height="{{ card_image.height }}">{% else %}<div class="ai-video-guides-{{ ai_gen_id }}__placeholder">{{ 'image' | placeholder_svg_tag }}</div>{% endif %}
+                {% if card_image != blank %}
+  <img
+    src="{{ card_image | image_url: width: 1000 }}"
+    alt="{{ card_image.alt | default: card_title | escape }}"
+    loading="lazy"
+    width="{{ card_image.width }}"
+    height="{{ card_image.height }}"
+  >
+{% elsif youtube_id != blank %}
+  <img
+    src="https://i.ytimg.com/vi/{{ youtube_id | escape }}/hqdefault.jpg"
+    alt="{{ card_title | escape }}"
+    loading="lazy"
+    width="480"
+    height="360"
+  >
+{% else %}
+  <div class="ai-video-guides-{{ ai_gen_id }}__placeholder">
+    {{ 'image' | placeholder_svg_tag }}
+  </div>
+{% endif %}
+
                 <span class="ai-video-guides-{{ ai_gen_id }}__play"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5.5v13l10-6.5z"/></svg></span>
               </div>
             {% endif %}
