@@ -279,6 +279,69 @@
       ],
       "settings": {}
     },
+    "blocks_hE9kq7": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_9b08550_qEbMUf": {
+          "type": "ai_gen_block_9b08550",
+          "settings": {
+            "heading": "JEEP INSTALLATION VIDEOS",
+            "desktop_width_percent": 85,
+            "desktop_columns": "4",
+            "card_spacing": 20,
+            "background_color": "#ffffff",
+            "card_color": "#ffffff",
+            "text_color": "#121212",
+            "play_color": "#d6001c",
+            "video_1_image": "shopify://shop_images/bigborehowto.png",
+            "video_1_title": "PSC BIG BORE XD® DDS® Steering Installation Video | 2018-2025 Ford F-450/F-550 4WD",
+            "video_1_description": "",
+            "video_1_url": "https://youtu.be/SVFTFr39cr0",
+            "video_2_image": "shopify://shop_images/howtovideojeep392.png",
+            "video_2_title": "PSC Full Hydraulic Steering Kit Installation Video | 2021-2024 Jeep Wrangler 392",
+            "video_2_description": "",
+            "video_2_url": "",
+            "video_3_title": "",
+            "video_3_description": "",
+            "video_3_url": "",
+            "video_4_image": "shopify://shop_images/howtovideo392ehps.png",
+            "video_4_title": "PSC Cylinder Assist® EHPS Steering Installation Video | 2021-2024 Jeep Wrangler 392",
+            "video_4_description": "",
+            "video_4_url": "https://youtu.be/k0PlwQDxRpk",
+            "video_5_title": "",
+            "video_5_description": "",
+            "video_5_url": "",
+            "video_6_image": "shopify://shop_images/howtovideojeepjkbigbore.png",
+            "video_6_title": "PSC Adventure Steering Kit Installation Video | 2012-2018 Jeep JK Wrangler",
+            "video_6_description": "",
+            "video_6_url": "https://youtu.be/5YiDze2oW7Y",
+            "video_7_title": "",
+            "video_7_description": "",
+            "video_7_url": "",
+            "video_8_title": "",
+            "video_8_description": "",
+            "video_8_url": "",
+            "video_9_title": "",
+            "video_9_description": "",
+            "video_9_url": "",
+            "video_10_title": "",
+            "video_10_description": "",
+            "video_10_url": "",
+            "video_11_title": "",
+            "video_11_description": "",
+            "video_11_url": "",
+            "video_12_title": "",
+            "video_12_description": "",
+            "video_12_url": ""
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_9b08550_qEbMUf"
+      ],
+      "settings": {}
+    },
     "rich_text_XABQBf": {
       "type": "rich-text",
       "blocks": {
@@ -1056,6 +1119,7 @@
     "1792194718735e8122",
     "rich_text_nppJA6",
     "1792252347baa65dd8",
+    "blocks_hE9kq7",
     "rich_text_XABQBf",
     "blocks_KPrJHa",
     "rich_text_dQBWMX",
