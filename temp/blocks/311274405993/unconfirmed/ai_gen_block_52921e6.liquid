@@ -1,6 +1,308 @@
+{% doc %}
+  @prompt
+    Create a horizontal anchor-navigation menu for the Tech Resources page, to be placed directly below the existing rich text section and above the install guides. Include buttons for Jeep Install Guides and Dodge/Ram, with editable labels and the ability to add buttons for other guide categories. Each button should scroll to its corresponding existing guide section on the same page, not open a new page. Allow an editable target heading or anchor ID per button; locate existing matching headings and assign unique anchor IDs when needed without changing their content. Use smooth scrolling while respecting reduced-motion preferences, and provide a configurable scroll offset so headings are not hidden by the sticky header. Match the existing theme's fonts and button styling. Keep the menu horizontal on desktop and allow wrapping on mobile. Preserve all existing page sections and content.
+{% enddoc %}
+{% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
+
+{% style %}
+  .ai-tech-nav-{{ ai_gen_id }} {
+    display: block;
+    width: {{ block.settings.desktop_width_percent }}%;
+    max-width: 100%;
+    font-family: inherit;
+  }
+
+  .ai-tech-nav__links-{{ ai_gen_id }} {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .ai-tech-nav__link-{{ ai_gen_id }} {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 44px;
+    padding: 11px 20px;
+    border: 1px solid rgba(18, 18, 18, 0.75);
+    border-radius: {{ settings.buttons_radius }}px;
+    background: #121212;
+    color: #ffffff;
+    font: inherit;
+    font-weight: 600;
+    line-height: 1.2;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  .ai-tech-nav__link-{{ ai_gen_id }}:hover {
+    background: #333333;
+    color: #ffffff;
+  }
+
+  .ai-tech-nav__link-{{ ai_gen_id }}:focus-visible {
+    outline: 2px solid currentColor;
+    outline-offset: 3px;
+  }
+
+  @media screen and (max-width: 749px) {
+    .ai-tech-nav-{{ ai_gen_id }} {
+      width: 100%;
+    }
+  }
+{% endstyle %}
+
+<tech-resources-nav-{{ ai_gen_id }}
+  class="ai-tech-nav-{{ ai_gen_id }}"
+  data-scroll-offset="{{ block.settings.scroll_offset }}"
+  {{ block.shopify_attributes }}
+>
+  <nav class="ai-tech-nav__links-{{ ai_gen_id }}" aria-label="Tech resources guide categories">
+    {% for i in (1..6) %}
+      {% liquid
+        assign enabled_key = 'button_' | append: i | append: '_enabled'
+        assign label_key = 'button_' | append: i | append: '_label'
+        assign heading_key = 'button_' | append: i | append: '_heading'
+        assign anchor_key = 'button_' | append: i | append: '_anchor'
+        assign enabled = block.settings[enabled_key]
+        assign label = block.settings[label_key]
+        assign heading = block.settings[heading_key]
+        assign anchor = block.settings[anchor_key]
+      %}
+      {% if enabled and label != blank and heading != blank %}
+        <a
+          class="ai-tech-nav__link-{{ ai_gen_id }}"
+          href="{% if anchor != blank %}#{{ anchor | escape }}{% else %}#{% endif %}"
+          data-guide-heading="{{ heading | escape }}"
+          data-guide-anchor="{{ anchor | escape }}"
+        >{{ label | escape }}</a>
+      {% endif %}
+    {% endfor %}
+  </nav>
+</tech-resources-nav-{{ ai_gen_id }}>
+
+<script>
+  (function() {
+    const elementName = 'tech-resources-nav-{{ ai_gen_id }}';
+    if (customElements.get(elementName)) return;
+
+    class TechResourcesNav{{ ai_gen_id }} extends HTMLElement {
+      connectedCallback() {
+        this.querySelectorAll('[data-guide-heading]').forEach((link) => {
+          const headingText = (link.dataset.guideHeading || '').trim().toLocaleLowerCase();
+          const configuredId = (link.dataset.guideAnchor || '').trim();
+          let target = configuredId ? document.getElementById(configuredId) : null;
+
+          if (!target && headingText) {
+            target = Array.from(document.querySelectorAll('h1, h2, h3, h4, h5, h6'))
+              .find((heading) => heading.textContent.trim().toLocaleLowerCase() === headingText);
+          }
+
+          if (!target) {
+            link.setAttribute('aria-disabled', 'true');
+            link.removeAttribute('href');
+            return;
+          }
+
+          if (!target.id) {
+            const baseId = configuredId || headingText.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '') || 'guide-section';
+            let uniqueId = baseId;
+            let suffix = 2;
+            while (document.getElementById(uniqueId)) {
+              uniqueId = baseId + '-' + suffix;
+              suffix += 1;
+            }
+            target.id = uniqueId;
+          }
+
+          link.href = '#' + target.id;
+          link.addEventListener('click', (event) => {
+            event.preventDefault();
+            const offset = Number.parseInt(this.dataset.scrollOffset, 10) || 0;
+            const top = target.getBoundingClientRect().top + window.scrollY - offset;
+            const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+            window.scrollTo({ top: Math.max(0, top), behavior: reduceMotion ? 'auto' : 'smooth' });
+            if (history.replaceState) history.replaceState(null, '', '#' + target.id);
+          });
+        });
+      }
+    }
+
+    customElements.define(elementName, TechResourcesNav{{ ai_gen_id }});
+  })();
+</script>
+
 {% schema %}
- {
-   "name": "AI_Block",
-   "tag": "shopify-ai-generated-block"
- }
+{
+  "name": "Tech guide navigation",
+  "settings": [
+    {
+      "type": "range",
+      "id": "desktop_width_percent",
+      "label": "Desktop width",
+      "min": 50,
+      "max": 100,
+      "step": 5,
+      "unit": "%",
+      "default": 100
+    },
+    {
+      "type": "range",
+      "id": "scroll_offset",
+      "label": "Scroll offset",
+      "min": 0,
+      "max": 200,
+      "step": 10,
+      "unit": "px",
+      "default": 100
+    },
+    {
+      "type": "header",
+      "content": "Guide buttons"
+    },
+    {
+      "type": "paragraph",
+      "content": "Match each heading exactly as it appears on the page. Add an anchor ID only if you need a specific fragment ID."
+    },
+    {
+      "type": "checkbox",
+      "id": "button_1_enabled",
+      "label": "Show button 1",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "button_1_label",
+      "label": "Button label",
+      "default": "Jeep Install Guides"
+    },
+    {
+      "type": "text",
+      "id": "button_1_heading",
+      "label": "Target heading",
+      "default": "Jeep Install Guides"
+    },
+    {
+      "type": "text",
+      "id": "button_1_anchor",
+      "label": "Anchor ID"
+    },
+    {
+      "type": "checkbox",
+      "id": "button_2_enabled",
+      "label": "Show button 2",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "button_2_label",
+      "label": "Button label",
+      "default": "Dodge/Ram"
+    },
+    {
+      "type": "text",
+      "id": "button_2_heading",
+      "label": "Target heading",
+      "default": "Dodge/Ram"
+    },
+    {
+      "type": "text",
+      "id": "button_2_anchor",
+      "label": "Anchor ID"
+    },
+    {
+      "type": "checkbox",
+      "id": "button_3_enabled",
+      "label": "Show button 3",
+      "default": false
+    },
+    {
+      "type": "text",
+      "id": "button_3_label",
+      "label": "Button label"
+    },
+    {
+      "type": "text",
+      "id": "button_3_heading",
+      "label": "Target heading"
+    },
+    {
+      "type": "text",
+      "id": "button_3_anchor",
+      "label": "Anchor ID"
+    },
+    {
+      "type": "checkbox",
+      "id": "button_4_enabled",
+      "label": "Show button 4",
+      "default": false
+    },
+    {
+      "type": "text",
+      "id": "button_4_label",
+      "label": "Button label"
+    },
+    {
+      "type": "text",
+      "id": "button_4_heading",
+      "label": "Target heading"
+    },
+    {
+      "type": "text",
+      "id": "button_4_anchor",
+      "label": "Anchor ID"
+    },
+    {
+      "type": "checkbox",
+      "id": "button_5_enabled",
+      "label": "Show button 5",
+      "default": false
+    },
+    {
+      "type": "text",
+      "id": "button_5_label",
+      "label": "Button label"
+    },
+    {
+      "type": "text",
+      "id": "button_5_heading",
+      "label": "Target heading"
+    },
+    {
+      "type": "text",
+      "id": "button_5_anchor",
+      "label": "Anchor ID"
+    },
+    {
+      "type": "checkbox",
+      "id": "button_6_enabled",
+      "label": "Show button 6",
+      "default": false
+    },
+    {
+      "type": "text",
+      "id": "button_6_label",
+      "label": "Button label"
+    },
+    {
+      "type": "text",
+      "id": "button_6_heading",
+      "label": "Target heading"
+    },
+    {
+      "type": "text",
+      "id": "button_6_anchor",
+      "label": "Anchor ID"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Tech guide navigation"
+    }
+  ],
+  "tag": null,
+  "class": "tech-guide-navigation"
+}
 {% endschema %}
