@@ -80,45 +80,93 @@
 </tech-resources-nav-{{ ai_gen_id }}>
 
 <script>
+  <script>
   (function() {
     const elementName = 'tech-resources-nav-{{ ai_gen_id }}';
     if (customElements.get(elementName)) return;
+
     class TechResourcesNav{{ ai_gen_id }} extends HTMLElement {
       connectedCallback() {
+        if (this.navigationBound) return;
+        this.navigationBound = true;
+
+        const normalize = (text) =>
+          (text || '').replace(/\s+/g, ' ').trim().toLowerCase();
+
         this.querySelectorAll('[data-guide-heading]').forEach((link) => {
-          const headingText = (link.dataset.guideHeading || '').trim().toLocaleLowerCase();
-          const configuredId = (link.dataset.guideAnchor || '').trim();
-          let target = configuredId ? document.getElementById(configuredId) : null;
-          if (!target && headingText) {
-            target = Array.from(document.querySelectorAll('h1, h2, h3, h4, h5, h6')).find((heading) => heading.textContent.trim().toLocaleLowerCase() === headingText);
-          }
-          if (!target) {
-            link.setAttribute('aria-disabled', 'true');
-            link.removeAttribute('href');
-            return;
-          }
-          if (!target.id) {
-            const baseId = configuredId || headingText.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '') || 'guide-section';
-            let uniqueId = baseId;
-            let suffix = 2;
-            while (document.getElementById(uniqueId)) {
-              uniqueId = baseId + '-' + suffix;
-              suffix += 1;
-            }
-            target.id = uniqueId;
-          }
-          link.href = '#' + target.id;
+          const configuredId = (link.dataset.guideAnchor || '')
+            .trim()
+            .replace(/^#+/, '');
+
+          link.removeAttribute('aria-disabled');
+          link.href = configuredId ? '#' + configuredId : '#';
+
           link.addEventListener('click', (event) => {
             event.preventDefault();
-            const offset = Number.parseInt(this.dataset.scrollOffset, 10) || 0;
-            const top = target.getBoundingClientRect().top + window.scrollY - offset;
-            const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-            window.scrollTo({ top: Math.max(0, top), behavior: reduceMotion ? 'auto' : 'smooth' });
-            if (history.replaceState) history.replaceState(null, '', '#' + target.id);
+
+            const headingText = normalize(link.dataset.guideHeading);
+            let target = configuredId
+              ? document.getElementById(configuredId)
+              : null;
+
+            if (!target && headingText) {
+              target = Array.from(
+                document.querySelectorAll('h1, h2, h3, h4, h5, h6')
+              ).find((heading) =>
+                normalize(heading.textContent) === headingText
+              );
+            }
+
+            if (!target) {
+              console.warn(
+                'Guide navigation: no matching heading found:',
+                link.dataset.guideHeading
+              );
+              return;
+            }
+
+            if (!target.id) {
+              const baseId = configuredId ||
+                headingText.replace(/[^a-z0-9]+/g, '-')
+                  .replace(/^-|-$/g, '') ||
+                'guide-section';
+
+              let uniqueId = baseId;
+              let suffix = 2;
+
+              while (document.getElementById(uniqueId)) {
+                uniqueId = baseId + '-' + suffix++;
+              }
+
+              target.id = uniqueId;
+            }
+
+            link.href = '#' + target.id;
+
+            const offset =
+              Number.parseInt(this.dataset.scrollOffset, 10) || 0;
+            const top =
+              target.getBoundingClientRect().top +
+              window.scrollY -
+              offset;
+            const reduceMotion =
+              window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+            window.scrollTo({
+              top: Math.max(0, top),
+              behavior: reduceMotion ? 'auto' : 'smooth'
+            });
+
+            history.replaceState(
+              null,
+              '',
+              '#' + encodeURIComponent(target.id)
+            );
           });
         });
       }
     }
+
     customElements.define(elementName, TechResourcesNav{{ ai_gen_id }});
   })();
 </script>
