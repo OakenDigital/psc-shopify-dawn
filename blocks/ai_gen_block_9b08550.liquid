@@ -120,6 +120,23 @@
           assign card_image = block.settings[image_key]
           assign card_url = block.settings[url_key]
           assign youtube_id = ''
+          assign youtube_id = ''
+assign clean_url = card_url | split: '#' | first
+
+if clean_url contains 'youtu.be/'
+  assign youtube_id = clean_url | split: 'youtu.be/' | last
+elsif clean_url contains 'youtube.com/watch'
+  if clean_url contains 'v='
+    assign youtube_id = clean_url | split: 'v=' | last
+  endif
+elsif clean_url contains 'youtube.com/shorts/'
+  assign youtube_id = clean_url | split: '/shorts/' | last
+elsif clean_url contains 'youtube.com/embed/'
+  assign youtube_id = clean_url | split: '/embed/' | last
+endif
+
+assign youtube_id = youtube_id | split: '&' | first | split: '?' | first | split: '/' | first
+
 assign clean_url = card_url | split: '#' | first
 
 if clean_url contains 'youtu.be/'
@@ -141,7 +158,28 @@ assign youtube_id = youtube_id | split: '&' | first | split: '?' | first | split
           <article class="ai-video-guides-{{ ai_gen_id }}__card">
             {% if card_url != blank %}
               <a class="ai-video-guides-{{ ai_gen_id }}__media" href="{{ card_url }}" aria-label="{{ card_title | default: 'Watch video guide' | escape }}" target="_blank" rel="noopener noreferrer">
-                {% if card_image %}<img src="{{ card_image | image_url: width: 1000 }}" alt="{{ card_image.alt | default: card_title | escape }}" loading="lazy" width="{{ card_image.width }}" height="{{ card_image.height }}">{% else %}<div class="ai-video-guides-{{ ai_gen_id }}__placeholder">{{ 'image' | placeholder_svg_tag }}</div>{% endif %}
+                {% if card_image != blank %}
+  <img
+    src="{{ card_image | image_url: width: 1000 }}"
+    alt="{{ card_image.alt | default: card_title | escape }}"
+    loading="lazy"
+    width="{{ card_image.width }}"
+    height="{{ card_image.height }}"
+  >
+{% elsif youtube_id != blank %}
+  <img
+    src="https://i.ytimg.com/vi/{{ youtube_id | escape }}/hqdefault.jpg"
+    alt="{{ card_title | escape }}"
+    loading="lazy"
+    width="480"
+    height="360"
+  >
+{% else %}
+  <div class="ai-video-guides-{{ ai_gen_id }}__placeholder">
+    {{ 'image' | placeholder_svg_tag }}
+  </div>
+{% endif %}
+
                 <span class="ai-video-guides-{{ ai_gen_id }}__play" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5.5v13l10-6.5z"/></svg></span>
               </a>
             {% else %}
