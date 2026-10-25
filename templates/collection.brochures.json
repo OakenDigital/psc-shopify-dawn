@@ -163,21 +163,21 @@
         "heading_UEqzGe": {
           "type": "heading",
           "settings": {
-            "heading": "Talk about your brand",
+            "heading": "Looking for another Jeep model?",
             "heading_size": "h1"
           }
         },
         "text_R4GDnr": {
           "type": "text",
           "settings": {
-            "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.</p>"
+            "text": "<p>PSC builds steering solutions JK, TJ, LJ, XJ, YJ, CJ, and more.</p>"
           }
         },
         "button_xQ9UTw": {
           "type": "button",
           "settings": {
-            "button_label": "Button label",
-            "button_link": "",
+            "button_label": "Shop All Jeep Steering Solutions",
+            "button_link": "shopify://collections/jeep",
             "button_style_secondary": false,
             "button_label_2": "",
             "button_link_2": "",
