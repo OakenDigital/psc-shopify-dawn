@@ -50,6 +50,7 @@
         },
         "featured_collection_eFKa6k": {
           "type": "featured_collection",
+          "disabled": true,
           "settings": {
             "collection": "jeep-cherokee-xj-comanche-mj"
           }
@@ -75,10 +76,10 @@
         "columns_desktop": 6,
         "color_scheme": "",
         "show_view_all": false,
-        "columns_mobile": "1",
-        "swipe_on_mobile": false,
-        "padding_top": 36,
-        "padding_bottom": 36
+        "columns_mobile": "2",
+        "swipe_on_mobile": true,
+        "padding_top": 12,
+        "padding_bottom": 12
       }
     },
     "breadcrumbs_Njfh8P": {
