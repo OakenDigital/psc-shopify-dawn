@@ -53,7 +53,7 @@
     "banner": {
       "type": "main-collection-banner",
       "settings": {
-        "show_collection_description": true,
+        "show_collection_description": false,
         "show_collection_image": false,
         "color_scheme": "scheme-1"
       }
@@ -77,12 +77,85 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "collection_list_AUhFTb": {
+      "type": "collection-list",
+      "blocks": {
+        "featured_collection_y4zgVx": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "jeep-wrangler-jl-jlu-2018-present"
+          }
+        },
+        "featured_collection_R9JQGA": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "jeep-gladiator-jt-2020-present"
+          }
+        },
+        "featured_collection_3GNeU7": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "jeep-wrangler-jk-2007-2018"
+          }
+        },
+        "featured_collection_YPjR4A": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "jeep-wrangler-tj-lj-1997-2006"
+          }
+        },
+        "featured_collection_HcHTFF": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "jeep-wrangler-yj-1987-1995"
+          }
+        },
+        "featured_collection_cdQBkh": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "jeep-cj"
+          }
+        },
+        "featured_collection_eFKa6k": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "jeep-cherokee-xj-comanche-mj"
+          }
+        }
+      },
+      "block_order": [
+        "featured_collection_y4zgVx",
+        "featured_collection_R9JQGA",
+        "featured_collection_3GNeU7",
+        "featured_collection_YPjR4A",
+        "featured_collection_HcHTFF",
+        "featured_collection_cdQBkh",
+        "featured_collection_eFKa6k"
+      ],
+      "name": "t:sections.collection-list.presets.name",
+      "settings": {
+        "eyebrow_text": "Shop by Jeep Model",
+        "eyebrow_color": "#dc2626",
+        "title": "Find Steering Parts for Your Jeep",
+        "description": "<p>Choose your Jeep model below to see THE new DDS® Dynamic Damping Stabilizer Systems, Cylinder Assist®, pumps, hose kits, and upgrades built for your specific application.</p>",
+        "heading_size": "h1",
+        "image_ratio": "square",
+        "columns_desktop": 6,
+        "color_scheme": "",
+        "show_view_all": false,
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
     "jeep_hero",
     "breadcrumbs_Njfh8P",
     "banner",
-    "product-grid"
+    "product-grid",
+    "collection_list_AUhFTb"
   ]
 }
