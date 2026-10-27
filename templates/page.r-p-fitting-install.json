@@ -23,7 +23,7 @@
         "step_K6k3PQ": {
           "type": "step",
           "settings": {
-            "image_position": "left",
+            "image_position": "right",
             "header": "{{ page.metafields.custom.step.value }}",
             "label": "{{ page.metafields.custom.instructions_step_1.value }}",
             "body": "<p>{{ page.metafields.custom.step_1_content | metafield_tag }}</p>",
@@ -44,7 +44,7 @@
         "step_mPKCht": {
           "type": "step",
           "settings": {
-            "image_position": "left",
+            "image_position": "right",
             "header": "{{ page.metafields.custom.step.value }}",
             "label": "{{ page.metafields.custom.instructions_step_3.value }}",
             "body": "<p>{{ page.metafields.custom.step_3_content | metafield_tag }}</p>",
@@ -58,17 +58,17 @@
             "header": "{{ page.metafields.custom.step.value }}",
             "label": "{{ page.metafields.custom.instructions_step_4.value }}",
             "body": "<p>{{ page.metafields.custom.step_4_content | metafield_tag }}</p>",
-            "image_1": "{{ page.metafields.custom.instructions_step_4_image.value }}"
+            "image_1": "shopify://shop_images/step_4_c62272d0-fbfa-427c-befe-5af35b9fcb00.png"
           }
         },
         "step_g4dyXM": {
           "type": "step",
           "settings": {
-            "image_position": "left",
+            "image_position": "right",
             "header": "{{ page.metafields.custom.step.value }}",
             "label": "{{ page.metafields.custom.instructions_step_5.value }}",
             "body": "<p>{{ page.metafields.custom.step_5_content | metafield_tag }}</p>",
-            "image_1": "{{ page.metafields.custom.instructions_step_5_image.value }}"
+            "image_1": "shopify://shop_images/step_5_bb44c319-d3b6-4f71-8b93-a77f1ed4255d.png"
           }
         },
         "step_xkAxXJ": {
@@ -78,17 +78,17 @@
             "header": "{{ page.metafields.custom.step.value }}",
             "label": "{{ page.metafields.custom.instructions_step_6.value }}",
             "body": "<p>{{ page.metafields.custom.step_6_content | metafield_tag }}</p>",
-            "image_1": "{{ page.metafields.custom.instructions_step_6_image.value }}"
+            "image_1": "shopify://shop_images/Step_6_962ce31d-6cc0-414c-b12a-33409aee6b8c.png"
           }
         },
         "step_Mw8NCM": {
           "type": "step",
           "settings": {
-            "image_position": "left",
+            "image_position": "right",
             "header": "{{ page.metafields.custom.step.value }}",
             "label": "{{ page.metafields.custom.instructions_step_7.value }}",
             "body": "<p>{{ page.metafields.custom.step_7_content | metafield_tag }}</p>",
-            "image_1": "{{ page.metafields.custom.instructions_step_7_image.value }}"
+            "image_1": "shopify://shop_images/step_7_716a4329-b65f-473b-b3d1-d0907dbab99b.png"
           }
         },
         "step_V3gA8w": {
@@ -96,117 +96,9 @@
           "settings": {
             "image_position": "left",
             "header": "{{ page.metafields.custom.step.value }}",
-            "label": "{{ page.metafields.custom.instructions_step_8.value }}",
+            "label": "Finished!",
             "body": "<p>{{ page.metafields.custom.step_8_content | metafield_tag }}</p>",
-            "image_1": "{{ page.metafields.custom.instructions_step_8_image.value }}"
-          }
-        },
-        "step_ffDf7T": {
-          "type": "step",
-          "disabled": true,
-          "settings": {
-            "image_position": "right",
-            "header": "{{ page.metafields.custom.step.value }}",
-            "label": "{{ page.metafields.custom.instructions_step_9.value }}",
-            "body": "<p>{{ page.metafields.custom.step_9_content | metafield_tag }}</p>",
-            "image_1": "{{ page.metafields.custom.instructions_step_9_image.value }}"
-          }
-        },
-        "step_qHpddh": {
-          "type": "step",
-          "disabled": true,
-          "settings": {
-            "image_position": "right",
-            "header": "{{ page.metafields.custom.step.value }}",
-            "label": "{{ page.metafields.custom.instructions_step_10.value }}",
-            "body": "<p>{{ page.metafields.custom.step_10_content | metafield_tag }}<br/></p>",
-            "image_1": "{{ page.metafields.custom.instructions_step_10_image.value }}"
-          }
-        },
-        "step_Y3Vxd7": {
-          "type": "step",
-          "disabled": true,
-          "settings": {
-            "image_position": "right",
-            "header": "{{ page.metafields.custom.step.value }}",
-            "label": "{{ page.metafields.custom.instructions_step_11.value }}",
-            "body": "<p>{{ page.metafields.custom.step_11_content | metafield_tag }}<br/><br/><br/><br/></p>",
-            "image_1": "{{ page.metafields.custom.instructions_step_11_image.value }}"
-          }
-        },
-        "step_kNUzab": {
-          "type": "step",
-          "disabled": true,
-          "settings": {
-            "image_position": "right",
-            "header": "{{ page.metafields.custom.step.value }}",
-            "label": "{{ page.metafields.custom.instructions_step_12.value }}",
-            "body": "<p>{{ page.metafields.custom.step_12_content | metafield_tag }}</p>",
-            "image_1": "{{ page.metafields.custom.instructions_step_12_image.value }}"
-          }
-        },
-        "step_8XM3YY": {
-          "type": "step",
-          "disabled": true,
-          "settings": {
-            "image_position": "right",
-            "header": "{{ page.metafields.custom.step.value }}",
-            "label": "{{ page.metafields.custom.instructions_step_13.value }}",
-            "body": "<p>{{ page.metafields.custom.step_13_content | metafield_tag }}</p>",
-            "image_1": "{{ page.metafields.custom.instructions_step_13_image.value }}"
-          }
-        },
-        "step_cHqj7f": {
-          "type": "step",
-          "disabled": true,
-          "settings": {
-            "image_position": "right",
-            "header": "{{ page.metafields.custom.step.value }}",
-            "label": "{{ page.metafields.custom.instructions_step_14.value }}",
-            "body": "<p>{{ page.metafields.custom.step_14_content | metafield_tag }}</p>",
-            "image_1": "{{ page.metafields.custom.instructions_step_14_image.value }}"
-          }
-        },
-        "step_byGprp": {
-          "type": "step",
-          "disabled": true,
-          "settings": {
-            "image_position": "right",
-            "header": "{{ page.metafields.custom.step.value }}",
-            "label": "{{ page.metafields.custom.instructions_step_15.value }}",
-            "body": "<p>{{ page.metafields.custom.step_15_content | metafield_tag }}<br/></p>",
-            "image_1": "{{ page.metafields.custom.instructions_step_15_image.value }}"
-          }
-        },
-        "step_rhGMA9": {
-          "type": "step",
-          "disabled": true,
-          "settings": {
-            "image_position": "right",
-            "header": "{{ page.metafields.custom.step.value }}",
-            "label": "{{ page.metafields.custom.instructions_step_16.value }}",
-            "body": "<p>{{ page.metafields.custom.step_16_content | metafield_tag }}</p>",
-            "image_1": "{{ page.metafields.custom.instructions_step_16_image.value }}"
-          }
-        },
-        "step_CeQMB4": {
-          "type": "step",
-          "disabled": true,
-          "settings": {
-            "image_position": "right",
-            "header": "",
-            "label": "{{ page.metafields.custom.instructions_step_17.value }}",
-            "body": "<p>{{ page.metafields.custom.step_17_content | metafield_tag }}</p>"
-          }
-        },
-        "step_e66zbV": {
-          "type": "step",
-          "disabled": true,
-          "settings": {
-            "image_position": "split",
-            "header": "STEP",
-            "label": "{{ page.metafields.custom.instructions_step_18.value }}",
-            "body": "<p>{{ page.metafields.custom.step_18_content | metafield_tag }}</p>"
+            "image_1": "shopify://shop_images/step_8_15e89b9b-2fec-4eef-935a-64e7a94a8ef8.png"
           }
         }
       },
@@ -218,17 +110,7 @@
         "step_g4dyXM",
         "step_xkAxXJ",
         "step_Mw8NCM",
-        "step_V3gA8w",
-        "step_ffDf7T",
-        "step_qHpddh",
-        "step_Y3Vxd7",
-        "step_kNUzab",
-        "step_8XM3YY",
-        "step_cHqj7f",
-        "step_byGprp",
-        "step_rhGMA9",
-        "step_CeQMB4",
-        "step_e66zbV"
+        "step_V3gA8w"
       ],
       "name": "PSC Installation Guide",
       "settings": {
