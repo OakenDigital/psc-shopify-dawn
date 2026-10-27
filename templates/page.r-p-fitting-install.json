@@ -48,7 +48,7 @@
             "header": "{{ page.metafields.custom.step.value }}",
             "label": "{{ page.metafields.custom.instructions_step_3.value }}",
             "body": "<p>{{ page.metafields.custom.step_3_content | metafield_tag }}</p>",
-            "image_1": "{{ page.metafields.custom.instructions_step_3_image.value }}"
+            "image_1": "shopify://shop_images/step-3_b1d43f40-fb0b-4122-b0b1-2458e69bfdbf.png"
           }
         },
         "step_Ti9JPh": {
