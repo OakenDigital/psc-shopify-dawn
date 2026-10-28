@@ -72,6 +72,7 @@
     },
     "banner": {
       "type": "main-collection-banner",
+      "disabled": true,
       "settings": {
         "show_collection_description": true,
         "show_collection_image": false,
@@ -84,19 +85,19 @@
         "featured_collection_tcaTqk": {
           "type": "featured_collection",
           "settings": {
-            "collection": "dds-dynamic-damping-stabilizer-system-jeep-wrangler-jl-jt"
+            "collection": "complete-systems-circle-track"
           }
         },
         "featured_collection_MPD7tK": {
           "type": "featured_collection",
           "settings": {
-            "collection": "jeep-xtreme-duty-hose-kits"
+            "collection": "steering-gears-circle-track"
           }
         },
         "featured_collection_EwBXfU": {
           "type": "featured_collection",
           "settings": {
-            "collection": "jeep-xd-steering-gears"
+            "collection": "pumps-circle-track"
           }
         },
         "featured_collection_VHTy9X": {
@@ -104,27 +105,20 @@
           "settings": {
             "collection": "jeep-xd-pump-kits"
           }
-        },
-        "featured_collection_UBqc63": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "jeep-dds-add-on-axle-kits"
-          }
         }
       },
       "block_order": [
         "featured_collection_tcaTqk",
         "featured_collection_MPD7tK",
         "featured_collection_EwBXfU",
-        "featured_collection_VHTy9X",
-        "featured_collection_UBqc63"
+        "featured_collection_VHTy9X"
       ],
       "name": "t:sections.collection-list.presets.name",
       "settings": {
-        "eyebrow_text": "STOP FIGHTING THE STEERING WHEEL",
+        "eyebrow_text": "CONSISTENT STEERING. LAP AFTER LAP.",
         "eyebrow_color": "#d6001c",
-        "title": "Jeep JL & JT Steering Solutions&nbsp;",
-        "description": "<p>Whether you're running larger tires, tackling technical trails, daily driving, or building a dedicated off-road rig, PSC offers steering solutions designed specifically for Jeep Wrangler JL and Gladiator JT applications.</p><p>From DDS® Dynamic Damping Stabilizer systems and XD Cylinder Assist® steering gears to electric power steering pump kits, hose kits, and steering upgrades, every component is engineered to help improve steering control, durability, and driver confidence.</p>",
+        "title": "Circle Track Steering Systems & Components",
+        "description": "",
         "heading_size": "h1",
         "image_ratio": "square",
         "columns_desktop": 5,
@@ -162,7 +156,7 @@
     "breadcrumbs_Njfh8P",
     "apps_CATkbB",
     "banner",
-    "product-grid",
-    "collection_list_c83jm7"
+    "collection_list_c83jm7",
+    "product-grid"
   ]
 }

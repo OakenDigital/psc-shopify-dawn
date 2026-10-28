@@ -20,12 +20,19 @@
     "psc_installation_guide_AA4Nef": {
       "type": "psc-installation-guide",
       "blocks": {
+        "kit_category_W4pxd6": {
+          "type": "kit_category",
+          "settings": {
+            "header": "Tools You’ll Need",
+            "body": "<ul><li>Abrasive cut‑off wheel</li><li>Bench vise</li><li>Light oil (assembly lube or standard shop oil)</li><li>Your reusable fitting & hose<br/></li></ul>"
+          }
+        },
         "toc_entry_THwanq": {
           "type": "toc_entry",
           "settings": {
-            "title": "Before you get started",
-            "range": "03–04",
-            "items": "<ul><li>Tools and safety</li></ul>"
+            "title": "",
+            "range": "",
+            "items": "<ul><li>Tools You’ll Need</li><li>Installation Steps</li><li>Contact Information</li></ul>"
           }
         },
         "step_K6k3PQ": {
@@ -33,8 +40,8 @@
           "settings": {
             "image_position": "right",
             "header": "{{ page.metafields.custom.step.value }}",
-            "label": "{{ page.metafields.custom.instructions_step_1.value }}",
-            "body": "<p>{{ page.metafields.custom.step_1_content | metafield_tag }}</p>",
+            "label": "Measure & Cut the Hose:",
+            "body": "<p>Figure out how much hose you actually need.</p><p>Use an abrasive cut‑off wheel to make a clean, straight cut.</p><p>&nbsp;<br/><strong>TIP</strong>: <em>Wrap masking tape around the hose before cutting to reduce fraying. A clean cut helps prevent fraying and makes threading everything together much easier.</em><br/></p>",
             "image_1": "shopify://shop_images/step-1.png"
           }
         },
@@ -90,6 +97,7 @@
         }
       },
       "block_order": [
+        "kit_category_W4pxd6",
         "toc_entry_THwanq",
         "step_K6k3PQ",
         "step_p4UDTU",
