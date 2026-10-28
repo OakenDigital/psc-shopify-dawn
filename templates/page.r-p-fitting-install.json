@@ -50,8 +50,8 @@
           "settings": {
             "image_position": "left",
             "header": "{{ page.metafields.custom.step.value }}",
-            "label": "{{ page.metafields.custom.instructions_step_2.value }}",
-            "body": "<p>{{ page.metafields.custom.step_2_content | metafield_tag }}</p>",
+            "label": "Clamp the Hose:",
+            "body": "<p>Slip the hose into your vise with about 1.5 inches sticking out.</p><p>Snug the vise down enough to hold it steady — no need to crush the hose.</p>",
             "image_1": "shopify://shop_images/step-2.png"
           }
         },
@@ -60,8 +60,8 @@
           "settings": {
             "image_position": "right",
             "header": "{{ page.metafields.custom.step.value }}",
-            "label": "{{ page.metafields.custom.instructions_step_3.value }}",
-            "body": "<p>{{ page.metafields.custom.step_3_content | metafield_tag }}</p>",
+            "label": "Thread the Shell Onto the Hose:",
+            "body": "<p>Spin the shell onto the hose counterclockwise.</p><p>Keep going until the hose bottoms out inside the fitting — you’ll feel it stop.<br/></p>",
             "image_1": "shopify://shop_images/STEP-3_453cb012-68a8-4da0-806f-ddb569b96592.png"
           }
         },
@@ -70,8 +70,8 @@
           "settings": {
             "image_position": "left",
             "header": "{{ page.metafields.custom.step.value }}",
-            "label": "{{ page.metafields.custom.instructions_step_4.value }}",
-            "body": "<p>{{ page.metafields.custom.step_4_content | metafield_tag }}</p>",
+            "label": "Lubricate:",
+            "body": "<p>Apply a small amount of oil to the fitting. - This helps everything seat properly and makes final tightening smoother.</p>",
             "image_1": "shopify://shop_images/STEP-4.png"
           }
         },
@@ -80,8 +80,8 @@
           "settings": {
             "image_position": "right",
             "header": "{{ page.metafields.custom.step.value }}",
-            "label": "{{ page.metafields.custom.instructions_step_5.value }}",
-            "body": "<p>{{ page.metafields.custom.step_5_content | metafield_tag }}</p>",
+            "label": "Clamp the Shell:",
+            "body": "<p>Take the fitting shell (the outer part) and clamp it in the vise.<br/>Get it held solid so it doesn’t twist while you’re threading things in.</p>",
             "image_1": "shopify://shop_images/step-5.png"
           }
         },
@@ -90,9 +90,18 @@
           "settings": {
             "image_position": "left",
             "header": "{{ page.metafields.custom.step.value }}",
-            "label": "{{ page.metafields.custom.instructions_step_6.value }}",
-            "body": "<p>{{ page.metafields.custom.step_6_content | metafield_tag }}</p>",
+            "label": "Thread the Fitting Into the Shell:",
+            "body": "<p>Thread the fitting clockwise into the shell.</p><p>You don’t need to bottom it out — leaving a couple threads showing is totally fine.</p><p>If you’re installing 90° fittings on both ends, you’ll probably need to clock them so they line up the way you want once everything’s tight.<br/><br/></p>",
             "image_1": "shopify://shop_images/step-6.png"
+          }
+        },
+        "step_ywPgR3": {
+          "type": "step",
+          "settings": {
+            "image_position": "split",
+            "header": "STEP",
+            "label": "JOB COMPLETE!",
+            "body": ""
           }
         }
       },
@@ -104,7 +113,8 @@
         "step_mPKCht",
         "step_Ti9JPh",
         "step_g4dyXM",
-        "step_xkAxXJ"
+        "step_xkAxXJ",
+        "step_ywPgR3"
       ],
       "name": "PSC Installation Guide",
       "settings": {
