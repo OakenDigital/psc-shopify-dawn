@@ -20,6 +20,14 @@
     "psc_installation_guide_AA4Nef": {
       "type": "psc-installation-guide",
       "blocks": {
+        "toc_entry_THwanq": {
+          "type": "toc_entry",
+          "settings": {
+            "title": "Before you get started",
+            "range": "03–04",
+            "items": "<ul><li>Tools and safety</li></ul>"
+          }
+        },
         "step_K6k3PQ": {
           "type": "step",
           "settings": {
@@ -27,8 +35,7 @@
             "header": "{{ page.metafields.custom.step.value }}",
             "label": "{{ page.metafields.custom.instructions_step_1.value }}",
             "body": "<p>{{ page.metafields.custom.step_1_content | metafield_tag }}</p>",
-            "image_1": "{{ page.metafields.custom.instructions_step_1_image.value }}",
-            "image_2": "shopify://shop_images/Step_1_ba3e8749-8a7b-4669-b2d1-742fc82e7a5a.png"
+            "image_1": "shopify://shop_images/step-1.png"
           }
         },
         "step_p4UDTU": {
@@ -38,7 +45,7 @@
             "header": "{{ page.metafields.custom.step.value }}",
             "label": "{{ page.metafields.custom.instructions_step_2.value }}",
             "body": "<p>{{ page.metafields.custom.step_2_content | metafield_tag }}</p>",
-            "image_1": "shopify://shop_images/step_2_8274103a-eda8-4a46-8f99-e06a8ccd337c.png"
+            "image_1": "shopify://shop_images/step-2.png"
           }
         },
         "step_mPKCht": {
@@ -48,7 +55,7 @@
             "header": "{{ page.metafields.custom.step.value }}",
             "label": "{{ page.metafields.custom.instructions_step_3.value }}",
             "body": "<p>{{ page.metafields.custom.step_3_content | metafield_tag }}</p>",
-            "image_1": "shopify://shop_images/step-3_b1d43f40-fb0b-4122-b0b1-2458e69bfdbf.png"
+            "image_1": "shopify://shop_images/STEP-3_453cb012-68a8-4da0-806f-ddb569b96592.png"
           }
         },
         "step_Ti9JPh": {
@@ -58,7 +65,7 @@
             "header": "{{ page.metafields.custom.step.value }}",
             "label": "{{ page.metafields.custom.instructions_step_4.value }}",
             "body": "<p>{{ page.metafields.custom.step_4_content | metafield_tag }}</p>",
-            "image_1": "shopify://shop_images/step_4_c62272d0-fbfa-427c-befe-5af35b9fcb00.png"
+            "image_1": "shopify://shop_images/STEP-4.png"
           }
         },
         "step_g4dyXM": {
@@ -68,7 +75,7 @@
             "header": "{{ page.metafields.custom.step.value }}",
             "label": "{{ page.metafields.custom.instructions_step_5.value }}",
             "body": "<p>{{ page.metafields.custom.step_5_content | metafield_tag }}</p>",
-            "image_1": "shopify://shop_images/step_5_bb44c319-d3b6-4f71-8b93-a77f1ed4255d.png"
+            "image_1": "shopify://shop_images/step-5.png"
           }
         },
         "step_xkAxXJ": {
@@ -78,39 +85,18 @@
             "header": "{{ page.metafields.custom.step.value }}",
             "label": "{{ page.metafields.custom.instructions_step_6.value }}",
             "body": "<p>{{ page.metafields.custom.step_6_content | metafield_tag }}</p>",
-            "image_1": "shopify://shop_images/Step_6_962ce31d-6cc0-414c-b12a-33409aee6b8c.png"
-          }
-        },
-        "step_Mw8NCM": {
-          "type": "step",
-          "settings": {
-            "image_position": "right",
-            "header": "{{ page.metafields.custom.step.value }}",
-            "label": "{{ page.metafields.custom.instructions_step_7.value }}",
-            "body": "<p>{{ page.metafields.custom.step_7_content | metafield_tag }}</p>",
-            "image_1": "shopify://shop_images/step_7_716a4329-b65f-473b-b3d1-d0907dbab99b.png"
-          }
-        },
-        "step_V3gA8w": {
-          "type": "step",
-          "settings": {
-            "image_position": "left",
-            "header": "{{ page.metafields.custom.step.value }}",
-            "label": "Finished!",
-            "body": "<p>{{ page.metafields.custom.step_8_content | metafield_tag }}</p>",
-            "image_1": "shopify://shop_images/step_8_15e89b9b-2fec-4eef-935a-64e7a94a8ef8.png"
+            "image_1": "shopify://shop_images/step-6.png"
           }
         }
       },
       "block_order": [
+        "toc_entry_THwanq",
         "step_K6k3PQ",
         "step_p4UDTU",
         "step_mPKCht",
         "step_Ti9JPh",
         "step_g4dyXM",
-        "step_xkAxXJ",
-        "step_Mw8NCM",
-        "step_V3gA8w"
+        "step_xkAxXJ"
       ],
       "name": "PSC Installation Guide",
       "settings": {
