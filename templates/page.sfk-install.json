@@ -1,0 +1,149 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 48,
+        "padding_bottom": 28
+      }
+    },
+    "psc_installation_guide_AA4Nef": {
+      "type": "psc-installation-guide",
+      "blocks": {
+        "kit_category_W4pxd6": {
+          "type": "kit_category",
+          "settings": {
+            "header": "Tools You’ll Need",
+            "body": "<ul><li>Abrasive cut‑off wheel</li><li>Bench vise</li><li>Light oil (assembly lube or standard shop oil)</li><li>Your reusable fitting & hose<br/></li></ul>"
+          }
+        },
+        "toc_entry_THwanq": {
+          "type": "toc_entry",
+          "settings": {
+            "title": "",
+            "range": "",
+            "items": "<ul><li>Tools You’ll Need</li><li>Installation Steps</li><li>Contact Information</li></ul>"
+          }
+        },
+        "step_K6k3PQ": {
+          "type": "step",
+          "settings": {
+            "image_position": "right",
+            "header": "{{ page.metafields.custom.step.value }}",
+            "label": "Measure & Cut the Hose:",
+            "body": "<p>Figure out how much hose you actually need.</p><p>Use an abrasive cut‑off wheel to make a clean, straight cut.</p><p>&nbsp;<br/><strong>TIP</strong>: <em>Wrap masking tape around the hose before cutting to reduce fraying. A clean cut helps prevent fraying and makes threading everything together much easier.</em><br/></p>",
+            "image_1": "shopify://shop_images/step-1.png"
+          }
+        },
+        "step_p4UDTU": {
+          "type": "step",
+          "settings": {
+            "image_position": "left",
+            "header": "{{ page.metafields.custom.step.value }}",
+            "label": "Clamp the Hose:",
+            "body": "<p>Slip the hose into your vise with about 1.5 inches sticking out.</p><p>Snug the vise down enough to hold it steady — no need to crush the hose.</p>",
+            "image_1": "shopify://shop_images/step-2.png"
+          }
+        },
+        "step_mPKCht": {
+          "type": "step",
+          "settings": {
+            "image_position": "right",
+            "header": "{{ page.metafields.custom.step.value }}",
+            "label": "Thread the Shell Onto the Hose:",
+            "body": "<p>Spin the shell onto the hose counterclockwise.</p><p>Keep going until the hose bottoms out inside the fitting — you’ll feel it stop.<br/></p>",
+            "image_1": "shopify://shop_images/STEP-3_453cb012-68a8-4da0-806f-ddb569b96592.png"
+          }
+        },
+        "step_Ti9JPh": {
+          "type": "step",
+          "settings": {
+            "image_position": "left",
+            "header": "{{ page.metafields.custom.step.value }}",
+            "label": "Lubricate:",
+            "body": "<p>Apply a small amount of oil to the fitting. - This helps everything seat properly and makes final tightening smoother.</p>",
+            "image_1": "shopify://shop_images/STEP-4.png"
+          }
+        },
+        "step_g4dyXM": {
+          "type": "step",
+          "settings": {
+            "image_position": "right",
+            "header": "{{ page.metafields.custom.step.value }}",
+            "label": "Clamp the Shell:",
+            "body": "<p>Take the fitting shell (the outer part) and clamp it in the vise.<br/>Get it held solid so it doesn’t twist while you’re threading things in.</p>",
+            "image_1": "shopify://shop_images/step-5.png"
+          }
+        },
+        "step_xkAxXJ": {
+          "type": "step",
+          "settings": {
+            "image_position": "left",
+            "header": "{{ page.metafields.custom.step.value }}",
+            "label": "Thread the Fitting Into the Shell:",
+            "body": "<p>Thread the fitting clockwise into the shell.</p><p>You don’t need to bottom it out — leaving a couple threads showing is totally fine.</p><p>If you’re installing 90° fittings on both ends, you’ll probably need to clock them so they line up the way you want once everything’s tight.<br/><br/></p>",
+            "image_1": "shopify://shop_images/step-6.png"
+          }
+        },
+        "step_ywPgR3": {
+          "type": "step",
+          "settings": {
+            "image_position": "split",
+            "header": "STEP",
+            "label": "JOB COMPLETE!",
+            "body": ""
+          }
+        }
+      },
+      "block_order": [
+        "kit_category_W4pxd6",
+        "toc_entry_THwanq",
+        "step_K6k3PQ",
+        "step_p4UDTU",
+        "step_mPKCht",
+        "step_Ti9JPh",
+        "step_g4dyXM",
+        "step_xkAxXJ",
+        "step_ywPgR3"
+      ],
+      "name": "PSC Installation Guide",
+      "settings": {
+        "logo": "{{ page.metafields.custom.instructions_logo.value }}",
+        "logo_width": 300,
+        "logo_width_mobile": 100,
+        "accent_color": "#cc0000",
+        "kit_image": "shopify://shop_images/HA7-690_30d1e56d-7c6d-41ce-a30e-bc20413c1e65.jpg",
+        "guide_category": "INSTALLATION GUIDE",
+        "product_title": "AN Fitting Kit",
+        "product_application": "for Rack & Pinion",
+        "product_year": "{{ page.metafields.custom.instructions_year.value }}",
+        "part_numbers": "<p>SFK01</p>",
+        "toc_title": "",
+        "before_title": "{{ page.metafields.custom.instructions_bys_header.value }}",
+        "before_body": "<p>{{ page.metafields.custom.instructions_bys_content | metafield_tag }}</p>",
+        "kit_title": "",
+        "install_title": "",
+        "custom_section_title": "Bleeding Procedure",
+        "custom_section_body": "<p><br/>It’s critical to purge all the air out of the system to prevent damage to the pump.</p><p><br/><strong>Step 1:</strong> With the engine off, jack up the front of the vehicle and put jack stands under the front axle. This makes the bleeding process easier.</p><p><br/><strong>Step 2:</strong> Add PSC fluid to the reservoir until it’s about 1” to 1-1/2” from the top or with an<br/>OEM reservoir keep the level between min and max.</p><p><strong>NOTE:</strong> With a PSC reservoir make sure<br/>the filter submerged in fluid at all times.</p><p><br/><strong>Step 3:</strong> Turn the steering wheel lock-to-lock (all the way right and all the way left) to pull more fluid through the system. Keep adding fluid a little at a time, checking the level after each round — whether that’s with a dipstick, sight glass, or fill plug — until it’s consistently sitting where it should be. You’re looking for steady, not bouncing around.</p><p><br/><strong>Step 4:</strong> Put the cap on the reservoir and start the engine for about 30 seconds—but do not turn the steering wheel yet.<br/></p><p><strong>NOTE:</strong> The fluid level in the reservoir will drop and get aerated. Letting a few minutes pass between startups will allow air bubbles to work their way out of the system. Refill the reservoir<br/>and repeat this process a couple of times.</p><p><br/><strong>Step 5:</strong> Start the engine and turn the steering wheel completely right and then left 10-15 times. Shut the engine off and let the vehicle sit for 10 minutes. Check and add fluid as necessary. Repeat this process 3-4 times. At this point the fluid level should move about one inch up or down when cycling the steering, and no bubbles should be visible in the reservoir<br/><br/><strong>Step 6:</strong> Lower the vehicle to the ground and repeat the process above one more time. Check<br/>the fluid level again.</p><p><br/><strong>Step 7:</strong> Take the vehicle for a test drive. Listen for pump noise-that’s a sign of fluid aeration. If you hear it, shut the vehicle off to let the bubbles dissipate. If noise keeps coming back, double check the low-pressure lines and make sure all fittings are tight. Top off the fluid and drive the vehicle again. Let the system cool down once you believe it’s properly bled.</p><p><br/><strong>Step 8:</strong> Remove the reservoir cap and have someone start the vehicle while you watch the fluid level. If the level drops on startup, there’s still air in the system. If it stays steady, you’ll be good.</p><p><strong>NOTE:</strong> Getting all the air out of the system can take some time. If the pump is whining, you are aerating the fluid which is not good for the pump. If you’re running your vehicle for an extended time and your pump has not stopped whining, it needs to&nbsp;<br/><br/><br/></p>",
+        "contact_title": "CONTACT US",
+        "contact_subheading": "Need help with your installation?",
+        "contact_details": "<p>Phone: 1-817-270-0102<br/>Hours: Monday–Friday, 8 AM–5 PM CDT<br/>Email: support@pscmotorsports.com</p>",
+        "website": "www.pscsteering.com"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "psc_installation_guide_AA4Nef"
+  ]
+}
