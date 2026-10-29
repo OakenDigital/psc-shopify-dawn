@@ -20,29 +20,14 @@
     "psc_installation_guide_AA4Nef": {
       "type": "psc-installation-guide",
       "blocks": {
-        "kit_category_W4pxd6": {
-          "type": "kit_category",
-          "settings": {
-            "header": "Tools You’ll Need",
-            "body": "<ul><li>Abrasive cut‑off wheel</li><li>Bench vise</li><li>Light oil (assembly lube or standard shop oil)</li><li>Your reusable fitting & hose<br/></li></ul>"
-          }
-        },
-        "toc_entry_THwanq": {
-          "type": "toc_entry",
-          "settings": {
-            "title": "",
-            "range": "",
-            "items": "<ul><li>Tools You’ll Need</li><li>Installation Steps</li><li>Contact Information</li></ul>"
-          }
-        },
         "step_K6k3PQ": {
           "type": "step",
           "settings": {
             "image_position": "right",
             "header": "{{ page.metafields.custom.step.value }}",
-            "label": "Measure & Cut the Hose:",
-            "body": "<p>Figure out how much hose you actually need.</p><p>Use an abrasive cut‑off wheel to make a clean, straight cut.</p><p>&nbsp;<br/><strong>TIP</strong>: <em>Wrap masking tape around the hose before cutting to reduce fraying. A clean cut helps prevent fraying and makes threading everything together much easier.</em><br/></p>",
-            "image_1": "shopify://shop_images/step-1.png"
+            "label": "",
+            "body": "<p><br/></p>",
+            "image_1": "shopify://shop_images/Step_1_ba3e8749-8a7b-4669-b2d1-742fc82e7a5a.png"
           }
         },
         "step_p4UDTU": {
@@ -50,9 +35,9 @@
           "settings": {
             "image_position": "left",
             "header": "{{ page.metafields.custom.step.value }}",
-            "label": "Clamp the Hose:",
-            "body": "<p>Slip the hose into your vise with about 1.5 inches sticking out.</p><p>Snug the vise down enough to hold it steady — no need to crush the hose.</p>",
-            "image_1": "shopify://shop_images/step-2.png"
+            "label": "",
+            "body": "",
+            "image_1": "shopify://shop_images/step_2_8274103a-eda8-4a46-8f99-e06a8ccd337c.png"
           }
         },
         "step_mPKCht": {
@@ -60,9 +45,9 @@
           "settings": {
             "image_position": "right",
             "header": "{{ page.metafields.custom.step.value }}",
-            "label": "Thread the Shell Onto the Hose:",
-            "body": "<p>Spin the shell onto the hose counterclockwise.</p><p>Keep going until the hose bottoms out inside the fitting — you’ll feel it stop.<br/></p>",
-            "image_1": "shopify://shop_images/STEP-3_453cb012-68a8-4da0-806f-ddb569b96592.png"
+            "label": "",
+            "body": "<p><br/></p>",
+            "image_1": "shopify://shop_images/step-3_b1d43f40-fb0b-4122-b0b1-2458e69bfdbf.png"
           }
         },
         "step_Ti9JPh": {
@@ -70,9 +55,9 @@
           "settings": {
             "image_position": "left",
             "header": "{{ page.metafields.custom.step.value }}",
-            "label": "Lubricate:",
-            "body": "<p>Apply a small amount of oil to the fitting. - This helps everything seat properly and makes final tightening smoother.</p>",
-            "image_1": "shopify://shop_images/STEP-4.png"
+            "label": "",
+            "body": "",
+            "image_1": "shopify://shop_images/step_4_c62272d0-fbfa-427c-befe-5af35b9fcb00.png"
           }
         },
         "step_g4dyXM": {
@@ -80,9 +65,9 @@
           "settings": {
             "image_position": "right",
             "header": "{{ page.metafields.custom.step.value }}",
-            "label": "Clamp the Shell:",
-            "body": "<p>Take the fitting shell (the outer part) and clamp it in the vise.<br/>Get it held solid so it doesn’t twist while you’re threading things in.</p>",
-            "image_1": "shopify://shop_images/step-5.png"
+            "label": "",
+            "body": "",
+            "image_1": "shopify://shop_images/step_5_bb44c319-d3b6-4f71-8b93-a77f1ed4255d.png"
           }
         },
         "step_xkAxXJ": {
@@ -90,31 +75,41 @@
           "settings": {
             "image_position": "left",
             "header": "{{ page.metafields.custom.step.value }}",
-            "label": "Thread the Fitting Into the Shell:",
-            "body": "<p>Thread the fitting clockwise into the shell.</p><p>You don’t need to bottom it out — leaving a couple threads showing is totally fine.</p><p>If you’re installing 90° fittings on both ends, you’ll probably need to clock them so they line up the way you want once everything’s tight.<br/><br/></p>",
-            "image_1": "shopify://shop_images/step-6.png"
+            "label": "",
+            "body": "",
+            "image_1": "shopify://shop_images/Step_6_962ce31d-6cc0-414c-b12a-33409aee6b8c.png"
           }
         },
         "step_ywPgR3": {
           "type": "step",
           "settings": {
-            "image_position": "split",
+            "image_position": "right",
             "header": "STEP",
-            "label": "JOB COMPLETE!",
-            "body": ""
+            "label": "",
+            "body": "",
+            "image_1": "shopify://shop_images/step_7_716a4329-b65f-473b-b3d1-d0907dbab99b.png"
+          }
+        },
+        "step_UfJptM": {
+          "type": "step",
+          "settings": {
+            "image_position": "left",
+            "header": "STEP",
+            "label": "FINISHED!",
+            "body": "",
+            "image_1": "shopify://shop_images/step_8_15e89b9b-2fec-4eef-935a-64e7a94a8ef8.png"
           }
         }
       },
       "block_order": [
-        "kit_category_W4pxd6",
-        "toc_entry_THwanq",
         "step_K6k3PQ",
         "step_p4UDTU",
         "step_mPKCht",
         "step_Ti9JPh",
         "step_g4dyXM",
         "step_xkAxXJ",
-        "step_ywPgR3"
+        "step_ywPgR3",
+        "step_UfJptM"
       ],
       "name": "PSC Installation Guide",
       "settings": {
@@ -122,7 +117,7 @@
         "logo_width": 300,
         "logo_width_mobile": 100,
         "accent_color": "#cc0000",
-        "kit_image": "shopify://shop_images/HA7-690_30d1e56d-7c6d-41ce-a30e-bc20413c1e65.jpg",
+        "kit_image": "shopify://shop_images/SFK01.png",
         "guide_category": "INSTALLATION GUIDE",
         "product_title": "AN Fitting Kit",
         "product_application": "for Rack & Pinion",
