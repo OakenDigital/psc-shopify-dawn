@@ -20,20 +20,12 @@
     "psc_installation_guide_AA4Nef": {
       "type": "psc-installation-guide",
       "blocks": {
-        "toc_entry_RQkR4C": {
+        "toc_entry_rfRkWj": {
           "type": "toc_entry",
           "settings": {
-            "title": "{{ page.metafields.custom.instructions_toc_header.value }}",
-            "range": "",
-            "items": "<p>{{ page.metafields.custom.instructions_toc_content_1 | metafield_tag }}</p>"
-          }
-        },
-        "toc_entry_TLHLWC": {
-          "type": "toc_entry",
-          "settings": {
-            "title": "{{ page.metafields.custom.instructions_toc_header_2.value }}",
-            "range": "",
-            "items": "<p>{{ page.metafields.custom.instructions_toc_content2 | metafield_tag }}</p>"
+            "title": "Before you get started",
+            "range": "03–04",
+            "items": "<ul><li>Tools and safety</li></ul>"
           }
         },
         "toc_entry_MFPXmD": {
@@ -294,8 +286,7 @@
         }
       },
       "block_order": [
-        "toc_entry_RQkR4C",
-        "toc_entry_TLHLWC",
+        "toc_entry_rfRkWj",
         "toc_entry_MFPXmD",
         "toc_entry_DrpYNi",
         "toc_entry_YtUPLL",
