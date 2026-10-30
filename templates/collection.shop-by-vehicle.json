@@ -85,25 +85,31 @@
         "featured_collection_MPD7tK": {
           "type": "featured_collection",
           "settings": {
-            "collection": "steering-gears-circle-track"
+            "collection": "jeep"
           }
         },
         "featured_collection_EwBXfU": {
           "type": "featured_collection",
           "settings": {
-            "collection": "pumps-circle-track"
+            "collection": "ram"
           }
         },
         "featured_collection_tcaTqk": {
           "type": "featured_collection",
           "settings": {
-            "collection": "complete-systems-circle-track"
+            "collection": "ford"
           }
         },
         "featured_collection_VHTy9X": {
           "type": "featured_collection",
           "settings": {
-            "collection": "components-accessories-circle-track"
+            "collection": "chevrolet-gmc"
+          }
+        },
+        "featured_collection_rNhaBi": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "circle-track"
           }
         }
       },
@@ -111,13 +117,14 @@
         "featured_collection_MPD7tK",
         "featured_collection_EwBXfU",
         "featured_collection_tcaTqk",
-        "featured_collection_VHTy9X"
+        "featured_collection_VHTy9X",
+        "featured_collection_rNhaBi"
       ],
       "name": "t:sections.collection-list.presets.name",
       "settings": {
-        "eyebrow_text": "CONSISTENT STEERING. LAP AFTER LAP.",
+        "eyebrow_text": "JEEP • RAM • FORD • CHEVY/GMC • CIRCLE TRACK",
         "eyebrow_color": "#d6001c",
-        "title": "Circle Track Steering Systems & Components",
+        "title": "Shop by Vehicle",
         "description": "",
         "heading_size": "h1",
         "image_ratio": "square",
