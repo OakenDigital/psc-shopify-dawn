@@ -1,60 +1,89 @@
-{{ 'section-image-banner.css' | asset_url | stylesheet_tag }}
+{%- comment -%}
+  Banner Link Section
+  Renders a full-width image banner where the entire element acts as a link.
+  Fully customizable via the Shopify Theme Editor.
+{%- endcomment -%}
 
-{%- style -%}
+<div class="banner-link-section section-{{ section.id }}-padding">
+  {%- if section.settings.link != blank -%}
+    <a href="{{ section.settings.link }}" class="banner-link" aria-label="{{ section.settings.alt_text | default: 'Banner link' | escape }}">
+  {%- else -%}
+    <div class="banner-link banner-link--no-link">
+  {%- endif -%}
+
+    <div class="banner-link__media media media--transparent">
+      {%- if section.settings.image != blank -%}
+        {%- liquid
+          assign height = section.settings.image.width | divided_by: section.settings.image.aspect_ratio
+          assign image_alt = section.settings.alt_text | default: section.settings.image.alt | escape
+        -%}
+        {{ section.settings.image | image_url: width: 3840 | image_tag:
+          loading: 'lazy',
+          height: height,
+          sizes: '100vw',
+          widths: '375, 550, 750, 1100, 1500, 1780, 2000, 3000, 3840',
+          alt: image_alt,
+          class: 'banner-link__image'
+        }}
+      {%- else -%}
+        {{ 'lifestyle-1' | placeholder_svg_tag: 'banner-link__placeholder' }}
+      {%- endif -%}
+    </div>
+
+  {%- if section.settings.link != blank -%}
+    </a>
+  {%- else -%}
+    </div>
+  {%- endif -%}
+</div>
+
+<style>
+  .banner-link {
+    display: block;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    text-decoration: none;
+  }
+
+  .banner-link__media {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+
+  .banner-link__image {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    object-position: center center;
+    transition: transform 0.3s ease;
+  }
+
+  /* Subtle hover zoom effect if linked */
+  a.banner-link:hover .banner-link__image {
+    transform: scale(1.02);
+  }
+
+  .banner-link__placeholder {
+    width: 100%;
+    height: 300px;
+    background-color: #f4f4f4;
+  }
+
+  /* Dynamic vertical padding from schema settings */
   .section-{{ section.id }}-padding {
     padding-top: {{ section.settings.padding_top }}px;
     padding-bottom: {{ section.settings.padding_bottom }}px;
   }
-  
-  .custom-image-link-wrapper {
-    display: block;
-    width: 100%;
-    line-height: 0;
-  }
-
-  .custom-image-link-wrapper img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-  }
-{%- endstyle -%}
-
-<div class="section-{{ section.id }}-padding">
-  <div class="page-width" {% if section.settings.full_width %}style="padding: 0; max-width: 100%;"{% endif %}>
-    {%- if section.settings.image_link != blank -%}
-      <a href="{{ section.settings.image_link }}" class="custom-image-link-wrapper" aria-label="{{ section.settings.image.alt | escape }}">
-    {%- else -%}
-      <div class="custom-image-link-wrapper">
-    {%- endif -%}
-
-      {%- if section.settings.image != blank -%}
-        {{
-          section.settings.image
-          | image_url: width: 3840
-          | image_tag:
-            loading: 'lazy',
-            widths: '375, 550, 750, 1100, 1500, 1780, 2000, 3000, 3840'
-        }}
-      {%- else -%}
-        {{ 'hero-apparel-1' | placeholder_svg_tag: 'placeholder-svg' }}
-      {%- endif -%}
-
-    {%- if section.settings.image_link != blank -%}
-      </a>
-    {%- else -%}
-      </div>
-    {%- endif -%}
-  </div>
-</div>
+</style>
 
 {% schema %}
 {
-  "name": "Banner Link",
+  "name": "Clickable Banner",
   "tag": "section",
-  "class": "section",
-  "disabled_on": {
-    "groups": ["header", "footer"]
-  },
+  "class": "section-clickable-banner",
   "settings": [
     {
       "type": "image_picker",
@@ -63,14 +92,18 @@
     },
     {
       "type": "url",
-      "id": "image_link",
-      "label": "Image Click Link"
+      "id": "link",
+      "label": "Banner Link"
     },
     {
-      "type": "checkbox",
-      "id": "full_width",
-      "default": true,
-      "label": "Make section full width"
+      "type": "text",
+      "id": "alt_text",
+      "label": "Image Alt Text",
+      "info": "Important for accessibility and SEO. Leave blank to use the image default."
+    },
+    {
+      "type": "header",
+      "content": "Section Padding"
     },
     {
       "type": "range",
@@ -79,7 +112,7 @@
       "max": 100,
       "step": 4,
       "unit": "px",
-      "label": "Top padding",
+      "label": "Top Padding",
       "default": 0
     },
     {
@@ -89,13 +122,13 @@
       "max": 100,
       "step": 4,
       "unit": "px",
-      "label": "Bottom padding",
+      "label": "Bottom Padding",
       "default": 0
     }
   ],
   "presets": [
     {
-      "name": "Banner Link"
+      "name": "Clickable Banner"
     }
   ]
 }
