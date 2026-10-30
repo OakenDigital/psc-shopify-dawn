@@ -183,36 +183,6 @@
     </div>
   </div>
 </div>
-{% assign banner_instance = section.id | split: '__' | last %}
-
-{% if banner_instance == 'banner_link_h4KEF' %}
-
-  <style>
-    #shopify-section-{{ section.id }} {
-      position: relative;
-    }
-
-    #shopify-section-{{ section.id }} .psc-full-banner-link {
-      display: block;
-      position: absolute;
-      inset: 0;
-      z-index: 10;
-      cursor: pointer;
-    }
-
-    #shopify-section-{{ section.id }} .psc-full-banner-link:focus-visible {
-      outline: 3px solid #ffffff;
-      outline-offset: -6px;
-      box-shadow: inset 0 0 0 9px #000000;
-    }
-  </style>
-
-  <a
-    class="psc-full-banner-link"
-    href="https://www.pscsteering.com/collections/shop-by-vehicle"
-    aria-label="Shop PSC steering products by vehicle"
-  ></a>
-{% endif %}
 
 
 {% schema %}
