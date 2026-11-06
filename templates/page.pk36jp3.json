@@ -88,7 +88,7 @@
             "header": "STEP",
             "label": "{{ page.metafields.custom.instructions_step_1.value }}Disconnect the battery.",
             "body": "<p>{{ page.metafields.custom.step_1_content | metafield_tag }}</p>",
-            "image_1": "{{ page.metafields.custom.instructions_step_1_image.value }}"
+            "image_1": "shopify://shop_images/step_1.webp"
           }
         },
         "step_p4UDTU": {
@@ -98,7 +98,7 @@
             "header": "STEP",
             "label": "{{ page.metafields.custom.instructions_step_2.value }}",
             "body": "<p>{{ page.metafields.custom.step_2_content | metafield_tag }}by removing &nbsp;the six push‑rivets across the top of the grille. Then pull out at the bottom edge of grille to release the snap connectors.</p>",
-            "image_1": "shopify://shop_images/step_2_3931d767-86c9-42b0-ab31-d6615d5a81e9.png"
+            "image_1": "shopify://shop_images/step_2.webp"
           }
         },
         "step_mPKCht": {
