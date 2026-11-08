@@ -293,6 +293,32 @@
         "padding_bottom": 60
       }
     },
+    "1794168507a026e8d7": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_4a369f2_6EdbJP": {
+          "type": "ai_gen_block_4a369f2",
+          "settings": {
+            "desktop_width_percent": 85,
+            "image_1": "shopify://shop_images/25Anniversary.png",
+            "heading_1": "Celebrating 25 Years",
+            "text_1": "25 Years of Building Better Steering",
+            "button_label_1": "Our Story",
+            "button_link_1": "https://www.pscsteering.com/pages/about-us",
+            "image_2": "shopify://shop_images/ALLEN_TOM_3.png",
+            "heading_2": "Off-Road Motorsports Hall of Fame",
+            "text_2": "Congratulations Tom Allen!",
+            "button_label_2": "Watch the Induction Video",
+            "button_link_2": "https://cdn.shopify.com/videos/c/o/v/e790c622f1a14ccfa59c79e00e2cb637.mp4"
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_4a369f2_6EdbJP"
+      ],
+      "settings": {}
+    },
     "image_with_text_qtK7Ec": {
       "type": "image-with-text",
       "blocks": {
@@ -499,32 +525,6 @@
       },
       "block_order": [
         "ai_gen_block_52adeca_B4nEFc"
-      ],
-      "settings": {}
-    },
-    "1794168507a026e8d7": {
-      "type": "_blocks",
-      "blocks": {
-        "ai_gen_block_4a369f2_6EdbJP": {
-          "type": "ai_gen_block_4a369f2",
-          "settings": {
-            "desktop_width_percent": 75,
-            "image_1": "shopify://shop_images/25Anniversary.png",
-            "heading_1": "Celebrating 25 Years",
-            "text_1": "25 Years of Building Better Steering",
-            "button_label_1": "Our Story",
-            "button_link_1": "",
-            "image_2": "shopify://shop_images/ALLEN_TOM_3.png",
-            "heading_2": "Off-Road Motorsports Hall of Fame",
-            "text_2": "Congratulations Tom Allen!",
-            "button_label_2": "Watch the Induction Video",
-            "button_link_2": ""
-          },
-          "blocks": {}
-        }
-      },
-      "block_order": [
-        "ai_gen_block_4a369f2_6EdbJP"
       ],
       "settings": {}
     }
