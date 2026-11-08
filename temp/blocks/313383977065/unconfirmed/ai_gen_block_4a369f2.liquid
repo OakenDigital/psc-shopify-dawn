@@ -1,0 +1,165 @@
+{% doc %}
+  @prompt
+    Create a homepage section with two equal-width promotional blocks side by side on desktop, stacking vertically on mobile. Each block should have its own editable image picker, heading, text, button label, and button link. Place the image above the text and button. Match the existing PSC Motorsports theme typography, colors, and button styling, with consistent image proportions and spacing. This section is intended to be positioned immediately above the existing PSC Merch section. Keep all other homepage content unchanged., can you make these 2 boxes rectangle so that my images aren't cut off
+{% enddoc %}
+{% doc %}
+  @prompt
+    Create a homepage section with two equal-width promotional blocks side by side on desktop, stacking vertically on mobile. Each block has its own image, heading, text, and button. Keep image proportions rectangular and show the complete image without cropping.
+{% enddoc %}
+{% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
+
+{% style %}
+  .ai-promo-pair-{{ ai_gen_id }} {
+    display: block;
+    width: {{ block.settings.desktop_width_percent }}%;
+    max-width: 100%;
+    margin: 0 auto;
+    color: rgb(var(--color-foreground));
+    font-family: var(--font-body-family);
+  }
+
+  .ai-promo-pair-{{ ai_gen_id }}__grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+  }
+
+  .ai-promo-pair-{{ ai_gen_id }}__card {
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .ai-promo-pair-{{ ai_gen_id }}__media {
+    width: 100%;
+    aspect-ratio: 3 / 2;
+    overflow: hidden;
+    background: rgba(var(--color-foreground), 0.06);
+  }
+
+  .ai-promo-pair-{{ ai_gen_id }}__media img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  .ai-promo-pair-{{ ai_gen_id }}__media svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  .ai-promo-pair-{{ ai_gen_id }}__copy {
+    padding-top: 16px;
+    width: 100%;
+  }
+
+  .ai-promo-pair-{{ ai_gen_id }}__heading {
+    margin: 0 0 8px;
+    font-family: var(--font-heading-family);
+    font-style: var(--font-heading-style);
+    font-weight: var(--font-heading-weight);
+    font-size: calc(1.8rem * var(--heading-scale));
+    line-height: 1.15;
+    color: inherit;
+  }
+
+  .ai-promo-pair-{{ ai_gen_id }}__text {
+    margin: 0 0 16px;
+    font-size: calc(1.5rem * var(--font-body-scale));
+    line-height: 1.5;
+  }
+
+  .ai-promo-pair-{{ ai_gen_id }}__button {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 4.4rem;
+    padding: 0 2.4rem;
+    border: var(--buttons-border-width) solid rgba(var(--color-button), var(--alpha-button-background));
+    border-radius: var(--buttons-radius);
+    background: rgb(var(--color-button));
+    color: rgb(var(--color-button-text));
+    font: inherit;
+    font-size: 1.5rem;
+    line-height: 1;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  .ai-promo-pair-{{ ai_gen_id }}__button:focus-visible {
+    outline: 2px solid currentColor;
+    outline-offset: 3px;
+  }
+
+  @media screen and (max-width: 749px) {
+    .ai-promo-pair-{{ ai_gen_id }} {
+      width: 100%;
+    }
+
+    .ai-promo-pair-{{ ai_gen_id }}__grid {
+      grid-template-columns: 1fr;
+      gap: 28px;
+    }
+  }
+{% endstyle %}
+
+<div class="ai-promo-pair-{{ ai_gen_id }}" {{ block.shopify_attributes }}>
+  <div class="ai-promo-pair-{{ ai_gen_id }}__grid">
+    {% for i in (1..2) %}
+      {% liquid
+        assign image_key = 'image_' | append: i
+        assign heading_key = 'heading_' | append: i
+        assign text_key = 'text_' | append: i
+        assign label_key = 'button_label_' | append: i
+        assign link_key = 'button_link_' | append: i
+        assign promo_image = block.settings[image_key]
+        assign promo_heading = block.settings[heading_key]
+        assign promo_text = block.settings[text_key]
+        assign promo_label = block.settings[label_key]
+        assign promo_link = block.settings[link_key]
+      %}
+      <article class="ai-promo-pair-{{ ai_gen_id }}__card">
+        <div class="ai-promo-pair-{{ ai_gen_id }}__media">
+          {% if promo_image != blank %}
+            <img src="{{ promo_image | image_url: width: 1400 }}" alt="{{ promo_image.alt | escape }}" loading="lazy" width="{{ promo_image.width }}" height="{{ promo_image.height }}">
+          {% else %}
+            {{ 'image' | placeholder_svg_tag }}
+          {% endif %}
+        </div>
+        <div class="ai-promo-pair-{{ ai_gen_id }}__copy">
+          {% if promo_heading != blank %}<h2 class="ai-promo-pair-{{ ai_gen_id }}__heading">{{ promo_heading | escape }}</h2>{% endif %}
+          {% if promo_text != blank %}<p class="ai-promo-pair-{{ ai_gen_id }}__text">{{ promo_text | escape | newline_to_br }}</p>{% endif %}
+          {% if promo_label != blank and promo_link != blank %}<a class="ai-promo-pair-{{ ai_gen_id }}__button" href="{{ promo_link }}">{{ promo_label | escape }}</a>{% endif %}
+        </div>
+      </article>
+    {% endfor %}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Two promo cards",
+  "settings": [
+    {"type":"range","id":"desktop_width_percent","label":"Desktop width","min":50,"max":100,"step":5,"unit":"%","default":100},
+    {"type":"header","content":"First promotion"},
+    {"type":"image_picker","id":"image_1","label":"Image"},
+    {"type":"text","id":"heading_1","label":"Heading","default":"Explore our products"},
+    {"type":"textarea","id":"text_1","label":"Text","default":"Find the parts and support you need for your next build."},
+    {"type":"text","id":"button_label_1","label":"Button label","default":"Shop now"},
+    {"type":"url","id":"button_link_1","label":"Button link"},
+    {"type":"header","content":"Second promotion"},
+    {"type":"image_picker","id":"image_2","label":"Image"},
+    {"type":"text","id":"heading_2","label":"Heading","default":"Get the right fitment"},
+    {"type":"textarea","id":"text_2","label":"Text","default":"Browse technical resources and find the right setup for your vehicle."},
+    {"type":"text","id":"button_label_2","label":"Button label","default":"Learn more"},
+    {"type":"url","id":"button_link_2","label":"Button link"}
+  ],
+  "presets": [{"name":"Two promo cards"}],
+  "tag": null,
+  "class": "two-promo-cards"
+}
+{% endschema %}
