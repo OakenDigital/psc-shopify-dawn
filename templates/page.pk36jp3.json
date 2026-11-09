@@ -23,15 +23,15 @@
         "toc_entry_rfRkWj": {
           "type": "toc_entry",
           "settings": {
-            "title": "Before you get started",
-            "range": "03–04",
-            "items": "<ul><li>Tools and safety</li></ul>"
+            "title": "What This Kit Does & Before You Start",
+            "range": "",
+            "items": ""
           }
         },
         "toc_entry_MFPXmD": {
           "type": "toc_entry",
           "settings": {
-            "title": "{{ page.metafields.custom.instructions_toc_header_3.value }}",
+            "title": "What’s in the Kit",
             "range": "",
             "items": "<p>{{ page.metafields.custom.instructions_toc_content_3 | metafield_tag }}</p>"
           }
@@ -39,15 +39,15 @@
         "toc_entry_DrpYNi": {
           "type": "toc_entry",
           "settings": {
-            "title": "{{ page.metafields.custom.instructions_toc_header_4.value }}",
+            "title": "Tools You’ll Need",
             "range": "",
-            "items": "<p>{{ page.metafields.custom.instructions_toc_content_4 | metafield_tag }}</p>"
+            "items": ""
           }
         },
         "toc_entry_YtUPLL": {
           "type": "toc_entry",
           "settings": {
-            "title": "{{ page.metafields.custom.instructions_toc_header_5.value }}",
+            "title": "Installation Steps",
             "range": "",
             "items": "<p>{{ page.metafields.custom.instructions_toc_content_5 | metafield_tag }}</p>"
           }
@@ -64,7 +64,7 @@
           "type": "kit_category",
           "settings": {
             "header": "{{ page.metafields.custom.instructions_included_header_2.value }}Parts",
-            "body": "<ul><li>SP43362JP‑2402 — PSC Power Steering Pump w/PP2402 pulley installed</li><li>MB11K — Pump Mounting Bracket</li><li>CK220 — Cooler Kit with ‑8 AN fittings</li><li>SR300K — Power Steering Fluid Tank with mounting hardware</li><li>SR350K — Fluid Remote Filler Neck</li><li>HA‑H100 — ‑8 AN Low‑Pressure Cooler → Reservoir hose</li><li>HA‑L101 — ‑8 AN Low‑Pressure Steering Gear → Cooler hose</li><li>HA‑L102 — ‑12 AN Low‑Pressure Reservoir → Pump Intake hose</li><li>HA‑L103 — ‑8 AN Remote Fill → Reservoir hose</li><li>HA‑L104 — ‑4 AN Reservoir Drain hose</li><li>HK2094 — ‑6 AN High‑Pressure hose (OE‑style)</li><li>SR‑VT — Remote System Relief Valve / Anti‑Splash Vent Kit</li><li>60905 — Serpentine Belt</li><li>PSC 715 Power Steering Fluid — 4 quarts</li></ul><p></p><p></p>"
+            "body": "<p>This kit swaps your factory JL/JT electric power steering setup for a belt-driven pump. Why? Because real steering needs real power — and PSC delivers.</p>"
           }
         },
         "kit_category_whAfV7": {
