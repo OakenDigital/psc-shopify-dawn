@@ -91,7 +91,7 @@
         "step_K6k3PQ": {
           "type": "step",
           "settings": {
-            "image_position": "split",
+            "image_position": "left",
             "header": "STEP",
             "label": "Get Access",
             "body": "<p>{{ page.metafields.custom.step_1_content | metafield_tag }}Some bumper/winch setups sit tight to the grille. If yours does, removing it now will make the install a lot easier.<br/></p>",
@@ -111,7 +111,7 @@
         "step_mPKCht": {
           "type": "step",
           "settings": {
-            "image_position": "right",
+            "image_position": "left",
             "header": "STEP",
             "label": "{{ page.metafields.custom.instructions_step_3.value }}Air System",
             "body": "<p>Disconnect the battery.&nbsp;</p><p>Remove the air filter assembly and intake tubing.</p>",
@@ -121,7 +121,7 @@
         "step_Ti9JPh": {
           "type": "step",
           "settings": {
-            "image_position": "split",
+            "image_position": "right",
             "header": "STEP",
             "label": "Fresh Air Inlet",
             "body": "<p>Remove the fresh air inlet tubing.</p>",
@@ -151,7 +151,7 @@
         "step_xkAxXJ": {
           "type": "step",
           "settings": {
-            "image_position": "right",
+            "image_position": "left",
             "header": "STEP",
             "label": "Grille",
             "body": "<p>Pop the (6) push rivets along the top.&nbsp;</p><p>Pull the bottom edge to release snap connectors.</p>",
@@ -171,7 +171,7 @@
         "step_V3gA8w": {
           "type": "step",
           "settings": {
-            "image_position": "right",
+            "image_position": "left",
             "header": "STEP",
             "label": "Belt Tensioner",
             "body": "<p>Release the tensioner and remove the belt from the idler pulley. The OE belt comes off completely in the next step.<br/></p>",
@@ -191,7 +191,7 @@
         "step_qHpddh": {
           "type": "step",
           "settings": {
-            "image_position": "right",
+            "image_position": "left",
             "header": "STEP",
             "label": "Steering Gear Lines",
             "body": "<p>Disconnect pressure and return lines from the steering gear.<br/></p>",
@@ -211,7 +211,7 @@
         "step_kNUzab": {
           "type": "step",
           "settings": {
-            "image_position": "right",
+            "image_position": "left",
             "header": "STEP",
             "label": "Lines Between Pump & Steering Gear",
             "body": "<p>Lines Between Pump & Steering Gear</p>",
@@ -221,7 +221,7 @@
         "step_8XM3YY": {
           "type": "step",
           "settings": {
-            "image_position": "split",
+            "image_position": "right",
             "header": "STEP",
             "label": "Lines Between Pump & Steering Gear",
             "body": "<p>Remove the OE power steering fluid fill reservoir.<br/></p>",
@@ -231,7 +231,7 @@
         "step_cHqj7f": {
           "type": "step",
           "settings": {
-            "image_position": "split",
+            "image_position": "left",
             "header": "STEP",
             "label": "Motor Mounts & Idler",
             "body": "<p>Loosen the top motor mount nut on the driver side until it’s almost off.&nbsp;<br/></p><p>Remove the same nut on the &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; passenger side. Remove the OE idler pulley assembly.<br/></p>",
@@ -252,7 +252,7 @@
         "step_rhGMA9": {
           "type": "step",
           "settings": {
-            "image_position": "right",
+            "image_position": "left",
             "header": "STEP",
             "label": "OE Aluminum Mount",
             "body": "<p>Remove the (4) bolts holding the OE aluminum mount to the engine block.&nbsp;</p><p>Remove the mount.</p>",
@@ -272,7 +272,7 @@
         "step_e66zbV": {
           "type": "step",
           "settings": {
-            "image_position": "split",
+            "image_position": "left",
             "header": "STEP",
             "label": "PSC Bracket (12.12)",
             "body": "<p>Install the PSC 12.12 mount in reverse order. Lower the engine and tighten isolator mount bolts.</p>",
@@ -293,7 +293,7 @@
         "step_GtfRgX": {
           "type": "step",
           "settings": {
-            "image_position": "split",
+            "image_position": "left",
             "header": "STEP",
             "label": "High‑Pressure Hose (HK2094)",
             "body": "<p>Route HK2094 below the radiator, in front of the crossmember, and up to the pump and gearbox.&nbsp;</p><p><br/>Loosely install the (2) HCL‑12‑13 clamps.&nbsp;</p><p><br/>Do not tighten them until both hose ends are connected and fully &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; tightened.</p>",
@@ -331,7 +331,7 @@
         "step_xJck3g": {
           "type": "step",
           "settings": {
-            "image_position": "right",
+            "image_position": "left",
             "header": "STEP",
             "label": "Mount Reservoir & Tie to Pump",
             "body": "<p>Start the supply hose fitting on the pump first.&nbsp;</p><p><br/>Mount the reservoir using (1) OE bolt in front and (1) 8‑1.25×100 mm bolt with flat washer in the rear.&nbsp;</p><p><br/>Tighten fittings at power steering pump, compress clamp, and slide onto hose at reservoir connection.</p>",
@@ -351,7 +351,7 @@
         "step_npw68w": {
           "type": "step",
           "settings": {
-            "image_position": "right",
+            "image_position": "left",
             "header": "STEP",
             "label": "Remote Fill Hose (HA‑L103)",
             "body": "<p>Connect HA‑L103 to the fill reservoir. Clock the fitting as shown and tighten.</p><p>Route hose toward the firewall, loop forward, and connect to the main reservoir.</p>",
@@ -370,7 +370,7 @@
         "step_zgNyRE": {
           "type": "step",
           "settings": {
-            "image_position": "right",
+            "image_position": "left",
             "header": "STEP",
             "label": "Anti‑Splash Valve (SR‑VT)",
             "body": "<p>Mount SR‑VT on the driver‑side bracket.</p><ul><li>If your bracket has a welded nut, use (1) 6‑1.0×25 mm flange bolt.</li><li>If not, use a 6 mm bolt with lock nut.<br/></li></ul>",
