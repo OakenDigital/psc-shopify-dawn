@@ -213,8 +213,8 @@
           "settings": {
             "image_position": "right",
             "header": "STEP",
-            "label": "{{ page.metafields.custom.instructions_step_12.value }}Install the PSC pump to the PSC bracket",
-            "body": "<p>{{ page.metafields.custom.step_12_content | metafield_tag }}using the supplied (2) 8 mm x 30 mm flange bolts (Part #MB11K).</p><p><strong>Torque: 25 ft-lb</strong></p>",
+            "label": "Lines Between Pump & Steering Gear",
+            "body": "<p>Lines Between Pump & Steering Gear</p>",
             "image_1": "shopify://shop_images/step_12.webp"
           }
         },
@@ -223,8 +223,8 @@
           "settings": {
             "image_position": "split",
             "header": "STEP",
-            "label": "{{ page.metafields.custom.instructions_step_13.value }}",
-            "body": "<p>{{ page.metafields.custom.step_13_content | metafield_tag }}Install the pump/bracket assembly on the passenger side of the engine where the idler‑pulley/bracket assembly was removed in Step 11.</p><p>Secure it using the supplied (3) 8 mm x 30 mm flange bolts.</p><p><strong>Torque: 25 ft-lb</strong></p>",
+            "label": "Lines Between Pump & Steering Gear",
+            "body": "<p>Remove the OE power steering fluid fill reservoir.<br/></p>",
             "image_1": "shopify://shop_images/step_13.webp"
           }
         },
@@ -233,8 +233,8 @@
           "settings": {
             "image_position": "split",
             "header": "STEP",
-            "label": "{{ page.metafields.custom.instructions_step_14.value }}Install the new 4060900 belt",
-            "body": "<p>{{ page.metafields.custom.step_14_content | metafield_tag }}Reinstall the alternator/bracket (place the belt over the alternator pulley first). Release the tensioner and make sure the belt is seated in all pulleys.</p>",
+            "label": "Motor Mounts & Idler",
+            "body": "<p>Loosen the top motor mount nut on the driver side until it’s almost off.&nbsp;<br/></p><p>Remove the same nut on the &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; passenger side. Remove the OE idler pulley assembly.<br/></p>",
             "image_1": "shopify://shop_images/step_14.webp"
           }
         },
@@ -243,8 +243,8 @@
           "settings": {
             "image_position": "right",
             "header": "STEP",
-            "label": "{{ page.metafields.custom.instructions_step_15.value }}Cooler & Hose Routing",
-            "body": "<p>Thread the cooler fittings with thread sealant. The cooler mount uses the stock high‑pressure hose mounting locations under the radiator.</p><p><strong>Torque: 20 ft-lb</strong><br/></p>",
+            "label": "Support the Engine",
+            "body": "<p>Support the engine with a wooden block under the oil pan and lift ½–1”<br/></p><p><strong>Important</strong>: Do not lift more than ~1”. Watch firewall clearance.<br/></p>",
             "image_1": "{{ page.metafields.custom.instructions_step_15_image.value }}",
             "image_2": "shopify://shop_images/step_15.webp"
           }
@@ -254,8 +254,8 @@
           "settings": {
             "image_position": "right",
             "header": "STEP",
-            "label": "{{ page.metafields.custom.instructions_step_16.value }}Mount the cooler then route:",
-            "body": "<ul><li>Steering Gear→ Cooler inlet using HA‑L101</li><li>Cooler outlet → Reservoir return using HA‑H100</li></ul>",
+            "label": "OE Aluminum Mount",
+            "body": "<p>Remove the (4) bolts holding the OE aluminum mount to the engine block.&nbsp;</p><p>Remove the mount.</p>",
             "image_1": "shopify://shop_images/step_16.webp"
           }
         },
@@ -264,8 +264,8 @@
           "settings": {
             "image_position": "right",
             "header": "STEP",
-            "label": "{{ page.metafields.custom.instructions_step_17.value }}Pre‑assemble the reservoir:",
-            "body": "<ul><li>Install H6802‑8‑8 45° fitting into the reservoir port toward the radiator, clocked about 10° up (use sealant).</li><li>Install FRA499104BL drain fitting in the bottom drain port (sealant).</li><li>Slide HA‑L102 (‑12 AN) supply hose onto the reservoir outlet with a #12 worm‑gear clamp (leave loose for now).</li></ul>",
+            "label": "Isolator Trim",
+            "body": "<p>Trim the corner of the frame‑mounted engine isolator as shown. A cut‑off tool works fine.</p>",
             "image_1": "shopify://shop_images/step_17.webp"
           }
         },
@@ -274,8 +274,8 @@
           "settings": {
             "image_position": "split",
             "header": "STEP",
-            "label": "{{ page.metafields.custom.instructions_step_18.value }}Mount the reservoir:",
-            "body": "<ul><li>Set the reservoir over the bracket, start the HA‑L102 hose fitting onto the pump intake, then lower the reservoir into place.</li><li>Front hole: reuse the OE 8 mm bolt. Torque: 20 ft-lb</li><li>Rear hole: use the 8 mm x 100 mm bolt with a flat washer. Torque: 18 ft-lb</li><li>Tighten the -12 clamp at the reservoir and the supply fitting at the pump.</li><li>Install the HA‑L104 drain hose and tie it down neatly.</li><li>Connect the cooler‑to‑reservoir hose (HA‑H100) to the reservoir.</li></ul>",
+            "label": "PSC Bracket (12.12)",
+            "body": "<p>Install the PSC 12.12 mount in reverse order. Lower the engine and tighten isolator mount bolts.</p>",
             "image_1": "{{ page.metafields.custom.instructions_step_18_image.value }}",
             "image_2": "shopify://shop_images/step_18.webp"
           }
@@ -285,8 +285,8 @@
           "settings": {
             "image_position": "right",
             "header": "STEP",
-            "label": "",
-            "body": "<p>Route the HK2094 high‑pressure hose below the radiator, across the front of the crossmember, and up under the radiator toward the pump and steering gear, as shown.<br/><br/>Loosely install the (2) HCL1213 rubber‑coated hose clamps around the hose and into the OE mounting points using the OE bolts.<br/><br/>Do not tighten the clamps until both hose ends are connected and fully tightened<br/></p>",
+            "label": "Pump & Belt",
+            "body": "<p>Install the PSC pump using the (2) 5/16‑18×3” bolts with flat washers.&nbsp;</p><p><br/>Route the BT60900 belt.&nbsp;<br/>Reinstall the alternator/bracket &nbsp; &nbsp; (belt over alternator pulley first).<br/>Release the tensioner and seat the belt on all pulleys. Reinstall the vacuum pump.<br/>Note: Belt routing is the same as OE. PSC pump takes the idler pulley’s spot.<br/></p>",
             "image_1": "shopify://shop_images/step_19.webp"
           }
         },
