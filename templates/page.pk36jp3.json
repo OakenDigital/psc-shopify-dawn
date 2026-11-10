@@ -63,22 +63,29 @@
         "kit_category_YcM36D": {
           "type": "kit_category",
           "settings": {
-            "header": "{{ page.metafields.custom.instructions_included_header_2.value }}Parts",
+            "header": "{{ page.metafields.custom.instructions_included_header_2.value }}What This Kit Does",
             "body": "<p>This kit swaps your factory JL/JT electric power steering setup for a belt-driven pump. Why? Because real steering needs real power — and PSC delivers.</p>"
           }
         },
         "kit_category_whAfV7": {
           "type": "kit_category",
           "settings": {
-            "header": "{{ page.metafields.custom.instructions_included_header_4.value }}Tools Needed",
-            "body": "<ul><li>Basic hand tools</li><li>46 mm socket & torque wrench (for&nbsp;</li><li>pitman arm nut 225 ft‑lb if you’re also installing a steering gear)</li><li>8 mm & 10 mm sockets/keys for brackets and accessories</li><li>Bungee/strap to safely hang alternator assembly</li><li>Thread sealant</li><li>Zip ties for tidy hose management<br/>Drain pan & rags<br/></li></ul>"
+            "header": "{{ page.metafields.custom.instructions_included_header_4.value }}Before You Start",
+            "body": "<p>Park on a flat surface, set the brake, and disconnect the battery. &nbsp;<br/>If you’re also installing a Big Bore XD steering gear, grab a helper. That gear weighs about 50 lbs and is awkward to thread in alone.<br/>Protect paint when you lean the hood back.<br/>If you’re not comfortable with the job, no shame in letting a pro handle it.</p>"
           }
         },
         "kit_category_iMq7aX": {
           "type": "kit_category",
           "settings": {
-            "header": "Safety & Prep",
-            "body": "<ul><li>Disconnect the battery before you start.</li><li>Lift/secure the Jeep as needed; chock wheels.</li><li>Keep hoses off hot surfaces and sharp edges.</li><li>Clock and tighten AN fittings by hand first—don’t over‑torque.</li><li>Use thread sealant on any NPT threads noted below; not on AN flare seats.</li><li>Secure steering wheel if installing steering gear.</li></ul>"
+            "header": "What’s in the Kit",
+            "body": "<p>Major Components:</p><ul><li>SP33362S-3558 – Power Steering Pump, LHD CBR, 16MM Pressure, ‑12AN Feed</li><li>SR300MK – Power Steering Fluid Reservoir Kit – Jeep JL/JT 3.6L (Non‑eTorque)</li><li>CK220 – Jeep JL/JT 3.6L Power Steering Cooler Kit</li><li>MB12K – Power Steering Pump Mount Kit – Jeep Gladiator 3.6L Pentastar</li></ul><p>Drive System:</p><ul><li>BT60905 – 6‑Rib Serpentine Drive Belt – 90.5”</li></ul><p>Hose System:</p><ul><li>HMK‑PK1880 – Master Hose Kit:<br/>H-THS-1.8ML-VT — Vibra-Tite 440 Anaerobic Pneumatic / Hydraulic Thread &nbsp; &nbsp; Sealant (1.8 mL Tube)</li><li>HA-L104 — Drain Hose Assembly – Remote Reservoir</li><li>HK2094 – High‑Pressure Hose Assembly – JL/JT 3.6L (PSC Pump Kits Only)</li><li>HA-L103 — Hose Assembly – Remote Fill to Reservoir</li><li>HA-L102 — Hose Assembly – Remote Reservoir to Pump</li></ul><p>Fluids:</p><ul><li>FL‑SWE715‑4PAK – PSC 715 Power Steering Fluid – 4 Quart Pack<br/><br/></li></ul>"
+          }
+        },
+        "kit_category_PbdGtb": {
+          "type": "kit_category",
+          "settings": {
+            "header": "Tools You’ll Need",
+            "body": "<ul><li>Standard hand tools</li><li>8 mm, 10 mm sockets</li><li>Torque wrench (up to 225 ft‑lb)</li><li>46 mm socket (for Big Bore gear)</li><li>Drill and cut‑off tool (for isolator trim)</li><li>Hose clamp pliers and zip ties</li><li>To finish the conversion, you’ll need to delete the electric steering mode in the ECU. We use and sell the Tazer JL Programmer. You can grab it from PSC or most Jeep aftermarket dealers.</li></ul>"
           }
         },
         "step_K6k3PQ": {
@@ -304,6 +311,7 @@
         "kit_category_YcM36D",
         "kit_category_whAfV7",
         "kit_category_iMq7aX",
+        "kit_category_PbdGtb",
         "step_K6k3PQ",
         "step_p4UDTU",
         "step_mPKCht",
