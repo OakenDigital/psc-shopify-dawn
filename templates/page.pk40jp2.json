@@ -79,14 +79,14 @@
           "type": "kit_category",
           "settings": {
             "header": "{{ page.metafields.custom.instructions_included_header_4.value }}Tools Needed",
-            "body": "<ul><li>Basic hand tools</li><li>46 mm socket & torque wrench (for&nbsp;</li><li>pitman arm nut 225 ft‑lb if you’re also installing a steering gear)</li><li>8 mm & 10 mm sockets/keys for brackets and accessories</li><li>Bungee/strap to safely hang alternator assembly</li><li>Thread sealant</li><li>Zip ties for tidy hose management<br/>Drain pan & rags<br/></li></ul>"
+            "body": "<p><strong>Hand Tools:</strong></p><ul><li>Standard SAE/metric socket set</li><li>Combination wrenches (SAE/metric)</li><li>Ratchet with extensions</li><li>Line wrenches for hydraulic fittings</li><li>Torque wrench (for accessory belt tension and general hardware)</li><li>Breaker bar (for belt tensioner if needed</li></ul><p><strong>Cutting & Finishing Tools:</strong></p><ul><li>Sharp utility knife (for condenser seal trimming)</li><li>Small file or deburring tool (for cleaning up the pump bracket)</li><li>Marker/paint pen (for alignment marks)</li></ul><p><strong>Cooling/Front Clip Handling:</strong></p><ul><li>Screwdrivers (flat and Phillips)</li><li>Needle nose pliers</li><li>Trim tool (helpful but optional)</li></ul><p><strong>Fluids & Safety:</strong></p><ul><li>Drain pan for power steering fluid</li><li>Clean rags or shop towels</li><li>Gloves and safety glasses</li></ul><p><strong>Helpful but Optional:</strong></p><ul><li>Shop light</li><li>Zip ties for hose management</li><li>AN wrench/spanner (keeps aluminum fittings clean)<br/></li></ul>"
           }
         },
         "kit_category_iMq7aX": {
           "type": "kit_category",
           "settings": {
             "header": "Safety & Prep",
-            "body": "<ul><li>Disconnect the battery before you start.</li><li>Lift/secure the Jeep as needed; chock wheels.</li><li>Keep hoses off hot surfaces and sharp edges.</li><li>Clock and tighten AN fittings by hand first—don’t over‑torque.</li><li>Use thread sealant on any NPT threads noted below; not on AN flare seats.</li><li>Secure steering wheel if installing steering gear.</li></ul>"
+            "body": "<ul><li>Park on level ground. Let the Jeep cool down.</li><li>Disconnect the battery.</li><li>You’ll be trimming the condenser seal and slightly clearancing&nbsp;the pump bracket— have a sharp utility knife and a file handy.</li><li>Use PSC 715 fluid only.<br/><br/></li></ul>"
           }
         },
         "step_K6k3PQ": {
