@@ -1,0 +1,357 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 48,
+        "padding_bottom": 28
+      }
+    },
+    "psc_installation_guide_AA4Nef": {
+      "type": "psc-installation-guide",
+      "blocks": {
+        "toc_entry_RQkR4C": {
+          "type": "toc_entry",
+          "settings": {
+            "title": "{{ page.metafields.custom.instructions_toc_header.value }}",
+            "range": "",
+            "items": "<p>{{ page.metafields.custom.instructions_toc_content_1 | metafield_tag }}</p>"
+          }
+        },
+        "toc_entry_TLHLWC": {
+          "type": "toc_entry",
+          "settings": {
+            "title": "{{ page.metafields.custom.instructions_toc_header_2.value }}",
+            "range": "",
+            "items": "<p>{{ page.metafields.custom.instructions_toc_content2 | metafield_tag }}</p>"
+          }
+        },
+        "toc_entry_MFPXmD": {
+          "type": "toc_entry",
+          "settings": {
+            "title": "{{ page.metafields.custom.instructions_toc_header_3.value }}",
+            "range": "",
+            "items": "<p>{{ page.metafields.custom.instructions_toc_content_3 | metafield_tag }}</p>"
+          }
+        },
+        "toc_entry_DrpYNi": {
+          "type": "toc_entry",
+          "settings": {
+            "title": "{{ page.metafields.custom.instructions_toc_header_4.value }}",
+            "range": "",
+            "items": "<p>{{ page.metafields.custom.instructions_toc_content_4 | metafield_tag }}</p>"
+          }
+        },
+        "toc_entry_YtUPLL": {
+          "type": "toc_entry",
+          "settings": {
+            "title": "{{ page.metafields.custom.instructions_toc_header_5.value }}",
+            "range": "",
+            "items": "<p>{{ page.metafields.custom.instructions_toc_content_5 | metafield_tag }}</p>"
+          }
+        },
+        "toc_entry_VT8HPD": {
+          "type": "toc_entry",
+          "settings": {
+            "title": "Contact us",
+            "range": "",
+            "items": ""
+          }
+        },
+        "kit_category_YcM36D": {
+          "type": "kit_category",
+          "settings": {
+            "header": "{{ page.metafields.custom.instructions_included_header_2.value }}Parts",
+            "body": "<ul><li>SP43362JP‑2402 — PSC Power Steering Pump w/PP2402 pulley installed</li><li>MB11K — Pump Mounting Bracket</li><li>CK220 — Cooler Kit with ‑8 AN fittings</li><li>SR300K — Power Steering Fluid Tank with mounting hardware</li><li>SR350K — Fluid Remote Filler Neck</li><li>HA‑H100 — ‑8 AN Low‑Pressure Cooler → Reservoir hose</li><li>HA‑L101 — ‑8 AN Low‑Pressure Steering Gear → Cooler hose</li><li>HA‑L102 — ‑12 AN Low‑Pressure Reservoir → Pump Intake hose</li><li>HA‑L103 — ‑8 AN Remote Fill → Reservoir hose</li><li>HA‑L104 — ‑4 AN Reservoir Drain hose</li><li>HK2094 — ‑6 AN High‑Pressure hose (OE‑style)</li><li>SR‑VT — Remote System Relief Valve / Anti‑Splash Vent Kit</li><li>60905 — Serpentine Belt</li><li>PSC 715 Power Steering Fluid — 4 quarts</li></ul><p></p><p></p>"
+          }
+        },
+        "kit_category_whAfV7": {
+          "type": "kit_category",
+          "settings": {
+            "header": "{{ page.metafields.custom.instructions_included_header_4.value }}Tools Needed",
+            "body": "<ul><li>Basic hand tools</li><li>46 mm socket & torque wrench (for&nbsp;</li><li>pitman arm nut 225 ft‑lb if you’re also installing a steering gear)</li><li>8 mm & 10 mm sockets/keys for brackets and accessories</li><li>Bungee/strap to safely hang alternator assembly</li><li>Thread sealant</li><li>Zip ties for tidy hose management<br/>Drain pan & rags<br/></li></ul>"
+          }
+        },
+        "kit_category_iMq7aX": {
+          "type": "kit_category",
+          "settings": {
+            "header": "Safety & Prep",
+            "body": "<ul><li>Disconnect the battery before you start.</li><li>Lift/secure the Jeep as needed; chock wheels.</li><li>Keep hoses off hot surfaces and sharp edges.</li><li>Clock and tighten AN fittings by hand first—don’t over‑torque.</li><li>Use thread sealant on any NPT threads noted below; not on AN flare seats.</li><li>Secure steering wheel if installing steering gear.</li></ul>"
+          }
+        },
+        "step_K6k3PQ": {
+          "type": "step",
+          "settings": {
+            "image_position": "split",
+            "header": "STEP",
+            "label": "{{ page.metafields.custom.instructions_step_1.value }}Disconnect the battery.",
+            "body": "<p>{{ page.metafields.custom.step_1_content | metafield_tag }}</p>",
+            "image_1": "{{ page.metafields.custom.instructions_step_1_image.value }}"
+          }
+        },
+        "step_p4UDTU": {
+          "type": "step",
+          "settings": {
+            "image_position": "right",
+            "header": "STEP",
+            "label": "{{ page.metafields.custom.instructions_step_2.value }}",
+            "body": "<p>{{ page.metafields.custom.step_2_content | metafield_tag }}by removing &nbsp;the six push‑rivets across the top of the grille. Then pull out at the bottom edge of grille to release the snap connectors.</p>",
+            "image_1": "shopify://shop_images/step_2_3931d767-86c9-42b0-ab31-d6615d5a81e9.png"
+          }
+        },
+        "step_mPKCht": {
+          "type": "step",
+          "settings": {
+            "image_position": "right",
+            "header": "STEP",
+            "label": "{{ page.metafields.custom.instructions_step_3.value }}Remove air filter Assembly",
+            "body": "<p>{{ page.metafields.custom.step_3_content | metafield_tag }}as an assembly using a 10 mm socket and a flat head screwdriver.</p>",
+            "image_1": "shopify://shop_images/step_3_6e3a5a19-7ea2-41da-a24d-17bf6a72d118.png"
+          }
+        },
+        "step_Ti9JPh": {
+          "type": "step",
+          "settings": {
+            "image_position": "split",
+            "header": "STEP",
+            "label": "{{ page.metafields.custom.instructions_step_4.value }}Remove the fresh‑air inlet tub and mount bracket",
+            "body": "<p>{{ page.metafields.custom.step_4_content | metafield_tag }}under the air box.</p>",
+            "image_1": "{{ page.metafields.custom.instructions_step_4_image.value }}"
+          }
+        },
+        "step_g4dyXM": {
+          "type": "step",
+          "settings": {
+            "image_position": "left",
+            "header": "STEP",
+            "label": "{{ page.metafields.custom.instructions_step_5.value }}Remove passenger inner fender.",
+            "body": "<p>{{ page.metafields.custom.step_5_content | metafield_tag }}We’ve found it’s faster and easier to pull the inner fender and fender flare off as one complete piece by removing the four bolts and the push pin that secure the inner &nbsp; fender to the body. There are several YouTube videos that walk through this process if you need a visual.&nbsp;</p><p><br/><strong>NOTE</strong>: A few of the body clips may get damaged during removal. Replacements are easy to find from multiple sources. Mopar part number: 6852‑6185‑AA‑008</p>",
+            "image_1": "shopify://shop_images/step_5-6.png"
+          }
+        },
+        "step_xkAxXJ": {
+          "type": "step",
+          "settings": {
+            "image_position": "right",
+            "header": "STEP",
+            "label": "{{ page.metafields.custom.instructions_step_6.value }}Disconnect OE power steering pump lines",
+            "body": "<ul><li>Position a drain pan beneath the vehicle to catch any power steering fluid.</li><li>Disconnect the power steering pump lines and remove the pump assembly. Retain one power steering pump mounting bolt for reuse during installation.</li><li>Remove the fluid reservoir and hose.<br/></li></ul>",
+            "image_1": "shopify://shop_images/step_5-6.png"
+          }
+        },
+        "step_Mw8NCM": {
+          "type": "step",
+          "settings": {
+            "image_position": "right",
+            "header": "STEP",
+            "label": "{{ page.metafields.custom.instructions_step_7.value }}Disconnect clamp bolts then, remove the OE pressure and return lines",
+            "body": "<p>{{ page.metafields.custom.step_7_content | metafield_tag }}the pump and steering gear. (Cutting them can speed things up if you’re not saving the hoses.)</p>",
+            "image_1": "shopify://shop_images/step_7_0d559787-522a-4d67-9b95-a55b784ced78.png"
+          }
+        },
+        "step_V3gA8w": {
+          "type": "step",
+          "settings": {
+            "image_position": "right",
+            "header": "STEP",
+            "label": "{{ page.metafields.custom.instructions_step_8.value }}Remove the vacuum‑pump assembly by taking out the two 8 mm bolts from the underside of the alternator bracket",
+            "body": "<p>{{ page.metafields.custom.step_8_content | metafield_tag }}Disconnect the line clamps and let the pump hang down out of the way.&nbsp;</p>",
+            "image_1": "shopify://shop_images/step_8_08c38a59-6036-4e56-a508-1721f161ff7b.png"
+          }
+        },
+        "step_ffDf7T": {
+          "type": "step",
+          "settings": {
+            "image_position": "right",
+            "header": "STEP",
+            "label": "{{ page.metafields.custom.instructions_step_9.value }}Note the belt routing",
+            "body": "<p>{{ page.metafields.custom.step_9_content | metafield_tag }}Release the tensioner and slip the belt off the idler pulley.</p>",
+            "image_1": "shopify://shop_images/step_9_6166a5bd-08e8-44da-9941-1a16534e6fb5.png"
+          }
+        },
+        "step_qHpddh": {
+          "type": "step",
+          "settings": {
+            "image_position": "right",
+            "header": "STEP",
+            "label": "{{ page.metafields.custom.instructions_step_10.value }}Remove the alternator with its bracket",
+            "body": "<p>{{ page.metafields.custom.step_10_content | metafield_tag }}by pulling (3) 10 mm and (1) 8 mm bolts.&nbsp;</p><p>Support it with a strap and lay to the side.</p><p>Remove and <strong>discard the OE belt</strong>.</p>",
+            "image_1": "shopify://shop_images/step_10_1e58ef44-fdd7-44ba-bdb6-0e32f7840d1a.png"
+          }
+        },
+        "step_Y3Vxd7": {
+          "type": "step",
+          "settings": {
+            "image_position": "right",
+            "header": "STEP",
+            "label": "{{ page.metafields.custom.instructions_step_11.value }}Remove the idler pulley / bracket",
+            "body": "<p>{{ page.metafields.custom.step_11_content | metafield_tag }}on the passenger side and discard bracket and hardware.<br/></p>",
+            "image_1": "shopify://shop_images/step_11_888fa48e-6015-482b-880a-9af5e60d0273.png"
+          }
+        },
+        "step_kNUzab": {
+          "type": "step",
+          "settings": {
+            "image_position": "right",
+            "header": "STEP",
+            "label": "{{ page.metafields.custom.instructions_step_12.value }}Install the PSC pump to the PSC bracket",
+            "body": "<p>{{ page.metafields.custom.step_12_content | metafield_tag }}using the supplied (2) 8 mm x 30 mm flange bolts (Part #MB11K).</p><p><strong>Torque: 25 ft-lb</strong></p>",
+            "image_1": "shopify://shop_images/step_12_bab3a36f-b451-420a-975d-8eabea9c87a5.png"
+          }
+        },
+        "step_8XM3YY": {
+          "type": "step",
+          "settings": {
+            "image_position": "split",
+            "header": "STEP",
+            "label": "{{ page.metafields.custom.instructions_step_13.value }}",
+            "body": "<p>{{ page.metafields.custom.step_13_content | metafield_tag }}Install the pump/bracket assembly on the passenger side of the engine where the idler‑pulley/bracket assembly was removed in Step 11.</p><p>Secure it using the supplied (3) 8 mm x 30 mm flange bolts.</p><p><strong>Torque: 25 ft-lb</strong></p>",
+            "image_1": "shopify://shop_images/step_13-14.png"
+          }
+        },
+        "step_cHqj7f": {
+          "type": "step",
+          "settings": {
+            "image_position": "split",
+            "header": "STEP",
+            "label": "{{ page.metafields.custom.instructions_step_14.value }}Install the new 4060900 belt",
+            "body": "<p>{{ page.metafields.custom.step_14_content | metafield_tag }}Reinstall the alternator/bracket (place the belt over the alternator pulley first). Release the tensioner and make sure the belt is seated in all pulleys.</p>"
+          }
+        },
+        "step_byGprp": {
+          "type": "step",
+          "settings": {
+            "image_position": "right",
+            "header": "STEP",
+            "label": "{{ page.metafields.custom.instructions_step_15.value }}Cooler & Hose Routing",
+            "body": "<p>Thread the cooler fittings with thread sealant. The cooler mount uses the stock high‑pressure hose mounting locations under the radiator.</p><p><strong>Torque: 20 ft-lb</strong><br/></p>",
+            "image_1": "{{ page.metafields.custom.instructions_step_15_image.value }}",
+            "image_2": "shopify://shop_images/step_15_715f8dcd-da59-420d-b19d-337db61903bf.png"
+          }
+        },
+        "step_rhGMA9": {
+          "type": "step",
+          "settings": {
+            "image_position": "right",
+            "header": "STEP",
+            "label": "{{ page.metafields.custom.instructions_step_16.value }}Mount the cooler then route:",
+            "body": "<ul><li>Steering Gear→ Cooler inlet using HA‑L101</li><li>Cooler outlet → Reservoir return using HA‑H100</li></ul>",
+            "image_1": "shopify://shop_images/step_16_e3728c5a-16fe-4724-8215-6f1f7345913b.png",
+            "image_2": "shopify://shop_images/16.1.png"
+          }
+        },
+        "step_CeQMB4": {
+          "type": "step",
+          "settings": {
+            "image_position": "right",
+            "header": "STEP",
+            "label": "{{ page.metafields.custom.instructions_step_17.value }}Pre‑assemble the reservoir:",
+            "body": "<ul><li>Install H6802‑8‑8 45° fitting into the reservoir port toward the radiator, clocked about 10° up (use sealant).</li><li>Install FRA499104BL drain fitting in the bottom drain port (sealant).</li><li>Slide HA‑L102 (‑12 AN) supply hose onto the reservoir outlet with a #12 worm‑gear clamp (leave loose for now).</li></ul>",
+            "image_1": "shopify://shop_images/step_17-18.png"
+          }
+        },
+        "step_e66zbV": {
+          "type": "step",
+          "settings": {
+            "image_position": "split",
+            "header": "STEP",
+            "label": "{{ page.metafields.custom.instructions_step_18.value }}Mount the reservoir:",
+            "body": "<ul><li>Set the reservoir over the bracket, start the HA‑L102 hose fitting onto the pump intake, then lower the reservoir into place.</li><li>Front hole: reuse the OE 8 mm bolt. Torque: 20 ft-lb</li><li>Rear hole: use the 8 mm x 100 mm bolt with a flat washer. Torque: 18 ft-lb</li><li>Tighten the -12 clamp at the reservoir and the supply fitting at the pump.</li><li>Install the HA‑L104 drain hose and tie it down neatly.</li><li>Connect the cooler‑to‑reservoir hose (HA‑H100) to the reservoir.</li></ul>",
+            "image_1": "{{ page.metafields.custom.instructions_step_18_image.value }}"
+          }
+        },
+        "step_AnjD4q": {
+          "type": "step",
+          "settings": {
+            "image_position": "right",
+            "header": "STEP",
+            "label": "",
+            "body": "<p>Route the HK2094 high‑pressure hose below the radiator, across the front of the crossmember, and up under the radiator toward the pump and steering gear, as shown.<br/><br/>Loosely install the (2) HCL1213 rubber‑coated hose clamps around the hose and into the OE mounting points using the OE bolts.<br/><br/>Do not tighten the clamps until both hose ends are connected and fully tightened<br/></p>",
+            "image_1": "shopify://shop_images/step_19_ff413a81-90da-4b46-9b58-ea6e0507de8b.png"
+          }
+        },
+        "step_GtfRgX": {
+          "type": "step",
+          "settings": {
+            "image_position": "split",
+            "header": "STEP",
+            "label": "Hose Map Reference",
+            "body": "<ul><li>Pump → Steering Gear (High‑Pressure): HK2094 via SF01‑HF at the gear</li><li>Steering Gear Return → Cooler Inlet: HA‑L101 via SF11 at the gear</li><li>Cooler Outlet → Reservoir Return: HA‑H100</li><li>Reservoir Supply → Pump Intake: HA‑L102 (‑12 AN)</li><li>Remote Fill → Reservoir: HA‑L103</li><li>Reservoir Drain: HA‑L104</li><li>Vent/Relief: SR‑VT (mount Anti‑Splash Vent per reservoir cap kit)</li></ul><p>R-VT Anti-Splash Reservoir Vent Mounting Location:</p>",
+            "image_1": "shopify://shop_images/step_20.1.png",
+            "image_2": "shopify://shop_images/step_20.png",
+            "image_4": "shopify://shop_images/step_20.2.png"
+          }
+        }
+      },
+      "block_order": [
+        "toc_entry_RQkR4C",
+        "toc_entry_TLHLWC",
+        "toc_entry_MFPXmD",
+        "toc_entry_DrpYNi",
+        "toc_entry_YtUPLL",
+        "toc_entry_VT8HPD",
+        "kit_category_YcM36D",
+        "kit_category_whAfV7",
+        "kit_category_iMq7aX",
+        "step_K6k3PQ",
+        "step_p4UDTU",
+        "step_mPKCht",
+        "step_Ti9JPh",
+        "step_g4dyXM",
+        "step_xkAxXJ",
+        "step_Mw8NCM",
+        "step_V3gA8w",
+        "step_ffDf7T",
+        "step_qHpddh",
+        "step_Y3Vxd7",
+        "step_kNUzab",
+        "step_8XM3YY",
+        "step_cHqj7f",
+        "step_byGprp",
+        "step_rhGMA9",
+        "step_CeQMB4",
+        "step_e66zbV",
+        "step_AnjD4q",
+        "step_GtfRgX"
+      ],
+      "name": "PSC Installation Guide",
+      "settings": {
+        "logo": "{{ page.metafields.custom.instructions_logo.value }}",
+        "logo_width": 300,
+        "logo_width_mobile": 100,
+        "accent_color": "#cc0000",
+        "kit_image": "{{ page.metafields.custom.instructions_cover_image.value }}",
+        "guide_category": "INSTALLATION GUIDE",
+        "product_title": "{{ page.metafields.custom.instruction_title.value }}",
+        "product_application": "{{ page.metafields.custom.instructions_vehicle.value }}",
+        "product_year": "{{ page.metafields.custom.instructions_year.value }}",
+        "part_numbers": "<ul><li>{{ page.metafields.custom.part_number.value }}</li></ul>",
+        "toc_title": "TABLE OF CONTENTS",
+        "before_title": "{{ page.metafields.custom.instructions_bys_header.value }}",
+        "before_body": "<p>{{ page.metafields.custom.instructions_bys_content | metafield_tag }}</p>",
+        "kit_title": "Whats in the Kit",
+        "install_title": "Installation",
+        "custom_section_title": "Bleeding Procedure",
+        "custom_section_body": "<p><br/>It’s critical to purge all the air out of the system to prevent damage to the pump.</p><p><br/><strong>Step 1:</strong> With the engine off, jack up the front of the vehicle and put jack stands under the front axle. This makes the bleeding process easier.</p><p><br/><strong>Step 2:</strong> Add PSC fluid to the reservoir until it’s about 1” to 1-1/2” from the top or with an<br/>OEM reservoir keep the level between min and max.</p><p><strong>NOTE:</strong> With a PSC reservoir make sure<br/>the filter submerged in fluid at all times.</p><p><br/><strong>Step 3:</strong> Turn the steering wheel lock-to-lock (all the way right and all the way left) to pull more fluid through the system. Keep adding fluid a little at a time, checking the level after each round — whether that’s with a dipstick, sight glass, or fill plug — until it’s consistently sitting where it should be. You’re looking for steady, not bouncing around.</p><p><br/><strong>Step 4:</strong> Put the cap on the reservoir and start the engine for about 30 seconds—but do not turn the steering wheel yet.<br/></p><p><strong>NOTE:</strong> The fluid level in the reservoir will drop and get aerated. Letting a few minutes pass between startups will allow air bubbles to work their way out of the system. Refill the reservoir<br/>and repeat this process a couple of times.</p><p><br/><strong>Step 5:</strong> Start the engine and turn the steering wheel completely right and then left 10-15 times. Shut the engine off and let the vehicle sit for 10 minutes. Check and add fluid as necessary. Repeat this process 3-4 times. At this point the fluid level should move about one inch up or down when cycling the steering, and no bubbles should be visible in the reservoir<br/><br/><strong>Step 6:</strong> Lower the vehicle to the ground and repeat the process above one more time. Check<br/>the fluid level again.</p><p><br/><strong>Step 7:</strong> Take the vehicle for a test drive. Listen for pump noise-that’s a sign of fluid aeration. If you hear it, shut the vehicle off to let the bubbles dissipate. If noise keeps coming back, double check the low-pressure lines and make sure all fittings are tight. Top off the fluid and drive the vehicle again. Let the system cool down once you believe it’s properly bled.</p><p><br/><strong>Step 8:</strong> Remove the reservoir cap and have someone start the vehicle while you watch the fluid level. If the level drops on startup, there’s still air in the system. If it stays steady, you’ll be good.</p><p><strong>NOTE:</strong> Getting all the air out of the system can take some time. If the pump is whining, you are aerating the fluid which is not good for the pump. If you’re running your vehicle for an extended time and your pump has not stopped whining, it needs to&nbsp;<br/><br/><br/></p>",
+        "contact_title": "CONTACT US",
+        "contact_subheading": "Need help with your installation?",
+        "contact_details": "<p>Phone: 1-817-270-0102<br/>Hours: Monday–Friday, 8 AM–5 PM CDT<br/>Email: support@pscmotorsports.com</p>",
+        "website": "www.pscsteering.com"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "psc_installation_guide_AA4Nef"
+  ]
+}
