@@ -95,7 +95,7 @@
             "header": "STEP",
             "label": "Get Access",
             "body": "<p>{{ page.metafields.custom.step_1_content | metafield_tag }}Some bumper/winch setups sit tight to the grille. If yours does, removing it now will make the install a lot easier.<br/></p>",
-            "image_1": "shopify://shop_images/step_1.webp"
+            "image_1": "shopify://shop_images/step-1_768d39a8-44c9-48c7-b145-3d504cd7f3cc.png"
           }
         },
         "step_p4UDTU": {
