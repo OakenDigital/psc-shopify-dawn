@@ -71,11 +71,12 @@
     },
     "collection_list_abG7rp": {
       "type": "collection-list",
+      "disabled": true,
       "name": "t:sections.collection-list.presets.name",
       "settings": {
         "eyebrow_text": "",
         "eyebrow_color": "#dc2626",
-        "title": "Steering Gears",
+        "title": "",
         "description": "",
         "heading_size": "h1",
         "image_ratio": "square",
