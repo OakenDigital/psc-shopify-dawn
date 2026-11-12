@@ -104,8 +104,8 @@
           "settings": {
             "image_position": "right",
             "header": "STEP",
-            "label": "{{ page.metafields.custom.instructions_step_2.value }}",
-            "body": "<p>{{ page.metafields.custom.step_2_content | metafield_tag }}by removing &nbsp;the six push‑rivets across the top of the grille. Then pull out at the bottom edge of grille to release the snap connectors.</p>",
+            "label": "Disconnect",
+            "body": "<p>the battery&nbsp;</p>",
             "image_1": "shopify://shop_images/step-2_f7172f1f-9acb-4881-8b14-5f7e4d24089d.png"
           }
         },
@@ -114,8 +114,8 @@
           "settings": {
             "image_position": "left",
             "header": "STEP",
-            "label": "{{ page.metafields.custom.instructions_step_3.value }}Remove air filter Assembly",
-            "body": "<p>{{ page.metafields.custom.step_3_content | metafield_tag }}as an assembly using a 10 mm socket and a flat head screwdriver.</p>",
+            "label": "Remove and retain",
+            "body": "<p>the OEM accessory drive belt.<br/><br/></p>",
             "image_1": "shopify://shop_images/step-3_515cb14d-5223-4e3c-9f9a-d7ef197e85b2.png"
           }
         },
@@ -124,8 +124,8 @@
           "settings": {
             "image_position": "right",
             "header": "STEP",
-            "label": "{{ page.metafields.custom.instructions_step_4.value }}Remove the fresh‑air inlet tub and mount bracket",
-            "body": "<p>{{ page.metafields.custom.step_4_content | metafield_tag }}under the air box.</p>",
+            "label": "Remove and retain",
+            "body": "<p>the coolant overflow reservoir.</p>",
             "image_1": "shopify://shop_images/step-4_4540e2d5-397b-417e-816b-4453cd92f35d.png"
           }
         },
@@ -134,8 +134,8 @@
           "settings": {
             "image_position": "left",
             "header": "STEP",
-            "label": "{{ page.metafields.custom.instructions_step_5.value }}Remove passenger inner fender.",
-            "body": "<p>{{ page.metafields.custom.step_5_content | metafield_tag }}We’ve found it’s faster and easier to pull the inner fender and fender flare off as one complete piece by removing the four bolts and the push pin that secure the inner &nbsp; fender to the body. There are several YouTube videos that walk through this process if you need a visual.&nbsp;</p><p><br/><strong>NOTE</strong>: A few of the body clips may get damaged during removal. Replacements are easy to find from multiple sources. Mopar part number: 6852‑6185‑AA‑008</p>"
+            "label": "Drain",
+            "body": "<p><br/>the power steering system at the pump.&nbsp;<br/><br/></p>"
           }
         },
         "step_xkAxXJ": {
@@ -143,8 +143,8 @@
           "settings": {
             "image_position": "right",
             "header": "STEP",
-            "label": "{{ page.metafields.custom.instructions_step_6.value }}Disconnect OE power steering pump lines",
-            "body": "<ul><li>Position a drain pan beneath the vehicle to catch any power steering fluid.</li><li>Disconnect the power steering pump lines and remove the pump assembly. Retain one power steering pump mounting bolt for reuse during installation.</li><li>Remove the fluid reservoir and hose.<br/></li></ul>"
+            "label": "Remove and discard",
+            "body": "<p>the OEM power steering pump.</p>"
           }
         },
         "step_Mw8NCM": {
@@ -152,8 +152,8 @@
           "settings": {
             "image_position": "right",
             "header": "STEP",
-            "label": "{{ page.metafields.custom.instructions_step_7.value }}Disconnect clamp bolts then, remove the OE pressure and return lines",
-            "body": "<p>{{ page.metafields.custom.step_7_content | metafield_tag }}the pump and steering gear. (Cutting them can speed things up if you’re not saving the hoses.)</p>",
+            "label": "Remove and retain",
+            "body": "<p>all radiator and condenser hardware.</p>",
             "image_1": "shopify://shop_images/step-7.png",
             "image_2": "shopify://shop_images/step-7a.png"
           }
@@ -163,8 +163,8 @@
           "settings": {
             "image_position": "right",
             "header": "STEP",
-            "label": "{{ page.metafields.custom.instructions_step_8.value }}Remove the vacuum‑pump assembly by taking out the two 8 mm bolts from the underside of the alternator bracket",
-            "body": "<p>{{ page.metafields.custom.step_8_content | metafield_tag }}Disconnect the line clamps and let the pump hang down out of the way.&nbsp;</p>",
+            "label": "Remove and retain",
+            "body": "<p>the grille</p>",
             "image_1": "shopify://shop_images/step-8.png",
             "image_2": "shopify://shop_images/step-8a.png"
           }
@@ -174,8 +174,8 @@
           "settings": {
             "image_position": "right",
             "header": "STEP",
-            "label": "{{ page.metafields.custom.instructions_step_9.value }}Note the belt routing",
-            "body": "<p>{{ page.metafields.custom.step_9_content | metafield_tag }}Release the tensioner and slip the belt off the idler pulley.</p>"
+            "label": "Remove and discard",
+            "body": "<p>he center grille brace.</p><p></p><h2><strong>Retain the bolts:</strong></h2><p>you’ll use them for the cooler bracket later.<br/></p>"
           }
         },
         "step_qHpddh": {
@@ -183,8 +183,8 @@
           "settings": {
             "image_position": "right",
             "header": "STEP",
-            "label": "{{ page.metafields.custom.instructions_step_10.value }}Remove the alternator with its bracket",
-            "body": "<p>{{ page.metafields.custom.step_10_content | metafield_tag }}by pulling (3) 10 mm and (1) 8 mm bolts.&nbsp;</p><p>Support it with a strap and lay to the side.</p><p>Remove and <strong>discard the OE belt</strong>.</p>",
+            "label": "Clearance the OEM pump bracket",
+            "body": "<p>Clearance the OEM pump bracket</p><ul><li>Take a little at a time, test fit, and deburr your cut.</li><li>Take a little at a time, test fit, and deburr your cut.<br/></li></ul>",
             "image_1": "shopify://shop_images/step-10.png",
             "image_2": "shopify://shop_images/step-10a.png"
           }
@@ -194,8 +194,8 @@
           "settings": {
             "image_position": "right",
             "header": "STEP",
-            "label": "{{ page.metafields.custom.instructions_step_11.value }}Remove the idler pulley / bracket",
-            "body": "<p>{{ page.metafields.custom.step_11_content | metafield_tag }}on the passenger side and discard bracket and hardware.<br/></p>",
+            "label": "Install the new pump",
+            "body": "<p>using two OEM bolts. Snug it for now—you’ll tension the belt later.</p>",
             "image_1": "shopify://shop_images/step-11.png"
           }
         },
