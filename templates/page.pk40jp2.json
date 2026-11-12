@@ -204,8 +204,8 @@
           "settings": {
             "image_position": "right",
             "header": "STEP",
-            "label": "",
-            "body": "",
+            "label": "Remove and retain",
+            "body": "<p>two OEM nuts on the brake booster.</p>",
             "image_1": "shopify://shop_images/step-12.png",
             "image_2": "shopify://shop_images/step-12a.png"
           }
@@ -215,8 +215,8 @@
           "settings": {
             "image_position": "split",
             "header": "STEP",
-            "label": "",
-            "body": "",
+            "label": "Mount the MR20K reservoir bracket",
+            "body": "<p>to the brake booster with those two nuts.</p>",
             "image_1": "shopify://shop_images/step-13.png"
           }
         },
