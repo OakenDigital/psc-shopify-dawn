@@ -60,25 +60,32 @@
             "items": ""
           }
         },
-        "kit_category_YcM36D": {
-          "type": "kit_category",
-          "settings": {
-            "header": "{{ page.metafields.custom.instructions_included_header_2.value }}What This Kit Does",
-            "body": "<p>This kit swaps your factory JL/JT electric power steering setup for a belt-driven pump. Why? Because real steering needs real power — and PSC delivers.</p>"
-          }
-        },
-        "kit_category_whAfV7": {
-          "type": "kit_category",
-          "settings": {
-            "header": "{{ page.metafields.custom.instructions_included_header_4.value }}Before You Start",
-            "body": "<p>Park on a flat surface, set the brake, and disconnect the battery. &nbsp;<br/>If you’re also installing a Big Bore XD steering gear, grab a helper. That gear weighs about 50 lbs and is awkward to thread in alone.<br/>Protect paint when you lean the hood back.<br/>If you’re not comfortable with the job, no shame in letting a pro handle it.</p>"
-          }
-        },
         "kit_category_iMq7aX": {
           "type": "kit_category",
           "settings": {
-            "header": "What’s in the Kit",
-            "body": "<p>Major Components:</p><ul><li>SP33362S-3558 – Power Steering Pump, LHD CBR, 16MM Pressure, ‑12AN Feed</li><li>SR300MK – Power Steering Fluid Reservoir Kit – Jeep JL/JT 3.6L (Non‑eTorque)</li><li>CK220 – Jeep JL/JT 3.6L Power Steering Cooler Kit</li><li>MB12K – Power Steering Pump Mount Kit – Jeep Gladiator 3.6L Pentastar</li></ul><p>Drive System:</p><ul><li>BT60905 – 6‑Rib Serpentine Drive Belt – 90.5”</li></ul><p>Hose System:</p><ul><li>HMK‑PK1880 – Master Hose Kit:<br/>H-THS-1.8ML-VT — Vibra-Tite 440 Anaerobic Pneumatic / Hydraulic Thread &nbsp; &nbsp; Sealant (1.8 mL Tube)</li><li>HA-L104 — Drain Hose Assembly – Remote Reservoir</li><li>HK2094 – High‑Pressure Hose Assembly – JL/JT 3.6L (PSC Pump Kits Only)</li><li>HA-L103 — Hose Assembly – Remote Fill to Reservoir</li><li>HA-L102 — Hose Assembly – Remote Reservoir to Pump</li></ul><p>Fluids:</p><ul><li>FL‑SWE715‑4PAK – PSC 715 Power Steering Fluid – 4 Quart Pack<br/><br/></li></ul>"
+            "header": "Major Components:",
+            "body": "<ul><li>SP33362S-3558 – Power Steering Pump, LHD&nbsp;</li><li>CBR, 16MM Pressure, ‑12AN Feed</li><li>SR300MK – Power Steering Fluid Reservoir Kit – Jeep JL/JT 3.6L (Non‑eTorque)</li><li>CK220 – Jeep JL/JT 3.6L Power Steering Cooler Kit</li><li>MB12K – Power Steering Pump Mount Kit – Jeep Gladiator 3.6L Pentastar<br/><br/><br/></li></ul>"
+          }
+        },
+        "kit_category_DMg7KV": {
+          "type": "kit_category",
+          "settings": {
+            "header": "Drive System:",
+            "body": "<ul><li>BT60905 – 6‑Rib Serpentine Drive Belt – 90.5”</li></ul>"
+          }
+        },
+        "kit_category_yN6wGa": {
+          "type": "kit_category",
+          "settings": {
+            "header": "Hose System:",
+            "body": "<p><strong>HMK‑PK1880 – Master Hose Kit:</strong></p><ul><li>H-THS-1.8ML-VT — Vibra-Tite 440 Anaerobic Pneumatic / Hydraulic Thread &nbsp; &nbsp; Sealant (1.8 mL Tube)</li><li>HA-L104 — Drain Hose Assembly – Remote Reservoir</li><li>HK2094 – High‑Pressure Hose Assembly – JL/JT 3.6L (PSC Pump Kits Only)</li><li>HA-L103 — Hose Assembly – Remote Fill to Reservoir</li><li>HA-L102 — Hose Assembly – Remote Reservoir to Pump</li></ul>"
+          }
+        },
+        "kit_category_ABiQWz": {
+          "type": "kit_category",
+          "settings": {
+            "header": "Fluids:",
+            "body": "<ul><li>FL‑SWE715‑4PAK – PSC 715 Power Steering Fluid – 4 Quart Pack</li></ul>"
           }
         },
         "kit_category_PbdGtb": {
@@ -95,7 +102,7 @@
             "header": "STEP",
             "label": "Get Access",
             "body": "<p>{{ page.metafields.custom.step_1_content | metafield_tag }}Some bumper/winch setups sit tight to the grille. If yours does, removing it now will make the install a lot easier.<br/></p>",
-            "image_1": "shopify://shop_images/step-1_768d39a8-44c9-48c7-b145-3d504cd7f3cc.png"
+            "image_1": "shopify://shop_images/step_1_5612838b-4333-40e8-acbe-0ffff4a72767.webp"
           }
         },
         "step_p4UDTU": {
@@ -403,9 +410,10 @@
         "toc_entry_DrpYNi",
         "toc_entry_YtUPLL",
         "toc_entry_VT8HPD",
-        "kit_category_YcM36D",
-        "kit_category_whAfV7",
         "kit_category_iMq7aX",
+        "kit_category_DMg7KV",
+        "kit_category_yN6wGa",
+        "kit_category_ABiQWz",
         "kit_category_PbdGtb",
         "step_K6k3PQ",
         "step_p4UDTU",
@@ -452,9 +460,9 @@
         "product_year": "2020+",
         "part_numbers": "<p>Part #: PK36JP3<br/></p>",
         "toc_title": "TABLE OF CONTENTS",
-        "before_title": "{{ page.metafields.custom.instructions_bys_header.value }}",
-        "before_body": "<p>{{ page.metafields.custom.instructions_bys_content | metafield_tag }}</p>",
-        "kit_title": "Whats in the Kit",
+        "before_title": "What This Kit Does",
+        "before_body": "<p>This kit swaps your factory JL/JT electric power steering setup for a belt-driven pump. Why? Because real steering needs real power — and PSC delivers.</p><h3><strong>Before You Start</strong></h3><p>Park on a flat surface, set the brake, and disconnect the battery. &nbsp;<br/>If you’re also installing a Big Bore XD steering gear, grab a helper. That gear weighs about 50 lbs and is awkward to thread in alone.<br/>Protect paint when you lean the hood back.<br/>If you’re not comfortable with the job, no shame in letting a pro handle it.</p>",
+        "kit_title": "What's in the Kit",
         "install_title": "Installation",
         "custom_section_title": "Bleeding Procedure",
         "custom_section_body": "<p><br/>It’s critical to purge all the air out of the system to prevent damage to the pump.</p><p><br/><strong>Step 1:</strong> With the engine off, jack up the front of the vehicle and put jack stands under the front axle. This makes the bleeding process easier.</p><p><br/><strong>Step 2:</strong> Add PSC fluid to the reservoir until it’s about 1” to 1-1/2” from the top or with an<br/>OEM reservoir keep the level between min and max.</p><p><strong>NOTE:</strong> With a PSC reservoir make sure<br/>the filter submerged in fluid at all times.</p><p><br/><strong>Step 3:</strong> Turn the steering wheel lock-to-lock (all the way right and all the way left) to pull more fluid through the system. Keep adding fluid a little at a time, checking the level after each round — whether that’s with a dipstick, sight glass, or fill plug — until it’s consistently sitting where it should be. You’re looking for steady, not bouncing around.</p><p><br/><strong>Step 4:</strong> Put the cap on the reservoir and start the engine for about 30 seconds—but do not turn the steering wheel yet.<br/></p><p><strong>NOTE:</strong> The fluid level in the reservoir will drop and get aerated. Letting a few minutes pass between startups will allow air bubbles to work their way out of the system. Refill the reservoir<br/>and repeat this process a couple of times.</p><p><br/><strong>Step 5:</strong> Start the engine and turn the steering wheel completely right and then left 10-15 times. Shut the engine off and let the vehicle sit for 10 minutes. Check and add fluid as necessary. Repeat this process 3-4 times. At this point the fluid level should move about one inch up or down when cycling the steering, and no bubbles should be visible in the reservoir<br/><br/><strong>Step 6:</strong> Lower the vehicle to the ground and repeat the process above one more time. Check<br/>the fluid level again.</p><p><br/><strong>Step 7:</strong> Take the vehicle for a test drive. Listen for pump noise-that’s a sign of fluid aeration. If you hear it, shut the vehicle off to let the bubbles dissipate. If noise keeps coming back, double check the low-pressure lines and make sure all fittings are tight. Top off the fluid and drive the vehicle again. Let the system cool down once you believe it’s properly bled.</p><p><br/><strong>Step 8:</strong> Remove the reservoir cap and have someone start the vehicle while you watch the fluid level. If the level drops on startup, there’s still air in the system. If it stays steady, you’ll be good.</p><p><strong>NOTE:</strong> Getting all the air out of the system can take some time. If the pump is whining, you are aerating the fluid which is not good for the pump. If you’re running your vehicle for an extended time and your pump has not stopped whining, it needs to&nbsp;<br/><br/><br/></p>",
