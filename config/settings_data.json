@@ -200,7 +200,7 @@
         "type": "shopify://apps/inbox/blocks/chat/841fc607-4181-4ad1-842d-e24d7f8bad6b",
         "disabled": false,
         "settings": {
-          "greeting_message": "",
+          "greeting_message": "Need help finding the right steering parts? Send us a message. Our team is available Monday through Friday, 9 AM-5 PM CT. Outside business hours, our AI assistant is available to help with common questions and product recommendations.",
           "show_featured_products": true,
           "featured_products": [],
           "background_color": "#ffffff",
