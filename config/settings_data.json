@@ -202,7 +202,9 @@
         "settings": {
           "greeting_message": "Need help finding the right steering parts? Send us a message. Our team is available Monday through Friday, 9 AM-5 PM CT. Outside business hours, our AI assistant is available to help with common questions and product recommendations.",
           "show_featured_products": true,
-          "featured_products": [],
+          "featured_products": [
+            "1-5-x-6-75-dynamic-damping-stabilizer-for-sg691r-sg693r-steering-gears"
+          ],
           "background_color": "#ffffff",
           "font_color": "#121212",
           "agent_invert_activator_colors": true,
