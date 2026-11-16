@@ -298,6 +298,7 @@
       "blocks": {
         "ai_gen_block_4a369f2_6EdbJP": {
           "type": "ai_gen_block_4a369f2",
+          "disabled": true,
           "settings": {
             "desktop_width_percent": 85,
             "image_1": "shopify://shop_images/25Anniversary.png",
