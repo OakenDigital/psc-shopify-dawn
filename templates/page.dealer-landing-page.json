@@ -47,13 +47,15 @@
         "buttons"
       ],
       "settings": {
-        "image": "shopify://shop_images/Designer_56.png",
+        "image": "shopify://shop_images/Designer_56.jpg",
         "image_overlay_opacity": 40,
         "image_height": "medium",
         "image_behavior": "none",
         "desktop_content_position": "middle-center",
         "desktop_content_alignment": "center",
         "show_text_box": false,
+        "margin_horizontal": 0,
+        "margin_horizontal_mobile": 0,
         "color_scheme": "scheme-1",
         "stack_images_on_mobile": true,
         "mobile_content_alignment": "center",
