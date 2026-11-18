@@ -181,7 +181,7 @@
         "step_qHpddh": {
           "type": "step",
           "settings": {
-            "image_position": "right",
+            "image_position": "split",
             "header": "STEP",
             "label": "Clearance the OEM pump bracket",
             "body": "<p>Clearance the OEM pump bracket</p><ul><li>Take a little at a time, test fit, and deburr your cut.</li><li>Take a little at a time, test fit, and deburr your cut.<br/></li></ul>",
@@ -202,12 +202,12 @@
         "step_kNUzab": {
           "type": "step",
           "settings": {
-            "image_position": "right",
+            "image_position": "split",
             "header": "STEP",
             "label": "Remove and retain",
             "body": "<p>two OEM nuts on the brake booster.</p>",
-            "image_1": "shopify://shop_images/step-12.png",
-            "image_2": "shopify://shop_images/step-12a.png"
+            "image_3": "shopify://shop_images/step-12.png",
+            "image_4": "shopify://shop_images/step-12a.png"
           }
         },
         "step_8XM3YY": {
