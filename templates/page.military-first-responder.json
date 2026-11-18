@@ -9,8 +9,19 @@
  */
 {
   "sections": {
+    "custom_liquid_iVqrQ6": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<div style=\"width:100%; max-width:700px; margin:0 auto;\">\n\n  <!-- Heading -->\n  <div style=\"text-align:center;\">\n    <h2>Military &amp; First Responder Discount</h2>\n\n    <p>\n      PSC Motorsports offers <strong>5% off</strong> to eligible military members,\n      veterans, and first responders.\n    </p>\n  </div>\n\n  <!-- Get Discount Button -->\n  <div style=\"width:100%; margin-top:25px; text-align:center;\">\n    <button\n      type=\"button\"\n      class=\"button button--primary\"\n      onclick=\"window.open('https://verifypass.com/auth/b551bf85de', 'VerifyPass', 'width=475,height=700');\"\n    >\n      Get Discount\n    </button>\n  </div>\n\n  <!-- Eligibility -->\n  <div style=\"width:100%; margin-top:35px; text-align:left;\">\n    <strong>This discount is available for:</strong>\n\n    <ul>\n      <li>Active Duty Military</li>\n      <li>Veterans &amp; Retirees</li>\n      <li>Police</li>\n      <li>Firefighters</li>\n      <li>EMTs</li>\n    </ul>\n\n    <a\n      href=\"#\"\n      onclick=\"window.open('https://verifypass.com/eligibility/widget/b551bf85de', 'Details', 'width=475,height=700'); return false;\"\n    >\n      Details &rarr;\n    </a>\n  </div>\n\n  <!-- How It Works -->\n  <div style=\"width:100%; margin-top:35px; text-align:left;\">\n    <strong>How it works:</strong>\n\n    <ol>\n      <li>\n        Click <strong>Get Discount</strong> above and verify your eligibility through VerifyPass.\n      </li>\n\n      <li>\n        Once verified, you'll receive a <strong>one-time 5% discount code</strong> to use at checkout.\n      </li>\n\n      <li>\n        Ordering again? Come back to this page and verify again for a new code.\n      </li>\n    </ol>\n\n    <p style=\"margin-top:20px; font-size:14px;\">\n      Cannot be combined with other discounts or promotional codes.\n    </p>\n  </div>\n\n</div>",
+        "color_scheme": "scheme-2",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
     "main": {
       "type": "main-page",
+      "disabled": true,
       "settings": {
         "padding_top": 20,
         "padding_bottom": 20
@@ -128,42 +139,12 @@
         "padding_top": 40,
         "padding_bottom": 40
       }
-    },
-    "178215901468e81263": {
-      "type": "apps",
-      "blocks": {
-        "forms_inline_mfktQr": {
-          "type": "shopify://apps/forms/blocks/inline/8744a304-fcb1-4347-b211-bb6b4759a76a",
-          "settings": {
-            "form_id": "1044041",
-            "text_color": "#202020",
-            "button_background_color": "#202020",
-            "button_label_color": "#ffffff",
-            "links_color": "#1878b9",
-            "errors_color": "#e02229",
-            "text_alignment": "center",
-            "form_alignment": "flex-start",
-            "padding_top": 24,
-            "padding_bottom": 24,
-            "padding_right": 64,
-            "padding_left": 64
-          }
-        }
-      },
-      "block_order": [
-        "forms_inline_mfktQr"
-      ],
-      "disabled": true,
-      "settings": {
-        "include_margins": true,
-        "full_width": true
-      }
     }
   },
   "order": [
+    "custom_liquid_iVqrQ6",
     "main",
     "blocks_tdaxhL",
-    "rich_text_R3kECz",
-    "178215901468e81263"
+    "rich_text_R3kECz"
   ]
 }
