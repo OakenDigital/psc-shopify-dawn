@@ -23,7 +23,7 @@
         "toc_entry_RQkR4C": {
           "type": "toc_entry",
           "settings": {
-            "title": "{{ page.metafields.custom.instructions_toc_header.value }}",
+            "title": "{{ page.metafields.custom.instructions_toc_header.value }} General Information",
             "range": "",
             "items": "<p>{{ page.metafields.custom.instructions_toc_content_1 | metafield_tag }}</p>"
           }
@@ -31,7 +31,7 @@
         "toc_entry_TLHLWC": {
           "type": "toc_entry",
           "settings": {
-            "title": "What's in the kit{{ page.metafields.custom.instructions_toc_header_2.value }}",
+            "title": "Parts Included{{ page.metafields.custom.instructions_toc_header_2.value }}",
             "range": "",
             "items": "<p>{{ page.metafields.custom.instructions_toc_content2 | metafield_tag }}</p>"
           }
@@ -39,7 +39,7 @@
         "toc_entry_MFPXmD": {
           "type": "toc_entry",
           "settings": {
-            "title": "{{ page.metafields.custom.instructions_toc_header_3.value }}",
+            "title": "{{ page.metafields.custom.instructions_toc_header_3.value }}Tools You’ll Need",
             "range": "",
             "items": "<p>{{ page.metafields.custom.instructions_toc_content_3 | metafield_tag }}</p>"
           }
@@ -47,7 +47,7 @@
         "toc_entry_DrpYNi": {
           "type": "toc_entry",
           "settings": {
-            "title": "{{ page.metafields.custom.instructions_toc_header_4.value }}",
+            "title": "{{ page.metafields.custom.instructions_toc_header_4.value }}Installation Steps",
             "range": "",
             "items": "<p>{{ page.metafields.custom.instructions_toc_content_4 | metafield_tag }}</p>"
           }
@@ -55,7 +55,7 @@
         "toc_entry_YtUPLL": {
           "type": "toc_entry",
           "settings": {
-            "title": "{{ page.metafields.custom.instructions_toc_header_5.value }}",
+            "title": "{{ page.metafields.custom.instructions_toc_header_5.value }}System Check & Bleeding",
             "range": "",
             "items": "<p>{{ page.metafields.custom.instructions_toc_content_5 | metafield_tag }}</p>"
           }
@@ -78,8 +78,8 @@
         "kit_category_WFUmJh": {
           "type": "kit_category",
           "settings": {
-            "header": "Tie Rod Mounting Bracket Kit",
-            "body": "<p>(1) Tie Rod End-Cylinder Mount Bracket<br/>(2) M12-1.5 x 55mm Hex Head Bolts<br/>(2) M12-1.5 Lock Nuts</p>"
+            "header": "Steering Gear",
+            "body": ""
           }
         },
         "kit_category_YcM36D": {
@@ -120,60 +120,15 @@
         "kit_category_ewdDUK": {
           "type": "kit_category",
           "settings": {
-            "header": "Safety & Prep",
-            "body": "<ul><li>Park on level ground and set the parking brake.</li><li>Center the steering wheel and secure it so it cannot rotate during installation. A ratchet strap around the wheel works well.</li><li>Use jack stands. Never rely on a jack alone.</li><li>Wear eye protection and gloves.</li><li>Before disconnecting any hoses, verify the engine is off and the steering system is not under pressure. Place a drain pan beneath the work area to catch any fluid released when the hoses are disconnected.</li><li>Keep hydraulic fluid handy for topping off after install.</li></ul>"
+            "header": "Hardware Kit",
+            "body": ""
           }
         },
-        "step_K6k3PQ": {
-          "type": "step",
+        "kit_category_6pf8zf": {
+          "type": "kit_category",
           "settings": {
-            "image_position": "right",
-            "header": "{{ page.metafields.custom.step.value }}",
-            "label": "{{ page.metafields.custom.instructions_step_1.value }}",
-            "body": "<p>{{ page.metafields.custom.step_1_content | metafield_tag }}</p>",
-            "image_1": "{{ page.metafields.custom.instructions_step_1_image.value }}"
-          }
-        },
-        "step_p4UDTU": {
-          "type": "step",
-          "settings": {
-            "image_position": "right",
-            "header": "{{ page.metafields.custom.step.value }}",
-            "label": "{{ page.metafields.custom.instructions_step_2.value }}",
-            "body": "<p>{{ page.metafields.custom.step_2_content | metafield_tag }}</p>",
-            "image_1": "{{ page.metafields.custom.instructions_step_2_image.value }}"
-          }
-        },
-        "step_mPKCht": {
-          "type": "step",
-          "settings": {
-            "image_position": "left",
-            "header": "{{ page.metafields.custom.step.value }}",
-            "label": "{{ page.metafields.custom.instructions_step_3.value }}",
-            "body": "<p>{{ page.metafields.custom.step_3_content | metafield_tag }}</p>",
-            "image_1": "{{ page.metafields.custom.instructions_step_3_image.value }}",
-            "image_2": "shopify://shop_images/step_3.3.png",
-            "image_3": "shopify://shop_images/step_3_6998ec17-9dec-4c31-af3c-a12fc334a20d.png"
-          }
-        },
-        "step_Ti9JPh": {
-          "type": "step",
-          "settings": {
-            "image_position": "right",
-            "header": "{{ page.metafields.custom.step.value }}",
-            "label": "{{ page.metafields.custom.instructions_step_4.value }}",
-            "body": "<p>{{ page.metafields.custom.step_4_content | metafield_tag }}</p>",
-            "image_1": "{{ page.metafields.custom.instructions_step_4_image.value }}"
-          }
-        },
-        "step_g4dyXM": {
-          "type": "step",
-          "settings": {
-            "image_position": "left",
-            "header": "{{ page.metafields.custom.step.value }}",
-            "label": "{{ page.metafields.custom.instructions_step_5.value }}",
-            "body": "<p>{{ page.metafields.custom.step_5_content | metafield_tag }}</p>",
-            "image_1": "{{ page.metafields.custom.instructions_step_5_image.value }}"
+            "header": "Tools Needed",
+            "body": "<ul><li>Torque wrench&nbsp;<br/>Must be capable of hitting the factory pitman arm nut torque (check your Dodge service manual).</li><li>Socket set&nbsp;<br/>Including the correct socket for your pitman arm nut.</li><li>Wrenches (standard and metric depending on your truck/setup)</li><li>Breaker bar</li><li>Ratchet and extensions</li><li>Pry bar (for steering shaft if needed)</li><li>Line wrench (helps with hose fittings)</li><li>Hammer or mallet (for pitman arm removal/installation as needed)</li><li>Pitman arm puller&nbsp;<br/>If your OE pitman arm is stubborn.</li><li>Drip pan<br/>You will lose some fluid removing the old steering gear.<br/>Floor jack & jack stands (optional but helpful for access)</li></ul><p><strong>Recommended:</strong></p><ul><li>Paint pen or marker&nbsp;<br/>Mark steering shaft alignment or pitman arm orientation.</li><li>Gloves and rags&nbsp;<br/>Power steering fluid gets everywhere.</li><li>Shop light&nbsp;<br/>Makes lining up spacers and bolt holes much easier.</li><li>Torque chart or factory service manual<br/></li></ul>"
           }
         },
         "step_xkAxXJ": {
@@ -205,16 +160,6 @@
             "body": "<p>{{ page.metafields.custom.step_8_content | metafield_tag }}</p>",
             "image_1": "{{ page.metafields.custom.instructions_step_8_image.value }}"
           }
-        },
-        "step_ffDf7T": {
-          "type": "step",
-          "settings": {
-            "image_position": "right",
-            "header": "{{ page.metafields.custom.step.value }}",
-            "label": "{{ page.metafields.custom.instructions_step_9.value }}",
-            "body": "<p>{{ page.metafields.custom.step_9_content | metafield_tag }}</p>",
-            "image_1": "{{ page.metafields.custom.instructions_step_9_image.value }}"
-          }
         }
       },
       "block_order": [
@@ -232,15 +177,10 @@
         "kit_category_H9LMjn",
         "kit_category_LiT3Mi",
         "kit_category_ewdDUK",
-        "step_K6k3PQ",
-        "step_p4UDTU",
-        "step_mPKCht",
-        "step_Ti9JPh",
-        "step_g4dyXM",
+        "kit_category_6pf8zf",
         "step_xkAxXJ",
         "step_Mw8NCM",
-        "step_V3gA8w",
-        "step_ffDf7T"
+        "step_V3gA8w"
       ],
       "name": "PSC Installation Guide",
       "settings": {
@@ -248,15 +188,15 @@
         "logo_width": 300,
         "logo_width_mobile": 100,
         "accent_color": "#cc0000",
-        "kit_image": "{{ page.metafields.custom.instructions_cover_image.value }}",
+        "kit_image": "shopify://shop_images/SG851-FullSGkit_393bba1d-d452-4d7a-a1f0-6dd39b0488e3.jpg",
         "guide_category": "INSTALLATION GUIDE",
-        "product_title": "{{ page.metafields.custom.instruction_title.value }}",
-        "product_application": "{{ page.metafields.custom.instructions_vehicle.value }}",
-        "product_year": "{{ page.metafields.custom.instructions_year.value }}",
-        "part_numbers": "<ul><li>{{ page.metafields.custom.part_number.value }}</li></ul>",
+        "product_title": "{{ page.metafields.custom.instruction_title.value }}BIG BORE XD® Steering Gear",
+        "product_application": "{{ page.metafields.custom.instructions_vehicle.value }}Dodge Ram 2500/3500",
+        "product_year": "{{ page.metafields.custom.instructions_year.value }}1994–2002",
+        "part_numbers": "<ul><li>{{ page.metafields.custom.part_number.value }}SG851</li></ul>",
         "toc_title": "TABLE OF CONTENTS",
-        "before_title": "{{ page.metafields.custom.instructions_bys_header.value }}",
-        "before_body": "<p>{{ page.metafields.custom.instructions_bys_content | metafield_tag }}</p>",
+        "before_title": "{{ page.metafields.custom.instructions_bys_header.value }}General Information",
+        "before_body": "<p>{{ page.metafields.custom.instructions_bys_content | metafield_tag }}You can install this steering gear in your home garage if you’re comfortable turning wrenches. If any step feels out of reach, there’s nothing wrong with letting a good shop handle it. A second set of hands helps—this gear weighs around 35 lbs, and lining it up and threading the bolts by yourself can be a hassle. You’ll need a <strong>torque wrench</strong> to tighten the pitman arm nut.</p><p><br/><strong>Use the torque spec from your Dodge service manual or a trusted aftermarket guide.</strong><br/>If you don’t have a secure way to hold the steering gear while torquing the pitman arm nut—or your torque wrench doesn’t go high enough—plan on taking it to a local shop or parts store. They can torque it accurately for you.<br/></p>",
         "kit_title": "What's in the Kit",
         "install_title": "Installation",
         "custom_section_title": "Bleeding Procedure",
