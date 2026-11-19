@@ -26,7 +26,7 @@
             "image_position": "right",
             "header": "{{ page.metafields.custom.step.value }}",
             "label": "",
-            "body": "<p><br/>Steering Gear goes in between the &nbsp; &nbsp; driver’s side fram and engine block. &nbsp;The bolts go through the frame to &nbsp; &nbsp; &nbsp;fasten the gear.</p>",
+            "body": "<p><br/>Steering Gear goes in between the driver’s side frame and engine block. The bolts go through the frame to fasten the gear.</p>",
             "image_1": "shopify://shop_images/sg688_bolt.png"
           }
         }
@@ -43,12 +43,12 @@
         "kit_image": "shopify://shop_images/SG689R.jpg",
         "guide_category": "INSTALLATION GUIDE",
         "product_title": "Bolt replacement",
-        "product_application": "for Jeep Wrangler JK",
-        "product_year": "2007-2018",
-        "part_numbers": "<p>SG688R&nbsp;</p>",
+        "product_application": "for Jeep JL/JT",
+        "product_year": "2018-2026",
+        "part_numbers": "<p>SG689R&nbsp;</p>",
         "toc_title": "",
         "before_title": "{{ page.metafields.custom.instructions_bys_header.value }}",
-        "before_body": "<p>When you set the steering gear in place, it fits between the driver‑side frame rail and the engine block. The bolts go through the frame rail and thread straight into the steering gear.<br/><br/>Here’s the simple way to remember it:<br/><br/>Driver‑Side Frame Rail (Facing the Steering Gear)</p><ul><li>Front holes:<br/>Use the 100 mm PSC‑supplied bolts</li><li>Rear holes:<br/>Reuse the factory (stock) bolts</li></ul>",
+        "before_body": "<p>When installing the Big Bore XD steering gear, it sits between the driver‑side frame rail and the engine block. The mounting bolts pass through the frame rail and thread directly into the steering gear.<br/><br/>Driver‑Side Frame Rail&nbsp;<br/>(Facing the Steering Gear)</p><ul><li>Front holes:<br/>Use the 90 mm PSC‑supplied bolts</li><li>Lower Rear hole:<br/>Use the 100 mm PSC‑supplied bolt</li><li>Upper Rear hole:<br/>Use the 100 mm PSC‑supplied bolt</li></ul><p><strong>Easy way to remember it:</strong><br/>90 mm goes toward the front<br/>100 mm goes toward the lower back<br/>and the OE bolt finish out the upper rear<br/><br/>Start all four bolts before tightening anything down. Once the gear is sitting flat against the frame and everything is lined up clean, torque the bolts to factory specification per the Jeep service manual.<br/></p>",
         "kit_title": "",
         "install_title": "",
         "custom_section_title": "Bleeding Procedure",
