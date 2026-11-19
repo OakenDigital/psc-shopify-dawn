@@ -26,90 +26,13 @@
             "image_position": "right",
             "header": "{{ page.metafields.custom.step.value }}",
             "label": "",
-            "body": "<p><br/></p>",
-            "image_1": "shopify://shop_images/Step_1_ba3e8749-8a7b-4669-b2d1-742fc82e7a5a.png"
-          }
-        },
-        "step_p4UDTU": {
-          "type": "step",
-          "settings": {
-            "image_position": "left",
-            "header": "{{ page.metafields.custom.step.value }}",
-            "label": "",
-            "body": "",
-            "image_1": "shopify://shop_images/step_2_8274103a-eda8-4a46-8f99-e06a8ccd337c.png"
-          }
-        },
-        "step_mPKCht": {
-          "type": "step",
-          "settings": {
-            "image_position": "right",
-            "header": "{{ page.metafields.custom.step.value }}",
-            "label": "",
-            "body": "<p><br/></p>",
-            "image_1": "shopify://shop_images/step-3_b1d43f40-fb0b-4122-b0b1-2458e69bfdbf.png"
-          }
-        },
-        "step_Ti9JPh": {
-          "type": "step",
-          "settings": {
-            "image_position": "left",
-            "header": "{{ page.metafields.custom.step.value }}",
-            "label": "",
-            "body": "",
-            "image_1": "shopify://shop_images/step_4_c62272d0-fbfa-427c-befe-5af35b9fcb00.png"
-          }
-        },
-        "step_g4dyXM": {
-          "type": "step",
-          "settings": {
-            "image_position": "right",
-            "header": "{{ page.metafields.custom.step.value }}",
-            "label": "",
-            "body": "",
-            "image_1": "shopify://shop_images/step_5_bb44c319-d3b6-4f71-8b93-a77f1ed4255d.png"
-          }
-        },
-        "step_xkAxXJ": {
-          "type": "step",
-          "settings": {
-            "image_position": "left",
-            "header": "{{ page.metafields.custom.step.value }}",
-            "label": "",
-            "body": "",
-            "image_1": "shopify://shop_images/Step_6_962ce31d-6cc0-414c-b12a-33409aee6b8c.png"
-          }
-        },
-        "step_ywPgR3": {
-          "type": "step",
-          "settings": {
-            "image_position": "right",
-            "header": "STEP",
-            "label": "",
-            "body": "",
-            "image_1": "shopify://shop_images/step_7_716a4329-b65f-473b-b3d1-d0907dbab99b.png"
-          }
-        },
-        "step_UfJptM": {
-          "type": "step",
-          "settings": {
-            "image_position": "left",
-            "header": "STEP",
-            "label": "FINISHED!",
-            "body": "",
-            "image_1": "shopify://shop_images/step_8_15e89b9b-2fec-4eef-935a-64e7a94a8ef8.png"
+            "body": "<p><br/>Steering Gear goes in between the &nbsp; &nbsp; driver’s side fram and engine block. &nbsp;The bolts go through the frame to &nbsp; &nbsp; &nbsp;fasten the gear.</p>",
+            "image_1": "shopify://shop_images/sg688_bolt.png"
           }
         }
       },
       "block_order": [
-        "step_K6k3PQ",
-        "step_p4UDTU",
-        "step_mPKCht",
-        "step_Ti9JPh",
-        "step_g4dyXM",
-        "step_xkAxXJ",
-        "step_ywPgR3",
-        "step_UfJptM"
+        "step_K6k3PQ"
       ],
       "name": "PSC Installation Guide",
       "settings": {
@@ -117,15 +40,15 @@
         "logo_width": 300,
         "logo_width_mobile": 100,
         "accent_color": "#cc0000",
-        "kit_image": "shopify://shop_images/SFK01.png",
+        "kit_image": "shopify://shop_images/SG688R.png",
         "guide_category": "INSTALLATION GUIDE",
-        "product_title": "AN Fitting Kit",
-        "product_application": "for Rack & Pinion",
-        "product_year": "{{ page.metafields.custom.instructions_year.value }}",
-        "part_numbers": "<p>SFK01</p>",
+        "product_title": "Bolt replacement",
+        "product_application": "for Jeep Wrangler JK",
+        "product_year": "2007-2018",
+        "part_numbers": "<p>SG688R&nbsp;</p>",
         "toc_title": "",
         "before_title": "{{ page.metafields.custom.instructions_bys_header.value }}",
-        "before_body": "<p>{{ page.metafields.custom.instructions_bys_content | metafield_tag }}</p>",
+        "before_body": "<p>When you set the steering gear in place, it fits between the driver‑side frame rail and the engine block. The bolts go through the frame rail and thread straight into the steering gear.<br/><br/>Here’s the simple way to remember it:<br/><br/>Driver‑Side Frame Rail (Facing the Steering Gear)</p><ul><li>Front holes:<br/>Use the 100 mm PSC‑supplied bolts</li><li>Rear holes:<br/>Reuse the factory (stock) bolts</li></ul>",
         "kit_title": "",
         "install_title": "",
         "custom_section_title": "Bleeding Procedure",
