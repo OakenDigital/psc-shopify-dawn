@@ -216,7 +216,7 @@
         "product_title": "{{ page.metafields.custom.instruction_title.value }}BIG BORE XD® Steering Gear",
         "product_application": "{{ page.metafields.custom.instructions_vehicle.value }}Dodge Ram 2500/3500",
         "product_year": "{{ page.metafields.custom.instructions_year.value }}1994–2002",
-        "part_numbers": "<ul><li>{{ page.metafields.custom.part_number.value }}SG851</li></ul>",
+        "part_numbers": "<p>{{ page.metafields.custom.part_number.value }}SG851</p>",
         "toc_title": "TABLE OF CONTENTS",
         "before_title": "{{ page.metafields.custom.instructions_bys_header.value }}General Information",
         "before_body": "<p>{{ page.metafields.custom.instructions_bys_content | metafield_tag }}You can install this steering gear in your home garage if you’re comfortable turning wrenches. If any step feels out of reach, there’s nothing wrong with letting a good shop handle it. A second set of hands helps—this gear weighs around 35 lbs, and lining it up and threading the bolts by yourself can be a hassle. You’ll need a <strong>torque wrench</strong> to tighten the pitman arm nut.</p><p><br/><strong>Use the torque spec from your Dodge service manual or a trusted aftermarket guide.</strong><br/>If you don’t have a secure way to hold the steering gear while torquing the pitman arm nut—or your torque wrench doesn’t go high enough—plan on taking it to a local shop or parts store. They can torque it accurately for you.<br/></p>",
