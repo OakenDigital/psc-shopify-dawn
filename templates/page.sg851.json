@@ -136,9 +136,10 @@
           "settings": {
             "image_position": "right",
             "header": "{{ page.metafields.custom.step.value }}",
-            "label": "{{ page.metafields.custom.instructions_step_6.value }}",
-            "body": "<p>{{ page.metafields.custom.step_6_content | metafield_tag }}</p>",
-            "image_1": "{{ page.metafields.custom.instructions_step_6_image.value }}"
+            "label": "{{ page.metafields.custom.instructions_step_6.value }}Spacer Information (Important)",
+            "body": "<p>{{ page.metafields.custom.step_6_content | metafield_tag }}The SG851 has a larger sector shaft and lower bearing than the factory steering gear. Because of that larger housing, the new gear cannot sit flush against the frame like the stock gear.<br/>The included spacers must be installed between the gear and the frame to set the gear in the correct position.<br/></p>",
+            "image_1": "{{ page.metafields.custom.instructions_step_6_image.value }}",
+            "image_2": "shopify://shop_images/Step_1.jpg"
           }
         },
         "step_Mw8NCM": {
@@ -146,8 +147,8 @@
           "settings": {
             "image_position": "right",
             "header": "{{ page.metafields.custom.step.value }}",
-            "label": "{{ page.metafields.custom.instructions_step_7.value }}",
-            "body": "<p>{{ page.metafields.custom.step_7_content | metafield_tag }}</p>",
+            "label": "{{ page.metafields.custom.instructions_step_7.value }}Stock Gear Fitment (for reference)",
+            "body": "<p>The factory steering gear sits tight against the frame with no offset.<br/><br/>{{ page.metafields.custom.step_7_content | metafield_tag }}</p>",
             "image_1": "{{ page.metafields.custom.instructions_step_7_image.value }}"
           }
         },
@@ -156,9 +157,29 @@
           "settings": {
             "image_position": "right",
             "header": "{{ page.metafields.custom.step.value }}",
-            "label": "{{ page.metafields.custom.instructions_step_8.value }}",
-            "body": "<p>{{ page.metafields.custom.step_8_content | metafield_tag }}</p>",
-            "image_1": "{{ page.metafields.custom.instructions_step_8_image.value }}"
+            "label": "{{ page.metafields.custom.instructions_step_8.value }}SG851 Fitment with Spacers",
+            "body": "<p>{{ page.metafields.custom.step_8_content | metafield_tag }}The PSC gear housing is larger, so the &nbsp; &nbsp;spacers create the clearance needed between the gear and the frame.<br/>Make sure the spacers stay in place as you start the bolts—this keeps the gear lined up correctly and prevents binding.<br/>NOTE: When removing the old gear, place a drip pan underneath. Some fluid will drain out of the lines and the gear.<br/></p>",
+            "image_1": "{{ page.metafields.custom.instructions_step_8_image.value }}",
+            "image_2": "shopify://shop_images/step_2.jpg"
+          }
+        },
+        "step_BRxWxh": {
+          "type": "step",
+          "settings": {
+            "image_position": "right",
+            "header": "STEP",
+            "label": "Drag Link Adjustment (Must Do)",
+            "body": "<p>Because this steering gear sits slightly offset from the frame when installed with spacers, the drag link must be shortened by approximately ¾” (0.75”).</p><p>This correction ensures:</p><ul><li>Proper steering wheel centering</li><li>Correct toe alignment</li><li>No binding or bump steer issues</li></ul><p>After adjusting the drag link, make sure everything cycles freely from lock to lock.<br/><br/></p>",
+            "image_1": "shopify://shop_images/step_3.jpg"
+          }
+        },
+        "step_C88wKX": {
+          "type": "step",
+          "settings": {
+            "image_position": "right",
+            "header": "STEP",
+            "label": "Finishing Up",
+            "body": "<p>Once the new gear, spacers, bolts, and drag link adjustment are complete, reinstall the remaining steering and front end components in the reverse order of removal.</p><p>Make sure to:</p><ul><li>Refill the power steering fluid</li><li>Bleed the system thoroughly</li><li>Check for leaks</li><li>Verify smooth steering from lock to lock</li></ul><p>If everything feels good and there’s no noise or binding, you’re ready to roll.<br/><br/><br/></p>"
           }
         }
       },
@@ -180,7 +201,9 @@
         "kit_category_6pf8zf",
         "step_xkAxXJ",
         "step_Mw8NCM",
-        "step_V3gA8w"
+        "step_V3gA8w",
+        "step_BRxWxh",
+        "step_C88wKX"
       ],
       "name": "PSC Installation Guide",
       "settings": {
