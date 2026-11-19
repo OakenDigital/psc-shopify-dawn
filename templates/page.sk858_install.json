@@ -23,7 +23,7 @@
         "toc_entry_RQkR4C": {
           "type": "toc_entry",
           "settings": {
-            "title": "{{ page.metafields.custom.instructions_toc_header.value }}",
+            "title": "{{ page.metafields.custom.instructions_toc_header.value }}General Information",
             "range": "",
             "items": "<p>{{ page.metafields.custom.instructions_toc_content_1 | metafield_tag }}</p>"
           }
@@ -39,7 +39,7 @@
         "toc_entry_MFPXmD": {
           "type": "toc_entry",
           "settings": {
-            "title": "{{ page.metafields.custom.instructions_toc_header_3.value }}",
+            "title": "{{ page.metafields.custom.instructions_toc_header_3.value }}General Information",
             "range": "",
             "items": "<p>{{ page.metafields.custom.instructions_toc_content_3 | metafield_tag }}</p>"
           }
@@ -47,7 +47,7 @@
         "toc_entry_DrpYNi": {
           "type": "toc_entry",
           "settings": {
-            "title": "{{ page.metafields.custom.instructions_toc_header_4.value }}",
+            "title": "{{ page.metafields.custom.instructions_toc_header_4.value }}Installation Steps",
             "range": "",
             "items": "<p>{{ page.metafields.custom.instructions_toc_content_4 | metafield_tag }}</p>"
           }
@@ -55,7 +55,7 @@
         "toc_entry_YtUPLL": {
           "type": "toc_entry",
           "settings": {
-            "title": "{{ page.metafields.custom.instructions_toc_header_5.value }}",
+            "title": "{{ page.metafields.custom.instructions_toc_header_5.value }}System Check & Bleeding",
             "range": "",
             "items": "<p>{{ page.metafields.custom.instructions_toc_content_5 | metafield_tag }}</p>"
           }
@@ -304,15 +304,15 @@
         "logo_width": 300,
         "logo_width_mobile": 100,
         "accent_color": "#cc0000",
-        "kit_image": "{{ page.metafields.custom.instructions_cover_image.value }}",
+        "kit_image": "shopify://shop_images/SK688R36JP1.png",
         "guide_category": "INSTALLATION GUIDE",
-        "product_title": "{{ page.metafields.custom.instruction_title.value }}",
-        "product_application": "{{ page.metafields.custom.instructions_vehicle.value }}",
-        "product_year": "{{ page.metafields.custom.instructions_year.value }}",
-        "part_numbers": "<ul><li>{{ page.metafields.custom.part_number.value }}</li></ul>",
+        "product_title": "{{ page.metafields.custom.instruction_title.value }}Adventure Steering Kit",
+        "product_application": "{{ page.metafields.custom.instructions_vehicle.value }}Jeep Wrangler JK 3.6L",
+        "product_year": "{{ page.metafields.custom.instructions_year.value }}2012–2018",
+        "part_numbers": "<p>{{ page.metafields.custom.part_number.value }}SK688R36JP1</p>",
         "toc_title": "TABLE OF CONTENTS",
-        "before_title": "Before You Start",
-        "before_body": "<p>Before you dive in, take a minute to set yourself up right. This job’s straightforward if you’ve got the basics covered:</p><ul><li>Park it solid. Level ground, parking brake on, wheels chocked. You don’t want that truck moving while you’re under it.</li><li>Lift smart. If you’re using a jack, support the front axle with stands. Never trust just the jack.</li><li>Eye and hand protection. Power steering fluid isn’t something you want in your eyes—or all over your hands.</li><li>Clean work area. Dirt and grit in the system will wreck a pump fast. Wipe down mounting surfaces before installing the new gear.</li><li>Have a drain pan ready. You’ll lose some fluid when you pull the old lines. Keep it contained.</li><li>Torque matters. Factory bolts and PSC hardware have specific torque specs. Use a torque wrench, not “good and tight.”</li><li>Double-check steering wheel position. Center it and lock it before you pull the old steering gear. That keeps your alignment true.</li><li>Plan for bleeding time. This isn’t a rush job—bleeding the system right is critical. Give yourself extra time and patience.</li></ul>",
+        "before_title": "General Information",
+        "before_body": "<p><strong>Before You Start</strong><br/>Park the vehicle on a level surface, set the parking brake, chock the rear wheels, and support the vehicle safely if it will be raised during installation.<br/><br/>Wear safety glasses, gloves, and use the proper tools for the job. Keep loose clothing and jewelry away from moving components.<br/><br/>This PSC Steering Kit can be installed in a home garage using common hand tools. Before you begin, read through the entire guide so you understand the process and have everything you’ll need on hand.<br/><br/>If you’re installing the Big Bore XD Steering Gear, plan on having a helper. The steering gear weighs approximately 57 lbs and can be difficult to position while starting the mounting bolts. An extra set of hands makes installation much easier and safer.<br/><br/><strong>Warranty Information</strong><br/>For warranty coverage to apply, this system must be installed as a complete PSC steering system using the PSC pump, steering gear, reservoir, SR-VT, cooler, and supplied hoses. These components are engineered and tested to work together as a complete package.<br/><br/><strong>Installation Notes</strong><br/>Every Jeep is a little different. Factory build variations, aftermarket parts, previous repairs, and accessory installations can affect routing and component placement. Your underhood layout may not look exactly like the photos in this guide, but the installation process remains the same.<br/><br/>Vehicles equipped with aftermarket accessories such as superchargers, intercoolers, onboard air systems, auxiliary coolers, or other modifications may require additional routing adjustments during installation.</p>",
         "kit_title": "What’s in the Kit",
         "install_title": "",
         "custom_section_title": "Bleeding Procedure",
