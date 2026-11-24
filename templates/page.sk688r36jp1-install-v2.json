@@ -1,0 +1,331 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 48,
+        "padding_bottom": 28
+      }
+    },
+    "psc_installation_guide_AA4Nef": {
+      "type": "psc-installation-guide",
+      "blocks": {
+        "toc_entry_RQkR4C": {
+          "type": "toc_entry",
+          "settings": {
+            "title": "{{ page.metafields.custom.instructions_toc_header.value }}General Information",
+            "range": "",
+            "items": "<p>{{ page.metafields.custom.instructions_toc_content_1 | metafield_tag }}</p>"
+          }
+        },
+        "toc_entry_TLHLWC": {
+          "type": "toc_entry",
+          "settings": {
+            "title": "What's in the kit{{ page.metafields.custom.instructions_toc_header_2.value }}",
+            "range": "",
+            "items": "<p>{{ page.metafields.custom.instructions_toc_content2 | metafield_tag }}</p>"
+          }
+        },
+        "toc_entry_MFPXmD": {
+          "type": "toc_entry",
+          "settings": {
+            "title": "{{ page.metafields.custom.instructions_toc_header_3.value }}General Information",
+            "range": "",
+            "items": "<p>{{ page.metafields.custom.instructions_toc_content_3 | metafield_tag }}</p>"
+          }
+        },
+        "toc_entry_DrpYNi": {
+          "type": "toc_entry",
+          "settings": {
+            "title": "{{ page.metafields.custom.instructions_toc_header_4.value }}Installation Steps",
+            "range": "",
+            "items": "<p>{{ page.metafields.custom.instructions_toc_content_4 | metafield_tag }}</p>"
+          }
+        },
+        "toc_entry_YtUPLL": {
+          "type": "toc_entry",
+          "settings": {
+            "title": "{{ page.metafields.custom.instructions_toc_header_5.value }}System Check & Bleeding",
+            "range": "",
+            "items": "<p>{{ page.metafields.custom.instructions_toc_content_5 | metafield_tag }}</p>"
+          }
+        },
+        "toc_entry_FLzEji": {
+          "type": "toc_entry",
+          "settings": {
+            "title": "Contact us",
+            "range": "",
+            "items": ""
+          }
+        },
+        "kit_category_JbpLyq": {
+          "type": "kit_category",
+          "settings": {
+            "header": "Box 1",
+            "body": "<ul><li>SG856R— Cylinder Assist Steering Gear</li></ul>"
+          }
+        },
+        "kit_category_YcM36D": {
+          "type": "kit_category",
+          "settings": {
+            "header": "Box 2 — CAK858",
+            "body": "<ul><li>(1) SC2200 – Cylinder Assist® – Single-Ended – 1.5” x 8.0”</li><li>(1) MB34K – Mounting Bracket – Cylinder Assist® – Ram 2500/3500 (2019–2021)</li><li>(1) HK2062 – Hose Kit – Ram 2500/3500 Cylinder Assist® (2014+)</li><li>(1) REXFR10 – Rod End – Female Shank – RH Thread – 5/8-18 FR x 5/8” Ball</li><li>(1) REXMR10-SS – Rod End – Male – 5/8-18 x 5/8” – Shortened .750”</li><li>(2) FSNJ-5/8-18RH – 5/8-18 RH Jam Nut</li><li>(1) FL-SWE715-4PAK – PSC 715 Power Steering Fluid – 4-Quart Pack<br/><br/><br/><br/><br/><br/></li></ul>"
+          }
+        },
+        "kit_category_RYU3V8": {
+          "type": "kit_category",
+          "settings": {
+            "header": "Tools Needed",
+            "body": "<ul><li>Pitman arm puller</li><li>5/8” drill bit</li><li>Torque wrench (up to 180 ft-lbs)</li><li>Standard hand tools</li></ul>"
+          }
+        },
+        "step_K6k3PQ": {
+          "type": "step",
+          "settings": {
+            "image_position": "right",
+            "header": "{{ page.metafields.custom.step.value }}",
+            "label": "Center & Lock the Steering Wheel",
+            "body": "<p>Center and lock the steering wheel so the new steering gear lines up exactly like the old one.<br/>(Photo shown is from a previous build, but the process is the same.)</p>",
+            "image_1": "{{ page.metafields.custom.instructions_step_1_image.value }}",
+            "image_2": "shopify://shop_images/step_1_54590e58-6863-495d-af0f-6a3d8877b978.png"
+          }
+        },
+        "step_p4UDTU": {
+          "type": "step",
+          "settings": {
+            "image_position": "right",
+            "header": "{{ page.metafields.custom.step.value }}",
+            "label": "{{ page.metafields.custom.instructions_step_2.value }}",
+            "body": "<p><strong>Remove and discard:</strong></p><ul><li>All factory belts</li><li>Factory accessory brackets</li><li>Factory accessories</li><li>OEM water pump and housing&nbsp;<br/></li></ul><p><strong>Remove and retain for installation:</strong></p><ul><li>Alternator</li><li>A/C compressor</li><li>If your A/C uses a stretch belt, OEMs recommend replacing it.<br/><br/><br/><br/><br/></li></ul>",
+            "image_1": "shopify://shop_images/step_2_7ceda34b-19dd-460c-a90d-f133d00807df.png"
+          }
+        },
+        "step_mPKCht": {
+          "type": "step",
+          "settings": {
+            "image_position": "split",
+            "header": "{{ page.metafields.custom.step.value }}",
+            "label": "Remove Factory Lines",
+            "body": "<p>Loosen and remove both factory steering lines.&nbsp;</p><p><br/>Drain fluid into a pan and set lines aside.</p>",
+            "image_1": "{{ page.metafields.custom.instructions_step_3_image.value }}"
+          }
+        },
+        "step_Ti9JPh": {
+          "type": "step",
+          "settings": {
+            "image_position": "right",
+            "header": "{{ page.metafields.custom.step.value }}",
+            "label": "Pull the Pitman Arm",
+            "body": "<p>Remove the nut and washer, then use a pitman arm puller to remove the arm completely.</p><p><br/><strong>Tip: </strong>Before you pull the old steering gear, take note of the angle the pitman arm is pointing. That way, when you drop the new steering gear in, everything lines up exactly like the original.<br/></p>",
+            "image_1": "shopify://shop_images/step_4_405e7f11-6bbc-4fad-bdb2-b710cecf97de.png"
+          }
+        },
+        "step_g4dyXM": {
+          "type": "step",
+          "settings": {
+            "image_position": "split",
+            "header": "{{ page.metafields.custom.step.value }}",
+            "label": "Remove Steering Gear",
+            "body": "<p>Take out the (3) bolts that go through the frame and hold the steering gear in place.</p><p><br/>It helps to have someone underneath supporting the gear while you back the bolts out.</p><p><br/>Once it’s free, <strong>pull the gear out through the bottom</strong>.<br/></p>",
+            "image_1": "{{ page.metafields.custom.instructions_step_5_image.value }}"
+          }
+        },
+        "step_xkAxXJ": {
+          "type": "step",
+          "settings": {
+            "image_position": "right",
+            "header": "{{ page.metafields.custom.step.value }}",
+            "label": "Prep for Install",
+            "body": "<p>Remove the (2) cylinder assist port caps from the steering gear.&nbsp;</p><p><br/>Clean and inspect all mounting and sealing surfaces before installation.</p><p><br/>Install the new O-rings supplied with the steering gear onto the factory power steering line fittings.<br/></p>",
+            "image_1": "shopify://shop_images/step_6_6c55b38a-7d86-4602-85e8-b9bac83f17be.png"
+          }
+        },
+        "step_Mw8NCM": {
+          "type": "step",
+          "settings": {
+            "image_position": "split",
+            "header": "{{ page.metafields.custom.step.value }}",
+            "label": "Install New Gear",
+            "body": "<p>Use the (3) factory bolts. Torque to 115 ft-lbs.</p>",
+            "image_1": "{{ page.metafields.custom.instructions_step_7_image.value }}"
+          }
+        },
+        "step_V3gA8w": {
+          "type": "step",
+          "settings": {
+            "image_position": "right",
+            "header": "{{ page.metafields.custom.step.value }}",
+            "label": "Install Pitman Arm",
+            "body": "<p>Factory arm goes back on with lock-nut and washer. Torque to 180 ft-lbs.<br/></p>",
+            "image_1": "shopify://shop_images/step_8_3a9358bd-5732-4216-9a82-6e27e698f700.png"
+          }
+        },
+        "step_ffDf7T": {
+          "type": "step",
+          "settings": {
+            "image_position": "left",
+            "header": "{{ page.metafields.custom.step.value }}",
+            "label": "Reconnect Factory Lines",
+            "body": "<p>Install in the same ports and tighten.</p>",
+            "image_1": "{{ page.metafields.custom.instructions_step_9_image.value }}"
+          }
+        },
+        "step_qHpddh": {
+          "type": "step",
+          "settings": {
+            "image_position": "right",
+            "header": "{{ page.metafields.custom.step.value }}",
+            "label": "Reattach Steering Shaft",
+            "body": "<p>Slide the coupler fully onto the gear and secure with the factory bolt.<br/></p>",
+            "image_1": "{{ page.metafields.custom.instructions_step_10_image.value }}"
+          }
+        },
+        "step_Y3Vxd7": {
+          "type": "step",
+          "settings": {
+            "image_position": "right",
+            "header": "{{ page.metafields.custom.step.value }}",
+            "label": "Drill Stabilizer Mount",
+            "body": "<p>Use a 5/8” bit to enlarge the factory hole for the supplied hardware.<br/><br/><br/><br/></p>",
+            "image_1": "shopify://shop_images/step_11_2fc4e0b0-4ac0-4911-b843-7195d3936cb4.png"
+          }
+        },
+        "step_kNUzab": {
+          "type": "step",
+          "settings": {
+            "image_position": "left",
+            "header": "{{ page.metafields.custom.step.value }}",
+            "label": "Assemble Cylinder Kit",
+            "body": "<ul><li>Thread heim joints and lock nuts.&nbsp;</li><li>Stationary side mounts to axle with spacers.<br/></li></ul>",
+            "image_1": "shopify://shop_images/step_12_b97ed09f-0483-4a0a-9d32-70c7eddd3acb.png"
+          }
+        },
+        "step_8XM3YY": {
+          "type": "step",
+          "settings": {
+            "image_position": "right",
+            "header": "{{ page.metafields.custom.step.value }}",
+            "label": "Install Tie-Rod Bracket",
+            "body": "<p>Using the two factory bolts, install the tie‑rod mount bracket as shown above.<br/>Install the bolts from the bottom up and secure them with the factory nuts.</p><p><br/>The shaft side of the Cylinder Assist will mount to this bracket using the supplied hardware.</p><p><strong>Torque specs:</strong></p><ul><li>Tie‑rod link bolts: 50 ft‑lbs</li><li>Cylinder mount bolt: 70 ft‑lbs<br/></li></ul><p><br/></p>",
+            "image_1": "shopify://shop_images/step_13_e07c1622-f4c5-4a13-845f-e06fb5e4fc3c.png"
+          }
+        },
+        "step_cHqj7f": {
+          "type": "step",
+          "settings": {
+            "image_position": "split",
+            "header": "{{ page.metafields.custom.step.value }}",
+            "label": "Connect High-Pressure Lines",
+            "body": "<p>Use the HA-H2062-P hose, the longer hose in this kit, on the top port of the gear.</p><p><br/>Angle lines forward for clearance.<br/></p>",
+            "image_1": "{{ page.metafields.custom.instructions_step_14_image.value }}"
+          }
+        },
+        "step_byGprp": {
+          "type": "step",
+          "settings": {
+            "image_position": "right",
+            "header": "{{ page.metafields.custom.step.value }}",
+            "label": "Connect Cylinder Lines",
+            "body": "<p>Longer hose to passenger side, shorter to driver side.&nbsp;</p><p><br/>Angle fittings inward.</p>",
+            "image_1": "shopify://shop_images/step_15_1193e32a-ee96-4f84-8350-6c96a337cd6b.png"
+          }
+        },
+        "step_rhGMA9": {
+          "type": "step",
+          "settings": {
+            "image_position": "left",
+            "header": "{{ page.metafields.custom.step.value }}",
+            "label": "Secure Hoses",
+            "body": "<p>Drill (2) ¼” holes in cross member for “P” clamps. Zip-tie lines together toward cylinder.</p>",
+            "image_1": "shopify://shop_images/step_16_911181c8-4d21-4f1b-a304-82872d063ea1.png"
+          }
+        },
+        "step_CeQMB4": {
+          "type": "step",
+          "settings": {
+            "image_position": "right",
+            "header": "",
+            "label": "Check Movement",
+            "body": "<p>With vehicle lifted, cycle steering lock-to-lock. Confirm smooth travel and no binding</p>"
+          }
+        },
+        "step_e66zbV": {
+          "type": "step",
+          "settings": {
+            "image_position": "split",
+            "header": "STEP",
+            "label": "Bleed the System",
+            "body": "<p>The final step is bleeding your steering system. Follow the bleeding procedure on the next two pages.</p><p><strong>IMPORTANT:&nbsp;</strong></p><p>Don’t rush this step. Bleeding the system is one of the most important parts of the installation. Take your time and follow the procedure as closely as possible to remove all air from the system and ensure proper steering performance.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "toc_entry_RQkR4C",
+        "toc_entry_TLHLWC",
+        "toc_entry_MFPXmD",
+        "toc_entry_DrpYNi",
+        "toc_entry_YtUPLL",
+        "toc_entry_FLzEji",
+        "kit_category_JbpLyq",
+        "kit_category_YcM36D",
+        "kit_category_RYU3V8",
+        "step_K6k3PQ",
+        "step_p4UDTU",
+        "step_mPKCht",
+        "step_Ti9JPh",
+        "step_g4dyXM",
+        "step_xkAxXJ",
+        "step_Mw8NCM",
+        "step_V3gA8w",
+        "step_ffDf7T",
+        "step_qHpddh",
+        "step_Y3Vxd7",
+        "step_kNUzab",
+        "step_8XM3YY",
+        "step_cHqj7f",
+        "step_byGprp",
+        "step_rhGMA9",
+        "step_CeQMB4",
+        "step_e66zbV"
+      ],
+      "name": "PSC Installation Guide",
+      "settings": {
+        "logo": "{{ page.metafields.custom.instructions_logo.value }}",
+        "logo_width": 300,
+        "logo_width_mobile": 100,
+        "accent_color": "#cc0000",
+        "kit_image": "shopify://shop_images/SK688R36JP1.png",
+        "guide_category": "INSTALLATION GUIDE",
+        "product_title": "{{ page.metafields.custom.instruction_title.value }}Adventure Steering Kit",
+        "product_application": "{{ page.metafields.custom.instructions_vehicle.value }}Jeep Wrangler JK 3.6L",
+        "product_year": "{{ page.metafields.custom.instructions_year.value }}2012–2018",
+        "part_numbers": "<p>{{ page.metafields.custom.part_number.value }}SK688R36JP1</p>",
+        "toc_title": "TABLE OF CONTENTS",
+        "before_title": "General Information",
+        "before_body": "<p><strong>Before You Start</strong><br/>Park the vehicle on a level surface, set the parking brake, chock the rear wheels, and support the vehicle safely if it will be raised during installation.<br/><br/>Wear safety glasses, gloves, and use the proper tools for the job. Keep loose clothing and jewelry away from moving components.<br/><br/>This PSC Steering Kit can be installed in a home garage using common hand tools. Before you begin, read through the entire guide so you understand the process and have everything you’ll need on hand.<br/><br/>If you’re installing the Big Bore XD Steering Gear, plan on having a helper. The steering gear weighs approximately 57 lbs and can be difficult to position while starting the mounting bolts. An extra set of hands makes installation much easier and safer.<br/><br/><strong>Warranty Information</strong><br/>For warranty coverage to apply, this system must be installed as a complete PSC steering system using the PSC pump, steering gear, reservoir, SR-VT, cooler, and supplied hoses. These components are engineered and tested to work together as a complete package.<br/><br/><strong>Installation Notes</strong><br/>Every Jeep is a little different. Factory build variations, aftermarket parts, previous repairs, and accessory installations can affect routing and component placement. Your underhood layout may not look exactly like the photos in this guide, but the installation process remains the same.<br/><br/>Vehicles equipped with aftermarket accessories such as superchargers, intercoolers, onboard air systems, auxiliary coolers, or other modifications may require additional routing adjustments during installation.</p>",
+        "kit_title": "What’s in the Kit",
+        "install_title": "",
+        "custom_section_title": "Bleeding Procedure",
+        "custom_section_body": "<p><br/>It’s critical to purge all the air out of the system to prevent damage to the pump.</p><p><br/><strong>Step 1:</strong> With the engine off, jack up the front of the vehicle and put jack stands under the front axle. This makes the bleeding process easier.</p><p><br/><strong>Step 2:</strong> Add PSC fluid to the reservoir until it’s about 1” to 1-1/2” from the top or with an<br/>OEM reservoir keep the level between min and max.</p><p><strong>NOTE:</strong> With a PSC reservoir make sure<br/>the filter submerged in fluid at all times.</p><p><br/><strong>Step 3:</strong> Turn the steering wheel lock-to-lock (all the way right and all the way left) to pull more fluid through the system. Keep adding fluid a little at a time, checking the level after each round — whether that’s with a dipstick, sight glass, or fill plug — until it’s consistently sitting where it should be. You’re looking for steady, not bouncing around.</p><p><br/><strong>Step 4:</strong> Put the cap on the reservoir and start the engine for about 30 seconds—but do not turn the steering wheel yet.<br/></p><p><strong>NOTE:</strong> The fluid level in the reservoir will drop and get aerated. Letting a few minutes pass between startups will allow air bubbles to work their way out of the system. Refill the reservoir<br/>and repeat this process a couple of times.</p><p><br/><strong>Step 5:</strong> Start the engine and turn the steering wheel completely right and then left 10-15 times. Shut the engine off and let the vehicle sit for 10 minutes. Check and add fluid as necessary. Repeat this process 3-4 times. At this point the fluid level should move about one inch up or down when cycling the steering, and no bubbles should be visible in the reservoir<br/><br/><strong>Step 6:</strong> Lower the vehicle to the ground and repeat the process above one more time. Check<br/>the fluid level again.</p><p><br/><strong>Step 7:</strong> Take the vehicle for a test drive. Listen for pump noise-that’s a sign of fluid aeration. If you hear it, shut the vehicle off to let the bubbles dissipate. If noise keeps coming back, double check the low-pressure lines and make sure all fittings are tight. Top off the fluid and drive the vehicle again. Let the system cool down once you believe it’s properly bled.</p><p><br/><strong>Step 8:</strong> Remove the reservoir cap and have someone start the vehicle while you watch the fluid level. If the level drops on startup, there’s still air in the system. If it stays steady, you’ll be good.</p><p><strong>NOTE:</strong> Getting all the air out of the system can take some time. If the pump is whining, you are aerating the fluid which is not good for the pump. If you’re running your vehicle for an extended time and your pump has not stopped whining, it needs to&nbsp;<br/><br/><br/></p>",
+        "contact_title": "CONTACT US",
+        "contact_subheading": "Need help with your installation?",
+        "contact_details": "<p>Phone: 1-817-270-0102<br/>Hours: Monday–Friday, 8 AM–5 PM CDT<br/>Email: support@pscmotorsports.com</p>",
+        "website": "www.pscsteering.com"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "psc_installation_guide_AA4Nef"
+  ]
+}
